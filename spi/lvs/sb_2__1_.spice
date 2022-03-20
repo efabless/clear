@@ -1,0 +1,2078 @@
+* NGSPICE file created from sb_2__1_.ext - technology: sky130A
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__fill_1 abstract view
+.subckt sky130_fd_sc_hd__fill_1 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__dfxtp_1 abstract view
+.subckt sky130_fd_sc_hd__dfxtp_1 CLK D VGND VNB VPB VPWR Q
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__decap_12 abstract view
+.subckt sky130_fd_sc_hd__decap_12 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__decap_3 abstract view
+.subckt sky130_fd_sc_hd__decap_3 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__mux2_1 abstract view
+.subckt sky130_fd_sc_hd__mux2_1 A0 A1 S VGND VNB VPB VPWR X
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__decap_6 abstract view
+.subckt sky130_fd_sc_hd__decap_6 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__diode_2 abstract view
+.subckt sky130_fd_sc_hd__diode_2 DIODE VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__conb_1 abstract view
+.subckt sky130_fd_sc_hd__conb_1 VGND VNB VPB VPWR HI LO
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__decap_8 abstract view
+.subckt sky130_fd_sc_hd__decap_8 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__clkbuf_1 abstract view
+.subckt sky130_fd_sc_hd__clkbuf_1 A VGND VNB VPB VPWR X
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__tapvpwrvgnd_1 abstract view
+.subckt sky130_fd_sc_hd__tapvpwrvgnd_1 VGND VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__clkbuf_2 abstract view
+.subckt sky130_fd_sc_hd__clkbuf_2 A VGND VNB VPB VPWR X
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__fill_2 abstract view
+.subckt sky130_fd_sc_hd__fill_2 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__decap_4 abstract view
+.subckt sky130_fd_sc_hd__decap_4 VGND VNB VPB VPWR
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__buf_8 abstract view
+.subckt sky130_fd_sc_hd__buf_8 A VGND VNB VPB VPWR X
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__dfxtp_2 abstract view
+.subckt sky130_fd_sc_hd__dfxtp_2 CLK D VGND VNB VPB VPWR Q
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__buf_1 abstract view
+.subckt sky130_fd_sc_hd__buf_1 A VGND VNB VPB VPWR X
+.ends
+
+* Black-box entry subcircuit for sky130_fd_sc_hd__clkbuf_16 abstract view
+.subckt sky130_fd_sc_hd__clkbuf_16 A VGND VNB VPB VPWR X
+.ends
+
+.subckt sb_2__1_ bottom_left_grid_pin_42_ bottom_left_grid_pin_43_ bottom_left_grid_pin_44_
++ bottom_left_grid_pin_45_ bottom_left_grid_pin_46_ bottom_left_grid_pin_47_ bottom_left_grid_pin_48_
++ bottom_left_grid_pin_49_ bottom_right_grid_pin_1_ ccff_head ccff_tail chanx_left_in[0]
++ chanx_left_in[10] chanx_left_in[11] chanx_left_in[12] chanx_left_in[13] chanx_left_in[14]
++ chanx_left_in[15] chanx_left_in[16] chanx_left_in[17] chanx_left_in[18] chanx_left_in[19]
++ chanx_left_in[1] chanx_left_in[2] chanx_left_in[3] chanx_left_in[4] chanx_left_in[5]
++ chanx_left_in[6] chanx_left_in[7] chanx_left_in[8] chanx_left_in[9] chanx_left_out[0]
++ chanx_left_out[10] chanx_left_out[11] chanx_left_out[12] chanx_left_out[13] chanx_left_out[14]
++ chanx_left_out[15] chanx_left_out[16] chanx_left_out[17] chanx_left_out[18] chanx_left_out[19]
++ chanx_left_out[1] chanx_left_out[2] chanx_left_out[3] chanx_left_out[4] chanx_left_out[5]
++ chanx_left_out[6] chanx_left_out[7] chanx_left_out[8] chanx_left_out[9] chany_bottom_in[0]
++ chany_bottom_in[10] chany_bottom_in[11] chany_bottom_in[12] chany_bottom_in[13]
++ chany_bottom_in[14] chany_bottom_in[15] chany_bottom_in[16] chany_bottom_in[17]
++ chany_bottom_in[18] chany_bottom_in[19] chany_bottom_in[1] chany_bottom_in[2] chany_bottom_in[3]
++ chany_bottom_in[4] chany_bottom_in[5] chany_bottom_in[6] chany_bottom_in[7] chany_bottom_in[8]
++ chany_bottom_in[9] chany_bottom_out[0] chany_bottom_out[10] chany_bottom_out[11]
++ chany_bottom_out[12] chany_bottom_out[13] chany_bottom_out[14] chany_bottom_out[15]
++ chany_bottom_out[16] chany_bottom_out[17] chany_bottom_out[18] chany_bottom_out[19]
++ chany_bottom_out[1] chany_bottom_out[2] chany_bottom_out[3] chany_bottom_out[4]
++ chany_bottom_out[5] chany_bottom_out[6] chany_bottom_out[7] chany_bottom_out[8]
++ chany_bottom_out[9] chany_top_in[0] chany_top_in[10] chany_top_in[11] chany_top_in[12]
++ chany_top_in[13] chany_top_in[14] chany_top_in[15] chany_top_in[16] chany_top_in[17]
++ chany_top_in[18] chany_top_in[19] chany_top_in[1] chany_top_in[2] chany_top_in[3]
++ chany_top_in[4] chany_top_in[5] chany_top_in[6] chany_top_in[7] chany_top_in[8]
++ chany_top_in[9] chany_top_out[0] chany_top_out[10] chany_top_out[11] chany_top_out[12]
++ chany_top_out[13] chany_top_out[14] chany_top_out[15] chany_top_out[16] chany_top_out[17]
++ chany_top_out[18] chany_top_out[19] chany_top_out[1] chany_top_out[2] chany_top_out[3]
++ chany_top_out[4] chany_top_out[5] chany_top_out[6] chany_top_out[7] chany_top_out[8]
++ chany_top_out[9] left_bottom_grid_pin_34_ left_bottom_grid_pin_35_ left_bottom_grid_pin_36_
++ left_bottom_grid_pin_37_ left_bottom_grid_pin_38_ left_bottom_grid_pin_39_ left_bottom_grid_pin_40_
++ left_bottom_grid_pin_41_ prog_clk_0_N_in top_left_grid_pin_42_ top_left_grid_pin_43_
++ top_left_grid_pin_44_ top_left_grid_pin_45_ top_left_grid_pin_46_ top_left_grid_pin_47_
++ top_left_grid_pin_48_ top_left_grid_pin_49_ top_right_grid_pin_1_ VPWR VGND
+XFILLER_22_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_22_100 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_26_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_left_track_17.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_15.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_17.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_9_159 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_9_115 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_bottom_track_3.mux_l1_in_1_ input3/X input1/X mux_bottom_track_3.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_bottom_track_3.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_6_118 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XANTENNA__124__A _124_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_062_ VGND VGND VPWR VPWR _062_/HI _062_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_input55_A chany_top_in[13] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA__119__A _119_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_0_57 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_2_176 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+X_114_ _114_/A VGND VGND VPWR VPWR _114_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_15_6 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_11_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+X_045_ VGND VGND VPWR VPWR _045_/HI _045_/LO sky130_fd_sc_hd__conb_1
+Xmux_bottom_track_17.mux_l1_in_0_ _104_/A _095_/A mux_bottom_track_17.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_17.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_25.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_25.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_25.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input18_A chanx_left_in[16] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_192 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput97 _083_/X VGND VGND VPWR VPWR chanx_left_out[17] sky130_fd_sc_hd__clkbuf_2
+XPHY_181 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_170 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_bottom_track_3.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_3.mux_l4_in_0_/X VGND
++ VGND VPWR VPWR _087_/A sky130_fd_sc_hd__clkbuf_1
+Xmem_bottom_track_3.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_3.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input85_A top_left_grid_pin_48_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_9_127 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_3_35 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_3.mux_l1_in_0_ _100_/A _091_/A mux_bottom_track_3.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_bottom_track_3.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xclkbuf_1_0_0_mem_bottom_track_1.prog_clk clkbuf_0_mem_bottom_track_1.prog_clk/X VGND
++ VGND VPWR VPWR clkbuf_2_1_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_5_185 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_mux_top_track_0.mux_l1_in_0__A1 input79/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_061_ VGND VGND VPWR VPWR _061_/HI _061_/LO sky130_fd_sc_hd__conb_1
+XFILLER_9_45 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_9_12 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input48_A chany_bottom_in[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_20_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_left_track_9.sky130_fd_sc_hd__buf_4_0_ mux_left_track_9.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _070_/A sky130_fd_sc_hd__clkbuf_1
+X_113_ _113_/A VGND VGND VPWR VPWR _113_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_18_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_18_65 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_044_ VGND VGND VPWR VPWR _044_/HI _044_/LO sky130_fd_sc_hd__conb_1
+Xmem_bottom_track_25.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_25.mux_l1_in_2_/S VGND VGND VPWR VPWR mux_bottom_track_25.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_31.sky130_fd_sc_hd__buf_4_0_ mux_left_track_31.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _081_/A sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_35.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_35.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_35.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_6_57 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_25_110 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_15_55 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_left_track_7.mux_l1_in_3_ _045_/HI input78/X mux_left_track_7.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_7.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+XPHY_193 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput98 _084_/X VGND VGND VPWR VPWR chanx_left_out[18] sky130_fd_sc_hd__clkbuf_2
+XPHY_182 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_31_157 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_171 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_160 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_15_99 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_15_77 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA_input30_A chanx_left_in[9] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_30_190 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_25.sky130_fd_sc_hd__buf_4_0_ mux_left_track_25.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _078_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_15.mux_l3_in_0_ mux_left_track_15.mux_l2_in_1_/X mux_left_track_15.mux_l2_in_0_/X
++ mux_left_track_15.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_15.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_22_113 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+Xmux_top_track_0.mux_l2_in_3_ _047_/HI input16/X mux_top_track_0.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_0.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_3.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_3.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_26_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_9_139 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA_input78_A left_bottom_grid_pin_41_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_3_4_0_mem_bottom_track_1.prog_clk clkbuf_3_5_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_27_216 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_12_67 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_left_track_19.sky130_fd_sc_hd__buf_4_0_ mux_left_track_19.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _075_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_15.mux_l2_in_1_ _064_/HI input74/X mux_left_track_15.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_15.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_7.mux_l3_in_0_ mux_left_track_7.mux_l2_in_1_/X mux_left_track_7.mux_l2_in_0_/X
++ mux_left_track_7.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_15_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_0.mux_l4_in_0_ mux_top_track_0.mux_l3_in_1_/X mux_top_track_0.mux_l3_in_0_/X
++ mux_top_track_0.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_2_189 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_bottom_track_9.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_9.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_060_ VGND VGND VPWR VPWR _060_/HI _060_/LO sky130_fd_sc_hd__conb_1
+X_112_ _112_/A VGND VGND VPWR VPWR _112_/X sky130_fd_sc_hd__clkbuf_1
+X_043_ VGND VGND VPWR VPWR _043_/HI _043_/LO sky130_fd_sc_hd__conb_1
+XFILLER_18_77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_left_track_7.mux_l2_in_1_ mux_left_track_7.mux_l1_in_3_/X mux_left_track_7.mux_l1_in_2_/X
++ mux_left_track_7.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input60_A chany_top_in[18] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_bottom_track_25.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_17.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_25.mux_l1_in_2_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_20_67 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_0.mux_l3_in_1_ mux_top_track_0.mux_l2_in_3_/X mux_top_track_0.mux_l2_in_2_/X
++ mux_top_track_0.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_29_65 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_29_54 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_top_track_16.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_16.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_left_track_35.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_33.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_35.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_7.mux_l1_in_2_ input76/X input74/X mux_left_track_7.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_7.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xoutput99 _085_/X VGND VGND VPWR VPWR chanx_left_out[19] sky130_fd_sc_hd__clkbuf_2
+Xoutput88 output88/A VGND VGND VPWR VPWR ccff_tail sky130_fd_sc_hd__clkbuf_2
+XFILLER_16_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_15_23 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_input23_A chanx_left_in[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_183 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_172 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_161 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_150 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_16_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_0.mux_l2_in_2_ input28/X input11/X mux_top_track_0.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_0.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_30_180 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_13_147 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_bottom_track_3.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_3.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_10_117 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_5_7 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_15.mux_l2_in_0_ input41/X mux_left_track_15.mux_l1_in_0_/X mux_left_track_15.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_15.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+Xprog_clk_0_FTB00 prog_clk_0_N_in VGND VGND VPWR VPWR prog_clk_0_FTB00/X sky130_fd_sc_hd__buf_8
+XFILLER_23_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_bottom_track_9.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_9.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_9_25 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_20_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input53_A chany_top_in[11] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_111_ _111_/A VGND VGND VPWR VPWR _111_/X sky130_fd_sc_hd__clkbuf_1
+X_042_ VGND VGND VPWR VPWR _042_/HI _042_/LO sky130_fd_sc_hd__conb_1
+Xmux_left_track_7.mux_l2_in_0_ mux_left_track_7.mux_l1_in_1_/X mux_left_track_7.mux_l1_in_0_/X
++ mux_left_track_7.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_0.mux_l3_in_0_ mux_top_track_0.mux_l2_in_1_/X mux_top_track_0.mux_l2_in_0_/X
++ mux_top_track_0.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_4_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_28_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_top_track_16.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_16.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xoutput89 _066_/X VGND VGND VPWR VPWR chanx_left_out[0] sky130_fd_sc_hd__clkbuf_2
+Xmux_left_track_7.mux_l1_in_1_ _079_/A _113_/A mux_left_track_7.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_7.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XPHY_184 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_31_148 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_173 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_162 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_151 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_140 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_top_track_0.mux_l2_in_1_ _119_/A mux_top_track_0.mux_l1_in_2_/X mux_top_track_0.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_0.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input16_A chanx_left_in[14] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_26_23 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_1.mux_l1_in_1__A0 input71/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input8_A bottom_left_grid_pin_49_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_bottom_track_3.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_1.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_13_159 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input83_A top_left_grid_pin_46_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_0.mux_l1_in_2_ _109_/A input87/X mux_top_track_0.mux_l1_in_2_/S VGND
++ VGND VPWR VPWR mux_top_track_0.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_5_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_16.sky130_fd_sc_hd__buf_4_0_ mux_top_track_16.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _114_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_23_35 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_bottom_track_9.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_9.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_14_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_left_track_15.mux_l1_in_0_ _119_/A _099_/A mux_left_track_15.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_left_track_15.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_20_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+X_110_ _110_/A VGND VGND VPWR VPWR _110_/X sky130_fd_sc_hd__clkbuf_1
+X_041_ VGND VGND VPWR VPWR _041_/HI _041_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_input46_A chany_bottom_in[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_132 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_28_110 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_20_36 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_top_track_16.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_8.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_2
+Xmux_bottom_track_9.mux_l2_in_3_ _060_/HI input20/X mux_bottom_track_9.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_9.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+Xmux_top_track_0.sky130_fd_sc_hd__buf_4_0_ mux_top_track_0.mux_l4_in_0_/X VGND VGND
++ VPWR VPWR _106_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_25_135 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_25_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_15_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_7.mux_l1_in_0_ input44/X _093_/A mux_left_track_7.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_7.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XPHY_185 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_174 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_163 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_152 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_top_track_0.mux_l2_in_0_ mux_top_track_0.mux_l1_in_1_/X mux_top_track_0.mux_l1_in_0_/X
++ mux_top_track_0.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XPHY_141 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_130 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_16_157 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_16_135 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XANTENNA_mux_left_track_1.mux_l1_in_1__A1 _109_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_13_127 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_27_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_8_197 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_8_153 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_0.mux_l1_in_1_ input85/X input83/X mux_top_track_0.mux_l1_in_2_/S VGND
++ VGND VPWR VPWR mux_top_track_0.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_9.mux_l4_in_0_ mux_bottom_track_9.mux_l3_in_1_/X mux_bottom_track_9.mux_l3_in_0_/X
++ mux_bottom_track_9.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_left_track_21.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_21.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_left_track_21.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_bottom_track_17.mux_l1_in_0__A0 _104_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input76_A left_bottom_grid_pin_39_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_23_47 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA__091__A _091_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_bottom_track_9.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_5.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_2_126 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_1_170 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_9.mux_l3_in_1_ mux_bottom_track_9.mux_l2_in_3_/X mux_bottom_track_9.mux_l2_in_2_/X
++ mux_bottom_track_9.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+X_040_ VGND VGND VPWR VPWR _040_/HI _040_/LO sky130_fd_sc_hd__conb_1
+Xmem_bottom_track_17.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_17.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input39_A chany_bottom_in[17] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_29_68 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_28_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_19_188 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_9.mux_l2_in_2_ input13/X input25/X mux_bottom_track_9.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_9.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_3_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_31_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_25_147 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_186 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_175 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_164 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_left_track_39.mux_l2_in_0_ _043_/HI mux_left_track_39.mux_l1_in_0_/X output88/A
++ VGND VGND VPWR VPWR mux_left_track_39.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XPHY_153 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_142 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_131 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_16_169 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_120 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_0_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_30_194 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_30_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XPHY_0 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_7_60 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_7_82 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_26_69 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_21_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_bottom_track_25.mux_l1_in_0__A0 _105_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_33.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_33.mux_l3_in_0_/X
++ VGND VGND VPWR VPWR _102_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input21_A chanx_left_in[19] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_8_165 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_25.mux_l3_in_0_ mux_bottom_track_25.mux_l2_in_1_/X mux_bottom_track_25.mux_l2_in_0_/X
++ mux_bottom_track_25.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_25.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_15.mux_l1_in_0__A0 _119_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA__089__A _089_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_32_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input69_A chany_top_in[8] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_21.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_19.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_21.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_top_track_0.mux_l1_in_0_ input81/X input79/X mux_top_track_0.mux_l1_in_2_/S VGND
++ VGND VPWR VPWR mux_top_track_0.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_17_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_bottom_track_17.mux_l1_in_0__A1 _095_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_5_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_14_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_25.mux_l2_in_1_ _056_/HI mux_bottom_track_25.mux_l1_in_2_/X mux_bottom_track_25.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_bottom_track_25.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_9.mux_l3_in_0_ mux_bottom_track_9.mux_l2_in_1_/X mux_bottom_track_9.mux_l2_in_0_/X
++ mux_bottom_track_9.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_9.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_17.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_17.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_099_ _099_/A VGND VGND VPWR VPWR _099_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_28_156 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_left_track_3.mux_l1_in_2__A0 input76/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input51_A chany_top_in[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_3_3_0_mem_bottom_track_1.prog_clk clkbuf_3_3_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+Xmux_bottom_track_25.mux_l1_in_2_ input15/X input27/X mux_bottom_track_25.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_25.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XANTENNA__097__A _097_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_9.mux_l2_in_1_ input8/X input4/X mux_bottom_track_9.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_9.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_25_159 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_187 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_176 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_165 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_154 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_143 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_132 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_121 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_110 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_30_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_30_162 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_23.mux_l1_in_0__A0 _124_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_top_track_16.mux_l1_in_1__A0 _124_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_1 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_21_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_bottom_track_25.mux_l1_in_0__A1 _096_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input14_A chanx_left_in[12] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_12_151 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_8_177 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_left_track_15.mux_l1_in_0__A1 _099_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_12_17 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input6_A bottom_left_grid_pin_47_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_39.mux_l1_in_0_ input78/X input62/X mux_left_track_39.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_39.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_26_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_32_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_4_180 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_23_16 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_14_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_input81_A top_left_grid_pin_44_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_5.mux_l1_in_0__A1 _092_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_25.mux_l2_in_0_ mux_bottom_track_25.mux_l1_in_1_/X mux_bottom_track_25.mux_l1_in_0_/X
++ mux_bottom_track_25.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_25.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_17.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_9.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_098_ _098_/A VGND VGND VPWR VPWR _098_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_13.mux_l2_in_1__A1 input73/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_20_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_3.mux_l1_in_2__A1 input74/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_top_track_4.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_4.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_19_113 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_25.mux_l1_in_1_ input6/X input2/X mux_bottom_track_25.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_25.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_3_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input44_A chany_bottom_in[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_9.mux_l2_in_0_ input9/X mux_bottom_track_9.mux_l1_in_0_/X mux_bottom_track_9.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_9.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_31.mux_l1_in_0__A0 input74/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_100 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XANTENNA_mux_bottom_track_33.mux_l1_in_0__A1 _097_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_188 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_177 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_166 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_24_160 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_155 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_144 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_133 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XANTENNA_mux_top_track_16.mux_l1_in_1__A1 _115_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_122 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_top_track_16.mux_l1_in_3_ _048_/HI input19/X mux_top_track_16.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_16.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+XPHY_111 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_2 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_30_152 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XANTENNA_mux_left_track_23.mux_l1_in_0__A1 _104_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_21_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_left_track_5.sky130_fd_sc_hd__buf_4_0_ mux_left_track_5.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _068_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_12_163 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_12_141 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_8_189 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_8_101 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmem_left_track_1.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_1.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_4_192 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_top_track_16.mux_l3_in_0_ mux_top_track_16.mux_l2_in_1_/X mux_top_track_16.mux_l2_in_0_/X
++ mux_top_track_16.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_left_track_21.sky130_fd_sc_hd__buf_4_0_ mux_left_track_21.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _076_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_13_50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_input74_A left_bottom_grid_pin_37_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_top_track_4.mux_l1_in_5__A0 input26/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_18_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_3.mux_l1_in_3_ _038_/HI input78/X mux_left_track_3.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_3.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+XFILLER_20_18 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_11.mux_l3_in_0_ mux_left_track_11.mux_l2_in_1_/X mux_left_track_11.mux_l2_in_0_/X
++ mux_left_track_11.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_11.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_16.mux_l2_in_1_ mux_top_track_16.mux_l1_in_3_/X mux_top_track_16.mux_l1_in_2_/X
++ mux_top_track_16.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+X_097_ _097_/A VGND VGND VPWR VPWR _097_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_top_track_4.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_4.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_15.sky130_fd_sc_hd__buf_4_0_ mux_left_track_15.mux_l3_in_0_/X VGND
++ VGND VPWR VPWR _073_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_top_track_24.mux_l1_in_1__A1 _116_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_3_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_bottom_track_25.mux_l1_in_0_ _105_/A _096_/A mux_bottom_track_25.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_25.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_19_169 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA_input37_A chany_bottom_in[15] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_33_194 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_189 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_178 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_167 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_24_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_156 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_145 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_134 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_left_track_11.mux_l2_in_1_ _062_/HI _079_/A mux_left_track_11.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_11.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XPHY_123 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_top_track_16.mux_l1_in_2_ input12/X input24/X mux_top_track_16.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_16.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XPHY_112 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_101 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_26_17 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_15_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_left_track_3.mux_l3_in_0_ mux_left_track_3.mux_l2_in_1_/X mux_left_track_3.mux_l2_in_0_/X
++ mux_left_track_3.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XPHY_3 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_29_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_bottom_track_9.mux_l1_in_0_ _103_/A _093_/A mux_bottom_track_9.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_bottom_track_9.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_12_175 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_9.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_9.mux_l4_in_0_/X VGND
++ VGND VPWR VPWR _090_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_7.mux_l1_in_1__A0 _079_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_26_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_left_track_13.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_13.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_13.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_left_track_1.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_1.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_3.mux_l2_in_1_ mux_left_track_3.mux_l1_in_3_/X mux_left_track_3.mux_l1_in_2_/X
++ mux_left_track_3.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input67_A chany_top_in[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_13_40 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_1_163 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA__100__A _100_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_top_track_4.mux_l1_in_5__A1 _121_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_top_track_32.mux_l1_in_1__A1 _117_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_3.mux_l1_in_2_ input76/X input74/X mux_left_track_3.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_3.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xmux_top_track_16.mux_l2_in_0_ mux_top_track_16.mux_l1_in_1_/X mux_top_track_16.mux_l1_in_0_/X
++ mux_top_track_16.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_16.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+X_096_ _096_/A VGND VGND VPWR VPWR _096_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_7.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_7.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_top_track_4.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_4.mux_l1_in_6_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_27_170 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_19_115 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+Xmux_bottom_track_5.mux_l1_in_6_ input19/X input12/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_6_/X sky130_fd_sc_hd__mux2_1
+XFILLER_10_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_10_52 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_33_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_079_ _079_/A VGND VGND VPWR VPWR _079_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_17.mux_l1_in_1__A1 input75/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_18_181 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_179 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_left_track_37.sky130_fd_sc_hd__buf_4_0_ mux_left_track_37.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _084_/A sky130_fd_sc_hd__clkbuf_1
+XPHY_168 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_24_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_157 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_146 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_135 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_124 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_top_track_16.mux_l1_in_1_ _124_/A _115_/A mux_top_track_16.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_16.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_11.mux_l2_in_0_ input33/X mux_left_track_11.mux_l1_in_0_/X mux_left_track_11.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_11.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XPHY_113 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_102 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_30_165 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_15_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_15_151 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_4 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_7_53 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_21_110 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_32_83 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_12_187 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_8_125 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA__103__A _103_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_7.mux_l1_in_1__A1 _113_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_bottom_track_9.mux_l2_in_3__A1 input20/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_26_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_left_track_13.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_13.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_13.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_left_track_1.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_33.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input12_A chanx_left_in[10] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_3.mux_l2_in_0_ mux_left_track_3.mux_l1_in_1_/X mux_left_track_3.mux_l1_in_0_/X
++ mux_left_track_3.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_5.mux_l1_in_3__A1 input77/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_13_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input4_A bottom_left_grid_pin_45_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_9_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_1_153 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_11_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_left_track_3.mux_l1_in_1_ _079_/A _111_/A mux_left_track_3.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_3.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA__111__A _111_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_25.mux_l1_in_1__A1 input71/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_095_ _095_/A VGND VGND VPWR VPWR _095_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_7.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_7.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_6_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_28_138 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmem_top_track_4.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_2.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l1_in_6_/S
++ sky130_fd_sc_hd__dfxtp_2
+XFILLER_19_138 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_10_97 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_bottom_track_5.mux_l1_in_5_ input24/X input8/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_5_/X sky130_fd_sc_hd__mux2_1
+X_078_ _078_/A VGND VGND VPWR VPWR _078_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_18_193 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XPHY_169 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_24_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XPHY_158 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_147 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_136 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_125 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_114 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_103 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_0_218 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_16.mux_l1_in_0_ input84/X input80/X mux_top_track_16.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_16.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_15_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_15_163 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XPHY_5 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_input42_A chany_bottom_in[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_16_96 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_12_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_8_137 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+Xmem_left_track_13.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_11.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_13.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_11.mux_l1_in_0_ _116_/A _096_/A mux_left_track_11.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_left_track_11.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_23.mux_l2_in_0_ mux_left_track_23.mux_l1_in_1_/X mux_left_track_23.mux_l1_in_0_/X
++ mux_left_track_23.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_23.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xclkbuf_3_2_0_mem_bottom_track_1.prog_clk clkbuf_3_3_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA__109__A _109_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_1_198 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_5.mux_l2_in_3_ _059_/HI mux_bottom_track_5.mux_l1_in_6_/X mux_bottom_track_5.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_23.mux_l1_in_1_ _035_/HI input78/X mux_left_track_23.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_23.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_3.mux_l1_in_0_ input31/X _091_/A mux_left_track_3.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_3.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmem_left_track_19.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_19.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_left_track_19.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_24_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_24_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_094_ _094_/A VGND VGND VPWR VPWR _094_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_7.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_5.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_7.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input72_A left_bottom_grid_pin_35_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_6_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_1_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_27_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_10_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_5.mux_l1_in_4_ input7/X input6/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_4_/X sky130_fd_sc_hd__mux2_1
+XFILLER_33_175 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_33_164 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_077_ _077_/A VGND VGND VPWR VPWR _077_/X sky130_fd_sc_hd__clkbuf_1
+XPHY_159 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_24_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_148 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_137 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_126 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_115 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_104 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_bottom_track_5.mux_l4_in_0_ mux_bottom_track_5.mux_l3_in_1_/X mux_bottom_track_5.mux_l3_in_0_/X
++ mux_bottom_track_5.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_0_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA__117__A _117_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_30_134 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input35_A chany_bottom_in[13] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_6 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_bottom_track_3.mux_l1_in_0__A0 _100_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput80 top_left_grid_pin_43_ VGND VGND VPWR VPWR input80/X sky130_fd_sc_hd__buf_1
+XFILLER_21_156 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_left_track_29.mux_l1_in_0__A0 input73/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_16_75 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_8_105 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_5.mux_l3_in_1_ mux_bottom_track_5.mux_l2_in_3_/X mux_bottom_track_5.mux_l2_in_2_/X
++ mux_bottom_track_5.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_top_track_8.mux_l2_in_3__A1 input20/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_1_177 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_5.mux_l2_in_2_ mux_bottom_track_5.mux_l1_in_5_/X mux_bottom_track_5.mux_l1_in_4_/X
++ mux_bottom_track_5.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l2_in_2_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input65_A chany_top_in[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_23.mux_l1_in_0_ _124_/A _104_/A mux_left_track_23.mux_l1_in_1_/S VGND
++ VGND VPWR VPWR mux_left_track_23.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmem_left_track_19.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_17.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_19.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_10_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+X_093_ _093_/A VGND VGND VPWR VPWR _093_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_35.mux_l2_in_0_ _041_/HI mux_left_track_35.mux_l1_in_0_/X mux_left_track_35.mux_l2_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_35.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_10_77 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_bottom_track_5.mux_l1_in_3_ input5/X input4/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+Xinput1 bottom_left_grid_pin_42_ VGND VGND VPWR VPWR input1/X sky130_fd_sc_hd__buf_1
+X_076_ _076_/A VGND VGND VPWR VPWR _076_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_27_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_33_154 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_left_track_31.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_31.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_31.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_left_track_37.mux_l1_in_0__A0 input77/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_116 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_105 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_149 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_21_98 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_138 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_127 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XANTENNA_input28_A chanx_left_in[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_7 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_bottom_track_3.mux_l1_in_0__A1 _091_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_30_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_21_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_21_146 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_059_ VGND VGND VPWR VPWR _059_/HI _059_/LO sky130_fd_sc_hd__conb_1
+XFILLER_7_34 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_7_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xinput70 chany_top_in[9] VGND VGND VPWR VPWR _096_/A sky130_fd_sc_hd__clkbuf_2
+Xinput81 top_left_grid_pin_44_ VGND VGND VPWR VPWR input81/X sky130_fd_sc_hd__buf_1
+XFILLER_16_32 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XANTENNA_mux_left_track_9.mux_l2_in_1__A1 input71/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_17.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_17.mux_l3_in_0_/X
++ VGND VGND VPWR VPWR _094_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_bottom_track_5.mux_l3_in_0_ mux_bottom_track_5.mux_l2_in_1_/X mux_bottom_track_5.mux_l2_in_0_/X
++ mux_bottom_track_5.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_4_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_23_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_13_22 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_bottom_track_5.mux_l2_in_1_ mux_bottom_track_5.mux_l1_in_3_/X mux_bottom_track_5.mux_l1_in_2_/X
++ mux_bottom_track_5.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input10_A ccff_head VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_bottom_track_5.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_5.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_24_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA_input2_A bottom_left_grid_pin_43_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input58_A chany_top_in[16] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_092_ _092_/A VGND VGND VPWR VPWR _092_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_10_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xinput2 bottom_left_grid_pin_43_ VGND VGND VPWR VPWR input2/X sky130_fd_sc_hd__buf_1
+Xmux_bottom_track_5.mux_l1_in_2_ input3/X input2/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_27_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_075_ _075_/A VGND VGND VPWR VPWR _075_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_33_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_left_track_31.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_29.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_31.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_35.mux_l1_in_0_ input76/X input68/X mux_left_track_35.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_35.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_24_100 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_139 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_128 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_117 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_106 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_30_158 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_30_114 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_15_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_8 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_7_24 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_058_ VGND VGND VPWR VPWR _058_/HI _058_/LO sky130_fd_sc_hd__conb_1
+Xinput60 chany_top_in[18] VGND VGND VPWR VPWR _105_/A sky130_fd_sc_hd__clkbuf_2
+Xinput82 top_left_grid_pin_45_ VGND VGND VPWR VPWR input82/X sky130_fd_sc_hd__buf_1
+XFILLER_12_125 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_12_103 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xinput71 left_bottom_grid_pin_34_ VGND VGND VPWR VPWR input71/X sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input40_A chany_bottom_in[18] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_33.mux_l3_in_0_ mux_bottom_track_33.mux_l2_in_1_/X mux_bottom_track_33.mux_l2_in_0_/X
++ mux_bottom_track_33.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_33.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_left_track_37.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_37.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_37.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_top_track_0.mux_l1_in_2__A0 _109_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_13_78 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_13_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_1_146 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_1.sky130_fd_sc_hd__buf_4_0_ mux_left_track_1.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _066_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_13_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_bottom_track_5.mux_l2_in_0_ mux_bottom_track_5.mux_l1_in_1_/X mux_bottom_track_5.mux_l1_in_0_/X
++ mux_bottom_track_5.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_5.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_5.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_33.mux_l2_in_1_ _058_/HI mux_bottom_track_33.mux_l1_in_2_/X mux_bottom_track_33.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_bottom_track_33.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_top_track_0.mux_l2_in_1__A0 _119_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_10_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_091_ _091_/A VGND VGND VPWR VPWR _091_/X sky130_fd_sc_hd__clkbuf_1
+Xinput3 bottom_left_grid_pin_44_ VGND VGND VPWR VPWR input3/X sky130_fd_sc_hd__buf_1
+XANTENNA_input70_A chany_top_in[9] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_074_ _074_/A VGND VGND VPWR VPWR _074_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_19_109 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_19_99 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_11.mux_l1_in_0__A0 _116_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_33.mux_l1_in_2_ input16/X input28/X mux_bottom_track_33.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_33.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_5.mux_l1_in_1_ input1/X input9/X mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_33_189 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_33_134 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_21_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_21_34 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XPHY_129 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_118 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_107 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_30_137 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xclkbuf_2_3_0_mem_bottom_track_1.prog_clk clkbuf_2_3_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_7_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+X_057_ VGND VGND VPWR VPWR _057_/HI _057_/LO sky130_fd_sc_hd__conb_1
+XPHY_9 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xinput61 chany_top_in[19] VGND VGND VPWR VPWR input61/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_prog_clk_0_FTB00_A prog_clk_0_N_in VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput83 top_left_grid_pin_46_ VGND VGND VPWR VPWR input83/X sky130_fd_sc_hd__buf_1
+XANTENNA_mux_left_track_1.mux_l1_in_0__A0 _089_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput72 left_bottom_grid_pin_35_ VGND VGND VPWR VPWR _079_/A sky130_fd_sc_hd__clkbuf_2
+Xinput50 chany_bottom_in[9] VGND VGND VPWR VPWR _116_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_16_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_input33_A chany_bottom_in[11] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_109_ _109_/A VGND VGND VPWR VPWR _109_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_37.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_35.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_37.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_11.sky130_fd_sc_hd__buf_4_0_ mux_left_track_11.mux_l3_in_0_/X VGND
++ VGND VPWR VPWR _071_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_22_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmem_bottom_track_5.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_5.mux_l1_in_6_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_33.mux_l2_in_0_ mux_bottom_track_33.mux_l1_in_1_/X mux_bottom_track_33.mux_l1_in_0_/X
++ mux_bottom_track_33.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_33.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_24_45 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_10_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+X_090_ _090_/A VGND VGND VPWR VPWR _090_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_6_217 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_5.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_5.mux_l4_in_0_/X VGND
++ VGND VPWR VPWR _088_/A sky130_fd_sc_hd__clkbuf_1
+Xinput4 bottom_left_grid_pin_45_ VGND VGND VPWR VPWR input4/X sky130_fd_sc_hd__buf_1
+Xmux_bottom_track_5.mux_l1_in_0_ _101_/A _092_/A mux_bottom_track_5.mux_l1_in_6_/S
++ VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_33.mux_l1_in_1_ input11/X input7/X mux_bottom_track_33.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_33.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input63_A chany_top_in[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_073_ _073_/A VGND VGND VPWR VPWR _073_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_11.mux_l1_in_0__A1 _096_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_119 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_108 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+X_125_ _125_/A VGND VGND VPWR VPWR _125_/X sky130_fd_sc_hd__buf_1
+XFILLER_15_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+X_056_ VGND VGND VPWR VPWR _056_/HI _056_/LO sky130_fd_sc_hd__conb_1
+Xinput62 chany_top_in[1] VGND VGND VPWR VPWR input62/X sky130_fd_sc_hd__clkbuf_1
+Xinput51 chany_top_in[0] VGND VGND VPWR VPWR input51/X sky130_fd_sc_hd__clkbuf_1
+Xinput84 top_left_grid_pin_47_ VGND VGND VPWR VPWR input84/X sky130_fd_sc_hd__buf_1
+XFILLER_21_138 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_top_track_24.mux_l1_in_3_ _050_/HI input18/X mux_top_track_24.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_24.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+Xclkbuf_3_1_0_mem_bottom_track_1.prog_clk clkbuf_3_1_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+Xinput73 left_bottom_grid_pin_36_ VGND VGND VPWR VPWR input73/X sky130_fd_sc_hd__clkbuf_2
+Xinput40 chany_bottom_in[18] VGND VGND VPWR VPWR _125_/A sky130_fd_sc_hd__buf_1
+XFILLER_20_160 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_16_24 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input26_A chanx_left_in[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_039_ VGND VGND VPWR VPWR _039_/HI _039_/LO sky130_fd_sc_hd__conb_1
+X_108_ _108_/A VGND VGND VPWR VPWR _108_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_17_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_31_222 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_31_200 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_13_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_left_track_33.sky130_fd_sc_hd__buf_4_0_ mux_left_track_33.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _082_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_24.mux_l3_in_0_ mux_top_track_24.mux_l2_in_1_/X mux_top_track_24.mux_l2_in_0_/X
++ mux_top_track_24.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_5.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_3.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_5.mux_l1_in_6_/S
++ sky130_fd_sc_hd__dfxtp_2
+XFILLER_0_192 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_24_79 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_24_57 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_top_track_2.mux_l2_in_3_ _049_/HI input15/X mux_top_track_2.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_2.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+Xinput5 bottom_left_grid_pin_46_ VGND VGND VPWR VPWR input5/X sky130_fd_sc_hd__buf_1
+XFILLER_19_24 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_top_track_24.mux_l2_in_1_ mux_top_track_24.mux_l1_in_3_/X mux_top_track_24.mux_l1_in_2_/X
++ mux_top_track_24.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_33.mux_l1_in_0_ input3/X _097_/A mux_bottom_track_33.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_33.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_33_169 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input56_A chany_top_in[14] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_072_ _072_/A VGND VGND VPWR VPWR _072_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_18_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_18_9 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_2_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_32_191 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XPHY_109 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+X_124_ _124_/A VGND VGND VPWR VPWR _124_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_30_128 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_21_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_left_track_9.mux_l3_in_0_ mux_left_track_9.mux_l2_in_1_/X mux_left_track_9.mux_l2_in_0_/X
++ mux_left_track_9.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_9.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+X_055_ VGND VGND VPWR VPWR _055_/HI _055_/LO sky130_fd_sc_hd__conb_1
+Xinput52 chany_top_in[10] VGND VGND VPWR VPWR _097_/A sky130_fd_sc_hd__clkbuf_2
+Xinput63 chany_top_in[2] VGND VGND VPWR VPWR _089_/A sky130_fd_sc_hd__clkbuf_2
+Xinput85 top_left_grid_pin_48_ VGND VGND VPWR VPWR input85/X sky130_fd_sc_hd__buf_1
+XFILLER_23_7 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_2.mux_l4_in_0_ mux_top_track_2.mux_l3_in_1_/X mux_top_track_2.mux_l3_in_0_/X
++ mux_top_track_2.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_24.mux_l1_in_2_ input30/X input23/X mux_top_track_24.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_24.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xinput30 chanx_left_in[9] VGND VGND VPWR VPWR input30/X sky130_fd_sc_hd__clkbuf_1
+Xinput41 chany_bottom_in[19] VGND VGND VPWR VPWR input41/X sky130_fd_sc_hd__buf_1
+Xinput74 left_bottom_grid_pin_37_ VGND VGND VPWR VPWR input74/X sky130_fd_sc_hd__clkbuf_2
+XFILLER_20_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_bottom_track_9.mux_l1_in_0__A0 _103_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_107_ _107_/A VGND VGND VPWR VPWR _107_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input19_A chanx_left_in[17] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_11_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_038_ VGND VGND VPWR VPWR _038_/HI _038_/LO sky130_fd_sc_hd__conb_1
+XFILLER_7_165 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA__079__A _079_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_9.mux_l2_in_1_ _046_/HI input71/X mux_left_track_9.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_9.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_25_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_2.mux_l3_in_1_ mux_top_track_2.mux_l2_in_3_/X mux_top_track_2.mux_l2_in_2_/X
++ mux_top_track_2.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_4_102 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_22_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input86_A top_left_grid_pin_49_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_2.mux_l2_in_2_ input27/X _120_/A mux_top_track_2.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_2.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+XANTENNA__092__A _092_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_23.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_23.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_left_track_23.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_top_track_24.mux_l2_in_0_ mux_top_track_24.mux_l1_in_1_/X mux_top_track_24.mux_l1_in_0_/X
++ mux_top_track_24.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_3.mux_l1_in_1__A0 _079_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput6 bottom_left_grid_pin_47_ VGND VGND VPWR VPWR input6/X sky130_fd_sc_hd__buf_1
+XFILLER_27_134 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_071_ _071_/A VGND VGND VPWR VPWR _071_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input49_A chany_bottom_in[8] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_33_159 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_17.mux_l2_in_0_ mux_left_track_17.mux_l1_in_1_/X mux_left_track_17.mux_l1_in_0_/X
++ mux_left_track_17.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_17.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XPHY_90 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput140 _107_/X VGND VGND VPWR VPWR chany_top_out[1] sky130_fd_sc_hd__clkbuf_2
+XFILLER_23_170 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_21_48 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+X_123_ _123_/A VGND VGND VPWR VPWR _123_/X sky130_fd_sc_hd__clkbuf_1
+Xinput20 chanx_left_in[18] VGND VGND VPWR VPWR input20/X sky130_fd_sc_hd__buf_1
+Xmux_top_track_24.mux_l1_in_1_ _125_/A _116_/A mux_top_track_24.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_24.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+X_054_ VGND VGND VPWR VPWR _054_/HI _054_/LO sky130_fd_sc_hd__conb_1
+Xinput31 chany_bottom_in[0] VGND VGND VPWR VPWR input31/X sky130_fd_sc_hd__clkbuf_1
+Xinput53 chany_top_in[11] VGND VGND VPWR VPWR input53/X sky130_fd_sc_hd__clkbuf_1
+Xinput64 chany_top_in[3] VGND VGND VPWR VPWR input64/X sky130_fd_sc_hd__clkbuf_1
+Xinput86 top_left_grid_pin_49_ VGND VGND VPWR VPWR input86/X sky130_fd_sc_hd__buf_1
+XFILLER_20_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_16_48 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xinput42 chany_bottom_in[1] VGND VGND VPWR VPWR input42/X sky130_fd_sc_hd__clkbuf_1
+Xinput75 left_bottom_grid_pin_38_ VGND VGND VPWR VPWR input75/X sky130_fd_sc_hd__clkbuf_2
+XANTENNA_mux_bottom_track_9.mux_l1_in_0__A1 _093_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_106_ _106_/A VGND VGND VPWR VPWR _106_/X sky130_fd_sc_hd__clkbuf_1
+X_037_ VGND VGND VPWR VPWR _037_/HI _037_/LO sky130_fd_sc_hd__conb_1
+Xmux_left_track_17.mux_l1_in_1_ _065_/HI input75/X mux_left_track_17.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_17.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_11_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_1.mux_l2_in_3_ _054_/HI input17/X mux_bottom_track_1.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+XFILLER_7_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_7_188 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_top_track_2.mux_l2_in_2__A1 _120_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_9.mux_l2_in_0_ _115_/A mux_left_track_9.mux_l1_in_0_/X mux_left_track_9.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_9.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_top_track_2.mux_l3_in_0_ mux_top_track_2.mux_l2_in_1_/X mux_top_track_2.mux_l2_in_0_/X
++ mux_top_track_2.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA__095__A _095_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input31_A chany_bottom_in[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_16_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_22_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_8_9 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input79_A top_left_grid_pin_42_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_1.mux_l4_in_0_ mux_bottom_track_1.mux_l3_in_1_/X mux_bottom_track_1.mux_l3_in_0_/X
++ mux_bottom_track_1.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_2.mux_l2_in_1_ _111_/A input86/X mux_top_track_2.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_2.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_6_6 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_10_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_3.mux_l1_in_1__A1 _111_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput7 bottom_left_grid_pin_48_ VGND VGND VPWR VPWR input7/X sky130_fd_sc_hd__buf_1
+Xmem_left_track_23.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_21.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_23.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_27_146 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_070_ _070_/A VGND VGND VPWR VPWR _070_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_top_track_0.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_0.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_19_37 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_2_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_24.sky130_fd_sc_hd__buf_4_0_ mux_top_track_24.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _118_/A sky130_fd_sc_hd__clkbuf_1
+XPHY_80 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_91 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xmux_bottom_track_1.mux_l3_in_1_ mux_bottom_track_1.mux_l2_in_3_/X mux_bottom_track_1.mux_l2_in_2_/X
++ mux_bottom_track_1.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xoutput130 _116_/X VGND VGND VPWR VPWR chany_top_out[10] sky130_fd_sc_hd__clkbuf_2
+Xoutput141 _108_/X VGND VGND VPWR VPWR chany_top_out[2] sky130_fd_sc_hd__clkbuf_2
+XFILLER_21_38 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_1.mux_l1_in_3__A1 input77/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input61_A chany_top_in[19] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_122_ _122_/A VGND VGND VPWR VPWR _122_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_24.mux_l1_in_0_ input85/X input81/X mux_top_track_24.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_24.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+X_053_ VGND VGND VPWR VPWR _053_/HI _053_/LO sky130_fd_sc_hd__conb_1
+Xinput87 top_right_grid_pin_1_ VGND VGND VPWR VPWR input87/X sky130_fd_sc_hd__buf_1
+Xinput54 chany_top_in[12] VGND VGND VPWR VPWR _099_/A sky130_fd_sc_hd__clkbuf_2
+Xinput65 chany_top_in[4] VGND VGND VPWR VPWR _091_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_29_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xinput21 chanx_left_in[19] VGND VGND VPWR VPWR input21/X sky130_fd_sc_hd__buf_1
+XFILLER_16_38 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xinput43 chany_bottom_in[2] VGND VGND VPWR VPWR _109_/A sky130_fd_sc_hd__clkbuf_2
+Xinput32 chany_bottom_in[10] VGND VGND VPWR VPWR _117_/A sky130_fd_sc_hd__clkbuf_2
+Xinput76 left_bottom_grid_pin_39_ VGND VGND VPWR VPWR input76/X sky130_fd_sc_hd__clkbuf_2
+Xinput10 ccff_head VGND VGND VPWR VPWR input10/X sky130_fd_sc_hd__buf_1
+XFILLER_32_59 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_left_track_29.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_29.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_29.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_20_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_11_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_bottom_track_1.mux_l2_in_2_ input29/X input22/X mux_bottom_track_1.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+X_105_ _105_/A VGND VGND VPWR VPWR _105_/X sky130_fd_sc_hd__clkbuf_1
+X_036_ VGND VGND VPWR VPWR _036_/HI _036_/LO sky130_fd_sc_hd__conb_1
+Xmux_left_track_17.mux_l1_in_0_ _120_/A _100_/A mux_left_track_17.mux_l1_in_1_/S VGND
++ VGND VPWR VPWR mux_left_track_17.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_29.mux_l2_in_0_ _037_/HI mux_left_track_29.mux_l1_in_0_/X mux_left_track_29.mux_l2_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_29.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_21.mux_l1_in_1__A1 input77/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_4_137 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_left_track_31.mux_l2_in_0_ _039_/HI mux_left_track_31.mux_l1_in_0_/X mux_left_track_31.mux_l2_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_31.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input24_A chanx_left_in[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_3_170 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_28_91 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_left_track_9.mux_l1_in_0_ input48/X _095_/A mux_left_track_9.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_left_track_9.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_0_162 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_24_16 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_top_track_4.mux_l1_in_4__A0 _112_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_5_95 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_2.sky130_fd_sc_hd__buf_4_0_ mux_top_track_2.mux_l4_in_0_/X VGND VGND
++ VPWR VPWR _107_/A sky130_fd_sc_hd__clkbuf_1
+Xclkbuf_2_2_0_mem_bottom_track_1.prog_clk clkbuf_2_3_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_5_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_2.mux_l2_in_0_ input84/X mux_top_track_2.mux_l1_in_0_/X mux_top_track_2.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_2.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+Xinput8 bottom_left_grid_pin_49_ VGND VGND VPWR VPWR input8/X sky130_fd_sc_hd__buf_1
+XFILLER_27_158 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_19_49 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_top_track_0.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_0.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_2_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_33_139 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_26_180 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_18_169 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_70 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_81 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_92 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput131 _117_/X VGND VGND VPWR VPWR chany_top_out[11] sky130_fd_sc_hd__clkbuf_2
+Xoutput142 _109_/X VGND VGND VPWR VPWR chany_top_out[3] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_mux_left_track_17.mux_l1_in_0__A0 _120_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xoutput120 _087_/X VGND VGND VPWR VPWR chany_bottom_out[1] sky130_fd_sc_hd__clkbuf_2
+XFILLER_2_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_1.mux_l3_in_0_ mux_bottom_track_1.mux_l2_in_1_/X mux_bottom_track_1.mux_l2_in_0_/X
++ mux_bottom_track_1.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+X_121_ _121_/A VGND VGND VPWR VPWR _121_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input54_A chany_top_in[12] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_23_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_052_ VGND VGND VPWR VPWR _052_/HI _052_/LO sky130_fd_sc_hd__conb_1
+XFILLER_15_117 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xinput55 chany_top_in[13] VGND VGND VPWR VPWR _100_/A sky130_fd_sc_hd__clkbuf_2
+Xinput66 chany_top_in[5] VGND VGND VPWR VPWR _092_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_14_161 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xinput33 chany_bottom_in[11] VGND VGND VPWR VPWR input33/X sky130_fd_sc_hd__clkbuf_1
+Xinput77 left_bottom_grid_pin_40_ VGND VGND VPWR VPWR input77/X sky130_fd_sc_hd__clkbuf_2
+Xinput22 chanx_left_in[1] VGND VGND VPWR VPWR input22/X sky130_fd_sc_hd__buf_1
+Xinput44 chany_bottom_in[3] VGND VGND VPWR VPWR input44/X sky130_fd_sc_hd__clkbuf_1
+Xinput11 chanx_left_in[0] VGND VGND VPWR VPWR input11/X sky130_fd_sc_hd__buf_1
+Xmem_left_track_29.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_25.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_29.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_035_ VGND VGND VPWR VPWR _035_/HI _035_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_mux_top_track_8.mux_l1_in_0__A1 input79/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_19_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_bottom_track_17.mux_l1_in_2__A1 input26/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_104_ _104_/A VGND VGND VPWR VPWR _104_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_bottom_track_1.mux_l2_in_1_ input8/X mux_bottom_track_1.mux_l1_in_2_/X mux_bottom_track_1.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_7_157 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_4_105 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_31_204 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_17_82 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_16_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input17_A chanx_left_in[15] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_5.mux_l1_in_2__A0 input75/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_9_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input9_A bottom_right_grid_pin_1_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_1.mux_l1_in_2_ input6/X input4/X mux_bottom_track_1.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_29.mux_l1_in_0_ input73/X input61/X mux_left_track_29.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_29.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_31.mux_l1_in_0_ input74/X input57/X mux_left_track_31.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_31.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_24_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input84_A top_left_grid_pin_47_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_3.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_3.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xinput9 bottom_right_grid_pin_1_ VGND VGND VPWR VPWR input9/X sky130_fd_sc_hd__buf_1
+XFILLER_5_211 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xclkbuf_3_0_0_mem_bottom_track_1.prog_clk clkbuf_3_1_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+XPHY_60 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_26_192 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_25_60 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_top_track_0.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_0.mux_l1_in_2_/S VGND VGND VPWR VPWR mux_top_track_0.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XPHY_71 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_82 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_93 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput132 _118_/X VGND VGND VPWR VPWR chany_top_out[12] sky130_fd_sc_hd__clkbuf_2
+Xoutput143 _110_/X VGND VGND VPWR VPWR chany_top_out[4] sky130_fd_sc_hd__clkbuf_2
+XFILLER_32_173 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_32_140 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_left_track_17.mux_l1_in_0__A1 _100_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_2.mux_l1_in_0_ input82/X input80/X mux_top_track_2.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_top_track_2.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xoutput110 _096_/X VGND VGND VPWR VPWR chany_bottom_out[10] sky130_fd_sc_hd__clkbuf_2
+Xoutput121 _088_/X VGND VGND VPWR VPWR chany_bottom_out[2] sky130_fd_sc_hd__clkbuf_2
+X_120_ _120_/A VGND VGND VPWR VPWR _120_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_23_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_051_ VGND VGND VPWR VPWR _051_/HI _051_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_input47_A chany_bottom_in[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput56 chany_top_in[14] VGND VGND VPWR VPWR _101_/A sky130_fd_sc_hd__clkbuf_2
+Xinput67 chany_top_in[6] VGND VGND VPWR VPWR _093_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_14_173 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xinput12 chanx_left_in[10] VGND VGND VPWR VPWR input12/X sky130_fd_sc_hd__buf_1
+Xinput34 chany_bottom_in[12] VGND VGND VPWR VPWR _119_/A sky130_fd_sc_hd__clkbuf_2
+Xinput45 chany_bottom_in[4] VGND VGND VPWR VPWR _111_/A sky130_fd_sc_hd__clkbuf_2
+Xinput78 left_bottom_grid_pin_41_ VGND VGND VPWR VPWR input78/X sky130_fd_sc_hd__clkbuf_2
+Xinput23 chanx_left_in[2] VGND VGND VPWR VPWR input23/X sky130_fd_sc_hd__buf_1
+XFILLER_32_39 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_28_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+X_034_ VGND VGND VPWR VPWR _034_/HI _034_/LO sky130_fd_sc_hd__conb_1
+XFILLER_22_94 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+X_103_ _103_/A VGND VGND VPWR VPWR _103_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_7.mux_l1_in_0__A1 _093_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_1.mux_l2_in_0_ mux_bottom_track_1.mux_l1_in_1_/X mux_bottom_track_1.mux_l1_in_0_/X
++ mux_bottom_track_1.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_7_125 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_8_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_31_216 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_16_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_mux_left_track_15.mux_l2_in_1__A1 input74/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_5.mux_l1_in_2__A1 input73/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_3_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_bottom_track_1.mux_l1_in_1_ input2/X input9/X mux_bottom_track_1.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_33.mux_l1_in_0__A0 input75/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_30_83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_left_track_15.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_15.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_15.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_14_84 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA__101__A _101_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input77_A left_bottom_grid_pin_40_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_25.mux_l1_in_0__A1 _105_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_3.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_3.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XPHY_61 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_25_72 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XPHY_50 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_top_track_0.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ input10/X VGND VGND VPWR VPWR mux_top_track_0.mux_l1_in_2_/S sky130_fd_sc_hd__dfxtp_1
+XPHY_72 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_83 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_94 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput133 _119_/X VGND VGND VPWR VPWR chany_top_out[13] sky130_fd_sc_hd__clkbuf_2
+Xoutput144 _111_/X VGND VGND VPWR VPWR chany_top_out[5] sky130_fd_sc_hd__clkbuf_2
+XFILLER_23_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xoutput100 _067_/X VGND VGND VPWR VPWR chanx_left_out[1] sky130_fd_sc_hd__clkbuf_2
+X_050_ VGND VGND VPWR VPWR _050_/HI _050_/LO sky130_fd_sc_hd__conb_1
+Xoutput111 _097_/X VGND VGND VPWR VPWR chany_bottom_out[11] sky130_fd_sc_hd__clkbuf_2
+Xoutput122 _089_/X VGND VGND VPWR VPWR chany_bottom_out[3] sky130_fd_sc_hd__clkbuf_2
+Xinput57 chany_top_in[15] VGND VGND VPWR VPWR input57/X sky130_fd_sc_hd__clkbuf_1
+Xinput79 top_left_grid_pin_42_ VGND VGND VPWR VPWR input79/X sky130_fd_sc_hd__clkbuf_2
+Xinput68 chany_top_in[7] VGND VGND VPWR VPWR input68/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_14_185 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xinput13 chanx_left_in[11] VGND VGND VPWR VPWR input13/X sky130_fd_sc_hd__buf_1
+Xinput24 chanx_left_in[3] VGND VGND VPWR VPWR input24/X sky130_fd_sc_hd__buf_1
+Xinput35 chany_bottom_in[13] VGND VGND VPWR VPWR _120_/A sky130_fd_sc_hd__clkbuf_2
+Xinput46 chany_bottom_in[5] VGND VGND VPWR VPWR _112_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_20_155 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_20_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmem_left_track_9.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_9.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_9.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_033_ VGND VGND VPWR VPWR _033_/HI _033_/LO sky130_fd_sc_hd__conb_1
+XFILLER_22_62 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_19_200 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_11_155 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_11_100 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_bottom_track_1.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_1.mux_l4_in_0_/X VGND
++ VGND VPWR VPWR _086_/A sky130_fd_sc_hd__clkbuf_1
+X_102_ _102_/A VGND VGND VPWR VPWR _102_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_7_115 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_7_137 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_17_95 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_17_62 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_17_51 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XANTENNA__104__A _104_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_1.mux_l1_in_0_ _099_/A _089_/A mux_bottom_track_1.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_bottom_track_1.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_8_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_0_187 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_0_198 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input22_A chanx_left_in[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_5_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_left_track_15.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_15.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_15.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_left_track_3.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_1.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_3.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_33_109 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_7.sky130_fd_sc_hd__buf_4_0_ mux_left_track_7.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _069_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_18_139 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XANTENNA__112__A _112_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_62 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_51 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_40 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_17_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_73 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_84 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_95 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput134 _120_/X VGND VGND VPWR VPWR chany_top_out[14] sky130_fd_sc_hd__clkbuf_2
+Xoutput145 _112_/X VGND VGND VPWR VPWR chany_top_out[6] sky130_fd_sc_hd__clkbuf_2
+XFILLER_23_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xoutput101 _068_/X VGND VGND VPWR VPWR chanx_left_out[2] sky130_fd_sc_hd__clkbuf_2
+Xclkbuf_0_mem_bottom_track_1.prog_clk prog_clk_0_FTB00/X VGND VGND VPWR VPWR clkbuf_0_mem_bottom_track_1.prog_clk/X
++ sky130_fd_sc_hd__clkbuf_16
+Xoutput112 _098_/X VGND VGND VPWR VPWR chany_bottom_out[12] sky130_fd_sc_hd__clkbuf_2
+Xoutput123 _090_/X VGND VGND VPWR VPWR chany_bottom_out[4] sky130_fd_sc_hd__clkbuf_2
+XFILLER_14_197 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xinput14 chanx_left_in[12] VGND VGND VPWR VPWR input14/X sky130_fd_sc_hd__buf_1
+Xinput25 chanx_left_in[4] VGND VGND VPWR VPWR input25/X sky130_fd_sc_hd__buf_1
+Xinput36 chany_bottom_in[14] VGND VGND VPWR VPWR _121_/A sky130_fd_sc_hd__clkbuf_2
+Xinput58 chany_top_in[16] VGND VGND VPWR VPWR _103_/A sky130_fd_sc_hd__clkbuf_2
+Xinput69 chany_top_in[8] VGND VGND VPWR VPWR _095_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_20_101 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_left_track_9.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_9.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_9.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xinput47 chany_bottom_in[6] VGND VGND VPWR VPWR _113_/A sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input52_A chany_top_in[10] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_11_167 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_11_145 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_9.mux_l2_in_0__A0 _115_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_101_ _101_/A VGND VGND VPWR VPWR _101_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_23.sky130_fd_sc_hd__buf_4_0_ mux_left_track_23.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _077_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_19_212 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_8_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_left_track_5.mux_l1_in_3_ _044_/HI input77/X mux_left_track_5.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_5.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_13.mux_l3_in_0_ mux_left_track_13.mux_l2_in_1_/X mux_left_track_13.mux_l2_in_0_/X
++ mux_left_track_13.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_13.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA__120__A _120_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_73 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_left_track_17.sky130_fd_sc_hd__buf_4_0_ mux_left_track_17.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _074_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input15_A chanx_left_in[13] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA__115__A _115_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_19.mux_l1_in_1__A1 input76/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_13.mux_l2_in_1_ _063_/HI input73/X mux_left_track_13.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_13.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmem_left_track_15.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_13.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_15.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_5.mux_l3_in_0_ mux_left_track_5.mux_l2_in_1_/X mux_left_track_5.mux_l2_in_0_/X
++ mux_left_track_5.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input7_A bottom_left_grid_pin_48_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_63 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_input82_A top_left_grid_pin_45_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_52 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_41 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_74 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_85 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_96 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput135 _121_/X VGND VGND VPWR VPWR chany_top_out[15] sky130_fd_sc_hd__clkbuf_2
+Xoutput146 _113_/X VGND VGND VPWR VPWR chany_top_out[7] sky130_fd_sc_hd__clkbuf_2
+Xoutput102 _069_/X VGND VGND VPWR VPWR chanx_left_out[3] sky130_fd_sc_hd__clkbuf_2
+XFILLER_17_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xoutput124 _091_/X VGND VGND VPWR VPWR chany_bottom_out[5] sky130_fd_sc_hd__clkbuf_2
+Xmux_left_track_5.mux_l2_in_1_ mux_left_track_5.mux_l1_in_3_/X mux_left_track_5.mux_l1_in_2_/X
++ mux_left_track_5.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xoutput113 _099_/X VGND VGND VPWR VPWR chany_bottom_out[13] sky130_fd_sc_hd__clkbuf_2
+XFILLER_23_154 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_11_76 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xinput59 chany_top_in[17] VGND VGND VPWR VPWR _104_/A sky130_fd_sc_hd__clkbuf_2
+XANTENNA__123__A _123_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput15 chanx_left_in[13] VGND VGND VPWR VPWR input15/X sky130_fd_sc_hd__buf_1
+XANTENNA_mux_left_track_7.mux_l1_in_3__A1 input78/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput26 chanx_left_in[5] VGND VGND VPWR VPWR input26/X sky130_fd_sc_hd__buf_1
+Xinput37 chany_bottom_in[15] VGND VGND VPWR VPWR input37/X sky130_fd_sc_hd__buf_1
+Xinput48 chany_bottom_in[7] VGND VGND VPWR VPWR input48/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_28_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xclkbuf_3_7_0_mem_bottom_track_1.prog_clk clkbuf_3_7_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_11_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_11_113 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_100_ _100_/A VGND VGND VPWR VPWR _100_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_9.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_7.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_9.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_5.mux_l1_in_2_ input75/X input73/X mux_left_track_5.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_5.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input45_A chany_bottom_in[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_2_1_0_mem_bottom_track_1.prog_clk clkbuf_2_1_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_3_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_4_109 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_28_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_13_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_32.mux_l3_in_0_ mux_top_track_32.mux_l2_in_1_/X mux_top_track_32.mux_l2_in_0_/X
++ mux_top_track_32.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_top_track_32.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_0_167 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_8.mux_l2_in_3_ _053_/HI input20/X mux_top_track_8.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_8.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+XFILLER_8_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_bottom_track_1.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_1.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_13.mux_l2_in_0_ input37/X mux_left_track_13.mux_l1_in_0_/X mux_left_track_13.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_13.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_14_76 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_30_42 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_29_160 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_left_track_39.sky130_fd_sc_hd__buf_4_0_ mux_left_track_39.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _085_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_32.mux_l2_in_1_ _051_/HI mux_top_track_32.mux_l1_in_2_/X mux_top_track_32.mux_l2_in_1_/S
++ VGND VGND VPWR VPWR mux_top_track_32.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XPHY_64 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_53 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_25_64 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XPHY_42 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_31 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_20 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_75 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_86 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XANTENNA_input75_A left_bottom_grid_pin_38_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_97 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput136 _122_/X VGND VGND VPWR VPWR chany_top_out[16] sky130_fd_sc_hd__clkbuf_2
+Xoutput147 _114_/X VGND VGND VPWR VPWR chany_top_out[8] sky130_fd_sc_hd__clkbuf_2
+XFILLER_32_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_32_166 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_32_122 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xoutput103 _070_/X VGND VGND VPWR VPWR chanx_left_out[4] sky130_fd_sc_hd__clkbuf_2
+XFILLER_17_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_17_141 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xoutput125 _092_/X VGND VGND VPWR VPWR chany_bottom_out[6] sky130_fd_sc_hd__clkbuf_2
+Xmux_left_track_5.mux_l2_in_0_ mux_left_track_5.mux_l1_in_1_/X mux_left_track_5.mux_l1_in_0_/X
++ mux_left_track_5.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xoutput114 _100_/X VGND VGND VPWR VPWR chany_bottom_out[14] sky130_fd_sc_hd__clkbuf_2
+XFILLER_2_46 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_23_166 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_23_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_8.mux_l4_in_0_ mux_top_track_8.mux_l3_in_1_/X mux_top_track_8.mux_l3_in_0_/X
++ mux_top_track_8.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xinput16 chanx_left_in[14] VGND VGND VPWR VPWR input16/X sky130_fd_sc_hd__buf_1
+XFILLER_14_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_32.mux_l1_in_2_ input17/X input29/X mux_top_track_32.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_top_track_32.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xinput27 chanx_left_in[6] VGND VGND VPWR VPWR input27/X sky130_fd_sc_hd__buf_1
+Xinput38 chany_bottom_in[16] VGND VGND VPWR VPWR _123_/A sky130_fd_sc_hd__clkbuf_2
+Xinput49 chany_bottom_in[8] VGND VGND VPWR VPWR _115_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_22_76 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_5.mux_l1_in_1_ input71/X _112_/A mux_left_track_5.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_5.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input38_A chany_bottom_in[16] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_8.mux_l3_in_1_ mux_top_track_8.mux_l2_in_3_/X mux_top_track_8.mux_l2_in_2_/X
++ mux_top_track_8.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_left_track_33.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_33.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_33.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_3_154 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_21_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_8.mux_l2_in_2_ input13/X input25/X mux_top_track_8.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_8.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_8_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmem_bottom_track_1.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_1.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_29_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input20_A chanx_left_in[18] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_14_66 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_bottom_track_5.mux_l1_in_0__A0 _101_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_32.mux_l2_in_0_ mux_top_track_32.mux_l1_in_1_/X mux_top_track_32.mux_l1_in_0_/X
++ mux_top_track_32.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_32.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XPHY_65 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_26_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_54 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_25_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_25_54 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_25_10 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XPHY_43 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_32 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_21 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_76 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_87 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_10 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_98 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput137 _123_/X VGND VGND VPWR VPWR chany_top_out[17] sky130_fd_sc_hd__clkbuf_2
+Xoutput148 _115_/X VGND VGND VPWR VPWR chany_top_out[9] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input68_A chany_top_in[7] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xoutput104 _071_/X VGND VGND VPWR VPWR chanx_left_out[5] sky130_fd_sc_hd__clkbuf_2
+Xmux_left_track_13.mux_l1_in_0_ _117_/A _097_/A mux_left_track_13.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_left_track_13.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xoutput126 _093_/X VGND VGND VPWR VPWR chany_bottom_out[7] sky130_fd_sc_hd__clkbuf_2
+Xoutput115 _101_/X VGND VGND VPWR VPWR chany_bottom_out[15] sky130_fd_sc_hd__clkbuf_2
+XFILLER_2_69 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_25.mux_l2_in_0_ mux_left_track_25.mux_l1_in_1_/X mux_left_track_25.mux_l1_in_0_/X
++ mux_left_track_25.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_25.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xinput17 chanx_left_in[15] VGND VGND VPWR VPWR input17/X sky130_fd_sc_hd__buf_1
+Xmux_top_track_32.mux_l1_in_1_ input22/X _117_/A mux_top_track_32.mux_l1_in_2_/S VGND
++ VGND VPWR VPWR mux_top_track_32.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xinput28 chanx_left_in[7] VGND VGND VPWR VPWR input28/X sky130_fd_sc_hd__clkbuf_1
+Xinput39 chany_bottom_in[17] VGND VGND VPWR VPWR _124_/A sky130_fd_sc_hd__clkbuf_2
+XFILLER_22_66 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_5.mux_l1_in_0_ input42/X _092_/A mux_left_track_5.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_5.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_25.mux_l1_in_1_ _036_/HI input71/X mux_left_track_25.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_25.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_8_79 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+X_089_ _089_/A VGND VGND VPWR VPWR _089_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_33.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_31.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_33.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_top_track_8.mux_l3_in_0_ mux_top_track_8.mux_l2_in_1_/X mux_top_track_8.mux_l2_in_0_/X
++ mux_top_track_8.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_17_99 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_30_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_3_166 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_3_177 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input50_A chany_bottom_in[9] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_12_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmem_bottom_track_1.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_1.mux_l1_in_2_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_left_track_39.mux_l1_in_0__A0 input78/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_8.mux_l2_in_1_ _123_/A _113_/A mux_top_track_8.mux_l2_in_3_/S VGND
++ VGND VPWR VPWR mux_top_track_8.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+XFILLER_29_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input13_A chanx_left_in[11] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_14_12 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_bottom_track_5.mux_l1_in_0__A1 _092_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_39.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_39.mux_l1_in_0_/S VGND VGND VPWR VPWR output88/A sky130_fd_sc_hd__dfxtp_1
+XPHY_66 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_55 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_44 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_33 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_22 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_99 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_77 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XANTENNA_input5_A bottom_left_grid_pin_46_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_88 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_11 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_32_179 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_32_146 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xoutput138 _124_/X VGND VGND VPWR VPWR chany_top_out[18] sky130_fd_sc_hd__clkbuf_2
+Xoutput105 _072_/X VGND VGND VPWR VPWR chanx_left_out[6] sky130_fd_sc_hd__clkbuf_2
+XFILLER_11_35 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xoutput127 _094_/X VGND VGND VPWR VPWR chany_bottom_out[8] sky130_fd_sc_hd__clkbuf_2
+Xoutput116 _102_/X VGND VGND VPWR VPWR chany_bottom_out[16] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input80_A top_left_grid_pin_43_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xinput18 chanx_left_in[16] VGND VGND VPWR VPWR input18/X sky130_fd_sc_hd__buf_1
+Xinput29 chanx_left_in[8] VGND VGND VPWR VPWR input29/X sky130_fd_sc_hd__buf_1
+Xmux_top_track_32.mux_l1_in_0_ input86/X input82/X mux_top_track_32.mux_l1_in_2_/S
++ VGND VGND VPWR VPWR mux_top_track_32.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_9_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_left_track_25.mux_l1_in_0_ _125_/A _105_/A mux_left_track_25.mux_l1_in_1_/S VGND
++ VGND VPWR VPWR mux_left_track_25.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_25_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_088_ _088_/A VGND VGND VPWR VPWR _088_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_37.mux_l2_in_0_ _042_/HI mux_left_track_37.mux_l1_in_0_/X mux_left_track_37.mux_l2_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_37.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_input43_A chany_bottom_in[2] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_3_134 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_3_189 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_5_37 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_top_track_8.mux_l2_in_0_ input87/X mux_top_track_8.mux_l1_in_0_/X mux_top_track_8.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_8.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+Xmem_bottom_track_1.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_32.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_1.mux_l1_in_2_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_25.sky130_fd_sc_hd__buf_4_0_ mux_bottom_track_25.mux_l3_in_0_/X
++ VGND VGND VPWR VPWR _098_/A sky130_fd_sc_hd__clkbuf_1
+XFILLER_29_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_left_track_39.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_37.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_39.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_26_144 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_12 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_67 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_8.sky130_fd_sc_hd__buf_4_0_ mux_top_track_8.mux_l4_in_0_/X VGND VGND
++ VPWR VPWR _110_/A sky130_fd_sc_hd__clkbuf_1
+XPHY_56 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_45 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_17_133 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_17_111 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_34 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_23 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_78 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_89 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput139 _125_/X VGND VGND VPWR VPWR chany_top_out[19] sky130_fd_sc_hd__clkbuf_2
+XFILLER_32_158 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xoutput106 _073_/X VGND VGND VPWR VPWR chanx_left_out[7] sky130_fd_sc_hd__clkbuf_2
+Xoutput128 _095_/X VGND VGND VPWR VPWR chany_bottom_out[9] sky130_fd_sc_hd__clkbuf_2
+Xoutput117 _103_/X VGND VGND VPWR VPWR chany_bottom_out[17] sky130_fd_sc_hd__clkbuf_2
+Xinput19 chanx_left_in[17] VGND VGND VPWR VPWR input19/X sky130_fd_sc_hd__buf_1
+XFILLER_11_69 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_20_139 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_9_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input73_A left_bottom_grid_pin_36_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_22_13 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+X_087_ _087_/A VGND VGND VPWR VPWR _087_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_6_187 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_top_track_2.mux_l2_in_1__A0 _111_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_15_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_input36_A chany_bottom_in[14] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_30_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_left_track_13.mux_l1_in_0__A0 _117_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_12_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_left_track_37.mux_l1_in_0_ input77/X input64/X mux_left_track_37.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_37.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_top_track_4.mux_l1_in_0__A1 input79/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_3_6_0_mem_bottom_track_1.prog_clk clkbuf_3_7_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+XPHY_57 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_26_156 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_25_46 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_top_track_8.mux_l1_in_0_ input83/X input79/X mux_top_track_8.mux_l1_in_0_/S VGND
++ VGND VPWR VPWR mux_top_track_8.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XPHY_46 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_35 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_24 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_68 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_79 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XPHY_13 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xoutput129 _106_/X VGND VGND VPWR VPWR chany_top_out[0] sky130_fd_sc_hd__clkbuf_2
+Xoutput107 _074_/X VGND VGND VPWR VPWR chanx_left_out[8] sky130_fd_sc_hd__clkbuf_2
+Xoutput118 _104_/X VGND VGND VPWR VPWR chany_bottom_out[18] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_mux_left_track_1.mux_l1_in_2__A0 input75/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_top_track_32.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_32.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_32.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xclkbuf_2_0_0_mem_bottom_track_1.prog_clk clkbuf_2_1_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_1_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input66_A chany_top_in[5] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_11_118 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XFILLER_9_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_10_140 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+X_086_ _086_/A VGND VGND VPWR VPWR _086_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_6_199 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_3.sky130_fd_sc_hd__buf_4_0_ mux_left_track_3.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _067_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_21.mux_l1_in_0__A0 _123_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_24_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_17_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_30_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+X_069_ _069_/A VGND VGND VPWR VPWR _069_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input29_A chanx_left_in[8] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_28_46 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_mux_left_track_13.mux_l1_in_0__A1 _097_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_4.mux_l1_in_6_ input21/X input14/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_6_/X sky130_fd_sc_hd__mux2_1
+XFILLER_12_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_mux_left_track_3.mux_l1_in_0__A1 _091_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_4_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_26_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_25_14 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_47 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_36 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_25 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_69 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_1_212 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA__093__A _093_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_14 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xoutput90 _076_/X VGND VGND VPWR VPWR chanx_left_out[10] sky130_fd_sc_hd__clkbuf_2
+Xoutput108 _075_/X VGND VGND VPWR VPWR chanx_left_out[9] sky130_fd_sc_hd__clkbuf_2
+XFILLER_17_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_left_track_1.mux_l1_in_3_ _061_/HI input77/X mux_left_track_1.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_1.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+Xoutput119 _105_/X VGND VGND VPWR VPWR chany_bottom_out[19] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input11_A chanx_left_in[0] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_13.sky130_fd_sc_hd__buf_4_0_ mux_left_track_13.mux_l3_in_0_/X VGND
++ VGND VPWR VPWR _072_/A sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_1.mux_l1_in_2__A1 input73/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_11.mux_l2_in_1__A1 _079_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_top_track_32.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_32.mux_l1_in_2_/S VGND VGND VPWR VPWR mux_top_track_32.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input3_A bottom_left_grid_pin_44_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input59_A chany_top_in[17] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_14_105 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+Xmem_left_track_25.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_25.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_left_track_25.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_085_ _085_/A VGND VGND VPWR VPWR _085_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_21.mux_l1_in_0__A1 _103_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_1.mux_l3_in_0_ mux_left_track_1.mux_l2_in_1_/X mux_left_track_1.mux_l2_in_0_/X
++ mux_left_track_1.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_17_26 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_3_115 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_068_ _068_/A VGND VGND VPWR VPWR _068_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_28_58 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_top_track_4.mux_l1_in_5_ input26/X _121_/A mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_5_/X sky130_fd_sc_hd__mux2_1
+XANTENNA__096__A _096_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input41_A chany_bottom_in[19] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_1.mux_l2_in_1_ mux_left_track_1.mux_l1_in_3_/X mux_left_track_1.mux_l1_in_2_/X
++ mux_left_track_1.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_14_49 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XPHY_59 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_26_103 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_25_26 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XPHY_48 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_37 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_26 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_15 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_left_track_1.mux_l1_in_2_ input75/X input73/X mux_left_track_1.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_left_track_1.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xoutput109 _086_/X VGND VGND VPWR VPWR chany_bottom_out[0] sky130_fd_sc_hd__clkbuf_2
+Xoutput91 _077_/X VGND VGND VPWR VPWR chanx_left_out[11] sky130_fd_sc_hd__clkbuf_2
+XFILLER_22_161 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_top_track_32.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_24.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_top_track_32.mux_l1_in_2_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_14_128 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_26_91 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_20_109 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_13_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA__099__A _099_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_35.sky130_fd_sc_hd__buf_4_0_ mux_left_track_35.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _083_/A sky130_fd_sc_hd__clkbuf_1
+X_084_ _084_/A VGND VGND VPWR VPWR _084_/X sky130_fd_sc_hd__clkbuf_1
+Xmem_left_track_25.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_7_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_23.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_25.mux_l1_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmem_top_track_2.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_2.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input71_A left_bottom_grid_pin_34_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_6_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_mux_left_track_39.mux_l2_in_0__S output88/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_24_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_4.mux_l2_in_3_ _052_/HI mux_top_track_4.mux_l1_in_6_/X mux_top_track_4.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_top_track_4.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+XFILLER_17_38 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_left_track_29.sky130_fd_sc_hd__buf_4_0_ mux_left_track_29.mux_l2_in_0_/X VGND
++ VGND VPWR VPWR _080_/A sky130_fd_sc_hd__clkbuf_1
+X_067_ _067_/A VGND VGND VPWR VPWR _067_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_5.mux_l1_in_1__A0 input71/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_119_ _119_/A VGND VGND VPWR VPWR _119_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_4.mux_l1_in_4_ _112_/A input87/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_4_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_1.mux_l2_in_0_ mux_left_track_1.mux_l1_in_1_/X mux_left_track_1.mux_l1_in_0_/X
++ mux_left_track_1.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_1.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_input34_A chany_bottom_in[12] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_29_112 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_29_80 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+Xmux_top_track_4.mux_l4_in_0_ mux_top_track_4.mux_l3_in_1_/X mux_top_track_4.mux_l3_in_0_/X
++ mux_top_track_4.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_26_126 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XPHY_49 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_38 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_27 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_16 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_bottom_track_33.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_33.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_33.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_1.mux_l1_in_1_ input71/X _109_/A mux_left_track_1.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_1.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xoutput92 _078_/X VGND VGND VPWR VPWR chanx_left_out[12] sky130_fd_sc_hd__clkbuf_2
+XFILLER_16_181 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmux_top_track_4.mux_l3_in_1_ mux_top_track_4.mux_l2_in_3_/X mux_top_track_4.mux_l2_in_2_/X
++ mux_top_track_4.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_22_173 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_13_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_9_100 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+X_083_ _083_/A VGND VGND VPWR VPWR _083_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_input64_A chany_top_in[3] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_18_221 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_10_176 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_8_19 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_24_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+Xmux_top_track_4.mux_l2_in_2_ mux_top_track_4.mux_l1_in_5_/X mux_top_track_4.mux_l1_in_4_/X
++ mux_top_track_4.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l2_in_2_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_top_track_2.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_2.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_33_38 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_066_ _066_/A VGND VGND VPWR VPWR _066_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_5.mux_l1_in_1__A1 _112_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_1_1_0_mem_bottom_track_1.prog_clk clkbuf_0_mem_bottom_track_1.prog_clk/X VGND
++ VGND VPWR VPWR clkbuf_2_3_0_mem_bottom_track_1.prog_clk/A sky130_fd_sc_hd__clkbuf_1
+X_118_ _118_/A VGND VGND VPWR VPWR _118_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_left_track_19.mux_l2_in_0_ mux_left_track_19.mux_l1_in_1_/X mux_left_track_19.mux_l1_in_0_/X
++ mux_left_track_19.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_19.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_4.mux_l1_in_3_ input86/X input85/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+X_049_ VGND VGND VPWR VPWR _049_/HI _049_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_input27_A chanx_left_in[6] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_7_220 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_30_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_21.mux_l2_in_0_ mux_left_track_21.mux_l1_in_1_/X mux_left_track_21.mux_l1_in_0_/X
++ mux_left_track_21.mux_l2_in_0_/S VGND VGND VPWR VPWR mux_left_track_21.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_top_track_8.sky130_fd_sc_hd__dfxtp_1_3_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_8.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l4_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_left_track_3.mux_l1_in_3__A1 input78/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_29_168 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_29_124 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_left_track_11.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_11.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_11.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_4_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_26_138 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XPHY_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XPHY_17 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmem_bottom_track_33.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_33.mux_l1_in_2_/S VGND VGND VPWR VPWR mux_bottom_track_33.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_6_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_19.mux_l1_in_1_ _033_/HI input76/X mux_left_track_19.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_19.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XPHY_39 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_bottom_track_3.mux_l2_in_3_ _057_/HI input18/X mux_bottom_track_3.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_3.mux_l2_in_3_/X sky130_fd_sc_hd__mux2_1
+Xoutput93 _079_/X VGND VGND VPWR VPWR chanx_left_out[13] sky130_fd_sc_hd__clkbuf_2
+Xmux_left_track_21.mux_l1_in_1_ _034_/HI input77/X mux_left_track_21.mux_l1_in_1_/S
++ VGND VGND VPWR VPWR mux_left_track_21.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_left_track_1.mux_l1_in_0_ _089_/A input51/X mux_left_track_1.mux_l1_in_3_/S VGND
++ VGND VPWR VPWR mux_left_track_1.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_16_193 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+XANTENNA_mux_left_track_23.mux_l1_in_1__A1 input78/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_4.mux_l3_in_0_ mux_top_track_4.mux_l2_in_1_/X mux_top_track_4.mux_l2_in_0_/X
++ mux_top_track_4.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_22_185 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_13_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_9_112 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XANTENNA_input57_A chany_top_in[15] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_082_ _082_/A VGND VGND VPWR VPWR _082_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_12_84 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_10_188 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XANTENNA_input1_A bottom_left_grid_pin_42_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_5.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_5.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_top_track_32.sky130_fd_sc_hd__buf_4_0_ mux_top_track_32.mux_l3_in_0_/X VGND VGND
++ VPWR VPWR _122_/A sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_4.mux_l2_in_1_ mux_top_track_4.mux_l1_in_3_/X mux_top_track_4.mux_l1_in_2_/X
++ mux_top_track_4.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_top_track_2.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_2.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_3.mux_l4_in_0_ mux_bottom_track_3.mux_l3_in_1_/X mux_bottom_track_3.mux_l3_in_0_/X
++ mux_bottom_track_3.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l4_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_top_track_8.mux_l2_in_1__A0 _123_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xclkbuf_3_5_0_mem_bottom_track_1.prog_clk clkbuf_3_5_0_mem_bottom_track_1.prog_clk/A
++ VGND VGND VPWR VPWR clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X sky130_fd_sc_hd__clkbuf_1
+X_065_ VGND VGND VPWR VPWR _065_/HI _065_/LO sky130_fd_sc_hd__conb_1
+XFILLER_23_83 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_2_140 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_28_28 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+X_117_ _117_/A VGND VGND VPWR VPWR _117_/X sky130_fd_sc_hd__clkbuf_1
+Xmux_top_track_4.mux_l1_in_2_ input84/X input83/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_3.mux_l3_in_1_ mux_bottom_track_3.mux_l2_in_3_/X mux_bottom_track_3.mux_l2_in_2_/X
++ mux_bottom_track_3.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l3_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_output88_A output88/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_mux_left_track_19.mux_l1_in_0__A0 _121_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_top_track_8.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_8.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l3_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+X_048_ VGND VGND VPWR VPWR _048_/HI _048_/LO sky130_fd_sc_hd__conb_1
+XFILLER_29_136 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_left_track_11.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_11.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_left_track_11.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_17.mux_l1_in_3_ _055_/HI input21/X mux_bottom_track_17.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_17.mux_l1_in_3_/X sky130_fd_sc_hd__mux2_1
+XFILLER_29_93 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_28_180 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_bottom_track_33.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_2_0_mem_bottom_track_1.prog_clk/X
++ mux_bottom_track_25.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_33.mux_l1_in_2_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_19.mux_l1_in_0_ _121_/A _101_/A mux_left_track_19.mux_l1_in_1_/S VGND
++ VGND VPWR VPWR mux_left_track_19.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XPHY_29 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xmux_bottom_track_3.mux_l2_in_2_ input30/X input23/X mux_bottom_track_3.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_3.mux_l2_in_2_/X sky130_fd_sc_hd__mux2_1
+XPHY_18 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+Xoutput94 _080_/X VGND VGND VPWR VPWR chanx_left_out[14] sky130_fd_sc_hd__clkbuf_2
+XANTENNA_input87_A top_right_grid_pin_1_ VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_left_track_21.mux_l1_in_0_ _123_/A _103_/A mux_left_track_21.mux_l1_in_1_/S VGND
++ VGND VPWR VPWR mux_left_track_21.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_25_172 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_top_track_24.sky130_fd_sc_hd__dfxtp_1_2_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_24.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l3_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_15_95 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XFILLER_31_164 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_left_track_33.mux_l2_in_0_ _040_/HI mux_left_track_33.mux_l1_in_0_/X mux_left_track_33.mux_l2_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_33.mux_l2_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_22_142 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_22_197 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_22_19 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_17.mux_l3_in_0_ mux_bottom_track_17.mux_l2_in_1_/X mux_bottom_track_17.mux_l2_in_0_/X
++ mux_bottom_track_17.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XANTENNA_mux_left_track_7.mux_l1_in_2__A0 input76/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_081_ _081_/A VGND VGND VPWR VPWR _081_/X sky130_fd_sc_hd__clkbuf_1
+XFILLER_12_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_10_123 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_left_track_5.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_5.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_top_track_4.mux_l2_in_0_ mux_top_track_4.mux_l1_in_1_/X mux_top_track_4.mux_l1_in_0_/X
++ mux_top_track_4.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_top_track_4.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+Xmem_top_track_2.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_4_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_0.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_2.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XFILLER_18_201 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_5_193 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA_mux_bottom_track_1.mux_l1_in_0__A0 _099_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_top_track_4.sky130_fd_sc_hd__buf_4_0_ mux_top_track_4.mux_l4_in_0_/X VGND VGND
++ VPWR VPWR _108_/A sky130_fd_sc_hd__clkbuf_1
+X_064_ VGND VGND VPWR VPWR _064_/HI _064_/LO sky130_fd_sc_hd__conb_1
+XANTENNA_mux_top_track_8.mux_l2_in_1__A1 _113_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_17.mux_l2_in_1_ mux_bottom_track_17.mux_l1_in_3_/X mux_bottom_track_17.mux_l1_in_2_/X
++ mux_bottom_track_17.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l2_in_1_/X
++ sky130_fd_sc_hd__mux2_1
+Xmux_top_track_4.mux_l1_in_1_ input82/X input81/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+Xmux_bottom_track_3.mux_l3_in_0_ mux_bottom_track_3.mux_l2_in_1_/X mux_bottom_track_3.mux_l2_in_0_/X
++ mux_bottom_track_3.mux_l3_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l3_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+X_116_ _116_/A VGND VGND VPWR VPWR _116_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_19.mux_l1_in_0__A1 _101_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_047_ VGND VGND VPWR VPWR _047_/HI _047_/LO sky130_fd_sc_hd__conb_1
+XANTENNA__105__A _105_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_7_200 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_29_148 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_top_track_8.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_8.mux_l1_in_0_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l2_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_17.mux_l1_in_2_ input14/X input26/X mux_bottom_track_17.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_17.mux_l1_in_2_/X sky130_fd_sc_hd__mux2_1
+XFILLER_28_192 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_20_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_6
+Xmem_left_track_11.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_9.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_11.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_input32_A chany_bottom_in[10] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_19 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_1_206 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmux_bottom_track_3.mux_l2_in_1_ input7/X input5/X mux_bottom_track_3.mux_l2_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_3.mux_l2_in_1_/X sky130_fd_sc_hd__mux2_1
+Xoutput95 _081_/X VGND VGND VPWR VPWR chanx_left_out[15] sky130_fd_sc_hd__clkbuf_2
+XFILLER_25_184 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+Xmem_top_track_24.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_1_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_24.mux_l1_in_3_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l2_in_1_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_left_track_9.mux_l1_in_0__A1 _095_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XPHY_190 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+XFILLER_26_84 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_2
+XFILLER_26_40 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+XANTENNA__113__A _113_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_17.sky130_fd_sc_hd__dfxtp_1_1_ clkbuf_3_5_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_17.mux_l1_in_1_/S VGND VGND VPWR VPWR mux_left_track_17.mux_l2_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+XANTENNA_mux_left_track_7.mux_l1_in_2__A1 input74/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_080_ _080_/A VGND VGND VPWR VPWR _080_/X sky130_fd_sc_hd__clkbuf_1
+XANTENNA_mux_left_track_35.mux_l1_in_0__A0 input76/X VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmem_left_track_5.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_0_0_mem_bottom_track_1.prog_clk/X
++ mux_left_track_3.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_left_track_5.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_left_track_33.mux_l1_in_0_ input75/X input53/X mux_left_track_33.mux_l1_in_0_/S
++ VGND VGND VPWR VPWR mux_left_track_33.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_18_213 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XANTENNA_mux_bottom_track_1.mux_l1_in_0__A1 _089_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XANTENNA_input62_A chany_top_in[1] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_063_ VGND VGND VPWR VPWR _063_/HI _063_/LO sky130_fd_sc_hd__conb_1
+Xmux_bottom_track_17.mux_l2_in_0_ mux_bottom_track_17.mux_l1_in_1_/X mux_bottom_track_17.mux_l1_in_0_/X
++ mux_bottom_track_17.mux_l2_in_1_/S VGND VGND VPWR VPWR mux_bottom_track_17.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_2_164 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_2_197 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XFILLER_21_208 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_9_87 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmux_top_track_4.mux_l1_in_0_ input80/X input79/X mux_top_track_4.mux_l1_in_6_/S VGND
++ VGND VPWR VPWR mux_top_track_4.mux_l1_in_0_/X sky130_fd_sc_hd__mux2_1
+XFILLER_18_85 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XFILLER_18_30 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_3
+XANTENNA__121__A _121_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+X_115_ _115_/A VGND VGND VPWR VPWR _115_/X sky130_fd_sc_hd__clkbuf_1
+X_046_ VGND VGND VPWR VPWR _046_/HI _046_/LO sky130_fd_sc_hd__conb_1
+XFILLER_7_212 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_8
+XFILLER_29_105 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_4
+Xmem_top_track_8.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_6_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_4.mux_l4_in_0_/S VGND VGND VPWR VPWR mux_top_track_8.mux_l1_in_0_/S
++ sky130_fd_sc_hd__dfxtp_1
+Xmux_bottom_track_17.mux_l1_in_1_ input5/X input1/X mux_bottom_track_17.mux_l1_in_3_/S
++ VGND VGND VPWR VPWR mux_bottom_track_17.mux_l1_in_1_/X sky130_fd_sc_hd__mux2_1
+XANTENNA__116__A _116_/A VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+XFILLER_29_62 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+XANTENNA_input25_A chanx_left_in[4] VGND VGND VPWR VPWR sky130_fd_sc_hd__diode_2
+Xmux_bottom_track_3.mux_l2_in_0_ mux_bottom_track_3.mux_l1_in_1_/X mux_bottom_track_3.mux_l1_in_0_/X
++ mux_bottom_track_3.mux_l2_in_3_/S VGND VGND VPWR VPWR mux_bottom_track_3.mux_l2_in_0_/X
++ sky130_fd_sc_hd__mux2_1
+XFILLER_25_196 VGND VGND VPWR VPWR sky130_fd_sc_hd__decap_12
+XFILLER_15_31 VGND VGND VPWR VPWR sky130_fd_sc_hd__fill_1
+Xmem_top_track_24.sky130_fd_sc_hd__dfxtp_1_0_ clkbuf_3_3_0_mem_bottom_track_1.prog_clk/X
++ mux_top_track_16.mux_l3_in_0_/S VGND VGND VPWR VPWR mux_top_track_24.mux_l1_in_3_/S
++ sky130_fd_sc_hd__dfxtp_2
+XPHY_191 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+Xoutput96 _082_/X VGND VGND VPWR VPWR chanx_left_out[16] sky130_fd_sc_hd__clkbuf_2
+XPHY_180 VGND VPWR sky130_fd_sc_hd__tapvpwrvgnd_1
+.ends
+
