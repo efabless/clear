@@ -18,10 +18,10 @@ hex:  ${PATTERN:=.hex}
 %.vvp: %_tb.v 
 ifeq ($(SIM),RTL)
 	iverilog -DFUNCTIONAL -DSIM -I $(PDK_PATH) -I $(BENCH_PATH) -I $(RTL_PATH) \
-	$< -o $@ 
+	-o $@ $<
 else  
 	iverilog -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DGL -I $(PDK_PATH) -I $(GL_PATH) -I $(BENCH_PATH) -I $(RTL_PATH) \
-	$< -o $@ 
+	-o $@ $<
 endif
 
 %.vcd: %.vvp
