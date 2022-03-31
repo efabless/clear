@@ -16,7 +16,9 @@
  */
 
 // This include is relative to $CARAVEL_PATH (see Makefile)
-#include "verilog/dv/caravel/defs.h"
+//#include "verilog/dv/caravel/defs.h"
+//#include "firmware/defs.h"
+#include <defs.h>
 
 /*
  * Scan-chain Test:
@@ -68,8 +70,8 @@ void main() {
   /* Set up the housekeeping SPI to be connected internally so	*/
 	/* that external pin changes don't affect it.			*/
 
-	reg_spimaster_config = 0xa002;	// Enable, prescaler = 2,
-                                        // connect to housekeeping SPI
+//	reg_spimaster_config = 0xa002;	// Enable, prescaler = 2,
+//                                        // connect to housekeeping SPI
 
 	// Connect the housekeeping SPI to the SPI master
 	// so that the CSB line is not left floating.  This allows
@@ -116,7 +118,7 @@ void main() {
   reg_mprj_io_11 =  GPIO_MODE_USER_STD_OUTPUT;
   reg_mprj_io_35 =  GPIO_MODE_USER_STD_OUTPUT;
 
-  reg_gpio_data = 0x1;
+  reg_gpio_out = 0x1;
   /* Apply configuration */
   reg_mprj_xfer = 1;
   while (reg_mprj_xfer == 1);

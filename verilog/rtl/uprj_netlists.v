@@ -12,11 +12,11 @@
 `define UNIT_DELAY #1
 `define USE_POWER_PINS
 
-`include "libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
-`include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
+//`include "libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
+//`include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
 
 // Include caravel global defines for the number of the user project IO pads 
-`include "defines.v"
+//`include "defines.v"
 
 /*
     For running fpga simulation with caravel, we have to simulate with the fpga gate-level netlists.
@@ -25,22 +25,22 @@
 */
 
 `default_nettype wire
-`include "gl/sb_0__0_.v"
-`include "gl/sb_0__1_.v"
-`include "gl/sb_0__2_.v"
-`include "gl/sb_1__0_.v"
-`include "gl/sb_1__1_.v"
-`include "gl/sb_1__2_.v"
-`include "gl/sb_2__0_.v"
-`include "gl/sb_2__1_.v"
-`include "gl/sb_2__2_.v"
-`include "gl/cbx_1__0_.v"
-`include "gl/cbx_1__1_.v"
-`include "gl/cbx_1__2_.v"
-`include "gl/cby_0__1_.v"
-`include "gl/cby_1__1_.v"
-`include "gl/cby_2__1_.v"
-`include "gl/grid_clb.v"
-`include "gl/tie_array.v"
-`include "gl/fpga_core.v"
-`include "gl/user_project_wrapper.v"
+//`include "gl/sb_0__0_.v"
+//`include "gl/sb_0__1_.v"
+//`include "gl/sb_0__2_.v"
+//`include "gl/sb_1__0_.v"
+//`include "gl/sb_1__1_.v"
+//`include "gl/sb_1__2_.v"
+//`include "gl/sb_2__0_.v"
+//`include "gl/sb_2__1_.v"
+//`include "gl/sb_2__2_.v"
+//`include "gl/cbx_1__0_.v"
+//`include "gl/cbx_1__1_.v"
+//`include "gl/cbx_1__2_.v"
+//`include "gl/cby_0__1_.v"
+//`include "gl/cby_1__1_.v"
+//`include "gl/cby_2__1_.v"
+//`include "gl/grid_clb.v"
+//`include "gl/tie_array.v"
+//`include "gl/fpga_core.v"
+//`include "gl/user_project_wrapper.v"

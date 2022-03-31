@@ -19,11 +19,11 @@
 
 `define USE_POWER_PINS 
 
-`include "uprj_netlists.v"
-`include "caravel_netlists.v"
-
-`include "spiflash.v"
-`include "tbuart.v"
+//`include "uprj_netlists.v"
+//`include "caravel_netlists.v"
+//
+//`include "spiflash.v"
+//`include "tbuart.v"
 
 `define FPGA_BITSTREAM_SIZE 29696
 
