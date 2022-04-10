@@ -152,10 +152,11 @@ module ccff_test;
 // Generate a pulse after programming reset is disabled (in the 2nd clock
 // cycle). Then the head of configuration chain should be always zero
 	always @(negedge prog_clock[0]) begin
-        ccff_head = 1'b1;
-        if (0 != num_prog_cycles) begin
-            ccff_head = 1'b0;
-        end
+        ccff_head = 1'b0;
+        if (num_prog_cycles == 1)
+            ccff_head = 1'b1;
+        else
+        if (num_prog_cycles >= 2) ccff_head = 1'b0;
 	end
 
 // ----- Count the number of programming cycles -------
