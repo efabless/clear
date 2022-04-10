@@ -132,22 +132,22 @@ module ccff_test;
   assign IO_ISOL_N[0] = ~greset;
   // ----- End connecting global ports of FPGA fabric to stimuli -----
 
-  assign mprj_io[0] = Test_en;
-  assign mprj_io[1] = IO_ISOL_N;
-  assign mprj_io[2] = Reset;
+//  assign mprj_io[0] = Test_en;
+//  assign mprj_io[1] = IO_ISOL_N;
+//  assign mprj_io[2] = Reset;
   assign mprj_io[3] = pReset;
   assign mprj_io[12] = ccff_head;
-  assign mprj_io[25] = 1'b0; // Set FPGA to interface logic analyzer by default
-  assign mprj_io[26] = sc_head;
-  assign mprj_io[36] = op_clk;
+//  assign mprj_io[25] = 1'b0; // Set FPGA to interface logic analyzer by default
+//  assign mprj_io[26] = sc_head;
+//  assign mprj_io[36] = op_clk;
   assign mprj_io[37] = prog_clk;
 
-  assign sc_tail = mprj_io[11];
+//  assign sc_tail = mprj_io[11];
   assign ccff_tail = mprj_io[35];
 
-  assign mprj_io[10:4] = {7{1'b0}}; 
-  assign mprj_io[24:13] = {12{1'b0}}; 
-  assign mprj_io[34:27] = {8{1'b0}}; 
+//  assign mprj_io[10:4] = {7{1'b0}};
+//  assign mprj_io[24:13] = {12{1'b0}};
+//  assign mprj_io[34:27] = {8{1'b0}};
 
 // Generate a pulse after programming reset is disabled (in the 2nd clock
 // cycle). Then the head of configuration chain should be always zero

@@ -20,37 +20,22 @@
 
 #define FPGA_BITSTREAM_SIZE 29696
 
-/*
- * Scan-chain Test:
- * - Configures directions for control ports
- *   +==========+===============+===========+
- *   | GPIO     | Functionality | Direction |
- *   +==========+===============+===========+
- *   | GPIO[0]  | TEST_EN       | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[1]  | IO_ISOL_N     | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[2]  | RESET         | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[3]  | PROG_RESET    | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[11] | SC_TAIL       | output    |
- *   +----------+---------------+-----------+
- *   | GPIO[12] | CCFF_HEAD     | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[25] | MODE_SWITCH)  | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[26] | SC_HEAD       | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[35] | CCFF_TAIL     | output    |
- *   +----------+---------------+-----------+
- *   | GPIO[36] | CLK           | input     |
- *   +----------+---------------+-----------+
- *   | GPIO[37] | PROG_CLK      | input     |
- *   +----------+---------------+-----------+
- *
- * - Configure FPGA data I/Os to be input
-*/
+//  Caravel Board Test Setup
+//
+//  The following IOs must be interconnected on the Caravel board.
+//
+//      USER  |  MGMT  |  Signal        |  USER IO DIR
+//       0    |  34    |  test_en       |  input
+//       1    |  NC    |  IO_ISOL_N     |  input
+//       2    |  20    |  pReset        |  input
+//       3    |  GND   |  Reset         |  input
+//      11    |  NC    |  sc_tail       |  output
+//      12    |  19    |  ccff_head     |  input
+//      25    |  GND   |  config/mode   |  input
+//      26    |  GND   |  sc_head       |  input
+//      35    |  29    |  ccff_tail     |  output
+//      36    |  GND   |  op_clk        |  input
+//      37    |  30    |  prog_clk      |  input
 
 #define PIN_CCFF_HEAD    19
 #define PIN_CCFF_TAIL    29
@@ -100,7 +85,7 @@ void pulse_ccff_head() {
     CCFF_HEAD_LOW;
 }
 
-void pulse_prog_clk () {
+void pulse_prog_clk() {
     reg_mprj_datal |= 1UL << PIN_PROG_CLK ;
     reg_mprj_datah |= 1UL << PIN_TEST_EN ;
 //    delay(5);
@@ -120,79 +105,79 @@ void main() {
 	// so that the CSB line is not left floating.  This allows
 	// all of the GPIO pins to be used for user functions.
 
-    reg_mprj_io_0  = 0x0003;
-    reg_mprj_io_1  = 0x1001;
-    reg_mprj_io_2  = 0x0800;
-    reg_mprj_io_3  = 0x0400;
-    reg_mprj_io_4  = 0x0380;
-    reg_mprj_io_5  = 0x01c0;
-    reg_mprj_io_6  = 0x00e0;
-    reg_mprj_io_7  = 0x0070;
-    reg_mprj_io_8  = 0x0038;
-    reg_mprj_io_9  = 0x001c;
-    reg_mprj_io_10 = 0x0026;
-    reg_mprj_io_11 = 0x1007;
-    reg_mprj_io_12 = 0x1803;
-    reg_mprj_io_13 = 0x1c01;
-    reg_mprj_io_14 = 0x0e00;
-    reg_mprj_io_15 = 0x0700;
-    reg_mprj_io_16 = 0x0380;
-    reg_mprj_io_17 = 0x00c0;
-    reg_mprj_io_18 = 0x0000;
+//    reg_mprj_io_0  = 0x0003;
+//    reg_mprj_io_1  = 0x1001;
+//    reg_mprj_io_2  = 0x0800;
+//    reg_mprj_io_3  = 0x0400;
+//    reg_mprj_io_4  = 0x0380;
+//    reg_mprj_io_5  = 0x01c0;
+//    reg_mprj_io_6  = 0x00e0;
+//    reg_mprj_io_7  = 0x0070;
+//    reg_mprj_io_8  = 0x0038;
+//    reg_mprj_io_9  = 0x001c;
+//    reg_mprj_io_10 = 0x0026;
+//    reg_mprj_io_11 = 0x1007;
+//    reg_mprj_io_12 = 0x1803;
+//    reg_mprj_io_13 = 0x1c01;
+//    reg_mprj_io_14 = 0x0e00;
+//    reg_mprj_io_15 = 0x0700;
+//    reg_mprj_io_16 = 0x0380;
+//    reg_mprj_io_17 = 0x00c0;
+//    reg_mprj_io_18 = 0x0000;
 
     // Only specify those should be in output mode
-    reg_mprj_io_19 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> ccff_head
-    reg_mprj_io_20 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> pReset
-    reg_mprj_io_29 =  GPIO_MODE_MGMT_STD_INPUT_NOPULL; // mgmt in <- ccff
-    reg_mprj_io_30 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> prog_clk
-    reg_mprj_io_34 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> test_en
-
-    reg_mprj_io_25 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // FPGA to LA -> 0
-    reg_mprj_io_26 =  GPIO_MODE_USER_STD_OUTPUT;        // sc_tail
-    reg_mprj_io_35 =  GPIO_MODE_USER_STD_OUTPUT;        // ccff_tail
-    reg_mprj_io_36 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // op_clk
-    reg_mprj_io_37 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // prog_clk
+//    reg_mprj_io_19 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> ccff_head
+//    reg_mprj_io_20 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> pReset
+//    reg_mprj_io_29 =  GPIO_MODE_MGMT_STD_INPUT_NOPULL; // mgmt in <- ccff
+//    reg_mprj_io_30 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> prog_clk
+//    reg_mprj_io_34 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> test_en
+//
+//    reg_mprj_io_25 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // FPGA to LA -> 0
+//    reg_mprj_io_26 =  GPIO_MODE_USER_STD_OUTPUT;        // sc_tail
+//    reg_mprj_io_35 =  GPIO_MODE_USER_STD_OUTPUT;        // ccff_tail
+//    reg_mprj_io_36 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // op_clk
+//    reg_mprj_io_37 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // prog_clk
 
     reg_gpio_data = 0x1;
 
     PROG_RESET_HIGH;
 
     /* Apply configuration */
-    reg_mprj_xfer = 1;
-    while (reg_mprj_xfer == 1);
+//    reg_mprj_xfer = 1;
+//    while (reg_mprj_xfer == 1);
 
-    reg_mprj_io_0  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_1  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
-    reg_mprj_io_2  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
-    reg_mprj_io_3  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
-    reg_mprj_io_4  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
-    reg_mprj_io_5  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_6  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_7  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_8  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_9  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_10 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_11 = GPIO_MODE_USER_STD_OUTPUT;
-    reg_mprj_io_12 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_13 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_14 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_15 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_16 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_17 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-    reg_mprj_io_18 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
-
-
-    reg_mprj_io_19 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> ccff_head
-    reg_mprj_io_20 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> pReset
-    reg_mprj_io_29 =  GPIO_MODE_MGMT_STD_INPUT_NOPULL; // mgmt in <- ccff
-    reg_mprj_io_30 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> prog_clk
-    reg_mprj_io_34 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> test_en
-
-    reg_mprj_io_25 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // FPGA to LA -> 0
-    reg_mprj_io_26 =  GPIO_MODE_USER_STD_OUTPUT;        // sc_tail
-    reg_mprj_io_35 =  GPIO_MODE_USER_STD_OUTPUT;        // ccff_tail
-    reg_mprj_io_36 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // op_clk
-    reg_mprj_io_37 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // prog_clk
+//    reg_mprj_io_0  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_1  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
+//    reg_mprj_io_2  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
+//    reg_mprj_io_3  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
+//    reg_mprj_io_4  = GPIO_MODE_MGMT_STD_BIDIRECTIONAL;
+//    reg_mprj_io_5  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_6  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_7  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_8  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_9  = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_10 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_11 = GPIO_MODE_USER_STD_OUTPUT;
+//    reg_mprj_io_12 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_13 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_14 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_15 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_16 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_17 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//    reg_mprj_io_18 = GPIO_MODE_USER_STD_BIDIRECTIONAL;
+//
+//
+//    reg_mprj_io_19 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> ccff_head
+//    reg_mprj_io_20 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> pReset
+//    reg_mprj_io_29 =  GPIO_MODE_MGMT_STD_INPUT_NOPULL; // mgmt in <- ccff
+//    reg_mprj_io_30 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> prog_clk
+//    reg_mprj_io_34 =  GPIO_MODE_MGMT_STD_OUTPUT; // mgmt out -> test_en
+//
+//    reg_mprj_io_25 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // FPGA to LA -> 0
+//    reg_mprj_io_26 =  GPIO_MODE_USER_STD_OUTPUT;        // sc_tail
+//    reg_mprj_io_35 =  GPIO_MODE_USER_STD_OUTPUT;        // ccff_tail
+//    reg_mprj_io_36 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // op_clk
+//    reg_mprj_io_37 =  GPIO_MODE_USER_STD_BIDIRECTIONAL; // prog_clk
 
     PROG_RESET_HIGH;
 
@@ -205,7 +190,7 @@ void main() {
 
     pulse_ccff_head();
 
-    for (int i=0; i<FPGA_BITSTREAM_SIZE-2; i++) {
+    for (int i=0; i<FPGA_BITSTREAM_SIZE+1000; i++) {
         pulse_prog_clk();
     }
 
