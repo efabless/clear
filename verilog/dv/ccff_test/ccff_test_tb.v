@@ -172,12 +172,18 @@ module ccff_test;
            // The tail should spit a pulse after configuration is done
            // So it should be at logic '1' and then pulled down to logic '0'
            if (0 == num_checked_points) begin
+             if (ccff_tail !== 1'b0) begin
+               $display("Error: ccff_tail = %b", sc_tail);
+               num_errors = num_errors + 1;
+             end
+           end
+          if (1 == num_checked_points) begin
              if (ccff_tail !== 1'b1) begin
                $display("Error: ccff_tail = %b", sc_tail);
                num_errors = num_errors + 1;
              end
            end
-           if (1 <= num_checked_points) begin
+           if (2 <= num_checked_points) begin
              if (ccff_tail !== 1'b0) begin
                $display("Error: ccff_tail = %b", sc_tail);
                num_errors = num_errors + 1;
@@ -186,7 +192,7 @@ module ccff_test;
            num_checked_points = num_checked_points + 1;
         end
 
-        if (2 < num_checked_points) begin
+        if (5 < num_checked_points) begin
            $display("Simulation finish with %d errors", num_errors);
 
            // End simulation
