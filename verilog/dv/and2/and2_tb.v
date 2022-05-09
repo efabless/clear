@@ -19,11 +19,11 @@
 
 `define USE_POWER_PINS 
 
-`include "uprj_netlists.v"
-`include "caravel_netlists.v"
+// `include "uprj_netlists.v"
+// `include "caravel_netlists.v"
 
-`include "spiflash.v"
-`include "tbuart.v"
+// `include "spiflash.v"
+// `include "tbuart.v"
 
 // Benchmark
 `include "and2.v"
@@ -29965,13 +29965,13 @@ initial
 		nb_error = nb_error - 1;
 	end
 
-`ifdef ICARUS_SIMULATOR
+// `ifdef ICARUS_SIMULATOR
 // ----- Begin Icarus requirement -------
 	initial begin
 		$dumpfile("and2.vcd");
 		$dumpvars(0, and2_tb);
 	end
-`endif
+// `endif
 // ----- END Icarus requirement -------
 
 initial begin

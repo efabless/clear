@@ -135,7 +135,8 @@ module ccff_test;
 //  assign mprj_io[0] = Test_en;
 //  assign mprj_io[1] = IO_ISOL_N;
 //  assign mprj_io[2] = Reset;
-  assign mprj_io[3] = pReset;
+  assign mprj_io[30] = pReset;
+  assign mprj_io[3] = 1'b1;
   assign mprj_io[12] = ccff_head;
 //  assign mprj_io[25] = 1'b0; // Set FPGA to interface logic analyzer by default
 //  assign mprj_io[26] = sc_head;

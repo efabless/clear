@@ -82,6 +82,7 @@ docker_run_verify=\
 		-e TARGET_PATH=${TARGET_PATH} -e PDK_ROOT=${PDK_ROOT} \
 		-e CARAVEL_ROOT=${CARAVEL_ROOT} \
 		-e TOOLS=/opt/riscv32i \
+		-e PDK=sky130A \
 		-e DESIGNS=$(TARGET_PATH) \
 		-e CORE_VERILOG_PATH=$(TARGET_PATH)/mgmt_core_wrapper/verilog \
 		-e GCC_PREFIX=riscv32-unknown-elf \
