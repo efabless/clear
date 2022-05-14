@@ -25,7 +25,7 @@
 //`include "spiflash.v"
 //`include "tbuart.v"
 
-`define FPGA_BITSTREAM_SIZE 29696
+`define FPGA_BITSTREAM_SIZE 29647
 
 `define POWER_UP_TIME_PERIOD 100
 `define SOC_SETUP_TIME_PERIOD 2000
