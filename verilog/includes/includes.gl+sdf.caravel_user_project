@@ -1,3 +1,20 @@
 // Caravel user project includes		
 $USER_PROJECT_VERILOG/gl/user_project_wrapper.v	     
-$USER_PROJECT_VERILOG/gl/user_proj_example.v
+$USER_PROJECT_VERILOG/gl/cbx_1__0_.v
+$USER_PROJECT_VERILOG/gl/cbx_1__1_.v
+$USER_PROJECT_VERILOG/gl/cbx_1__2_.v
+$USER_PROJECT_VERILOG/gl/cby_0__1_.v
+$USER_PROJECT_VERILOG/gl/cby_1__1_.v
+$USER_PROJECT_VERILOG/gl/cby_2__1_.v
+$USER_PROJECT_VERILOG/gl/fpga_core.v
+$USER_PROJECT_VERILOG/gl/grid_clb.v
+$USER_PROJECT_VERILOG/gl/sb_0__0_.v
+$USER_PROJECT_VERILOG/gl/sb_0__1_.v
+$USER_PROJECT_VERILOG/gl/sb_0__2_.v
+$USER_PROJECT_VERILOG/gl/sb_1__0_.v
+$USER_PROJECT_VERILOG/gl/sb_1__1_.v
+$USER_PROJECT_VERILOG/gl/sb_1__2_.v
+$USER_PROJECT_VERILOG/gl/sb_2__0_.v
+$USER_PROJECT_VERILOG/gl/sb_2__1_.v
+$USER_PROJECT_VERILOG/gl/sb_2__2_.v
+$USER_PROJECT_VERILOG/gl/tie_array.v

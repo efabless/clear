@@ -25,7 +25,7 @@
 //`include "spiflash.v"
 //`include "tbuart.v"
 
-`define FPGA_BITSTREAM_SIZE 29696
+`define FPGA_BITSTREAM_SIZE 29647
 
 `define POWER_UP_TIME_PERIOD 100
 `define SOC_SETUP_TIME_PERIOD 2000
@@ -135,7 +135,8 @@ module ccff_test;
 //  assign mprj_io[0] = Test_en;
 //  assign mprj_io[1] = IO_ISOL_N;
 //  assign mprj_io[2] = Reset;
-  assign mprj_io[3] = pReset;
+  assign mprj_io[30] = pReset;
+  assign mprj_io[3] = 1'b1;
   assign mprj_io[12] = ccff_head;
 //  assign mprj_io[25] = 1'b0; // Set FPGA to interface logic analyzer by default
 //  assign mprj_io[26] = sc_head;
