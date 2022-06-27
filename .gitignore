@@ -1,3 +1,8 @@
+# caravel
+caravel
+runs
+mgmt_core_wrapper
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
