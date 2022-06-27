@@ -4,6 +4,7 @@ set script_dir [file dirname [file normalize [info script]]]
 set ::env(DESIGN_NAME) fpga_core
 
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
+set ::env(SYNTH_SCRIPT) $script_dir/synth_top.tcl
 
 set ::env(VERILOG_FILES) "$script_dir/../../FPGA88_SC_HD_Verilog/SRC/fpga_core.v \
                           $script_dir/../../FPGA88_SC_HD_Verilog/SRC/sub_module/wires.v "
@@ -76,7 +77,7 @@ set ::env(RUN_MAGIC) 1
 set ::env(FILL_INSERTION) 0
 #Routing
 set ::env(ROUTING_STRATEGY) 0
-set ::env(GLB_RT_MAXLAYER) 5
+set ::env(RT_MAX_LAYER) "met4"
 
 set ::env(PDN_CFG) $script_dir/pdn.tcl
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin.cfg
@@ -100,3 +101,5 @@ set ::env(_WIDTH) 4.5
 set ::env(_SPACING) 1.7
 set ::env(_H_OFFSET) 20
 set ::env(_V_OFFSET) 20
+
+set ::env(QUIT_ON_LVS_ERROR) 0

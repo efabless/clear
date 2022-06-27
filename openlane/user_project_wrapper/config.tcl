@@ -13,7 +13,7 @@ set ::env(CLOCK_TREE_SYNTH) 0
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 
-# set ::env(PDN_CFG) $script_dir/pdn.tcl
+set ::env(PDN_CFG) $script_dir/pdn.tcl
 set ::env(FP_PDN_CORE_RING) 1
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 2920 3520"
@@ -30,6 +30,7 @@ set ::env(FP_IO_VTHICKNESS_MULT) 4
 set ::env(FP_IO_HTHICKNESS_MULT) 4
 
 set ::env(FP_PDN_VERTICAL_HALO) -11
+set ::env(FP_PDN_HORIZONTAL_HALO) 10
 
 set ::env(FP_PDN_CHECK_NODES) "0"
 
@@ -54,8 +55,11 @@ set ::env(CHECK_ASSIGN_STATEMENTS) 0
 
 # set ::env(VDD_NET) "vccd1"
 # set ::env(GND_NET) "vssd1"
-set ::env(STD_CELL_POWER_PINS) "vccd1 VPB VPWR"
-set ::env(STD_CELL_GROUND_PINS) "vssd1 VNB VGND"
+set ::env(FP_PDN_MACRO_HOOKS) "fpga_core_uut vccd1 vssd1 VPWR VGND, \
+								fpga_core_uut vccd2 vssd2 VPWR VGND"
+set ::env(STD_CELL_POWER_PINS) "VPB VPWR"
+set ::env(STD_CELL_GROUND_PINS) "VNB VGND"
+set ::env(FP_PDN_ENABLE_GLOBAL_CONNECTIONS) 1
 
 set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
 set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]

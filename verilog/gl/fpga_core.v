@@ -1,33 +1,17434 @@
 module fpga_core (IO_ISOL_N,
     Test_en,
+    VGND,
+    VPWR,
     ccff_head,
     ccff_tail,
     clk,
     prog_clk,
     sc_head,
     sc_tail,
-    VPWR,
-    VGND,
     gfpga_pad_EMBEDDED_IO_HD_SOC_DIR,
     gfpga_pad_EMBEDDED_IO_HD_SOC_IN,
     gfpga_pad_EMBEDDED_IO_HD_SOC_OUT);
  input IO_ISOL_N;
  input Test_en;
+ input VGND;
+ input VPWR;
  input ccff_head;
  output ccff_tail;
  input clk;
  input prog_clk;
  input sc_head;
  output sc_tail;
- input VPWR;
- input VGND;
  output [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_DIR;
  input [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_IN;
  output [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_OUT;
 
+ wire \Test_enWires[100] ;
+ wire \Test_enWires[101] ;
+ wire \Test_enWires[102] ;
+ wire \Test_enWires[103] ;
+ wire \Test_enWires[104] ;
+ wire \Test_enWires[105] ;
+ wire \Test_enWires[106] ;
+ wire \Test_enWires[107] ;
+ wire \Test_enWires[108] ;
+ wire \Test_enWires[109] ;
+ wire \Test_enWires[10] ;
+ wire \Test_enWires[110] ;
+ wire \Test_enWires[111] ;
+ wire \Test_enWires[112] ;
+ wire \Test_enWires[113] ;
+ wire \Test_enWires[114] ;
+ wire \Test_enWires[115] ;
+ wire \Test_enWires[116] ;
+ wire \Test_enWires[117] ;
+ wire \Test_enWires[118] ;
+ wire \Test_enWires[119] ;
+ wire \Test_enWires[11] ;
+ wire \Test_enWires[120] ;
+ wire \Test_enWires[121] ;
+ wire \Test_enWires[122] ;
+ wire \Test_enWires[123] ;
+ wire \Test_enWires[124] ;
+ wire \Test_enWires[125] ;
+ wire \Test_enWires[126] ;
+ wire \Test_enWires[127] ;
+ wire \Test_enWires[12] ;
+ wire \Test_enWires[13] ;
+ wire \Test_enWires[14] ;
+ wire \Test_enWires[15] ;
+ wire \Test_enWires[16] ;
+ wire \Test_enWires[17] ;
+ wire \Test_enWires[18] ;
+ wire \Test_enWires[19] ;
+ wire \Test_enWires[1] ;
+ wire \Test_enWires[20] ;
+ wire \Test_enWires[21] ;
+ wire \Test_enWires[22] ;
+ wire \Test_enWires[23] ;
+ wire \Test_enWires[24] ;
+ wire \Test_enWires[25] ;
+ wire \Test_enWires[26] ;
+ wire \Test_enWires[27] ;
+ wire \Test_enWires[28] ;
+ wire \Test_enWires[29] ;
+ wire \Test_enWires[2] ;
+ wire \Test_enWires[30] ;
+ wire \Test_enWires[31] ;
+ wire \Test_enWires[32] ;
+ wire \Test_enWires[33] ;
+ wire \Test_enWires[34] ;
+ wire \Test_enWires[35] ;
+ wire \Test_enWires[36] ;
+ wire \Test_enWires[37] ;
+ wire \Test_enWires[38] ;
+ wire \Test_enWires[39] ;
+ wire \Test_enWires[3] ;
+ wire \Test_enWires[40] ;
+ wire \Test_enWires[41] ;
+ wire \Test_enWires[42] ;
+ wire \Test_enWires[43] ;
+ wire \Test_enWires[44] ;
+ wire \Test_enWires[45] ;
+ wire \Test_enWires[46] ;
+ wire \Test_enWires[47] ;
+ wire \Test_enWires[48] ;
+ wire \Test_enWires[49] ;
+ wire \Test_enWires[4] ;
+ wire \Test_enWires[50] ;
+ wire \Test_enWires[51] ;
+ wire \Test_enWires[52] ;
+ wire \Test_enWires[53] ;
+ wire \Test_enWires[54] ;
+ wire \Test_enWires[55] ;
+ wire \Test_enWires[56] ;
+ wire \Test_enWires[57] ;
+ wire \Test_enWires[58] ;
+ wire \Test_enWires[59] ;
+ wire \Test_enWires[5] ;
+ wire \Test_enWires[60] ;
+ wire \Test_enWires[61] ;
+ wire \Test_enWires[62] ;
+ wire \Test_enWires[63] ;
+ wire \Test_enWires[64] ;
+ wire \Test_enWires[65] ;
+ wire \Test_enWires[66] ;
+ wire \Test_enWires[67] ;
+ wire \Test_enWires[68] ;
+ wire \Test_enWires[69] ;
+ wire \Test_enWires[6] ;
+ wire \Test_enWires[70] ;
+ wire \Test_enWires[71] ;
+ wire \Test_enWires[72] ;
+ wire \Test_enWires[73] ;
+ wire \Test_enWires[74] ;
+ wire \Test_enWires[75] ;
+ wire \Test_enWires[76] ;
+ wire \Test_enWires[77] ;
+ wire \Test_enWires[78] ;
+ wire \Test_enWires[79] ;
+ wire \Test_enWires[7] ;
+ wire \Test_enWires[80] ;
+ wire \Test_enWires[81] ;
+ wire \Test_enWires[82] ;
+ wire \Test_enWires[83] ;
+ wire \Test_enWires[84] ;
+ wire \Test_enWires[85] ;
+ wire \Test_enWires[86] ;
+ wire \Test_enWires[87] ;
+ wire \Test_enWires[88] ;
+ wire \Test_enWires[89] ;
+ wire \Test_enWires[8] ;
+ wire \Test_enWires[90] ;
+ wire \Test_enWires[91] ;
+ wire \Test_enWires[92] ;
+ wire \Test_enWires[93] ;
+ wire \Test_enWires[94] ;
+ wire \Test_enWires[95] ;
+ wire \Test_enWires[96] ;
+ wire \Test_enWires[97] ;
+ wire \Test_enWires[98] ;
+ wire \Test_enWires[99] ;
+ wire \Test_enWires[9] ;
+ wire cbx_1__0__0_bottom_grid_pin_0_;
+ wire cbx_1__0__0_bottom_grid_pin_10_;
+ wire cbx_1__0__0_bottom_grid_pin_12_;
+ wire cbx_1__0__0_bottom_grid_pin_14_;
+ wire cbx_1__0__0_bottom_grid_pin_16_;
+ wire cbx_1__0__0_bottom_grid_pin_2_;
+ wire cbx_1__0__0_bottom_grid_pin_4_;
+ wire cbx_1__0__0_bottom_grid_pin_6_;
+ wire cbx_1__0__0_bottom_grid_pin_8_;
+ wire \cbx_1__0__0_chanx_left_out[0] ;
+ wire \cbx_1__0__0_chanx_left_out[10] ;
+ wire \cbx_1__0__0_chanx_left_out[11] ;
+ wire \cbx_1__0__0_chanx_left_out[12] ;
+ wire \cbx_1__0__0_chanx_left_out[13] ;
+ wire \cbx_1__0__0_chanx_left_out[14] ;
+ wire \cbx_1__0__0_chanx_left_out[15] ;
+ wire \cbx_1__0__0_chanx_left_out[16] ;
+ wire \cbx_1__0__0_chanx_left_out[17] ;
+ wire \cbx_1__0__0_chanx_left_out[18] ;
+ wire \cbx_1__0__0_chanx_left_out[19] ;
+ wire \cbx_1__0__0_chanx_left_out[1] ;
+ wire \cbx_1__0__0_chanx_left_out[2] ;
+ wire \cbx_1__0__0_chanx_left_out[3] ;
+ wire \cbx_1__0__0_chanx_left_out[4] ;
+ wire \cbx_1__0__0_chanx_left_out[5] ;
+ wire \cbx_1__0__0_chanx_left_out[6] ;
+ wire \cbx_1__0__0_chanx_left_out[7] ;
+ wire \cbx_1__0__0_chanx_left_out[8] ;
+ wire \cbx_1__0__0_chanx_left_out[9] ;
+ wire \cbx_1__0__0_chanx_right_out[0] ;
+ wire \cbx_1__0__0_chanx_right_out[10] ;
+ wire \cbx_1__0__0_chanx_right_out[11] ;
+ wire \cbx_1__0__0_chanx_right_out[12] ;
+ wire \cbx_1__0__0_chanx_right_out[13] ;
+ wire \cbx_1__0__0_chanx_right_out[14] ;
+ wire \cbx_1__0__0_chanx_right_out[15] ;
+ wire \cbx_1__0__0_chanx_right_out[16] ;
+ wire \cbx_1__0__0_chanx_right_out[17] ;
+ wire \cbx_1__0__0_chanx_right_out[18] ;
+ wire \cbx_1__0__0_chanx_right_out[19] ;
+ wire \cbx_1__0__0_chanx_right_out[1] ;
+ wire \cbx_1__0__0_chanx_right_out[2] ;
+ wire \cbx_1__0__0_chanx_right_out[3] ;
+ wire \cbx_1__0__0_chanx_right_out[4] ;
+ wire \cbx_1__0__0_chanx_right_out[5] ;
+ wire \cbx_1__0__0_chanx_right_out[6] ;
+ wire \cbx_1__0__0_chanx_right_out[7] ;
+ wire \cbx_1__0__0_chanx_right_out[8] ;
+ wire \cbx_1__0__0_chanx_right_out[9] ;
+ wire cbx_1__0__1_bottom_grid_pin_0_;
+ wire cbx_1__0__1_bottom_grid_pin_10_;
+ wire cbx_1__0__1_bottom_grid_pin_12_;
+ wire cbx_1__0__1_bottom_grid_pin_14_;
+ wire cbx_1__0__1_bottom_grid_pin_16_;
+ wire cbx_1__0__1_bottom_grid_pin_2_;
+ wire cbx_1__0__1_bottom_grid_pin_4_;
+ wire cbx_1__0__1_bottom_grid_pin_6_;
+ wire cbx_1__0__1_bottom_grid_pin_8_;
+ wire \cbx_1__0__1_chanx_left_out[0] ;
+ wire \cbx_1__0__1_chanx_left_out[10] ;
+ wire \cbx_1__0__1_chanx_left_out[11] ;
+ wire \cbx_1__0__1_chanx_left_out[12] ;
+ wire \cbx_1__0__1_chanx_left_out[13] ;
+ wire \cbx_1__0__1_chanx_left_out[14] ;
+ wire \cbx_1__0__1_chanx_left_out[15] ;
+ wire \cbx_1__0__1_chanx_left_out[16] ;
+ wire \cbx_1__0__1_chanx_left_out[17] ;
+ wire \cbx_1__0__1_chanx_left_out[18] ;
+ wire \cbx_1__0__1_chanx_left_out[19] ;
+ wire \cbx_1__0__1_chanx_left_out[1] ;
+ wire \cbx_1__0__1_chanx_left_out[2] ;
+ wire \cbx_1__0__1_chanx_left_out[3] ;
+ wire \cbx_1__0__1_chanx_left_out[4] ;
+ wire \cbx_1__0__1_chanx_left_out[5] ;
+ wire \cbx_1__0__1_chanx_left_out[6] ;
+ wire \cbx_1__0__1_chanx_left_out[7] ;
+ wire \cbx_1__0__1_chanx_left_out[8] ;
+ wire \cbx_1__0__1_chanx_left_out[9] ;
+ wire \cbx_1__0__1_chanx_right_out[0] ;
+ wire \cbx_1__0__1_chanx_right_out[10] ;
+ wire \cbx_1__0__1_chanx_right_out[11] ;
+ wire \cbx_1__0__1_chanx_right_out[12] ;
+ wire \cbx_1__0__1_chanx_right_out[13] ;
+ wire \cbx_1__0__1_chanx_right_out[14] ;
+ wire \cbx_1__0__1_chanx_right_out[15] ;
+ wire \cbx_1__0__1_chanx_right_out[16] ;
+ wire \cbx_1__0__1_chanx_right_out[17] ;
+ wire \cbx_1__0__1_chanx_right_out[18] ;
+ wire \cbx_1__0__1_chanx_right_out[19] ;
+ wire \cbx_1__0__1_chanx_right_out[1] ;
+ wire \cbx_1__0__1_chanx_right_out[2] ;
+ wire \cbx_1__0__1_chanx_right_out[3] ;
+ wire \cbx_1__0__1_chanx_right_out[4] ;
+ wire \cbx_1__0__1_chanx_right_out[5] ;
+ wire \cbx_1__0__1_chanx_right_out[6] ;
+ wire \cbx_1__0__1_chanx_right_out[7] ;
+ wire \cbx_1__0__1_chanx_right_out[8] ;
+ wire \cbx_1__0__1_chanx_right_out[9] ;
+ wire cbx_1__0__2_bottom_grid_pin_0_;
+ wire cbx_1__0__2_bottom_grid_pin_10_;
+ wire cbx_1__0__2_bottom_grid_pin_12_;
+ wire cbx_1__0__2_bottom_grid_pin_14_;
+ wire cbx_1__0__2_bottom_grid_pin_16_;
+ wire cbx_1__0__2_bottom_grid_pin_2_;
+ wire cbx_1__0__2_bottom_grid_pin_4_;
+ wire cbx_1__0__2_bottom_grid_pin_6_;
+ wire cbx_1__0__2_bottom_grid_pin_8_;
+ wire \cbx_1__0__2_chanx_left_out[0] ;
+ wire \cbx_1__0__2_chanx_left_out[10] ;
+ wire \cbx_1__0__2_chanx_left_out[11] ;
+ wire \cbx_1__0__2_chanx_left_out[12] ;
+ wire \cbx_1__0__2_chanx_left_out[13] ;
+ wire \cbx_1__0__2_chanx_left_out[14] ;
+ wire \cbx_1__0__2_chanx_left_out[15] ;
+ wire \cbx_1__0__2_chanx_left_out[16] ;
+ wire \cbx_1__0__2_chanx_left_out[17] ;
+ wire \cbx_1__0__2_chanx_left_out[18] ;
+ wire \cbx_1__0__2_chanx_left_out[19] ;
+ wire \cbx_1__0__2_chanx_left_out[1] ;
+ wire \cbx_1__0__2_chanx_left_out[2] ;
+ wire \cbx_1__0__2_chanx_left_out[3] ;
+ wire \cbx_1__0__2_chanx_left_out[4] ;
+ wire \cbx_1__0__2_chanx_left_out[5] ;
+ wire \cbx_1__0__2_chanx_left_out[6] ;
+ wire \cbx_1__0__2_chanx_left_out[7] ;
+ wire \cbx_1__0__2_chanx_left_out[8] ;
+ wire \cbx_1__0__2_chanx_left_out[9] ;
+ wire \cbx_1__0__2_chanx_right_out[0] ;
+ wire \cbx_1__0__2_chanx_right_out[10] ;
+ wire \cbx_1__0__2_chanx_right_out[11] ;
+ wire \cbx_1__0__2_chanx_right_out[12] ;
+ wire \cbx_1__0__2_chanx_right_out[13] ;
+ wire \cbx_1__0__2_chanx_right_out[14] ;
+ wire \cbx_1__0__2_chanx_right_out[15] ;
+ wire \cbx_1__0__2_chanx_right_out[16] ;
+ wire \cbx_1__0__2_chanx_right_out[17] ;
+ wire \cbx_1__0__2_chanx_right_out[18] ;
+ wire \cbx_1__0__2_chanx_right_out[19] ;
+ wire \cbx_1__0__2_chanx_right_out[1] ;
+ wire \cbx_1__0__2_chanx_right_out[2] ;
+ wire \cbx_1__0__2_chanx_right_out[3] ;
+ wire \cbx_1__0__2_chanx_right_out[4] ;
+ wire \cbx_1__0__2_chanx_right_out[5] ;
+ wire \cbx_1__0__2_chanx_right_out[6] ;
+ wire \cbx_1__0__2_chanx_right_out[7] ;
+ wire \cbx_1__0__2_chanx_right_out[8] ;
+ wire \cbx_1__0__2_chanx_right_out[9] ;
+ wire cbx_1__0__3_bottom_grid_pin_0_;
+ wire cbx_1__0__3_bottom_grid_pin_10_;
+ wire cbx_1__0__3_bottom_grid_pin_12_;
+ wire cbx_1__0__3_bottom_grid_pin_14_;
+ wire cbx_1__0__3_bottom_grid_pin_16_;
+ wire cbx_1__0__3_bottom_grid_pin_2_;
+ wire cbx_1__0__3_bottom_grid_pin_4_;
+ wire cbx_1__0__3_bottom_grid_pin_6_;
+ wire cbx_1__0__3_bottom_grid_pin_8_;
+ wire \cbx_1__0__3_chanx_left_out[0] ;
+ wire \cbx_1__0__3_chanx_left_out[10] ;
+ wire \cbx_1__0__3_chanx_left_out[11] ;
+ wire \cbx_1__0__3_chanx_left_out[12] ;
+ wire \cbx_1__0__3_chanx_left_out[13] ;
+ wire \cbx_1__0__3_chanx_left_out[14] ;
+ wire \cbx_1__0__3_chanx_left_out[15] ;
+ wire \cbx_1__0__3_chanx_left_out[16] ;
+ wire \cbx_1__0__3_chanx_left_out[17] ;
+ wire \cbx_1__0__3_chanx_left_out[18] ;
+ wire \cbx_1__0__3_chanx_left_out[19] ;
+ wire \cbx_1__0__3_chanx_left_out[1] ;
+ wire \cbx_1__0__3_chanx_left_out[2] ;
+ wire \cbx_1__0__3_chanx_left_out[3] ;
+ wire \cbx_1__0__3_chanx_left_out[4] ;
+ wire \cbx_1__0__3_chanx_left_out[5] ;
+ wire \cbx_1__0__3_chanx_left_out[6] ;
+ wire \cbx_1__0__3_chanx_left_out[7] ;
+ wire \cbx_1__0__3_chanx_left_out[8] ;
+ wire \cbx_1__0__3_chanx_left_out[9] ;
+ wire \cbx_1__0__3_chanx_right_out[0] ;
+ wire \cbx_1__0__3_chanx_right_out[10] ;
+ wire \cbx_1__0__3_chanx_right_out[11] ;
+ wire \cbx_1__0__3_chanx_right_out[12] ;
+ wire \cbx_1__0__3_chanx_right_out[13] ;
+ wire \cbx_1__0__3_chanx_right_out[14] ;
+ wire \cbx_1__0__3_chanx_right_out[15] ;
+ wire \cbx_1__0__3_chanx_right_out[16] ;
+ wire \cbx_1__0__3_chanx_right_out[17] ;
+ wire \cbx_1__0__3_chanx_right_out[18] ;
+ wire \cbx_1__0__3_chanx_right_out[19] ;
+ wire \cbx_1__0__3_chanx_right_out[1] ;
+ wire \cbx_1__0__3_chanx_right_out[2] ;
+ wire \cbx_1__0__3_chanx_right_out[3] ;
+ wire \cbx_1__0__3_chanx_right_out[4] ;
+ wire \cbx_1__0__3_chanx_right_out[5] ;
+ wire \cbx_1__0__3_chanx_right_out[6] ;
+ wire \cbx_1__0__3_chanx_right_out[7] ;
+ wire \cbx_1__0__3_chanx_right_out[8] ;
+ wire \cbx_1__0__3_chanx_right_out[9] ;
+ wire cbx_1__0__4_bottom_grid_pin_0_;
+ wire cbx_1__0__4_bottom_grid_pin_10_;
+ wire cbx_1__0__4_bottom_grid_pin_12_;
+ wire cbx_1__0__4_bottom_grid_pin_14_;
+ wire cbx_1__0__4_bottom_grid_pin_16_;
+ wire cbx_1__0__4_bottom_grid_pin_2_;
+ wire cbx_1__0__4_bottom_grid_pin_4_;
+ wire cbx_1__0__4_bottom_grid_pin_6_;
+ wire cbx_1__0__4_bottom_grid_pin_8_;
+ wire \cbx_1__0__4_chanx_left_out[0] ;
+ wire \cbx_1__0__4_chanx_left_out[10] ;
+ wire \cbx_1__0__4_chanx_left_out[11] ;
+ wire \cbx_1__0__4_chanx_left_out[12] ;
+ wire \cbx_1__0__4_chanx_left_out[13] ;
+ wire \cbx_1__0__4_chanx_left_out[14] ;
+ wire \cbx_1__0__4_chanx_left_out[15] ;
+ wire \cbx_1__0__4_chanx_left_out[16] ;
+ wire \cbx_1__0__4_chanx_left_out[17] ;
+ wire \cbx_1__0__4_chanx_left_out[18] ;
+ wire \cbx_1__0__4_chanx_left_out[19] ;
+ wire \cbx_1__0__4_chanx_left_out[1] ;
+ wire \cbx_1__0__4_chanx_left_out[2] ;
+ wire \cbx_1__0__4_chanx_left_out[3] ;
+ wire \cbx_1__0__4_chanx_left_out[4] ;
+ wire \cbx_1__0__4_chanx_left_out[5] ;
+ wire \cbx_1__0__4_chanx_left_out[6] ;
+ wire \cbx_1__0__4_chanx_left_out[7] ;
+ wire \cbx_1__0__4_chanx_left_out[8] ;
+ wire \cbx_1__0__4_chanx_left_out[9] ;
+ wire \cbx_1__0__4_chanx_right_out[0] ;
+ wire \cbx_1__0__4_chanx_right_out[10] ;
+ wire \cbx_1__0__4_chanx_right_out[11] ;
+ wire \cbx_1__0__4_chanx_right_out[12] ;
+ wire \cbx_1__0__4_chanx_right_out[13] ;
+ wire \cbx_1__0__4_chanx_right_out[14] ;
+ wire \cbx_1__0__4_chanx_right_out[15] ;
+ wire \cbx_1__0__4_chanx_right_out[16] ;
+ wire \cbx_1__0__4_chanx_right_out[17] ;
+ wire \cbx_1__0__4_chanx_right_out[18] ;
+ wire \cbx_1__0__4_chanx_right_out[19] ;
+ wire \cbx_1__0__4_chanx_right_out[1] ;
+ wire \cbx_1__0__4_chanx_right_out[2] ;
+ wire \cbx_1__0__4_chanx_right_out[3] ;
+ wire \cbx_1__0__4_chanx_right_out[4] ;
+ wire \cbx_1__0__4_chanx_right_out[5] ;
+ wire \cbx_1__0__4_chanx_right_out[6] ;
+ wire \cbx_1__0__4_chanx_right_out[7] ;
+ wire \cbx_1__0__4_chanx_right_out[8] ;
+ wire \cbx_1__0__4_chanx_right_out[9] ;
+ wire cbx_1__0__5_bottom_grid_pin_0_;
+ wire cbx_1__0__5_bottom_grid_pin_10_;
+ wire cbx_1__0__5_bottom_grid_pin_12_;
+ wire cbx_1__0__5_bottom_grid_pin_14_;
+ wire cbx_1__0__5_bottom_grid_pin_16_;
+ wire cbx_1__0__5_bottom_grid_pin_2_;
+ wire cbx_1__0__5_bottom_grid_pin_4_;
+ wire cbx_1__0__5_bottom_grid_pin_6_;
+ wire cbx_1__0__5_bottom_grid_pin_8_;
+ wire \cbx_1__0__5_chanx_left_out[0] ;
+ wire \cbx_1__0__5_chanx_left_out[10] ;
+ wire \cbx_1__0__5_chanx_left_out[11] ;
+ wire \cbx_1__0__5_chanx_left_out[12] ;
+ wire \cbx_1__0__5_chanx_left_out[13] ;
+ wire \cbx_1__0__5_chanx_left_out[14] ;
+ wire \cbx_1__0__5_chanx_left_out[15] ;
+ wire \cbx_1__0__5_chanx_left_out[16] ;
+ wire \cbx_1__0__5_chanx_left_out[17] ;
+ wire \cbx_1__0__5_chanx_left_out[18] ;
+ wire \cbx_1__0__5_chanx_left_out[19] ;
+ wire \cbx_1__0__5_chanx_left_out[1] ;
+ wire \cbx_1__0__5_chanx_left_out[2] ;
+ wire \cbx_1__0__5_chanx_left_out[3] ;
+ wire \cbx_1__0__5_chanx_left_out[4] ;
+ wire \cbx_1__0__5_chanx_left_out[5] ;
+ wire \cbx_1__0__5_chanx_left_out[6] ;
+ wire \cbx_1__0__5_chanx_left_out[7] ;
+ wire \cbx_1__0__5_chanx_left_out[8] ;
+ wire \cbx_1__0__5_chanx_left_out[9] ;
+ wire \cbx_1__0__5_chanx_right_out[0] ;
+ wire \cbx_1__0__5_chanx_right_out[10] ;
+ wire \cbx_1__0__5_chanx_right_out[11] ;
+ wire \cbx_1__0__5_chanx_right_out[12] ;
+ wire \cbx_1__0__5_chanx_right_out[13] ;
+ wire \cbx_1__0__5_chanx_right_out[14] ;
+ wire \cbx_1__0__5_chanx_right_out[15] ;
+ wire \cbx_1__0__5_chanx_right_out[16] ;
+ wire \cbx_1__0__5_chanx_right_out[17] ;
+ wire \cbx_1__0__5_chanx_right_out[18] ;
+ wire \cbx_1__0__5_chanx_right_out[19] ;
+ wire \cbx_1__0__5_chanx_right_out[1] ;
+ wire \cbx_1__0__5_chanx_right_out[2] ;
+ wire \cbx_1__0__5_chanx_right_out[3] ;
+ wire \cbx_1__0__5_chanx_right_out[4] ;
+ wire \cbx_1__0__5_chanx_right_out[5] ;
+ wire \cbx_1__0__5_chanx_right_out[6] ;
+ wire \cbx_1__0__5_chanx_right_out[7] ;
+ wire \cbx_1__0__5_chanx_right_out[8] ;
+ wire \cbx_1__0__5_chanx_right_out[9] ;
+ wire cbx_1__0__6_bottom_grid_pin_0_;
+ wire cbx_1__0__6_bottom_grid_pin_10_;
+ wire cbx_1__0__6_bottom_grid_pin_12_;
+ wire cbx_1__0__6_bottom_grid_pin_14_;
+ wire cbx_1__0__6_bottom_grid_pin_16_;
+ wire cbx_1__0__6_bottom_grid_pin_2_;
+ wire cbx_1__0__6_bottom_grid_pin_4_;
+ wire cbx_1__0__6_bottom_grid_pin_6_;
+ wire cbx_1__0__6_bottom_grid_pin_8_;
+ wire \cbx_1__0__6_chanx_left_out[0] ;
+ wire \cbx_1__0__6_chanx_left_out[10] ;
+ wire \cbx_1__0__6_chanx_left_out[11] ;
+ wire \cbx_1__0__6_chanx_left_out[12] ;
+ wire \cbx_1__0__6_chanx_left_out[13] ;
+ wire \cbx_1__0__6_chanx_left_out[14] ;
+ wire \cbx_1__0__6_chanx_left_out[15] ;
+ wire \cbx_1__0__6_chanx_left_out[16] ;
+ wire \cbx_1__0__6_chanx_left_out[17] ;
+ wire \cbx_1__0__6_chanx_left_out[18] ;
+ wire \cbx_1__0__6_chanx_left_out[19] ;
+ wire \cbx_1__0__6_chanx_left_out[1] ;
+ wire \cbx_1__0__6_chanx_left_out[2] ;
+ wire \cbx_1__0__6_chanx_left_out[3] ;
+ wire \cbx_1__0__6_chanx_left_out[4] ;
+ wire \cbx_1__0__6_chanx_left_out[5] ;
+ wire \cbx_1__0__6_chanx_left_out[6] ;
+ wire \cbx_1__0__6_chanx_left_out[7] ;
+ wire \cbx_1__0__6_chanx_left_out[8] ;
+ wire \cbx_1__0__6_chanx_left_out[9] ;
+ wire \cbx_1__0__6_chanx_right_out[0] ;
+ wire \cbx_1__0__6_chanx_right_out[10] ;
+ wire \cbx_1__0__6_chanx_right_out[11] ;
+ wire \cbx_1__0__6_chanx_right_out[12] ;
+ wire \cbx_1__0__6_chanx_right_out[13] ;
+ wire \cbx_1__0__6_chanx_right_out[14] ;
+ wire \cbx_1__0__6_chanx_right_out[15] ;
+ wire \cbx_1__0__6_chanx_right_out[16] ;
+ wire \cbx_1__0__6_chanx_right_out[17] ;
+ wire \cbx_1__0__6_chanx_right_out[18] ;
+ wire \cbx_1__0__6_chanx_right_out[19] ;
+ wire \cbx_1__0__6_chanx_right_out[1] ;
+ wire \cbx_1__0__6_chanx_right_out[2] ;
+ wire \cbx_1__0__6_chanx_right_out[3] ;
+ wire \cbx_1__0__6_chanx_right_out[4] ;
+ wire \cbx_1__0__6_chanx_right_out[5] ;
+ wire \cbx_1__0__6_chanx_right_out[6] ;
+ wire \cbx_1__0__6_chanx_right_out[7] ;
+ wire \cbx_1__0__6_chanx_right_out[8] ;
+ wire \cbx_1__0__6_chanx_right_out[9] ;
+ wire cbx_1__0__7_bottom_grid_pin_0_;
+ wire cbx_1__0__7_bottom_grid_pin_10_;
+ wire cbx_1__0__7_bottom_grid_pin_12_;
+ wire cbx_1__0__7_bottom_grid_pin_14_;
+ wire cbx_1__0__7_bottom_grid_pin_16_;
+ wire cbx_1__0__7_bottom_grid_pin_2_;
+ wire cbx_1__0__7_bottom_grid_pin_4_;
+ wire cbx_1__0__7_bottom_grid_pin_6_;
+ wire cbx_1__0__7_bottom_grid_pin_8_;
+ wire \cbx_1__0__7_chanx_left_out[0] ;
+ wire \cbx_1__0__7_chanx_left_out[10] ;
+ wire \cbx_1__0__7_chanx_left_out[11] ;
+ wire \cbx_1__0__7_chanx_left_out[12] ;
+ wire \cbx_1__0__7_chanx_left_out[13] ;
+ wire \cbx_1__0__7_chanx_left_out[14] ;
+ wire \cbx_1__0__7_chanx_left_out[15] ;
+ wire \cbx_1__0__7_chanx_left_out[16] ;
+ wire \cbx_1__0__7_chanx_left_out[17] ;
+ wire \cbx_1__0__7_chanx_left_out[18] ;
+ wire \cbx_1__0__7_chanx_left_out[19] ;
+ wire \cbx_1__0__7_chanx_left_out[1] ;
+ wire \cbx_1__0__7_chanx_left_out[2] ;
+ wire \cbx_1__0__7_chanx_left_out[3] ;
+ wire \cbx_1__0__7_chanx_left_out[4] ;
+ wire \cbx_1__0__7_chanx_left_out[5] ;
+ wire \cbx_1__0__7_chanx_left_out[6] ;
+ wire \cbx_1__0__7_chanx_left_out[7] ;
+ wire \cbx_1__0__7_chanx_left_out[8] ;
+ wire \cbx_1__0__7_chanx_left_out[9] ;
+ wire \cbx_1__0__7_chanx_right_out[0] ;
+ wire \cbx_1__0__7_chanx_right_out[10] ;
+ wire \cbx_1__0__7_chanx_right_out[11] ;
+ wire \cbx_1__0__7_chanx_right_out[12] ;
+ wire \cbx_1__0__7_chanx_right_out[13] ;
+ wire \cbx_1__0__7_chanx_right_out[14] ;
+ wire \cbx_1__0__7_chanx_right_out[15] ;
+ wire \cbx_1__0__7_chanx_right_out[16] ;
+ wire \cbx_1__0__7_chanx_right_out[17] ;
+ wire \cbx_1__0__7_chanx_right_out[18] ;
+ wire \cbx_1__0__7_chanx_right_out[19] ;
+ wire \cbx_1__0__7_chanx_right_out[1] ;
+ wire \cbx_1__0__7_chanx_right_out[2] ;
+ wire \cbx_1__0__7_chanx_right_out[3] ;
+ wire \cbx_1__0__7_chanx_right_out[4] ;
+ wire \cbx_1__0__7_chanx_right_out[5] ;
+ wire \cbx_1__0__7_chanx_right_out[6] ;
+ wire \cbx_1__0__7_chanx_right_out[7] ;
+ wire \cbx_1__0__7_chanx_right_out[8] ;
+ wire \cbx_1__0__7_chanx_right_out[9] ;
+ wire cbx_1__1__0_bottom_grid_pin_0_;
+ wire cbx_1__1__0_bottom_grid_pin_10_;
+ wire cbx_1__1__0_bottom_grid_pin_11_;
+ wire cbx_1__1__0_bottom_grid_pin_12_;
+ wire cbx_1__1__0_bottom_grid_pin_13_;
+ wire cbx_1__1__0_bottom_grid_pin_14_;
+ wire cbx_1__1__0_bottom_grid_pin_15_;
+ wire cbx_1__1__0_bottom_grid_pin_1_;
+ wire cbx_1__1__0_bottom_grid_pin_2_;
+ wire cbx_1__1__0_bottom_grid_pin_3_;
+ wire cbx_1__1__0_bottom_grid_pin_4_;
+ wire cbx_1__1__0_bottom_grid_pin_5_;
+ wire cbx_1__1__0_bottom_grid_pin_6_;
+ wire cbx_1__1__0_bottom_grid_pin_7_;
+ wire cbx_1__1__0_bottom_grid_pin_8_;
+ wire cbx_1__1__0_bottom_grid_pin_9_;
+ wire cbx_1__1__0_ccff_tail;
+ wire \cbx_1__1__0_chanx_left_out[0] ;
+ wire \cbx_1__1__0_chanx_left_out[10] ;
+ wire \cbx_1__1__0_chanx_left_out[11] ;
+ wire \cbx_1__1__0_chanx_left_out[12] ;
+ wire \cbx_1__1__0_chanx_left_out[13] ;
+ wire \cbx_1__1__0_chanx_left_out[14] ;
+ wire \cbx_1__1__0_chanx_left_out[15] ;
+ wire \cbx_1__1__0_chanx_left_out[16] ;
+ wire \cbx_1__1__0_chanx_left_out[17] ;
+ wire \cbx_1__1__0_chanx_left_out[18] ;
+ wire \cbx_1__1__0_chanx_left_out[19] ;
+ wire \cbx_1__1__0_chanx_left_out[1] ;
+ wire \cbx_1__1__0_chanx_left_out[2] ;
+ wire \cbx_1__1__0_chanx_left_out[3] ;
+ wire \cbx_1__1__0_chanx_left_out[4] ;
+ wire \cbx_1__1__0_chanx_left_out[5] ;
+ wire \cbx_1__1__0_chanx_left_out[6] ;
+ wire \cbx_1__1__0_chanx_left_out[7] ;
+ wire \cbx_1__1__0_chanx_left_out[8] ;
+ wire \cbx_1__1__0_chanx_left_out[9] ;
+ wire \cbx_1__1__0_chanx_right_out[0] ;
+ wire \cbx_1__1__0_chanx_right_out[10] ;
+ wire \cbx_1__1__0_chanx_right_out[11] ;
+ wire \cbx_1__1__0_chanx_right_out[12] ;
+ wire \cbx_1__1__0_chanx_right_out[13] ;
+ wire \cbx_1__1__0_chanx_right_out[14] ;
+ wire \cbx_1__1__0_chanx_right_out[15] ;
+ wire \cbx_1__1__0_chanx_right_out[16] ;
+ wire \cbx_1__1__0_chanx_right_out[17] ;
+ wire \cbx_1__1__0_chanx_right_out[18] ;
+ wire \cbx_1__1__0_chanx_right_out[19] ;
+ wire \cbx_1__1__0_chanx_right_out[1] ;
+ wire \cbx_1__1__0_chanx_right_out[2] ;
+ wire \cbx_1__1__0_chanx_right_out[3] ;
+ wire \cbx_1__1__0_chanx_right_out[4] ;
+ wire \cbx_1__1__0_chanx_right_out[5] ;
+ wire \cbx_1__1__0_chanx_right_out[6] ;
+ wire \cbx_1__1__0_chanx_right_out[7] ;
+ wire \cbx_1__1__0_chanx_right_out[8] ;
+ wire \cbx_1__1__0_chanx_right_out[9] ;
+ wire cbx_1__1__10_bottom_grid_pin_0_;
+ wire cbx_1__1__10_bottom_grid_pin_10_;
+ wire cbx_1__1__10_bottom_grid_pin_11_;
+ wire cbx_1__1__10_bottom_grid_pin_12_;
+ wire cbx_1__1__10_bottom_grid_pin_13_;
+ wire cbx_1__1__10_bottom_grid_pin_14_;
+ wire cbx_1__1__10_bottom_grid_pin_15_;
+ wire cbx_1__1__10_bottom_grid_pin_1_;
+ wire cbx_1__1__10_bottom_grid_pin_2_;
+ wire cbx_1__1__10_bottom_grid_pin_3_;
+ wire cbx_1__1__10_bottom_grid_pin_4_;
+ wire cbx_1__1__10_bottom_grid_pin_5_;
+ wire cbx_1__1__10_bottom_grid_pin_6_;
+ wire cbx_1__1__10_bottom_grid_pin_7_;
+ wire cbx_1__1__10_bottom_grid_pin_8_;
+ wire cbx_1__1__10_bottom_grid_pin_9_;
+ wire cbx_1__1__10_ccff_tail;
+ wire \cbx_1__1__10_chanx_left_out[0] ;
+ wire \cbx_1__1__10_chanx_left_out[10] ;
+ wire \cbx_1__1__10_chanx_left_out[11] ;
+ wire \cbx_1__1__10_chanx_left_out[12] ;
+ wire \cbx_1__1__10_chanx_left_out[13] ;
+ wire \cbx_1__1__10_chanx_left_out[14] ;
+ wire \cbx_1__1__10_chanx_left_out[15] ;
+ wire \cbx_1__1__10_chanx_left_out[16] ;
+ wire \cbx_1__1__10_chanx_left_out[17] ;
+ wire \cbx_1__1__10_chanx_left_out[18] ;
+ wire \cbx_1__1__10_chanx_left_out[19] ;
+ wire \cbx_1__1__10_chanx_left_out[1] ;
+ wire \cbx_1__1__10_chanx_left_out[2] ;
+ wire \cbx_1__1__10_chanx_left_out[3] ;
+ wire \cbx_1__1__10_chanx_left_out[4] ;
+ wire \cbx_1__1__10_chanx_left_out[5] ;
+ wire \cbx_1__1__10_chanx_left_out[6] ;
+ wire \cbx_1__1__10_chanx_left_out[7] ;
+ wire \cbx_1__1__10_chanx_left_out[8] ;
+ wire \cbx_1__1__10_chanx_left_out[9] ;
+ wire \cbx_1__1__10_chanx_right_out[0] ;
+ wire \cbx_1__1__10_chanx_right_out[10] ;
+ wire \cbx_1__1__10_chanx_right_out[11] ;
+ wire \cbx_1__1__10_chanx_right_out[12] ;
+ wire \cbx_1__1__10_chanx_right_out[13] ;
+ wire \cbx_1__1__10_chanx_right_out[14] ;
+ wire \cbx_1__1__10_chanx_right_out[15] ;
+ wire \cbx_1__1__10_chanx_right_out[16] ;
+ wire \cbx_1__1__10_chanx_right_out[17] ;
+ wire \cbx_1__1__10_chanx_right_out[18] ;
+ wire \cbx_1__1__10_chanx_right_out[19] ;
+ wire \cbx_1__1__10_chanx_right_out[1] ;
+ wire \cbx_1__1__10_chanx_right_out[2] ;
+ wire \cbx_1__1__10_chanx_right_out[3] ;
+ wire \cbx_1__1__10_chanx_right_out[4] ;
+ wire \cbx_1__1__10_chanx_right_out[5] ;
+ wire \cbx_1__1__10_chanx_right_out[6] ;
+ wire \cbx_1__1__10_chanx_right_out[7] ;
+ wire \cbx_1__1__10_chanx_right_out[8] ;
+ wire \cbx_1__1__10_chanx_right_out[9] ;
+ wire cbx_1__1__11_bottom_grid_pin_0_;
+ wire cbx_1__1__11_bottom_grid_pin_10_;
+ wire cbx_1__1__11_bottom_grid_pin_11_;
+ wire cbx_1__1__11_bottom_grid_pin_12_;
+ wire cbx_1__1__11_bottom_grid_pin_13_;
+ wire cbx_1__1__11_bottom_grid_pin_14_;
+ wire cbx_1__1__11_bottom_grid_pin_15_;
+ wire cbx_1__1__11_bottom_grid_pin_1_;
+ wire cbx_1__1__11_bottom_grid_pin_2_;
+ wire cbx_1__1__11_bottom_grid_pin_3_;
+ wire cbx_1__1__11_bottom_grid_pin_4_;
+ wire cbx_1__1__11_bottom_grid_pin_5_;
+ wire cbx_1__1__11_bottom_grid_pin_6_;
+ wire cbx_1__1__11_bottom_grid_pin_7_;
+ wire cbx_1__1__11_bottom_grid_pin_8_;
+ wire cbx_1__1__11_bottom_grid_pin_9_;
+ wire cbx_1__1__11_ccff_tail;
+ wire \cbx_1__1__11_chanx_left_out[0] ;
+ wire \cbx_1__1__11_chanx_left_out[10] ;
+ wire \cbx_1__1__11_chanx_left_out[11] ;
+ wire \cbx_1__1__11_chanx_left_out[12] ;
+ wire \cbx_1__1__11_chanx_left_out[13] ;
+ wire \cbx_1__1__11_chanx_left_out[14] ;
+ wire \cbx_1__1__11_chanx_left_out[15] ;
+ wire \cbx_1__1__11_chanx_left_out[16] ;
+ wire \cbx_1__1__11_chanx_left_out[17] ;
+ wire \cbx_1__1__11_chanx_left_out[18] ;
+ wire \cbx_1__1__11_chanx_left_out[19] ;
+ wire \cbx_1__1__11_chanx_left_out[1] ;
+ wire \cbx_1__1__11_chanx_left_out[2] ;
+ wire \cbx_1__1__11_chanx_left_out[3] ;
+ wire \cbx_1__1__11_chanx_left_out[4] ;
+ wire \cbx_1__1__11_chanx_left_out[5] ;
+ wire \cbx_1__1__11_chanx_left_out[6] ;
+ wire \cbx_1__1__11_chanx_left_out[7] ;
+ wire \cbx_1__1__11_chanx_left_out[8] ;
+ wire \cbx_1__1__11_chanx_left_out[9] ;
+ wire \cbx_1__1__11_chanx_right_out[0] ;
+ wire \cbx_1__1__11_chanx_right_out[10] ;
+ wire \cbx_1__1__11_chanx_right_out[11] ;
+ wire \cbx_1__1__11_chanx_right_out[12] ;
+ wire \cbx_1__1__11_chanx_right_out[13] ;
+ wire \cbx_1__1__11_chanx_right_out[14] ;
+ wire \cbx_1__1__11_chanx_right_out[15] ;
+ wire \cbx_1__1__11_chanx_right_out[16] ;
+ wire \cbx_1__1__11_chanx_right_out[17] ;
+ wire \cbx_1__1__11_chanx_right_out[18] ;
+ wire \cbx_1__1__11_chanx_right_out[19] ;
+ wire \cbx_1__1__11_chanx_right_out[1] ;
+ wire \cbx_1__1__11_chanx_right_out[2] ;
+ wire \cbx_1__1__11_chanx_right_out[3] ;
+ wire \cbx_1__1__11_chanx_right_out[4] ;
+ wire \cbx_1__1__11_chanx_right_out[5] ;
+ wire \cbx_1__1__11_chanx_right_out[6] ;
+ wire \cbx_1__1__11_chanx_right_out[7] ;
+ wire \cbx_1__1__11_chanx_right_out[8] ;
+ wire \cbx_1__1__11_chanx_right_out[9] ;
+ wire cbx_1__1__12_bottom_grid_pin_0_;
+ wire cbx_1__1__12_bottom_grid_pin_10_;
+ wire cbx_1__1__12_bottom_grid_pin_11_;
+ wire cbx_1__1__12_bottom_grid_pin_12_;
+ wire cbx_1__1__12_bottom_grid_pin_13_;
+ wire cbx_1__1__12_bottom_grid_pin_14_;
+ wire cbx_1__1__12_bottom_grid_pin_15_;
+ wire cbx_1__1__12_bottom_grid_pin_1_;
+ wire cbx_1__1__12_bottom_grid_pin_2_;
+ wire cbx_1__1__12_bottom_grid_pin_3_;
+ wire cbx_1__1__12_bottom_grid_pin_4_;
+ wire cbx_1__1__12_bottom_grid_pin_5_;
+ wire cbx_1__1__12_bottom_grid_pin_6_;
+ wire cbx_1__1__12_bottom_grid_pin_7_;
+ wire cbx_1__1__12_bottom_grid_pin_8_;
+ wire cbx_1__1__12_bottom_grid_pin_9_;
+ wire cbx_1__1__12_ccff_tail;
+ wire \cbx_1__1__12_chanx_left_out[0] ;
+ wire \cbx_1__1__12_chanx_left_out[10] ;
+ wire \cbx_1__1__12_chanx_left_out[11] ;
+ wire \cbx_1__1__12_chanx_left_out[12] ;
+ wire \cbx_1__1__12_chanx_left_out[13] ;
+ wire \cbx_1__1__12_chanx_left_out[14] ;
+ wire \cbx_1__1__12_chanx_left_out[15] ;
+ wire \cbx_1__1__12_chanx_left_out[16] ;
+ wire \cbx_1__1__12_chanx_left_out[17] ;
+ wire \cbx_1__1__12_chanx_left_out[18] ;
+ wire \cbx_1__1__12_chanx_left_out[19] ;
+ wire \cbx_1__1__12_chanx_left_out[1] ;
+ wire \cbx_1__1__12_chanx_left_out[2] ;
+ wire \cbx_1__1__12_chanx_left_out[3] ;
+ wire \cbx_1__1__12_chanx_left_out[4] ;
+ wire \cbx_1__1__12_chanx_left_out[5] ;
+ wire \cbx_1__1__12_chanx_left_out[6] ;
+ wire \cbx_1__1__12_chanx_left_out[7] ;
+ wire \cbx_1__1__12_chanx_left_out[8] ;
+ wire \cbx_1__1__12_chanx_left_out[9] ;
+ wire \cbx_1__1__12_chanx_right_out[0] ;
+ wire \cbx_1__1__12_chanx_right_out[10] ;
+ wire \cbx_1__1__12_chanx_right_out[11] ;
+ wire \cbx_1__1__12_chanx_right_out[12] ;
+ wire \cbx_1__1__12_chanx_right_out[13] ;
+ wire \cbx_1__1__12_chanx_right_out[14] ;
+ wire \cbx_1__1__12_chanx_right_out[15] ;
+ wire \cbx_1__1__12_chanx_right_out[16] ;
+ wire \cbx_1__1__12_chanx_right_out[17] ;
+ wire \cbx_1__1__12_chanx_right_out[18] ;
+ wire \cbx_1__1__12_chanx_right_out[19] ;
+ wire \cbx_1__1__12_chanx_right_out[1] ;
+ wire \cbx_1__1__12_chanx_right_out[2] ;
+ wire \cbx_1__1__12_chanx_right_out[3] ;
+ wire \cbx_1__1__12_chanx_right_out[4] ;
+ wire \cbx_1__1__12_chanx_right_out[5] ;
+ wire \cbx_1__1__12_chanx_right_out[6] ;
+ wire \cbx_1__1__12_chanx_right_out[7] ;
+ wire \cbx_1__1__12_chanx_right_out[8] ;
+ wire \cbx_1__1__12_chanx_right_out[9] ;
+ wire cbx_1__1__13_bottom_grid_pin_0_;
+ wire cbx_1__1__13_bottom_grid_pin_10_;
+ wire cbx_1__1__13_bottom_grid_pin_11_;
+ wire cbx_1__1__13_bottom_grid_pin_12_;
+ wire cbx_1__1__13_bottom_grid_pin_13_;
+ wire cbx_1__1__13_bottom_grid_pin_14_;
+ wire cbx_1__1__13_bottom_grid_pin_15_;
+ wire cbx_1__1__13_bottom_grid_pin_1_;
+ wire cbx_1__1__13_bottom_grid_pin_2_;
+ wire cbx_1__1__13_bottom_grid_pin_3_;
+ wire cbx_1__1__13_bottom_grid_pin_4_;
+ wire cbx_1__1__13_bottom_grid_pin_5_;
+ wire cbx_1__1__13_bottom_grid_pin_6_;
+ wire cbx_1__1__13_bottom_grid_pin_7_;
+ wire cbx_1__1__13_bottom_grid_pin_8_;
+ wire cbx_1__1__13_bottom_grid_pin_9_;
+ wire cbx_1__1__13_ccff_tail;
+ wire \cbx_1__1__13_chanx_left_out[0] ;
+ wire \cbx_1__1__13_chanx_left_out[10] ;
+ wire \cbx_1__1__13_chanx_left_out[11] ;
+ wire \cbx_1__1__13_chanx_left_out[12] ;
+ wire \cbx_1__1__13_chanx_left_out[13] ;
+ wire \cbx_1__1__13_chanx_left_out[14] ;
+ wire \cbx_1__1__13_chanx_left_out[15] ;
+ wire \cbx_1__1__13_chanx_left_out[16] ;
+ wire \cbx_1__1__13_chanx_left_out[17] ;
+ wire \cbx_1__1__13_chanx_left_out[18] ;
+ wire \cbx_1__1__13_chanx_left_out[19] ;
+ wire \cbx_1__1__13_chanx_left_out[1] ;
+ wire \cbx_1__1__13_chanx_left_out[2] ;
+ wire \cbx_1__1__13_chanx_left_out[3] ;
+ wire \cbx_1__1__13_chanx_left_out[4] ;
+ wire \cbx_1__1__13_chanx_left_out[5] ;
+ wire \cbx_1__1__13_chanx_left_out[6] ;
+ wire \cbx_1__1__13_chanx_left_out[7] ;
+ wire \cbx_1__1__13_chanx_left_out[8] ;
+ wire \cbx_1__1__13_chanx_left_out[9] ;
+ wire \cbx_1__1__13_chanx_right_out[0] ;
+ wire \cbx_1__1__13_chanx_right_out[10] ;
+ wire \cbx_1__1__13_chanx_right_out[11] ;
+ wire \cbx_1__1__13_chanx_right_out[12] ;
+ wire \cbx_1__1__13_chanx_right_out[13] ;
+ wire \cbx_1__1__13_chanx_right_out[14] ;
+ wire \cbx_1__1__13_chanx_right_out[15] ;
+ wire \cbx_1__1__13_chanx_right_out[16] ;
+ wire \cbx_1__1__13_chanx_right_out[17] ;
+ wire \cbx_1__1__13_chanx_right_out[18] ;
+ wire \cbx_1__1__13_chanx_right_out[19] ;
+ wire \cbx_1__1__13_chanx_right_out[1] ;
+ wire \cbx_1__1__13_chanx_right_out[2] ;
+ wire \cbx_1__1__13_chanx_right_out[3] ;
+ wire \cbx_1__1__13_chanx_right_out[4] ;
+ wire \cbx_1__1__13_chanx_right_out[5] ;
+ wire \cbx_1__1__13_chanx_right_out[6] ;
+ wire \cbx_1__1__13_chanx_right_out[7] ;
+ wire \cbx_1__1__13_chanx_right_out[8] ;
+ wire \cbx_1__1__13_chanx_right_out[9] ;
+ wire cbx_1__1__14_bottom_grid_pin_0_;
+ wire cbx_1__1__14_bottom_grid_pin_10_;
+ wire cbx_1__1__14_bottom_grid_pin_11_;
+ wire cbx_1__1__14_bottom_grid_pin_12_;
+ wire cbx_1__1__14_bottom_grid_pin_13_;
+ wire cbx_1__1__14_bottom_grid_pin_14_;
+ wire cbx_1__1__14_bottom_grid_pin_15_;
+ wire cbx_1__1__14_bottom_grid_pin_1_;
+ wire cbx_1__1__14_bottom_grid_pin_2_;
+ wire cbx_1__1__14_bottom_grid_pin_3_;
+ wire cbx_1__1__14_bottom_grid_pin_4_;
+ wire cbx_1__1__14_bottom_grid_pin_5_;
+ wire cbx_1__1__14_bottom_grid_pin_6_;
+ wire cbx_1__1__14_bottom_grid_pin_7_;
+ wire cbx_1__1__14_bottom_grid_pin_8_;
+ wire cbx_1__1__14_bottom_grid_pin_9_;
+ wire cbx_1__1__14_ccff_tail;
+ wire \cbx_1__1__14_chanx_left_out[0] ;
+ wire \cbx_1__1__14_chanx_left_out[10] ;
+ wire \cbx_1__1__14_chanx_left_out[11] ;
+ wire \cbx_1__1__14_chanx_left_out[12] ;
+ wire \cbx_1__1__14_chanx_left_out[13] ;
+ wire \cbx_1__1__14_chanx_left_out[14] ;
+ wire \cbx_1__1__14_chanx_left_out[15] ;
+ wire \cbx_1__1__14_chanx_left_out[16] ;
+ wire \cbx_1__1__14_chanx_left_out[17] ;
+ wire \cbx_1__1__14_chanx_left_out[18] ;
+ wire \cbx_1__1__14_chanx_left_out[19] ;
+ wire \cbx_1__1__14_chanx_left_out[1] ;
+ wire \cbx_1__1__14_chanx_left_out[2] ;
+ wire \cbx_1__1__14_chanx_left_out[3] ;
+ wire \cbx_1__1__14_chanx_left_out[4] ;
+ wire \cbx_1__1__14_chanx_left_out[5] ;
+ wire \cbx_1__1__14_chanx_left_out[6] ;
+ wire \cbx_1__1__14_chanx_left_out[7] ;
+ wire \cbx_1__1__14_chanx_left_out[8] ;
+ wire \cbx_1__1__14_chanx_left_out[9] ;
+ wire \cbx_1__1__14_chanx_right_out[0] ;
+ wire \cbx_1__1__14_chanx_right_out[10] ;
+ wire \cbx_1__1__14_chanx_right_out[11] ;
+ wire \cbx_1__1__14_chanx_right_out[12] ;
+ wire \cbx_1__1__14_chanx_right_out[13] ;
+ wire \cbx_1__1__14_chanx_right_out[14] ;
+ wire \cbx_1__1__14_chanx_right_out[15] ;
+ wire \cbx_1__1__14_chanx_right_out[16] ;
+ wire \cbx_1__1__14_chanx_right_out[17] ;
+ wire \cbx_1__1__14_chanx_right_out[18] ;
+ wire \cbx_1__1__14_chanx_right_out[19] ;
+ wire \cbx_1__1__14_chanx_right_out[1] ;
+ wire \cbx_1__1__14_chanx_right_out[2] ;
+ wire \cbx_1__1__14_chanx_right_out[3] ;
+ wire \cbx_1__1__14_chanx_right_out[4] ;
+ wire \cbx_1__1__14_chanx_right_out[5] ;
+ wire \cbx_1__1__14_chanx_right_out[6] ;
+ wire \cbx_1__1__14_chanx_right_out[7] ;
+ wire \cbx_1__1__14_chanx_right_out[8] ;
+ wire \cbx_1__1__14_chanx_right_out[9] ;
+ wire cbx_1__1__15_bottom_grid_pin_0_;
+ wire cbx_1__1__15_bottom_grid_pin_10_;
+ wire cbx_1__1__15_bottom_grid_pin_11_;
+ wire cbx_1__1__15_bottom_grid_pin_12_;
+ wire cbx_1__1__15_bottom_grid_pin_13_;
+ wire cbx_1__1__15_bottom_grid_pin_14_;
+ wire cbx_1__1__15_bottom_grid_pin_15_;
+ wire cbx_1__1__15_bottom_grid_pin_1_;
+ wire cbx_1__1__15_bottom_grid_pin_2_;
+ wire cbx_1__1__15_bottom_grid_pin_3_;
+ wire cbx_1__1__15_bottom_grid_pin_4_;
+ wire cbx_1__1__15_bottom_grid_pin_5_;
+ wire cbx_1__1__15_bottom_grid_pin_6_;
+ wire cbx_1__1__15_bottom_grid_pin_7_;
+ wire cbx_1__1__15_bottom_grid_pin_8_;
+ wire cbx_1__1__15_bottom_grid_pin_9_;
+ wire cbx_1__1__15_ccff_tail;
+ wire \cbx_1__1__15_chanx_left_out[0] ;
+ wire \cbx_1__1__15_chanx_left_out[10] ;
+ wire \cbx_1__1__15_chanx_left_out[11] ;
+ wire \cbx_1__1__15_chanx_left_out[12] ;
+ wire \cbx_1__1__15_chanx_left_out[13] ;
+ wire \cbx_1__1__15_chanx_left_out[14] ;
+ wire \cbx_1__1__15_chanx_left_out[15] ;
+ wire \cbx_1__1__15_chanx_left_out[16] ;
+ wire \cbx_1__1__15_chanx_left_out[17] ;
+ wire \cbx_1__1__15_chanx_left_out[18] ;
+ wire \cbx_1__1__15_chanx_left_out[19] ;
+ wire \cbx_1__1__15_chanx_left_out[1] ;
+ wire \cbx_1__1__15_chanx_left_out[2] ;
+ wire \cbx_1__1__15_chanx_left_out[3] ;
+ wire \cbx_1__1__15_chanx_left_out[4] ;
+ wire \cbx_1__1__15_chanx_left_out[5] ;
+ wire \cbx_1__1__15_chanx_left_out[6] ;
+ wire \cbx_1__1__15_chanx_left_out[7] ;
+ wire \cbx_1__1__15_chanx_left_out[8] ;
+ wire \cbx_1__1__15_chanx_left_out[9] ;
+ wire \cbx_1__1__15_chanx_right_out[0] ;
+ wire \cbx_1__1__15_chanx_right_out[10] ;
+ wire \cbx_1__1__15_chanx_right_out[11] ;
+ wire \cbx_1__1__15_chanx_right_out[12] ;
+ wire \cbx_1__1__15_chanx_right_out[13] ;
+ wire \cbx_1__1__15_chanx_right_out[14] ;
+ wire \cbx_1__1__15_chanx_right_out[15] ;
+ wire \cbx_1__1__15_chanx_right_out[16] ;
+ wire \cbx_1__1__15_chanx_right_out[17] ;
+ wire \cbx_1__1__15_chanx_right_out[18] ;
+ wire \cbx_1__1__15_chanx_right_out[19] ;
+ wire \cbx_1__1__15_chanx_right_out[1] ;
+ wire \cbx_1__1__15_chanx_right_out[2] ;
+ wire \cbx_1__1__15_chanx_right_out[3] ;
+ wire \cbx_1__1__15_chanx_right_out[4] ;
+ wire \cbx_1__1__15_chanx_right_out[5] ;
+ wire \cbx_1__1__15_chanx_right_out[6] ;
+ wire \cbx_1__1__15_chanx_right_out[7] ;
+ wire \cbx_1__1__15_chanx_right_out[8] ;
+ wire \cbx_1__1__15_chanx_right_out[9] ;
+ wire cbx_1__1__16_bottom_grid_pin_0_;
+ wire cbx_1__1__16_bottom_grid_pin_10_;
+ wire cbx_1__1__16_bottom_grid_pin_11_;
+ wire cbx_1__1__16_bottom_grid_pin_12_;
+ wire cbx_1__1__16_bottom_grid_pin_13_;
+ wire cbx_1__1__16_bottom_grid_pin_14_;
+ wire cbx_1__1__16_bottom_grid_pin_15_;
+ wire cbx_1__1__16_bottom_grid_pin_1_;
+ wire cbx_1__1__16_bottom_grid_pin_2_;
+ wire cbx_1__1__16_bottom_grid_pin_3_;
+ wire cbx_1__1__16_bottom_grid_pin_4_;
+ wire cbx_1__1__16_bottom_grid_pin_5_;
+ wire cbx_1__1__16_bottom_grid_pin_6_;
+ wire cbx_1__1__16_bottom_grid_pin_7_;
+ wire cbx_1__1__16_bottom_grid_pin_8_;
+ wire cbx_1__1__16_bottom_grid_pin_9_;
+ wire cbx_1__1__16_ccff_tail;
+ wire \cbx_1__1__16_chanx_left_out[0] ;
+ wire \cbx_1__1__16_chanx_left_out[10] ;
+ wire \cbx_1__1__16_chanx_left_out[11] ;
+ wire \cbx_1__1__16_chanx_left_out[12] ;
+ wire \cbx_1__1__16_chanx_left_out[13] ;
+ wire \cbx_1__1__16_chanx_left_out[14] ;
+ wire \cbx_1__1__16_chanx_left_out[15] ;
+ wire \cbx_1__1__16_chanx_left_out[16] ;
+ wire \cbx_1__1__16_chanx_left_out[17] ;
+ wire \cbx_1__1__16_chanx_left_out[18] ;
+ wire \cbx_1__1__16_chanx_left_out[19] ;
+ wire \cbx_1__1__16_chanx_left_out[1] ;
+ wire \cbx_1__1__16_chanx_left_out[2] ;
+ wire \cbx_1__1__16_chanx_left_out[3] ;
+ wire \cbx_1__1__16_chanx_left_out[4] ;
+ wire \cbx_1__1__16_chanx_left_out[5] ;
+ wire \cbx_1__1__16_chanx_left_out[6] ;
+ wire \cbx_1__1__16_chanx_left_out[7] ;
+ wire \cbx_1__1__16_chanx_left_out[8] ;
+ wire \cbx_1__1__16_chanx_left_out[9] ;
+ wire \cbx_1__1__16_chanx_right_out[0] ;
+ wire \cbx_1__1__16_chanx_right_out[10] ;
+ wire \cbx_1__1__16_chanx_right_out[11] ;
+ wire \cbx_1__1__16_chanx_right_out[12] ;
+ wire \cbx_1__1__16_chanx_right_out[13] ;
+ wire \cbx_1__1__16_chanx_right_out[14] ;
+ wire \cbx_1__1__16_chanx_right_out[15] ;
+ wire \cbx_1__1__16_chanx_right_out[16] ;
+ wire \cbx_1__1__16_chanx_right_out[17] ;
+ wire \cbx_1__1__16_chanx_right_out[18] ;
+ wire \cbx_1__1__16_chanx_right_out[19] ;
+ wire \cbx_1__1__16_chanx_right_out[1] ;
+ wire \cbx_1__1__16_chanx_right_out[2] ;
+ wire \cbx_1__1__16_chanx_right_out[3] ;
+ wire \cbx_1__1__16_chanx_right_out[4] ;
+ wire \cbx_1__1__16_chanx_right_out[5] ;
+ wire \cbx_1__1__16_chanx_right_out[6] ;
+ wire \cbx_1__1__16_chanx_right_out[7] ;
+ wire \cbx_1__1__16_chanx_right_out[8] ;
+ wire \cbx_1__1__16_chanx_right_out[9] ;
+ wire cbx_1__1__17_bottom_grid_pin_0_;
+ wire cbx_1__1__17_bottom_grid_pin_10_;
+ wire cbx_1__1__17_bottom_grid_pin_11_;
+ wire cbx_1__1__17_bottom_grid_pin_12_;
+ wire cbx_1__1__17_bottom_grid_pin_13_;
+ wire cbx_1__1__17_bottom_grid_pin_14_;
+ wire cbx_1__1__17_bottom_grid_pin_15_;
+ wire cbx_1__1__17_bottom_grid_pin_1_;
+ wire cbx_1__1__17_bottom_grid_pin_2_;
+ wire cbx_1__1__17_bottom_grid_pin_3_;
+ wire cbx_1__1__17_bottom_grid_pin_4_;
+ wire cbx_1__1__17_bottom_grid_pin_5_;
+ wire cbx_1__1__17_bottom_grid_pin_6_;
+ wire cbx_1__1__17_bottom_grid_pin_7_;
+ wire cbx_1__1__17_bottom_grid_pin_8_;
+ wire cbx_1__1__17_bottom_grid_pin_9_;
+ wire cbx_1__1__17_ccff_tail;
+ wire \cbx_1__1__17_chanx_left_out[0] ;
+ wire \cbx_1__1__17_chanx_left_out[10] ;
+ wire \cbx_1__1__17_chanx_left_out[11] ;
+ wire \cbx_1__1__17_chanx_left_out[12] ;
+ wire \cbx_1__1__17_chanx_left_out[13] ;
+ wire \cbx_1__1__17_chanx_left_out[14] ;
+ wire \cbx_1__1__17_chanx_left_out[15] ;
+ wire \cbx_1__1__17_chanx_left_out[16] ;
+ wire \cbx_1__1__17_chanx_left_out[17] ;
+ wire \cbx_1__1__17_chanx_left_out[18] ;
+ wire \cbx_1__1__17_chanx_left_out[19] ;
+ wire \cbx_1__1__17_chanx_left_out[1] ;
+ wire \cbx_1__1__17_chanx_left_out[2] ;
+ wire \cbx_1__1__17_chanx_left_out[3] ;
+ wire \cbx_1__1__17_chanx_left_out[4] ;
+ wire \cbx_1__1__17_chanx_left_out[5] ;
+ wire \cbx_1__1__17_chanx_left_out[6] ;
+ wire \cbx_1__1__17_chanx_left_out[7] ;
+ wire \cbx_1__1__17_chanx_left_out[8] ;
+ wire \cbx_1__1__17_chanx_left_out[9] ;
+ wire \cbx_1__1__17_chanx_right_out[0] ;
+ wire \cbx_1__1__17_chanx_right_out[10] ;
+ wire \cbx_1__1__17_chanx_right_out[11] ;
+ wire \cbx_1__1__17_chanx_right_out[12] ;
+ wire \cbx_1__1__17_chanx_right_out[13] ;
+ wire \cbx_1__1__17_chanx_right_out[14] ;
+ wire \cbx_1__1__17_chanx_right_out[15] ;
+ wire \cbx_1__1__17_chanx_right_out[16] ;
+ wire \cbx_1__1__17_chanx_right_out[17] ;
+ wire \cbx_1__1__17_chanx_right_out[18] ;
+ wire \cbx_1__1__17_chanx_right_out[19] ;
+ wire \cbx_1__1__17_chanx_right_out[1] ;
+ wire \cbx_1__1__17_chanx_right_out[2] ;
+ wire \cbx_1__1__17_chanx_right_out[3] ;
+ wire \cbx_1__1__17_chanx_right_out[4] ;
+ wire \cbx_1__1__17_chanx_right_out[5] ;
+ wire \cbx_1__1__17_chanx_right_out[6] ;
+ wire \cbx_1__1__17_chanx_right_out[7] ;
+ wire \cbx_1__1__17_chanx_right_out[8] ;
+ wire \cbx_1__1__17_chanx_right_out[9] ;
+ wire cbx_1__1__18_bottom_grid_pin_0_;
+ wire cbx_1__1__18_bottom_grid_pin_10_;
+ wire cbx_1__1__18_bottom_grid_pin_11_;
+ wire cbx_1__1__18_bottom_grid_pin_12_;
+ wire cbx_1__1__18_bottom_grid_pin_13_;
+ wire cbx_1__1__18_bottom_grid_pin_14_;
+ wire cbx_1__1__18_bottom_grid_pin_15_;
+ wire cbx_1__1__18_bottom_grid_pin_1_;
+ wire cbx_1__1__18_bottom_grid_pin_2_;
+ wire cbx_1__1__18_bottom_grid_pin_3_;
+ wire cbx_1__1__18_bottom_grid_pin_4_;
+ wire cbx_1__1__18_bottom_grid_pin_5_;
+ wire cbx_1__1__18_bottom_grid_pin_6_;
+ wire cbx_1__1__18_bottom_grid_pin_7_;
+ wire cbx_1__1__18_bottom_grid_pin_8_;
+ wire cbx_1__1__18_bottom_grid_pin_9_;
+ wire cbx_1__1__18_ccff_tail;
+ wire \cbx_1__1__18_chanx_left_out[0] ;
+ wire \cbx_1__1__18_chanx_left_out[10] ;
+ wire \cbx_1__1__18_chanx_left_out[11] ;
+ wire \cbx_1__1__18_chanx_left_out[12] ;
+ wire \cbx_1__1__18_chanx_left_out[13] ;
+ wire \cbx_1__1__18_chanx_left_out[14] ;
+ wire \cbx_1__1__18_chanx_left_out[15] ;
+ wire \cbx_1__1__18_chanx_left_out[16] ;
+ wire \cbx_1__1__18_chanx_left_out[17] ;
+ wire \cbx_1__1__18_chanx_left_out[18] ;
+ wire \cbx_1__1__18_chanx_left_out[19] ;
+ wire \cbx_1__1__18_chanx_left_out[1] ;
+ wire \cbx_1__1__18_chanx_left_out[2] ;
+ wire \cbx_1__1__18_chanx_left_out[3] ;
+ wire \cbx_1__1__18_chanx_left_out[4] ;
+ wire \cbx_1__1__18_chanx_left_out[5] ;
+ wire \cbx_1__1__18_chanx_left_out[6] ;
+ wire \cbx_1__1__18_chanx_left_out[7] ;
+ wire \cbx_1__1__18_chanx_left_out[8] ;
+ wire \cbx_1__1__18_chanx_left_out[9] ;
+ wire \cbx_1__1__18_chanx_right_out[0] ;
+ wire \cbx_1__1__18_chanx_right_out[10] ;
+ wire \cbx_1__1__18_chanx_right_out[11] ;
+ wire \cbx_1__1__18_chanx_right_out[12] ;
+ wire \cbx_1__1__18_chanx_right_out[13] ;
+ wire \cbx_1__1__18_chanx_right_out[14] ;
+ wire \cbx_1__1__18_chanx_right_out[15] ;
+ wire \cbx_1__1__18_chanx_right_out[16] ;
+ wire \cbx_1__1__18_chanx_right_out[17] ;
+ wire \cbx_1__1__18_chanx_right_out[18] ;
+ wire \cbx_1__1__18_chanx_right_out[19] ;
+ wire \cbx_1__1__18_chanx_right_out[1] ;
+ wire \cbx_1__1__18_chanx_right_out[2] ;
+ wire \cbx_1__1__18_chanx_right_out[3] ;
+ wire \cbx_1__1__18_chanx_right_out[4] ;
+ wire \cbx_1__1__18_chanx_right_out[5] ;
+ wire \cbx_1__1__18_chanx_right_out[6] ;
+ wire \cbx_1__1__18_chanx_right_out[7] ;
+ wire \cbx_1__1__18_chanx_right_out[8] ;
+ wire \cbx_1__1__18_chanx_right_out[9] ;
+ wire cbx_1__1__19_bottom_grid_pin_0_;
+ wire cbx_1__1__19_bottom_grid_pin_10_;
+ wire cbx_1__1__19_bottom_grid_pin_11_;
+ wire cbx_1__1__19_bottom_grid_pin_12_;
+ wire cbx_1__1__19_bottom_grid_pin_13_;
+ wire cbx_1__1__19_bottom_grid_pin_14_;
+ wire cbx_1__1__19_bottom_grid_pin_15_;
+ wire cbx_1__1__19_bottom_grid_pin_1_;
+ wire cbx_1__1__19_bottom_grid_pin_2_;
+ wire cbx_1__1__19_bottom_grid_pin_3_;
+ wire cbx_1__1__19_bottom_grid_pin_4_;
+ wire cbx_1__1__19_bottom_grid_pin_5_;
+ wire cbx_1__1__19_bottom_grid_pin_6_;
+ wire cbx_1__1__19_bottom_grid_pin_7_;
+ wire cbx_1__1__19_bottom_grid_pin_8_;
+ wire cbx_1__1__19_bottom_grid_pin_9_;
+ wire cbx_1__1__19_ccff_tail;
+ wire \cbx_1__1__19_chanx_left_out[0] ;
+ wire \cbx_1__1__19_chanx_left_out[10] ;
+ wire \cbx_1__1__19_chanx_left_out[11] ;
+ wire \cbx_1__1__19_chanx_left_out[12] ;
+ wire \cbx_1__1__19_chanx_left_out[13] ;
+ wire \cbx_1__1__19_chanx_left_out[14] ;
+ wire \cbx_1__1__19_chanx_left_out[15] ;
+ wire \cbx_1__1__19_chanx_left_out[16] ;
+ wire \cbx_1__1__19_chanx_left_out[17] ;
+ wire \cbx_1__1__19_chanx_left_out[18] ;
+ wire \cbx_1__1__19_chanx_left_out[19] ;
+ wire \cbx_1__1__19_chanx_left_out[1] ;
+ wire \cbx_1__1__19_chanx_left_out[2] ;
+ wire \cbx_1__1__19_chanx_left_out[3] ;
+ wire \cbx_1__1__19_chanx_left_out[4] ;
+ wire \cbx_1__1__19_chanx_left_out[5] ;
+ wire \cbx_1__1__19_chanx_left_out[6] ;
+ wire \cbx_1__1__19_chanx_left_out[7] ;
+ wire \cbx_1__1__19_chanx_left_out[8] ;
+ wire \cbx_1__1__19_chanx_left_out[9] ;
+ wire \cbx_1__1__19_chanx_right_out[0] ;
+ wire \cbx_1__1__19_chanx_right_out[10] ;
+ wire \cbx_1__1__19_chanx_right_out[11] ;
+ wire \cbx_1__1__19_chanx_right_out[12] ;
+ wire \cbx_1__1__19_chanx_right_out[13] ;
+ wire \cbx_1__1__19_chanx_right_out[14] ;
+ wire \cbx_1__1__19_chanx_right_out[15] ;
+ wire \cbx_1__1__19_chanx_right_out[16] ;
+ wire \cbx_1__1__19_chanx_right_out[17] ;
+ wire \cbx_1__1__19_chanx_right_out[18] ;
+ wire \cbx_1__1__19_chanx_right_out[19] ;
+ wire \cbx_1__1__19_chanx_right_out[1] ;
+ wire \cbx_1__1__19_chanx_right_out[2] ;
+ wire \cbx_1__1__19_chanx_right_out[3] ;
+ wire \cbx_1__1__19_chanx_right_out[4] ;
+ wire \cbx_1__1__19_chanx_right_out[5] ;
+ wire \cbx_1__1__19_chanx_right_out[6] ;
+ wire \cbx_1__1__19_chanx_right_out[7] ;
+ wire \cbx_1__1__19_chanx_right_out[8] ;
+ wire \cbx_1__1__19_chanx_right_out[9] ;
+ wire cbx_1__1__1_bottom_grid_pin_0_;
+ wire cbx_1__1__1_bottom_grid_pin_10_;
+ wire cbx_1__1__1_bottom_grid_pin_11_;
+ wire cbx_1__1__1_bottom_grid_pin_12_;
+ wire cbx_1__1__1_bottom_grid_pin_13_;
+ wire cbx_1__1__1_bottom_grid_pin_14_;
+ wire cbx_1__1__1_bottom_grid_pin_15_;
+ wire cbx_1__1__1_bottom_grid_pin_1_;
+ wire cbx_1__1__1_bottom_grid_pin_2_;
+ wire cbx_1__1__1_bottom_grid_pin_3_;
+ wire cbx_1__1__1_bottom_grid_pin_4_;
+ wire cbx_1__1__1_bottom_grid_pin_5_;
+ wire cbx_1__1__1_bottom_grid_pin_6_;
+ wire cbx_1__1__1_bottom_grid_pin_7_;
+ wire cbx_1__1__1_bottom_grid_pin_8_;
+ wire cbx_1__1__1_bottom_grid_pin_9_;
+ wire cbx_1__1__1_ccff_tail;
+ wire \cbx_1__1__1_chanx_left_out[0] ;
+ wire \cbx_1__1__1_chanx_left_out[10] ;
+ wire \cbx_1__1__1_chanx_left_out[11] ;
+ wire \cbx_1__1__1_chanx_left_out[12] ;
+ wire \cbx_1__1__1_chanx_left_out[13] ;
+ wire \cbx_1__1__1_chanx_left_out[14] ;
+ wire \cbx_1__1__1_chanx_left_out[15] ;
+ wire \cbx_1__1__1_chanx_left_out[16] ;
+ wire \cbx_1__1__1_chanx_left_out[17] ;
+ wire \cbx_1__1__1_chanx_left_out[18] ;
+ wire \cbx_1__1__1_chanx_left_out[19] ;
+ wire \cbx_1__1__1_chanx_left_out[1] ;
+ wire \cbx_1__1__1_chanx_left_out[2] ;
+ wire \cbx_1__1__1_chanx_left_out[3] ;
+ wire \cbx_1__1__1_chanx_left_out[4] ;
+ wire \cbx_1__1__1_chanx_left_out[5] ;
+ wire \cbx_1__1__1_chanx_left_out[6] ;
+ wire \cbx_1__1__1_chanx_left_out[7] ;
+ wire \cbx_1__1__1_chanx_left_out[8] ;
+ wire \cbx_1__1__1_chanx_left_out[9] ;
+ wire \cbx_1__1__1_chanx_right_out[0] ;
+ wire \cbx_1__1__1_chanx_right_out[10] ;
+ wire \cbx_1__1__1_chanx_right_out[11] ;
+ wire \cbx_1__1__1_chanx_right_out[12] ;
+ wire \cbx_1__1__1_chanx_right_out[13] ;
+ wire \cbx_1__1__1_chanx_right_out[14] ;
+ wire \cbx_1__1__1_chanx_right_out[15] ;
+ wire \cbx_1__1__1_chanx_right_out[16] ;
+ wire \cbx_1__1__1_chanx_right_out[17] ;
+ wire \cbx_1__1__1_chanx_right_out[18] ;
+ wire \cbx_1__1__1_chanx_right_out[19] ;
+ wire \cbx_1__1__1_chanx_right_out[1] ;
+ wire \cbx_1__1__1_chanx_right_out[2] ;
+ wire \cbx_1__1__1_chanx_right_out[3] ;
+ wire \cbx_1__1__1_chanx_right_out[4] ;
+ wire \cbx_1__1__1_chanx_right_out[5] ;
+ wire \cbx_1__1__1_chanx_right_out[6] ;
+ wire \cbx_1__1__1_chanx_right_out[7] ;
+ wire \cbx_1__1__1_chanx_right_out[8] ;
+ wire \cbx_1__1__1_chanx_right_out[9] ;
+ wire cbx_1__1__20_bottom_grid_pin_0_;
+ wire cbx_1__1__20_bottom_grid_pin_10_;
+ wire cbx_1__1__20_bottom_grid_pin_11_;
+ wire cbx_1__1__20_bottom_grid_pin_12_;
+ wire cbx_1__1__20_bottom_grid_pin_13_;
+ wire cbx_1__1__20_bottom_grid_pin_14_;
+ wire cbx_1__1__20_bottom_grid_pin_15_;
+ wire cbx_1__1__20_bottom_grid_pin_1_;
+ wire cbx_1__1__20_bottom_grid_pin_2_;
+ wire cbx_1__1__20_bottom_grid_pin_3_;
+ wire cbx_1__1__20_bottom_grid_pin_4_;
+ wire cbx_1__1__20_bottom_grid_pin_5_;
+ wire cbx_1__1__20_bottom_grid_pin_6_;
+ wire cbx_1__1__20_bottom_grid_pin_7_;
+ wire cbx_1__1__20_bottom_grid_pin_8_;
+ wire cbx_1__1__20_bottom_grid_pin_9_;
+ wire cbx_1__1__20_ccff_tail;
+ wire \cbx_1__1__20_chanx_left_out[0] ;
+ wire \cbx_1__1__20_chanx_left_out[10] ;
+ wire \cbx_1__1__20_chanx_left_out[11] ;
+ wire \cbx_1__1__20_chanx_left_out[12] ;
+ wire \cbx_1__1__20_chanx_left_out[13] ;
+ wire \cbx_1__1__20_chanx_left_out[14] ;
+ wire \cbx_1__1__20_chanx_left_out[15] ;
+ wire \cbx_1__1__20_chanx_left_out[16] ;
+ wire \cbx_1__1__20_chanx_left_out[17] ;
+ wire \cbx_1__1__20_chanx_left_out[18] ;
+ wire \cbx_1__1__20_chanx_left_out[19] ;
+ wire \cbx_1__1__20_chanx_left_out[1] ;
+ wire \cbx_1__1__20_chanx_left_out[2] ;
+ wire \cbx_1__1__20_chanx_left_out[3] ;
+ wire \cbx_1__1__20_chanx_left_out[4] ;
+ wire \cbx_1__1__20_chanx_left_out[5] ;
+ wire \cbx_1__1__20_chanx_left_out[6] ;
+ wire \cbx_1__1__20_chanx_left_out[7] ;
+ wire \cbx_1__1__20_chanx_left_out[8] ;
+ wire \cbx_1__1__20_chanx_left_out[9] ;
+ wire \cbx_1__1__20_chanx_right_out[0] ;
+ wire \cbx_1__1__20_chanx_right_out[10] ;
+ wire \cbx_1__1__20_chanx_right_out[11] ;
+ wire \cbx_1__1__20_chanx_right_out[12] ;
+ wire \cbx_1__1__20_chanx_right_out[13] ;
+ wire \cbx_1__1__20_chanx_right_out[14] ;
+ wire \cbx_1__1__20_chanx_right_out[15] ;
+ wire \cbx_1__1__20_chanx_right_out[16] ;
+ wire \cbx_1__1__20_chanx_right_out[17] ;
+ wire \cbx_1__1__20_chanx_right_out[18] ;
+ wire \cbx_1__1__20_chanx_right_out[19] ;
+ wire \cbx_1__1__20_chanx_right_out[1] ;
+ wire \cbx_1__1__20_chanx_right_out[2] ;
+ wire \cbx_1__1__20_chanx_right_out[3] ;
+ wire \cbx_1__1__20_chanx_right_out[4] ;
+ wire \cbx_1__1__20_chanx_right_out[5] ;
+ wire \cbx_1__1__20_chanx_right_out[6] ;
+ wire \cbx_1__1__20_chanx_right_out[7] ;
+ wire \cbx_1__1__20_chanx_right_out[8] ;
+ wire \cbx_1__1__20_chanx_right_out[9] ;
+ wire cbx_1__1__21_bottom_grid_pin_0_;
+ wire cbx_1__1__21_bottom_grid_pin_10_;
+ wire cbx_1__1__21_bottom_grid_pin_11_;
+ wire cbx_1__1__21_bottom_grid_pin_12_;
+ wire cbx_1__1__21_bottom_grid_pin_13_;
+ wire cbx_1__1__21_bottom_grid_pin_14_;
+ wire cbx_1__1__21_bottom_grid_pin_15_;
+ wire cbx_1__1__21_bottom_grid_pin_1_;
+ wire cbx_1__1__21_bottom_grid_pin_2_;
+ wire cbx_1__1__21_bottom_grid_pin_3_;
+ wire cbx_1__1__21_bottom_grid_pin_4_;
+ wire cbx_1__1__21_bottom_grid_pin_5_;
+ wire cbx_1__1__21_bottom_grid_pin_6_;
+ wire cbx_1__1__21_bottom_grid_pin_7_;
+ wire cbx_1__1__21_bottom_grid_pin_8_;
+ wire cbx_1__1__21_bottom_grid_pin_9_;
+ wire cbx_1__1__21_ccff_tail;
+ wire \cbx_1__1__21_chanx_left_out[0] ;
+ wire \cbx_1__1__21_chanx_left_out[10] ;
+ wire \cbx_1__1__21_chanx_left_out[11] ;
+ wire \cbx_1__1__21_chanx_left_out[12] ;
+ wire \cbx_1__1__21_chanx_left_out[13] ;
+ wire \cbx_1__1__21_chanx_left_out[14] ;
+ wire \cbx_1__1__21_chanx_left_out[15] ;
+ wire \cbx_1__1__21_chanx_left_out[16] ;
+ wire \cbx_1__1__21_chanx_left_out[17] ;
+ wire \cbx_1__1__21_chanx_left_out[18] ;
+ wire \cbx_1__1__21_chanx_left_out[19] ;
+ wire \cbx_1__1__21_chanx_left_out[1] ;
+ wire \cbx_1__1__21_chanx_left_out[2] ;
+ wire \cbx_1__1__21_chanx_left_out[3] ;
+ wire \cbx_1__1__21_chanx_left_out[4] ;
+ wire \cbx_1__1__21_chanx_left_out[5] ;
+ wire \cbx_1__1__21_chanx_left_out[6] ;
+ wire \cbx_1__1__21_chanx_left_out[7] ;
+ wire \cbx_1__1__21_chanx_left_out[8] ;
+ wire \cbx_1__1__21_chanx_left_out[9] ;
+ wire \cbx_1__1__21_chanx_right_out[0] ;
+ wire \cbx_1__1__21_chanx_right_out[10] ;
+ wire \cbx_1__1__21_chanx_right_out[11] ;
+ wire \cbx_1__1__21_chanx_right_out[12] ;
+ wire \cbx_1__1__21_chanx_right_out[13] ;
+ wire \cbx_1__1__21_chanx_right_out[14] ;
+ wire \cbx_1__1__21_chanx_right_out[15] ;
+ wire \cbx_1__1__21_chanx_right_out[16] ;
+ wire \cbx_1__1__21_chanx_right_out[17] ;
+ wire \cbx_1__1__21_chanx_right_out[18] ;
+ wire \cbx_1__1__21_chanx_right_out[19] ;
+ wire \cbx_1__1__21_chanx_right_out[1] ;
+ wire \cbx_1__1__21_chanx_right_out[2] ;
+ wire \cbx_1__1__21_chanx_right_out[3] ;
+ wire \cbx_1__1__21_chanx_right_out[4] ;
+ wire \cbx_1__1__21_chanx_right_out[5] ;
+ wire \cbx_1__1__21_chanx_right_out[6] ;
+ wire \cbx_1__1__21_chanx_right_out[7] ;
+ wire \cbx_1__1__21_chanx_right_out[8] ;
+ wire \cbx_1__1__21_chanx_right_out[9] ;
+ wire cbx_1__1__22_bottom_grid_pin_0_;
+ wire cbx_1__1__22_bottom_grid_pin_10_;
+ wire cbx_1__1__22_bottom_grid_pin_11_;
+ wire cbx_1__1__22_bottom_grid_pin_12_;
+ wire cbx_1__1__22_bottom_grid_pin_13_;
+ wire cbx_1__1__22_bottom_grid_pin_14_;
+ wire cbx_1__1__22_bottom_grid_pin_15_;
+ wire cbx_1__1__22_bottom_grid_pin_1_;
+ wire cbx_1__1__22_bottom_grid_pin_2_;
+ wire cbx_1__1__22_bottom_grid_pin_3_;
+ wire cbx_1__1__22_bottom_grid_pin_4_;
+ wire cbx_1__1__22_bottom_grid_pin_5_;
+ wire cbx_1__1__22_bottom_grid_pin_6_;
+ wire cbx_1__1__22_bottom_grid_pin_7_;
+ wire cbx_1__1__22_bottom_grid_pin_8_;
+ wire cbx_1__1__22_bottom_grid_pin_9_;
+ wire cbx_1__1__22_ccff_tail;
+ wire \cbx_1__1__22_chanx_left_out[0] ;
+ wire \cbx_1__1__22_chanx_left_out[10] ;
+ wire \cbx_1__1__22_chanx_left_out[11] ;
+ wire \cbx_1__1__22_chanx_left_out[12] ;
+ wire \cbx_1__1__22_chanx_left_out[13] ;
+ wire \cbx_1__1__22_chanx_left_out[14] ;
+ wire \cbx_1__1__22_chanx_left_out[15] ;
+ wire \cbx_1__1__22_chanx_left_out[16] ;
+ wire \cbx_1__1__22_chanx_left_out[17] ;
+ wire \cbx_1__1__22_chanx_left_out[18] ;
+ wire \cbx_1__1__22_chanx_left_out[19] ;
+ wire \cbx_1__1__22_chanx_left_out[1] ;
+ wire \cbx_1__1__22_chanx_left_out[2] ;
+ wire \cbx_1__1__22_chanx_left_out[3] ;
+ wire \cbx_1__1__22_chanx_left_out[4] ;
+ wire \cbx_1__1__22_chanx_left_out[5] ;
+ wire \cbx_1__1__22_chanx_left_out[6] ;
+ wire \cbx_1__1__22_chanx_left_out[7] ;
+ wire \cbx_1__1__22_chanx_left_out[8] ;
+ wire \cbx_1__1__22_chanx_left_out[9] ;
+ wire \cbx_1__1__22_chanx_right_out[0] ;
+ wire \cbx_1__1__22_chanx_right_out[10] ;
+ wire \cbx_1__1__22_chanx_right_out[11] ;
+ wire \cbx_1__1__22_chanx_right_out[12] ;
+ wire \cbx_1__1__22_chanx_right_out[13] ;
+ wire \cbx_1__1__22_chanx_right_out[14] ;
+ wire \cbx_1__1__22_chanx_right_out[15] ;
+ wire \cbx_1__1__22_chanx_right_out[16] ;
+ wire \cbx_1__1__22_chanx_right_out[17] ;
+ wire \cbx_1__1__22_chanx_right_out[18] ;
+ wire \cbx_1__1__22_chanx_right_out[19] ;
+ wire \cbx_1__1__22_chanx_right_out[1] ;
+ wire \cbx_1__1__22_chanx_right_out[2] ;
+ wire \cbx_1__1__22_chanx_right_out[3] ;
+ wire \cbx_1__1__22_chanx_right_out[4] ;
+ wire \cbx_1__1__22_chanx_right_out[5] ;
+ wire \cbx_1__1__22_chanx_right_out[6] ;
+ wire \cbx_1__1__22_chanx_right_out[7] ;
+ wire \cbx_1__1__22_chanx_right_out[8] ;
+ wire \cbx_1__1__22_chanx_right_out[9] ;
+ wire cbx_1__1__23_bottom_grid_pin_0_;
+ wire cbx_1__1__23_bottom_grid_pin_10_;
+ wire cbx_1__1__23_bottom_grid_pin_11_;
+ wire cbx_1__1__23_bottom_grid_pin_12_;
+ wire cbx_1__1__23_bottom_grid_pin_13_;
+ wire cbx_1__1__23_bottom_grid_pin_14_;
+ wire cbx_1__1__23_bottom_grid_pin_15_;
+ wire cbx_1__1__23_bottom_grid_pin_1_;
+ wire cbx_1__1__23_bottom_grid_pin_2_;
+ wire cbx_1__1__23_bottom_grid_pin_3_;
+ wire cbx_1__1__23_bottom_grid_pin_4_;
+ wire cbx_1__1__23_bottom_grid_pin_5_;
+ wire cbx_1__1__23_bottom_grid_pin_6_;
+ wire cbx_1__1__23_bottom_grid_pin_7_;
+ wire cbx_1__1__23_bottom_grid_pin_8_;
+ wire cbx_1__1__23_bottom_grid_pin_9_;
+ wire cbx_1__1__23_ccff_tail;
+ wire \cbx_1__1__23_chanx_left_out[0] ;
+ wire \cbx_1__1__23_chanx_left_out[10] ;
+ wire \cbx_1__1__23_chanx_left_out[11] ;
+ wire \cbx_1__1__23_chanx_left_out[12] ;
+ wire \cbx_1__1__23_chanx_left_out[13] ;
+ wire \cbx_1__1__23_chanx_left_out[14] ;
+ wire \cbx_1__1__23_chanx_left_out[15] ;
+ wire \cbx_1__1__23_chanx_left_out[16] ;
+ wire \cbx_1__1__23_chanx_left_out[17] ;
+ wire \cbx_1__1__23_chanx_left_out[18] ;
+ wire \cbx_1__1__23_chanx_left_out[19] ;
+ wire \cbx_1__1__23_chanx_left_out[1] ;
+ wire \cbx_1__1__23_chanx_left_out[2] ;
+ wire \cbx_1__1__23_chanx_left_out[3] ;
+ wire \cbx_1__1__23_chanx_left_out[4] ;
+ wire \cbx_1__1__23_chanx_left_out[5] ;
+ wire \cbx_1__1__23_chanx_left_out[6] ;
+ wire \cbx_1__1__23_chanx_left_out[7] ;
+ wire \cbx_1__1__23_chanx_left_out[8] ;
+ wire \cbx_1__1__23_chanx_left_out[9] ;
+ wire \cbx_1__1__23_chanx_right_out[0] ;
+ wire \cbx_1__1__23_chanx_right_out[10] ;
+ wire \cbx_1__1__23_chanx_right_out[11] ;
+ wire \cbx_1__1__23_chanx_right_out[12] ;
+ wire \cbx_1__1__23_chanx_right_out[13] ;
+ wire \cbx_1__1__23_chanx_right_out[14] ;
+ wire \cbx_1__1__23_chanx_right_out[15] ;
+ wire \cbx_1__1__23_chanx_right_out[16] ;
+ wire \cbx_1__1__23_chanx_right_out[17] ;
+ wire \cbx_1__1__23_chanx_right_out[18] ;
+ wire \cbx_1__1__23_chanx_right_out[19] ;
+ wire \cbx_1__1__23_chanx_right_out[1] ;
+ wire \cbx_1__1__23_chanx_right_out[2] ;
+ wire \cbx_1__1__23_chanx_right_out[3] ;
+ wire \cbx_1__1__23_chanx_right_out[4] ;
+ wire \cbx_1__1__23_chanx_right_out[5] ;
+ wire \cbx_1__1__23_chanx_right_out[6] ;
+ wire \cbx_1__1__23_chanx_right_out[7] ;
+ wire \cbx_1__1__23_chanx_right_out[8] ;
+ wire \cbx_1__1__23_chanx_right_out[9] ;
+ wire cbx_1__1__24_bottom_grid_pin_0_;
+ wire cbx_1__1__24_bottom_grid_pin_10_;
+ wire cbx_1__1__24_bottom_grid_pin_11_;
+ wire cbx_1__1__24_bottom_grid_pin_12_;
+ wire cbx_1__1__24_bottom_grid_pin_13_;
+ wire cbx_1__1__24_bottom_grid_pin_14_;
+ wire cbx_1__1__24_bottom_grid_pin_15_;
+ wire cbx_1__1__24_bottom_grid_pin_1_;
+ wire cbx_1__1__24_bottom_grid_pin_2_;
+ wire cbx_1__1__24_bottom_grid_pin_3_;
+ wire cbx_1__1__24_bottom_grid_pin_4_;
+ wire cbx_1__1__24_bottom_grid_pin_5_;
+ wire cbx_1__1__24_bottom_grid_pin_6_;
+ wire cbx_1__1__24_bottom_grid_pin_7_;
+ wire cbx_1__1__24_bottom_grid_pin_8_;
+ wire cbx_1__1__24_bottom_grid_pin_9_;
+ wire cbx_1__1__24_ccff_tail;
+ wire \cbx_1__1__24_chanx_left_out[0] ;
+ wire \cbx_1__1__24_chanx_left_out[10] ;
+ wire \cbx_1__1__24_chanx_left_out[11] ;
+ wire \cbx_1__1__24_chanx_left_out[12] ;
+ wire \cbx_1__1__24_chanx_left_out[13] ;
+ wire \cbx_1__1__24_chanx_left_out[14] ;
+ wire \cbx_1__1__24_chanx_left_out[15] ;
+ wire \cbx_1__1__24_chanx_left_out[16] ;
+ wire \cbx_1__1__24_chanx_left_out[17] ;
+ wire \cbx_1__1__24_chanx_left_out[18] ;
+ wire \cbx_1__1__24_chanx_left_out[19] ;
+ wire \cbx_1__1__24_chanx_left_out[1] ;
+ wire \cbx_1__1__24_chanx_left_out[2] ;
+ wire \cbx_1__1__24_chanx_left_out[3] ;
+ wire \cbx_1__1__24_chanx_left_out[4] ;
+ wire \cbx_1__1__24_chanx_left_out[5] ;
+ wire \cbx_1__1__24_chanx_left_out[6] ;
+ wire \cbx_1__1__24_chanx_left_out[7] ;
+ wire \cbx_1__1__24_chanx_left_out[8] ;
+ wire \cbx_1__1__24_chanx_left_out[9] ;
+ wire \cbx_1__1__24_chanx_right_out[0] ;
+ wire \cbx_1__1__24_chanx_right_out[10] ;
+ wire \cbx_1__1__24_chanx_right_out[11] ;
+ wire \cbx_1__1__24_chanx_right_out[12] ;
+ wire \cbx_1__1__24_chanx_right_out[13] ;
+ wire \cbx_1__1__24_chanx_right_out[14] ;
+ wire \cbx_1__1__24_chanx_right_out[15] ;
+ wire \cbx_1__1__24_chanx_right_out[16] ;
+ wire \cbx_1__1__24_chanx_right_out[17] ;
+ wire \cbx_1__1__24_chanx_right_out[18] ;
+ wire \cbx_1__1__24_chanx_right_out[19] ;
+ wire \cbx_1__1__24_chanx_right_out[1] ;
+ wire \cbx_1__1__24_chanx_right_out[2] ;
+ wire \cbx_1__1__24_chanx_right_out[3] ;
+ wire \cbx_1__1__24_chanx_right_out[4] ;
+ wire \cbx_1__1__24_chanx_right_out[5] ;
+ wire \cbx_1__1__24_chanx_right_out[6] ;
+ wire \cbx_1__1__24_chanx_right_out[7] ;
+ wire \cbx_1__1__24_chanx_right_out[8] ;
+ wire \cbx_1__1__24_chanx_right_out[9] ;
+ wire cbx_1__1__25_bottom_grid_pin_0_;
+ wire cbx_1__1__25_bottom_grid_pin_10_;
+ wire cbx_1__1__25_bottom_grid_pin_11_;
+ wire cbx_1__1__25_bottom_grid_pin_12_;
+ wire cbx_1__1__25_bottom_grid_pin_13_;
+ wire cbx_1__1__25_bottom_grid_pin_14_;
+ wire cbx_1__1__25_bottom_grid_pin_15_;
+ wire cbx_1__1__25_bottom_grid_pin_1_;
+ wire cbx_1__1__25_bottom_grid_pin_2_;
+ wire cbx_1__1__25_bottom_grid_pin_3_;
+ wire cbx_1__1__25_bottom_grid_pin_4_;
+ wire cbx_1__1__25_bottom_grid_pin_5_;
+ wire cbx_1__1__25_bottom_grid_pin_6_;
+ wire cbx_1__1__25_bottom_grid_pin_7_;
+ wire cbx_1__1__25_bottom_grid_pin_8_;
+ wire cbx_1__1__25_bottom_grid_pin_9_;
+ wire cbx_1__1__25_ccff_tail;
+ wire \cbx_1__1__25_chanx_left_out[0] ;
+ wire \cbx_1__1__25_chanx_left_out[10] ;
+ wire \cbx_1__1__25_chanx_left_out[11] ;
+ wire \cbx_1__1__25_chanx_left_out[12] ;
+ wire \cbx_1__1__25_chanx_left_out[13] ;
+ wire \cbx_1__1__25_chanx_left_out[14] ;
+ wire \cbx_1__1__25_chanx_left_out[15] ;
+ wire \cbx_1__1__25_chanx_left_out[16] ;
+ wire \cbx_1__1__25_chanx_left_out[17] ;
+ wire \cbx_1__1__25_chanx_left_out[18] ;
+ wire \cbx_1__1__25_chanx_left_out[19] ;
+ wire \cbx_1__1__25_chanx_left_out[1] ;
+ wire \cbx_1__1__25_chanx_left_out[2] ;
+ wire \cbx_1__1__25_chanx_left_out[3] ;
+ wire \cbx_1__1__25_chanx_left_out[4] ;
+ wire \cbx_1__1__25_chanx_left_out[5] ;
+ wire \cbx_1__1__25_chanx_left_out[6] ;
+ wire \cbx_1__1__25_chanx_left_out[7] ;
+ wire \cbx_1__1__25_chanx_left_out[8] ;
+ wire \cbx_1__1__25_chanx_left_out[9] ;
+ wire \cbx_1__1__25_chanx_right_out[0] ;
+ wire \cbx_1__1__25_chanx_right_out[10] ;
+ wire \cbx_1__1__25_chanx_right_out[11] ;
+ wire \cbx_1__1__25_chanx_right_out[12] ;
+ wire \cbx_1__1__25_chanx_right_out[13] ;
+ wire \cbx_1__1__25_chanx_right_out[14] ;
+ wire \cbx_1__1__25_chanx_right_out[15] ;
+ wire \cbx_1__1__25_chanx_right_out[16] ;
+ wire \cbx_1__1__25_chanx_right_out[17] ;
+ wire \cbx_1__1__25_chanx_right_out[18] ;
+ wire \cbx_1__1__25_chanx_right_out[19] ;
+ wire \cbx_1__1__25_chanx_right_out[1] ;
+ wire \cbx_1__1__25_chanx_right_out[2] ;
+ wire \cbx_1__1__25_chanx_right_out[3] ;
+ wire \cbx_1__1__25_chanx_right_out[4] ;
+ wire \cbx_1__1__25_chanx_right_out[5] ;
+ wire \cbx_1__1__25_chanx_right_out[6] ;
+ wire \cbx_1__1__25_chanx_right_out[7] ;
+ wire \cbx_1__1__25_chanx_right_out[8] ;
+ wire \cbx_1__1__25_chanx_right_out[9] ;
+ wire cbx_1__1__26_bottom_grid_pin_0_;
+ wire cbx_1__1__26_bottom_grid_pin_10_;
+ wire cbx_1__1__26_bottom_grid_pin_11_;
+ wire cbx_1__1__26_bottom_grid_pin_12_;
+ wire cbx_1__1__26_bottom_grid_pin_13_;
+ wire cbx_1__1__26_bottom_grid_pin_14_;
+ wire cbx_1__1__26_bottom_grid_pin_15_;
+ wire cbx_1__1__26_bottom_grid_pin_1_;
+ wire cbx_1__1__26_bottom_grid_pin_2_;
+ wire cbx_1__1__26_bottom_grid_pin_3_;
+ wire cbx_1__1__26_bottom_grid_pin_4_;
+ wire cbx_1__1__26_bottom_grid_pin_5_;
+ wire cbx_1__1__26_bottom_grid_pin_6_;
+ wire cbx_1__1__26_bottom_grid_pin_7_;
+ wire cbx_1__1__26_bottom_grid_pin_8_;
+ wire cbx_1__1__26_bottom_grid_pin_9_;
+ wire cbx_1__1__26_ccff_tail;
+ wire \cbx_1__1__26_chanx_left_out[0] ;
+ wire \cbx_1__1__26_chanx_left_out[10] ;
+ wire \cbx_1__1__26_chanx_left_out[11] ;
+ wire \cbx_1__1__26_chanx_left_out[12] ;
+ wire \cbx_1__1__26_chanx_left_out[13] ;
+ wire \cbx_1__1__26_chanx_left_out[14] ;
+ wire \cbx_1__1__26_chanx_left_out[15] ;
+ wire \cbx_1__1__26_chanx_left_out[16] ;
+ wire \cbx_1__1__26_chanx_left_out[17] ;
+ wire \cbx_1__1__26_chanx_left_out[18] ;
+ wire \cbx_1__1__26_chanx_left_out[19] ;
+ wire \cbx_1__1__26_chanx_left_out[1] ;
+ wire \cbx_1__1__26_chanx_left_out[2] ;
+ wire \cbx_1__1__26_chanx_left_out[3] ;
+ wire \cbx_1__1__26_chanx_left_out[4] ;
+ wire \cbx_1__1__26_chanx_left_out[5] ;
+ wire \cbx_1__1__26_chanx_left_out[6] ;
+ wire \cbx_1__1__26_chanx_left_out[7] ;
+ wire \cbx_1__1__26_chanx_left_out[8] ;
+ wire \cbx_1__1__26_chanx_left_out[9] ;
+ wire \cbx_1__1__26_chanx_right_out[0] ;
+ wire \cbx_1__1__26_chanx_right_out[10] ;
+ wire \cbx_1__1__26_chanx_right_out[11] ;
+ wire \cbx_1__1__26_chanx_right_out[12] ;
+ wire \cbx_1__1__26_chanx_right_out[13] ;
+ wire \cbx_1__1__26_chanx_right_out[14] ;
+ wire \cbx_1__1__26_chanx_right_out[15] ;
+ wire \cbx_1__1__26_chanx_right_out[16] ;
+ wire \cbx_1__1__26_chanx_right_out[17] ;
+ wire \cbx_1__1__26_chanx_right_out[18] ;
+ wire \cbx_1__1__26_chanx_right_out[19] ;
+ wire \cbx_1__1__26_chanx_right_out[1] ;
+ wire \cbx_1__1__26_chanx_right_out[2] ;
+ wire \cbx_1__1__26_chanx_right_out[3] ;
+ wire \cbx_1__1__26_chanx_right_out[4] ;
+ wire \cbx_1__1__26_chanx_right_out[5] ;
+ wire \cbx_1__1__26_chanx_right_out[6] ;
+ wire \cbx_1__1__26_chanx_right_out[7] ;
+ wire \cbx_1__1__26_chanx_right_out[8] ;
+ wire \cbx_1__1__26_chanx_right_out[9] ;
+ wire cbx_1__1__27_bottom_grid_pin_0_;
+ wire cbx_1__1__27_bottom_grid_pin_10_;
+ wire cbx_1__1__27_bottom_grid_pin_11_;
+ wire cbx_1__1__27_bottom_grid_pin_12_;
+ wire cbx_1__1__27_bottom_grid_pin_13_;
+ wire cbx_1__1__27_bottom_grid_pin_14_;
+ wire cbx_1__1__27_bottom_grid_pin_15_;
+ wire cbx_1__1__27_bottom_grid_pin_1_;
+ wire cbx_1__1__27_bottom_grid_pin_2_;
+ wire cbx_1__1__27_bottom_grid_pin_3_;
+ wire cbx_1__1__27_bottom_grid_pin_4_;
+ wire cbx_1__1__27_bottom_grid_pin_5_;
+ wire cbx_1__1__27_bottom_grid_pin_6_;
+ wire cbx_1__1__27_bottom_grid_pin_7_;
+ wire cbx_1__1__27_bottom_grid_pin_8_;
+ wire cbx_1__1__27_bottom_grid_pin_9_;
+ wire cbx_1__1__27_ccff_tail;
+ wire \cbx_1__1__27_chanx_left_out[0] ;
+ wire \cbx_1__1__27_chanx_left_out[10] ;
+ wire \cbx_1__1__27_chanx_left_out[11] ;
+ wire \cbx_1__1__27_chanx_left_out[12] ;
+ wire \cbx_1__1__27_chanx_left_out[13] ;
+ wire \cbx_1__1__27_chanx_left_out[14] ;
+ wire \cbx_1__1__27_chanx_left_out[15] ;
+ wire \cbx_1__1__27_chanx_left_out[16] ;
+ wire \cbx_1__1__27_chanx_left_out[17] ;
+ wire \cbx_1__1__27_chanx_left_out[18] ;
+ wire \cbx_1__1__27_chanx_left_out[19] ;
+ wire \cbx_1__1__27_chanx_left_out[1] ;
+ wire \cbx_1__1__27_chanx_left_out[2] ;
+ wire \cbx_1__1__27_chanx_left_out[3] ;
+ wire \cbx_1__1__27_chanx_left_out[4] ;
+ wire \cbx_1__1__27_chanx_left_out[5] ;
+ wire \cbx_1__1__27_chanx_left_out[6] ;
+ wire \cbx_1__1__27_chanx_left_out[7] ;
+ wire \cbx_1__1__27_chanx_left_out[8] ;
+ wire \cbx_1__1__27_chanx_left_out[9] ;
+ wire \cbx_1__1__27_chanx_right_out[0] ;
+ wire \cbx_1__1__27_chanx_right_out[10] ;
+ wire \cbx_1__1__27_chanx_right_out[11] ;
+ wire \cbx_1__1__27_chanx_right_out[12] ;
+ wire \cbx_1__1__27_chanx_right_out[13] ;
+ wire \cbx_1__1__27_chanx_right_out[14] ;
+ wire \cbx_1__1__27_chanx_right_out[15] ;
+ wire \cbx_1__1__27_chanx_right_out[16] ;
+ wire \cbx_1__1__27_chanx_right_out[17] ;
+ wire \cbx_1__1__27_chanx_right_out[18] ;
+ wire \cbx_1__1__27_chanx_right_out[19] ;
+ wire \cbx_1__1__27_chanx_right_out[1] ;
+ wire \cbx_1__1__27_chanx_right_out[2] ;
+ wire \cbx_1__1__27_chanx_right_out[3] ;
+ wire \cbx_1__1__27_chanx_right_out[4] ;
+ wire \cbx_1__1__27_chanx_right_out[5] ;
+ wire \cbx_1__1__27_chanx_right_out[6] ;
+ wire \cbx_1__1__27_chanx_right_out[7] ;
+ wire \cbx_1__1__27_chanx_right_out[8] ;
+ wire \cbx_1__1__27_chanx_right_out[9] ;
+ wire cbx_1__1__28_bottom_grid_pin_0_;
+ wire cbx_1__1__28_bottom_grid_pin_10_;
+ wire cbx_1__1__28_bottom_grid_pin_11_;
+ wire cbx_1__1__28_bottom_grid_pin_12_;
+ wire cbx_1__1__28_bottom_grid_pin_13_;
+ wire cbx_1__1__28_bottom_grid_pin_14_;
+ wire cbx_1__1__28_bottom_grid_pin_15_;
+ wire cbx_1__1__28_bottom_grid_pin_1_;
+ wire cbx_1__1__28_bottom_grid_pin_2_;
+ wire cbx_1__1__28_bottom_grid_pin_3_;
+ wire cbx_1__1__28_bottom_grid_pin_4_;
+ wire cbx_1__1__28_bottom_grid_pin_5_;
+ wire cbx_1__1__28_bottom_grid_pin_6_;
+ wire cbx_1__1__28_bottom_grid_pin_7_;
+ wire cbx_1__1__28_bottom_grid_pin_8_;
+ wire cbx_1__1__28_bottom_grid_pin_9_;
+ wire cbx_1__1__28_ccff_tail;
+ wire \cbx_1__1__28_chanx_left_out[0] ;
+ wire \cbx_1__1__28_chanx_left_out[10] ;
+ wire \cbx_1__1__28_chanx_left_out[11] ;
+ wire \cbx_1__1__28_chanx_left_out[12] ;
+ wire \cbx_1__1__28_chanx_left_out[13] ;
+ wire \cbx_1__1__28_chanx_left_out[14] ;
+ wire \cbx_1__1__28_chanx_left_out[15] ;
+ wire \cbx_1__1__28_chanx_left_out[16] ;
+ wire \cbx_1__1__28_chanx_left_out[17] ;
+ wire \cbx_1__1__28_chanx_left_out[18] ;
+ wire \cbx_1__1__28_chanx_left_out[19] ;
+ wire \cbx_1__1__28_chanx_left_out[1] ;
+ wire \cbx_1__1__28_chanx_left_out[2] ;
+ wire \cbx_1__1__28_chanx_left_out[3] ;
+ wire \cbx_1__1__28_chanx_left_out[4] ;
+ wire \cbx_1__1__28_chanx_left_out[5] ;
+ wire \cbx_1__1__28_chanx_left_out[6] ;
+ wire \cbx_1__1__28_chanx_left_out[7] ;
+ wire \cbx_1__1__28_chanx_left_out[8] ;
+ wire \cbx_1__1__28_chanx_left_out[9] ;
+ wire \cbx_1__1__28_chanx_right_out[0] ;
+ wire \cbx_1__1__28_chanx_right_out[10] ;
+ wire \cbx_1__1__28_chanx_right_out[11] ;
+ wire \cbx_1__1__28_chanx_right_out[12] ;
+ wire \cbx_1__1__28_chanx_right_out[13] ;
+ wire \cbx_1__1__28_chanx_right_out[14] ;
+ wire \cbx_1__1__28_chanx_right_out[15] ;
+ wire \cbx_1__1__28_chanx_right_out[16] ;
+ wire \cbx_1__1__28_chanx_right_out[17] ;
+ wire \cbx_1__1__28_chanx_right_out[18] ;
+ wire \cbx_1__1__28_chanx_right_out[19] ;
+ wire \cbx_1__1__28_chanx_right_out[1] ;
+ wire \cbx_1__1__28_chanx_right_out[2] ;
+ wire \cbx_1__1__28_chanx_right_out[3] ;
+ wire \cbx_1__1__28_chanx_right_out[4] ;
+ wire \cbx_1__1__28_chanx_right_out[5] ;
+ wire \cbx_1__1__28_chanx_right_out[6] ;
+ wire \cbx_1__1__28_chanx_right_out[7] ;
+ wire \cbx_1__1__28_chanx_right_out[8] ;
+ wire \cbx_1__1__28_chanx_right_out[9] ;
+ wire cbx_1__1__29_bottom_grid_pin_0_;
+ wire cbx_1__1__29_bottom_grid_pin_10_;
+ wire cbx_1__1__29_bottom_grid_pin_11_;
+ wire cbx_1__1__29_bottom_grid_pin_12_;
+ wire cbx_1__1__29_bottom_grid_pin_13_;
+ wire cbx_1__1__29_bottom_grid_pin_14_;
+ wire cbx_1__1__29_bottom_grid_pin_15_;
+ wire cbx_1__1__29_bottom_grid_pin_1_;
+ wire cbx_1__1__29_bottom_grid_pin_2_;
+ wire cbx_1__1__29_bottom_grid_pin_3_;
+ wire cbx_1__1__29_bottom_grid_pin_4_;
+ wire cbx_1__1__29_bottom_grid_pin_5_;
+ wire cbx_1__1__29_bottom_grid_pin_6_;
+ wire cbx_1__1__29_bottom_grid_pin_7_;
+ wire cbx_1__1__29_bottom_grid_pin_8_;
+ wire cbx_1__1__29_bottom_grid_pin_9_;
+ wire cbx_1__1__29_ccff_tail;
+ wire \cbx_1__1__29_chanx_left_out[0] ;
+ wire \cbx_1__1__29_chanx_left_out[10] ;
+ wire \cbx_1__1__29_chanx_left_out[11] ;
+ wire \cbx_1__1__29_chanx_left_out[12] ;
+ wire \cbx_1__1__29_chanx_left_out[13] ;
+ wire \cbx_1__1__29_chanx_left_out[14] ;
+ wire \cbx_1__1__29_chanx_left_out[15] ;
+ wire \cbx_1__1__29_chanx_left_out[16] ;
+ wire \cbx_1__1__29_chanx_left_out[17] ;
+ wire \cbx_1__1__29_chanx_left_out[18] ;
+ wire \cbx_1__1__29_chanx_left_out[19] ;
+ wire \cbx_1__1__29_chanx_left_out[1] ;
+ wire \cbx_1__1__29_chanx_left_out[2] ;
+ wire \cbx_1__1__29_chanx_left_out[3] ;
+ wire \cbx_1__1__29_chanx_left_out[4] ;
+ wire \cbx_1__1__29_chanx_left_out[5] ;
+ wire \cbx_1__1__29_chanx_left_out[6] ;
+ wire \cbx_1__1__29_chanx_left_out[7] ;
+ wire \cbx_1__1__29_chanx_left_out[8] ;
+ wire \cbx_1__1__29_chanx_left_out[9] ;
+ wire \cbx_1__1__29_chanx_right_out[0] ;
+ wire \cbx_1__1__29_chanx_right_out[10] ;
+ wire \cbx_1__1__29_chanx_right_out[11] ;
+ wire \cbx_1__1__29_chanx_right_out[12] ;
+ wire \cbx_1__1__29_chanx_right_out[13] ;
+ wire \cbx_1__1__29_chanx_right_out[14] ;
+ wire \cbx_1__1__29_chanx_right_out[15] ;
+ wire \cbx_1__1__29_chanx_right_out[16] ;
+ wire \cbx_1__1__29_chanx_right_out[17] ;
+ wire \cbx_1__1__29_chanx_right_out[18] ;
+ wire \cbx_1__1__29_chanx_right_out[19] ;
+ wire \cbx_1__1__29_chanx_right_out[1] ;
+ wire \cbx_1__1__29_chanx_right_out[2] ;
+ wire \cbx_1__1__29_chanx_right_out[3] ;
+ wire \cbx_1__1__29_chanx_right_out[4] ;
+ wire \cbx_1__1__29_chanx_right_out[5] ;
+ wire \cbx_1__1__29_chanx_right_out[6] ;
+ wire \cbx_1__1__29_chanx_right_out[7] ;
+ wire \cbx_1__1__29_chanx_right_out[8] ;
+ wire \cbx_1__1__29_chanx_right_out[9] ;
+ wire cbx_1__1__2_bottom_grid_pin_0_;
+ wire cbx_1__1__2_bottom_grid_pin_10_;
+ wire cbx_1__1__2_bottom_grid_pin_11_;
+ wire cbx_1__1__2_bottom_grid_pin_12_;
+ wire cbx_1__1__2_bottom_grid_pin_13_;
+ wire cbx_1__1__2_bottom_grid_pin_14_;
+ wire cbx_1__1__2_bottom_grid_pin_15_;
+ wire cbx_1__1__2_bottom_grid_pin_1_;
+ wire cbx_1__1__2_bottom_grid_pin_2_;
+ wire cbx_1__1__2_bottom_grid_pin_3_;
+ wire cbx_1__1__2_bottom_grid_pin_4_;
+ wire cbx_1__1__2_bottom_grid_pin_5_;
+ wire cbx_1__1__2_bottom_grid_pin_6_;
+ wire cbx_1__1__2_bottom_grid_pin_7_;
+ wire cbx_1__1__2_bottom_grid_pin_8_;
+ wire cbx_1__1__2_bottom_grid_pin_9_;
+ wire cbx_1__1__2_ccff_tail;
+ wire \cbx_1__1__2_chanx_left_out[0] ;
+ wire \cbx_1__1__2_chanx_left_out[10] ;
+ wire \cbx_1__1__2_chanx_left_out[11] ;
+ wire \cbx_1__1__2_chanx_left_out[12] ;
+ wire \cbx_1__1__2_chanx_left_out[13] ;
+ wire \cbx_1__1__2_chanx_left_out[14] ;
+ wire \cbx_1__1__2_chanx_left_out[15] ;
+ wire \cbx_1__1__2_chanx_left_out[16] ;
+ wire \cbx_1__1__2_chanx_left_out[17] ;
+ wire \cbx_1__1__2_chanx_left_out[18] ;
+ wire \cbx_1__1__2_chanx_left_out[19] ;
+ wire \cbx_1__1__2_chanx_left_out[1] ;
+ wire \cbx_1__1__2_chanx_left_out[2] ;
+ wire \cbx_1__1__2_chanx_left_out[3] ;
+ wire \cbx_1__1__2_chanx_left_out[4] ;
+ wire \cbx_1__1__2_chanx_left_out[5] ;
+ wire \cbx_1__1__2_chanx_left_out[6] ;
+ wire \cbx_1__1__2_chanx_left_out[7] ;
+ wire \cbx_1__1__2_chanx_left_out[8] ;
+ wire \cbx_1__1__2_chanx_left_out[9] ;
+ wire \cbx_1__1__2_chanx_right_out[0] ;
+ wire \cbx_1__1__2_chanx_right_out[10] ;
+ wire \cbx_1__1__2_chanx_right_out[11] ;
+ wire \cbx_1__1__2_chanx_right_out[12] ;
+ wire \cbx_1__1__2_chanx_right_out[13] ;
+ wire \cbx_1__1__2_chanx_right_out[14] ;
+ wire \cbx_1__1__2_chanx_right_out[15] ;
+ wire \cbx_1__1__2_chanx_right_out[16] ;
+ wire \cbx_1__1__2_chanx_right_out[17] ;
+ wire \cbx_1__1__2_chanx_right_out[18] ;
+ wire \cbx_1__1__2_chanx_right_out[19] ;
+ wire \cbx_1__1__2_chanx_right_out[1] ;
+ wire \cbx_1__1__2_chanx_right_out[2] ;
+ wire \cbx_1__1__2_chanx_right_out[3] ;
+ wire \cbx_1__1__2_chanx_right_out[4] ;
+ wire \cbx_1__1__2_chanx_right_out[5] ;
+ wire \cbx_1__1__2_chanx_right_out[6] ;
+ wire \cbx_1__1__2_chanx_right_out[7] ;
+ wire \cbx_1__1__2_chanx_right_out[8] ;
+ wire \cbx_1__1__2_chanx_right_out[9] ;
+ wire cbx_1__1__30_bottom_grid_pin_0_;
+ wire cbx_1__1__30_bottom_grid_pin_10_;
+ wire cbx_1__1__30_bottom_grid_pin_11_;
+ wire cbx_1__1__30_bottom_grid_pin_12_;
+ wire cbx_1__1__30_bottom_grid_pin_13_;
+ wire cbx_1__1__30_bottom_grid_pin_14_;
+ wire cbx_1__1__30_bottom_grid_pin_15_;
+ wire cbx_1__1__30_bottom_grid_pin_1_;
+ wire cbx_1__1__30_bottom_grid_pin_2_;
+ wire cbx_1__1__30_bottom_grid_pin_3_;
+ wire cbx_1__1__30_bottom_grid_pin_4_;
+ wire cbx_1__1__30_bottom_grid_pin_5_;
+ wire cbx_1__1__30_bottom_grid_pin_6_;
+ wire cbx_1__1__30_bottom_grid_pin_7_;
+ wire cbx_1__1__30_bottom_grid_pin_8_;
+ wire cbx_1__1__30_bottom_grid_pin_9_;
+ wire cbx_1__1__30_ccff_tail;
+ wire \cbx_1__1__30_chanx_left_out[0] ;
+ wire \cbx_1__1__30_chanx_left_out[10] ;
+ wire \cbx_1__1__30_chanx_left_out[11] ;
+ wire \cbx_1__1__30_chanx_left_out[12] ;
+ wire \cbx_1__1__30_chanx_left_out[13] ;
+ wire \cbx_1__1__30_chanx_left_out[14] ;
+ wire \cbx_1__1__30_chanx_left_out[15] ;
+ wire \cbx_1__1__30_chanx_left_out[16] ;
+ wire \cbx_1__1__30_chanx_left_out[17] ;
+ wire \cbx_1__1__30_chanx_left_out[18] ;
+ wire \cbx_1__1__30_chanx_left_out[19] ;
+ wire \cbx_1__1__30_chanx_left_out[1] ;
+ wire \cbx_1__1__30_chanx_left_out[2] ;
+ wire \cbx_1__1__30_chanx_left_out[3] ;
+ wire \cbx_1__1__30_chanx_left_out[4] ;
+ wire \cbx_1__1__30_chanx_left_out[5] ;
+ wire \cbx_1__1__30_chanx_left_out[6] ;
+ wire \cbx_1__1__30_chanx_left_out[7] ;
+ wire \cbx_1__1__30_chanx_left_out[8] ;
+ wire \cbx_1__1__30_chanx_left_out[9] ;
+ wire \cbx_1__1__30_chanx_right_out[0] ;
+ wire \cbx_1__1__30_chanx_right_out[10] ;
+ wire \cbx_1__1__30_chanx_right_out[11] ;
+ wire \cbx_1__1__30_chanx_right_out[12] ;
+ wire \cbx_1__1__30_chanx_right_out[13] ;
+ wire \cbx_1__1__30_chanx_right_out[14] ;
+ wire \cbx_1__1__30_chanx_right_out[15] ;
+ wire \cbx_1__1__30_chanx_right_out[16] ;
+ wire \cbx_1__1__30_chanx_right_out[17] ;
+ wire \cbx_1__1__30_chanx_right_out[18] ;
+ wire \cbx_1__1__30_chanx_right_out[19] ;
+ wire \cbx_1__1__30_chanx_right_out[1] ;
+ wire \cbx_1__1__30_chanx_right_out[2] ;
+ wire \cbx_1__1__30_chanx_right_out[3] ;
+ wire \cbx_1__1__30_chanx_right_out[4] ;
+ wire \cbx_1__1__30_chanx_right_out[5] ;
+ wire \cbx_1__1__30_chanx_right_out[6] ;
+ wire \cbx_1__1__30_chanx_right_out[7] ;
+ wire \cbx_1__1__30_chanx_right_out[8] ;
+ wire \cbx_1__1__30_chanx_right_out[9] ;
+ wire cbx_1__1__31_bottom_grid_pin_0_;
+ wire cbx_1__1__31_bottom_grid_pin_10_;
+ wire cbx_1__1__31_bottom_grid_pin_11_;
+ wire cbx_1__1__31_bottom_grid_pin_12_;
+ wire cbx_1__1__31_bottom_grid_pin_13_;
+ wire cbx_1__1__31_bottom_grid_pin_14_;
+ wire cbx_1__1__31_bottom_grid_pin_15_;
+ wire cbx_1__1__31_bottom_grid_pin_1_;
+ wire cbx_1__1__31_bottom_grid_pin_2_;
+ wire cbx_1__1__31_bottom_grid_pin_3_;
+ wire cbx_1__1__31_bottom_grid_pin_4_;
+ wire cbx_1__1__31_bottom_grid_pin_5_;
+ wire cbx_1__1__31_bottom_grid_pin_6_;
+ wire cbx_1__1__31_bottom_grid_pin_7_;
+ wire cbx_1__1__31_bottom_grid_pin_8_;
+ wire cbx_1__1__31_bottom_grid_pin_9_;
+ wire cbx_1__1__31_ccff_tail;
+ wire \cbx_1__1__31_chanx_left_out[0] ;
+ wire \cbx_1__1__31_chanx_left_out[10] ;
+ wire \cbx_1__1__31_chanx_left_out[11] ;
+ wire \cbx_1__1__31_chanx_left_out[12] ;
+ wire \cbx_1__1__31_chanx_left_out[13] ;
+ wire \cbx_1__1__31_chanx_left_out[14] ;
+ wire \cbx_1__1__31_chanx_left_out[15] ;
+ wire \cbx_1__1__31_chanx_left_out[16] ;
+ wire \cbx_1__1__31_chanx_left_out[17] ;
+ wire \cbx_1__1__31_chanx_left_out[18] ;
+ wire \cbx_1__1__31_chanx_left_out[19] ;
+ wire \cbx_1__1__31_chanx_left_out[1] ;
+ wire \cbx_1__1__31_chanx_left_out[2] ;
+ wire \cbx_1__1__31_chanx_left_out[3] ;
+ wire \cbx_1__1__31_chanx_left_out[4] ;
+ wire \cbx_1__1__31_chanx_left_out[5] ;
+ wire \cbx_1__1__31_chanx_left_out[6] ;
+ wire \cbx_1__1__31_chanx_left_out[7] ;
+ wire \cbx_1__1__31_chanx_left_out[8] ;
+ wire \cbx_1__1__31_chanx_left_out[9] ;
+ wire \cbx_1__1__31_chanx_right_out[0] ;
+ wire \cbx_1__1__31_chanx_right_out[10] ;
+ wire \cbx_1__1__31_chanx_right_out[11] ;
+ wire \cbx_1__1__31_chanx_right_out[12] ;
+ wire \cbx_1__1__31_chanx_right_out[13] ;
+ wire \cbx_1__1__31_chanx_right_out[14] ;
+ wire \cbx_1__1__31_chanx_right_out[15] ;
+ wire \cbx_1__1__31_chanx_right_out[16] ;
+ wire \cbx_1__1__31_chanx_right_out[17] ;
+ wire \cbx_1__1__31_chanx_right_out[18] ;
+ wire \cbx_1__1__31_chanx_right_out[19] ;
+ wire \cbx_1__1__31_chanx_right_out[1] ;
+ wire \cbx_1__1__31_chanx_right_out[2] ;
+ wire \cbx_1__1__31_chanx_right_out[3] ;
+ wire \cbx_1__1__31_chanx_right_out[4] ;
+ wire \cbx_1__1__31_chanx_right_out[5] ;
+ wire \cbx_1__1__31_chanx_right_out[6] ;
+ wire \cbx_1__1__31_chanx_right_out[7] ;
+ wire \cbx_1__1__31_chanx_right_out[8] ;
+ wire \cbx_1__1__31_chanx_right_out[9] ;
+ wire cbx_1__1__32_bottom_grid_pin_0_;
+ wire cbx_1__1__32_bottom_grid_pin_10_;
+ wire cbx_1__1__32_bottom_grid_pin_11_;
+ wire cbx_1__1__32_bottom_grid_pin_12_;
+ wire cbx_1__1__32_bottom_grid_pin_13_;
+ wire cbx_1__1__32_bottom_grid_pin_14_;
+ wire cbx_1__1__32_bottom_grid_pin_15_;
+ wire cbx_1__1__32_bottom_grid_pin_1_;
+ wire cbx_1__1__32_bottom_grid_pin_2_;
+ wire cbx_1__1__32_bottom_grid_pin_3_;
+ wire cbx_1__1__32_bottom_grid_pin_4_;
+ wire cbx_1__1__32_bottom_grid_pin_5_;
+ wire cbx_1__1__32_bottom_grid_pin_6_;
+ wire cbx_1__1__32_bottom_grid_pin_7_;
+ wire cbx_1__1__32_bottom_grid_pin_8_;
+ wire cbx_1__1__32_bottom_grid_pin_9_;
+ wire cbx_1__1__32_ccff_tail;
+ wire \cbx_1__1__32_chanx_left_out[0] ;
+ wire \cbx_1__1__32_chanx_left_out[10] ;
+ wire \cbx_1__1__32_chanx_left_out[11] ;
+ wire \cbx_1__1__32_chanx_left_out[12] ;
+ wire \cbx_1__1__32_chanx_left_out[13] ;
+ wire \cbx_1__1__32_chanx_left_out[14] ;
+ wire \cbx_1__1__32_chanx_left_out[15] ;
+ wire \cbx_1__1__32_chanx_left_out[16] ;
+ wire \cbx_1__1__32_chanx_left_out[17] ;
+ wire \cbx_1__1__32_chanx_left_out[18] ;
+ wire \cbx_1__1__32_chanx_left_out[19] ;
+ wire \cbx_1__1__32_chanx_left_out[1] ;
+ wire \cbx_1__1__32_chanx_left_out[2] ;
+ wire \cbx_1__1__32_chanx_left_out[3] ;
+ wire \cbx_1__1__32_chanx_left_out[4] ;
+ wire \cbx_1__1__32_chanx_left_out[5] ;
+ wire \cbx_1__1__32_chanx_left_out[6] ;
+ wire \cbx_1__1__32_chanx_left_out[7] ;
+ wire \cbx_1__1__32_chanx_left_out[8] ;
+ wire \cbx_1__1__32_chanx_left_out[9] ;
+ wire \cbx_1__1__32_chanx_right_out[0] ;
+ wire \cbx_1__1__32_chanx_right_out[10] ;
+ wire \cbx_1__1__32_chanx_right_out[11] ;
+ wire \cbx_1__1__32_chanx_right_out[12] ;
+ wire \cbx_1__1__32_chanx_right_out[13] ;
+ wire \cbx_1__1__32_chanx_right_out[14] ;
+ wire \cbx_1__1__32_chanx_right_out[15] ;
+ wire \cbx_1__1__32_chanx_right_out[16] ;
+ wire \cbx_1__1__32_chanx_right_out[17] ;
+ wire \cbx_1__1__32_chanx_right_out[18] ;
+ wire \cbx_1__1__32_chanx_right_out[19] ;
+ wire \cbx_1__1__32_chanx_right_out[1] ;
+ wire \cbx_1__1__32_chanx_right_out[2] ;
+ wire \cbx_1__1__32_chanx_right_out[3] ;
+ wire \cbx_1__1__32_chanx_right_out[4] ;
+ wire \cbx_1__1__32_chanx_right_out[5] ;
+ wire \cbx_1__1__32_chanx_right_out[6] ;
+ wire \cbx_1__1__32_chanx_right_out[7] ;
+ wire \cbx_1__1__32_chanx_right_out[8] ;
+ wire \cbx_1__1__32_chanx_right_out[9] ;
+ wire cbx_1__1__33_bottom_grid_pin_0_;
+ wire cbx_1__1__33_bottom_grid_pin_10_;
+ wire cbx_1__1__33_bottom_grid_pin_11_;
+ wire cbx_1__1__33_bottom_grid_pin_12_;
+ wire cbx_1__1__33_bottom_grid_pin_13_;
+ wire cbx_1__1__33_bottom_grid_pin_14_;
+ wire cbx_1__1__33_bottom_grid_pin_15_;
+ wire cbx_1__1__33_bottom_grid_pin_1_;
+ wire cbx_1__1__33_bottom_grid_pin_2_;
+ wire cbx_1__1__33_bottom_grid_pin_3_;
+ wire cbx_1__1__33_bottom_grid_pin_4_;
+ wire cbx_1__1__33_bottom_grid_pin_5_;
+ wire cbx_1__1__33_bottom_grid_pin_6_;
+ wire cbx_1__1__33_bottom_grid_pin_7_;
+ wire cbx_1__1__33_bottom_grid_pin_8_;
+ wire cbx_1__1__33_bottom_grid_pin_9_;
+ wire cbx_1__1__33_ccff_tail;
+ wire \cbx_1__1__33_chanx_left_out[0] ;
+ wire \cbx_1__1__33_chanx_left_out[10] ;
+ wire \cbx_1__1__33_chanx_left_out[11] ;
+ wire \cbx_1__1__33_chanx_left_out[12] ;
+ wire \cbx_1__1__33_chanx_left_out[13] ;
+ wire \cbx_1__1__33_chanx_left_out[14] ;
+ wire \cbx_1__1__33_chanx_left_out[15] ;
+ wire \cbx_1__1__33_chanx_left_out[16] ;
+ wire \cbx_1__1__33_chanx_left_out[17] ;
+ wire \cbx_1__1__33_chanx_left_out[18] ;
+ wire \cbx_1__1__33_chanx_left_out[19] ;
+ wire \cbx_1__1__33_chanx_left_out[1] ;
+ wire \cbx_1__1__33_chanx_left_out[2] ;
+ wire \cbx_1__1__33_chanx_left_out[3] ;
+ wire \cbx_1__1__33_chanx_left_out[4] ;
+ wire \cbx_1__1__33_chanx_left_out[5] ;
+ wire \cbx_1__1__33_chanx_left_out[6] ;
+ wire \cbx_1__1__33_chanx_left_out[7] ;
+ wire \cbx_1__1__33_chanx_left_out[8] ;
+ wire \cbx_1__1__33_chanx_left_out[9] ;
+ wire \cbx_1__1__33_chanx_right_out[0] ;
+ wire \cbx_1__1__33_chanx_right_out[10] ;
+ wire \cbx_1__1__33_chanx_right_out[11] ;
+ wire \cbx_1__1__33_chanx_right_out[12] ;
+ wire \cbx_1__1__33_chanx_right_out[13] ;
+ wire \cbx_1__1__33_chanx_right_out[14] ;
+ wire \cbx_1__1__33_chanx_right_out[15] ;
+ wire \cbx_1__1__33_chanx_right_out[16] ;
+ wire \cbx_1__1__33_chanx_right_out[17] ;
+ wire \cbx_1__1__33_chanx_right_out[18] ;
+ wire \cbx_1__1__33_chanx_right_out[19] ;
+ wire \cbx_1__1__33_chanx_right_out[1] ;
+ wire \cbx_1__1__33_chanx_right_out[2] ;
+ wire \cbx_1__1__33_chanx_right_out[3] ;
+ wire \cbx_1__1__33_chanx_right_out[4] ;
+ wire \cbx_1__1__33_chanx_right_out[5] ;
+ wire \cbx_1__1__33_chanx_right_out[6] ;
+ wire \cbx_1__1__33_chanx_right_out[7] ;
+ wire \cbx_1__1__33_chanx_right_out[8] ;
+ wire \cbx_1__1__33_chanx_right_out[9] ;
+ wire cbx_1__1__34_bottom_grid_pin_0_;
+ wire cbx_1__1__34_bottom_grid_pin_10_;
+ wire cbx_1__1__34_bottom_grid_pin_11_;
+ wire cbx_1__1__34_bottom_grid_pin_12_;
+ wire cbx_1__1__34_bottom_grid_pin_13_;
+ wire cbx_1__1__34_bottom_grid_pin_14_;
+ wire cbx_1__1__34_bottom_grid_pin_15_;
+ wire cbx_1__1__34_bottom_grid_pin_1_;
+ wire cbx_1__1__34_bottom_grid_pin_2_;
+ wire cbx_1__1__34_bottom_grid_pin_3_;
+ wire cbx_1__1__34_bottom_grid_pin_4_;
+ wire cbx_1__1__34_bottom_grid_pin_5_;
+ wire cbx_1__1__34_bottom_grid_pin_6_;
+ wire cbx_1__1__34_bottom_grid_pin_7_;
+ wire cbx_1__1__34_bottom_grid_pin_8_;
+ wire cbx_1__1__34_bottom_grid_pin_9_;
+ wire cbx_1__1__34_ccff_tail;
+ wire \cbx_1__1__34_chanx_left_out[0] ;
+ wire \cbx_1__1__34_chanx_left_out[10] ;
+ wire \cbx_1__1__34_chanx_left_out[11] ;
+ wire \cbx_1__1__34_chanx_left_out[12] ;
+ wire \cbx_1__1__34_chanx_left_out[13] ;
+ wire \cbx_1__1__34_chanx_left_out[14] ;
+ wire \cbx_1__1__34_chanx_left_out[15] ;
+ wire \cbx_1__1__34_chanx_left_out[16] ;
+ wire \cbx_1__1__34_chanx_left_out[17] ;
+ wire \cbx_1__1__34_chanx_left_out[18] ;
+ wire \cbx_1__1__34_chanx_left_out[19] ;
+ wire \cbx_1__1__34_chanx_left_out[1] ;
+ wire \cbx_1__1__34_chanx_left_out[2] ;
+ wire \cbx_1__1__34_chanx_left_out[3] ;
+ wire \cbx_1__1__34_chanx_left_out[4] ;
+ wire \cbx_1__1__34_chanx_left_out[5] ;
+ wire \cbx_1__1__34_chanx_left_out[6] ;
+ wire \cbx_1__1__34_chanx_left_out[7] ;
+ wire \cbx_1__1__34_chanx_left_out[8] ;
+ wire \cbx_1__1__34_chanx_left_out[9] ;
+ wire \cbx_1__1__34_chanx_right_out[0] ;
+ wire \cbx_1__1__34_chanx_right_out[10] ;
+ wire \cbx_1__1__34_chanx_right_out[11] ;
+ wire \cbx_1__1__34_chanx_right_out[12] ;
+ wire \cbx_1__1__34_chanx_right_out[13] ;
+ wire \cbx_1__1__34_chanx_right_out[14] ;
+ wire \cbx_1__1__34_chanx_right_out[15] ;
+ wire \cbx_1__1__34_chanx_right_out[16] ;
+ wire \cbx_1__1__34_chanx_right_out[17] ;
+ wire \cbx_1__1__34_chanx_right_out[18] ;
+ wire \cbx_1__1__34_chanx_right_out[19] ;
+ wire \cbx_1__1__34_chanx_right_out[1] ;
+ wire \cbx_1__1__34_chanx_right_out[2] ;
+ wire \cbx_1__1__34_chanx_right_out[3] ;
+ wire \cbx_1__1__34_chanx_right_out[4] ;
+ wire \cbx_1__1__34_chanx_right_out[5] ;
+ wire \cbx_1__1__34_chanx_right_out[6] ;
+ wire \cbx_1__1__34_chanx_right_out[7] ;
+ wire \cbx_1__1__34_chanx_right_out[8] ;
+ wire \cbx_1__1__34_chanx_right_out[9] ;
+ wire cbx_1__1__35_bottom_grid_pin_0_;
+ wire cbx_1__1__35_bottom_grid_pin_10_;
+ wire cbx_1__1__35_bottom_grid_pin_11_;
+ wire cbx_1__1__35_bottom_grid_pin_12_;
+ wire cbx_1__1__35_bottom_grid_pin_13_;
+ wire cbx_1__1__35_bottom_grid_pin_14_;
+ wire cbx_1__1__35_bottom_grid_pin_15_;
+ wire cbx_1__1__35_bottom_grid_pin_1_;
+ wire cbx_1__1__35_bottom_grid_pin_2_;
+ wire cbx_1__1__35_bottom_grid_pin_3_;
+ wire cbx_1__1__35_bottom_grid_pin_4_;
+ wire cbx_1__1__35_bottom_grid_pin_5_;
+ wire cbx_1__1__35_bottom_grid_pin_6_;
+ wire cbx_1__1__35_bottom_grid_pin_7_;
+ wire cbx_1__1__35_bottom_grid_pin_8_;
+ wire cbx_1__1__35_bottom_grid_pin_9_;
+ wire cbx_1__1__35_ccff_tail;
+ wire \cbx_1__1__35_chanx_left_out[0] ;
+ wire \cbx_1__1__35_chanx_left_out[10] ;
+ wire \cbx_1__1__35_chanx_left_out[11] ;
+ wire \cbx_1__1__35_chanx_left_out[12] ;
+ wire \cbx_1__1__35_chanx_left_out[13] ;
+ wire \cbx_1__1__35_chanx_left_out[14] ;
+ wire \cbx_1__1__35_chanx_left_out[15] ;
+ wire \cbx_1__1__35_chanx_left_out[16] ;
+ wire \cbx_1__1__35_chanx_left_out[17] ;
+ wire \cbx_1__1__35_chanx_left_out[18] ;
+ wire \cbx_1__1__35_chanx_left_out[19] ;
+ wire \cbx_1__1__35_chanx_left_out[1] ;
+ wire \cbx_1__1__35_chanx_left_out[2] ;
+ wire \cbx_1__1__35_chanx_left_out[3] ;
+ wire \cbx_1__1__35_chanx_left_out[4] ;
+ wire \cbx_1__1__35_chanx_left_out[5] ;
+ wire \cbx_1__1__35_chanx_left_out[6] ;
+ wire \cbx_1__1__35_chanx_left_out[7] ;
+ wire \cbx_1__1__35_chanx_left_out[8] ;
+ wire \cbx_1__1__35_chanx_left_out[9] ;
+ wire \cbx_1__1__35_chanx_right_out[0] ;
+ wire \cbx_1__1__35_chanx_right_out[10] ;
+ wire \cbx_1__1__35_chanx_right_out[11] ;
+ wire \cbx_1__1__35_chanx_right_out[12] ;
+ wire \cbx_1__1__35_chanx_right_out[13] ;
+ wire \cbx_1__1__35_chanx_right_out[14] ;
+ wire \cbx_1__1__35_chanx_right_out[15] ;
+ wire \cbx_1__1__35_chanx_right_out[16] ;
+ wire \cbx_1__1__35_chanx_right_out[17] ;
+ wire \cbx_1__1__35_chanx_right_out[18] ;
+ wire \cbx_1__1__35_chanx_right_out[19] ;
+ wire \cbx_1__1__35_chanx_right_out[1] ;
+ wire \cbx_1__1__35_chanx_right_out[2] ;
+ wire \cbx_1__1__35_chanx_right_out[3] ;
+ wire \cbx_1__1__35_chanx_right_out[4] ;
+ wire \cbx_1__1__35_chanx_right_out[5] ;
+ wire \cbx_1__1__35_chanx_right_out[6] ;
+ wire \cbx_1__1__35_chanx_right_out[7] ;
+ wire \cbx_1__1__35_chanx_right_out[8] ;
+ wire \cbx_1__1__35_chanx_right_out[9] ;
+ wire cbx_1__1__36_bottom_grid_pin_0_;
+ wire cbx_1__1__36_bottom_grid_pin_10_;
+ wire cbx_1__1__36_bottom_grid_pin_11_;
+ wire cbx_1__1__36_bottom_grid_pin_12_;
+ wire cbx_1__1__36_bottom_grid_pin_13_;
+ wire cbx_1__1__36_bottom_grid_pin_14_;
+ wire cbx_1__1__36_bottom_grid_pin_15_;
+ wire cbx_1__1__36_bottom_grid_pin_1_;
+ wire cbx_1__1__36_bottom_grid_pin_2_;
+ wire cbx_1__1__36_bottom_grid_pin_3_;
+ wire cbx_1__1__36_bottom_grid_pin_4_;
+ wire cbx_1__1__36_bottom_grid_pin_5_;
+ wire cbx_1__1__36_bottom_grid_pin_6_;
+ wire cbx_1__1__36_bottom_grid_pin_7_;
+ wire cbx_1__1__36_bottom_grid_pin_8_;
+ wire cbx_1__1__36_bottom_grid_pin_9_;
+ wire cbx_1__1__36_ccff_tail;
+ wire \cbx_1__1__36_chanx_left_out[0] ;
+ wire \cbx_1__1__36_chanx_left_out[10] ;
+ wire \cbx_1__1__36_chanx_left_out[11] ;
+ wire \cbx_1__1__36_chanx_left_out[12] ;
+ wire \cbx_1__1__36_chanx_left_out[13] ;
+ wire \cbx_1__1__36_chanx_left_out[14] ;
+ wire \cbx_1__1__36_chanx_left_out[15] ;
+ wire \cbx_1__1__36_chanx_left_out[16] ;
+ wire \cbx_1__1__36_chanx_left_out[17] ;
+ wire \cbx_1__1__36_chanx_left_out[18] ;
+ wire \cbx_1__1__36_chanx_left_out[19] ;
+ wire \cbx_1__1__36_chanx_left_out[1] ;
+ wire \cbx_1__1__36_chanx_left_out[2] ;
+ wire \cbx_1__1__36_chanx_left_out[3] ;
+ wire \cbx_1__1__36_chanx_left_out[4] ;
+ wire \cbx_1__1__36_chanx_left_out[5] ;
+ wire \cbx_1__1__36_chanx_left_out[6] ;
+ wire \cbx_1__1__36_chanx_left_out[7] ;
+ wire \cbx_1__1__36_chanx_left_out[8] ;
+ wire \cbx_1__1__36_chanx_left_out[9] ;
+ wire \cbx_1__1__36_chanx_right_out[0] ;
+ wire \cbx_1__1__36_chanx_right_out[10] ;
+ wire \cbx_1__1__36_chanx_right_out[11] ;
+ wire \cbx_1__1__36_chanx_right_out[12] ;
+ wire \cbx_1__1__36_chanx_right_out[13] ;
+ wire \cbx_1__1__36_chanx_right_out[14] ;
+ wire \cbx_1__1__36_chanx_right_out[15] ;
+ wire \cbx_1__1__36_chanx_right_out[16] ;
+ wire \cbx_1__1__36_chanx_right_out[17] ;
+ wire \cbx_1__1__36_chanx_right_out[18] ;
+ wire \cbx_1__1__36_chanx_right_out[19] ;
+ wire \cbx_1__1__36_chanx_right_out[1] ;
+ wire \cbx_1__1__36_chanx_right_out[2] ;
+ wire \cbx_1__1__36_chanx_right_out[3] ;
+ wire \cbx_1__1__36_chanx_right_out[4] ;
+ wire \cbx_1__1__36_chanx_right_out[5] ;
+ wire \cbx_1__1__36_chanx_right_out[6] ;
+ wire \cbx_1__1__36_chanx_right_out[7] ;
+ wire \cbx_1__1__36_chanx_right_out[8] ;
+ wire \cbx_1__1__36_chanx_right_out[9] ;
+ wire cbx_1__1__37_bottom_grid_pin_0_;
+ wire cbx_1__1__37_bottom_grid_pin_10_;
+ wire cbx_1__1__37_bottom_grid_pin_11_;
+ wire cbx_1__1__37_bottom_grid_pin_12_;
+ wire cbx_1__1__37_bottom_grid_pin_13_;
+ wire cbx_1__1__37_bottom_grid_pin_14_;
+ wire cbx_1__1__37_bottom_grid_pin_15_;
+ wire cbx_1__1__37_bottom_grid_pin_1_;
+ wire cbx_1__1__37_bottom_grid_pin_2_;
+ wire cbx_1__1__37_bottom_grid_pin_3_;
+ wire cbx_1__1__37_bottom_grid_pin_4_;
+ wire cbx_1__1__37_bottom_grid_pin_5_;
+ wire cbx_1__1__37_bottom_grid_pin_6_;
+ wire cbx_1__1__37_bottom_grid_pin_7_;
+ wire cbx_1__1__37_bottom_grid_pin_8_;
+ wire cbx_1__1__37_bottom_grid_pin_9_;
+ wire cbx_1__1__37_ccff_tail;
+ wire \cbx_1__1__37_chanx_left_out[0] ;
+ wire \cbx_1__1__37_chanx_left_out[10] ;
+ wire \cbx_1__1__37_chanx_left_out[11] ;
+ wire \cbx_1__1__37_chanx_left_out[12] ;
+ wire \cbx_1__1__37_chanx_left_out[13] ;
+ wire \cbx_1__1__37_chanx_left_out[14] ;
+ wire \cbx_1__1__37_chanx_left_out[15] ;
+ wire \cbx_1__1__37_chanx_left_out[16] ;
+ wire \cbx_1__1__37_chanx_left_out[17] ;
+ wire \cbx_1__1__37_chanx_left_out[18] ;
+ wire \cbx_1__1__37_chanx_left_out[19] ;
+ wire \cbx_1__1__37_chanx_left_out[1] ;
+ wire \cbx_1__1__37_chanx_left_out[2] ;
+ wire \cbx_1__1__37_chanx_left_out[3] ;
+ wire \cbx_1__1__37_chanx_left_out[4] ;
+ wire \cbx_1__1__37_chanx_left_out[5] ;
+ wire \cbx_1__1__37_chanx_left_out[6] ;
+ wire \cbx_1__1__37_chanx_left_out[7] ;
+ wire \cbx_1__1__37_chanx_left_out[8] ;
+ wire \cbx_1__1__37_chanx_left_out[9] ;
+ wire \cbx_1__1__37_chanx_right_out[0] ;
+ wire \cbx_1__1__37_chanx_right_out[10] ;
+ wire \cbx_1__1__37_chanx_right_out[11] ;
+ wire \cbx_1__1__37_chanx_right_out[12] ;
+ wire \cbx_1__1__37_chanx_right_out[13] ;
+ wire \cbx_1__1__37_chanx_right_out[14] ;
+ wire \cbx_1__1__37_chanx_right_out[15] ;
+ wire \cbx_1__1__37_chanx_right_out[16] ;
+ wire \cbx_1__1__37_chanx_right_out[17] ;
+ wire \cbx_1__1__37_chanx_right_out[18] ;
+ wire \cbx_1__1__37_chanx_right_out[19] ;
+ wire \cbx_1__1__37_chanx_right_out[1] ;
+ wire \cbx_1__1__37_chanx_right_out[2] ;
+ wire \cbx_1__1__37_chanx_right_out[3] ;
+ wire \cbx_1__1__37_chanx_right_out[4] ;
+ wire \cbx_1__1__37_chanx_right_out[5] ;
+ wire \cbx_1__1__37_chanx_right_out[6] ;
+ wire \cbx_1__1__37_chanx_right_out[7] ;
+ wire \cbx_1__1__37_chanx_right_out[8] ;
+ wire \cbx_1__1__37_chanx_right_out[9] ;
+ wire cbx_1__1__38_bottom_grid_pin_0_;
+ wire cbx_1__1__38_bottom_grid_pin_10_;
+ wire cbx_1__1__38_bottom_grid_pin_11_;
+ wire cbx_1__1__38_bottom_grid_pin_12_;
+ wire cbx_1__1__38_bottom_grid_pin_13_;
+ wire cbx_1__1__38_bottom_grid_pin_14_;
+ wire cbx_1__1__38_bottom_grid_pin_15_;
+ wire cbx_1__1__38_bottom_grid_pin_1_;
+ wire cbx_1__1__38_bottom_grid_pin_2_;
+ wire cbx_1__1__38_bottom_grid_pin_3_;
+ wire cbx_1__1__38_bottom_grid_pin_4_;
+ wire cbx_1__1__38_bottom_grid_pin_5_;
+ wire cbx_1__1__38_bottom_grid_pin_6_;
+ wire cbx_1__1__38_bottom_grid_pin_7_;
+ wire cbx_1__1__38_bottom_grid_pin_8_;
+ wire cbx_1__1__38_bottom_grid_pin_9_;
+ wire cbx_1__1__38_ccff_tail;
+ wire \cbx_1__1__38_chanx_left_out[0] ;
+ wire \cbx_1__1__38_chanx_left_out[10] ;
+ wire \cbx_1__1__38_chanx_left_out[11] ;
+ wire \cbx_1__1__38_chanx_left_out[12] ;
+ wire \cbx_1__1__38_chanx_left_out[13] ;
+ wire \cbx_1__1__38_chanx_left_out[14] ;
+ wire \cbx_1__1__38_chanx_left_out[15] ;
+ wire \cbx_1__1__38_chanx_left_out[16] ;
+ wire \cbx_1__1__38_chanx_left_out[17] ;
+ wire \cbx_1__1__38_chanx_left_out[18] ;
+ wire \cbx_1__1__38_chanx_left_out[19] ;
+ wire \cbx_1__1__38_chanx_left_out[1] ;
+ wire \cbx_1__1__38_chanx_left_out[2] ;
+ wire \cbx_1__1__38_chanx_left_out[3] ;
+ wire \cbx_1__1__38_chanx_left_out[4] ;
+ wire \cbx_1__1__38_chanx_left_out[5] ;
+ wire \cbx_1__1__38_chanx_left_out[6] ;
+ wire \cbx_1__1__38_chanx_left_out[7] ;
+ wire \cbx_1__1__38_chanx_left_out[8] ;
+ wire \cbx_1__1__38_chanx_left_out[9] ;
+ wire \cbx_1__1__38_chanx_right_out[0] ;
+ wire \cbx_1__1__38_chanx_right_out[10] ;
+ wire \cbx_1__1__38_chanx_right_out[11] ;
+ wire \cbx_1__1__38_chanx_right_out[12] ;
+ wire \cbx_1__1__38_chanx_right_out[13] ;
+ wire \cbx_1__1__38_chanx_right_out[14] ;
+ wire \cbx_1__1__38_chanx_right_out[15] ;
+ wire \cbx_1__1__38_chanx_right_out[16] ;
+ wire \cbx_1__1__38_chanx_right_out[17] ;
+ wire \cbx_1__1__38_chanx_right_out[18] ;
+ wire \cbx_1__1__38_chanx_right_out[19] ;
+ wire \cbx_1__1__38_chanx_right_out[1] ;
+ wire \cbx_1__1__38_chanx_right_out[2] ;
+ wire \cbx_1__1__38_chanx_right_out[3] ;
+ wire \cbx_1__1__38_chanx_right_out[4] ;
+ wire \cbx_1__1__38_chanx_right_out[5] ;
+ wire \cbx_1__1__38_chanx_right_out[6] ;
+ wire \cbx_1__1__38_chanx_right_out[7] ;
+ wire \cbx_1__1__38_chanx_right_out[8] ;
+ wire \cbx_1__1__38_chanx_right_out[9] ;
+ wire cbx_1__1__39_bottom_grid_pin_0_;
+ wire cbx_1__1__39_bottom_grid_pin_10_;
+ wire cbx_1__1__39_bottom_grid_pin_11_;
+ wire cbx_1__1__39_bottom_grid_pin_12_;
+ wire cbx_1__1__39_bottom_grid_pin_13_;
+ wire cbx_1__1__39_bottom_grid_pin_14_;
+ wire cbx_1__1__39_bottom_grid_pin_15_;
+ wire cbx_1__1__39_bottom_grid_pin_1_;
+ wire cbx_1__1__39_bottom_grid_pin_2_;
+ wire cbx_1__1__39_bottom_grid_pin_3_;
+ wire cbx_1__1__39_bottom_grid_pin_4_;
+ wire cbx_1__1__39_bottom_grid_pin_5_;
+ wire cbx_1__1__39_bottom_grid_pin_6_;
+ wire cbx_1__1__39_bottom_grid_pin_7_;
+ wire cbx_1__1__39_bottom_grid_pin_8_;
+ wire cbx_1__1__39_bottom_grid_pin_9_;
+ wire cbx_1__1__39_ccff_tail;
+ wire \cbx_1__1__39_chanx_left_out[0] ;
+ wire \cbx_1__1__39_chanx_left_out[10] ;
+ wire \cbx_1__1__39_chanx_left_out[11] ;
+ wire \cbx_1__1__39_chanx_left_out[12] ;
+ wire \cbx_1__1__39_chanx_left_out[13] ;
+ wire \cbx_1__1__39_chanx_left_out[14] ;
+ wire \cbx_1__1__39_chanx_left_out[15] ;
+ wire \cbx_1__1__39_chanx_left_out[16] ;
+ wire \cbx_1__1__39_chanx_left_out[17] ;
+ wire \cbx_1__1__39_chanx_left_out[18] ;
+ wire \cbx_1__1__39_chanx_left_out[19] ;
+ wire \cbx_1__1__39_chanx_left_out[1] ;
+ wire \cbx_1__1__39_chanx_left_out[2] ;
+ wire \cbx_1__1__39_chanx_left_out[3] ;
+ wire \cbx_1__1__39_chanx_left_out[4] ;
+ wire \cbx_1__1__39_chanx_left_out[5] ;
+ wire \cbx_1__1__39_chanx_left_out[6] ;
+ wire \cbx_1__1__39_chanx_left_out[7] ;
+ wire \cbx_1__1__39_chanx_left_out[8] ;
+ wire \cbx_1__1__39_chanx_left_out[9] ;
+ wire \cbx_1__1__39_chanx_right_out[0] ;
+ wire \cbx_1__1__39_chanx_right_out[10] ;
+ wire \cbx_1__1__39_chanx_right_out[11] ;
+ wire \cbx_1__1__39_chanx_right_out[12] ;
+ wire \cbx_1__1__39_chanx_right_out[13] ;
+ wire \cbx_1__1__39_chanx_right_out[14] ;
+ wire \cbx_1__1__39_chanx_right_out[15] ;
+ wire \cbx_1__1__39_chanx_right_out[16] ;
+ wire \cbx_1__1__39_chanx_right_out[17] ;
+ wire \cbx_1__1__39_chanx_right_out[18] ;
+ wire \cbx_1__1__39_chanx_right_out[19] ;
+ wire \cbx_1__1__39_chanx_right_out[1] ;
+ wire \cbx_1__1__39_chanx_right_out[2] ;
+ wire \cbx_1__1__39_chanx_right_out[3] ;
+ wire \cbx_1__1__39_chanx_right_out[4] ;
+ wire \cbx_1__1__39_chanx_right_out[5] ;
+ wire \cbx_1__1__39_chanx_right_out[6] ;
+ wire \cbx_1__1__39_chanx_right_out[7] ;
+ wire \cbx_1__1__39_chanx_right_out[8] ;
+ wire \cbx_1__1__39_chanx_right_out[9] ;
+ wire cbx_1__1__3_bottom_grid_pin_0_;
+ wire cbx_1__1__3_bottom_grid_pin_10_;
+ wire cbx_1__1__3_bottom_grid_pin_11_;
+ wire cbx_1__1__3_bottom_grid_pin_12_;
+ wire cbx_1__1__3_bottom_grid_pin_13_;
+ wire cbx_1__1__3_bottom_grid_pin_14_;
+ wire cbx_1__1__3_bottom_grid_pin_15_;
+ wire cbx_1__1__3_bottom_grid_pin_1_;
+ wire cbx_1__1__3_bottom_grid_pin_2_;
+ wire cbx_1__1__3_bottom_grid_pin_3_;
+ wire cbx_1__1__3_bottom_grid_pin_4_;
+ wire cbx_1__1__3_bottom_grid_pin_5_;
+ wire cbx_1__1__3_bottom_grid_pin_6_;
+ wire cbx_1__1__3_bottom_grid_pin_7_;
+ wire cbx_1__1__3_bottom_grid_pin_8_;
+ wire cbx_1__1__3_bottom_grid_pin_9_;
+ wire cbx_1__1__3_ccff_tail;
+ wire \cbx_1__1__3_chanx_left_out[0] ;
+ wire \cbx_1__1__3_chanx_left_out[10] ;
+ wire \cbx_1__1__3_chanx_left_out[11] ;
+ wire \cbx_1__1__3_chanx_left_out[12] ;
+ wire \cbx_1__1__3_chanx_left_out[13] ;
+ wire \cbx_1__1__3_chanx_left_out[14] ;
+ wire \cbx_1__1__3_chanx_left_out[15] ;
+ wire \cbx_1__1__3_chanx_left_out[16] ;
+ wire \cbx_1__1__3_chanx_left_out[17] ;
+ wire \cbx_1__1__3_chanx_left_out[18] ;
+ wire \cbx_1__1__3_chanx_left_out[19] ;
+ wire \cbx_1__1__3_chanx_left_out[1] ;
+ wire \cbx_1__1__3_chanx_left_out[2] ;
+ wire \cbx_1__1__3_chanx_left_out[3] ;
+ wire \cbx_1__1__3_chanx_left_out[4] ;
+ wire \cbx_1__1__3_chanx_left_out[5] ;
+ wire \cbx_1__1__3_chanx_left_out[6] ;
+ wire \cbx_1__1__3_chanx_left_out[7] ;
+ wire \cbx_1__1__3_chanx_left_out[8] ;
+ wire \cbx_1__1__3_chanx_left_out[9] ;
+ wire \cbx_1__1__3_chanx_right_out[0] ;
+ wire \cbx_1__1__3_chanx_right_out[10] ;
+ wire \cbx_1__1__3_chanx_right_out[11] ;
+ wire \cbx_1__1__3_chanx_right_out[12] ;
+ wire \cbx_1__1__3_chanx_right_out[13] ;
+ wire \cbx_1__1__3_chanx_right_out[14] ;
+ wire \cbx_1__1__3_chanx_right_out[15] ;
+ wire \cbx_1__1__3_chanx_right_out[16] ;
+ wire \cbx_1__1__3_chanx_right_out[17] ;
+ wire \cbx_1__1__3_chanx_right_out[18] ;
+ wire \cbx_1__1__3_chanx_right_out[19] ;
+ wire \cbx_1__1__3_chanx_right_out[1] ;
+ wire \cbx_1__1__3_chanx_right_out[2] ;
+ wire \cbx_1__1__3_chanx_right_out[3] ;
+ wire \cbx_1__1__3_chanx_right_out[4] ;
+ wire \cbx_1__1__3_chanx_right_out[5] ;
+ wire \cbx_1__1__3_chanx_right_out[6] ;
+ wire \cbx_1__1__3_chanx_right_out[7] ;
+ wire \cbx_1__1__3_chanx_right_out[8] ;
+ wire \cbx_1__1__3_chanx_right_out[9] ;
+ wire cbx_1__1__40_bottom_grid_pin_0_;
+ wire cbx_1__1__40_bottom_grid_pin_10_;
+ wire cbx_1__1__40_bottom_grid_pin_11_;
+ wire cbx_1__1__40_bottom_grid_pin_12_;
+ wire cbx_1__1__40_bottom_grid_pin_13_;
+ wire cbx_1__1__40_bottom_grid_pin_14_;
+ wire cbx_1__1__40_bottom_grid_pin_15_;
+ wire cbx_1__1__40_bottom_grid_pin_1_;
+ wire cbx_1__1__40_bottom_grid_pin_2_;
+ wire cbx_1__1__40_bottom_grid_pin_3_;
+ wire cbx_1__1__40_bottom_grid_pin_4_;
+ wire cbx_1__1__40_bottom_grid_pin_5_;
+ wire cbx_1__1__40_bottom_grid_pin_6_;
+ wire cbx_1__1__40_bottom_grid_pin_7_;
+ wire cbx_1__1__40_bottom_grid_pin_8_;
+ wire cbx_1__1__40_bottom_grid_pin_9_;
+ wire cbx_1__1__40_ccff_tail;
+ wire \cbx_1__1__40_chanx_left_out[0] ;
+ wire \cbx_1__1__40_chanx_left_out[10] ;
+ wire \cbx_1__1__40_chanx_left_out[11] ;
+ wire \cbx_1__1__40_chanx_left_out[12] ;
+ wire \cbx_1__1__40_chanx_left_out[13] ;
+ wire \cbx_1__1__40_chanx_left_out[14] ;
+ wire \cbx_1__1__40_chanx_left_out[15] ;
+ wire \cbx_1__1__40_chanx_left_out[16] ;
+ wire \cbx_1__1__40_chanx_left_out[17] ;
+ wire \cbx_1__1__40_chanx_left_out[18] ;
+ wire \cbx_1__1__40_chanx_left_out[19] ;
+ wire \cbx_1__1__40_chanx_left_out[1] ;
+ wire \cbx_1__1__40_chanx_left_out[2] ;
+ wire \cbx_1__1__40_chanx_left_out[3] ;
+ wire \cbx_1__1__40_chanx_left_out[4] ;
+ wire \cbx_1__1__40_chanx_left_out[5] ;
+ wire \cbx_1__1__40_chanx_left_out[6] ;
+ wire \cbx_1__1__40_chanx_left_out[7] ;
+ wire \cbx_1__1__40_chanx_left_out[8] ;
+ wire \cbx_1__1__40_chanx_left_out[9] ;
+ wire \cbx_1__1__40_chanx_right_out[0] ;
+ wire \cbx_1__1__40_chanx_right_out[10] ;
+ wire \cbx_1__1__40_chanx_right_out[11] ;
+ wire \cbx_1__1__40_chanx_right_out[12] ;
+ wire \cbx_1__1__40_chanx_right_out[13] ;
+ wire \cbx_1__1__40_chanx_right_out[14] ;
+ wire \cbx_1__1__40_chanx_right_out[15] ;
+ wire \cbx_1__1__40_chanx_right_out[16] ;
+ wire \cbx_1__1__40_chanx_right_out[17] ;
+ wire \cbx_1__1__40_chanx_right_out[18] ;
+ wire \cbx_1__1__40_chanx_right_out[19] ;
+ wire \cbx_1__1__40_chanx_right_out[1] ;
+ wire \cbx_1__1__40_chanx_right_out[2] ;
+ wire \cbx_1__1__40_chanx_right_out[3] ;
+ wire \cbx_1__1__40_chanx_right_out[4] ;
+ wire \cbx_1__1__40_chanx_right_out[5] ;
+ wire \cbx_1__1__40_chanx_right_out[6] ;
+ wire \cbx_1__1__40_chanx_right_out[7] ;
+ wire \cbx_1__1__40_chanx_right_out[8] ;
+ wire \cbx_1__1__40_chanx_right_out[9] ;
+ wire cbx_1__1__41_bottom_grid_pin_0_;
+ wire cbx_1__1__41_bottom_grid_pin_10_;
+ wire cbx_1__1__41_bottom_grid_pin_11_;
+ wire cbx_1__1__41_bottom_grid_pin_12_;
+ wire cbx_1__1__41_bottom_grid_pin_13_;
+ wire cbx_1__1__41_bottom_grid_pin_14_;
+ wire cbx_1__1__41_bottom_grid_pin_15_;
+ wire cbx_1__1__41_bottom_grid_pin_1_;
+ wire cbx_1__1__41_bottom_grid_pin_2_;
+ wire cbx_1__1__41_bottom_grid_pin_3_;
+ wire cbx_1__1__41_bottom_grid_pin_4_;
+ wire cbx_1__1__41_bottom_grid_pin_5_;
+ wire cbx_1__1__41_bottom_grid_pin_6_;
+ wire cbx_1__1__41_bottom_grid_pin_7_;
+ wire cbx_1__1__41_bottom_grid_pin_8_;
+ wire cbx_1__1__41_bottom_grid_pin_9_;
+ wire cbx_1__1__41_ccff_tail;
+ wire \cbx_1__1__41_chanx_left_out[0] ;
+ wire \cbx_1__1__41_chanx_left_out[10] ;
+ wire \cbx_1__1__41_chanx_left_out[11] ;
+ wire \cbx_1__1__41_chanx_left_out[12] ;
+ wire \cbx_1__1__41_chanx_left_out[13] ;
+ wire \cbx_1__1__41_chanx_left_out[14] ;
+ wire \cbx_1__1__41_chanx_left_out[15] ;
+ wire \cbx_1__1__41_chanx_left_out[16] ;
+ wire \cbx_1__1__41_chanx_left_out[17] ;
+ wire \cbx_1__1__41_chanx_left_out[18] ;
+ wire \cbx_1__1__41_chanx_left_out[19] ;
+ wire \cbx_1__1__41_chanx_left_out[1] ;
+ wire \cbx_1__1__41_chanx_left_out[2] ;
+ wire \cbx_1__1__41_chanx_left_out[3] ;
+ wire \cbx_1__1__41_chanx_left_out[4] ;
+ wire \cbx_1__1__41_chanx_left_out[5] ;
+ wire \cbx_1__1__41_chanx_left_out[6] ;
+ wire \cbx_1__1__41_chanx_left_out[7] ;
+ wire \cbx_1__1__41_chanx_left_out[8] ;
+ wire \cbx_1__1__41_chanx_left_out[9] ;
+ wire \cbx_1__1__41_chanx_right_out[0] ;
+ wire \cbx_1__1__41_chanx_right_out[10] ;
+ wire \cbx_1__1__41_chanx_right_out[11] ;
+ wire \cbx_1__1__41_chanx_right_out[12] ;
+ wire \cbx_1__1__41_chanx_right_out[13] ;
+ wire \cbx_1__1__41_chanx_right_out[14] ;
+ wire \cbx_1__1__41_chanx_right_out[15] ;
+ wire \cbx_1__1__41_chanx_right_out[16] ;
+ wire \cbx_1__1__41_chanx_right_out[17] ;
+ wire \cbx_1__1__41_chanx_right_out[18] ;
+ wire \cbx_1__1__41_chanx_right_out[19] ;
+ wire \cbx_1__1__41_chanx_right_out[1] ;
+ wire \cbx_1__1__41_chanx_right_out[2] ;
+ wire \cbx_1__1__41_chanx_right_out[3] ;
+ wire \cbx_1__1__41_chanx_right_out[4] ;
+ wire \cbx_1__1__41_chanx_right_out[5] ;
+ wire \cbx_1__1__41_chanx_right_out[6] ;
+ wire \cbx_1__1__41_chanx_right_out[7] ;
+ wire \cbx_1__1__41_chanx_right_out[8] ;
+ wire \cbx_1__1__41_chanx_right_out[9] ;
+ wire cbx_1__1__42_bottom_grid_pin_0_;
+ wire cbx_1__1__42_bottom_grid_pin_10_;
+ wire cbx_1__1__42_bottom_grid_pin_11_;
+ wire cbx_1__1__42_bottom_grid_pin_12_;
+ wire cbx_1__1__42_bottom_grid_pin_13_;
+ wire cbx_1__1__42_bottom_grid_pin_14_;
+ wire cbx_1__1__42_bottom_grid_pin_15_;
+ wire cbx_1__1__42_bottom_grid_pin_1_;
+ wire cbx_1__1__42_bottom_grid_pin_2_;
+ wire cbx_1__1__42_bottom_grid_pin_3_;
+ wire cbx_1__1__42_bottom_grid_pin_4_;
+ wire cbx_1__1__42_bottom_grid_pin_5_;
+ wire cbx_1__1__42_bottom_grid_pin_6_;
+ wire cbx_1__1__42_bottom_grid_pin_7_;
+ wire cbx_1__1__42_bottom_grid_pin_8_;
+ wire cbx_1__1__42_bottom_grid_pin_9_;
+ wire cbx_1__1__42_ccff_tail;
+ wire \cbx_1__1__42_chanx_left_out[0] ;
+ wire \cbx_1__1__42_chanx_left_out[10] ;
+ wire \cbx_1__1__42_chanx_left_out[11] ;
+ wire \cbx_1__1__42_chanx_left_out[12] ;
+ wire \cbx_1__1__42_chanx_left_out[13] ;
+ wire \cbx_1__1__42_chanx_left_out[14] ;
+ wire \cbx_1__1__42_chanx_left_out[15] ;
+ wire \cbx_1__1__42_chanx_left_out[16] ;
+ wire \cbx_1__1__42_chanx_left_out[17] ;
+ wire \cbx_1__1__42_chanx_left_out[18] ;
+ wire \cbx_1__1__42_chanx_left_out[19] ;
+ wire \cbx_1__1__42_chanx_left_out[1] ;
+ wire \cbx_1__1__42_chanx_left_out[2] ;
+ wire \cbx_1__1__42_chanx_left_out[3] ;
+ wire \cbx_1__1__42_chanx_left_out[4] ;
+ wire \cbx_1__1__42_chanx_left_out[5] ;
+ wire \cbx_1__1__42_chanx_left_out[6] ;
+ wire \cbx_1__1__42_chanx_left_out[7] ;
+ wire \cbx_1__1__42_chanx_left_out[8] ;
+ wire \cbx_1__1__42_chanx_left_out[9] ;
+ wire \cbx_1__1__42_chanx_right_out[0] ;
+ wire \cbx_1__1__42_chanx_right_out[10] ;
+ wire \cbx_1__1__42_chanx_right_out[11] ;
+ wire \cbx_1__1__42_chanx_right_out[12] ;
+ wire \cbx_1__1__42_chanx_right_out[13] ;
+ wire \cbx_1__1__42_chanx_right_out[14] ;
+ wire \cbx_1__1__42_chanx_right_out[15] ;
+ wire \cbx_1__1__42_chanx_right_out[16] ;
+ wire \cbx_1__1__42_chanx_right_out[17] ;
+ wire \cbx_1__1__42_chanx_right_out[18] ;
+ wire \cbx_1__1__42_chanx_right_out[19] ;
+ wire \cbx_1__1__42_chanx_right_out[1] ;
+ wire \cbx_1__1__42_chanx_right_out[2] ;
+ wire \cbx_1__1__42_chanx_right_out[3] ;
+ wire \cbx_1__1__42_chanx_right_out[4] ;
+ wire \cbx_1__1__42_chanx_right_out[5] ;
+ wire \cbx_1__1__42_chanx_right_out[6] ;
+ wire \cbx_1__1__42_chanx_right_out[7] ;
+ wire \cbx_1__1__42_chanx_right_out[8] ;
+ wire \cbx_1__1__42_chanx_right_out[9] ;
+ wire cbx_1__1__43_bottom_grid_pin_0_;
+ wire cbx_1__1__43_bottom_grid_pin_10_;
+ wire cbx_1__1__43_bottom_grid_pin_11_;
+ wire cbx_1__1__43_bottom_grid_pin_12_;
+ wire cbx_1__1__43_bottom_grid_pin_13_;
+ wire cbx_1__1__43_bottom_grid_pin_14_;
+ wire cbx_1__1__43_bottom_grid_pin_15_;
+ wire cbx_1__1__43_bottom_grid_pin_1_;
+ wire cbx_1__1__43_bottom_grid_pin_2_;
+ wire cbx_1__1__43_bottom_grid_pin_3_;
+ wire cbx_1__1__43_bottom_grid_pin_4_;
+ wire cbx_1__1__43_bottom_grid_pin_5_;
+ wire cbx_1__1__43_bottom_grid_pin_6_;
+ wire cbx_1__1__43_bottom_grid_pin_7_;
+ wire cbx_1__1__43_bottom_grid_pin_8_;
+ wire cbx_1__1__43_bottom_grid_pin_9_;
+ wire cbx_1__1__43_ccff_tail;
+ wire \cbx_1__1__43_chanx_left_out[0] ;
+ wire \cbx_1__1__43_chanx_left_out[10] ;
+ wire \cbx_1__1__43_chanx_left_out[11] ;
+ wire \cbx_1__1__43_chanx_left_out[12] ;
+ wire \cbx_1__1__43_chanx_left_out[13] ;
+ wire \cbx_1__1__43_chanx_left_out[14] ;
+ wire \cbx_1__1__43_chanx_left_out[15] ;
+ wire \cbx_1__1__43_chanx_left_out[16] ;
+ wire \cbx_1__1__43_chanx_left_out[17] ;
+ wire \cbx_1__1__43_chanx_left_out[18] ;
+ wire \cbx_1__1__43_chanx_left_out[19] ;
+ wire \cbx_1__1__43_chanx_left_out[1] ;
+ wire \cbx_1__1__43_chanx_left_out[2] ;
+ wire \cbx_1__1__43_chanx_left_out[3] ;
+ wire \cbx_1__1__43_chanx_left_out[4] ;
+ wire \cbx_1__1__43_chanx_left_out[5] ;
+ wire \cbx_1__1__43_chanx_left_out[6] ;
+ wire \cbx_1__1__43_chanx_left_out[7] ;
+ wire \cbx_1__1__43_chanx_left_out[8] ;
+ wire \cbx_1__1__43_chanx_left_out[9] ;
+ wire \cbx_1__1__43_chanx_right_out[0] ;
+ wire \cbx_1__1__43_chanx_right_out[10] ;
+ wire \cbx_1__1__43_chanx_right_out[11] ;
+ wire \cbx_1__1__43_chanx_right_out[12] ;
+ wire \cbx_1__1__43_chanx_right_out[13] ;
+ wire \cbx_1__1__43_chanx_right_out[14] ;
+ wire \cbx_1__1__43_chanx_right_out[15] ;
+ wire \cbx_1__1__43_chanx_right_out[16] ;
+ wire \cbx_1__1__43_chanx_right_out[17] ;
+ wire \cbx_1__1__43_chanx_right_out[18] ;
+ wire \cbx_1__1__43_chanx_right_out[19] ;
+ wire \cbx_1__1__43_chanx_right_out[1] ;
+ wire \cbx_1__1__43_chanx_right_out[2] ;
+ wire \cbx_1__1__43_chanx_right_out[3] ;
+ wire \cbx_1__1__43_chanx_right_out[4] ;
+ wire \cbx_1__1__43_chanx_right_out[5] ;
+ wire \cbx_1__1__43_chanx_right_out[6] ;
+ wire \cbx_1__1__43_chanx_right_out[7] ;
+ wire \cbx_1__1__43_chanx_right_out[8] ;
+ wire \cbx_1__1__43_chanx_right_out[9] ;
+ wire cbx_1__1__44_bottom_grid_pin_0_;
+ wire cbx_1__1__44_bottom_grid_pin_10_;
+ wire cbx_1__1__44_bottom_grid_pin_11_;
+ wire cbx_1__1__44_bottom_grid_pin_12_;
+ wire cbx_1__1__44_bottom_grid_pin_13_;
+ wire cbx_1__1__44_bottom_grid_pin_14_;
+ wire cbx_1__1__44_bottom_grid_pin_15_;
+ wire cbx_1__1__44_bottom_grid_pin_1_;
+ wire cbx_1__1__44_bottom_grid_pin_2_;
+ wire cbx_1__1__44_bottom_grid_pin_3_;
+ wire cbx_1__1__44_bottom_grid_pin_4_;
+ wire cbx_1__1__44_bottom_grid_pin_5_;
+ wire cbx_1__1__44_bottom_grid_pin_6_;
+ wire cbx_1__1__44_bottom_grid_pin_7_;
+ wire cbx_1__1__44_bottom_grid_pin_8_;
+ wire cbx_1__1__44_bottom_grid_pin_9_;
+ wire cbx_1__1__44_ccff_tail;
+ wire \cbx_1__1__44_chanx_left_out[0] ;
+ wire \cbx_1__1__44_chanx_left_out[10] ;
+ wire \cbx_1__1__44_chanx_left_out[11] ;
+ wire \cbx_1__1__44_chanx_left_out[12] ;
+ wire \cbx_1__1__44_chanx_left_out[13] ;
+ wire \cbx_1__1__44_chanx_left_out[14] ;
+ wire \cbx_1__1__44_chanx_left_out[15] ;
+ wire \cbx_1__1__44_chanx_left_out[16] ;
+ wire \cbx_1__1__44_chanx_left_out[17] ;
+ wire \cbx_1__1__44_chanx_left_out[18] ;
+ wire \cbx_1__1__44_chanx_left_out[19] ;
+ wire \cbx_1__1__44_chanx_left_out[1] ;
+ wire \cbx_1__1__44_chanx_left_out[2] ;
+ wire \cbx_1__1__44_chanx_left_out[3] ;
+ wire \cbx_1__1__44_chanx_left_out[4] ;
+ wire \cbx_1__1__44_chanx_left_out[5] ;
+ wire \cbx_1__1__44_chanx_left_out[6] ;
+ wire \cbx_1__1__44_chanx_left_out[7] ;
+ wire \cbx_1__1__44_chanx_left_out[8] ;
+ wire \cbx_1__1__44_chanx_left_out[9] ;
+ wire \cbx_1__1__44_chanx_right_out[0] ;
+ wire \cbx_1__1__44_chanx_right_out[10] ;
+ wire \cbx_1__1__44_chanx_right_out[11] ;
+ wire \cbx_1__1__44_chanx_right_out[12] ;
+ wire \cbx_1__1__44_chanx_right_out[13] ;
+ wire \cbx_1__1__44_chanx_right_out[14] ;
+ wire \cbx_1__1__44_chanx_right_out[15] ;
+ wire \cbx_1__1__44_chanx_right_out[16] ;
+ wire \cbx_1__1__44_chanx_right_out[17] ;
+ wire \cbx_1__1__44_chanx_right_out[18] ;
+ wire \cbx_1__1__44_chanx_right_out[19] ;
+ wire \cbx_1__1__44_chanx_right_out[1] ;
+ wire \cbx_1__1__44_chanx_right_out[2] ;
+ wire \cbx_1__1__44_chanx_right_out[3] ;
+ wire \cbx_1__1__44_chanx_right_out[4] ;
+ wire \cbx_1__1__44_chanx_right_out[5] ;
+ wire \cbx_1__1__44_chanx_right_out[6] ;
+ wire \cbx_1__1__44_chanx_right_out[7] ;
+ wire \cbx_1__1__44_chanx_right_out[8] ;
+ wire \cbx_1__1__44_chanx_right_out[9] ;
+ wire cbx_1__1__45_bottom_grid_pin_0_;
+ wire cbx_1__1__45_bottom_grid_pin_10_;
+ wire cbx_1__1__45_bottom_grid_pin_11_;
+ wire cbx_1__1__45_bottom_grid_pin_12_;
+ wire cbx_1__1__45_bottom_grid_pin_13_;
+ wire cbx_1__1__45_bottom_grid_pin_14_;
+ wire cbx_1__1__45_bottom_grid_pin_15_;
+ wire cbx_1__1__45_bottom_grid_pin_1_;
+ wire cbx_1__1__45_bottom_grid_pin_2_;
+ wire cbx_1__1__45_bottom_grid_pin_3_;
+ wire cbx_1__1__45_bottom_grid_pin_4_;
+ wire cbx_1__1__45_bottom_grid_pin_5_;
+ wire cbx_1__1__45_bottom_grid_pin_6_;
+ wire cbx_1__1__45_bottom_grid_pin_7_;
+ wire cbx_1__1__45_bottom_grid_pin_8_;
+ wire cbx_1__1__45_bottom_grid_pin_9_;
+ wire cbx_1__1__45_ccff_tail;
+ wire \cbx_1__1__45_chanx_left_out[0] ;
+ wire \cbx_1__1__45_chanx_left_out[10] ;
+ wire \cbx_1__1__45_chanx_left_out[11] ;
+ wire \cbx_1__1__45_chanx_left_out[12] ;
+ wire \cbx_1__1__45_chanx_left_out[13] ;
+ wire \cbx_1__1__45_chanx_left_out[14] ;
+ wire \cbx_1__1__45_chanx_left_out[15] ;
+ wire \cbx_1__1__45_chanx_left_out[16] ;
+ wire \cbx_1__1__45_chanx_left_out[17] ;
+ wire \cbx_1__1__45_chanx_left_out[18] ;
+ wire \cbx_1__1__45_chanx_left_out[19] ;
+ wire \cbx_1__1__45_chanx_left_out[1] ;
+ wire \cbx_1__1__45_chanx_left_out[2] ;
+ wire \cbx_1__1__45_chanx_left_out[3] ;
+ wire \cbx_1__1__45_chanx_left_out[4] ;
+ wire \cbx_1__1__45_chanx_left_out[5] ;
+ wire \cbx_1__1__45_chanx_left_out[6] ;
+ wire \cbx_1__1__45_chanx_left_out[7] ;
+ wire \cbx_1__1__45_chanx_left_out[8] ;
+ wire \cbx_1__1__45_chanx_left_out[9] ;
+ wire \cbx_1__1__45_chanx_right_out[0] ;
+ wire \cbx_1__1__45_chanx_right_out[10] ;
+ wire \cbx_1__1__45_chanx_right_out[11] ;
+ wire \cbx_1__1__45_chanx_right_out[12] ;
+ wire \cbx_1__1__45_chanx_right_out[13] ;
+ wire \cbx_1__1__45_chanx_right_out[14] ;
+ wire \cbx_1__1__45_chanx_right_out[15] ;
+ wire \cbx_1__1__45_chanx_right_out[16] ;
+ wire \cbx_1__1__45_chanx_right_out[17] ;
+ wire \cbx_1__1__45_chanx_right_out[18] ;
+ wire \cbx_1__1__45_chanx_right_out[19] ;
+ wire \cbx_1__1__45_chanx_right_out[1] ;
+ wire \cbx_1__1__45_chanx_right_out[2] ;
+ wire \cbx_1__1__45_chanx_right_out[3] ;
+ wire \cbx_1__1__45_chanx_right_out[4] ;
+ wire \cbx_1__1__45_chanx_right_out[5] ;
+ wire \cbx_1__1__45_chanx_right_out[6] ;
+ wire \cbx_1__1__45_chanx_right_out[7] ;
+ wire \cbx_1__1__45_chanx_right_out[8] ;
+ wire \cbx_1__1__45_chanx_right_out[9] ;
+ wire cbx_1__1__46_bottom_grid_pin_0_;
+ wire cbx_1__1__46_bottom_grid_pin_10_;
+ wire cbx_1__1__46_bottom_grid_pin_11_;
+ wire cbx_1__1__46_bottom_grid_pin_12_;
+ wire cbx_1__1__46_bottom_grid_pin_13_;
+ wire cbx_1__1__46_bottom_grid_pin_14_;
+ wire cbx_1__1__46_bottom_grid_pin_15_;
+ wire cbx_1__1__46_bottom_grid_pin_1_;
+ wire cbx_1__1__46_bottom_grid_pin_2_;
+ wire cbx_1__1__46_bottom_grid_pin_3_;
+ wire cbx_1__1__46_bottom_grid_pin_4_;
+ wire cbx_1__1__46_bottom_grid_pin_5_;
+ wire cbx_1__1__46_bottom_grid_pin_6_;
+ wire cbx_1__1__46_bottom_grid_pin_7_;
+ wire cbx_1__1__46_bottom_grid_pin_8_;
+ wire cbx_1__1__46_bottom_grid_pin_9_;
+ wire cbx_1__1__46_ccff_tail;
+ wire \cbx_1__1__46_chanx_left_out[0] ;
+ wire \cbx_1__1__46_chanx_left_out[10] ;
+ wire \cbx_1__1__46_chanx_left_out[11] ;
+ wire \cbx_1__1__46_chanx_left_out[12] ;
+ wire \cbx_1__1__46_chanx_left_out[13] ;
+ wire \cbx_1__1__46_chanx_left_out[14] ;
+ wire \cbx_1__1__46_chanx_left_out[15] ;
+ wire \cbx_1__1__46_chanx_left_out[16] ;
+ wire \cbx_1__1__46_chanx_left_out[17] ;
+ wire \cbx_1__1__46_chanx_left_out[18] ;
+ wire \cbx_1__1__46_chanx_left_out[19] ;
+ wire \cbx_1__1__46_chanx_left_out[1] ;
+ wire \cbx_1__1__46_chanx_left_out[2] ;
+ wire \cbx_1__1__46_chanx_left_out[3] ;
+ wire \cbx_1__1__46_chanx_left_out[4] ;
+ wire \cbx_1__1__46_chanx_left_out[5] ;
+ wire \cbx_1__1__46_chanx_left_out[6] ;
+ wire \cbx_1__1__46_chanx_left_out[7] ;
+ wire \cbx_1__1__46_chanx_left_out[8] ;
+ wire \cbx_1__1__46_chanx_left_out[9] ;
+ wire \cbx_1__1__46_chanx_right_out[0] ;
+ wire \cbx_1__1__46_chanx_right_out[10] ;
+ wire \cbx_1__1__46_chanx_right_out[11] ;
+ wire \cbx_1__1__46_chanx_right_out[12] ;
+ wire \cbx_1__1__46_chanx_right_out[13] ;
+ wire \cbx_1__1__46_chanx_right_out[14] ;
+ wire \cbx_1__1__46_chanx_right_out[15] ;
+ wire \cbx_1__1__46_chanx_right_out[16] ;
+ wire \cbx_1__1__46_chanx_right_out[17] ;
+ wire \cbx_1__1__46_chanx_right_out[18] ;
+ wire \cbx_1__1__46_chanx_right_out[19] ;
+ wire \cbx_1__1__46_chanx_right_out[1] ;
+ wire \cbx_1__1__46_chanx_right_out[2] ;
+ wire \cbx_1__1__46_chanx_right_out[3] ;
+ wire \cbx_1__1__46_chanx_right_out[4] ;
+ wire \cbx_1__1__46_chanx_right_out[5] ;
+ wire \cbx_1__1__46_chanx_right_out[6] ;
+ wire \cbx_1__1__46_chanx_right_out[7] ;
+ wire \cbx_1__1__46_chanx_right_out[8] ;
+ wire \cbx_1__1__46_chanx_right_out[9] ;
+ wire cbx_1__1__47_bottom_grid_pin_0_;
+ wire cbx_1__1__47_bottom_grid_pin_10_;
+ wire cbx_1__1__47_bottom_grid_pin_11_;
+ wire cbx_1__1__47_bottom_grid_pin_12_;
+ wire cbx_1__1__47_bottom_grid_pin_13_;
+ wire cbx_1__1__47_bottom_grid_pin_14_;
+ wire cbx_1__1__47_bottom_grid_pin_15_;
+ wire cbx_1__1__47_bottom_grid_pin_1_;
+ wire cbx_1__1__47_bottom_grid_pin_2_;
+ wire cbx_1__1__47_bottom_grid_pin_3_;
+ wire cbx_1__1__47_bottom_grid_pin_4_;
+ wire cbx_1__1__47_bottom_grid_pin_5_;
+ wire cbx_1__1__47_bottom_grid_pin_6_;
+ wire cbx_1__1__47_bottom_grid_pin_7_;
+ wire cbx_1__1__47_bottom_grid_pin_8_;
+ wire cbx_1__1__47_bottom_grid_pin_9_;
+ wire cbx_1__1__47_ccff_tail;
+ wire \cbx_1__1__47_chanx_left_out[0] ;
+ wire \cbx_1__1__47_chanx_left_out[10] ;
+ wire \cbx_1__1__47_chanx_left_out[11] ;
+ wire \cbx_1__1__47_chanx_left_out[12] ;
+ wire \cbx_1__1__47_chanx_left_out[13] ;
+ wire \cbx_1__1__47_chanx_left_out[14] ;
+ wire \cbx_1__1__47_chanx_left_out[15] ;
+ wire \cbx_1__1__47_chanx_left_out[16] ;
+ wire \cbx_1__1__47_chanx_left_out[17] ;
+ wire \cbx_1__1__47_chanx_left_out[18] ;
+ wire \cbx_1__1__47_chanx_left_out[19] ;
+ wire \cbx_1__1__47_chanx_left_out[1] ;
+ wire \cbx_1__1__47_chanx_left_out[2] ;
+ wire \cbx_1__1__47_chanx_left_out[3] ;
+ wire \cbx_1__1__47_chanx_left_out[4] ;
+ wire \cbx_1__1__47_chanx_left_out[5] ;
+ wire \cbx_1__1__47_chanx_left_out[6] ;
+ wire \cbx_1__1__47_chanx_left_out[7] ;
+ wire \cbx_1__1__47_chanx_left_out[8] ;
+ wire \cbx_1__1__47_chanx_left_out[9] ;
+ wire \cbx_1__1__47_chanx_right_out[0] ;
+ wire \cbx_1__1__47_chanx_right_out[10] ;
+ wire \cbx_1__1__47_chanx_right_out[11] ;
+ wire \cbx_1__1__47_chanx_right_out[12] ;
+ wire \cbx_1__1__47_chanx_right_out[13] ;
+ wire \cbx_1__1__47_chanx_right_out[14] ;
+ wire \cbx_1__1__47_chanx_right_out[15] ;
+ wire \cbx_1__1__47_chanx_right_out[16] ;
+ wire \cbx_1__1__47_chanx_right_out[17] ;
+ wire \cbx_1__1__47_chanx_right_out[18] ;
+ wire \cbx_1__1__47_chanx_right_out[19] ;
+ wire \cbx_1__1__47_chanx_right_out[1] ;
+ wire \cbx_1__1__47_chanx_right_out[2] ;
+ wire \cbx_1__1__47_chanx_right_out[3] ;
+ wire \cbx_1__1__47_chanx_right_out[4] ;
+ wire \cbx_1__1__47_chanx_right_out[5] ;
+ wire \cbx_1__1__47_chanx_right_out[6] ;
+ wire \cbx_1__1__47_chanx_right_out[7] ;
+ wire \cbx_1__1__47_chanx_right_out[8] ;
+ wire \cbx_1__1__47_chanx_right_out[9] ;
+ wire cbx_1__1__48_bottom_grid_pin_0_;
+ wire cbx_1__1__48_bottom_grid_pin_10_;
+ wire cbx_1__1__48_bottom_grid_pin_11_;
+ wire cbx_1__1__48_bottom_grid_pin_12_;
+ wire cbx_1__1__48_bottom_grid_pin_13_;
+ wire cbx_1__1__48_bottom_grid_pin_14_;
+ wire cbx_1__1__48_bottom_grid_pin_15_;
+ wire cbx_1__1__48_bottom_grid_pin_1_;
+ wire cbx_1__1__48_bottom_grid_pin_2_;
+ wire cbx_1__1__48_bottom_grid_pin_3_;
+ wire cbx_1__1__48_bottom_grid_pin_4_;
+ wire cbx_1__1__48_bottom_grid_pin_5_;
+ wire cbx_1__1__48_bottom_grid_pin_6_;
+ wire cbx_1__1__48_bottom_grid_pin_7_;
+ wire cbx_1__1__48_bottom_grid_pin_8_;
+ wire cbx_1__1__48_bottom_grid_pin_9_;
+ wire cbx_1__1__48_ccff_tail;
+ wire \cbx_1__1__48_chanx_left_out[0] ;
+ wire \cbx_1__1__48_chanx_left_out[10] ;
+ wire \cbx_1__1__48_chanx_left_out[11] ;
+ wire \cbx_1__1__48_chanx_left_out[12] ;
+ wire \cbx_1__1__48_chanx_left_out[13] ;
+ wire \cbx_1__1__48_chanx_left_out[14] ;
+ wire \cbx_1__1__48_chanx_left_out[15] ;
+ wire \cbx_1__1__48_chanx_left_out[16] ;
+ wire \cbx_1__1__48_chanx_left_out[17] ;
+ wire \cbx_1__1__48_chanx_left_out[18] ;
+ wire \cbx_1__1__48_chanx_left_out[19] ;
+ wire \cbx_1__1__48_chanx_left_out[1] ;
+ wire \cbx_1__1__48_chanx_left_out[2] ;
+ wire \cbx_1__1__48_chanx_left_out[3] ;
+ wire \cbx_1__1__48_chanx_left_out[4] ;
+ wire \cbx_1__1__48_chanx_left_out[5] ;
+ wire \cbx_1__1__48_chanx_left_out[6] ;
+ wire \cbx_1__1__48_chanx_left_out[7] ;
+ wire \cbx_1__1__48_chanx_left_out[8] ;
+ wire \cbx_1__1__48_chanx_left_out[9] ;
+ wire \cbx_1__1__48_chanx_right_out[0] ;
+ wire \cbx_1__1__48_chanx_right_out[10] ;
+ wire \cbx_1__1__48_chanx_right_out[11] ;
+ wire \cbx_1__1__48_chanx_right_out[12] ;
+ wire \cbx_1__1__48_chanx_right_out[13] ;
+ wire \cbx_1__1__48_chanx_right_out[14] ;
+ wire \cbx_1__1__48_chanx_right_out[15] ;
+ wire \cbx_1__1__48_chanx_right_out[16] ;
+ wire \cbx_1__1__48_chanx_right_out[17] ;
+ wire \cbx_1__1__48_chanx_right_out[18] ;
+ wire \cbx_1__1__48_chanx_right_out[19] ;
+ wire \cbx_1__1__48_chanx_right_out[1] ;
+ wire \cbx_1__1__48_chanx_right_out[2] ;
+ wire \cbx_1__1__48_chanx_right_out[3] ;
+ wire \cbx_1__1__48_chanx_right_out[4] ;
+ wire \cbx_1__1__48_chanx_right_out[5] ;
+ wire \cbx_1__1__48_chanx_right_out[6] ;
+ wire \cbx_1__1__48_chanx_right_out[7] ;
+ wire \cbx_1__1__48_chanx_right_out[8] ;
+ wire \cbx_1__1__48_chanx_right_out[9] ;
+ wire cbx_1__1__49_bottom_grid_pin_0_;
+ wire cbx_1__1__49_bottom_grid_pin_10_;
+ wire cbx_1__1__49_bottom_grid_pin_11_;
+ wire cbx_1__1__49_bottom_grid_pin_12_;
+ wire cbx_1__1__49_bottom_grid_pin_13_;
+ wire cbx_1__1__49_bottom_grid_pin_14_;
+ wire cbx_1__1__49_bottom_grid_pin_15_;
+ wire cbx_1__1__49_bottom_grid_pin_1_;
+ wire cbx_1__1__49_bottom_grid_pin_2_;
+ wire cbx_1__1__49_bottom_grid_pin_3_;
+ wire cbx_1__1__49_bottom_grid_pin_4_;
+ wire cbx_1__1__49_bottom_grid_pin_5_;
+ wire cbx_1__1__49_bottom_grid_pin_6_;
+ wire cbx_1__1__49_bottom_grid_pin_7_;
+ wire cbx_1__1__49_bottom_grid_pin_8_;
+ wire cbx_1__1__49_bottom_grid_pin_9_;
+ wire cbx_1__1__49_ccff_tail;
+ wire \cbx_1__1__49_chanx_left_out[0] ;
+ wire \cbx_1__1__49_chanx_left_out[10] ;
+ wire \cbx_1__1__49_chanx_left_out[11] ;
+ wire \cbx_1__1__49_chanx_left_out[12] ;
+ wire \cbx_1__1__49_chanx_left_out[13] ;
+ wire \cbx_1__1__49_chanx_left_out[14] ;
+ wire \cbx_1__1__49_chanx_left_out[15] ;
+ wire \cbx_1__1__49_chanx_left_out[16] ;
+ wire \cbx_1__1__49_chanx_left_out[17] ;
+ wire \cbx_1__1__49_chanx_left_out[18] ;
+ wire \cbx_1__1__49_chanx_left_out[19] ;
+ wire \cbx_1__1__49_chanx_left_out[1] ;
+ wire \cbx_1__1__49_chanx_left_out[2] ;
+ wire \cbx_1__1__49_chanx_left_out[3] ;
+ wire \cbx_1__1__49_chanx_left_out[4] ;
+ wire \cbx_1__1__49_chanx_left_out[5] ;
+ wire \cbx_1__1__49_chanx_left_out[6] ;
+ wire \cbx_1__1__49_chanx_left_out[7] ;
+ wire \cbx_1__1__49_chanx_left_out[8] ;
+ wire \cbx_1__1__49_chanx_left_out[9] ;
+ wire \cbx_1__1__49_chanx_right_out[0] ;
+ wire \cbx_1__1__49_chanx_right_out[10] ;
+ wire \cbx_1__1__49_chanx_right_out[11] ;
+ wire \cbx_1__1__49_chanx_right_out[12] ;
+ wire \cbx_1__1__49_chanx_right_out[13] ;
+ wire \cbx_1__1__49_chanx_right_out[14] ;
+ wire \cbx_1__1__49_chanx_right_out[15] ;
+ wire \cbx_1__1__49_chanx_right_out[16] ;
+ wire \cbx_1__1__49_chanx_right_out[17] ;
+ wire \cbx_1__1__49_chanx_right_out[18] ;
+ wire \cbx_1__1__49_chanx_right_out[19] ;
+ wire \cbx_1__1__49_chanx_right_out[1] ;
+ wire \cbx_1__1__49_chanx_right_out[2] ;
+ wire \cbx_1__1__49_chanx_right_out[3] ;
+ wire \cbx_1__1__49_chanx_right_out[4] ;
+ wire \cbx_1__1__49_chanx_right_out[5] ;
+ wire \cbx_1__1__49_chanx_right_out[6] ;
+ wire \cbx_1__1__49_chanx_right_out[7] ;
+ wire \cbx_1__1__49_chanx_right_out[8] ;
+ wire \cbx_1__1__49_chanx_right_out[9] ;
+ wire cbx_1__1__4_bottom_grid_pin_0_;
+ wire cbx_1__1__4_bottom_grid_pin_10_;
+ wire cbx_1__1__4_bottom_grid_pin_11_;
+ wire cbx_1__1__4_bottom_grid_pin_12_;
+ wire cbx_1__1__4_bottom_grid_pin_13_;
+ wire cbx_1__1__4_bottom_grid_pin_14_;
+ wire cbx_1__1__4_bottom_grid_pin_15_;
+ wire cbx_1__1__4_bottom_grid_pin_1_;
+ wire cbx_1__1__4_bottom_grid_pin_2_;
+ wire cbx_1__1__4_bottom_grid_pin_3_;
+ wire cbx_1__1__4_bottom_grid_pin_4_;
+ wire cbx_1__1__4_bottom_grid_pin_5_;
+ wire cbx_1__1__4_bottom_grid_pin_6_;
+ wire cbx_1__1__4_bottom_grid_pin_7_;
+ wire cbx_1__1__4_bottom_grid_pin_8_;
+ wire cbx_1__1__4_bottom_grid_pin_9_;
+ wire cbx_1__1__4_ccff_tail;
+ wire \cbx_1__1__4_chanx_left_out[0] ;
+ wire \cbx_1__1__4_chanx_left_out[10] ;
+ wire \cbx_1__1__4_chanx_left_out[11] ;
+ wire \cbx_1__1__4_chanx_left_out[12] ;
+ wire \cbx_1__1__4_chanx_left_out[13] ;
+ wire \cbx_1__1__4_chanx_left_out[14] ;
+ wire \cbx_1__1__4_chanx_left_out[15] ;
+ wire \cbx_1__1__4_chanx_left_out[16] ;
+ wire \cbx_1__1__4_chanx_left_out[17] ;
+ wire \cbx_1__1__4_chanx_left_out[18] ;
+ wire \cbx_1__1__4_chanx_left_out[19] ;
+ wire \cbx_1__1__4_chanx_left_out[1] ;
+ wire \cbx_1__1__4_chanx_left_out[2] ;
+ wire \cbx_1__1__4_chanx_left_out[3] ;
+ wire \cbx_1__1__4_chanx_left_out[4] ;
+ wire \cbx_1__1__4_chanx_left_out[5] ;
+ wire \cbx_1__1__4_chanx_left_out[6] ;
+ wire \cbx_1__1__4_chanx_left_out[7] ;
+ wire \cbx_1__1__4_chanx_left_out[8] ;
+ wire \cbx_1__1__4_chanx_left_out[9] ;
+ wire \cbx_1__1__4_chanx_right_out[0] ;
+ wire \cbx_1__1__4_chanx_right_out[10] ;
+ wire \cbx_1__1__4_chanx_right_out[11] ;
+ wire \cbx_1__1__4_chanx_right_out[12] ;
+ wire \cbx_1__1__4_chanx_right_out[13] ;
+ wire \cbx_1__1__4_chanx_right_out[14] ;
+ wire \cbx_1__1__4_chanx_right_out[15] ;
+ wire \cbx_1__1__4_chanx_right_out[16] ;
+ wire \cbx_1__1__4_chanx_right_out[17] ;
+ wire \cbx_1__1__4_chanx_right_out[18] ;
+ wire \cbx_1__1__4_chanx_right_out[19] ;
+ wire \cbx_1__1__4_chanx_right_out[1] ;
+ wire \cbx_1__1__4_chanx_right_out[2] ;
+ wire \cbx_1__1__4_chanx_right_out[3] ;
+ wire \cbx_1__1__4_chanx_right_out[4] ;
+ wire \cbx_1__1__4_chanx_right_out[5] ;
+ wire \cbx_1__1__4_chanx_right_out[6] ;
+ wire \cbx_1__1__4_chanx_right_out[7] ;
+ wire \cbx_1__1__4_chanx_right_out[8] ;
+ wire \cbx_1__1__4_chanx_right_out[9] ;
+ wire cbx_1__1__50_bottom_grid_pin_0_;
+ wire cbx_1__1__50_bottom_grid_pin_10_;
+ wire cbx_1__1__50_bottom_grid_pin_11_;
+ wire cbx_1__1__50_bottom_grid_pin_12_;
+ wire cbx_1__1__50_bottom_grid_pin_13_;
+ wire cbx_1__1__50_bottom_grid_pin_14_;
+ wire cbx_1__1__50_bottom_grid_pin_15_;
+ wire cbx_1__1__50_bottom_grid_pin_1_;
+ wire cbx_1__1__50_bottom_grid_pin_2_;
+ wire cbx_1__1__50_bottom_grid_pin_3_;
+ wire cbx_1__1__50_bottom_grid_pin_4_;
+ wire cbx_1__1__50_bottom_grid_pin_5_;
+ wire cbx_1__1__50_bottom_grid_pin_6_;
+ wire cbx_1__1__50_bottom_grid_pin_7_;
+ wire cbx_1__1__50_bottom_grid_pin_8_;
+ wire cbx_1__1__50_bottom_grid_pin_9_;
+ wire cbx_1__1__50_ccff_tail;
+ wire \cbx_1__1__50_chanx_left_out[0] ;
+ wire \cbx_1__1__50_chanx_left_out[10] ;
+ wire \cbx_1__1__50_chanx_left_out[11] ;
+ wire \cbx_1__1__50_chanx_left_out[12] ;
+ wire \cbx_1__1__50_chanx_left_out[13] ;
+ wire \cbx_1__1__50_chanx_left_out[14] ;
+ wire \cbx_1__1__50_chanx_left_out[15] ;
+ wire \cbx_1__1__50_chanx_left_out[16] ;
+ wire \cbx_1__1__50_chanx_left_out[17] ;
+ wire \cbx_1__1__50_chanx_left_out[18] ;
+ wire \cbx_1__1__50_chanx_left_out[19] ;
+ wire \cbx_1__1__50_chanx_left_out[1] ;
+ wire \cbx_1__1__50_chanx_left_out[2] ;
+ wire \cbx_1__1__50_chanx_left_out[3] ;
+ wire \cbx_1__1__50_chanx_left_out[4] ;
+ wire \cbx_1__1__50_chanx_left_out[5] ;
+ wire \cbx_1__1__50_chanx_left_out[6] ;
+ wire \cbx_1__1__50_chanx_left_out[7] ;
+ wire \cbx_1__1__50_chanx_left_out[8] ;
+ wire \cbx_1__1__50_chanx_left_out[9] ;
+ wire \cbx_1__1__50_chanx_right_out[0] ;
+ wire \cbx_1__1__50_chanx_right_out[10] ;
+ wire \cbx_1__1__50_chanx_right_out[11] ;
+ wire \cbx_1__1__50_chanx_right_out[12] ;
+ wire \cbx_1__1__50_chanx_right_out[13] ;
+ wire \cbx_1__1__50_chanx_right_out[14] ;
+ wire \cbx_1__1__50_chanx_right_out[15] ;
+ wire \cbx_1__1__50_chanx_right_out[16] ;
+ wire \cbx_1__1__50_chanx_right_out[17] ;
+ wire \cbx_1__1__50_chanx_right_out[18] ;
+ wire \cbx_1__1__50_chanx_right_out[19] ;
+ wire \cbx_1__1__50_chanx_right_out[1] ;
+ wire \cbx_1__1__50_chanx_right_out[2] ;
+ wire \cbx_1__1__50_chanx_right_out[3] ;
+ wire \cbx_1__1__50_chanx_right_out[4] ;
+ wire \cbx_1__1__50_chanx_right_out[5] ;
+ wire \cbx_1__1__50_chanx_right_out[6] ;
+ wire \cbx_1__1__50_chanx_right_out[7] ;
+ wire \cbx_1__1__50_chanx_right_out[8] ;
+ wire \cbx_1__1__50_chanx_right_out[9] ;
+ wire cbx_1__1__51_bottom_grid_pin_0_;
+ wire cbx_1__1__51_bottom_grid_pin_10_;
+ wire cbx_1__1__51_bottom_grid_pin_11_;
+ wire cbx_1__1__51_bottom_grid_pin_12_;
+ wire cbx_1__1__51_bottom_grid_pin_13_;
+ wire cbx_1__1__51_bottom_grid_pin_14_;
+ wire cbx_1__1__51_bottom_grid_pin_15_;
+ wire cbx_1__1__51_bottom_grid_pin_1_;
+ wire cbx_1__1__51_bottom_grid_pin_2_;
+ wire cbx_1__1__51_bottom_grid_pin_3_;
+ wire cbx_1__1__51_bottom_grid_pin_4_;
+ wire cbx_1__1__51_bottom_grid_pin_5_;
+ wire cbx_1__1__51_bottom_grid_pin_6_;
+ wire cbx_1__1__51_bottom_grid_pin_7_;
+ wire cbx_1__1__51_bottom_grid_pin_8_;
+ wire cbx_1__1__51_bottom_grid_pin_9_;
+ wire cbx_1__1__51_ccff_tail;
+ wire \cbx_1__1__51_chanx_left_out[0] ;
+ wire \cbx_1__1__51_chanx_left_out[10] ;
+ wire \cbx_1__1__51_chanx_left_out[11] ;
+ wire \cbx_1__1__51_chanx_left_out[12] ;
+ wire \cbx_1__1__51_chanx_left_out[13] ;
+ wire \cbx_1__1__51_chanx_left_out[14] ;
+ wire \cbx_1__1__51_chanx_left_out[15] ;
+ wire \cbx_1__1__51_chanx_left_out[16] ;
+ wire \cbx_1__1__51_chanx_left_out[17] ;
+ wire \cbx_1__1__51_chanx_left_out[18] ;
+ wire \cbx_1__1__51_chanx_left_out[19] ;
+ wire \cbx_1__1__51_chanx_left_out[1] ;
+ wire \cbx_1__1__51_chanx_left_out[2] ;
+ wire \cbx_1__1__51_chanx_left_out[3] ;
+ wire \cbx_1__1__51_chanx_left_out[4] ;
+ wire \cbx_1__1__51_chanx_left_out[5] ;
+ wire \cbx_1__1__51_chanx_left_out[6] ;
+ wire \cbx_1__1__51_chanx_left_out[7] ;
+ wire \cbx_1__1__51_chanx_left_out[8] ;
+ wire \cbx_1__1__51_chanx_left_out[9] ;
+ wire \cbx_1__1__51_chanx_right_out[0] ;
+ wire \cbx_1__1__51_chanx_right_out[10] ;
+ wire \cbx_1__1__51_chanx_right_out[11] ;
+ wire \cbx_1__1__51_chanx_right_out[12] ;
+ wire \cbx_1__1__51_chanx_right_out[13] ;
+ wire \cbx_1__1__51_chanx_right_out[14] ;
+ wire \cbx_1__1__51_chanx_right_out[15] ;
+ wire \cbx_1__1__51_chanx_right_out[16] ;
+ wire \cbx_1__1__51_chanx_right_out[17] ;
+ wire \cbx_1__1__51_chanx_right_out[18] ;
+ wire \cbx_1__1__51_chanx_right_out[19] ;
+ wire \cbx_1__1__51_chanx_right_out[1] ;
+ wire \cbx_1__1__51_chanx_right_out[2] ;
+ wire \cbx_1__1__51_chanx_right_out[3] ;
+ wire \cbx_1__1__51_chanx_right_out[4] ;
+ wire \cbx_1__1__51_chanx_right_out[5] ;
+ wire \cbx_1__1__51_chanx_right_out[6] ;
+ wire \cbx_1__1__51_chanx_right_out[7] ;
+ wire \cbx_1__1__51_chanx_right_out[8] ;
+ wire \cbx_1__1__51_chanx_right_out[9] ;
+ wire cbx_1__1__52_bottom_grid_pin_0_;
+ wire cbx_1__1__52_bottom_grid_pin_10_;
+ wire cbx_1__1__52_bottom_grid_pin_11_;
+ wire cbx_1__1__52_bottom_grid_pin_12_;
+ wire cbx_1__1__52_bottom_grid_pin_13_;
+ wire cbx_1__1__52_bottom_grid_pin_14_;
+ wire cbx_1__1__52_bottom_grid_pin_15_;
+ wire cbx_1__1__52_bottom_grid_pin_1_;
+ wire cbx_1__1__52_bottom_grid_pin_2_;
+ wire cbx_1__1__52_bottom_grid_pin_3_;
+ wire cbx_1__1__52_bottom_grid_pin_4_;
+ wire cbx_1__1__52_bottom_grid_pin_5_;
+ wire cbx_1__1__52_bottom_grid_pin_6_;
+ wire cbx_1__1__52_bottom_grid_pin_7_;
+ wire cbx_1__1__52_bottom_grid_pin_8_;
+ wire cbx_1__1__52_bottom_grid_pin_9_;
+ wire cbx_1__1__52_ccff_tail;
+ wire \cbx_1__1__52_chanx_left_out[0] ;
+ wire \cbx_1__1__52_chanx_left_out[10] ;
+ wire \cbx_1__1__52_chanx_left_out[11] ;
+ wire \cbx_1__1__52_chanx_left_out[12] ;
+ wire \cbx_1__1__52_chanx_left_out[13] ;
+ wire \cbx_1__1__52_chanx_left_out[14] ;
+ wire \cbx_1__1__52_chanx_left_out[15] ;
+ wire \cbx_1__1__52_chanx_left_out[16] ;
+ wire \cbx_1__1__52_chanx_left_out[17] ;
+ wire \cbx_1__1__52_chanx_left_out[18] ;
+ wire \cbx_1__1__52_chanx_left_out[19] ;
+ wire \cbx_1__1__52_chanx_left_out[1] ;
+ wire \cbx_1__1__52_chanx_left_out[2] ;
+ wire \cbx_1__1__52_chanx_left_out[3] ;
+ wire \cbx_1__1__52_chanx_left_out[4] ;
+ wire \cbx_1__1__52_chanx_left_out[5] ;
+ wire \cbx_1__1__52_chanx_left_out[6] ;
+ wire \cbx_1__1__52_chanx_left_out[7] ;
+ wire \cbx_1__1__52_chanx_left_out[8] ;
+ wire \cbx_1__1__52_chanx_left_out[9] ;
+ wire \cbx_1__1__52_chanx_right_out[0] ;
+ wire \cbx_1__1__52_chanx_right_out[10] ;
+ wire \cbx_1__1__52_chanx_right_out[11] ;
+ wire \cbx_1__1__52_chanx_right_out[12] ;
+ wire \cbx_1__1__52_chanx_right_out[13] ;
+ wire \cbx_1__1__52_chanx_right_out[14] ;
+ wire \cbx_1__1__52_chanx_right_out[15] ;
+ wire \cbx_1__1__52_chanx_right_out[16] ;
+ wire \cbx_1__1__52_chanx_right_out[17] ;
+ wire \cbx_1__1__52_chanx_right_out[18] ;
+ wire \cbx_1__1__52_chanx_right_out[19] ;
+ wire \cbx_1__1__52_chanx_right_out[1] ;
+ wire \cbx_1__1__52_chanx_right_out[2] ;
+ wire \cbx_1__1__52_chanx_right_out[3] ;
+ wire \cbx_1__1__52_chanx_right_out[4] ;
+ wire \cbx_1__1__52_chanx_right_out[5] ;
+ wire \cbx_1__1__52_chanx_right_out[6] ;
+ wire \cbx_1__1__52_chanx_right_out[7] ;
+ wire \cbx_1__1__52_chanx_right_out[8] ;
+ wire \cbx_1__1__52_chanx_right_out[9] ;
+ wire cbx_1__1__53_bottom_grid_pin_0_;
+ wire cbx_1__1__53_bottom_grid_pin_10_;
+ wire cbx_1__1__53_bottom_grid_pin_11_;
+ wire cbx_1__1__53_bottom_grid_pin_12_;
+ wire cbx_1__1__53_bottom_grid_pin_13_;
+ wire cbx_1__1__53_bottom_grid_pin_14_;
+ wire cbx_1__1__53_bottom_grid_pin_15_;
+ wire cbx_1__1__53_bottom_grid_pin_1_;
+ wire cbx_1__1__53_bottom_grid_pin_2_;
+ wire cbx_1__1__53_bottom_grid_pin_3_;
+ wire cbx_1__1__53_bottom_grid_pin_4_;
+ wire cbx_1__1__53_bottom_grid_pin_5_;
+ wire cbx_1__1__53_bottom_grid_pin_6_;
+ wire cbx_1__1__53_bottom_grid_pin_7_;
+ wire cbx_1__1__53_bottom_grid_pin_8_;
+ wire cbx_1__1__53_bottom_grid_pin_9_;
+ wire cbx_1__1__53_ccff_tail;
+ wire \cbx_1__1__53_chanx_left_out[0] ;
+ wire \cbx_1__1__53_chanx_left_out[10] ;
+ wire \cbx_1__1__53_chanx_left_out[11] ;
+ wire \cbx_1__1__53_chanx_left_out[12] ;
+ wire \cbx_1__1__53_chanx_left_out[13] ;
+ wire \cbx_1__1__53_chanx_left_out[14] ;
+ wire \cbx_1__1__53_chanx_left_out[15] ;
+ wire \cbx_1__1__53_chanx_left_out[16] ;
+ wire \cbx_1__1__53_chanx_left_out[17] ;
+ wire \cbx_1__1__53_chanx_left_out[18] ;
+ wire \cbx_1__1__53_chanx_left_out[19] ;
+ wire \cbx_1__1__53_chanx_left_out[1] ;
+ wire \cbx_1__1__53_chanx_left_out[2] ;
+ wire \cbx_1__1__53_chanx_left_out[3] ;
+ wire \cbx_1__1__53_chanx_left_out[4] ;
+ wire \cbx_1__1__53_chanx_left_out[5] ;
+ wire \cbx_1__1__53_chanx_left_out[6] ;
+ wire \cbx_1__1__53_chanx_left_out[7] ;
+ wire \cbx_1__1__53_chanx_left_out[8] ;
+ wire \cbx_1__1__53_chanx_left_out[9] ;
+ wire \cbx_1__1__53_chanx_right_out[0] ;
+ wire \cbx_1__1__53_chanx_right_out[10] ;
+ wire \cbx_1__1__53_chanx_right_out[11] ;
+ wire \cbx_1__1__53_chanx_right_out[12] ;
+ wire \cbx_1__1__53_chanx_right_out[13] ;
+ wire \cbx_1__1__53_chanx_right_out[14] ;
+ wire \cbx_1__1__53_chanx_right_out[15] ;
+ wire \cbx_1__1__53_chanx_right_out[16] ;
+ wire \cbx_1__1__53_chanx_right_out[17] ;
+ wire \cbx_1__1__53_chanx_right_out[18] ;
+ wire \cbx_1__1__53_chanx_right_out[19] ;
+ wire \cbx_1__1__53_chanx_right_out[1] ;
+ wire \cbx_1__1__53_chanx_right_out[2] ;
+ wire \cbx_1__1__53_chanx_right_out[3] ;
+ wire \cbx_1__1__53_chanx_right_out[4] ;
+ wire \cbx_1__1__53_chanx_right_out[5] ;
+ wire \cbx_1__1__53_chanx_right_out[6] ;
+ wire \cbx_1__1__53_chanx_right_out[7] ;
+ wire \cbx_1__1__53_chanx_right_out[8] ;
+ wire \cbx_1__1__53_chanx_right_out[9] ;
+ wire cbx_1__1__54_bottom_grid_pin_0_;
+ wire cbx_1__1__54_bottom_grid_pin_10_;
+ wire cbx_1__1__54_bottom_grid_pin_11_;
+ wire cbx_1__1__54_bottom_grid_pin_12_;
+ wire cbx_1__1__54_bottom_grid_pin_13_;
+ wire cbx_1__1__54_bottom_grid_pin_14_;
+ wire cbx_1__1__54_bottom_grid_pin_15_;
+ wire cbx_1__1__54_bottom_grid_pin_1_;
+ wire cbx_1__1__54_bottom_grid_pin_2_;
+ wire cbx_1__1__54_bottom_grid_pin_3_;
+ wire cbx_1__1__54_bottom_grid_pin_4_;
+ wire cbx_1__1__54_bottom_grid_pin_5_;
+ wire cbx_1__1__54_bottom_grid_pin_6_;
+ wire cbx_1__1__54_bottom_grid_pin_7_;
+ wire cbx_1__1__54_bottom_grid_pin_8_;
+ wire cbx_1__1__54_bottom_grid_pin_9_;
+ wire cbx_1__1__54_ccff_tail;
+ wire \cbx_1__1__54_chanx_left_out[0] ;
+ wire \cbx_1__1__54_chanx_left_out[10] ;
+ wire \cbx_1__1__54_chanx_left_out[11] ;
+ wire \cbx_1__1__54_chanx_left_out[12] ;
+ wire \cbx_1__1__54_chanx_left_out[13] ;
+ wire \cbx_1__1__54_chanx_left_out[14] ;
+ wire \cbx_1__1__54_chanx_left_out[15] ;
+ wire \cbx_1__1__54_chanx_left_out[16] ;
+ wire \cbx_1__1__54_chanx_left_out[17] ;
+ wire \cbx_1__1__54_chanx_left_out[18] ;
+ wire \cbx_1__1__54_chanx_left_out[19] ;
+ wire \cbx_1__1__54_chanx_left_out[1] ;
+ wire \cbx_1__1__54_chanx_left_out[2] ;
+ wire \cbx_1__1__54_chanx_left_out[3] ;
+ wire \cbx_1__1__54_chanx_left_out[4] ;
+ wire \cbx_1__1__54_chanx_left_out[5] ;
+ wire \cbx_1__1__54_chanx_left_out[6] ;
+ wire \cbx_1__1__54_chanx_left_out[7] ;
+ wire \cbx_1__1__54_chanx_left_out[8] ;
+ wire \cbx_1__1__54_chanx_left_out[9] ;
+ wire \cbx_1__1__54_chanx_right_out[0] ;
+ wire \cbx_1__1__54_chanx_right_out[10] ;
+ wire \cbx_1__1__54_chanx_right_out[11] ;
+ wire \cbx_1__1__54_chanx_right_out[12] ;
+ wire \cbx_1__1__54_chanx_right_out[13] ;
+ wire \cbx_1__1__54_chanx_right_out[14] ;
+ wire \cbx_1__1__54_chanx_right_out[15] ;
+ wire \cbx_1__1__54_chanx_right_out[16] ;
+ wire \cbx_1__1__54_chanx_right_out[17] ;
+ wire \cbx_1__1__54_chanx_right_out[18] ;
+ wire \cbx_1__1__54_chanx_right_out[19] ;
+ wire \cbx_1__1__54_chanx_right_out[1] ;
+ wire \cbx_1__1__54_chanx_right_out[2] ;
+ wire \cbx_1__1__54_chanx_right_out[3] ;
+ wire \cbx_1__1__54_chanx_right_out[4] ;
+ wire \cbx_1__1__54_chanx_right_out[5] ;
+ wire \cbx_1__1__54_chanx_right_out[6] ;
+ wire \cbx_1__1__54_chanx_right_out[7] ;
+ wire \cbx_1__1__54_chanx_right_out[8] ;
+ wire \cbx_1__1__54_chanx_right_out[9] ;
+ wire cbx_1__1__55_bottom_grid_pin_0_;
+ wire cbx_1__1__55_bottom_grid_pin_10_;
+ wire cbx_1__1__55_bottom_grid_pin_11_;
+ wire cbx_1__1__55_bottom_grid_pin_12_;
+ wire cbx_1__1__55_bottom_grid_pin_13_;
+ wire cbx_1__1__55_bottom_grid_pin_14_;
+ wire cbx_1__1__55_bottom_grid_pin_15_;
+ wire cbx_1__1__55_bottom_grid_pin_1_;
+ wire cbx_1__1__55_bottom_grid_pin_2_;
+ wire cbx_1__1__55_bottom_grid_pin_3_;
+ wire cbx_1__1__55_bottom_grid_pin_4_;
+ wire cbx_1__1__55_bottom_grid_pin_5_;
+ wire cbx_1__1__55_bottom_grid_pin_6_;
+ wire cbx_1__1__55_bottom_grid_pin_7_;
+ wire cbx_1__1__55_bottom_grid_pin_8_;
+ wire cbx_1__1__55_bottom_grid_pin_9_;
+ wire cbx_1__1__55_ccff_tail;
+ wire \cbx_1__1__55_chanx_left_out[0] ;
+ wire \cbx_1__1__55_chanx_left_out[10] ;
+ wire \cbx_1__1__55_chanx_left_out[11] ;
+ wire \cbx_1__1__55_chanx_left_out[12] ;
+ wire \cbx_1__1__55_chanx_left_out[13] ;
+ wire \cbx_1__1__55_chanx_left_out[14] ;
+ wire \cbx_1__1__55_chanx_left_out[15] ;
+ wire \cbx_1__1__55_chanx_left_out[16] ;
+ wire \cbx_1__1__55_chanx_left_out[17] ;
+ wire \cbx_1__1__55_chanx_left_out[18] ;
+ wire \cbx_1__1__55_chanx_left_out[19] ;
+ wire \cbx_1__1__55_chanx_left_out[1] ;
+ wire \cbx_1__1__55_chanx_left_out[2] ;
+ wire \cbx_1__1__55_chanx_left_out[3] ;
+ wire \cbx_1__1__55_chanx_left_out[4] ;
+ wire \cbx_1__1__55_chanx_left_out[5] ;
+ wire \cbx_1__1__55_chanx_left_out[6] ;
+ wire \cbx_1__1__55_chanx_left_out[7] ;
+ wire \cbx_1__1__55_chanx_left_out[8] ;
+ wire \cbx_1__1__55_chanx_left_out[9] ;
+ wire \cbx_1__1__55_chanx_right_out[0] ;
+ wire \cbx_1__1__55_chanx_right_out[10] ;
+ wire \cbx_1__1__55_chanx_right_out[11] ;
+ wire \cbx_1__1__55_chanx_right_out[12] ;
+ wire \cbx_1__1__55_chanx_right_out[13] ;
+ wire \cbx_1__1__55_chanx_right_out[14] ;
+ wire \cbx_1__1__55_chanx_right_out[15] ;
+ wire \cbx_1__1__55_chanx_right_out[16] ;
+ wire \cbx_1__1__55_chanx_right_out[17] ;
+ wire \cbx_1__1__55_chanx_right_out[18] ;
+ wire \cbx_1__1__55_chanx_right_out[19] ;
+ wire \cbx_1__1__55_chanx_right_out[1] ;
+ wire \cbx_1__1__55_chanx_right_out[2] ;
+ wire \cbx_1__1__55_chanx_right_out[3] ;
+ wire \cbx_1__1__55_chanx_right_out[4] ;
+ wire \cbx_1__1__55_chanx_right_out[5] ;
+ wire \cbx_1__1__55_chanx_right_out[6] ;
+ wire \cbx_1__1__55_chanx_right_out[7] ;
+ wire \cbx_1__1__55_chanx_right_out[8] ;
+ wire \cbx_1__1__55_chanx_right_out[9] ;
+ wire cbx_1__1__5_bottom_grid_pin_0_;
+ wire cbx_1__1__5_bottom_grid_pin_10_;
+ wire cbx_1__1__5_bottom_grid_pin_11_;
+ wire cbx_1__1__5_bottom_grid_pin_12_;
+ wire cbx_1__1__5_bottom_grid_pin_13_;
+ wire cbx_1__1__5_bottom_grid_pin_14_;
+ wire cbx_1__1__5_bottom_grid_pin_15_;
+ wire cbx_1__1__5_bottom_grid_pin_1_;
+ wire cbx_1__1__5_bottom_grid_pin_2_;
+ wire cbx_1__1__5_bottom_grid_pin_3_;
+ wire cbx_1__1__5_bottom_grid_pin_4_;
+ wire cbx_1__1__5_bottom_grid_pin_5_;
+ wire cbx_1__1__5_bottom_grid_pin_6_;
+ wire cbx_1__1__5_bottom_grid_pin_7_;
+ wire cbx_1__1__5_bottom_grid_pin_8_;
+ wire cbx_1__1__5_bottom_grid_pin_9_;
+ wire cbx_1__1__5_ccff_tail;
+ wire \cbx_1__1__5_chanx_left_out[0] ;
+ wire \cbx_1__1__5_chanx_left_out[10] ;
+ wire \cbx_1__1__5_chanx_left_out[11] ;
+ wire \cbx_1__1__5_chanx_left_out[12] ;
+ wire \cbx_1__1__5_chanx_left_out[13] ;
+ wire \cbx_1__1__5_chanx_left_out[14] ;
+ wire \cbx_1__1__5_chanx_left_out[15] ;
+ wire \cbx_1__1__5_chanx_left_out[16] ;
+ wire \cbx_1__1__5_chanx_left_out[17] ;
+ wire \cbx_1__1__5_chanx_left_out[18] ;
+ wire \cbx_1__1__5_chanx_left_out[19] ;
+ wire \cbx_1__1__5_chanx_left_out[1] ;
+ wire \cbx_1__1__5_chanx_left_out[2] ;
+ wire \cbx_1__1__5_chanx_left_out[3] ;
+ wire \cbx_1__1__5_chanx_left_out[4] ;
+ wire \cbx_1__1__5_chanx_left_out[5] ;
+ wire \cbx_1__1__5_chanx_left_out[6] ;
+ wire \cbx_1__1__5_chanx_left_out[7] ;
+ wire \cbx_1__1__5_chanx_left_out[8] ;
+ wire \cbx_1__1__5_chanx_left_out[9] ;
+ wire \cbx_1__1__5_chanx_right_out[0] ;
+ wire \cbx_1__1__5_chanx_right_out[10] ;
+ wire \cbx_1__1__5_chanx_right_out[11] ;
+ wire \cbx_1__1__5_chanx_right_out[12] ;
+ wire \cbx_1__1__5_chanx_right_out[13] ;
+ wire \cbx_1__1__5_chanx_right_out[14] ;
+ wire \cbx_1__1__5_chanx_right_out[15] ;
+ wire \cbx_1__1__5_chanx_right_out[16] ;
+ wire \cbx_1__1__5_chanx_right_out[17] ;
+ wire \cbx_1__1__5_chanx_right_out[18] ;
+ wire \cbx_1__1__5_chanx_right_out[19] ;
+ wire \cbx_1__1__5_chanx_right_out[1] ;
+ wire \cbx_1__1__5_chanx_right_out[2] ;
+ wire \cbx_1__1__5_chanx_right_out[3] ;
+ wire \cbx_1__1__5_chanx_right_out[4] ;
+ wire \cbx_1__1__5_chanx_right_out[5] ;
+ wire \cbx_1__1__5_chanx_right_out[6] ;
+ wire \cbx_1__1__5_chanx_right_out[7] ;
+ wire \cbx_1__1__5_chanx_right_out[8] ;
+ wire \cbx_1__1__5_chanx_right_out[9] ;
+ wire cbx_1__1__6_bottom_grid_pin_0_;
+ wire cbx_1__1__6_bottom_grid_pin_10_;
+ wire cbx_1__1__6_bottom_grid_pin_11_;
+ wire cbx_1__1__6_bottom_grid_pin_12_;
+ wire cbx_1__1__6_bottom_grid_pin_13_;
+ wire cbx_1__1__6_bottom_grid_pin_14_;
+ wire cbx_1__1__6_bottom_grid_pin_15_;
+ wire cbx_1__1__6_bottom_grid_pin_1_;
+ wire cbx_1__1__6_bottom_grid_pin_2_;
+ wire cbx_1__1__6_bottom_grid_pin_3_;
+ wire cbx_1__1__6_bottom_grid_pin_4_;
+ wire cbx_1__1__6_bottom_grid_pin_5_;
+ wire cbx_1__1__6_bottom_grid_pin_6_;
+ wire cbx_1__1__6_bottom_grid_pin_7_;
+ wire cbx_1__1__6_bottom_grid_pin_8_;
+ wire cbx_1__1__6_bottom_grid_pin_9_;
+ wire cbx_1__1__6_ccff_tail;
+ wire \cbx_1__1__6_chanx_left_out[0] ;
+ wire \cbx_1__1__6_chanx_left_out[10] ;
+ wire \cbx_1__1__6_chanx_left_out[11] ;
+ wire \cbx_1__1__6_chanx_left_out[12] ;
+ wire \cbx_1__1__6_chanx_left_out[13] ;
+ wire \cbx_1__1__6_chanx_left_out[14] ;
+ wire \cbx_1__1__6_chanx_left_out[15] ;
+ wire \cbx_1__1__6_chanx_left_out[16] ;
+ wire \cbx_1__1__6_chanx_left_out[17] ;
+ wire \cbx_1__1__6_chanx_left_out[18] ;
+ wire \cbx_1__1__6_chanx_left_out[19] ;
+ wire \cbx_1__1__6_chanx_left_out[1] ;
+ wire \cbx_1__1__6_chanx_left_out[2] ;
+ wire \cbx_1__1__6_chanx_left_out[3] ;
+ wire \cbx_1__1__6_chanx_left_out[4] ;
+ wire \cbx_1__1__6_chanx_left_out[5] ;
+ wire \cbx_1__1__6_chanx_left_out[6] ;
+ wire \cbx_1__1__6_chanx_left_out[7] ;
+ wire \cbx_1__1__6_chanx_left_out[8] ;
+ wire \cbx_1__1__6_chanx_left_out[9] ;
+ wire \cbx_1__1__6_chanx_right_out[0] ;
+ wire \cbx_1__1__6_chanx_right_out[10] ;
+ wire \cbx_1__1__6_chanx_right_out[11] ;
+ wire \cbx_1__1__6_chanx_right_out[12] ;
+ wire \cbx_1__1__6_chanx_right_out[13] ;
+ wire \cbx_1__1__6_chanx_right_out[14] ;
+ wire \cbx_1__1__6_chanx_right_out[15] ;
+ wire \cbx_1__1__6_chanx_right_out[16] ;
+ wire \cbx_1__1__6_chanx_right_out[17] ;
+ wire \cbx_1__1__6_chanx_right_out[18] ;
+ wire \cbx_1__1__6_chanx_right_out[19] ;
+ wire \cbx_1__1__6_chanx_right_out[1] ;
+ wire \cbx_1__1__6_chanx_right_out[2] ;
+ wire \cbx_1__1__6_chanx_right_out[3] ;
+ wire \cbx_1__1__6_chanx_right_out[4] ;
+ wire \cbx_1__1__6_chanx_right_out[5] ;
+ wire \cbx_1__1__6_chanx_right_out[6] ;
+ wire \cbx_1__1__6_chanx_right_out[7] ;
+ wire \cbx_1__1__6_chanx_right_out[8] ;
+ wire \cbx_1__1__6_chanx_right_out[9] ;
+ wire cbx_1__1__7_bottom_grid_pin_0_;
+ wire cbx_1__1__7_bottom_grid_pin_10_;
+ wire cbx_1__1__7_bottom_grid_pin_11_;
+ wire cbx_1__1__7_bottom_grid_pin_12_;
+ wire cbx_1__1__7_bottom_grid_pin_13_;
+ wire cbx_1__1__7_bottom_grid_pin_14_;
+ wire cbx_1__1__7_bottom_grid_pin_15_;
+ wire cbx_1__1__7_bottom_grid_pin_1_;
+ wire cbx_1__1__7_bottom_grid_pin_2_;
+ wire cbx_1__1__7_bottom_grid_pin_3_;
+ wire cbx_1__1__7_bottom_grid_pin_4_;
+ wire cbx_1__1__7_bottom_grid_pin_5_;
+ wire cbx_1__1__7_bottom_grid_pin_6_;
+ wire cbx_1__1__7_bottom_grid_pin_7_;
+ wire cbx_1__1__7_bottom_grid_pin_8_;
+ wire cbx_1__1__7_bottom_grid_pin_9_;
+ wire cbx_1__1__7_ccff_tail;
+ wire \cbx_1__1__7_chanx_left_out[0] ;
+ wire \cbx_1__1__7_chanx_left_out[10] ;
+ wire \cbx_1__1__7_chanx_left_out[11] ;
+ wire \cbx_1__1__7_chanx_left_out[12] ;
+ wire \cbx_1__1__7_chanx_left_out[13] ;
+ wire \cbx_1__1__7_chanx_left_out[14] ;
+ wire \cbx_1__1__7_chanx_left_out[15] ;
+ wire \cbx_1__1__7_chanx_left_out[16] ;
+ wire \cbx_1__1__7_chanx_left_out[17] ;
+ wire \cbx_1__1__7_chanx_left_out[18] ;
+ wire \cbx_1__1__7_chanx_left_out[19] ;
+ wire \cbx_1__1__7_chanx_left_out[1] ;
+ wire \cbx_1__1__7_chanx_left_out[2] ;
+ wire \cbx_1__1__7_chanx_left_out[3] ;
+ wire \cbx_1__1__7_chanx_left_out[4] ;
+ wire \cbx_1__1__7_chanx_left_out[5] ;
+ wire \cbx_1__1__7_chanx_left_out[6] ;
+ wire \cbx_1__1__7_chanx_left_out[7] ;
+ wire \cbx_1__1__7_chanx_left_out[8] ;
+ wire \cbx_1__1__7_chanx_left_out[9] ;
+ wire \cbx_1__1__7_chanx_right_out[0] ;
+ wire \cbx_1__1__7_chanx_right_out[10] ;
+ wire \cbx_1__1__7_chanx_right_out[11] ;
+ wire \cbx_1__1__7_chanx_right_out[12] ;
+ wire \cbx_1__1__7_chanx_right_out[13] ;
+ wire \cbx_1__1__7_chanx_right_out[14] ;
+ wire \cbx_1__1__7_chanx_right_out[15] ;
+ wire \cbx_1__1__7_chanx_right_out[16] ;
+ wire \cbx_1__1__7_chanx_right_out[17] ;
+ wire \cbx_1__1__7_chanx_right_out[18] ;
+ wire \cbx_1__1__7_chanx_right_out[19] ;
+ wire \cbx_1__1__7_chanx_right_out[1] ;
+ wire \cbx_1__1__7_chanx_right_out[2] ;
+ wire \cbx_1__1__7_chanx_right_out[3] ;
+ wire \cbx_1__1__7_chanx_right_out[4] ;
+ wire \cbx_1__1__7_chanx_right_out[5] ;
+ wire \cbx_1__1__7_chanx_right_out[6] ;
+ wire \cbx_1__1__7_chanx_right_out[7] ;
+ wire \cbx_1__1__7_chanx_right_out[8] ;
+ wire \cbx_1__1__7_chanx_right_out[9] ;
+ wire cbx_1__1__8_bottom_grid_pin_0_;
+ wire cbx_1__1__8_bottom_grid_pin_10_;
+ wire cbx_1__1__8_bottom_grid_pin_11_;
+ wire cbx_1__1__8_bottom_grid_pin_12_;
+ wire cbx_1__1__8_bottom_grid_pin_13_;
+ wire cbx_1__1__8_bottom_grid_pin_14_;
+ wire cbx_1__1__8_bottom_grid_pin_15_;
+ wire cbx_1__1__8_bottom_grid_pin_1_;
+ wire cbx_1__1__8_bottom_grid_pin_2_;
+ wire cbx_1__1__8_bottom_grid_pin_3_;
+ wire cbx_1__1__8_bottom_grid_pin_4_;
+ wire cbx_1__1__8_bottom_grid_pin_5_;
+ wire cbx_1__1__8_bottom_grid_pin_6_;
+ wire cbx_1__1__8_bottom_grid_pin_7_;
+ wire cbx_1__1__8_bottom_grid_pin_8_;
+ wire cbx_1__1__8_bottom_grid_pin_9_;
+ wire cbx_1__1__8_ccff_tail;
+ wire \cbx_1__1__8_chanx_left_out[0] ;
+ wire \cbx_1__1__8_chanx_left_out[10] ;
+ wire \cbx_1__1__8_chanx_left_out[11] ;
+ wire \cbx_1__1__8_chanx_left_out[12] ;
+ wire \cbx_1__1__8_chanx_left_out[13] ;
+ wire \cbx_1__1__8_chanx_left_out[14] ;
+ wire \cbx_1__1__8_chanx_left_out[15] ;
+ wire \cbx_1__1__8_chanx_left_out[16] ;
+ wire \cbx_1__1__8_chanx_left_out[17] ;
+ wire \cbx_1__1__8_chanx_left_out[18] ;
+ wire \cbx_1__1__8_chanx_left_out[19] ;
+ wire \cbx_1__1__8_chanx_left_out[1] ;
+ wire \cbx_1__1__8_chanx_left_out[2] ;
+ wire \cbx_1__1__8_chanx_left_out[3] ;
+ wire \cbx_1__1__8_chanx_left_out[4] ;
+ wire \cbx_1__1__8_chanx_left_out[5] ;
+ wire \cbx_1__1__8_chanx_left_out[6] ;
+ wire \cbx_1__1__8_chanx_left_out[7] ;
+ wire \cbx_1__1__8_chanx_left_out[8] ;
+ wire \cbx_1__1__8_chanx_left_out[9] ;
+ wire \cbx_1__1__8_chanx_right_out[0] ;
+ wire \cbx_1__1__8_chanx_right_out[10] ;
+ wire \cbx_1__1__8_chanx_right_out[11] ;
+ wire \cbx_1__1__8_chanx_right_out[12] ;
+ wire \cbx_1__1__8_chanx_right_out[13] ;
+ wire \cbx_1__1__8_chanx_right_out[14] ;
+ wire \cbx_1__1__8_chanx_right_out[15] ;
+ wire \cbx_1__1__8_chanx_right_out[16] ;
+ wire \cbx_1__1__8_chanx_right_out[17] ;
+ wire \cbx_1__1__8_chanx_right_out[18] ;
+ wire \cbx_1__1__8_chanx_right_out[19] ;
+ wire \cbx_1__1__8_chanx_right_out[1] ;
+ wire \cbx_1__1__8_chanx_right_out[2] ;
+ wire \cbx_1__1__8_chanx_right_out[3] ;
+ wire \cbx_1__1__8_chanx_right_out[4] ;
+ wire \cbx_1__1__8_chanx_right_out[5] ;
+ wire \cbx_1__1__8_chanx_right_out[6] ;
+ wire \cbx_1__1__8_chanx_right_out[7] ;
+ wire \cbx_1__1__8_chanx_right_out[8] ;
+ wire \cbx_1__1__8_chanx_right_out[9] ;
+ wire cbx_1__1__9_bottom_grid_pin_0_;
+ wire cbx_1__1__9_bottom_grid_pin_10_;
+ wire cbx_1__1__9_bottom_grid_pin_11_;
+ wire cbx_1__1__9_bottom_grid_pin_12_;
+ wire cbx_1__1__9_bottom_grid_pin_13_;
+ wire cbx_1__1__9_bottom_grid_pin_14_;
+ wire cbx_1__1__9_bottom_grid_pin_15_;
+ wire cbx_1__1__9_bottom_grid_pin_1_;
+ wire cbx_1__1__9_bottom_grid_pin_2_;
+ wire cbx_1__1__9_bottom_grid_pin_3_;
+ wire cbx_1__1__9_bottom_grid_pin_4_;
+ wire cbx_1__1__9_bottom_grid_pin_5_;
+ wire cbx_1__1__9_bottom_grid_pin_6_;
+ wire cbx_1__1__9_bottom_grid_pin_7_;
+ wire cbx_1__1__9_bottom_grid_pin_8_;
+ wire cbx_1__1__9_bottom_grid_pin_9_;
+ wire cbx_1__1__9_ccff_tail;
+ wire \cbx_1__1__9_chanx_left_out[0] ;
+ wire \cbx_1__1__9_chanx_left_out[10] ;
+ wire \cbx_1__1__9_chanx_left_out[11] ;
+ wire \cbx_1__1__9_chanx_left_out[12] ;
+ wire \cbx_1__1__9_chanx_left_out[13] ;
+ wire \cbx_1__1__9_chanx_left_out[14] ;
+ wire \cbx_1__1__9_chanx_left_out[15] ;
+ wire \cbx_1__1__9_chanx_left_out[16] ;
+ wire \cbx_1__1__9_chanx_left_out[17] ;
+ wire \cbx_1__1__9_chanx_left_out[18] ;
+ wire \cbx_1__1__9_chanx_left_out[19] ;
+ wire \cbx_1__1__9_chanx_left_out[1] ;
+ wire \cbx_1__1__9_chanx_left_out[2] ;
+ wire \cbx_1__1__9_chanx_left_out[3] ;
+ wire \cbx_1__1__9_chanx_left_out[4] ;
+ wire \cbx_1__1__9_chanx_left_out[5] ;
+ wire \cbx_1__1__9_chanx_left_out[6] ;
+ wire \cbx_1__1__9_chanx_left_out[7] ;
+ wire \cbx_1__1__9_chanx_left_out[8] ;
+ wire \cbx_1__1__9_chanx_left_out[9] ;
+ wire \cbx_1__1__9_chanx_right_out[0] ;
+ wire \cbx_1__1__9_chanx_right_out[10] ;
+ wire \cbx_1__1__9_chanx_right_out[11] ;
+ wire \cbx_1__1__9_chanx_right_out[12] ;
+ wire \cbx_1__1__9_chanx_right_out[13] ;
+ wire \cbx_1__1__9_chanx_right_out[14] ;
+ wire \cbx_1__1__9_chanx_right_out[15] ;
+ wire \cbx_1__1__9_chanx_right_out[16] ;
+ wire \cbx_1__1__9_chanx_right_out[17] ;
+ wire \cbx_1__1__9_chanx_right_out[18] ;
+ wire \cbx_1__1__9_chanx_right_out[19] ;
+ wire \cbx_1__1__9_chanx_right_out[1] ;
+ wire \cbx_1__1__9_chanx_right_out[2] ;
+ wire \cbx_1__1__9_chanx_right_out[3] ;
+ wire \cbx_1__1__9_chanx_right_out[4] ;
+ wire \cbx_1__1__9_chanx_right_out[5] ;
+ wire \cbx_1__1__9_chanx_right_out[6] ;
+ wire \cbx_1__1__9_chanx_right_out[7] ;
+ wire \cbx_1__1__9_chanx_right_out[8] ;
+ wire \cbx_1__1__9_chanx_right_out[9] ;
+ wire cbx_1__8__0_bottom_grid_pin_0_;
+ wire cbx_1__8__0_bottom_grid_pin_10_;
+ wire cbx_1__8__0_bottom_grid_pin_11_;
+ wire cbx_1__8__0_bottom_grid_pin_12_;
+ wire cbx_1__8__0_bottom_grid_pin_13_;
+ wire cbx_1__8__0_bottom_grid_pin_14_;
+ wire cbx_1__8__0_bottom_grid_pin_15_;
+ wire cbx_1__8__0_bottom_grid_pin_1_;
+ wire cbx_1__8__0_bottom_grid_pin_2_;
+ wire cbx_1__8__0_bottom_grid_pin_3_;
+ wire cbx_1__8__0_bottom_grid_pin_4_;
+ wire cbx_1__8__0_bottom_grid_pin_5_;
+ wire cbx_1__8__0_bottom_grid_pin_6_;
+ wire cbx_1__8__0_bottom_grid_pin_7_;
+ wire cbx_1__8__0_bottom_grid_pin_8_;
+ wire cbx_1__8__0_bottom_grid_pin_9_;
+ wire \cbx_1__8__0_chanx_left_out[0] ;
+ wire \cbx_1__8__0_chanx_left_out[10] ;
+ wire \cbx_1__8__0_chanx_left_out[11] ;
+ wire \cbx_1__8__0_chanx_left_out[12] ;
+ wire \cbx_1__8__0_chanx_left_out[13] ;
+ wire \cbx_1__8__0_chanx_left_out[14] ;
+ wire \cbx_1__8__0_chanx_left_out[15] ;
+ wire \cbx_1__8__0_chanx_left_out[16] ;
+ wire \cbx_1__8__0_chanx_left_out[17] ;
+ wire \cbx_1__8__0_chanx_left_out[18] ;
+ wire \cbx_1__8__0_chanx_left_out[19] ;
+ wire \cbx_1__8__0_chanx_left_out[1] ;
+ wire \cbx_1__8__0_chanx_left_out[2] ;
+ wire \cbx_1__8__0_chanx_left_out[3] ;
+ wire \cbx_1__8__0_chanx_left_out[4] ;
+ wire \cbx_1__8__0_chanx_left_out[5] ;
+ wire \cbx_1__8__0_chanx_left_out[6] ;
+ wire \cbx_1__8__0_chanx_left_out[7] ;
+ wire \cbx_1__8__0_chanx_left_out[8] ;
+ wire \cbx_1__8__0_chanx_left_out[9] ;
+ wire \cbx_1__8__0_chanx_right_out[0] ;
+ wire \cbx_1__8__0_chanx_right_out[10] ;
+ wire \cbx_1__8__0_chanx_right_out[11] ;
+ wire \cbx_1__8__0_chanx_right_out[12] ;
+ wire \cbx_1__8__0_chanx_right_out[13] ;
+ wire \cbx_1__8__0_chanx_right_out[14] ;
+ wire \cbx_1__8__0_chanx_right_out[15] ;
+ wire \cbx_1__8__0_chanx_right_out[16] ;
+ wire \cbx_1__8__0_chanx_right_out[17] ;
+ wire \cbx_1__8__0_chanx_right_out[18] ;
+ wire \cbx_1__8__0_chanx_right_out[19] ;
+ wire \cbx_1__8__0_chanx_right_out[1] ;
+ wire \cbx_1__8__0_chanx_right_out[2] ;
+ wire \cbx_1__8__0_chanx_right_out[3] ;
+ wire \cbx_1__8__0_chanx_right_out[4] ;
+ wire \cbx_1__8__0_chanx_right_out[5] ;
+ wire \cbx_1__8__0_chanx_right_out[6] ;
+ wire \cbx_1__8__0_chanx_right_out[7] ;
+ wire \cbx_1__8__0_chanx_right_out[8] ;
+ wire \cbx_1__8__0_chanx_right_out[9] ;
+ wire cbx_1__8__0_top_grid_pin_0_;
+ wire cbx_1__8__1_bottom_grid_pin_0_;
+ wire cbx_1__8__1_bottom_grid_pin_10_;
+ wire cbx_1__8__1_bottom_grid_pin_11_;
+ wire cbx_1__8__1_bottom_grid_pin_12_;
+ wire cbx_1__8__1_bottom_grid_pin_13_;
+ wire cbx_1__8__1_bottom_grid_pin_14_;
+ wire cbx_1__8__1_bottom_grid_pin_15_;
+ wire cbx_1__8__1_bottom_grid_pin_1_;
+ wire cbx_1__8__1_bottom_grid_pin_2_;
+ wire cbx_1__8__1_bottom_grid_pin_3_;
+ wire cbx_1__8__1_bottom_grid_pin_4_;
+ wire cbx_1__8__1_bottom_grid_pin_5_;
+ wire cbx_1__8__1_bottom_grid_pin_6_;
+ wire cbx_1__8__1_bottom_grid_pin_7_;
+ wire cbx_1__8__1_bottom_grid_pin_8_;
+ wire cbx_1__8__1_bottom_grid_pin_9_;
+ wire \cbx_1__8__1_chanx_left_out[0] ;
+ wire \cbx_1__8__1_chanx_left_out[10] ;
+ wire \cbx_1__8__1_chanx_left_out[11] ;
+ wire \cbx_1__8__1_chanx_left_out[12] ;
+ wire \cbx_1__8__1_chanx_left_out[13] ;
+ wire \cbx_1__8__1_chanx_left_out[14] ;
+ wire \cbx_1__8__1_chanx_left_out[15] ;
+ wire \cbx_1__8__1_chanx_left_out[16] ;
+ wire \cbx_1__8__1_chanx_left_out[17] ;
+ wire \cbx_1__8__1_chanx_left_out[18] ;
+ wire \cbx_1__8__1_chanx_left_out[19] ;
+ wire \cbx_1__8__1_chanx_left_out[1] ;
+ wire \cbx_1__8__1_chanx_left_out[2] ;
+ wire \cbx_1__8__1_chanx_left_out[3] ;
+ wire \cbx_1__8__1_chanx_left_out[4] ;
+ wire \cbx_1__8__1_chanx_left_out[5] ;
+ wire \cbx_1__8__1_chanx_left_out[6] ;
+ wire \cbx_1__8__1_chanx_left_out[7] ;
+ wire \cbx_1__8__1_chanx_left_out[8] ;
+ wire \cbx_1__8__1_chanx_left_out[9] ;
+ wire \cbx_1__8__1_chanx_right_out[0] ;
+ wire \cbx_1__8__1_chanx_right_out[10] ;
+ wire \cbx_1__8__1_chanx_right_out[11] ;
+ wire \cbx_1__8__1_chanx_right_out[12] ;
+ wire \cbx_1__8__1_chanx_right_out[13] ;
+ wire \cbx_1__8__1_chanx_right_out[14] ;
+ wire \cbx_1__8__1_chanx_right_out[15] ;
+ wire \cbx_1__8__1_chanx_right_out[16] ;
+ wire \cbx_1__8__1_chanx_right_out[17] ;
+ wire \cbx_1__8__1_chanx_right_out[18] ;
+ wire \cbx_1__8__1_chanx_right_out[19] ;
+ wire \cbx_1__8__1_chanx_right_out[1] ;
+ wire \cbx_1__8__1_chanx_right_out[2] ;
+ wire \cbx_1__8__1_chanx_right_out[3] ;
+ wire \cbx_1__8__1_chanx_right_out[4] ;
+ wire \cbx_1__8__1_chanx_right_out[5] ;
+ wire \cbx_1__8__1_chanx_right_out[6] ;
+ wire \cbx_1__8__1_chanx_right_out[7] ;
+ wire \cbx_1__8__1_chanx_right_out[8] ;
+ wire \cbx_1__8__1_chanx_right_out[9] ;
+ wire cbx_1__8__1_top_grid_pin_0_;
+ wire cbx_1__8__2_bottom_grid_pin_0_;
+ wire cbx_1__8__2_bottom_grid_pin_10_;
+ wire cbx_1__8__2_bottom_grid_pin_11_;
+ wire cbx_1__8__2_bottom_grid_pin_12_;
+ wire cbx_1__8__2_bottom_grid_pin_13_;
+ wire cbx_1__8__2_bottom_grid_pin_14_;
+ wire cbx_1__8__2_bottom_grid_pin_15_;
+ wire cbx_1__8__2_bottom_grid_pin_1_;
+ wire cbx_1__8__2_bottom_grid_pin_2_;
+ wire cbx_1__8__2_bottom_grid_pin_3_;
+ wire cbx_1__8__2_bottom_grid_pin_4_;
+ wire cbx_1__8__2_bottom_grid_pin_5_;
+ wire cbx_1__8__2_bottom_grid_pin_6_;
+ wire cbx_1__8__2_bottom_grid_pin_7_;
+ wire cbx_1__8__2_bottom_grid_pin_8_;
+ wire cbx_1__8__2_bottom_grid_pin_9_;
+ wire \cbx_1__8__2_chanx_left_out[0] ;
+ wire \cbx_1__8__2_chanx_left_out[10] ;
+ wire \cbx_1__8__2_chanx_left_out[11] ;
+ wire \cbx_1__8__2_chanx_left_out[12] ;
+ wire \cbx_1__8__2_chanx_left_out[13] ;
+ wire \cbx_1__8__2_chanx_left_out[14] ;
+ wire \cbx_1__8__2_chanx_left_out[15] ;
+ wire \cbx_1__8__2_chanx_left_out[16] ;
+ wire \cbx_1__8__2_chanx_left_out[17] ;
+ wire \cbx_1__8__2_chanx_left_out[18] ;
+ wire \cbx_1__8__2_chanx_left_out[19] ;
+ wire \cbx_1__8__2_chanx_left_out[1] ;
+ wire \cbx_1__8__2_chanx_left_out[2] ;
+ wire \cbx_1__8__2_chanx_left_out[3] ;
+ wire \cbx_1__8__2_chanx_left_out[4] ;
+ wire \cbx_1__8__2_chanx_left_out[5] ;
+ wire \cbx_1__8__2_chanx_left_out[6] ;
+ wire \cbx_1__8__2_chanx_left_out[7] ;
+ wire \cbx_1__8__2_chanx_left_out[8] ;
+ wire \cbx_1__8__2_chanx_left_out[9] ;
+ wire \cbx_1__8__2_chanx_right_out[0] ;
+ wire \cbx_1__8__2_chanx_right_out[10] ;
+ wire \cbx_1__8__2_chanx_right_out[11] ;
+ wire \cbx_1__8__2_chanx_right_out[12] ;
+ wire \cbx_1__8__2_chanx_right_out[13] ;
+ wire \cbx_1__8__2_chanx_right_out[14] ;
+ wire \cbx_1__8__2_chanx_right_out[15] ;
+ wire \cbx_1__8__2_chanx_right_out[16] ;
+ wire \cbx_1__8__2_chanx_right_out[17] ;
+ wire \cbx_1__8__2_chanx_right_out[18] ;
+ wire \cbx_1__8__2_chanx_right_out[19] ;
+ wire \cbx_1__8__2_chanx_right_out[1] ;
+ wire \cbx_1__8__2_chanx_right_out[2] ;
+ wire \cbx_1__8__2_chanx_right_out[3] ;
+ wire \cbx_1__8__2_chanx_right_out[4] ;
+ wire \cbx_1__8__2_chanx_right_out[5] ;
+ wire \cbx_1__8__2_chanx_right_out[6] ;
+ wire \cbx_1__8__2_chanx_right_out[7] ;
+ wire \cbx_1__8__2_chanx_right_out[8] ;
+ wire \cbx_1__8__2_chanx_right_out[9] ;
+ wire cbx_1__8__2_top_grid_pin_0_;
+ wire cbx_1__8__3_bottom_grid_pin_0_;
+ wire cbx_1__8__3_bottom_grid_pin_10_;
+ wire cbx_1__8__3_bottom_grid_pin_11_;
+ wire cbx_1__8__3_bottom_grid_pin_12_;
+ wire cbx_1__8__3_bottom_grid_pin_13_;
+ wire cbx_1__8__3_bottom_grid_pin_14_;
+ wire cbx_1__8__3_bottom_grid_pin_15_;
+ wire cbx_1__8__3_bottom_grid_pin_1_;
+ wire cbx_1__8__3_bottom_grid_pin_2_;
+ wire cbx_1__8__3_bottom_grid_pin_3_;
+ wire cbx_1__8__3_bottom_grid_pin_4_;
+ wire cbx_1__8__3_bottom_grid_pin_5_;
+ wire cbx_1__8__3_bottom_grid_pin_6_;
+ wire cbx_1__8__3_bottom_grid_pin_7_;
+ wire cbx_1__8__3_bottom_grid_pin_8_;
+ wire cbx_1__8__3_bottom_grid_pin_9_;
+ wire \cbx_1__8__3_chanx_left_out[0] ;
+ wire \cbx_1__8__3_chanx_left_out[10] ;
+ wire \cbx_1__8__3_chanx_left_out[11] ;
+ wire \cbx_1__8__3_chanx_left_out[12] ;
+ wire \cbx_1__8__3_chanx_left_out[13] ;
+ wire \cbx_1__8__3_chanx_left_out[14] ;
+ wire \cbx_1__8__3_chanx_left_out[15] ;
+ wire \cbx_1__8__3_chanx_left_out[16] ;
+ wire \cbx_1__8__3_chanx_left_out[17] ;
+ wire \cbx_1__8__3_chanx_left_out[18] ;
+ wire \cbx_1__8__3_chanx_left_out[19] ;
+ wire \cbx_1__8__3_chanx_left_out[1] ;
+ wire \cbx_1__8__3_chanx_left_out[2] ;
+ wire \cbx_1__8__3_chanx_left_out[3] ;
+ wire \cbx_1__8__3_chanx_left_out[4] ;
+ wire \cbx_1__8__3_chanx_left_out[5] ;
+ wire \cbx_1__8__3_chanx_left_out[6] ;
+ wire \cbx_1__8__3_chanx_left_out[7] ;
+ wire \cbx_1__8__3_chanx_left_out[8] ;
+ wire \cbx_1__8__3_chanx_left_out[9] ;
+ wire \cbx_1__8__3_chanx_right_out[0] ;
+ wire \cbx_1__8__3_chanx_right_out[10] ;
+ wire \cbx_1__8__3_chanx_right_out[11] ;
+ wire \cbx_1__8__3_chanx_right_out[12] ;
+ wire \cbx_1__8__3_chanx_right_out[13] ;
+ wire \cbx_1__8__3_chanx_right_out[14] ;
+ wire \cbx_1__8__3_chanx_right_out[15] ;
+ wire \cbx_1__8__3_chanx_right_out[16] ;
+ wire \cbx_1__8__3_chanx_right_out[17] ;
+ wire \cbx_1__8__3_chanx_right_out[18] ;
+ wire \cbx_1__8__3_chanx_right_out[19] ;
+ wire \cbx_1__8__3_chanx_right_out[1] ;
+ wire \cbx_1__8__3_chanx_right_out[2] ;
+ wire \cbx_1__8__3_chanx_right_out[3] ;
+ wire \cbx_1__8__3_chanx_right_out[4] ;
+ wire \cbx_1__8__3_chanx_right_out[5] ;
+ wire \cbx_1__8__3_chanx_right_out[6] ;
+ wire \cbx_1__8__3_chanx_right_out[7] ;
+ wire \cbx_1__8__3_chanx_right_out[8] ;
+ wire \cbx_1__8__3_chanx_right_out[9] ;
+ wire cbx_1__8__3_top_grid_pin_0_;
+ wire cbx_1__8__4_bottom_grid_pin_0_;
+ wire cbx_1__8__4_bottom_grid_pin_10_;
+ wire cbx_1__8__4_bottom_grid_pin_11_;
+ wire cbx_1__8__4_bottom_grid_pin_12_;
+ wire cbx_1__8__4_bottom_grid_pin_13_;
+ wire cbx_1__8__4_bottom_grid_pin_14_;
+ wire cbx_1__8__4_bottom_grid_pin_15_;
+ wire cbx_1__8__4_bottom_grid_pin_1_;
+ wire cbx_1__8__4_bottom_grid_pin_2_;
+ wire cbx_1__8__4_bottom_grid_pin_3_;
+ wire cbx_1__8__4_bottom_grid_pin_4_;
+ wire cbx_1__8__4_bottom_grid_pin_5_;
+ wire cbx_1__8__4_bottom_grid_pin_6_;
+ wire cbx_1__8__4_bottom_grid_pin_7_;
+ wire cbx_1__8__4_bottom_grid_pin_8_;
+ wire cbx_1__8__4_bottom_grid_pin_9_;
+ wire \cbx_1__8__4_chanx_left_out[0] ;
+ wire \cbx_1__8__4_chanx_left_out[10] ;
+ wire \cbx_1__8__4_chanx_left_out[11] ;
+ wire \cbx_1__8__4_chanx_left_out[12] ;
+ wire \cbx_1__8__4_chanx_left_out[13] ;
+ wire \cbx_1__8__4_chanx_left_out[14] ;
+ wire \cbx_1__8__4_chanx_left_out[15] ;
+ wire \cbx_1__8__4_chanx_left_out[16] ;
+ wire \cbx_1__8__4_chanx_left_out[17] ;
+ wire \cbx_1__8__4_chanx_left_out[18] ;
+ wire \cbx_1__8__4_chanx_left_out[19] ;
+ wire \cbx_1__8__4_chanx_left_out[1] ;
+ wire \cbx_1__8__4_chanx_left_out[2] ;
+ wire \cbx_1__8__4_chanx_left_out[3] ;
+ wire \cbx_1__8__4_chanx_left_out[4] ;
+ wire \cbx_1__8__4_chanx_left_out[5] ;
+ wire \cbx_1__8__4_chanx_left_out[6] ;
+ wire \cbx_1__8__4_chanx_left_out[7] ;
+ wire \cbx_1__8__4_chanx_left_out[8] ;
+ wire \cbx_1__8__4_chanx_left_out[9] ;
+ wire \cbx_1__8__4_chanx_right_out[0] ;
+ wire \cbx_1__8__4_chanx_right_out[10] ;
+ wire \cbx_1__8__4_chanx_right_out[11] ;
+ wire \cbx_1__8__4_chanx_right_out[12] ;
+ wire \cbx_1__8__4_chanx_right_out[13] ;
+ wire \cbx_1__8__4_chanx_right_out[14] ;
+ wire \cbx_1__8__4_chanx_right_out[15] ;
+ wire \cbx_1__8__4_chanx_right_out[16] ;
+ wire \cbx_1__8__4_chanx_right_out[17] ;
+ wire \cbx_1__8__4_chanx_right_out[18] ;
+ wire \cbx_1__8__4_chanx_right_out[19] ;
+ wire \cbx_1__8__4_chanx_right_out[1] ;
+ wire \cbx_1__8__4_chanx_right_out[2] ;
+ wire \cbx_1__8__4_chanx_right_out[3] ;
+ wire \cbx_1__8__4_chanx_right_out[4] ;
+ wire \cbx_1__8__4_chanx_right_out[5] ;
+ wire \cbx_1__8__4_chanx_right_out[6] ;
+ wire \cbx_1__8__4_chanx_right_out[7] ;
+ wire \cbx_1__8__4_chanx_right_out[8] ;
+ wire \cbx_1__8__4_chanx_right_out[9] ;
+ wire cbx_1__8__4_top_grid_pin_0_;
+ wire cbx_1__8__5_bottom_grid_pin_0_;
+ wire cbx_1__8__5_bottom_grid_pin_10_;
+ wire cbx_1__8__5_bottom_grid_pin_11_;
+ wire cbx_1__8__5_bottom_grid_pin_12_;
+ wire cbx_1__8__5_bottom_grid_pin_13_;
+ wire cbx_1__8__5_bottom_grid_pin_14_;
+ wire cbx_1__8__5_bottom_grid_pin_15_;
+ wire cbx_1__8__5_bottom_grid_pin_1_;
+ wire cbx_1__8__5_bottom_grid_pin_2_;
+ wire cbx_1__8__5_bottom_grid_pin_3_;
+ wire cbx_1__8__5_bottom_grid_pin_4_;
+ wire cbx_1__8__5_bottom_grid_pin_5_;
+ wire cbx_1__8__5_bottom_grid_pin_6_;
+ wire cbx_1__8__5_bottom_grid_pin_7_;
+ wire cbx_1__8__5_bottom_grid_pin_8_;
+ wire cbx_1__8__5_bottom_grid_pin_9_;
+ wire \cbx_1__8__5_chanx_left_out[0] ;
+ wire \cbx_1__8__5_chanx_left_out[10] ;
+ wire \cbx_1__8__5_chanx_left_out[11] ;
+ wire \cbx_1__8__5_chanx_left_out[12] ;
+ wire \cbx_1__8__5_chanx_left_out[13] ;
+ wire \cbx_1__8__5_chanx_left_out[14] ;
+ wire \cbx_1__8__5_chanx_left_out[15] ;
+ wire \cbx_1__8__5_chanx_left_out[16] ;
+ wire \cbx_1__8__5_chanx_left_out[17] ;
+ wire \cbx_1__8__5_chanx_left_out[18] ;
+ wire \cbx_1__8__5_chanx_left_out[19] ;
+ wire \cbx_1__8__5_chanx_left_out[1] ;
+ wire \cbx_1__8__5_chanx_left_out[2] ;
+ wire \cbx_1__8__5_chanx_left_out[3] ;
+ wire \cbx_1__8__5_chanx_left_out[4] ;
+ wire \cbx_1__8__5_chanx_left_out[5] ;
+ wire \cbx_1__8__5_chanx_left_out[6] ;
+ wire \cbx_1__8__5_chanx_left_out[7] ;
+ wire \cbx_1__8__5_chanx_left_out[8] ;
+ wire \cbx_1__8__5_chanx_left_out[9] ;
+ wire \cbx_1__8__5_chanx_right_out[0] ;
+ wire \cbx_1__8__5_chanx_right_out[10] ;
+ wire \cbx_1__8__5_chanx_right_out[11] ;
+ wire \cbx_1__8__5_chanx_right_out[12] ;
+ wire \cbx_1__8__5_chanx_right_out[13] ;
+ wire \cbx_1__8__5_chanx_right_out[14] ;
+ wire \cbx_1__8__5_chanx_right_out[15] ;
+ wire \cbx_1__8__5_chanx_right_out[16] ;
+ wire \cbx_1__8__5_chanx_right_out[17] ;
+ wire \cbx_1__8__5_chanx_right_out[18] ;
+ wire \cbx_1__8__5_chanx_right_out[19] ;
+ wire \cbx_1__8__5_chanx_right_out[1] ;
+ wire \cbx_1__8__5_chanx_right_out[2] ;
+ wire \cbx_1__8__5_chanx_right_out[3] ;
+ wire \cbx_1__8__5_chanx_right_out[4] ;
+ wire \cbx_1__8__5_chanx_right_out[5] ;
+ wire \cbx_1__8__5_chanx_right_out[6] ;
+ wire \cbx_1__8__5_chanx_right_out[7] ;
+ wire \cbx_1__8__5_chanx_right_out[8] ;
+ wire \cbx_1__8__5_chanx_right_out[9] ;
+ wire cbx_1__8__5_top_grid_pin_0_;
+ wire cbx_1__8__6_bottom_grid_pin_0_;
+ wire cbx_1__8__6_bottom_grid_pin_10_;
+ wire cbx_1__8__6_bottom_grid_pin_11_;
+ wire cbx_1__8__6_bottom_grid_pin_12_;
+ wire cbx_1__8__6_bottom_grid_pin_13_;
+ wire cbx_1__8__6_bottom_grid_pin_14_;
+ wire cbx_1__8__6_bottom_grid_pin_15_;
+ wire cbx_1__8__6_bottom_grid_pin_1_;
+ wire cbx_1__8__6_bottom_grid_pin_2_;
+ wire cbx_1__8__6_bottom_grid_pin_3_;
+ wire cbx_1__8__6_bottom_grid_pin_4_;
+ wire cbx_1__8__6_bottom_grid_pin_5_;
+ wire cbx_1__8__6_bottom_grid_pin_6_;
+ wire cbx_1__8__6_bottom_grid_pin_7_;
+ wire cbx_1__8__6_bottom_grid_pin_8_;
+ wire cbx_1__8__6_bottom_grid_pin_9_;
+ wire \cbx_1__8__6_chanx_left_out[0] ;
+ wire \cbx_1__8__6_chanx_left_out[10] ;
+ wire \cbx_1__8__6_chanx_left_out[11] ;
+ wire \cbx_1__8__6_chanx_left_out[12] ;
+ wire \cbx_1__8__6_chanx_left_out[13] ;
+ wire \cbx_1__8__6_chanx_left_out[14] ;
+ wire \cbx_1__8__6_chanx_left_out[15] ;
+ wire \cbx_1__8__6_chanx_left_out[16] ;
+ wire \cbx_1__8__6_chanx_left_out[17] ;
+ wire \cbx_1__8__6_chanx_left_out[18] ;
+ wire \cbx_1__8__6_chanx_left_out[19] ;
+ wire \cbx_1__8__6_chanx_left_out[1] ;
+ wire \cbx_1__8__6_chanx_left_out[2] ;
+ wire \cbx_1__8__6_chanx_left_out[3] ;
+ wire \cbx_1__8__6_chanx_left_out[4] ;
+ wire \cbx_1__8__6_chanx_left_out[5] ;
+ wire \cbx_1__8__6_chanx_left_out[6] ;
+ wire \cbx_1__8__6_chanx_left_out[7] ;
+ wire \cbx_1__8__6_chanx_left_out[8] ;
+ wire \cbx_1__8__6_chanx_left_out[9] ;
+ wire \cbx_1__8__6_chanx_right_out[0] ;
+ wire \cbx_1__8__6_chanx_right_out[10] ;
+ wire \cbx_1__8__6_chanx_right_out[11] ;
+ wire \cbx_1__8__6_chanx_right_out[12] ;
+ wire \cbx_1__8__6_chanx_right_out[13] ;
+ wire \cbx_1__8__6_chanx_right_out[14] ;
+ wire \cbx_1__8__6_chanx_right_out[15] ;
+ wire \cbx_1__8__6_chanx_right_out[16] ;
+ wire \cbx_1__8__6_chanx_right_out[17] ;
+ wire \cbx_1__8__6_chanx_right_out[18] ;
+ wire \cbx_1__8__6_chanx_right_out[19] ;
+ wire \cbx_1__8__6_chanx_right_out[1] ;
+ wire \cbx_1__8__6_chanx_right_out[2] ;
+ wire \cbx_1__8__6_chanx_right_out[3] ;
+ wire \cbx_1__8__6_chanx_right_out[4] ;
+ wire \cbx_1__8__6_chanx_right_out[5] ;
+ wire \cbx_1__8__6_chanx_right_out[6] ;
+ wire \cbx_1__8__6_chanx_right_out[7] ;
+ wire \cbx_1__8__6_chanx_right_out[8] ;
+ wire \cbx_1__8__6_chanx_right_out[9] ;
+ wire cbx_1__8__6_top_grid_pin_0_;
+ wire cbx_1__8__7_bottom_grid_pin_0_;
+ wire cbx_1__8__7_bottom_grid_pin_10_;
+ wire cbx_1__8__7_bottom_grid_pin_11_;
+ wire cbx_1__8__7_bottom_grid_pin_12_;
+ wire cbx_1__8__7_bottom_grid_pin_13_;
+ wire cbx_1__8__7_bottom_grid_pin_14_;
+ wire cbx_1__8__7_bottom_grid_pin_15_;
+ wire cbx_1__8__7_bottom_grid_pin_1_;
+ wire cbx_1__8__7_bottom_grid_pin_2_;
+ wire cbx_1__8__7_bottom_grid_pin_3_;
+ wire cbx_1__8__7_bottom_grid_pin_4_;
+ wire cbx_1__8__7_bottom_grid_pin_5_;
+ wire cbx_1__8__7_bottom_grid_pin_6_;
+ wire cbx_1__8__7_bottom_grid_pin_7_;
+ wire cbx_1__8__7_bottom_grid_pin_8_;
+ wire cbx_1__8__7_bottom_grid_pin_9_;
+ wire \cbx_1__8__7_chanx_left_out[0] ;
+ wire \cbx_1__8__7_chanx_left_out[10] ;
+ wire \cbx_1__8__7_chanx_left_out[11] ;
+ wire \cbx_1__8__7_chanx_left_out[12] ;
+ wire \cbx_1__8__7_chanx_left_out[13] ;
+ wire \cbx_1__8__7_chanx_left_out[14] ;
+ wire \cbx_1__8__7_chanx_left_out[15] ;
+ wire \cbx_1__8__7_chanx_left_out[16] ;
+ wire \cbx_1__8__7_chanx_left_out[17] ;
+ wire \cbx_1__8__7_chanx_left_out[18] ;
+ wire \cbx_1__8__7_chanx_left_out[19] ;
+ wire \cbx_1__8__7_chanx_left_out[1] ;
+ wire \cbx_1__8__7_chanx_left_out[2] ;
+ wire \cbx_1__8__7_chanx_left_out[3] ;
+ wire \cbx_1__8__7_chanx_left_out[4] ;
+ wire \cbx_1__8__7_chanx_left_out[5] ;
+ wire \cbx_1__8__7_chanx_left_out[6] ;
+ wire \cbx_1__8__7_chanx_left_out[7] ;
+ wire \cbx_1__8__7_chanx_left_out[8] ;
+ wire \cbx_1__8__7_chanx_left_out[9] ;
+ wire \cbx_1__8__7_chanx_right_out[0] ;
+ wire \cbx_1__8__7_chanx_right_out[10] ;
+ wire \cbx_1__8__7_chanx_right_out[11] ;
+ wire \cbx_1__8__7_chanx_right_out[12] ;
+ wire \cbx_1__8__7_chanx_right_out[13] ;
+ wire \cbx_1__8__7_chanx_right_out[14] ;
+ wire \cbx_1__8__7_chanx_right_out[15] ;
+ wire \cbx_1__8__7_chanx_right_out[16] ;
+ wire \cbx_1__8__7_chanx_right_out[17] ;
+ wire \cbx_1__8__7_chanx_right_out[18] ;
+ wire \cbx_1__8__7_chanx_right_out[19] ;
+ wire \cbx_1__8__7_chanx_right_out[1] ;
+ wire \cbx_1__8__7_chanx_right_out[2] ;
+ wire \cbx_1__8__7_chanx_right_out[3] ;
+ wire \cbx_1__8__7_chanx_right_out[4] ;
+ wire \cbx_1__8__7_chanx_right_out[5] ;
+ wire \cbx_1__8__7_chanx_right_out[6] ;
+ wire \cbx_1__8__7_chanx_right_out[7] ;
+ wire \cbx_1__8__7_chanx_right_out[8] ;
+ wire \cbx_1__8__7_chanx_right_out[9] ;
+ wire cbx_1__8__7_top_grid_pin_0_;
+ wire \cby_0__1__0_chany_bottom_out[0] ;
+ wire \cby_0__1__0_chany_bottom_out[10] ;
+ wire \cby_0__1__0_chany_bottom_out[11] ;
+ wire \cby_0__1__0_chany_bottom_out[12] ;
+ wire \cby_0__1__0_chany_bottom_out[13] ;
+ wire \cby_0__1__0_chany_bottom_out[14] ;
+ wire \cby_0__1__0_chany_bottom_out[15] ;
+ wire \cby_0__1__0_chany_bottom_out[16] ;
+ wire \cby_0__1__0_chany_bottom_out[17] ;
+ wire \cby_0__1__0_chany_bottom_out[18] ;
+ wire \cby_0__1__0_chany_bottom_out[19] ;
+ wire \cby_0__1__0_chany_bottom_out[1] ;
+ wire \cby_0__1__0_chany_bottom_out[2] ;
+ wire \cby_0__1__0_chany_bottom_out[3] ;
+ wire \cby_0__1__0_chany_bottom_out[4] ;
+ wire \cby_0__1__0_chany_bottom_out[5] ;
+ wire \cby_0__1__0_chany_bottom_out[6] ;
+ wire \cby_0__1__0_chany_bottom_out[7] ;
+ wire \cby_0__1__0_chany_bottom_out[8] ;
+ wire \cby_0__1__0_chany_bottom_out[9] ;
+ wire \cby_0__1__0_chany_top_out[0] ;
+ wire \cby_0__1__0_chany_top_out[10] ;
+ wire \cby_0__1__0_chany_top_out[11] ;
+ wire \cby_0__1__0_chany_top_out[12] ;
+ wire \cby_0__1__0_chany_top_out[13] ;
+ wire \cby_0__1__0_chany_top_out[14] ;
+ wire \cby_0__1__0_chany_top_out[15] ;
+ wire \cby_0__1__0_chany_top_out[16] ;
+ wire \cby_0__1__0_chany_top_out[17] ;
+ wire \cby_0__1__0_chany_top_out[18] ;
+ wire \cby_0__1__0_chany_top_out[19] ;
+ wire \cby_0__1__0_chany_top_out[1] ;
+ wire \cby_0__1__0_chany_top_out[2] ;
+ wire \cby_0__1__0_chany_top_out[3] ;
+ wire \cby_0__1__0_chany_top_out[4] ;
+ wire \cby_0__1__0_chany_top_out[5] ;
+ wire \cby_0__1__0_chany_top_out[6] ;
+ wire \cby_0__1__0_chany_top_out[7] ;
+ wire \cby_0__1__0_chany_top_out[8] ;
+ wire \cby_0__1__0_chany_top_out[9] ;
+ wire cby_0__1__0_left_grid_pin_0_;
+ wire \cby_0__1__1_chany_bottom_out[0] ;
+ wire \cby_0__1__1_chany_bottom_out[10] ;
+ wire \cby_0__1__1_chany_bottom_out[11] ;
+ wire \cby_0__1__1_chany_bottom_out[12] ;
+ wire \cby_0__1__1_chany_bottom_out[13] ;
+ wire \cby_0__1__1_chany_bottom_out[14] ;
+ wire \cby_0__1__1_chany_bottom_out[15] ;
+ wire \cby_0__1__1_chany_bottom_out[16] ;
+ wire \cby_0__1__1_chany_bottom_out[17] ;
+ wire \cby_0__1__1_chany_bottom_out[18] ;
+ wire \cby_0__1__1_chany_bottom_out[19] ;
+ wire \cby_0__1__1_chany_bottom_out[1] ;
+ wire \cby_0__1__1_chany_bottom_out[2] ;
+ wire \cby_0__1__1_chany_bottom_out[3] ;
+ wire \cby_0__1__1_chany_bottom_out[4] ;
+ wire \cby_0__1__1_chany_bottom_out[5] ;
+ wire \cby_0__1__1_chany_bottom_out[6] ;
+ wire \cby_0__1__1_chany_bottom_out[7] ;
+ wire \cby_0__1__1_chany_bottom_out[8] ;
+ wire \cby_0__1__1_chany_bottom_out[9] ;
+ wire \cby_0__1__1_chany_top_out[0] ;
+ wire \cby_0__1__1_chany_top_out[10] ;
+ wire \cby_0__1__1_chany_top_out[11] ;
+ wire \cby_0__1__1_chany_top_out[12] ;
+ wire \cby_0__1__1_chany_top_out[13] ;
+ wire \cby_0__1__1_chany_top_out[14] ;
+ wire \cby_0__1__1_chany_top_out[15] ;
+ wire \cby_0__1__1_chany_top_out[16] ;
+ wire \cby_0__1__1_chany_top_out[17] ;
+ wire \cby_0__1__1_chany_top_out[18] ;
+ wire \cby_0__1__1_chany_top_out[19] ;
+ wire \cby_0__1__1_chany_top_out[1] ;
+ wire \cby_0__1__1_chany_top_out[2] ;
+ wire \cby_0__1__1_chany_top_out[3] ;
+ wire \cby_0__1__1_chany_top_out[4] ;
+ wire \cby_0__1__1_chany_top_out[5] ;
+ wire \cby_0__1__1_chany_top_out[6] ;
+ wire \cby_0__1__1_chany_top_out[7] ;
+ wire \cby_0__1__1_chany_top_out[8] ;
+ wire \cby_0__1__1_chany_top_out[9] ;
+ wire cby_0__1__1_left_grid_pin_0_;
+ wire \cby_0__1__2_chany_bottom_out[0] ;
+ wire \cby_0__1__2_chany_bottom_out[10] ;
+ wire \cby_0__1__2_chany_bottom_out[11] ;
+ wire \cby_0__1__2_chany_bottom_out[12] ;
+ wire \cby_0__1__2_chany_bottom_out[13] ;
+ wire \cby_0__1__2_chany_bottom_out[14] ;
+ wire \cby_0__1__2_chany_bottom_out[15] ;
+ wire \cby_0__1__2_chany_bottom_out[16] ;
+ wire \cby_0__1__2_chany_bottom_out[17] ;
+ wire \cby_0__1__2_chany_bottom_out[18] ;
+ wire \cby_0__1__2_chany_bottom_out[19] ;
+ wire \cby_0__1__2_chany_bottom_out[1] ;
+ wire \cby_0__1__2_chany_bottom_out[2] ;
+ wire \cby_0__1__2_chany_bottom_out[3] ;
+ wire \cby_0__1__2_chany_bottom_out[4] ;
+ wire \cby_0__1__2_chany_bottom_out[5] ;
+ wire \cby_0__1__2_chany_bottom_out[6] ;
+ wire \cby_0__1__2_chany_bottom_out[7] ;
+ wire \cby_0__1__2_chany_bottom_out[8] ;
+ wire \cby_0__1__2_chany_bottom_out[9] ;
+ wire \cby_0__1__2_chany_top_out[0] ;
+ wire \cby_0__1__2_chany_top_out[10] ;
+ wire \cby_0__1__2_chany_top_out[11] ;
+ wire \cby_0__1__2_chany_top_out[12] ;
+ wire \cby_0__1__2_chany_top_out[13] ;
+ wire \cby_0__1__2_chany_top_out[14] ;
+ wire \cby_0__1__2_chany_top_out[15] ;
+ wire \cby_0__1__2_chany_top_out[16] ;
+ wire \cby_0__1__2_chany_top_out[17] ;
+ wire \cby_0__1__2_chany_top_out[18] ;
+ wire \cby_0__1__2_chany_top_out[19] ;
+ wire \cby_0__1__2_chany_top_out[1] ;
+ wire \cby_0__1__2_chany_top_out[2] ;
+ wire \cby_0__1__2_chany_top_out[3] ;
+ wire \cby_0__1__2_chany_top_out[4] ;
+ wire \cby_0__1__2_chany_top_out[5] ;
+ wire \cby_0__1__2_chany_top_out[6] ;
+ wire \cby_0__1__2_chany_top_out[7] ;
+ wire \cby_0__1__2_chany_top_out[8] ;
+ wire \cby_0__1__2_chany_top_out[9] ;
+ wire cby_0__1__2_left_grid_pin_0_;
+ wire \cby_0__1__3_chany_bottom_out[0] ;
+ wire \cby_0__1__3_chany_bottom_out[10] ;
+ wire \cby_0__1__3_chany_bottom_out[11] ;
+ wire \cby_0__1__3_chany_bottom_out[12] ;
+ wire \cby_0__1__3_chany_bottom_out[13] ;
+ wire \cby_0__1__3_chany_bottom_out[14] ;
+ wire \cby_0__1__3_chany_bottom_out[15] ;
+ wire \cby_0__1__3_chany_bottom_out[16] ;
+ wire \cby_0__1__3_chany_bottom_out[17] ;
+ wire \cby_0__1__3_chany_bottom_out[18] ;
+ wire \cby_0__1__3_chany_bottom_out[19] ;
+ wire \cby_0__1__3_chany_bottom_out[1] ;
+ wire \cby_0__1__3_chany_bottom_out[2] ;
+ wire \cby_0__1__3_chany_bottom_out[3] ;
+ wire \cby_0__1__3_chany_bottom_out[4] ;
+ wire \cby_0__1__3_chany_bottom_out[5] ;
+ wire \cby_0__1__3_chany_bottom_out[6] ;
+ wire \cby_0__1__3_chany_bottom_out[7] ;
+ wire \cby_0__1__3_chany_bottom_out[8] ;
+ wire \cby_0__1__3_chany_bottom_out[9] ;
+ wire \cby_0__1__3_chany_top_out[0] ;
+ wire \cby_0__1__3_chany_top_out[10] ;
+ wire \cby_0__1__3_chany_top_out[11] ;
+ wire \cby_0__1__3_chany_top_out[12] ;
+ wire \cby_0__1__3_chany_top_out[13] ;
+ wire \cby_0__1__3_chany_top_out[14] ;
+ wire \cby_0__1__3_chany_top_out[15] ;
+ wire \cby_0__1__3_chany_top_out[16] ;
+ wire \cby_0__1__3_chany_top_out[17] ;
+ wire \cby_0__1__3_chany_top_out[18] ;
+ wire \cby_0__1__3_chany_top_out[19] ;
+ wire \cby_0__1__3_chany_top_out[1] ;
+ wire \cby_0__1__3_chany_top_out[2] ;
+ wire \cby_0__1__3_chany_top_out[3] ;
+ wire \cby_0__1__3_chany_top_out[4] ;
+ wire \cby_0__1__3_chany_top_out[5] ;
+ wire \cby_0__1__3_chany_top_out[6] ;
+ wire \cby_0__1__3_chany_top_out[7] ;
+ wire \cby_0__1__3_chany_top_out[8] ;
+ wire \cby_0__1__3_chany_top_out[9] ;
+ wire cby_0__1__3_left_grid_pin_0_;
+ wire \cby_0__1__4_chany_bottom_out[0] ;
+ wire \cby_0__1__4_chany_bottom_out[10] ;
+ wire \cby_0__1__4_chany_bottom_out[11] ;
+ wire \cby_0__1__4_chany_bottom_out[12] ;
+ wire \cby_0__1__4_chany_bottom_out[13] ;
+ wire \cby_0__1__4_chany_bottom_out[14] ;
+ wire \cby_0__1__4_chany_bottom_out[15] ;
+ wire \cby_0__1__4_chany_bottom_out[16] ;
+ wire \cby_0__1__4_chany_bottom_out[17] ;
+ wire \cby_0__1__4_chany_bottom_out[18] ;
+ wire \cby_0__1__4_chany_bottom_out[19] ;
+ wire \cby_0__1__4_chany_bottom_out[1] ;
+ wire \cby_0__1__4_chany_bottom_out[2] ;
+ wire \cby_0__1__4_chany_bottom_out[3] ;
+ wire \cby_0__1__4_chany_bottom_out[4] ;
+ wire \cby_0__1__4_chany_bottom_out[5] ;
+ wire \cby_0__1__4_chany_bottom_out[6] ;
+ wire \cby_0__1__4_chany_bottom_out[7] ;
+ wire \cby_0__1__4_chany_bottom_out[8] ;
+ wire \cby_0__1__4_chany_bottom_out[9] ;
+ wire \cby_0__1__4_chany_top_out[0] ;
+ wire \cby_0__1__4_chany_top_out[10] ;
+ wire \cby_0__1__4_chany_top_out[11] ;
+ wire \cby_0__1__4_chany_top_out[12] ;
+ wire \cby_0__1__4_chany_top_out[13] ;
+ wire \cby_0__1__4_chany_top_out[14] ;
+ wire \cby_0__1__4_chany_top_out[15] ;
+ wire \cby_0__1__4_chany_top_out[16] ;
+ wire \cby_0__1__4_chany_top_out[17] ;
+ wire \cby_0__1__4_chany_top_out[18] ;
+ wire \cby_0__1__4_chany_top_out[19] ;
+ wire \cby_0__1__4_chany_top_out[1] ;
+ wire \cby_0__1__4_chany_top_out[2] ;
+ wire \cby_0__1__4_chany_top_out[3] ;
+ wire \cby_0__1__4_chany_top_out[4] ;
+ wire \cby_0__1__4_chany_top_out[5] ;
+ wire \cby_0__1__4_chany_top_out[6] ;
+ wire \cby_0__1__4_chany_top_out[7] ;
+ wire \cby_0__1__4_chany_top_out[8] ;
+ wire \cby_0__1__4_chany_top_out[9] ;
+ wire cby_0__1__4_left_grid_pin_0_;
+ wire \cby_0__1__5_chany_bottom_out[0] ;
+ wire \cby_0__1__5_chany_bottom_out[10] ;
+ wire \cby_0__1__5_chany_bottom_out[11] ;
+ wire \cby_0__1__5_chany_bottom_out[12] ;
+ wire \cby_0__1__5_chany_bottom_out[13] ;
+ wire \cby_0__1__5_chany_bottom_out[14] ;
+ wire \cby_0__1__5_chany_bottom_out[15] ;
+ wire \cby_0__1__5_chany_bottom_out[16] ;
+ wire \cby_0__1__5_chany_bottom_out[17] ;
+ wire \cby_0__1__5_chany_bottom_out[18] ;
+ wire \cby_0__1__5_chany_bottom_out[19] ;
+ wire \cby_0__1__5_chany_bottom_out[1] ;
+ wire \cby_0__1__5_chany_bottom_out[2] ;
+ wire \cby_0__1__5_chany_bottom_out[3] ;
+ wire \cby_0__1__5_chany_bottom_out[4] ;
+ wire \cby_0__1__5_chany_bottom_out[5] ;
+ wire \cby_0__1__5_chany_bottom_out[6] ;
+ wire \cby_0__1__5_chany_bottom_out[7] ;
+ wire \cby_0__1__5_chany_bottom_out[8] ;
+ wire \cby_0__1__5_chany_bottom_out[9] ;
+ wire \cby_0__1__5_chany_top_out[0] ;
+ wire \cby_0__1__5_chany_top_out[10] ;
+ wire \cby_0__1__5_chany_top_out[11] ;
+ wire \cby_0__1__5_chany_top_out[12] ;
+ wire \cby_0__1__5_chany_top_out[13] ;
+ wire \cby_0__1__5_chany_top_out[14] ;
+ wire \cby_0__1__5_chany_top_out[15] ;
+ wire \cby_0__1__5_chany_top_out[16] ;
+ wire \cby_0__1__5_chany_top_out[17] ;
+ wire \cby_0__1__5_chany_top_out[18] ;
+ wire \cby_0__1__5_chany_top_out[19] ;
+ wire \cby_0__1__5_chany_top_out[1] ;
+ wire \cby_0__1__5_chany_top_out[2] ;
+ wire \cby_0__1__5_chany_top_out[3] ;
+ wire \cby_0__1__5_chany_top_out[4] ;
+ wire \cby_0__1__5_chany_top_out[5] ;
+ wire \cby_0__1__5_chany_top_out[6] ;
+ wire \cby_0__1__5_chany_top_out[7] ;
+ wire \cby_0__1__5_chany_top_out[8] ;
+ wire \cby_0__1__5_chany_top_out[9] ;
+ wire cby_0__1__5_left_grid_pin_0_;
+ wire \cby_0__1__6_chany_bottom_out[0] ;
+ wire \cby_0__1__6_chany_bottom_out[10] ;
+ wire \cby_0__1__6_chany_bottom_out[11] ;
+ wire \cby_0__1__6_chany_bottom_out[12] ;
+ wire \cby_0__1__6_chany_bottom_out[13] ;
+ wire \cby_0__1__6_chany_bottom_out[14] ;
+ wire \cby_0__1__6_chany_bottom_out[15] ;
+ wire \cby_0__1__6_chany_bottom_out[16] ;
+ wire \cby_0__1__6_chany_bottom_out[17] ;
+ wire \cby_0__1__6_chany_bottom_out[18] ;
+ wire \cby_0__1__6_chany_bottom_out[19] ;
+ wire \cby_0__1__6_chany_bottom_out[1] ;
+ wire \cby_0__1__6_chany_bottom_out[2] ;
+ wire \cby_0__1__6_chany_bottom_out[3] ;
+ wire \cby_0__1__6_chany_bottom_out[4] ;
+ wire \cby_0__1__6_chany_bottom_out[5] ;
+ wire \cby_0__1__6_chany_bottom_out[6] ;
+ wire \cby_0__1__6_chany_bottom_out[7] ;
+ wire \cby_0__1__6_chany_bottom_out[8] ;
+ wire \cby_0__1__6_chany_bottom_out[9] ;
+ wire \cby_0__1__6_chany_top_out[0] ;
+ wire \cby_0__1__6_chany_top_out[10] ;
+ wire \cby_0__1__6_chany_top_out[11] ;
+ wire \cby_0__1__6_chany_top_out[12] ;
+ wire \cby_0__1__6_chany_top_out[13] ;
+ wire \cby_0__1__6_chany_top_out[14] ;
+ wire \cby_0__1__6_chany_top_out[15] ;
+ wire \cby_0__1__6_chany_top_out[16] ;
+ wire \cby_0__1__6_chany_top_out[17] ;
+ wire \cby_0__1__6_chany_top_out[18] ;
+ wire \cby_0__1__6_chany_top_out[19] ;
+ wire \cby_0__1__6_chany_top_out[1] ;
+ wire \cby_0__1__6_chany_top_out[2] ;
+ wire \cby_0__1__6_chany_top_out[3] ;
+ wire \cby_0__1__6_chany_top_out[4] ;
+ wire \cby_0__1__6_chany_top_out[5] ;
+ wire \cby_0__1__6_chany_top_out[6] ;
+ wire \cby_0__1__6_chany_top_out[7] ;
+ wire \cby_0__1__6_chany_top_out[8] ;
+ wire \cby_0__1__6_chany_top_out[9] ;
+ wire cby_0__1__6_left_grid_pin_0_;
+ wire \cby_0__1__7_chany_bottom_out[0] ;
+ wire \cby_0__1__7_chany_bottom_out[10] ;
+ wire \cby_0__1__7_chany_bottom_out[11] ;
+ wire \cby_0__1__7_chany_bottom_out[12] ;
+ wire \cby_0__1__7_chany_bottom_out[13] ;
+ wire \cby_0__1__7_chany_bottom_out[14] ;
+ wire \cby_0__1__7_chany_bottom_out[15] ;
+ wire \cby_0__1__7_chany_bottom_out[16] ;
+ wire \cby_0__1__7_chany_bottom_out[17] ;
+ wire \cby_0__1__7_chany_bottom_out[18] ;
+ wire \cby_0__1__7_chany_bottom_out[19] ;
+ wire \cby_0__1__7_chany_bottom_out[1] ;
+ wire \cby_0__1__7_chany_bottom_out[2] ;
+ wire \cby_0__1__7_chany_bottom_out[3] ;
+ wire \cby_0__1__7_chany_bottom_out[4] ;
+ wire \cby_0__1__7_chany_bottom_out[5] ;
+ wire \cby_0__1__7_chany_bottom_out[6] ;
+ wire \cby_0__1__7_chany_bottom_out[7] ;
+ wire \cby_0__1__7_chany_bottom_out[8] ;
+ wire \cby_0__1__7_chany_bottom_out[9] ;
+ wire \cby_0__1__7_chany_top_out[0] ;
+ wire \cby_0__1__7_chany_top_out[10] ;
+ wire \cby_0__1__7_chany_top_out[11] ;
+ wire \cby_0__1__7_chany_top_out[12] ;
+ wire \cby_0__1__7_chany_top_out[13] ;
+ wire \cby_0__1__7_chany_top_out[14] ;
+ wire \cby_0__1__7_chany_top_out[15] ;
+ wire \cby_0__1__7_chany_top_out[16] ;
+ wire \cby_0__1__7_chany_top_out[17] ;
+ wire \cby_0__1__7_chany_top_out[18] ;
+ wire \cby_0__1__7_chany_top_out[19] ;
+ wire \cby_0__1__7_chany_top_out[1] ;
+ wire \cby_0__1__7_chany_top_out[2] ;
+ wire \cby_0__1__7_chany_top_out[3] ;
+ wire \cby_0__1__7_chany_top_out[4] ;
+ wire \cby_0__1__7_chany_top_out[5] ;
+ wire \cby_0__1__7_chany_top_out[6] ;
+ wire \cby_0__1__7_chany_top_out[7] ;
+ wire \cby_0__1__7_chany_top_out[8] ;
+ wire \cby_0__1__7_chany_top_out[9] ;
+ wire cby_0__1__7_left_grid_pin_0_;
+ wire cby_1__1__0_ccff_tail;
+ wire \cby_1__1__0_chany_bottom_out[0] ;
+ wire \cby_1__1__0_chany_bottom_out[10] ;
+ wire \cby_1__1__0_chany_bottom_out[11] ;
+ wire \cby_1__1__0_chany_bottom_out[12] ;
+ wire \cby_1__1__0_chany_bottom_out[13] ;
+ wire \cby_1__1__0_chany_bottom_out[14] ;
+ wire \cby_1__1__0_chany_bottom_out[15] ;
+ wire \cby_1__1__0_chany_bottom_out[16] ;
+ wire \cby_1__1__0_chany_bottom_out[17] ;
+ wire \cby_1__1__0_chany_bottom_out[18] ;
+ wire \cby_1__1__0_chany_bottom_out[19] ;
+ wire \cby_1__1__0_chany_bottom_out[1] ;
+ wire \cby_1__1__0_chany_bottom_out[2] ;
+ wire \cby_1__1__0_chany_bottom_out[3] ;
+ wire \cby_1__1__0_chany_bottom_out[4] ;
+ wire \cby_1__1__0_chany_bottom_out[5] ;
+ wire \cby_1__1__0_chany_bottom_out[6] ;
+ wire \cby_1__1__0_chany_bottom_out[7] ;
+ wire \cby_1__1__0_chany_bottom_out[8] ;
+ wire \cby_1__1__0_chany_bottom_out[9] ;
+ wire \cby_1__1__0_chany_top_out[0] ;
+ wire \cby_1__1__0_chany_top_out[10] ;
+ wire \cby_1__1__0_chany_top_out[11] ;
+ wire \cby_1__1__0_chany_top_out[12] ;
+ wire \cby_1__1__0_chany_top_out[13] ;
+ wire \cby_1__1__0_chany_top_out[14] ;
+ wire \cby_1__1__0_chany_top_out[15] ;
+ wire \cby_1__1__0_chany_top_out[16] ;
+ wire \cby_1__1__0_chany_top_out[17] ;
+ wire \cby_1__1__0_chany_top_out[18] ;
+ wire \cby_1__1__0_chany_top_out[19] ;
+ wire \cby_1__1__0_chany_top_out[1] ;
+ wire \cby_1__1__0_chany_top_out[2] ;
+ wire \cby_1__1__0_chany_top_out[3] ;
+ wire \cby_1__1__0_chany_top_out[4] ;
+ wire \cby_1__1__0_chany_top_out[5] ;
+ wire \cby_1__1__0_chany_top_out[6] ;
+ wire \cby_1__1__0_chany_top_out[7] ;
+ wire \cby_1__1__0_chany_top_out[8] ;
+ wire \cby_1__1__0_chany_top_out[9] ;
+ wire cby_1__1__0_left_grid_pin_16_;
+ wire cby_1__1__0_left_grid_pin_17_;
+ wire cby_1__1__0_left_grid_pin_18_;
+ wire cby_1__1__0_left_grid_pin_19_;
+ wire cby_1__1__0_left_grid_pin_20_;
+ wire cby_1__1__0_left_grid_pin_21_;
+ wire cby_1__1__0_left_grid_pin_22_;
+ wire cby_1__1__0_left_grid_pin_23_;
+ wire cby_1__1__0_left_grid_pin_24_;
+ wire cby_1__1__0_left_grid_pin_25_;
+ wire cby_1__1__0_left_grid_pin_26_;
+ wire cby_1__1__0_left_grid_pin_27_;
+ wire cby_1__1__0_left_grid_pin_28_;
+ wire cby_1__1__0_left_grid_pin_29_;
+ wire cby_1__1__0_left_grid_pin_30_;
+ wire cby_1__1__0_left_grid_pin_31_;
+ wire cby_1__1__10_ccff_tail;
+ wire \cby_1__1__10_chany_bottom_out[0] ;
+ wire \cby_1__1__10_chany_bottom_out[10] ;
+ wire \cby_1__1__10_chany_bottom_out[11] ;
+ wire \cby_1__1__10_chany_bottom_out[12] ;
+ wire \cby_1__1__10_chany_bottom_out[13] ;
+ wire \cby_1__1__10_chany_bottom_out[14] ;
+ wire \cby_1__1__10_chany_bottom_out[15] ;
+ wire \cby_1__1__10_chany_bottom_out[16] ;
+ wire \cby_1__1__10_chany_bottom_out[17] ;
+ wire \cby_1__1__10_chany_bottom_out[18] ;
+ wire \cby_1__1__10_chany_bottom_out[19] ;
+ wire \cby_1__1__10_chany_bottom_out[1] ;
+ wire \cby_1__1__10_chany_bottom_out[2] ;
+ wire \cby_1__1__10_chany_bottom_out[3] ;
+ wire \cby_1__1__10_chany_bottom_out[4] ;
+ wire \cby_1__1__10_chany_bottom_out[5] ;
+ wire \cby_1__1__10_chany_bottom_out[6] ;
+ wire \cby_1__1__10_chany_bottom_out[7] ;
+ wire \cby_1__1__10_chany_bottom_out[8] ;
+ wire \cby_1__1__10_chany_bottom_out[9] ;
+ wire \cby_1__1__10_chany_top_out[0] ;
+ wire \cby_1__1__10_chany_top_out[10] ;
+ wire \cby_1__1__10_chany_top_out[11] ;
+ wire \cby_1__1__10_chany_top_out[12] ;
+ wire \cby_1__1__10_chany_top_out[13] ;
+ wire \cby_1__1__10_chany_top_out[14] ;
+ wire \cby_1__1__10_chany_top_out[15] ;
+ wire \cby_1__1__10_chany_top_out[16] ;
+ wire \cby_1__1__10_chany_top_out[17] ;
+ wire \cby_1__1__10_chany_top_out[18] ;
+ wire \cby_1__1__10_chany_top_out[19] ;
+ wire \cby_1__1__10_chany_top_out[1] ;
+ wire \cby_1__1__10_chany_top_out[2] ;
+ wire \cby_1__1__10_chany_top_out[3] ;
+ wire \cby_1__1__10_chany_top_out[4] ;
+ wire \cby_1__1__10_chany_top_out[5] ;
+ wire \cby_1__1__10_chany_top_out[6] ;
+ wire \cby_1__1__10_chany_top_out[7] ;
+ wire \cby_1__1__10_chany_top_out[8] ;
+ wire \cby_1__1__10_chany_top_out[9] ;
+ wire cby_1__1__10_left_grid_pin_16_;
+ wire cby_1__1__10_left_grid_pin_17_;
+ wire cby_1__1__10_left_grid_pin_18_;
+ wire cby_1__1__10_left_grid_pin_19_;
+ wire cby_1__1__10_left_grid_pin_20_;
+ wire cby_1__1__10_left_grid_pin_21_;
+ wire cby_1__1__10_left_grid_pin_22_;
+ wire cby_1__1__10_left_grid_pin_23_;
+ wire cby_1__1__10_left_grid_pin_24_;
+ wire cby_1__1__10_left_grid_pin_25_;
+ wire cby_1__1__10_left_grid_pin_26_;
+ wire cby_1__1__10_left_grid_pin_27_;
+ wire cby_1__1__10_left_grid_pin_28_;
+ wire cby_1__1__10_left_grid_pin_29_;
+ wire cby_1__1__10_left_grid_pin_30_;
+ wire cby_1__1__10_left_grid_pin_31_;
+ wire cby_1__1__11_ccff_tail;
+ wire \cby_1__1__11_chany_bottom_out[0] ;
+ wire \cby_1__1__11_chany_bottom_out[10] ;
+ wire \cby_1__1__11_chany_bottom_out[11] ;
+ wire \cby_1__1__11_chany_bottom_out[12] ;
+ wire \cby_1__1__11_chany_bottom_out[13] ;
+ wire \cby_1__1__11_chany_bottom_out[14] ;
+ wire \cby_1__1__11_chany_bottom_out[15] ;
+ wire \cby_1__1__11_chany_bottom_out[16] ;
+ wire \cby_1__1__11_chany_bottom_out[17] ;
+ wire \cby_1__1__11_chany_bottom_out[18] ;
+ wire \cby_1__1__11_chany_bottom_out[19] ;
+ wire \cby_1__1__11_chany_bottom_out[1] ;
+ wire \cby_1__1__11_chany_bottom_out[2] ;
+ wire \cby_1__1__11_chany_bottom_out[3] ;
+ wire \cby_1__1__11_chany_bottom_out[4] ;
+ wire \cby_1__1__11_chany_bottom_out[5] ;
+ wire \cby_1__1__11_chany_bottom_out[6] ;
+ wire \cby_1__1__11_chany_bottom_out[7] ;
+ wire \cby_1__1__11_chany_bottom_out[8] ;
+ wire \cby_1__1__11_chany_bottom_out[9] ;
+ wire \cby_1__1__11_chany_top_out[0] ;
+ wire \cby_1__1__11_chany_top_out[10] ;
+ wire \cby_1__1__11_chany_top_out[11] ;
+ wire \cby_1__1__11_chany_top_out[12] ;
+ wire \cby_1__1__11_chany_top_out[13] ;
+ wire \cby_1__1__11_chany_top_out[14] ;
+ wire \cby_1__1__11_chany_top_out[15] ;
+ wire \cby_1__1__11_chany_top_out[16] ;
+ wire \cby_1__1__11_chany_top_out[17] ;
+ wire \cby_1__1__11_chany_top_out[18] ;
+ wire \cby_1__1__11_chany_top_out[19] ;
+ wire \cby_1__1__11_chany_top_out[1] ;
+ wire \cby_1__1__11_chany_top_out[2] ;
+ wire \cby_1__1__11_chany_top_out[3] ;
+ wire \cby_1__1__11_chany_top_out[4] ;
+ wire \cby_1__1__11_chany_top_out[5] ;
+ wire \cby_1__1__11_chany_top_out[6] ;
+ wire \cby_1__1__11_chany_top_out[7] ;
+ wire \cby_1__1__11_chany_top_out[8] ;
+ wire \cby_1__1__11_chany_top_out[9] ;
+ wire cby_1__1__11_left_grid_pin_16_;
+ wire cby_1__1__11_left_grid_pin_17_;
+ wire cby_1__1__11_left_grid_pin_18_;
+ wire cby_1__1__11_left_grid_pin_19_;
+ wire cby_1__1__11_left_grid_pin_20_;
+ wire cby_1__1__11_left_grid_pin_21_;
+ wire cby_1__1__11_left_grid_pin_22_;
+ wire cby_1__1__11_left_grid_pin_23_;
+ wire cby_1__1__11_left_grid_pin_24_;
+ wire cby_1__1__11_left_grid_pin_25_;
+ wire cby_1__1__11_left_grid_pin_26_;
+ wire cby_1__1__11_left_grid_pin_27_;
+ wire cby_1__1__11_left_grid_pin_28_;
+ wire cby_1__1__11_left_grid_pin_29_;
+ wire cby_1__1__11_left_grid_pin_30_;
+ wire cby_1__1__11_left_grid_pin_31_;
+ wire cby_1__1__12_ccff_tail;
+ wire \cby_1__1__12_chany_bottom_out[0] ;
+ wire \cby_1__1__12_chany_bottom_out[10] ;
+ wire \cby_1__1__12_chany_bottom_out[11] ;
+ wire \cby_1__1__12_chany_bottom_out[12] ;
+ wire \cby_1__1__12_chany_bottom_out[13] ;
+ wire \cby_1__1__12_chany_bottom_out[14] ;
+ wire \cby_1__1__12_chany_bottom_out[15] ;
+ wire \cby_1__1__12_chany_bottom_out[16] ;
+ wire \cby_1__1__12_chany_bottom_out[17] ;
+ wire \cby_1__1__12_chany_bottom_out[18] ;
+ wire \cby_1__1__12_chany_bottom_out[19] ;
+ wire \cby_1__1__12_chany_bottom_out[1] ;
+ wire \cby_1__1__12_chany_bottom_out[2] ;
+ wire \cby_1__1__12_chany_bottom_out[3] ;
+ wire \cby_1__1__12_chany_bottom_out[4] ;
+ wire \cby_1__1__12_chany_bottom_out[5] ;
+ wire \cby_1__1__12_chany_bottom_out[6] ;
+ wire \cby_1__1__12_chany_bottom_out[7] ;
+ wire \cby_1__1__12_chany_bottom_out[8] ;
+ wire \cby_1__1__12_chany_bottom_out[9] ;
+ wire \cby_1__1__12_chany_top_out[0] ;
+ wire \cby_1__1__12_chany_top_out[10] ;
+ wire \cby_1__1__12_chany_top_out[11] ;
+ wire \cby_1__1__12_chany_top_out[12] ;
+ wire \cby_1__1__12_chany_top_out[13] ;
+ wire \cby_1__1__12_chany_top_out[14] ;
+ wire \cby_1__1__12_chany_top_out[15] ;
+ wire \cby_1__1__12_chany_top_out[16] ;
+ wire \cby_1__1__12_chany_top_out[17] ;
+ wire \cby_1__1__12_chany_top_out[18] ;
+ wire \cby_1__1__12_chany_top_out[19] ;
+ wire \cby_1__1__12_chany_top_out[1] ;
+ wire \cby_1__1__12_chany_top_out[2] ;
+ wire \cby_1__1__12_chany_top_out[3] ;
+ wire \cby_1__1__12_chany_top_out[4] ;
+ wire \cby_1__1__12_chany_top_out[5] ;
+ wire \cby_1__1__12_chany_top_out[6] ;
+ wire \cby_1__1__12_chany_top_out[7] ;
+ wire \cby_1__1__12_chany_top_out[8] ;
+ wire \cby_1__1__12_chany_top_out[9] ;
+ wire cby_1__1__12_left_grid_pin_16_;
+ wire cby_1__1__12_left_grid_pin_17_;
+ wire cby_1__1__12_left_grid_pin_18_;
+ wire cby_1__1__12_left_grid_pin_19_;
+ wire cby_1__1__12_left_grid_pin_20_;
+ wire cby_1__1__12_left_grid_pin_21_;
+ wire cby_1__1__12_left_grid_pin_22_;
+ wire cby_1__1__12_left_grid_pin_23_;
+ wire cby_1__1__12_left_grid_pin_24_;
+ wire cby_1__1__12_left_grid_pin_25_;
+ wire cby_1__1__12_left_grid_pin_26_;
+ wire cby_1__1__12_left_grid_pin_27_;
+ wire cby_1__1__12_left_grid_pin_28_;
+ wire cby_1__1__12_left_grid_pin_29_;
+ wire cby_1__1__12_left_grid_pin_30_;
+ wire cby_1__1__12_left_grid_pin_31_;
+ wire cby_1__1__13_ccff_tail;
+ wire \cby_1__1__13_chany_bottom_out[0] ;
+ wire \cby_1__1__13_chany_bottom_out[10] ;
+ wire \cby_1__1__13_chany_bottom_out[11] ;
+ wire \cby_1__1__13_chany_bottom_out[12] ;
+ wire \cby_1__1__13_chany_bottom_out[13] ;
+ wire \cby_1__1__13_chany_bottom_out[14] ;
+ wire \cby_1__1__13_chany_bottom_out[15] ;
+ wire \cby_1__1__13_chany_bottom_out[16] ;
+ wire \cby_1__1__13_chany_bottom_out[17] ;
+ wire \cby_1__1__13_chany_bottom_out[18] ;
+ wire \cby_1__1__13_chany_bottom_out[19] ;
+ wire \cby_1__1__13_chany_bottom_out[1] ;
+ wire \cby_1__1__13_chany_bottom_out[2] ;
+ wire \cby_1__1__13_chany_bottom_out[3] ;
+ wire \cby_1__1__13_chany_bottom_out[4] ;
+ wire \cby_1__1__13_chany_bottom_out[5] ;
+ wire \cby_1__1__13_chany_bottom_out[6] ;
+ wire \cby_1__1__13_chany_bottom_out[7] ;
+ wire \cby_1__1__13_chany_bottom_out[8] ;
+ wire \cby_1__1__13_chany_bottom_out[9] ;
+ wire \cby_1__1__13_chany_top_out[0] ;
+ wire \cby_1__1__13_chany_top_out[10] ;
+ wire \cby_1__1__13_chany_top_out[11] ;
+ wire \cby_1__1__13_chany_top_out[12] ;
+ wire \cby_1__1__13_chany_top_out[13] ;
+ wire \cby_1__1__13_chany_top_out[14] ;
+ wire \cby_1__1__13_chany_top_out[15] ;
+ wire \cby_1__1__13_chany_top_out[16] ;
+ wire \cby_1__1__13_chany_top_out[17] ;
+ wire \cby_1__1__13_chany_top_out[18] ;
+ wire \cby_1__1__13_chany_top_out[19] ;
+ wire \cby_1__1__13_chany_top_out[1] ;
+ wire \cby_1__1__13_chany_top_out[2] ;
+ wire \cby_1__1__13_chany_top_out[3] ;
+ wire \cby_1__1__13_chany_top_out[4] ;
+ wire \cby_1__1__13_chany_top_out[5] ;
+ wire \cby_1__1__13_chany_top_out[6] ;
+ wire \cby_1__1__13_chany_top_out[7] ;
+ wire \cby_1__1__13_chany_top_out[8] ;
+ wire \cby_1__1__13_chany_top_out[9] ;
+ wire cby_1__1__13_left_grid_pin_16_;
+ wire cby_1__1__13_left_grid_pin_17_;
+ wire cby_1__1__13_left_grid_pin_18_;
+ wire cby_1__1__13_left_grid_pin_19_;
+ wire cby_1__1__13_left_grid_pin_20_;
+ wire cby_1__1__13_left_grid_pin_21_;
+ wire cby_1__1__13_left_grid_pin_22_;
+ wire cby_1__1__13_left_grid_pin_23_;
+ wire cby_1__1__13_left_grid_pin_24_;
+ wire cby_1__1__13_left_grid_pin_25_;
+ wire cby_1__1__13_left_grid_pin_26_;
+ wire cby_1__1__13_left_grid_pin_27_;
+ wire cby_1__1__13_left_grid_pin_28_;
+ wire cby_1__1__13_left_grid_pin_29_;
+ wire cby_1__1__13_left_grid_pin_30_;
+ wire cby_1__1__13_left_grid_pin_31_;
+ wire cby_1__1__14_ccff_tail;
+ wire \cby_1__1__14_chany_bottom_out[0] ;
+ wire \cby_1__1__14_chany_bottom_out[10] ;
+ wire \cby_1__1__14_chany_bottom_out[11] ;
+ wire \cby_1__1__14_chany_bottom_out[12] ;
+ wire \cby_1__1__14_chany_bottom_out[13] ;
+ wire \cby_1__1__14_chany_bottom_out[14] ;
+ wire \cby_1__1__14_chany_bottom_out[15] ;
+ wire \cby_1__1__14_chany_bottom_out[16] ;
+ wire \cby_1__1__14_chany_bottom_out[17] ;
+ wire \cby_1__1__14_chany_bottom_out[18] ;
+ wire \cby_1__1__14_chany_bottom_out[19] ;
+ wire \cby_1__1__14_chany_bottom_out[1] ;
+ wire \cby_1__1__14_chany_bottom_out[2] ;
+ wire \cby_1__1__14_chany_bottom_out[3] ;
+ wire \cby_1__1__14_chany_bottom_out[4] ;
+ wire \cby_1__1__14_chany_bottom_out[5] ;
+ wire \cby_1__1__14_chany_bottom_out[6] ;
+ wire \cby_1__1__14_chany_bottom_out[7] ;
+ wire \cby_1__1__14_chany_bottom_out[8] ;
+ wire \cby_1__1__14_chany_bottom_out[9] ;
+ wire \cby_1__1__14_chany_top_out[0] ;
+ wire \cby_1__1__14_chany_top_out[10] ;
+ wire \cby_1__1__14_chany_top_out[11] ;
+ wire \cby_1__1__14_chany_top_out[12] ;
+ wire \cby_1__1__14_chany_top_out[13] ;
+ wire \cby_1__1__14_chany_top_out[14] ;
+ wire \cby_1__1__14_chany_top_out[15] ;
+ wire \cby_1__1__14_chany_top_out[16] ;
+ wire \cby_1__1__14_chany_top_out[17] ;
+ wire \cby_1__1__14_chany_top_out[18] ;
+ wire \cby_1__1__14_chany_top_out[19] ;
+ wire \cby_1__1__14_chany_top_out[1] ;
+ wire \cby_1__1__14_chany_top_out[2] ;
+ wire \cby_1__1__14_chany_top_out[3] ;
+ wire \cby_1__1__14_chany_top_out[4] ;
+ wire \cby_1__1__14_chany_top_out[5] ;
+ wire \cby_1__1__14_chany_top_out[6] ;
+ wire \cby_1__1__14_chany_top_out[7] ;
+ wire \cby_1__1__14_chany_top_out[8] ;
+ wire \cby_1__1__14_chany_top_out[9] ;
+ wire cby_1__1__14_left_grid_pin_16_;
+ wire cby_1__1__14_left_grid_pin_17_;
+ wire cby_1__1__14_left_grid_pin_18_;
+ wire cby_1__1__14_left_grid_pin_19_;
+ wire cby_1__1__14_left_grid_pin_20_;
+ wire cby_1__1__14_left_grid_pin_21_;
+ wire cby_1__1__14_left_grid_pin_22_;
+ wire cby_1__1__14_left_grid_pin_23_;
+ wire cby_1__1__14_left_grid_pin_24_;
+ wire cby_1__1__14_left_grid_pin_25_;
+ wire cby_1__1__14_left_grid_pin_26_;
+ wire cby_1__1__14_left_grid_pin_27_;
+ wire cby_1__1__14_left_grid_pin_28_;
+ wire cby_1__1__14_left_grid_pin_29_;
+ wire cby_1__1__14_left_grid_pin_30_;
+ wire cby_1__1__14_left_grid_pin_31_;
+ wire cby_1__1__15_ccff_tail;
+ wire \cby_1__1__15_chany_bottom_out[0] ;
+ wire \cby_1__1__15_chany_bottom_out[10] ;
+ wire \cby_1__1__15_chany_bottom_out[11] ;
+ wire \cby_1__1__15_chany_bottom_out[12] ;
+ wire \cby_1__1__15_chany_bottom_out[13] ;
+ wire \cby_1__1__15_chany_bottom_out[14] ;
+ wire \cby_1__1__15_chany_bottom_out[15] ;
+ wire \cby_1__1__15_chany_bottom_out[16] ;
+ wire \cby_1__1__15_chany_bottom_out[17] ;
+ wire \cby_1__1__15_chany_bottom_out[18] ;
+ wire \cby_1__1__15_chany_bottom_out[19] ;
+ wire \cby_1__1__15_chany_bottom_out[1] ;
+ wire \cby_1__1__15_chany_bottom_out[2] ;
+ wire \cby_1__1__15_chany_bottom_out[3] ;
+ wire \cby_1__1__15_chany_bottom_out[4] ;
+ wire \cby_1__1__15_chany_bottom_out[5] ;
+ wire \cby_1__1__15_chany_bottom_out[6] ;
+ wire \cby_1__1__15_chany_bottom_out[7] ;
+ wire \cby_1__1__15_chany_bottom_out[8] ;
+ wire \cby_1__1__15_chany_bottom_out[9] ;
+ wire \cby_1__1__15_chany_top_out[0] ;
+ wire \cby_1__1__15_chany_top_out[10] ;
+ wire \cby_1__1__15_chany_top_out[11] ;
+ wire \cby_1__1__15_chany_top_out[12] ;
+ wire \cby_1__1__15_chany_top_out[13] ;
+ wire \cby_1__1__15_chany_top_out[14] ;
+ wire \cby_1__1__15_chany_top_out[15] ;
+ wire \cby_1__1__15_chany_top_out[16] ;
+ wire \cby_1__1__15_chany_top_out[17] ;
+ wire \cby_1__1__15_chany_top_out[18] ;
+ wire \cby_1__1__15_chany_top_out[19] ;
+ wire \cby_1__1__15_chany_top_out[1] ;
+ wire \cby_1__1__15_chany_top_out[2] ;
+ wire \cby_1__1__15_chany_top_out[3] ;
+ wire \cby_1__1__15_chany_top_out[4] ;
+ wire \cby_1__1__15_chany_top_out[5] ;
+ wire \cby_1__1__15_chany_top_out[6] ;
+ wire \cby_1__1__15_chany_top_out[7] ;
+ wire \cby_1__1__15_chany_top_out[8] ;
+ wire \cby_1__1__15_chany_top_out[9] ;
+ wire cby_1__1__15_left_grid_pin_16_;
+ wire cby_1__1__15_left_grid_pin_17_;
+ wire cby_1__1__15_left_grid_pin_18_;
+ wire cby_1__1__15_left_grid_pin_19_;
+ wire cby_1__1__15_left_grid_pin_20_;
+ wire cby_1__1__15_left_grid_pin_21_;
+ wire cby_1__1__15_left_grid_pin_22_;
+ wire cby_1__1__15_left_grid_pin_23_;
+ wire cby_1__1__15_left_grid_pin_24_;
+ wire cby_1__1__15_left_grid_pin_25_;
+ wire cby_1__1__15_left_grid_pin_26_;
+ wire cby_1__1__15_left_grid_pin_27_;
+ wire cby_1__1__15_left_grid_pin_28_;
+ wire cby_1__1__15_left_grid_pin_29_;
+ wire cby_1__1__15_left_grid_pin_30_;
+ wire cby_1__1__15_left_grid_pin_31_;
+ wire cby_1__1__16_ccff_tail;
+ wire \cby_1__1__16_chany_bottom_out[0] ;
+ wire \cby_1__1__16_chany_bottom_out[10] ;
+ wire \cby_1__1__16_chany_bottom_out[11] ;
+ wire \cby_1__1__16_chany_bottom_out[12] ;
+ wire \cby_1__1__16_chany_bottom_out[13] ;
+ wire \cby_1__1__16_chany_bottom_out[14] ;
+ wire \cby_1__1__16_chany_bottom_out[15] ;
+ wire \cby_1__1__16_chany_bottom_out[16] ;
+ wire \cby_1__1__16_chany_bottom_out[17] ;
+ wire \cby_1__1__16_chany_bottom_out[18] ;
+ wire \cby_1__1__16_chany_bottom_out[19] ;
+ wire \cby_1__1__16_chany_bottom_out[1] ;
+ wire \cby_1__1__16_chany_bottom_out[2] ;
+ wire \cby_1__1__16_chany_bottom_out[3] ;
+ wire \cby_1__1__16_chany_bottom_out[4] ;
+ wire \cby_1__1__16_chany_bottom_out[5] ;
+ wire \cby_1__1__16_chany_bottom_out[6] ;
+ wire \cby_1__1__16_chany_bottom_out[7] ;
+ wire \cby_1__1__16_chany_bottom_out[8] ;
+ wire \cby_1__1__16_chany_bottom_out[9] ;
+ wire \cby_1__1__16_chany_top_out[0] ;
+ wire \cby_1__1__16_chany_top_out[10] ;
+ wire \cby_1__1__16_chany_top_out[11] ;
+ wire \cby_1__1__16_chany_top_out[12] ;
+ wire \cby_1__1__16_chany_top_out[13] ;
+ wire \cby_1__1__16_chany_top_out[14] ;
+ wire \cby_1__1__16_chany_top_out[15] ;
+ wire \cby_1__1__16_chany_top_out[16] ;
+ wire \cby_1__1__16_chany_top_out[17] ;
+ wire \cby_1__1__16_chany_top_out[18] ;
+ wire \cby_1__1__16_chany_top_out[19] ;
+ wire \cby_1__1__16_chany_top_out[1] ;
+ wire \cby_1__1__16_chany_top_out[2] ;
+ wire \cby_1__1__16_chany_top_out[3] ;
+ wire \cby_1__1__16_chany_top_out[4] ;
+ wire \cby_1__1__16_chany_top_out[5] ;
+ wire \cby_1__1__16_chany_top_out[6] ;
+ wire \cby_1__1__16_chany_top_out[7] ;
+ wire \cby_1__1__16_chany_top_out[8] ;
+ wire \cby_1__1__16_chany_top_out[9] ;
+ wire cby_1__1__16_left_grid_pin_16_;
+ wire cby_1__1__16_left_grid_pin_17_;
+ wire cby_1__1__16_left_grid_pin_18_;
+ wire cby_1__1__16_left_grid_pin_19_;
+ wire cby_1__1__16_left_grid_pin_20_;
+ wire cby_1__1__16_left_grid_pin_21_;
+ wire cby_1__1__16_left_grid_pin_22_;
+ wire cby_1__1__16_left_grid_pin_23_;
+ wire cby_1__1__16_left_grid_pin_24_;
+ wire cby_1__1__16_left_grid_pin_25_;
+ wire cby_1__1__16_left_grid_pin_26_;
+ wire cby_1__1__16_left_grid_pin_27_;
+ wire cby_1__1__16_left_grid_pin_28_;
+ wire cby_1__1__16_left_grid_pin_29_;
+ wire cby_1__1__16_left_grid_pin_30_;
+ wire cby_1__1__16_left_grid_pin_31_;
+ wire cby_1__1__17_ccff_tail;
+ wire \cby_1__1__17_chany_bottom_out[0] ;
+ wire \cby_1__1__17_chany_bottom_out[10] ;
+ wire \cby_1__1__17_chany_bottom_out[11] ;
+ wire \cby_1__1__17_chany_bottom_out[12] ;
+ wire \cby_1__1__17_chany_bottom_out[13] ;
+ wire \cby_1__1__17_chany_bottom_out[14] ;
+ wire \cby_1__1__17_chany_bottom_out[15] ;
+ wire \cby_1__1__17_chany_bottom_out[16] ;
+ wire \cby_1__1__17_chany_bottom_out[17] ;
+ wire \cby_1__1__17_chany_bottom_out[18] ;
+ wire \cby_1__1__17_chany_bottom_out[19] ;
+ wire \cby_1__1__17_chany_bottom_out[1] ;
+ wire \cby_1__1__17_chany_bottom_out[2] ;
+ wire \cby_1__1__17_chany_bottom_out[3] ;
+ wire \cby_1__1__17_chany_bottom_out[4] ;
+ wire \cby_1__1__17_chany_bottom_out[5] ;
+ wire \cby_1__1__17_chany_bottom_out[6] ;
+ wire \cby_1__1__17_chany_bottom_out[7] ;
+ wire \cby_1__1__17_chany_bottom_out[8] ;
+ wire \cby_1__1__17_chany_bottom_out[9] ;
+ wire \cby_1__1__17_chany_top_out[0] ;
+ wire \cby_1__1__17_chany_top_out[10] ;
+ wire \cby_1__1__17_chany_top_out[11] ;
+ wire \cby_1__1__17_chany_top_out[12] ;
+ wire \cby_1__1__17_chany_top_out[13] ;
+ wire \cby_1__1__17_chany_top_out[14] ;
+ wire \cby_1__1__17_chany_top_out[15] ;
+ wire \cby_1__1__17_chany_top_out[16] ;
+ wire \cby_1__1__17_chany_top_out[17] ;
+ wire \cby_1__1__17_chany_top_out[18] ;
+ wire \cby_1__1__17_chany_top_out[19] ;
+ wire \cby_1__1__17_chany_top_out[1] ;
+ wire \cby_1__1__17_chany_top_out[2] ;
+ wire \cby_1__1__17_chany_top_out[3] ;
+ wire \cby_1__1__17_chany_top_out[4] ;
+ wire \cby_1__1__17_chany_top_out[5] ;
+ wire \cby_1__1__17_chany_top_out[6] ;
+ wire \cby_1__1__17_chany_top_out[7] ;
+ wire \cby_1__1__17_chany_top_out[8] ;
+ wire \cby_1__1__17_chany_top_out[9] ;
+ wire cby_1__1__17_left_grid_pin_16_;
+ wire cby_1__1__17_left_grid_pin_17_;
+ wire cby_1__1__17_left_grid_pin_18_;
+ wire cby_1__1__17_left_grid_pin_19_;
+ wire cby_1__1__17_left_grid_pin_20_;
+ wire cby_1__1__17_left_grid_pin_21_;
+ wire cby_1__1__17_left_grid_pin_22_;
+ wire cby_1__1__17_left_grid_pin_23_;
+ wire cby_1__1__17_left_grid_pin_24_;
+ wire cby_1__1__17_left_grid_pin_25_;
+ wire cby_1__1__17_left_grid_pin_26_;
+ wire cby_1__1__17_left_grid_pin_27_;
+ wire cby_1__1__17_left_grid_pin_28_;
+ wire cby_1__1__17_left_grid_pin_29_;
+ wire cby_1__1__17_left_grid_pin_30_;
+ wire cby_1__1__17_left_grid_pin_31_;
+ wire cby_1__1__18_ccff_tail;
+ wire \cby_1__1__18_chany_bottom_out[0] ;
+ wire \cby_1__1__18_chany_bottom_out[10] ;
+ wire \cby_1__1__18_chany_bottom_out[11] ;
+ wire \cby_1__1__18_chany_bottom_out[12] ;
+ wire \cby_1__1__18_chany_bottom_out[13] ;
+ wire \cby_1__1__18_chany_bottom_out[14] ;
+ wire \cby_1__1__18_chany_bottom_out[15] ;
+ wire \cby_1__1__18_chany_bottom_out[16] ;
+ wire \cby_1__1__18_chany_bottom_out[17] ;
+ wire \cby_1__1__18_chany_bottom_out[18] ;
+ wire \cby_1__1__18_chany_bottom_out[19] ;
+ wire \cby_1__1__18_chany_bottom_out[1] ;
+ wire \cby_1__1__18_chany_bottom_out[2] ;
+ wire \cby_1__1__18_chany_bottom_out[3] ;
+ wire \cby_1__1__18_chany_bottom_out[4] ;
+ wire \cby_1__1__18_chany_bottom_out[5] ;
+ wire \cby_1__1__18_chany_bottom_out[6] ;
+ wire \cby_1__1__18_chany_bottom_out[7] ;
+ wire \cby_1__1__18_chany_bottom_out[8] ;
+ wire \cby_1__1__18_chany_bottom_out[9] ;
+ wire \cby_1__1__18_chany_top_out[0] ;
+ wire \cby_1__1__18_chany_top_out[10] ;
+ wire \cby_1__1__18_chany_top_out[11] ;
+ wire \cby_1__1__18_chany_top_out[12] ;
+ wire \cby_1__1__18_chany_top_out[13] ;
+ wire \cby_1__1__18_chany_top_out[14] ;
+ wire \cby_1__1__18_chany_top_out[15] ;
+ wire \cby_1__1__18_chany_top_out[16] ;
+ wire \cby_1__1__18_chany_top_out[17] ;
+ wire \cby_1__1__18_chany_top_out[18] ;
+ wire \cby_1__1__18_chany_top_out[19] ;
+ wire \cby_1__1__18_chany_top_out[1] ;
+ wire \cby_1__1__18_chany_top_out[2] ;
+ wire \cby_1__1__18_chany_top_out[3] ;
+ wire \cby_1__1__18_chany_top_out[4] ;
+ wire \cby_1__1__18_chany_top_out[5] ;
+ wire \cby_1__1__18_chany_top_out[6] ;
+ wire \cby_1__1__18_chany_top_out[7] ;
+ wire \cby_1__1__18_chany_top_out[8] ;
+ wire \cby_1__1__18_chany_top_out[9] ;
+ wire cby_1__1__18_left_grid_pin_16_;
+ wire cby_1__1__18_left_grid_pin_17_;
+ wire cby_1__1__18_left_grid_pin_18_;
+ wire cby_1__1__18_left_grid_pin_19_;
+ wire cby_1__1__18_left_grid_pin_20_;
+ wire cby_1__1__18_left_grid_pin_21_;
+ wire cby_1__1__18_left_grid_pin_22_;
+ wire cby_1__1__18_left_grid_pin_23_;
+ wire cby_1__1__18_left_grid_pin_24_;
+ wire cby_1__1__18_left_grid_pin_25_;
+ wire cby_1__1__18_left_grid_pin_26_;
+ wire cby_1__1__18_left_grid_pin_27_;
+ wire cby_1__1__18_left_grid_pin_28_;
+ wire cby_1__1__18_left_grid_pin_29_;
+ wire cby_1__1__18_left_grid_pin_30_;
+ wire cby_1__1__18_left_grid_pin_31_;
+ wire cby_1__1__19_ccff_tail;
+ wire \cby_1__1__19_chany_bottom_out[0] ;
+ wire \cby_1__1__19_chany_bottom_out[10] ;
+ wire \cby_1__1__19_chany_bottom_out[11] ;
+ wire \cby_1__1__19_chany_bottom_out[12] ;
+ wire \cby_1__1__19_chany_bottom_out[13] ;
+ wire \cby_1__1__19_chany_bottom_out[14] ;
+ wire \cby_1__1__19_chany_bottom_out[15] ;
+ wire \cby_1__1__19_chany_bottom_out[16] ;
+ wire \cby_1__1__19_chany_bottom_out[17] ;
+ wire \cby_1__1__19_chany_bottom_out[18] ;
+ wire \cby_1__1__19_chany_bottom_out[19] ;
+ wire \cby_1__1__19_chany_bottom_out[1] ;
+ wire \cby_1__1__19_chany_bottom_out[2] ;
+ wire \cby_1__1__19_chany_bottom_out[3] ;
+ wire \cby_1__1__19_chany_bottom_out[4] ;
+ wire \cby_1__1__19_chany_bottom_out[5] ;
+ wire \cby_1__1__19_chany_bottom_out[6] ;
+ wire \cby_1__1__19_chany_bottom_out[7] ;
+ wire \cby_1__1__19_chany_bottom_out[8] ;
+ wire \cby_1__1__19_chany_bottom_out[9] ;
+ wire \cby_1__1__19_chany_top_out[0] ;
+ wire \cby_1__1__19_chany_top_out[10] ;
+ wire \cby_1__1__19_chany_top_out[11] ;
+ wire \cby_1__1__19_chany_top_out[12] ;
+ wire \cby_1__1__19_chany_top_out[13] ;
+ wire \cby_1__1__19_chany_top_out[14] ;
+ wire \cby_1__1__19_chany_top_out[15] ;
+ wire \cby_1__1__19_chany_top_out[16] ;
+ wire \cby_1__1__19_chany_top_out[17] ;
+ wire \cby_1__1__19_chany_top_out[18] ;
+ wire \cby_1__1__19_chany_top_out[19] ;
+ wire \cby_1__1__19_chany_top_out[1] ;
+ wire \cby_1__1__19_chany_top_out[2] ;
+ wire \cby_1__1__19_chany_top_out[3] ;
+ wire \cby_1__1__19_chany_top_out[4] ;
+ wire \cby_1__1__19_chany_top_out[5] ;
+ wire \cby_1__1__19_chany_top_out[6] ;
+ wire \cby_1__1__19_chany_top_out[7] ;
+ wire \cby_1__1__19_chany_top_out[8] ;
+ wire \cby_1__1__19_chany_top_out[9] ;
+ wire cby_1__1__19_left_grid_pin_16_;
+ wire cby_1__1__19_left_grid_pin_17_;
+ wire cby_1__1__19_left_grid_pin_18_;
+ wire cby_1__1__19_left_grid_pin_19_;
+ wire cby_1__1__19_left_grid_pin_20_;
+ wire cby_1__1__19_left_grid_pin_21_;
+ wire cby_1__1__19_left_grid_pin_22_;
+ wire cby_1__1__19_left_grid_pin_23_;
+ wire cby_1__1__19_left_grid_pin_24_;
+ wire cby_1__1__19_left_grid_pin_25_;
+ wire cby_1__1__19_left_grid_pin_26_;
+ wire cby_1__1__19_left_grid_pin_27_;
+ wire cby_1__1__19_left_grid_pin_28_;
+ wire cby_1__1__19_left_grid_pin_29_;
+ wire cby_1__1__19_left_grid_pin_30_;
+ wire cby_1__1__19_left_grid_pin_31_;
+ wire cby_1__1__1_ccff_tail;
+ wire \cby_1__1__1_chany_bottom_out[0] ;
+ wire \cby_1__1__1_chany_bottom_out[10] ;
+ wire \cby_1__1__1_chany_bottom_out[11] ;
+ wire \cby_1__1__1_chany_bottom_out[12] ;
+ wire \cby_1__1__1_chany_bottom_out[13] ;
+ wire \cby_1__1__1_chany_bottom_out[14] ;
+ wire \cby_1__1__1_chany_bottom_out[15] ;
+ wire \cby_1__1__1_chany_bottom_out[16] ;
+ wire \cby_1__1__1_chany_bottom_out[17] ;
+ wire \cby_1__1__1_chany_bottom_out[18] ;
+ wire \cby_1__1__1_chany_bottom_out[19] ;
+ wire \cby_1__1__1_chany_bottom_out[1] ;
+ wire \cby_1__1__1_chany_bottom_out[2] ;
+ wire \cby_1__1__1_chany_bottom_out[3] ;
+ wire \cby_1__1__1_chany_bottom_out[4] ;
+ wire \cby_1__1__1_chany_bottom_out[5] ;
+ wire \cby_1__1__1_chany_bottom_out[6] ;
+ wire \cby_1__1__1_chany_bottom_out[7] ;
+ wire \cby_1__1__1_chany_bottom_out[8] ;
+ wire \cby_1__1__1_chany_bottom_out[9] ;
+ wire \cby_1__1__1_chany_top_out[0] ;
+ wire \cby_1__1__1_chany_top_out[10] ;
+ wire \cby_1__1__1_chany_top_out[11] ;
+ wire \cby_1__1__1_chany_top_out[12] ;
+ wire \cby_1__1__1_chany_top_out[13] ;
+ wire \cby_1__1__1_chany_top_out[14] ;
+ wire \cby_1__1__1_chany_top_out[15] ;
+ wire \cby_1__1__1_chany_top_out[16] ;
+ wire \cby_1__1__1_chany_top_out[17] ;
+ wire \cby_1__1__1_chany_top_out[18] ;
+ wire \cby_1__1__1_chany_top_out[19] ;
+ wire \cby_1__1__1_chany_top_out[1] ;
+ wire \cby_1__1__1_chany_top_out[2] ;
+ wire \cby_1__1__1_chany_top_out[3] ;
+ wire \cby_1__1__1_chany_top_out[4] ;
+ wire \cby_1__1__1_chany_top_out[5] ;
+ wire \cby_1__1__1_chany_top_out[6] ;
+ wire \cby_1__1__1_chany_top_out[7] ;
+ wire \cby_1__1__1_chany_top_out[8] ;
+ wire \cby_1__1__1_chany_top_out[9] ;
+ wire cby_1__1__1_left_grid_pin_16_;
+ wire cby_1__1__1_left_grid_pin_17_;
+ wire cby_1__1__1_left_grid_pin_18_;
+ wire cby_1__1__1_left_grid_pin_19_;
+ wire cby_1__1__1_left_grid_pin_20_;
+ wire cby_1__1__1_left_grid_pin_21_;
+ wire cby_1__1__1_left_grid_pin_22_;
+ wire cby_1__1__1_left_grid_pin_23_;
+ wire cby_1__1__1_left_grid_pin_24_;
+ wire cby_1__1__1_left_grid_pin_25_;
+ wire cby_1__1__1_left_grid_pin_26_;
+ wire cby_1__1__1_left_grid_pin_27_;
+ wire cby_1__1__1_left_grid_pin_28_;
+ wire cby_1__1__1_left_grid_pin_29_;
+ wire cby_1__1__1_left_grid_pin_30_;
+ wire cby_1__1__1_left_grid_pin_31_;
+ wire cby_1__1__20_ccff_tail;
+ wire \cby_1__1__20_chany_bottom_out[0] ;
+ wire \cby_1__1__20_chany_bottom_out[10] ;
+ wire \cby_1__1__20_chany_bottom_out[11] ;
+ wire \cby_1__1__20_chany_bottom_out[12] ;
+ wire \cby_1__1__20_chany_bottom_out[13] ;
+ wire \cby_1__1__20_chany_bottom_out[14] ;
+ wire \cby_1__1__20_chany_bottom_out[15] ;
+ wire \cby_1__1__20_chany_bottom_out[16] ;
+ wire \cby_1__1__20_chany_bottom_out[17] ;
+ wire \cby_1__1__20_chany_bottom_out[18] ;
+ wire \cby_1__1__20_chany_bottom_out[19] ;
+ wire \cby_1__1__20_chany_bottom_out[1] ;
+ wire \cby_1__1__20_chany_bottom_out[2] ;
+ wire \cby_1__1__20_chany_bottom_out[3] ;
+ wire \cby_1__1__20_chany_bottom_out[4] ;
+ wire \cby_1__1__20_chany_bottom_out[5] ;
+ wire \cby_1__1__20_chany_bottom_out[6] ;
+ wire \cby_1__1__20_chany_bottom_out[7] ;
+ wire \cby_1__1__20_chany_bottom_out[8] ;
+ wire \cby_1__1__20_chany_bottom_out[9] ;
+ wire \cby_1__1__20_chany_top_out[0] ;
+ wire \cby_1__1__20_chany_top_out[10] ;
+ wire \cby_1__1__20_chany_top_out[11] ;
+ wire \cby_1__1__20_chany_top_out[12] ;
+ wire \cby_1__1__20_chany_top_out[13] ;
+ wire \cby_1__1__20_chany_top_out[14] ;
+ wire \cby_1__1__20_chany_top_out[15] ;
+ wire \cby_1__1__20_chany_top_out[16] ;
+ wire \cby_1__1__20_chany_top_out[17] ;
+ wire \cby_1__1__20_chany_top_out[18] ;
+ wire \cby_1__1__20_chany_top_out[19] ;
+ wire \cby_1__1__20_chany_top_out[1] ;
+ wire \cby_1__1__20_chany_top_out[2] ;
+ wire \cby_1__1__20_chany_top_out[3] ;
+ wire \cby_1__1__20_chany_top_out[4] ;
+ wire \cby_1__1__20_chany_top_out[5] ;
+ wire \cby_1__1__20_chany_top_out[6] ;
+ wire \cby_1__1__20_chany_top_out[7] ;
+ wire \cby_1__1__20_chany_top_out[8] ;
+ wire \cby_1__1__20_chany_top_out[9] ;
+ wire cby_1__1__20_left_grid_pin_16_;
+ wire cby_1__1__20_left_grid_pin_17_;
+ wire cby_1__1__20_left_grid_pin_18_;
+ wire cby_1__1__20_left_grid_pin_19_;
+ wire cby_1__1__20_left_grid_pin_20_;
+ wire cby_1__1__20_left_grid_pin_21_;
+ wire cby_1__1__20_left_grid_pin_22_;
+ wire cby_1__1__20_left_grid_pin_23_;
+ wire cby_1__1__20_left_grid_pin_24_;
+ wire cby_1__1__20_left_grid_pin_25_;
+ wire cby_1__1__20_left_grid_pin_26_;
+ wire cby_1__1__20_left_grid_pin_27_;
+ wire cby_1__1__20_left_grid_pin_28_;
+ wire cby_1__1__20_left_grid_pin_29_;
+ wire cby_1__1__20_left_grid_pin_30_;
+ wire cby_1__1__20_left_grid_pin_31_;
+ wire cby_1__1__21_ccff_tail;
+ wire \cby_1__1__21_chany_bottom_out[0] ;
+ wire \cby_1__1__21_chany_bottom_out[10] ;
+ wire \cby_1__1__21_chany_bottom_out[11] ;
+ wire \cby_1__1__21_chany_bottom_out[12] ;
+ wire \cby_1__1__21_chany_bottom_out[13] ;
+ wire \cby_1__1__21_chany_bottom_out[14] ;
+ wire \cby_1__1__21_chany_bottom_out[15] ;
+ wire \cby_1__1__21_chany_bottom_out[16] ;
+ wire \cby_1__1__21_chany_bottom_out[17] ;
+ wire \cby_1__1__21_chany_bottom_out[18] ;
+ wire \cby_1__1__21_chany_bottom_out[19] ;
+ wire \cby_1__1__21_chany_bottom_out[1] ;
+ wire \cby_1__1__21_chany_bottom_out[2] ;
+ wire \cby_1__1__21_chany_bottom_out[3] ;
+ wire \cby_1__1__21_chany_bottom_out[4] ;
+ wire \cby_1__1__21_chany_bottom_out[5] ;
+ wire \cby_1__1__21_chany_bottom_out[6] ;
+ wire \cby_1__1__21_chany_bottom_out[7] ;
+ wire \cby_1__1__21_chany_bottom_out[8] ;
+ wire \cby_1__1__21_chany_bottom_out[9] ;
+ wire \cby_1__1__21_chany_top_out[0] ;
+ wire \cby_1__1__21_chany_top_out[10] ;
+ wire \cby_1__1__21_chany_top_out[11] ;
+ wire \cby_1__1__21_chany_top_out[12] ;
+ wire \cby_1__1__21_chany_top_out[13] ;
+ wire \cby_1__1__21_chany_top_out[14] ;
+ wire \cby_1__1__21_chany_top_out[15] ;
+ wire \cby_1__1__21_chany_top_out[16] ;
+ wire \cby_1__1__21_chany_top_out[17] ;
+ wire \cby_1__1__21_chany_top_out[18] ;
+ wire \cby_1__1__21_chany_top_out[19] ;
+ wire \cby_1__1__21_chany_top_out[1] ;
+ wire \cby_1__1__21_chany_top_out[2] ;
+ wire \cby_1__1__21_chany_top_out[3] ;
+ wire \cby_1__1__21_chany_top_out[4] ;
+ wire \cby_1__1__21_chany_top_out[5] ;
+ wire \cby_1__1__21_chany_top_out[6] ;
+ wire \cby_1__1__21_chany_top_out[7] ;
+ wire \cby_1__1__21_chany_top_out[8] ;
+ wire \cby_1__1__21_chany_top_out[9] ;
+ wire cby_1__1__21_left_grid_pin_16_;
+ wire cby_1__1__21_left_grid_pin_17_;
+ wire cby_1__1__21_left_grid_pin_18_;
+ wire cby_1__1__21_left_grid_pin_19_;
+ wire cby_1__1__21_left_grid_pin_20_;
+ wire cby_1__1__21_left_grid_pin_21_;
+ wire cby_1__1__21_left_grid_pin_22_;
+ wire cby_1__1__21_left_grid_pin_23_;
+ wire cby_1__1__21_left_grid_pin_24_;
+ wire cby_1__1__21_left_grid_pin_25_;
+ wire cby_1__1__21_left_grid_pin_26_;
+ wire cby_1__1__21_left_grid_pin_27_;
+ wire cby_1__1__21_left_grid_pin_28_;
+ wire cby_1__1__21_left_grid_pin_29_;
+ wire cby_1__1__21_left_grid_pin_30_;
+ wire cby_1__1__21_left_grid_pin_31_;
+ wire cby_1__1__22_ccff_tail;
+ wire \cby_1__1__22_chany_bottom_out[0] ;
+ wire \cby_1__1__22_chany_bottom_out[10] ;
+ wire \cby_1__1__22_chany_bottom_out[11] ;
+ wire \cby_1__1__22_chany_bottom_out[12] ;
+ wire \cby_1__1__22_chany_bottom_out[13] ;
+ wire \cby_1__1__22_chany_bottom_out[14] ;
+ wire \cby_1__1__22_chany_bottom_out[15] ;
+ wire \cby_1__1__22_chany_bottom_out[16] ;
+ wire \cby_1__1__22_chany_bottom_out[17] ;
+ wire \cby_1__1__22_chany_bottom_out[18] ;
+ wire \cby_1__1__22_chany_bottom_out[19] ;
+ wire \cby_1__1__22_chany_bottom_out[1] ;
+ wire \cby_1__1__22_chany_bottom_out[2] ;
+ wire \cby_1__1__22_chany_bottom_out[3] ;
+ wire \cby_1__1__22_chany_bottom_out[4] ;
+ wire \cby_1__1__22_chany_bottom_out[5] ;
+ wire \cby_1__1__22_chany_bottom_out[6] ;
+ wire \cby_1__1__22_chany_bottom_out[7] ;
+ wire \cby_1__1__22_chany_bottom_out[8] ;
+ wire \cby_1__1__22_chany_bottom_out[9] ;
+ wire \cby_1__1__22_chany_top_out[0] ;
+ wire \cby_1__1__22_chany_top_out[10] ;
+ wire \cby_1__1__22_chany_top_out[11] ;
+ wire \cby_1__1__22_chany_top_out[12] ;
+ wire \cby_1__1__22_chany_top_out[13] ;
+ wire \cby_1__1__22_chany_top_out[14] ;
+ wire \cby_1__1__22_chany_top_out[15] ;
+ wire \cby_1__1__22_chany_top_out[16] ;
+ wire \cby_1__1__22_chany_top_out[17] ;
+ wire \cby_1__1__22_chany_top_out[18] ;
+ wire \cby_1__1__22_chany_top_out[19] ;
+ wire \cby_1__1__22_chany_top_out[1] ;
+ wire \cby_1__1__22_chany_top_out[2] ;
+ wire \cby_1__1__22_chany_top_out[3] ;
+ wire \cby_1__1__22_chany_top_out[4] ;
+ wire \cby_1__1__22_chany_top_out[5] ;
+ wire \cby_1__1__22_chany_top_out[6] ;
+ wire \cby_1__1__22_chany_top_out[7] ;
+ wire \cby_1__1__22_chany_top_out[8] ;
+ wire \cby_1__1__22_chany_top_out[9] ;
+ wire cby_1__1__22_left_grid_pin_16_;
+ wire cby_1__1__22_left_grid_pin_17_;
+ wire cby_1__1__22_left_grid_pin_18_;
+ wire cby_1__1__22_left_grid_pin_19_;
+ wire cby_1__1__22_left_grid_pin_20_;
+ wire cby_1__1__22_left_grid_pin_21_;
+ wire cby_1__1__22_left_grid_pin_22_;
+ wire cby_1__1__22_left_grid_pin_23_;
+ wire cby_1__1__22_left_grid_pin_24_;
+ wire cby_1__1__22_left_grid_pin_25_;
+ wire cby_1__1__22_left_grid_pin_26_;
+ wire cby_1__1__22_left_grid_pin_27_;
+ wire cby_1__1__22_left_grid_pin_28_;
+ wire cby_1__1__22_left_grid_pin_29_;
+ wire cby_1__1__22_left_grid_pin_30_;
+ wire cby_1__1__22_left_grid_pin_31_;
+ wire cby_1__1__23_ccff_tail;
+ wire \cby_1__1__23_chany_bottom_out[0] ;
+ wire \cby_1__1__23_chany_bottom_out[10] ;
+ wire \cby_1__1__23_chany_bottom_out[11] ;
+ wire \cby_1__1__23_chany_bottom_out[12] ;
+ wire \cby_1__1__23_chany_bottom_out[13] ;
+ wire \cby_1__1__23_chany_bottom_out[14] ;
+ wire \cby_1__1__23_chany_bottom_out[15] ;
+ wire \cby_1__1__23_chany_bottom_out[16] ;
+ wire \cby_1__1__23_chany_bottom_out[17] ;
+ wire \cby_1__1__23_chany_bottom_out[18] ;
+ wire \cby_1__1__23_chany_bottom_out[19] ;
+ wire \cby_1__1__23_chany_bottom_out[1] ;
+ wire \cby_1__1__23_chany_bottom_out[2] ;
+ wire \cby_1__1__23_chany_bottom_out[3] ;
+ wire \cby_1__1__23_chany_bottom_out[4] ;
+ wire \cby_1__1__23_chany_bottom_out[5] ;
+ wire \cby_1__1__23_chany_bottom_out[6] ;
+ wire \cby_1__1__23_chany_bottom_out[7] ;
+ wire \cby_1__1__23_chany_bottom_out[8] ;
+ wire \cby_1__1__23_chany_bottom_out[9] ;
+ wire \cby_1__1__23_chany_top_out[0] ;
+ wire \cby_1__1__23_chany_top_out[10] ;
+ wire \cby_1__1__23_chany_top_out[11] ;
+ wire \cby_1__1__23_chany_top_out[12] ;
+ wire \cby_1__1__23_chany_top_out[13] ;
+ wire \cby_1__1__23_chany_top_out[14] ;
+ wire \cby_1__1__23_chany_top_out[15] ;
+ wire \cby_1__1__23_chany_top_out[16] ;
+ wire \cby_1__1__23_chany_top_out[17] ;
+ wire \cby_1__1__23_chany_top_out[18] ;
+ wire \cby_1__1__23_chany_top_out[19] ;
+ wire \cby_1__1__23_chany_top_out[1] ;
+ wire \cby_1__1__23_chany_top_out[2] ;
+ wire \cby_1__1__23_chany_top_out[3] ;
+ wire \cby_1__1__23_chany_top_out[4] ;
+ wire \cby_1__1__23_chany_top_out[5] ;
+ wire \cby_1__1__23_chany_top_out[6] ;
+ wire \cby_1__1__23_chany_top_out[7] ;
+ wire \cby_1__1__23_chany_top_out[8] ;
+ wire \cby_1__1__23_chany_top_out[9] ;
+ wire cby_1__1__23_left_grid_pin_16_;
+ wire cby_1__1__23_left_grid_pin_17_;
+ wire cby_1__1__23_left_grid_pin_18_;
+ wire cby_1__1__23_left_grid_pin_19_;
+ wire cby_1__1__23_left_grid_pin_20_;
+ wire cby_1__1__23_left_grid_pin_21_;
+ wire cby_1__1__23_left_grid_pin_22_;
+ wire cby_1__1__23_left_grid_pin_23_;
+ wire cby_1__1__23_left_grid_pin_24_;
+ wire cby_1__1__23_left_grid_pin_25_;
+ wire cby_1__1__23_left_grid_pin_26_;
+ wire cby_1__1__23_left_grid_pin_27_;
+ wire cby_1__1__23_left_grid_pin_28_;
+ wire cby_1__1__23_left_grid_pin_29_;
+ wire cby_1__1__23_left_grid_pin_30_;
+ wire cby_1__1__23_left_grid_pin_31_;
+ wire cby_1__1__24_ccff_tail;
+ wire \cby_1__1__24_chany_bottom_out[0] ;
+ wire \cby_1__1__24_chany_bottom_out[10] ;
+ wire \cby_1__1__24_chany_bottom_out[11] ;
+ wire \cby_1__1__24_chany_bottom_out[12] ;
+ wire \cby_1__1__24_chany_bottom_out[13] ;
+ wire \cby_1__1__24_chany_bottom_out[14] ;
+ wire \cby_1__1__24_chany_bottom_out[15] ;
+ wire \cby_1__1__24_chany_bottom_out[16] ;
+ wire \cby_1__1__24_chany_bottom_out[17] ;
+ wire \cby_1__1__24_chany_bottom_out[18] ;
+ wire \cby_1__1__24_chany_bottom_out[19] ;
+ wire \cby_1__1__24_chany_bottom_out[1] ;
+ wire \cby_1__1__24_chany_bottom_out[2] ;
+ wire \cby_1__1__24_chany_bottom_out[3] ;
+ wire \cby_1__1__24_chany_bottom_out[4] ;
+ wire \cby_1__1__24_chany_bottom_out[5] ;
+ wire \cby_1__1__24_chany_bottom_out[6] ;
+ wire \cby_1__1__24_chany_bottom_out[7] ;
+ wire \cby_1__1__24_chany_bottom_out[8] ;
+ wire \cby_1__1__24_chany_bottom_out[9] ;
+ wire \cby_1__1__24_chany_top_out[0] ;
+ wire \cby_1__1__24_chany_top_out[10] ;
+ wire \cby_1__1__24_chany_top_out[11] ;
+ wire \cby_1__1__24_chany_top_out[12] ;
+ wire \cby_1__1__24_chany_top_out[13] ;
+ wire \cby_1__1__24_chany_top_out[14] ;
+ wire \cby_1__1__24_chany_top_out[15] ;
+ wire \cby_1__1__24_chany_top_out[16] ;
+ wire \cby_1__1__24_chany_top_out[17] ;
+ wire \cby_1__1__24_chany_top_out[18] ;
+ wire \cby_1__1__24_chany_top_out[19] ;
+ wire \cby_1__1__24_chany_top_out[1] ;
+ wire \cby_1__1__24_chany_top_out[2] ;
+ wire \cby_1__1__24_chany_top_out[3] ;
+ wire \cby_1__1__24_chany_top_out[4] ;
+ wire \cby_1__1__24_chany_top_out[5] ;
+ wire \cby_1__1__24_chany_top_out[6] ;
+ wire \cby_1__1__24_chany_top_out[7] ;
+ wire \cby_1__1__24_chany_top_out[8] ;
+ wire \cby_1__1__24_chany_top_out[9] ;
+ wire cby_1__1__24_left_grid_pin_16_;
+ wire cby_1__1__24_left_grid_pin_17_;
+ wire cby_1__1__24_left_grid_pin_18_;
+ wire cby_1__1__24_left_grid_pin_19_;
+ wire cby_1__1__24_left_grid_pin_20_;
+ wire cby_1__1__24_left_grid_pin_21_;
+ wire cby_1__1__24_left_grid_pin_22_;
+ wire cby_1__1__24_left_grid_pin_23_;
+ wire cby_1__1__24_left_grid_pin_24_;
+ wire cby_1__1__24_left_grid_pin_25_;
+ wire cby_1__1__24_left_grid_pin_26_;
+ wire cby_1__1__24_left_grid_pin_27_;
+ wire cby_1__1__24_left_grid_pin_28_;
+ wire cby_1__1__24_left_grid_pin_29_;
+ wire cby_1__1__24_left_grid_pin_30_;
+ wire cby_1__1__24_left_grid_pin_31_;
+ wire cby_1__1__25_ccff_tail;
+ wire \cby_1__1__25_chany_bottom_out[0] ;
+ wire \cby_1__1__25_chany_bottom_out[10] ;
+ wire \cby_1__1__25_chany_bottom_out[11] ;
+ wire \cby_1__1__25_chany_bottom_out[12] ;
+ wire \cby_1__1__25_chany_bottom_out[13] ;
+ wire \cby_1__1__25_chany_bottom_out[14] ;
+ wire \cby_1__1__25_chany_bottom_out[15] ;
+ wire \cby_1__1__25_chany_bottom_out[16] ;
+ wire \cby_1__1__25_chany_bottom_out[17] ;
+ wire \cby_1__1__25_chany_bottom_out[18] ;
+ wire \cby_1__1__25_chany_bottom_out[19] ;
+ wire \cby_1__1__25_chany_bottom_out[1] ;
+ wire \cby_1__1__25_chany_bottom_out[2] ;
+ wire \cby_1__1__25_chany_bottom_out[3] ;
+ wire \cby_1__1__25_chany_bottom_out[4] ;
+ wire \cby_1__1__25_chany_bottom_out[5] ;
+ wire \cby_1__1__25_chany_bottom_out[6] ;
+ wire \cby_1__1__25_chany_bottom_out[7] ;
+ wire \cby_1__1__25_chany_bottom_out[8] ;
+ wire \cby_1__1__25_chany_bottom_out[9] ;
+ wire \cby_1__1__25_chany_top_out[0] ;
+ wire \cby_1__1__25_chany_top_out[10] ;
+ wire \cby_1__1__25_chany_top_out[11] ;
+ wire \cby_1__1__25_chany_top_out[12] ;
+ wire \cby_1__1__25_chany_top_out[13] ;
+ wire \cby_1__1__25_chany_top_out[14] ;
+ wire \cby_1__1__25_chany_top_out[15] ;
+ wire \cby_1__1__25_chany_top_out[16] ;
+ wire \cby_1__1__25_chany_top_out[17] ;
+ wire \cby_1__1__25_chany_top_out[18] ;
+ wire \cby_1__1__25_chany_top_out[19] ;
+ wire \cby_1__1__25_chany_top_out[1] ;
+ wire \cby_1__1__25_chany_top_out[2] ;
+ wire \cby_1__1__25_chany_top_out[3] ;
+ wire \cby_1__1__25_chany_top_out[4] ;
+ wire \cby_1__1__25_chany_top_out[5] ;
+ wire \cby_1__1__25_chany_top_out[6] ;
+ wire \cby_1__1__25_chany_top_out[7] ;
+ wire \cby_1__1__25_chany_top_out[8] ;
+ wire \cby_1__1__25_chany_top_out[9] ;
+ wire cby_1__1__25_left_grid_pin_16_;
+ wire cby_1__1__25_left_grid_pin_17_;
+ wire cby_1__1__25_left_grid_pin_18_;
+ wire cby_1__1__25_left_grid_pin_19_;
+ wire cby_1__1__25_left_grid_pin_20_;
+ wire cby_1__1__25_left_grid_pin_21_;
+ wire cby_1__1__25_left_grid_pin_22_;
+ wire cby_1__1__25_left_grid_pin_23_;
+ wire cby_1__1__25_left_grid_pin_24_;
+ wire cby_1__1__25_left_grid_pin_25_;
+ wire cby_1__1__25_left_grid_pin_26_;
+ wire cby_1__1__25_left_grid_pin_27_;
+ wire cby_1__1__25_left_grid_pin_28_;
+ wire cby_1__1__25_left_grid_pin_29_;
+ wire cby_1__1__25_left_grid_pin_30_;
+ wire cby_1__1__25_left_grid_pin_31_;
+ wire cby_1__1__26_ccff_tail;
+ wire \cby_1__1__26_chany_bottom_out[0] ;
+ wire \cby_1__1__26_chany_bottom_out[10] ;
+ wire \cby_1__1__26_chany_bottom_out[11] ;
+ wire \cby_1__1__26_chany_bottom_out[12] ;
+ wire \cby_1__1__26_chany_bottom_out[13] ;
+ wire \cby_1__1__26_chany_bottom_out[14] ;
+ wire \cby_1__1__26_chany_bottom_out[15] ;
+ wire \cby_1__1__26_chany_bottom_out[16] ;
+ wire \cby_1__1__26_chany_bottom_out[17] ;
+ wire \cby_1__1__26_chany_bottom_out[18] ;
+ wire \cby_1__1__26_chany_bottom_out[19] ;
+ wire \cby_1__1__26_chany_bottom_out[1] ;
+ wire \cby_1__1__26_chany_bottom_out[2] ;
+ wire \cby_1__1__26_chany_bottom_out[3] ;
+ wire \cby_1__1__26_chany_bottom_out[4] ;
+ wire \cby_1__1__26_chany_bottom_out[5] ;
+ wire \cby_1__1__26_chany_bottom_out[6] ;
+ wire \cby_1__1__26_chany_bottom_out[7] ;
+ wire \cby_1__1__26_chany_bottom_out[8] ;
+ wire \cby_1__1__26_chany_bottom_out[9] ;
+ wire \cby_1__1__26_chany_top_out[0] ;
+ wire \cby_1__1__26_chany_top_out[10] ;
+ wire \cby_1__1__26_chany_top_out[11] ;
+ wire \cby_1__1__26_chany_top_out[12] ;
+ wire \cby_1__1__26_chany_top_out[13] ;
+ wire \cby_1__1__26_chany_top_out[14] ;
+ wire \cby_1__1__26_chany_top_out[15] ;
+ wire \cby_1__1__26_chany_top_out[16] ;
+ wire \cby_1__1__26_chany_top_out[17] ;
+ wire \cby_1__1__26_chany_top_out[18] ;
+ wire \cby_1__1__26_chany_top_out[19] ;
+ wire \cby_1__1__26_chany_top_out[1] ;
+ wire \cby_1__1__26_chany_top_out[2] ;
+ wire \cby_1__1__26_chany_top_out[3] ;
+ wire \cby_1__1__26_chany_top_out[4] ;
+ wire \cby_1__1__26_chany_top_out[5] ;
+ wire \cby_1__1__26_chany_top_out[6] ;
+ wire \cby_1__1__26_chany_top_out[7] ;
+ wire \cby_1__1__26_chany_top_out[8] ;
+ wire \cby_1__1__26_chany_top_out[9] ;
+ wire cby_1__1__26_left_grid_pin_16_;
+ wire cby_1__1__26_left_grid_pin_17_;
+ wire cby_1__1__26_left_grid_pin_18_;
+ wire cby_1__1__26_left_grid_pin_19_;
+ wire cby_1__1__26_left_grid_pin_20_;
+ wire cby_1__1__26_left_grid_pin_21_;
+ wire cby_1__1__26_left_grid_pin_22_;
+ wire cby_1__1__26_left_grid_pin_23_;
+ wire cby_1__1__26_left_grid_pin_24_;
+ wire cby_1__1__26_left_grid_pin_25_;
+ wire cby_1__1__26_left_grid_pin_26_;
+ wire cby_1__1__26_left_grid_pin_27_;
+ wire cby_1__1__26_left_grid_pin_28_;
+ wire cby_1__1__26_left_grid_pin_29_;
+ wire cby_1__1__26_left_grid_pin_30_;
+ wire cby_1__1__26_left_grid_pin_31_;
+ wire cby_1__1__27_ccff_tail;
+ wire \cby_1__1__27_chany_bottom_out[0] ;
+ wire \cby_1__1__27_chany_bottom_out[10] ;
+ wire \cby_1__1__27_chany_bottom_out[11] ;
+ wire \cby_1__1__27_chany_bottom_out[12] ;
+ wire \cby_1__1__27_chany_bottom_out[13] ;
+ wire \cby_1__1__27_chany_bottom_out[14] ;
+ wire \cby_1__1__27_chany_bottom_out[15] ;
+ wire \cby_1__1__27_chany_bottom_out[16] ;
+ wire \cby_1__1__27_chany_bottom_out[17] ;
+ wire \cby_1__1__27_chany_bottom_out[18] ;
+ wire \cby_1__1__27_chany_bottom_out[19] ;
+ wire \cby_1__1__27_chany_bottom_out[1] ;
+ wire \cby_1__1__27_chany_bottom_out[2] ;
+ wire \cby_1__1__27_chany_bottom_out[3] ;
+ wire \cby_1__1__27_chany_bottom_out[4] ;
+ wire \cby_1__1__27_chany_bottom_out[5] ;
+ wire \cby_1__1__27_chany_bottom_out[6] ;
+ wire \cby_1__1__27_chany_bottom_out[7] ;
+ wire \cby_1__1__27_chany_bottom_out[8] ;
+ wire \cby_1__1__27_chany_bottom_out[9] ;
+ wire \cby_1__1__27_chany_top_out[0] ;
+ wire \cby_1__1__27_chany_top_out[10] ;
+ wire \cby_1__1__27_chany_top_out[11] ;
+ wire \cby_1__1__27_chany_top_out[12] ;
+ wire \cby_1__1__27_chany_top_out[13] ;
+ wire \cby_1__1__27_chany_top_out[14] ;
+ wire \cby_1__1__27_chany_top_out[15] ;
+ wire \cby_1__1__27_chany_top_out[16] ;
+ wire \cby_1__1__27_chany_top_out[17] ;
+ wire \cby_1__1__27_chany_top_out[18] ;
+ wire \cby_1__1__27_chany_top_out[19] ;
+ wire \cby_1__1__27_chany_top_out[1] ;
+ wire \cby_1__1__27_chany_top_out[2] ;
+ wire \cby_1__1__27_chany_top_out[3] ;
+ wire \cby_1__1__27_chany_top_out[4] ;
+ wire \cby_1__1__27_chany_top_out[5] ;
+ wire \cby_1__1__27_chany_top_out[6] ;
+ wire \cby_1__1__27_chany_top_out[7] ;
+ wire \cby_1__1__27_chany_top_out[8] ;
+ wire \cby_1__1__27_chany_top_out[9] ;
+ wire cby_1__1__27_left_grid_pin_16_;
+ wire cby_1__1__27_left_grid_pin_17_;
+ wire cby_1__1__27_left_grid_pin_18_;
+ wire cby_1__1__27_left_grid_pin_19_;
+ wire cby_1__1__27_left_grid_pin_20_;
+ wire cby_1__1__27_left_grid_pin_21_;
+ wire cby_1__1__27_left_grid_pin_22_;
+ wire cby_1__1__27_left_grid_pin_23_;
+ wire cby_1__1__27_left_grid_pin_24_;
+ wire cby_1__1__27_left_grid_pin_25_;
+ wire cby_1__1__27_left_grid_pin_26_;
+ wire cby_1__1__27_left_grid_pin_27_;
+ wire cby_1__1__27_left_grid_pin_28_;
+ wire cby_1__1__27_left_grid_pin_29_;
+ wire cby_1__1__27_left_grid_pin_30_;
+ wire cby_1__1__27_left_grid_pin_31_;
+ wire cby_1__1__28_ccff_tail;
+ wire \cby_1__1__28_chany_bottom_out[0] ;
+ wire \cby_1__1__28_chany_bottom_out[10] ;
+ wire \cby_1__1__28_chany_bottom_out[11] ;
+ wire \cby_1__1__28_chany_bottom_out[12] ;
+ wire \cby_1__1__28_chany_bottom_out[13] ;
+ wire \cby_1__1__28_chany_bottom_out[14] ;
+ wire \cby_1__1__28_chany_bottom_out[15] ;
+ wire \cby_1__1__28_chany_bottom_out[16] ;
+ wire \cby_1__1__28_chany_bottom_out[17] ;
+ wire \cby_1__1__28_chany_bottom_out[18] ;
+ wire \cby_1__1__28_chany_bottom_out[19] ;
+ wire \cby_1__1__28_chany_bottom_out[1] ;
+ wire \cby_1__1__28_chany_bottom_out[2] ;
+ wire \cby_1__1__28_chany_bottom_out[3] ;
+ wire \cby_1__1__28_chany_bottom_out[4] ;
+ wire \cby_1__1__28_chany_bottom_out[5] ;
+ wire \cby_1__1__28_chany_bottom_out[6] ;
+ wire \cby_1__1__28_chany_bottom_out[7] ;
+ wire \cby_1__1__28_chany_bottom_out[8] ;
+ wire \cby_1__1__28_chany_bottom_out[9] ;
+ wire \cby_1__1__28_chany_top_out[0] ;
+ wire \cby_1__1__28_chany_top_out[10] ;
+ wire \cby_1__1__28_chany_top_out[11] ;
+ wire \cby_1__1__28_chany_top_out[12] ;
+ wire \cby_1__1__28_chany_top_out[13] ;
+ wire \cby_1__1__28_chany_top_out[14] ;
+ wire \cby_1__1__28_chany_top_out[15] ;
+ wire \cby_1__1__28_chany_top_out[16] ;
+ wire \cby_1__1__28_chany_top_out[17] ;
+ wire \cby_1__1__28_chany_top_out[18] ;
+ wire \cby_1__1__28_chany_top_out[19] ;
+ wire \cby_1__1__28_chany_top_out[1] ;
+ wire \cby_1__1__28_chany_top_out[2] ;
+ wire \cby_1__1__28_chany_top_out[3] ;
+ wire \cby_1__1__28_chany_top_out[4] ;
+ wire \cby_1__1__28_chany_top_out[5] ;
+ wire \cby_1__1__28_chany_top_out[6] ;
+ wire \cby_1__1__28_chany_top_out[7] ;
+ wire \cby_1__1__28_chany_top_out[8] ;
+ wire \cby_1__1__28_chany_top_out[9] ;
+ wire cby_1__1__28_left_grid_pin_16_;
+ wire cby_1__1__28_left_grid_pin_17_;
+ wire cby_1__1__28_left_grid_pin_18_;
+ wire cby_1__1__28_left_grid_pin_19_;
+ wire cby_1__1__28_left_grid_pin_20_;
+ wire cby_1__1__28_left_grid_pin_21_;
+ wire cby_1__1__28_left_grid_pin_22_;
+ wire cby_1__1__28_left_grid_pin_23_;
+ wire cby_1__1__28_left_grid_pin_24_;
+ wire cby_1__1__28_left_grid_pin_25_;
+ wire cby_1__1__28_left_grid_pin_26_;
+ wire cby_1__1__28_left_grid_pin_27_;
+ wire cby_1__1__28_left_grid_pin_28_;
+ wire cby_1__1__28_left_grid_pin_29_;
+ wire cby_1__1__28_left_grid_pin_30_;
+ wire cby_1__1__28_left_grid_pin_31_;
+ wire cby_1__1__29_ccff_tail;
+ wire \cby_1__1__29_chany_bottom_out[0] ;
+ wire \cby_1__1__29_chany_bottom_out[10] ;
+ wire \cby_1__1__29_chany_bottom_out[11] ;
+ wire \cby_1__1__29_chany_bottom_out[12] ;
+ wire \cby_1__1__29_chany_bottom_out[13] ;
+ wire \cby_1__1__29_chany_bottom_out[14] ;
+ wire \cby_1__1__29_chany_bottom_out[15] ;
+ wire \cby_1__1__29_chany_bottom_out[16] ;
+ wire \cby_1__1__29_chany_bottom_out[17] ;
+ wire \cby_1__1__29_chany_bottom_out[18] ;
+ wire \cby_1__1__29_chany_bottom_out[19] ;
+ wire \cby_1__1__29_chany_bottom_out[1] ;
+ wire \cby_1__1__29_chany_bottom_out[2] ;
+ wire \cby_1__1__29_chany_bottom_out[3] ;
+ wire \cby_1__1__29_chany_bottom_out[4] ;
+ wire \cby_1__1__29_chany_bottom_out[5] ;
+ wire \cby_1__1__29_chany_bottom_out[6] ;
+ wire \cby_1__1__29_chany_bottom_out[7] ;
+ wire \cby_1__1__29_chany_bottom_out[8] ;
+ wire \cby_1__1__29_chany_bottom_out[9] ;
+ wire \cby_1__1__29_chany_top_out[0] ;
+ wire \cby_1__1__29_chany_top_out[10] ;
+ wire \cby_1__1__29_chany_top_out[11] ;
+ wire \cby_1__1__29_chany_top_out[12] ;
+ wire \cby_1__1__29_chany_top_out[13] ;
+ wire \cby_1__1__29_chany_top_out[14] ;
+ wire \cby_1__1__29_chany_top_out[15] ;
+ wire \cby_1__1__29_chany_top_out[16] ;
+ wire \cby_1__1__29_chany_top_out[17] ;
+ wire \cby_1__1__29_chany_top_out[18] ;
+ wire \cby_1__1__29_chany_top_out[19] ;
+ wire \cby_1__1__29_chany_top_out[1] ;
+ wire \cby_1__1__29_chany_top_out[2] ;
+ wire \cby_1__1__29_chany_top_out[3] ;
+ wire \cby_1__1__29_chany_top_out[4] ;
+ wire \cby_1__1__29_chany_top_out[5] ;
+ wire \cby_1__1__29_chany_top_out[6] ;
+ wire \cby_1__1__29_chany_top_out[7] ;
+ wire \cby_1__1__29_chany_top_out[8] ;
+ wire \cby_1__1__29_chany_top_out[9] ;
+ wire cby_1__1__29_left_grid_pin_16_;
+ wire cby_1__1__29_left_grid_pin_17_;
+ wire cby_1__1__29_left_grid_pin_18_;
+ wire cby_1__1__29_left_grid_pin_19_;
+ wire cby_1__1__29_left_grid_pin_20_;
+ wire cby_1__1__29_left_grid_pin_21_;
+ wire cby_1__1__29_left_grid_pin_22_;
+ wire cby_1__1__29_left_grid_pin_23_;
+ wire cby_1__1__29_left_grid_pin_24_;
+ wire cby_1__1__29_left_grid_pin_25_;
+ wire cby_1__1__29_left_grid_pin_26_;
+ wire cby_1__1__29_left_grid_pin_27_;
+ wire cby_1__1__29_left_grid_pin_28_;
+ wire cby_1__1__29_left_grid_pin_29_;
+ wire cby_1__1__29_left_grid_pin_30_;
+ wire cby_1__1__29_left_grid_pin_31_;
+ wire cby_1__1__2_ccff_tail;
+ wire \cby_1__1__2_chany_bottom_out[0] ;
+ wire \cby_1__1__2_chany_bottom_out[10] ;
+ wire \cby_1__1__2_chany_bottom_out[11] ;
+ wire \cby_1__1__2_chany_bottom_out[12] ;
+ wire \cby_1__1__2_chany_bottom_out[13] ;
+ wire \cby_1__1__2_chany_bottom_out[14] ;
+ wire \cby_1__1__2_chany_bottom_out[15] ;
+ wire \cby_1__1__2_chany_bottom_out[16] ;
+ wire \cby_1__1__2_chany_bottom_out[17] ;
+ wire \cby_1__1__2_chany_bottom_out[18] ;
+ wire \cby_1__1__2_chany_bottom_out[19] ;
+ wire \cby_1__1__2_chany_bottom_out[1] ;
+ wire \cby_1__1__2_chany_bottom_out[2] ;
+ wire \cby_1__1__2_chany_bottom_out[3] ;
+ wire \cby_1__1__2_chany_bottom_out[4] ;
+ wire \cby_1__1__2_chany_bottom_out[5] ;
+ wire \cby_1__1__2_chany_bottom_out[6] ;
+ wire \cby_1__1__2_chany_bottom_out[7] ;
+ wire \cby_1__1__2_chany_bottom_out[8] ;
+ wire \cby_1__1__2_chany_bottom_out[9] ;
+ wire \cby_1__1__2_chany_top_out[0] ;
+ wire \cby_1__1__2_chany_top_out[10] ;
+ wire \cby_1__1__2_chany_top_out[11] ;
+ wire \cby_1__1__2_chany_top_out[12] ;
+ wire \cby_1__1__2_chany_top_out[13] ;
+ wire \cby_1__1__2_chany_top_out[14] ;
+ wire \cby_1__1__2_chany_top_out[15] ;
+ wire \cby_1__1__2_chany_top_out[16] ;
+ wire \cby_1__1__2_chany_top_out[17] ;
+ wire \cby_1__1__2_chany_top_out[18] ;
+ wire \cby_1__1__2_chany_top_out[19] ;
+ wire \cby_1__1__2_chany_top_out[1] ;
+ wire \cby_1__1__2_chany_top_out[2] ;
+ wire \cby_1__1__2_chany_top_out[3] ;
+ wire \cby_1__1__2_chany_top_out[4] ;
+ wire \cby_1__1__2_chany_top_out[5] ;
+ wire \cby_1__1__2_chany_top_out[6] ;
+ wire \cby_1__1__2_chany_top_out[7] ;
+ wire \cby_1__1__2_chany_top_out[8] ;
+ wire \cby_1__1__2_chany_top_out[9] ;
+ wire cby_1__1__2_left_grid_pin_16_;
+ wire cby_1__1__2_left_grid_pin_17_;
+ wire cby_1__1__2_left_grid_pin_18_;
+ wire cby_1__1__2_left_grid_pin_19_;
+ wire cby_1__1__2_left_grid_pin_20_;
+ wire cby_1__1__2_left_grid_pin_21_;
+ wire cby_1__1__2_left_grid_pin_22_;
+ wire cby_1__1__2_left_grid_pin_23_;
+ wire cby_1__1__2_left_grid_pin_24_;
+ wire cby_1__1__2_left_grid_pin_25_;
+ wire cby_1__1__2_left_grid_pin_26_;
+ wire cby_1__1__2_left_grid_pin_27_;
+ wire cby_1__1__2_left_grid_pin_28_;
+ wire cby_1__1__2_left_grid_pin_29_;
+ wire cby_1__1__2_left_grid_pin_30_;
+ wire cby_1__1__2_left_grid_pin_31_;
+ wire cby_1__1__30_ccff_tail;
+ wire \cby_1__1__30_chany_bottom_out[0] ;
+ wire \cby_1__1__30_chany_bottom_out[10] ;
+ wire \cby_1__1__30_chany_bottom_out[11] ;
+ wire \cby_1__1__30_chany_bottom_out[12] ;
+ wire \cby_1__1__30_chany_bottom_out[13] ;
+ wire \cby_1__1__30_chany_bottom_out[14] ;
+ wire \cby_1__1__30_chany_bottom_out[15] ;
+ wire \cby_1__1__30_chany_bottom_out[16] ;
+ wire \cby_1__1__30_chany_bottom_out[17] ;
+ wire \cby_1__1__30_chany_bottom_out[18] ;
+ wire \cby_1__1__30_chany_bottom_out[19] ;
+ wire \cby_1__1__30_chany_bottom_out[1] ;
+ wire \cby_1__1__30_chany_bottom_out[2] ;
+ wire \cby_1__1__30_chany_bottom_out[3] ;
+ wire \cby_1__1__30_chany_bottom_out[4] ;
+ wire \cby_1__1__30_chany_bottom_out[5] ;
+ wire \cby_1__1__30_chany_bottom_out[6] ;
+ wire \cby_1__1__30_chany_bottom_out[7] ;
+ wire \cby_1__1__30_chany_bottom_out[8] ;
+ wire \cby_1__1__30_chany_bottom_out[9] ;
+ wire \cby_1__1__30_chany_top_out[0] ;
+ wire \cby_1__1__30_chany_top_out[10] ;
+ wire \cby_1__1__30_chany_top_out[11] ;
+ wire \cby_1__1__30_chany_top_out[12] ;
+ wire \cby_1__1__30_chany_top_out[13] ;
+ wire \cby_1__1__30_chany_top_out[14] ;
+ wire \cby_1__1__30_chany_top_out[15] ;
+ wire \cby_1__1__30_chany_top_out[16] ;
+ wire \cby_1__1__30_chany_top_out[17] ;
+ wire \cby_1__1__30_chany_top_out[18] ;
+ wire \cby_1__1__30_chany_top_out[19] ;
+ wire \cby_1__1__30_chany_top_out[1] ;
+ wire \cby_1__1__30_chany_top_out[2] ;
+ wire \cby_1__1__30_chany_top_out[3] ;
+ wire \cby_1__1__30_chany_top_out[4] ;
+ wire \cby_1__1__30_chany_top_out[5] ;
+ wire \cby_1__1__30_chany_top_out[6] ;
+ wire \cby_1__1__30_chany_top_out[7] ;
+ wire \cby_1__1__30_chany_top_out[8] ;
+ wire \cby_1__1__30_chany_top_out[9] ;
+ wire cby_1__1__30_left_grid_pin_16_;
+ wire cby_1__1__30_left_grid_pin_17_;
+ wire cby_1__1__30_left_grid_pin_18_;
+ wire cby_1__1__30_left_grid_pin_19_;
+ wire cby_1__1__30_left_grid_pin_20_;
+ wire cby_1__1__30_left_grid_pin_21_;
+ wire cby_1__1__30_left_grid_pin_22_;
+ wire cby_1__1__30_left_grid_pin_23_;
+ wire cby_1__1__30_left_grid_pin_24_;
+ wire cby_1__1__30_left_grid_pin_25_;
+ wire cby_1__1__30_left_grid_pin_26_;
+ wire cby_1__1__30_left_grid_pin_27_;
+ wire cby_1__1__30_left_grid_pin_28_;
+ wire cby_1__1__30_left_grid_pin_29_;
+ wire cby_1__1__30_left_grid_pin_30_;
+ wire cby_1__1__30_left_grid_pin_31_;
+ wire cby_1__1__31_ccff_tail;
+ wire \cby_1__1__31_chany_bottom_out[0] ;
+ wire \cby_1__1__31_chany_bottom_out[10] ;
+ wire \cby_1__1__31_chany_bottom_out[11] ;
+ wire \cby_1__1__31_chany_bottom_out[12] ;
+ wire \cby_1__1__31_chany_bottom_out[13] ;
+ wire \cby_1__1__31_chany_bottom_out[14] ;
+ wire \cby_1__1__31_chany_bottom_out[15] ;
+ wire \cby_1__1__31_chany_bottom_out[16] ;
+ wire \cby_1__1__31_chany_bottom_out[17] ;
+ wire \cby_1__1__31_chany_bottom_out[18] ;
+ wire \cby_1__1__31_chany_bottom_out[19] ;
+ wire \cby_1__1__31_chany_bottom_out[1] ;
+ wire \cby_1__1__31_chany_bottom_out[2] ;
+ wire \cby_1__1__31_chany_bottom_out[3] ;
+ wire \cby_1__1__31_chany_bottom_out[4] ;
+ wire \cby_1__1__31_chany_bottom_out[5] ;
+ wire \cby_1__1__31_chany_bottom_out[6] ;
+ wire \cby_1__1__31_chany_bottom_out[7] ;
+ wire \cby_1__1__31_chany_bottom_out[8] ;
+ wire \cby_1__1__31_chany_bottom_out[9] ;
+ wire \cby_1__1__31_chany_top_out[0] ;
+ wire \cby_1__1__31_chany_top_out[10] ;
+ wire \cby_1__1__31_chany_top_out[11] ;
+ wire \cby_1__1__31_chany_top_out[12] ;
+ wire \cby_1__1__31_chany_top_out[13] ;
+ wire \cby_1__1__31_chany_top_out[14] ;
+ wire \cby_1__1__31_chany_top_out[15] ;
+ wire \cby_1__1__31_chany_top_out[16] ;
+ wire \cby_1__1__31_chany_top_out[17] ;
+ wire \cby_1__1__31_chany_top_out[18] ;
+ wire \cby_1__1__31_chany_top_out[19] ;
+ wire \cby_1__1__31_chany_top_out[1] ;
+ wire \cby_1__1__31_chany_top_out[2] ;
+ wire \cby_1__1__31_chany_top_out[3] ;
+ wire \cby_1__1__31_chany_top_out[4] ;
+ wire \cby_1__1__31_chany_top_out[5] ;
+ wire \cby_1__1__31_chany_top_out[6] ;
+ wire \cby_1__1__31_chany_top_out[7] ;
+ wire \cby_1__1__31_chany_top_out[8] ;
+ wire \cby_1__1__31_chany_top_out[9] ;
+ wire cby_1__1__31_left_grid_pin_16_;
+ wire cby_1__1__31_left_grid_pin_17_;
+ wire cby_1__1__31_left_grid_pin_18_;
+ wire cby_1__1__31_left_grid_pin_19_;
+ wire cby_1__1__31_left_grid_pin_20_;
+ wire cby_1__1__31_left_grid_pin_21_;
+ wire cby_1__1__31_left_grid_pin_22_;
+ wire cby_1__1__31_left_grid_pin_23_;
+ wire cby_1__1__31_left_grid_pin_24_;
+ wire cby_1__1__31_left_grid_pin_25_;
+ wire cby_1__1__31_left_grid_pin_26_;
+ wire cby_1__1__31_left_grid_pin_27_;
+ wire cby_1__1__31_left_grid_pin_28_;
+ wire cby_1__1__31_left_grid_pin_29_;
+ wire cby_1__1__31_left_grid_pin_30_;
+ wire cby_1__1__31_left_grid_pin_31_;
+ wire cby_1__1__32_ccff_tail;
+ wire \cby_1__1__32_chany_bottom_out[0] ;
+ wire \cby_1__1__32_chany_bottom_out[10] ;
+ wire \cby_1__1__32_chany_bottom_out[11] ;
+ wire \cby_1__1__32_chany_bottom_out[12] ;
+ wire \cby_1__1__32_chany_bottom_out[13] ;
+ wire \cby_1__1__32_chany_bottom_out[14] ;
+ wire \cby_1__1__32_chany_bottom_out[15] ;
+ wire \cby_1__1__32_chany_bottom_out[16] ;
+ wire \cby_1__1__32_chany_bottom_out[17] ;
+ wire \cby_1__1__32_chany_bottom_out[18] ;
+ wire \cby_1__1__32_chany_bottom_out[19] ;
+ wire \cby_1__1__32_chany_bottom_out[1] ;
+ wire \cby_1__1__32_chany_bottom_out[2] ;
+ wire \cby_1__1__32_chany_bottom_out[3] ;
+ wire \cby_1__1__32_chany_bottom_out[4] ;
+ wire \cby_1__1__32_chany_bottom_out[5] ;
+ wire \cby_1__1__32_chany_bottom_out[6] ;
+ wire \cby_1__1__32_chany_bottom_out[7] ;
+ wire \cby_1__1__32_chany_bottom_out[8] ;
+ wire \cby_1__1__32_chany_bottom_out[9] ;
+ wire \cby_1__1__32_chany_top_out[0] ;
+ wire \cby_1__1__32_chany_top_out[10] ;
+ wire \cby_1__1__32_chany_top_out[11] ;
+ wire \cby_1__1__32_chany_top_out[12] ;
+ wire \cby_1__1__32_chany_top_out[13] ;
+ wire \cby_1__1__32_chany_top_out[14] ;
+ wire \cby_1__1__32_chany_top_out[15] ;
+ wire \cby_1__1__32_chany_top_out[16] ;
+ wire \cby_1__1__32_chany_top_out[17] ;
+ wire \cby_1__1__32_chany_top_out[18] ;
+ wire \cby_1__1__32_chany_top_out[19] ;
+ wire \cby_1__1__32_chany_top_out[1] ;
+ wire \cby_1__1__32_chany_top_out[2] ;
+ wire \cby_1__1__32_chany_top_out[3] ;
+ wire \cby_1__1__32_chany_top_out[4] ;
+ wire \cby_1__1__32_chany_top_out[5] ;
+ wire \cby_1__1__32_chany_top_out[6] ;
+ wire \cby_1__1__32_chany_top_out[7] ;
+ wire \cby_1__1__32_chany_top_out[8] ;
+ wire \cby_1__1__32_chany_top_out[9] ;
+ wire cby_1__1__32_left_grid_pin_16_;
+ wire cby_1__1__32_left_grid_pin_17_;
+ wire cby_1__1__32_left_grid_pin_18_;
+ wire cby_1__1__32_left_grid_pin_19_;
+ wire cby_1__1__32_left_grid_pin_20_;
+ wire cby_1__1__32_left_grid_pin_21_;
+ wire cby_1__1__32_left_grid_pin_22_;
+ wire cby_1__1__32_left_grid_pin_23_;
+ wire cby_1__1__32_left_grid_pin_24_;
+ wire cby_1__1__32_left_grid_pin_25_;
+ wire cby_1__1__32_left_grid_pin_26_;
+ wire cby_1__1__32_left_grid_pin_27_;
+ wire cby_1__1__32_left_grid_pin_28_;
+ wire cby_1__1__32_left_grid_pin_29_;
+ wire cby_1__1__32_left_grid_pin_30_;
+ wire cby_1__1__32_left_grid_pin_31_;
+ wire cby_1__1__33_ccff_tail;
+ wire \cby_1__1__33_chany_bottom_out[0] ;
+ wire \cby_1__1__33_chany_bottom_out[10] ;
+ wire \cby_1__1__33_chany_bottom_out[11] ;
+ wire \cby_1__1__33_chany_bottom_out[12] ;
+ wire \cby_1__1__33_chany_bottom_out[13] ;
+ wire \cby_1__1__33_chany_bottom_out[14] ;
+ wire \cby_1__1__33_chany_bottom_out[15] ;
+ wire \cby_1__1__33_chany_bottom_out[16] ;
+ wire \cby_1__1__33_chany_bottom_out[17] ;
+ wire \cby_1__1__33_chany_bottom_out[18] ;
+ wire \cby_1__1__33_chany_bottom_out[19] ;
+ wire \cby_1__1__33_chany_bottom_out[1] ;
+ wire \cby_1__1__33_chany_bottom_out[2] ;
+ wire \cby_1__1__33_chany_bottom_out[3] ;
+ wire \cby_1__1__33_chany_bottom_out[4] ;
+ wire \cby_1__1__33_chany_bottom_out[5] ;
+ wire \cby_1__1__33_chany_bottom_out[6] ;
+ wire \cby_1__1__33_chany_bottom_out[7] ;
+ wire \cby_1__1__33_chany_bottom_out[8] ;
+ wire \cby_1__1__33_chany_bottom_out[9] ;
+ wire \cby_1__1__33_chany_top_out[0] ;
+ wire \cby_1__1__33_chany_top_out[10] ;
+ wire \cby_1__1__33_chany_top_out[11] ;
+ wire \cby_1__1__33_chany_top_out[12] ;
+ wire \cby_1__1__33_chany_top_out[13] ;
+ wire \cby_1__1__33_chany_top_out[14] ;
+ wire \cby_1__1__33_chany_top_out[15] ;
+ wire \cby_1__1__33_chany_top_out[16] ;
+ wire \cby_1__1__33_chany_top_out[17] ;
+ wire \cby_1__1__33_chany_top_out[18] ;
+ wire \cby_1__1__33_chany_top_out[19] ;
+ wire \cby_1__1__33_chany_top_out[1] ;
+ wire \cby_1__1__33_chany_top_out[2] ;
+ wire \cby_1__1__33_chany_top_out[3] ;
+ wire \cby_1__1__33_chany_top_out[4] ;
+ wire \cby_1__1__33_chany_top_out[5] ;
+ wire \cby_1__1__33_chany_top_out[6] ;
+ wire \cby_1__1__33_chany_top_out[7] ;
+ wire \cby_1__1__33_chany_top_out[8] ;
+ wire \cby_1__1__33_chany_top_out[9] ;
+ wire cby_1__1__33_left_grid_pin_16_;
+ wire cby_1__1__33_left_grid_pin_17_;
+ wire cby_1__1__33_left_grid_pin_18_;
+ wire cby_1__1__33_left_grid_pin_19_;
+ wire cby_1__1__33_left_grid_pin_20_;
+ wire cby_1__1__33_left_grid_pin_21_;
+ wire cby_1__1__33_left_grid_pin_22_;
+ wire cby_1__1__33_left_grid_pin_23_;
+ wire cby_1__1__33_left_grid_pin_24_;
+ wire cby_1__1__33_left_grid_pin_25_;
+ wire cby_1__1__33_left_grid_pin_26_;
+ wire cby_1__1__33_left_grid_pin_27_;
+ wire cby_1__1__33_left_grid_pin_28_;
+ wire cby_1__1__33_left_grid_pin_29_;
+ wire cby_1__1__33_left_grid_pin_30_;
+ wire cby_1__1__33_left_grid_pin_31_;
+ wire cby_1__1__34_ccff_tail;
+ wire \cby_1__1__34_chany_bottom_out[0] ;
+ wire \cby_1__1__34_chany_bottom_out[10] ;
+ wire \cby_1__1__34_chany_bottom_out[11] ;
+ wire \cby_1__1__34_chany_bottom_out[12] ;
+ wire \cby_1__1__34_chany_bottom_out[13] ;
+ wire \cby_1__1__34_chany_bottom_out[14] ;
+ wire \cby_1__1__34_chany_bottom_out[15] ;
+ wire \cby_1__1__34_chany_bottom_out[16] ;
+ wire \cby_1__1__34_chany_bottom_out[17] ;
+ wire \cby_1__1__34_chany_bottom_out[18] ;
+ wire \cby_1__1__34_chany_bottom_out[19] ;
+ wire \cby_1__1__34_chany_bottom_out[1] ;
+ wire \cby_1__1__34_chany_bottom_out[2] ;
+ wire \cby_1__1__34_chany_bottom_out[3] ;
+ wire \cby_1__1__34_chany_bottom_out[4] ;
+ wire \cby_1__1__34_chany_bottom_out[5] ;
+ wire \cby_1__1__34_chany_bottom_out[6] ;
+ wire \cby_1__1__34_chany_bottom_out[7] ;
+ wire \cby_1__1__34_chany_bottom_out[8] ;
+ wire \cby_1__1__34_chany_bottom_out[9] ;
+ wire \cby_1__1__34_chany_top_out[0] ;
+ wire \cby_1__1__34_chany_top_out[10] ;
+ wire \cby_1__1__34_chany_top_out[11] ;
+ wire \cby_1__1__34_chany_top_out[12] ;
+ wire \cby_1__1__34_chany_top_out[13] ;
+ wire \cby_1__1__34_chany_top_out[14] ;
+ wire \cby_1__1__34_chany_top_out[15] ;
+ wire \cby_1__1__34_chany_top_out[16] ;
+ wire \cby_1__1__34_chany_top_out[17] ;
+ wire \cby_1__1__34_chany_top_out[18] ;
+ wire \cby_1__1__34_chany_top_out[19] ;
+ wire \cby_1__1__34_chany_top_out[1] ;
+ wire \cby_1__1__34_chany_top_out[2] ;
+ wire \cby_1__1__34_chany_top_out[3] ;
+ wire \cby_1__1__34_chany_top_out[4] ;
+ wire \cby_1__1__34_chany_top_out[5] ;
+ wire \cby_1__1__34_chany_top_out[6] ;
+ wire \cby_1__1__34_chany_top_out[7] ;
+ wire \cby_1__1__34_chany_top_out[8] ;
+ wire \cby_1__1__34_chany_top_out[9] ;
+ wire cby_1__1__34_left_grid_pin_16_;
+ wire cby_1__1__34_left_grid_pin_17_;
+ wire cby_1__1__34_left_grid_pin_18_;
+ wire cby_1__1__34_left_grid_pin_19_;
+ wire cby_1__1__34_left_grid_pin_20_;
+ wire cby_1__1__34_left_grid_pin_21_;
+ wire cby_1__1__34_left_grid_pin_22_;
+ wire cby_1__1__34_left_grid_pin_23_;
+ wire cby_1__1__34_left_grid_pin_24_;
+ wire cby_1__1__34_left_grid_pin_25_;
+ wire cby_1__1__34_left_grid_pin_26_;
+ wire cby_1__1__34_left_grid_pin_27_;
+ wire cby_1__1__34_left_grid_pin_28_;
+ wire cby_1__1__34_left_grid_pin_29_;
+ wire cby_1__1__34_left_grid_pin_30_;
+ wire cby_1__1__34_left_grid_pin_31_;
+ wire cby_1__1__35_ccff_tail;
+ wire \cby_1__1__35_chany_bottom_out[0] ;
+ wire \cby_1__1__35_chany_bottom_out[10] ;
+ wire \cby_1__1__35_chany_bottom_out[11] ;
+ wire \cby_1__1__35_chany_bottom_out[12] ;
+ wire \cby_1__1__35_chany_bottom_out[13] ;
+ wire \cby_1__1__35_chany_bottom_out[14] ;
+ wire \cby_1__1__35_chany_bottom_out[15] ;
+ wire \cby_1__1__35_chany_bottom_out[16] ;
+ wire \cby_1__1__35_chany_bottom_out[17] ;
+ wire \cby_1__1__35_chany_bottom_out[18] ;
+ wire \cby_1__1__35_chany_bottom_out[19] ;
+ wire \cby_1__1__35_chany_bottom_out[1] ;
+ wire \cby_1__1__35_chany_bottom_out[2] ;
+ wire \cby_1__1__35_chany_bottom_out[3] ;
+ wire \cby_1__1__35_chany_bottom_out[4] ;
+ wire \cby_1__1__35_chany_bottom_out[5] ;
+ wire \cby_1__1__35_chany_bottom_out[6] ;
+ wire \cby_1__1__35_chany_bottom_out[7] ;
+ wire \cby_1__1__35_chany_bottom_out[8] ;
+ wire \cby_1__1__35_chany_bottom_out[9] ;
+ wire \cby_1__1__35_chany_top_out[0] ;
+ wire \cby_1__1__35_chany_top_out[10] ;
+ wire \cby_1__1__35_chany_top_out[11] ;
+ wire \cby_1__1__35_chany_top_out[12] ;
+ wire \cby_1__1__35_chany_top_out[13] ;
+ wire \cby_1__1__35_chany_top_out[14] ;
+ wire \cby_1__1__35_chany_top_out[15] ;
+ wire \cby_1__1__35_chany_top_out[16] ;
+ wire \cby_1__1__35_chany_top_out[17] ;
+ wire \cby_1__1__35_chany_top_out[18] ;
+ wire \cby_1__1__35_chany_top_out[19] ;
+ wire \cby_1__1__35_chany_top_out[1] ;
+ wire \cby_1__1__35_chany_top_out[2] ;
+ wire \cby_1__1__35_chany_top_out[3] ;
+ wire \cby_1__1__35_chany_top_out[4] ;
+ wire \cby_1__1__35_chany_top_out[5] ;
+ wire \cby_1__1__35_chany_top_out[6] ;
+ wire \cby_1__1__35_chany_top_out[7] ;
+ wire \cby_1__1__35_chany_top_out[8] ;
+ wire \cby_1__1__35_chany_top_out[9] ;
+ wire cby_1__1__35_left_grid_pin_16_;
+ wire cby_1__1__35_left_grid_pin_17_;
+ wire cby_1__1__35_left_grid_pin_18_;
+ wire cby_1__1__35_left_grid_pin_19_;
+ wire cby_1__1__35_left_grid_pin_20_;
+ wire cby_1__1__35_left_grid_pin_21_;
+ wire cby_1__1__35_left_grid_pin_22_;
+ wire cby_1__1__35_left_grid_pin_23_;
+ wire cby_1__1__35_left_grid_pin_24_;
+ wire cby_1__1__35_left_grid_pin_25_;
+ wire cby_1__1__35_left_grid_pin_26_;
+ wire cby_1__1__35_left_grid_pin_27_;
+ wire cby_1__1__35_left_grid_pin_28_;
+ wire cby_1__1__35_left_grid_pin_29_;
+ wire cby_1__1__35_left_grid_pin_30_;
+ wire cby_1__1__35_left_grid_pin_31_;
+ wire cby_1__1__36_ccff_tail;
+ wire \cby_1__1__36_chany_bottom_out[0] ;
+ wire \cby_1__1__36_chany_bottom_out[10] ;
+ wire \cby_1__1__36_chany_bottom_out[11] ;
+ wire \cby_1__1__36_chany_bottom_out[12] ;
+ wire \cby_1__1__36_chany_bottom_out[13] ;
+ wire \cby_1__1__36_chany_bottom_out[14] ;
+ wire \cby_1__1__36_chany_bottom_out[15] ;
+ wire \cby_1__1__36_chany_bottom_out[16] ;
+ wire \cby_1__1__36_chany_bottom_out[17] ;
+ wire \cby_1__1__36_chany_bottom_out[18] ;
+ wire \cby_1__1__36_chany_bottom_out[19] ;
+ wire \cby_1__1__36_chany_bottom_out[1] ;
+ wire \cby_1__1__36_chany_bottom_out[2] ;
+ wire \cby_1__1__36_chany_bottom_out[3] ;
+ wire \cby_1__1__36_chany_bottom_out[4] ;
+ wire \cby_1__1__36_chany_bottom_out[5] ;
+ wire \cby_1__1__36_chany_bottom_out[6] ;
+ wire \cby_1__1__36_chany_bottom_out[7] ;
+ wire \cby_1__1__36_chany_bottom_out[8] ;
+ wire \cby_1__1__36_chany_bottom_out[9] ;
+ wire \cby_1__1__36_chany_top_out[0] ;
+ wire \cby_1__1__36_chany_top_out[10] ;
+ wire \cby_1__1__36_chany_top_out[11] ;
+ wire \cby_1__1__36_chany_top_out[12] ;
+ wire \cby_1__1__36_chany_top_out[13] ;
+ wire \cby_1__1__36_chany_top_out[14] ;
+ wire \cby_1__1__36_chany_top_out[15] ;
+ wire \cby_1__1__36_chany_top_out[16] ;
+ wire \cby_1__1__36_chany_top_out[17] ;
+ wire \cby_1__1__36_chany_top_out[18] ;
+ wire \cby_1__1__36_chany_top_out[19] ;
+ wire \cby_1__1__36_chany_top_out[1] ;
+ wire \cby_1__1__36_chany_top_out[2] ;
+ wire \cby_1__1__36_chany_top_out[3] ;
+ wire \cby_1__1__36_chany_top_out[4] ;
+ wire \cby_1__1__36_chany_top_out[5] ;
+ wire \cby_1__1__36_chany_top_out[6] ;
+ wire \cby_1__1__36_chany_top_out[7] ;
+ wire \cby_1__1__36_chany_top_out[8] ;
+ wire \cby_1__1__36_chany_top_out[9] ;
+ wire cby_1__1__36_left_grid_pin_16_;
+ wire cby_1__1__36_left_grid_pin_17_;
+ wire cby_1__1__36_left_grid_pin_18_;
+ wire cby_1__1__36_left_grid_pin_19_;
+ wire cby_1__1__36_left_grid_pin_20_;
+ wire cby_1__1__36_left_grid_pin_21_;
+ wire cby_1__1__36_left_grid_pin_22_;
+ wire cby_1__1__36_left_grid_pin_23_;
+ wire cby_1__1__36_left_grid_pin_24_;
+ wire cby_1__1__36_left_grid_pin_25_;
+ wire cby_1__1__36_left_grid_pin_26_;
+ wire cby_1__1__36_left_grid_pin_27_;
+ wire cby_1__1__36_left_grid_pin_28_;
+ wire cby_1__1__36_left_grid_pin_29_;
+ wire cby_1__1__36_left_grid_pin_30_;
+ wire cby_1__1__36_left_grid_pin_31_;
+ wire cby_1__1__37_ccff_tail;
+ wire \cby_1__1__37_chany_bottom_out[0] ;
+ wire \cby_1__1__37_chany_bottom_out[10] ;
+ wire \cby_1__1__37_chany_bottom_out[11] ;
+ wire \cby_1__1__37_chany_bottom_out[12] ;
+ wire \cby_1__1__37_chany_bottom_out[13] ;
+ wire \cby_1__1__37_chany_bottom_out[14] ;
+ wire \cby_1__1__37_chany_bottom_out[15] ;
+ wire \cby_1__1__37_chany_bottom_out[16] ;
+ wire \cby_1__1__37_chany_bottom_out[17] ;
+ wire \cby_1__1__37_chany_bottom_out[18] ;
+ wire \cby_1__1__37_chany_bottom_out[19] ;
+ wire \cby_1__1__37_chany_bottom_out[1] ;
+ wire \cby_1__1__37_chany_bottom_out[2] ;
+ wire \cby_1__1__37_chany_bottom_out[3] ;
+ wire \cby_1__1__37_chany_bottom_out[4] ;
+ wire \cby_1__1__37_chany_bottom_out[5] ;
+ wire \cby_1__1__37_chany_bottom_out[6] ;
+ wire \cby_1__1__37_chany_bottom_out[7] ;
+ wire \cby_1__1__37_chany_bottom_out[8] ;
+ wire \cby_1__1__37_chany_bottom_out[9] ;
+ wire \cby_1__1__37_chany_top_out[0] ;
+ wire \cby_1__1__37_chany_top_out[10] ;
+ wire \cby_1__1__37_chany_top_out[11] ;
+ wire \cby_1__1__37_chany_top_out[12] ;
+ wire \cby_1__1__37_chany_top_out[13] ;
+ wire \cby_1__1__37_chany_top_out[14] ;
+ wire \cby_1__1__37_chany_top_out[15] ;
+ wire \cby_1__1__37_chany_top_out[16] ;
+ wire \cby_1__1__37_chany_top_out[17] ;
+ wire \cby_1__1__37_chany_top_out[18] ;
+ wire \cby_1__1__37_chany_top_out[19] ;
+ wire \cby_1__1__37_chany_top_out[1] ;
+ wire \cby_1__1__37_chany_top_out[2] ;
+ wire \cby_1__1__37_chany_top_out[3] ;
+ wire \cby_1__1__37_chany_top_out[4] ;
+ wire \cby_1__1__37_chany_top_out[5] ;
+ wire \cby_1__1__37_chany_top_out[6] ;
+ wire \cby_1__1__37_chany_top_out[7] ;
+ wire \cby_1__1__37_chany_top_out[8] ;
+ wire \cby_1__1__37_chany_top_out[9] ;
+ wire cby_1__1__37_left_grid_pin_16_;
+ wire cby_1__1__37_left_grid_pin_17_;
+ wire cby_1__1__37_left_grid_pin_18_;
+ wire cby_1__1__37_left_grid_pin_19_;
+ wire cby_1__1__37_left_grid_pin_20_;
+ wire cby_1__1__37_left_grid_pin_21_;
+ wire cby_1__1__37_left_grid_pin_22_;
+ wire cby_1__1__37_left_grid_pin_23_;
+ wire cby_1__1__37_left_grid_pin_24_;
+ wire cby_1__1__37_left_grid_pin_25_;
+ wire cby_1__1__37_left_grid_pin_26_;
+ wire cby_1__1__37_left_grid_pin_27_;
+ wire cby_1__1__37_left_grid_pin_28_;
+ wire cby_1__1__37_left_grid_pin_29_;
+ wire cby_1__1__37_left_grid_pin_30_;
+ wire cby_1__1__37_left_grid_pin_31_;
+ wire cby_1__1__38_ccff_tail;
+ wire \cby_1__1__38_chany_bottom_out[0] ;
+ wire \cby_1__1__38_chany_bottom_out[10] ;
+ wire \cby_1__1__38_chany_bottom_out[11] ;
+ wire \cby_1__1__38_chany_bottom_out[12] ;
+ wire \cby_1__1__38_chany_bottom_out[13] ;
+ wire \cby_1__1__38_chany_bottom_out[14] ;
+ wire \cby_1__1__38_chany_bottom_out[15] ;
+ wire \cby_1__1__38_chany_bottom_out[16] ;
+ wire \cby_1__1__38_chany_bottom_out[17] ;
+ wire \cby_1__1__38_chany_bottom_out[18] ;
+ wire \cby_1__1__38_chany_bottom_out[19] ;
+ wire \cby_1__1__38_chany_bottom_out[1] ;
+ wire \cby_1__1__38_chany_bottom_out[2] ;
+ wire \cby_1__1__38_chany_bottom_out[3] ;
+ wire \cby_1__1__38_chany_bottom_out[4] ;
+ wire \cby_1__1__38_chany_bottom_out[5] ;
+ wire \cby_1__1__38_chany_bottom_out[6] ;
+ wire \cby_1__1__38_chany_bottom_out[7] ;
+ wire \cby_1__1__38_chany_bottom_out[8] ;
+ wire \cby_1__1__38_chany_bottom_out[9] ;
+ wire \cby_1__1__38_chany_top_out[0] ;
+ wire \cby_1__1__38_chany_top_out[10] ;
+ wire \cby_1__1__38_chany_top_out[11] ;
+ wire \cby_1__1__38_chany_top_out[12] ;
+ wire \cby_1__1__38_chany_top_out[13] ;
+ wire \cby_1__1__38_chany_top_out[14] ;
+ wire \cby_1__1__38_chany_top_out[15] ;
+ wire \cby_1__1__38_chany_top_out[16] ;
+ wire \cby_1__1__38_chany_top_out[17] ;
+ wire \cby_1__1__38_chany_top_out[18] ;
+ wire \cby_1__1__38_chany_top_out[19] ;
+ wire \cby_1__1__38_chany_top_out[1] ;
+ wire \cby_1__1__38_chany_top_out[2] ;
+ wire \cby_1__1__38_chany_top_out[3] ;
+ wire \cby_1__1__38_chany_top_out[4] ;
+ wire \cby_1__1__38_chany_top_out[5] ;
+ wire \cby_1__1__38_chany_top_out[6] ;
+ wire \cby_1__1__38_chany_top_out[7] ;
+ wire \cby_1__1__38_chany_top_out[8] ;
+ wire \cby_1__1__38_chany_top_out[9] ;
+ wire cby_1__1__38_left_grid_pin_16_;
+ wire cby_1__1__38_left_grid_pin_17_;
+ wire cby_1__1__38_left_grid_pin_18_;
+ wire cby_1__1__38_left_grid_pin_19_;
+ wire cby_1__1__38_left_grid_pin_20_;
+ wire cby_1__1__38_left_grid_pin_21_;
+ wire cby_1__1__38_left_grid_pin_22_;
+ wire cby_1__1__38_left_grid_pin_23_;
+ wire cby_1__1__38_left_grid_pin_24_;
+ wire cby_1__1__38_left_grid_pin_25_;
+ wire cby_1__1__38_left_grid_pin_26_;
+ wire cby_1__1__38_left_grid_pin_27_;
+ wire cby_1__1__38_left_grid_pin_28_;
+ wire cby_1__1__38_left_grid_pin_29_;
+ wire cby_1__1__38_left_grid_pin_30_;
+ wire cby_1__1__38_left_grid_pin_31_;
+ wire cby_1__1__39_ccff_tail;
+ wire \cby_1__1__39_chany_bottom_out[0] ;
+ wire \cby_1__1__39_chany_bottom_out[10] ;
+ wire \cby_1__1__39_chany_bottom_out[11] ;
+ wire \cby_1__1__39_chany_bottom_out[12] ;
+ wire \cby_1__1__39_chany_bottom_out[13] ;
+ wire \cby_1__1__39_chany_bottom_out[14] ;
+ wire \cby_1__1__39_chany_bottom_out[15] ;
+ wire \cby_1__1__39_chany_bottom_out[16] ;
+ wire \cby_1__1__39_chany_bottom_out[17] ;
+ wire \cby_1__1__39_chany_bottom_out[18] ;
+ wire \cby_1__1__39_chany_bottom_out[19] ;
+ wire \cby_1__1__39_chany_bottom_out[1] ;
+ wire \cby_1__1__39_chany_bottom_out[2] ;
+ wire \cby_1__1__39_chany_bottom_out[3] ;
+ wire \cby_1__1__39_chany_bottom_out[4] ;
+ wire \cby_1__1__39_chany_bottom_out[5] ;
+ wire \cby_1__1__39_chany_bottom_out[6] ;
+ wire \cby_1__1__39_chany_bottom_out[7] ;
+ wire \cby_1__1__39_chany_bottom_out[8] ;
+ wire \cby_1__1__39_chany_bottom_out[9] ;
+ wire \cby_1__1__39_chany_top_out[0] ;
+ wire \cby_1__1__39_chany_top_out[10] ;
+ wire \cby_1__1__39_chany_top_out[11] ;
+ wire \cby_1__1__39_chany_top_out[12] ;
+ wire \cby_1__1__39_chany_top_out[13] ;
+ wire \cby_1__1__39_chany_top_out[14] ;
+ wire \cby_1__1__39_chany_top_out[15] ;
+ wire \cby_1__1__39_chany_top_out[16] ;
+ wire \cby_1__1__39_chany_top_out[17] ;
+ wire \cby_1__1__39_chany_top_out[18] ;
+ wire \cby_1__1__39_chany_top_out[19] ;
+ wire \cby_1__1__39_chany_top_out[1] ;
+ wire \cby_1__1__39_chany_top_out[2] ;
+ wire \cby_1__1__39_chany_top_out[3] ;
+ wire \cby_1__1__39_chany_top_out[4] ;
+ wire \cby_1__1__39_chany_top_out[5] ;
+ wire \cby_1__1__39_chany_top_out[6] ;
+ wire \cby_1__1__39_chany_top_out[7] ;
+ wire \cby_1__1__39_chany_top_out[8] ;
+ wire \cby_1__1__39_chany_top_out[9] ;
+ wire cby_1__1__39_left_grid_pin_16_;
+ wire cby_1__1__39_left_grid_pin_17_;
+ wire cby_1__1__39_left_grid_pin_18_;
+ wire cby_1__1__39_left_grid_pin_19_;
+ wire cby_1__1__39_left_grid_pin_20_;
+ wire cby_1__1__39_left_grid_pin_21_;
+ wire cby_1__1__39_left_grid_pin_22_;
+ wire cby_1__1__39_left_grid_pin_23_;
+ wire cby_1__1__39_left_grid_pin_24_;
+ wire cby_1__1__39_left_grid_pin_25_;
+ wire cby_1__1__39_left_grid_pin_26_;
+ wire cby_1__1__39_left_grid_pin_27_;
+ wire cby_1__1__39_left_grid_pin_28_;
+ wire cby_1__1__39_left_grid_pin_29_;
+ wire cby_1__1__39_left_grid_pin_30_;
+ wire cby_1__1__39_left_grid_pin_31_;
+ wire cby_1__1__3_ccff_tail;
+ wire \cby_1__1__3_chany_bottom_out[0] ;
+ wire \cby_1__1__3_chany_bottom_out[10] ;
+ wire \cby_1__1__3_chany_bottom_out[11] ;
+ wire \cby_1__1__3_chany_bottom_out[12] ;
+ wire \cby_1__1__3_chany_bottom_out[13] ;
+ wire \cby_1__1__3_chany_bottom_out[14] ;
+ wire \cby_1__1__3_chany_bottom_out[15] ;
+ wire \cby_1__1__3_chany_bottom_out[16] ;
+ wire \cby_1__1__3_chany_bottom_out[17] ;
+ wire \cby_1__1__3_chany_bottom_out[18] ;
+ wire \cby_1__1__3_chany_bottom_out[19] ;
+ wire \cby_1__1__3_chany_bottom_out[1] ;
+ wire \cby_1__1__3_chany_bottom_out[2] ;
+ wire \cby_1__1__3_chany_bottom_out[3] ;
+ wire \cby_1__1__3_chany_bottom_out[4] ;
+ wire \cby_1__1__3_chany_bottom_out[5] ;
+ wire \cby_1__1__3_chany_bottom_out[6] ;
+ wire \cby_1__1__3_chany_bottom_out[7] ;
+ wire \cby_1__1__3_chany_bottom_out[8] ;
+ wire \cby_1__1__3_chany_bottom_out[9] ;
+ wire \cby_1__1__3_chany_top_out[0] ;
+ wire \cby_1__1__3_chany_top_out[10] ;
+ wire \cby_1__1__3_chany_top_out[11] ;
+ wire \cby_1__1__3_chany_top_out[12] ;
+ wire \cby_1__1__3_chany_top_out[13] ;
+ wire \cby_1__1__3_chany_top_out[14] ;
+ wire \cby_1__1__3_chany_top_out[15] ;
+ wire \cby_1__1__3_chany_top_out[16] ;
+ wire \cby_1__1__3_chany_top_out[17] ;
+ wire \cby_1__1__3_chany_top_out[18] ;
+ wire \cby_1__1__3_chany_top_out[19] ;
+ wire \cby_1__1__3_chany_top_out[1] ;
+ wire \cby_1__1__3_chany_top_out[2] ;
+ wire \cby_1__1__3_chany_top_out[3] ;
+ wire \cby_1__1__3_chany_top_out[4] ;
+ wire \cby_1__1__3_chany_top_out[5] ;
+ wire \cby_1__1__3_chany_top_out[6] ;
+ wire \cby_1__1__3_chany_top_out[7] ;
+ wire \cby_1__1__3_chany_top_out[8] ;
+ wire \cby_1__1__3_chany_top_out[9] ;
+ wire cby_1__1__3_left_grid_pin_16_;
+ wire cby_1__1__3_left_grid_pin_17_;
+ wire cby_1__1__3_left_grid_pin_18_;
+ wire cby_1__1__3_left_grid_pin_19_;
+ wire cby_1__1__3_left_grid_pin_20_;
+ wire cby_1__1__3_left_grid_pin_21_;
+ wire cby_1__1__3_left_grid_pin_22_;
+ wire cby_1__1__3_left_grid_pin_23_;
+ wire cby_1__1__3_left_grid_pin_24_;
+ wire cby_1__1__3_left_grid_pin_25_;
+ wire cby_1__1__3_left_grid_pin_26_;
+ wire cby_1__1__3_left_grid_pin_27_;
+ wire cby_1__1__3_left_grid_pin_28_;
+ wire cby_1__1__3_left_grid_pin_29_;
+ wire cby_1__1__3_left_grid_pin_30_;
+ wire cby_1__1__3_left_grid_pin_31_;
+ wire cby_1__1__40_ccff_tail;
+ wire \cby_1__1__40_chany_bottom_out[0] ;
+ wire \cby_1__1__40_chany_bottom_out[10] ;
+ wire \cby_1__1__40_chany_bottom_out[11] ;
+ wire \cby_1__1__40_chany_bottom_out[12] ;
+ wire \cby_1__1__40_chany_bottom_out[13] ;
+ wire \cby_1__1__40_chany_bottom_out[14] ;
+ wire \cby_1__1__40_chany_bottom_out[15] ;
+ wire \cby_1__1__40_chany_bottom_out[16] ;
+ wire \cby_1__1__40_chany_bottom_out[17] ;
+ wire \cby_1__1__40_chany_bottom_out[18] ;
+ wire \cby_1__1__40_chany_bottom_out[19] ;
+ wire \cby_1__1__40_chany_bottom_out[1] ;
+ wire \cby_1__1__40_chany_bottom_out[2] ;
+ wire \cby_1__1__40_chany_bottom_out[3] ;
+ wire \cby_1__1__40_chany_bottom_out[4] ;
+ wire \cby_1__1__40_chany_bottom_out[5] ;
+ wire \cby_1__1__40_chany_bottom_out[6] ;
+ wire \cby_1__1__40_chany_bottom_out[7] ;
+ wire \cby_1__1__40_chany_bottom_out[8] ;
+ wire \cby_1__1__40_chany_bottom_out[9] ;
+ wire \cby_1__1__40_chany_top_out[0] ;
+ wire \cby_1__1__40_chany_top_out[10] ;
+ wire \cby_1__1__40_chany_top_out[11] ;
+ wire \cby_1__1__40_chany_top_out[12] ;
+ wire \cby_1__1__40_chany_top_out[13] ;
+ wire \cby_1__1__40_chany_top_out[14] ;
+ wire \cby_1__1__40_chany_top_out[15] ;
+ wire \cby_1__1__40_chany_top_out[16] ;
+ wire \cby_1__1__40_chany_top_out[17] ;
+ wire \cby_1__1__40_chany_top_out[18] ;
+ wire \cby_1__1__40_chany_top_out[19] ;
+ wire \cby_1__1__40_chany_top_out[1] ;
+ wire \cby_1__1__40_chany_top_out[2] ;
+ wire \cby_1__1__40_chany_top_out[3] ;
+ wire \cby_1__1__40_chany_top_out[4] ;
+ wire \cby_1__1__40_chany_top_out[5] ;
+ wire \cby_1__1__40_chany_top_out[6] ;
+ wire \cby_1__1__40_chany_top_out[7] ;
+ wire \cby_1__1__40_chany_top_out[8] ;
+ wire \cby_1__1__40_chany_top_out[9] ;
+ wire cby_1__1__40_left_grid_pin_16_;
+ wire cby_1__1__40_left_grid_pin_17_;
+ wire cby_1__1__40_left_grid_pin_18_;
+ wire cby_1__1__40_left_grid_pin_19_;
+ wire cby_1__1__40_left_grid_pin_20_;
+ wire cby_1__1__40_left_grid_pin_21_;
+ wire cby_1__1__40_left_grid_pin_22_;
+ wire cby_1__1__40_left_grid_pin_23_;
+ wire cby_1__1__40_left_grid_pin_24_;
+ wire cby_1__1__40_left_grid_pin_25_;
+ wire cby_1__1__40_left_grid_pin_26_;
+ wire cby_1__1__40_left_grid_pin_27_;
+ wire cby_1__1__40_left_grid_pin_28_;
+ wire cby_1__1__40_left_grid_pin_29_;
+ wire cby_1__1__40_left_grid_pin_30_;
+ wire cby_1__1__40_left_grid_pin_31_;
+ wire cby_1__1__41_ccff_tail;
+ wire \cby_1__1__41_chany_bottom_out[0] ;
+ wire \cby_1__1__41_chany_bottom_out[10] ;
+ wire \cby_1__1__41_chany_bottom_out[11] ;
+ wire \cby_1__1__41_chany_bottom_out[12] ;
+ wire \cby_1__1__41_chany_bottom_out[13] ;
+ wire \cby_1__1__41_chany_bottom_out[14] ;
+ wire \cby_1__1__41_chany_bottom_out[15] ;
+ wire \cby_1__1__41_chany_bottom_out[16] ;
+ wire \cby_1__1__41_chany_bottom_out[17] ;
+ wire \cby_1__1__41_chany_bottom_out[18] ;
+ wire \cby_1__1__41_chany_bottom_out[19] ;
+ wire \cby_1__1__41_chany_bottom_out[1] ;
+ wire \cby_1__1__41_chany_bottom_out[2] ;
+ wire \cby_1__1__41_chany_bottom_out[3] ;
+ wire \cby_1__1__41_chany_bottom_out[4] ;
+ wire \cby_1__1__41_chany_bottom_out[5] ;
+ wire \cby_1__1__41_chany_bottom_out[6] ;
+ wire \cby_1__1__41_chany_bottom_out[7] ;
+ wire \cby_1__1__41_chany_bottom_out[8] ;
+ wire \cby_1__1__41_chany_bottom_out[9] ;
+ wire \cby_1__1__41_chany_top_out[0] ;
+ wire \cby_1__1__41_chany_top_out[10] ;
+ wire \cby_1__1__41_chany_top_out[11] ;
+ wire \cby_1__1__41_chany_top_out[12] ;
+ wire \cby_1__1__41_chany_top_out[13] ;
+ wire \cby_1__1__41_chany_top_out[14] ;
+ wire \cby_1__1__41_chany_top_out[15] ;
+ wire \cby_1__1__41_chany_top_out[16] ;
+ wire \cby_1__1__41_chany_top_out[17] ;
+ wire \cby_1__1__41_chany_top_out[18] ;
+ wire \cby_1__1__41_chany_top_out[19] ;
+ wire \cby_1__1__41_chany_top_out[1] ;
+ wire \cby_1__1__41_chany_top_out[2] ;
+ wire \cby_1__1__41_chany_top_out[3] ;
+ wire \cby_1__1__41_chany_top_out[4] ;
+ wire \cby_1__1__41_chany_top_out[5] ;
+ wire \cby_1__1__41_chany_top_out[6] ;
+ wire \cby_1__1__41_chany_top_out[7] ;
+ wire \cby_1__1__41_chany_top_out[8] ;
+ wire \cby_1__1__41_chany_top_out[9] ;
+ wire cby_1__1__41_left_grid_pin_16_;
+ wire cby_1__1__41_left_grid_pin_17_;
+ wire cby_1__1__41_left_grid_pin_18_;
+ wire cby_1__1__41_left_grid_pin_19_;
+ wire cby_1__1__41_left_grid_pin_20_;
+ wire cby_1__1__41_left_grid_pin_21_;
+ wire cby_1__1__41_left_grid_pin_22_;
+ wire cby_1__1__41_left_grid_pin_23_;
+ wire cby_1__1__41_left_grid_pin_24_;
+ wire cby_1__1__41_left_grid_pin_25_;
+ wire cby_1__1__41_left_grid_pin_26_;
+ wire cby_1__1__41_left_grid_pin_27_;
+ wire cby_1__1__41_left_grid_pin_28_;
+ wire cby_1__1__41_left_grid_pin_29_;
+ wire cby_1__1__41_left_grid_pin_30_;
+ wire cby_1__1__41_left_grid_pin_31_;
+ wire cby_1__1__42_ccff_tail;
+ wire \cby_1__1__42_chany_bottom_out[0] ;
+ wire \cby_1__1__42_chany_bottom_out[10] ;
+ wire \cby_1__1__42_chany_bottom_out[11] ;
+ wire \cby_1__1__42_chany_bottom_out[12] ;
+ wire \cby_1__1__42_chany_bottom_out[13] ;
+ wire \cby_1__1__42_chany_bottom_out[14] ;
+ wire \cby_1__1__42_chany_bottom_out[15] ;
+ wire \cby_1__1__42_chany_bottom_out[16] ;
+ wire \cby_1__1__42_chany_bottom_out[17] ;
+ wire \cby_1__1__42_chany_bottom_out[18] ;
+ wire \cby_1__1__42_chany_bottom_out[19] ;
+ wire \cby_1__1__42_chany_bottom_out[1] ;
+ wire \cby_1__1__42_chany_bottom_out[2] ;
+ wire \cby_1__1__42_chany_bottom_out[3] ;
+ wire \cby_1__1__42_chany_bottom_out[4] ;
+ wire \cby_1__1__42_chany_bottom_out[5] ;
+ wire \cby_1__1__42_chany_bottom_out[6] ;
+ wire \cby_1__1__42_chany_bottom_out[7] ;
+ wire \cby_1__1__42_chany_bottom_out[8] ;
+ wire \cby_1__1__42_chany_bottom_out[9] ;
+ wire \cby_1__1__42_chany_top_out[0] ;
+ wire \cby_1__1__42_chany_top_out[10] ;
+ wire \cby_1__1__42_chany_top_out[11] ;
+ wire \cby_1__1__42_chany_top_out[12] ;
+ wire \cby_1__1__42_chany_top_out[13] ;
+ wire \cby_1__1__42_chany_top_out[14] ;
+ wire \cby_1__1__42_chany_top_out[15] ;
+ wire \cby_1__1__42_chany_top_out[16] ;
+ wire \cby_1__1__42_chany_top_out[17] ;
+ wire \cby_1__1__42_chany_top_out[18] ;
+ wire \cby_1__1__42_chany_top_out[19] ;
+ wire \cby_1__1__42_chany_top_out[1] ;
+ wire \cby_1__1__42_chany_top_out[2] ;
+ wire \cby_1__1__42_chany_top_out[3] ;
+ wire \cby_1__1__42_chany_top_out[4] ;
+ wire \cby_1__1__42_chany_top_out[5] ;
+ wire \cby_1__1__42_chany_top_out[6] ;
+ wire \cby_1__1__42_chany_top_out[7] ;
+ wire \cby_1__1__42_chany_top_out[8] ;
+ wire \cby_1__1__42_chany_top_out[9] ;
+ wire cby_1__1__42_left_grid_pin_16_;
+ wire cby_1__1__42_left_grid_pin_17_;
+ wire cby_1__1__42_left_grid_pin_18_;
+ wire cby_1__1__42_left_grid_pin_19_;
+ wire cby_1__1__42_left_grid_pin_20_;
+ wire cby_1__1__42_left_grid_pin_21_;
+ wire cby_1__1__42_left_grid_pin_22_;
+ wire cby_1__1__42_left_grid_pin_23_;
+ wire cby_1__1__42_left_grid_pin_24_;
+ wire cby_1__1__42_left_grid_pin_25_;
+ wire cby_1__1__42_left_grid_pin_26_;
+ wire cby_1__1__42_left_grid_pin_27_;
+ wire cby_1__1__42_left_grid_pin_28_;
+ wire cby_1__1__42_left_grid_pin_29_;
+ wire cby_1__1__42_left_grid_pin_30_;
+ wire cby_1__1__42_left_grid_pin_31_;
+ wire cby_1__1__43_ccff_tail;
+ wire \cby_1__1__43_chany_bottom_out[0] ;
+ wire \cby_1__1__43_chany_bottom_out[10] ;
+ wire \cby_1__1__43_chany_bottom_out[11] ;
+ wire \cby_1__1__43_chany_bottom_out[12] ;
+ wire \cby_1__1__43_chany_bottom_out[13] ;
+ wire \cby_1__1__43_chany_bottom_out[14] ;
+ wire \cby_1__1__43_chany_bottom_out[15] ;
+ wire \cby_1__1__43_chany_bottom_out[16] ;
+ wire \cby_1__1__43_chany_bottom_out[17] ;
+ wire \cby_1__1__43_chany_bottom_out[18] ;
+ wire \cby_1__1__43_chany_bottom_out[19] ;
+ wire \cby_1__1__43_chany_bottom_out[1] ;
+ wire \cby_1__1__43_chany_bottom_out[2] ;
+ wire \cby_1__1__43_chany_bottom_out[3] ;
+ wire \cby_1__1__43_chany_bottom_out[4] ;
+ wire \cby_1__1__43_chany_bottom_out[5] ;
+ wire \cby_1__1__43_chany_bottom_out[6] ;
+ wire \cby_1__1__43_chany_bottom_out[7] ;
+ wire \cby_1__1__43_chany_bottom_out[8] ;
+ wire \cby_1__1__43_chany_bottom_out[9] ;
+ wire \cby_1__1__43_chany_top_out[0] ;
+ wire \cby_1__1__43_chany_top_out[10] ;
+ wire \cby_1__1__43_chany_top_out[11] ;
+ wire \cby_1__1__43_chany_top_out[12] ;
+ wire \cby_1__1__43_chany_top_out[13] ;
+ wire \cby_1__1__43_chany_top_out[14] ;
+ wire \cby_1__1__43_chany_top_out[15] ;
+ wire \cby_1__1__43_chany_top_out[16] ;
+ wire \cby_1__1__43_chany_top_out[17] ;
+ wire \cby_1__1__43_chany_top_out[18] ;
+ wire \cby_1__1__43_chany_top_out[19] ;
+ wire \cby_1__1__43_chany_top_out[1] ;
+ wire \cby_1__1__43_chany_top_out[2] ;
+ wire \cby_1__1__43_chany_top_out[3] ;
+ wire \cby_1__1__43_chany_top_out[4] ;
+ wire \cby_1__1__43_chany_top_out[5] ;
+ wire \cby_1__1__43_chany_top_out[6] ;
+ wire \cby_1__1__43_chany_top_out[7] ;
+ wire \cby_1__1__43_chany_top_out[8] ;
+ wire \cby_1__1__43_chany_top_out[9] ;
+ wire cby_1__1__43_left_grid_pin_16_;
+ wire cby_1__1__43_left_grid_pin_17_;
+ wire cby_1__1__43_left_grid_pin_18_;
+ wire cby_1__1__43_left_grid_pin_19_;
+ wire cby_1__1__43_left_grid_pin_20_;
+ wire cby_1__1__43_left_grid_pin_21_;
+ wire cby_1__1__43_left_grid_pin_22_;
+ wire cby_1__1__43_left_grid_pin_23_;
+ wire cby_1__1__43_left_grid_pin_24_;
+ wire cby_1__1__43_left_grid_pin_25_;
+ wire cby_1__1__43_left_grid_pin_26_;
+ wire cby_1__1__43_left_grid_pin_27_;
+ wire cby_1__1__43_left_grid_pin_28_;
+ wire cby_1__1__43_left_grid_pin_29_;
+ wire cby_1__1__43_left_grid_pin_30_;
+ wire cby_1__1__43_left_grid_pin_31_;
+ wire cby_1__1__44_ccff_tail;
+ wire \cby_1__1__44_chany_bottom_out[0] ;
+ wire \cby_1__1__44_chany_bottom_out[10] ;
+ wire \cby_1__1__44_chany_bottom_out[11] ;
+ wire \cby_1__1__44_chany_bottom_out[12] ;
+ wire \cby_1__1__44_chany_bottom_out[13] ;
+ wire \cby_1__1__44_chany_bottom_out[14] ;
+ wire \cby_1__1__44_chany_bottom_out[15] ;
+ wire \cby_1__1__44_chany_bottom_out[16] ;
+ wire \cby_1__1__44_chany_bottom_out[17] ;
+ wire \cby_1__1__44_chany_bottom_out[18] ;
+ wire \cby_1__1__44_chany_bottom_out[19] ;
+ wire \cby_1__1__44_chany_bottom_out[1] ;
+ wire \cby_1__1__44_chany_bottom_out[2] ;
+ wire \cby_1__1__44_chany_bottom_out[3] ;
+ wire \cby_1__1__44_chany_bottom_out[4] ;
+ wire \cby_1__1__44_chany_bottom_out[5] ;
+ wire \cby_1__1__44_chany_bottom_out[6] ;
+ wire \cby_1__1__44_chany_bottom_out[7] ;
+ wire \cby_1__1__44_chany_bottom_out[8] ;
+ wire \cby_1__1__44_chany_bottom_out[9] ;
+ wire \cby_1__1__44_chany_top_out[0] ;
+ wire \cby_1__1__44_chany_top_out[10] ;
+ wire \cby_1__1__44_chany_top_out[11] ;
+ wire \cby_1__1__44_chany_top_out[12] ;
+ wire \cby_1__1__44_chany_top_out[13] ;
+ wire \cby_1__1__44_chany_top_out[14] ;
+ wire \cby_1__1__44_chany_top_out[15] ;
+ wire \cby_1__1__44_chany_top_out[16] ;
+ wire \cby_1__1__44_chany_top_out[17] ;
+ wire \cby_1__1__44_chany_top_out[18] ;
+ wire \cby_1__1__44_chany_top_out[19] ;
+ wire \cby_1__1__44_chany_top_out[1] ;
+ wire \cby_1__1__44_chany_top_out[2] ;
+ wire \cby_1__1__44_chany_top_out[3] ;
+ wire \cby_1__1__44_chany_top_out[4] ;
+ wire \cby_1__1__44_chany_top_out[5] ;
+ wire \cby_1__1__44_chany_top_out[6] ;
+ wire \cby_1__1__44_chany_top_out[7] ;
+ wire \cby_1__1__44_chany_top_out[8] ;
+ wire \cby_1__1__44_chany_top_out[9] ;
+ wire cby_1__1__44_left_grid_pin_16_;
+ wire cby_1__1__44_left_grid_pin_17_;
+ wire cby_1__1__44_left_grid_pin_18_;
+ wire cby_1__1__44_left_grid_pin_19_;
+ wire cby_1__1__44_left_grid_pin_20_;
+ wire cby_1__1__44_left_grid_pin_21_;
+ wire cby_1__1__44_left_grid_pin_22_;
+ wire cby_1__1__44_left_grid_pin_23_;
+ wire cby_1__1__44_left_grid_pin_24_;
+ wire cby_1__1__44_left_grid_pin_25_;
+ wire cby_1__1__44_left_grid_pin_26_;
+ wire cby_1__1__44_left_grid_pin_27_;
+ wire cby_1__1__44_left_grid_pin_28_;
+ wire cby_1__1__44_left_grid_pin_29_;
+ wire cby_1__1__44_left_grid_pin_30_;
+ wire cby_1__1__44_left_grid_pin_31_;
+ wire cby_1__1__45_ccff_tail;
+ wire \cby_1__1__45_chany_bottom_out[0] ;
+ wire \cby_1__1__45_chany_bottom_out[10] ;
+ wire \cby_1__1__45_chany_bottom_out[11] ;
+ wire \cby_1__1__45_chany_bottom_out[12] ;
+ wire \cby_1__1__45_chany_bottom_out[13] ;
+ wire \cby_1__1__45_chany_bottom_out[14] ;
+ wire \cby_1__1__45_chany_bottom_out[15] ;
+ wire \cby_1__1__45_chany_bottom_out[16] ;
+ wire \cby_1__1__45_chany_bottom_out[17] ;
+ wire \cby_1__1__45_chany_bottom_out[18] ;
+ wire \cby_1__1__45_chany_bottom_out[19] ;
+ wire \cby_1__1__45_chany_bottom_out[1] ;
+ wire \cby_1__1__45_chany_bottom_out[2] ;
+ wire \cby_1__1__45_chany_bottom_out[3] ;
+ wire \cby_1__1__45_chany_bottom_out[4] ;
+ wire \cby_1__1__45_chany_bottom_out[5] ;
+ wire \cby_1__1__45_chany_bottom_out[6] ;
+ wire \cby_1__1__45_chany_bottom_out[7] ;
+ wire \cby_1__1__45_chany_bottom_out[8] ;
+ wire \cby_1__1__45_chany_bottom_out[9] ;
+ wire \cby_1__1__45_chany_top_out[0] ;
+ wire \cby_1__1__45_chany_top_out[10] ;
+ wire \cby_1__1__45_chany_top_out[11] ;
+ wire \cby_1__1__45_chany_top_out[12] ;
+ wire \cby_1__1__45_chany_top_out[13] ;
+ wire \cby_1__1__45_chany_top_out[14] ;
+ wire \cby_1__1__45_chany_top_out[15] ;
+ wire \cby_1__1__45_chany_top_out[16] ;
+ wire \cby_1__1__45_chany_top_out[17] ;
+ wire \cby_1__1__45_chany_top_out[18] ;
+ wire \cby_1__1__45_chany_top_out[19] ;
+ wire \cby_1__1__45_chany_top_out[1] ;
+ wire \cby_1__1__45_chany_top_out[2] ;
+ wire \cby_1__1__45_chany_top_out[3] ;
+ wire \cby_1__1__45_chany_top_out[4] ;
+ wire \cby_1__1__45_chany_top_out[5] ;
+ wire \cby_1__1__45_chany_top_out[6] ;
+ wire \cby_1__1__45_chany_top_out[7] ;
+ wire \cby_1__1__45_chany_top_out[8] ;
+ wire \cby_1__1__45_chany_top_out[9] ;
+ wire cby_1__1__45_left_grid_pin_16_;
+ wire cby_1__1__45_left_grid_pin_17_;
+ wire cby_1__1__45_left_grid_pin_18_;
+ wire cby_1__1__45_left_grid_pin_19_;
+ wire cby_1__1__45_left_grid_pin_20_;
+ wire cby_1__1__45_left_grid_pin_21_;
+ wire cby_1__1__45_left_grid_pin_22_;
+ wire cby_1__1__45_left_grid_pin_23_;
+ wire cby_1__1__45_left_grid_pin_24_;
+ wire cby_1__1__45_left_grid_pin_25_;
+ wire cby_1__1__45_left_grid_pin_26_;
+ wire cby_1__1__45_left_grid_pin_27_;
+ wire cby_1__1__45_left_grid_pin_28_;
+ wire cby_1__1__45_left_grid_pin_29_;
+ wire cby_1__1__45_left_grid_pin_30_;
+ wire cby_1__1__45_left_grid_pin_31_;
+ wire cby_1__1__46_ccff_tail;
+ wire \cby_1__1__46_chany_bottom_out[0] ;
+ wire \cby_1__1__46_chany_bottom_out[10] ;
+ wire \cby_1__1__46_chany_bottom_out[11] ;
+ wire \cby_1__1__46_chany_bottom_out[12] ;
+ wire \cby_1__1__46_chany_bottom_out[13] ;
+ wire \cby_1__1__46_chany_bottom_out[14] ;
+ wire \cby_1__1__46_chany_bottom_out[15] ;
+ wire \cby_1__1__46_chany_bottom_out[16] ;
+ wire \cby_1__1__46_chany_bottom_out[17] ;
+ wire \cby_1__1__46_chany_bottom_out[18] ;
+ wire \cby_1__1__46_chany_bottom_out[19] ;
+ wire \cby_1__1__46_chany_bottom_out[1] ;
+ wire \cby_1__1__46_chany_bottom_out[2] ;
+ wire \cby_1__1__46_chany_bottom_out[3] ;
+ wire \cby_1__1__46_chany_bottom_out[4] ;
+ wire \cby_1__1__46_chany_bottom_out[5] ;
+ wire \cby_1__1__46_chany_bottom_out[6] ;
+ wire \cby_1__1__46_chany_bottom_out[7] ;
+ wire \cby_1__1__46_chany_bottom_out[8] ;
+ wire \cby_1__1__46_chany_bottom_out[9] ;
+ wire \cby_1__1__46_chany_top_out[0] ;
+ wire \cby_1__1__46_chany_top_out[10] ;
+ wire \cby_1__1__46_chany_top_out[11] ;
+ wire \cby_1__1__46_chany_top_out[12] ;
+ wire \cby_1__1__46_chany_top_out[13] ;
+ wire \cby_1__1__46_chany_top_out[14] ;
+ wire \cby_1__1__46_chany_top_out[15] ;
+ wire \cby_1__1__46_chany_top_out[16] ;
+ wire \cby_1__1__46_chany_top_out[17] ;
+ wire \cby_1__1__46_chany_top_out[18] ;
+ wire \cby_1__1__46_chany_top_out[19] ;
+ wire \cby_1__1__46_chany_top_out[1] ;
+ wire \cby_1__1__46_chany_top_out[2] ;
+ wire \cby_1__1__46_chany_top_out[3] ;
+ wire \cby_1__1__46_chany_top_out[4] ;
+ wire \cby_1__1__46_chany_top_out[5] ;
+ wire \cby_1__1__46_chany_top_out[6] ;
+ wire \cby_1__1__46_chany_top_out[7] ;
+ wire \cby_1__1__46_chany_top_out[8] ;
+ wire \cby_1__1__46_chany_top_out[9] ;
+ wire cby_1__1__46_left_grid_pin_16_;
+ wire cby_1__1__46_left_grid_pin_17_;
+ wire cby_1__1__46_left_grid_pin_18_;
+ wire cby_1__1__46_left_grid_pin_19_;
+ wire cby_1__1__46_left_grid_pin_20_;
+ wire cby_1__1__46_left_grid_pin_21_;
+ wire cby_1__1__46_left_grid_pin_22_;
+ wire cby_1__1__46_left_grid_pin_23_;
+ wire cby_1__1__46_left_grid_pin_24_;
+ wire cby_1__1__46_left_grid_pin_25_;
+ wire cby_1__1__46_left_grid_pin_26_;
+ wire cby_1__1__46_left_grid_pin_27_;
+ wire cby_1__1__46_left_grid_pin_28_;
+ wire cby_1__1__46_left_grid_pin_29_;
+ wire cby_1__1__46_left_grid_pin_30_;
+ wire cby_1__1__46_left_grid_pin_31_;
+ wire cby_1__1__47_ccff_tail;
+ wire \cby_1__1__47_chany_bottom_out[0] ;
+ wire \cby_1__1__47_chany_bottom_out[10] ;
+ wire \cby_1__1__47_chany_bottom_out[11] ;
+ wire \cby_1__1__47_chany_bottom_out[12] ;
+ wire \cby_1__1__47_chany_bottom_out[13] ;
+ wire \cby_1__1__47_chany_bottom_out[14] ;
+ wire \cby_1__1__47_chany_bottom_out[15] ;
+ wire \cby_1__1__47_chany_bottom_out[16] ;
+ wire \cby_1__1__47_chany_bottom_out[17] ;
+ wire \cby_1__1__47_chany_bottom_out[18] ;
+ wire \cby_1__1__47_chany_bottom_out[19] ;
+ wire \cby_1__1__47_chany_bottom_out[1] ;
+ wire \cby_1__1__47_chany_bottom_out[2] ;
+ wire \cby_1__1__47_chany_bottom_out[3] ;
+ wire \cby_1__1__47_chany_bottom_out[4] ;
+ wire \cby_1__1__47_chany_bottom_out[5] ;
+ wire \cby_1__1__47_chany_bottom_out[6] ;
+ wire \cby_1__1__47_chany_bottom_out[7] ;
+ wire \cby_1__1__47_chany_bottom_out[8] ;
+ wire \cby_1__1__47_chany_bottom_out[9] ;
+ wire \cby_1__1__47_chany_top_out[0] ;
+ wire \cby_1__1__47_chany_top_out[10] ;
+ wire \cby_1__1__47_chany_top_out[11] ;
+ wire \cby_1__1__47_chany_top_out[12] ;
+ wire \cby_1__1__47_chany_top_out[13] ;
+ wire \cby_1__1__47_chany_top_out[14] ;
+ wire \cby_1__1__47_chany_top_out[15] ;
+ wire \cby_1__1__47_chany_top_out[16] ;
+ wire \cby_1__1__47_chany_top_out[17] ;
+ wire \cby_1__1__47_chany_top_out[18] ;
+ wire \cby_1__1__47_chany_top_out[19] ;
+ wire \cby_1__1__47_chany_top_out[1] ;
+ wire \cby_1__1__47_chany_top_out[2] ;
+ wire \cby_1__1__47_chany_top_out[3] ;
+ wire \cby_1__1__47_chany_top_out[4] ;
+ wire \cby_1__1__47_chany_top_out[5] ;
+ wire \cby_1__1__47_chany_top_out[6] ;
+ wire \cby_1__1__47_chany_top_out[7] ;
+ wire \cby_1__1__47_chany_top_out[8] ;
+ wire \cby_1__1__47_chany_top_out[9] ;
+ wire cby_1__1__47_left_grid_pin_16_;
+ wire cby_1__1__47_left_grid_pin_17_;
+ wire cby_1__1__47_left_grid_pin_18_;
+ wire cby_1__1__47_left_grid_pin_19_;
+ wire cby_1__1__47_left_grid_pin_20_;
+ wire cby_1__1__47_left_grid_pin_21_;
+ wire cby_1__1__47_left_grid_pin_22_;
+ wire cby_1__1__47_left_grid_pin_23_;
+ wire cby_1__1__47_left_grid_pin_24_;
+ wire cby_1__1__47_left_grid_pin_25_;
+ wire cby_1__1__47_left_grid_pin_26_;
+ wire cby_1__1__47_left_grid_pin_27_;
+ wire cby_1__1__47_left_grid_pin_28_;
+ wire cby_1__1__47_left_grid_pin_29_;
+ wire cby_1__1__47_left_grid_pin_30_;
+ wire cby_1__1__47_left_grid_pin_31_;
+ wire cby_1__1__48_ccff_tail;
+ wire \cby_1__1__48_chany_bottom_out[0] ;
+ wire \cby_1__1__48_chany_bottom_out[10] ;
+ wire \cby_1__1__48_chany_bottom_out[11] ;
+ wire \cby_1__1__48_chany_bottom_out[12] ;
+ wire \cby_1__1__48_chany_bottom_out[13] ;
+ wire \cby_1__1__48_chany_bottom_out[14] ;
+ wire \cby_1__1__48_chany_bottom_out[15] ;
+ wire \cby_1__1__48_chany_bottom_out[16] ;
+ wire \cby_1__1__48_chany_bottom_out[17] ;
+ wire \cby_1__1__48_chany_bottom_out[18] ;
+ wire \cby_1__1__48_chany_bottom_out[19] ;
+ wire \cby_1__1__48_chany_bottom_out[1] ;
+ wire \cby_1__1__48_chany_bottom_out[2] ;
+ wire \cby_1__1__48_chany_bottom_out[3] ;
+ wire \cby_1__1__48_chany_bottom_out[4] ;
+ wire \cby_1__1__48_chany_bottom_out[5] ;
+ wire \cby_1__1__48_chany_bottom_out[6] ;
+ wire \cby_1__1__48_chany_bottom_out[7] ;
+ wire \cby_1__1__48_chany_bottom_out[8] ;
+ wire \cby_1__1__48_chany_bottom_out[9] ;
+ wire \cby_1__1__48_chany_top_out[0] ;
+ wire \cby_1__1__48_chany_top_out[10] ;
+ wire \cby_1__1__48_chany_top_out[11] ;
+ wire \cby_1__1__48_chany_top_out[12] ;
+ wire \cby_1__1__48_chany_top_out[13] ;
+ wire \cby_1__1__48_chany_top_out[14] ;
+ wire \cby_1__1__48_chany_top_out[15] ;
+ wire \cby_1__1__48_chany_top_out[16] ;
+ wire \cby_1__1__48_chany_top_out[17] ;
+ wire \cby_1__1__48_chany_top_out[18] ;
+ wire \cby_1__1__48_chany_top_out[19] ;
+ wire \cby_1__1__48_chany_top_out[1] ;
+ wire \cby_1__1__48_chany_top_out[2] ;
+ wire \cby_1__1__48_chany_top_out[3] ;
+ wire \cby_1__1__48_chany_top_out[4] ;
+ wire \cby_1__1__48_chany_top_out[5] ;
+ wire \cby_1__1__48_chany_top_out[6] ;
+ wire \cby_1__1__48_chany_top_out[7] ;
+ wire \cby_1__1__48_chany_top_out[8] ;
+ wire \cby_1__1__48_chany_top_out[9] ;
+ wire cby_1__1__48_left_grid_pin_16_;
+ wire cby_1__1__48_left_grid_pin_17_;
+ wire cby_1__1__48_left_grid_pin_18_;
+ wire cby_1__1__48_left_grid_pin_19_;
+ wire cby_1__1__48_left_grid_pin_20_;
+ wire cby_1__1__48_left_grid_pin_21_;
+ wire cby_1__1__48_left_grid_pin_22_;
+ wire cby_1__1__48_left_grid_pin_23_;
+ wire cby_1__1__48_left_grid_pin_24_;
+ wire cby_1__1__48_left_grid_pin_25_;
+ wire cby_1__1__48_left_grid_pin_26_;
+ wire cby_1__1__48_left_grid_pin_27_;
+ wire cby_1__1__48_left_grid_pin_28_;
+ wire cby_1__1__48_left_grid_pin_29_;
+ wire cby_1__1__48_left_grid_pin_30_;
+ wire cby_1__1__48_left_grid_pin_31_;
+ wire cby_1__1__49_ccff_tail;
+ wire \cby_1__1__49_chany_bottom_out[0] ;
+ wire \cby_1__1__49_chany_bottom_out[10] ;
+ wire \cby_1__1__49_chany_bottom_out[11] ;
+ wire \cby_1__1__49_chany_bottom_out[12] ;
+ wire \cby_1__1__49_chany_bottom_out[13] ;
+ wire \cby_1__1__49_chany_bottom_out[14] ;
+ wire \cby_1__1__49_chany_bottom_out[15] ;
+ wire \cby_1__1__49_chany_bottom_out[16] ;
+ wire \cby_1__1__49_chany_bottom_out[17] ;
+ wire \cby_1__1__49_chany_bottom_out[18] ;
+ wire \cby_1__1__49_chany_bottom_out[19] ;
+ wire \cby_1__1__49_chany_bottom_out[1] ;
+ wire \cby_1__1__49_chany_bottom_out[2] ;
+ wire \cby_1__1__49_chany_bottom_out[3] ;
+ wire \cby_1__1__49_chany_bottom_out[4] ;
+ wire \cby_1__1__49_chany_bottom_out[5] ;
+ wire \cby_1__1__49_chany_bottom_out[6] ;
+ wire \cby_1__1__49_chany_bottom_out[7] ;
+ wire \cby_1__1__49_chany_bottom_out[8] ;
+ wire \cby_1__1__49_chany_bottom_out[9] ;
+ wire \cby_1__1__49_chany_top_out[0] ;
+ wire \cby_1__1__49_chany_top_out[10] ;
+ wire \cby_1__1__49_chany_top_out[11] ;
+ wire \cby_1__1__49_chany_top_out[12] ;
+ wire \cby_1__1__49_chany_top_out[13] ;
+ wire \cby_1__1__49_chany_top_out[14] ;
+ wire \cby_1__1__49_chany_top_out[15] ;
+ wire \cby_1__1__49_chany_top_out[16] ;
+ wire \cby_1__1__49_chany_top_out[17] ;
+ wire \cby_1__1__49_chany_top_out[18] ;
+ wire \cby_1__1__49_chany_top_out[19] ;
+ wire \cby_1__1__49_chany_top_out[1] ;
+ wire \cby_1__1__49_chany_top_out[2] ;
+ wire \cby_1__1__49_chany_top_out[3] ;
+ wire \cby_1__1__49_chany_top_out[4] ;
+ wire \cby_1__1__49_chany_top_out[5] ;
+ wire \cby_1__1__49_chany_top_out[6] ;
+ wire \cby_1__1__49_chany_top_out[7] ;
+ wire \cby_1__1__49_chany_top_out[8] ;
+ wire \cby_1__1__49_chany_top_out[9] ;
+ wire cby_1__1__49_left_grid_pin_16_;
+ wire cby_1__1__49_left_grid_pin_17_;
+ wire cby_1__1__49_left_grid_pin_18_;
+ wire cby_1__1__49_left_grid_pin_19_;
+ wire cby_1__1__49_left_grid_pin_20_;
+ wire cby_1__1__49_left_grid_pin_21_;
+ wire cby_1__1__49_left_grid_pin_22_;
+ wire cby_1__1__49_left_grid_pin_23_;
+ wire cby_1__1__49_left_grid_pin_24_;
+ wire cby_1__1__49_left_grid_pin_25_;
+ wire cby_1__1__49_left_grid_pin_26_;
+ wire cby_1__1__49_left_grid_pin_27_;
+ wire cby_1__1__49_left_grid_pin_28_;
+ wire cby_1__1__49_left_grid_pin_29_;
+ wire cby_1__1__49_left_grid_pin_30_;
+ wire cby_1__1__49_left_grid_pin_31_;
+ wire cby_1__1__4_ccff_tail;
+ wire \cby_1__1__4_chany_bottom_out[0] ;
+ wire \cby_1__1__4_chany_bottom_out[10] ;
+ wire \cby_1__1__4_chany_bottom_out[11] ;
+ wire \cby_1__1__4_chany_bottom_out[12] ;
+ wire \cby_1__1__4_chany_bottom_out[13] ;
+ wire \cby_1__1__4_chany_bottom_out[14] ;
+ wire \cby_1__1__4_chany_bottom_out[15] ;
+ wire \cby_1__1__4_chany_bottom_out[16] ;
+ wire \cby_1__1__4_chany_bottom_out[17] ;
+ wire \cby_1__1__4_chany_bottom_out[18] ;
+ wire \cby_1__1__4_chany_bottom_out[19] ;
+ wire \cby_1__1__4_chany_bottom_out[1] ;
+ wire \cby_1__1__4_chany_bottom_out[2] ;
+ wire \cby_1__1__4_chany_bottom_out[3] ;
+ wire \cby_1__1__4_chany_bottom_out[4] ;
+ wire \cby_1__1__4_chany_bottom_out[5] ;
+ wire \cby_1__1__4_chany_bottom_out[6] ;
+ wire \cby_1__1__4_chany_bottom_out[7] ;
+ wire \cby_1__1__4_chany_bottom_out[8] ;
+ wire \cby_1__1__4_chany_bottom_out[9] ;
+ wire \cby_1__1__4_chany_top_out[0] ;
+ wire \cby_1__1__4_chany_top_out[10] ;
+ wire \cby_1__1__4_chany_top_out[11] ;
+ wire \cby_1__1__4_chany_top_out[12] ;
+ wire \cby_1__1__4_chany_top_out[13] ;
+ wire \cby_1__1__4_chany_top_out[14] ;
+ wire \cby_1__1__4_chany_top_out[15] ;
+ wire \cby_1__1__4_chany_top_out[16] ;
+ wire \cby_1__1__4_chany_top_out[17] ;
+ wire \cby_1__1__4_chany_top_out[18] ;
+ wire \cby_1__1__4_chany_top_out[19] ;
+ wire \cby_1__1__4_chany_top_out[1] ;
+ wire \cby_1__1__4_chany_top_out[2] ;
+ wire \cby_1__1__4_chany_top_out[3] ;
+ wire \cby_1__1__4_chany_top_out[4] ;
+ wire \cby_1__1__4_chany_top_out[5] ;
+ wire \cby_1__1__4_chany_top_out[6] ;
+ wire \cby_1__1__4_chany_top_out[7] ;
+ wire \cby_1__1__4_chany_top_out[8] ;
+ wire \cby_1__1__4_chany_top_out[9] ;
+ wire cby_1__1__4_left_grid_pin_16_;
+ wire cby_1__1__4_left_grid_pin_17_;
+ wire cby_1__1__4_left_grid_pin_18_;
+ wire cby_1__1__4_left_grid_pin_19_;
+ wire cby_1__1__4_left_grid_pin_20_;
+ wire cby_1__1__4_left_grid_pin_21_;
+ wire cby_1__1__4_left_grid_pin_22_;
+ wire cby_1__1__4_left_grid_pin_23_;
+ wire cby_1__1__4_left_grid_pin_24_;
+ wire cby_1__1__4_left_grid_pin_25_;
+ wire cby_1__1__4_left_grid_pin_26_;
+ wire cby_1__1__4_left_grid_pin_27_;
+ wire cby_1__1__4_left_grid_pin_28_;
+ wire cby_1__1__4_left_grid_pin_29_;
+ wire cby_1__1__4_left_grid_pin_30_;
+ wire cby_1__1__4_left_grid_pin_31_;
+ wire cby_1__1__50_ccff_tail;
+ wire \cby_1__1__50_chany_bottom_out[0] ;
+ wire \cby_1__1__50_chany_bottom_out[10] ;
+ wire \cby_1__1__50_chany_bottom_out[11] ;
+ wire \cby_1__1__50_chany_bottom_out[12] ;
+ wire \cby_1__1__50_chany_bottom_out[13] ;
+ wire \cby_1__1__50_chany_bottom_out[14] ;
+ wire \cby_1__1__50_chany_bottom_out[15] ;
+ wire \cby_1__1__50_chany_bottom_out[16] ;
+ wire \cby_1__1__50_chany_bottom_out[17] ;
+ wire \cby_1__1__50_chany_bottom_out[18] ;
+ wire \cby_1__1__50_chany_bottom_out[19] ;
+ wire \cby_1__1__50_chany_bottom_out[1] ;
+ wire \cby_1__1__50_chany_bottom_out[2] ;
+ wire \cby_1__1__50_chany_bottom_out[3] ;
+ wire \cby_1__1__50_chany_bottom_out[4] ;
+ wire \cby_1__1__50_chany_bottom_out[5] ;
+ wire \cby_1__1__50_chany_bottom_out[6] ;
+ wire \cby_1__1__50_chany_bottom_out[7] ;
+ wire \cby_1__1__50_chany_bottom_out[8] ;
+ wire \cby_1__1__50_chany_bottom_out[9] ;
+ wire \cby_1__1__50_chany_top_out[0] ;
+ wire \cby_1__1__50_chany_top_out[10] ;
+ wire \cby_1__1__50_chany_top_out[11] ;
+ wire \cby_1__1__50_chany_top_out[12] ;
+ wire \cby_1__1__50_chany_top_out[13] ;
+ wire \cby_1__1__50_chany_top_out[14] ;
+ wire \cby_1__1__50_chany_top_out[15] ;
+ wire \cby_1__1__50_chany_top_out[16] ;
+ wire \cby_1__1__50_chany_top_out[17] ;
+ wire \cby_1__1__50_chany_top_out[18] ;
+ wire \cby_1__1__50_chany_top_out[19] ;
+ wire \cby_1__1__50_chany_top_out[1] ;
+ wire \cby_1__1__50_chany_top_out[2] ;
+ wire \cby_1__1__50_chany_top_out[3] ;
+ wire \cby_1__1__50_chany_top_out[4] ;
+ wire \cby_1__1__50_chany_top_out[5] ;
+ wire \cby_1__1__50_chany_top_out[6] ;
+ wire \cby_1__1__50_chany_top_out[7] ;
+ wire \cby_1__1__50_chany_top_out[8] ;
+ wire \cby_1__1__50_chany_top_out[9] ;
+ wire cby_1__1__50_left_grid_pin_16_;
+ wire cby_1__1__50_left_grid_pin_17_;
+ wire cby_1__1__50_left_grid_pin_18_;
+ wire cby_1__1__50_left_grid_pin_19_;
+ wire cby_1__1__50_left_grid_pin_20_;
+ wire cby_1__1__50_left_grid_pin_21_;
+ wire cby_1__1__50_left_grid_pin_22_;
+ wire cby_1__1__50_left_grid_pin_23_;
+ wire cby_1__1__50_left_grid_pin_24_;
+ wire cby_1__1__50_left_grid_pin_25_;
+ wire cby_1__1__50_left_grid_pin_26_;
+ wire cby_1__1__50_left_grid_pin_27_;
+ wire cby_1__1__50_left_grid_pin_28_;
+ wire cby_1__1__50_left_grid_pin_29_;
+ wire cby_1__1__50_left_grid_pin_30_;
+ wire cby_1__1__50_left_grid_pin_31_;
+ wire cby_1__1__51_ccff_tail;
+ wire \cby_1__1__51_chany_bottom_out[0] ;
+ wire \cby_1__1__51_chany_bottom_out[10] ;
+ wire \cby_1__1__51_chany_bottom_out[11] ;
+ wire \cby_1__1__51_chany_bottom_out[12] ;
+ wire \cby_1__1__51_chany_bottom_out[13] ;
+ wire \cby_1__1__51_chany_bottom_out[14] ;
+ wire \cby_1__1__51_chany_bottom_out[15] ;
+ wire \cby_1__1__51_chany_bottom_out[16] ;
+ wire \cby_1__1__51_chany_bottom_out[17] ;
+ wire \cby_1__1__51_chany_bottom_out[18] ;
+ wire \cby_1__1__51_chany_bottom_out[19] ;
+ wire \cby_1__1__51_chany_bottom_out[1] ;
+ wire \cby_1__1__51_chany_bottom_out[2] ;
+ wire \cby_1__1__51_chany_bottom_out[3] ;
+ wire \cby_1__1__51_chany_bottom_out[4] ;
+ wire \cby_1__1__51_chany_bottom_out[5] ;
+ wire \cby_1__1__51_chany_bottom_out[6] ;
+ wire \cby_1__1__51_chany_bottom_out[7] ;
+ wire \cby_1__1__51_chany_bottom_out[8] ;
+ wire \cby_1__1__51_chany_bottom_out[9] ;
+ wire \cby_1__1__51_chany_top_out[0] ;
+ wire \cby_1__1__51_chany_top_out[10] ;
+ wire \cby_1__1__51_chany_top_out[11] ;
+ wire \cby_1__1__51_chany_top_out[12] ;
+ wire \cby_1__1__51_chany_top_out[13] ;
+ wire \cby_1__1__51_chany_top_out[14] ;
+ wire \cby_1__1__51_chany_top_out[15] ;
+ wire \cby_1__1__51_chany_top_out[16] ;
+ wire \cby_1__1__51_chany_top_out[17] ;
+ wire \cby_1__1__51_chany_top_out[18] ;
+ wire \cby_1__1__51_chany_top_out[19] ;
+ wire \cby_1__1__51_chany_top_out[1] ;
+ wire \cby_1__1__51_chany_top_out[2] ;
+ wire \cby_1__1__51_chany_top_out[3] ;
+ wire \cby_1__1__51_chany_top_out[4] ;
+ wire \cby_1__1__51_chany_top_out[5] ;
+ wire \cby_1__1__51_chany_top_out[6] ;
+ wire \cby_1__1__51_chany_top_out[7] ;
+ wire \cby_1__1__51_chany_top_out[8] ;
+ wire \cby_1__1__51_chany_top_out[9] ;
+ wire cby_1__1__51_left_grid_pin_16_;
+ wire cby_1__1__51_left_grid_pin_17_;
+ wire cby_1__1__51_left_grid_pin_18_;
+ wire cby_1__1__51_left_grid_pin_19_;
+ wire cby_1__1__51_left_grid_pin_20_;
+ wire cby_1__1__51_left_grid_pin_21_;
+ wire cby_1__1__51_left_grid_pin_22_;
+ wire cby_1__1__51_left_grid_pin_23_;
+ wire cby_1__1__51_left_grid_pin_24_;
+ wire cby_1__1__51_left_grid_pin_25_;
+ wire cby_1__1__51_left_grid_pin_26_;
+ wire cby_1__1__51_left_grid_pin_27_;
+ wire cby_1__1__51_left_grid_pin_28_;
+ wire cby_1__1__51_left_grid_pin_29_;
+ wire cby_1__1__51_left_grid_pin_30_;
+ wire cby_1__1__51_left_grid_pin_31_;
+ wire cby_1__1__52_ccff_tail;
+ wire \cby_1__1__52_chany_bottom_out[0] ;
+ wire \cby_1__1__52_chany_bottom_out[10] ;
+ wire \cby_1__1__52_chany_bottom_out[11] ;
+ wire \cby_1__1__52_chany_bottom_out[12] ;
+ wire \cby_1__1__52_chany_bottom_out[13] ;
+ wire \cby_1__1__52_chany_bottom_out[14] ;
+ wire \cby_1__1__52_chany_bottom_out[15] ;
+ wire \cby_1__1__52_chany_bottom_out[16] ;
+ wire \cby_1__1__52_chany_bottom_out[17] ;
+ wire \cby_1__1__52_chany_bottom_out[18] ;
+ wire \cby_1__1__52_chany_bottom_out[19] ;
+ wire \cby_1__1__52_chany_bottom_out[1] ;
+ wire \cby_1__1__52_chany_bottom_out[2] ;
+ wire \cby_1__1__52_chany_bottom_out[3] ;
+ wire \cby_1__1__52_chany_bottom_out[4] ;
+ wire \cby_1__1__52_chany_bottom_out[5] ;
+ wire \cby_1__1__52_chany_bottom_out[6] ;
+ wire \cby_1__1__52_chany_bottom_out[7] ;
+ wire \cby_1__1__52_chany_bottom_out[8] ;
+ wire \cby_1__1__52_chany_bottom_out[9] ;
+ wire \cby_1__1__52_chany_top_out[0] ;
+ wire \cby_1__1__52_chany_top_out[10] ;
+ wire \cby_1__1__52_chany_top_out[11] ;
+ wire \cby_1__1__52_chany_top_out[12] ;
+ wire \cby_1__1__52_chany_top_out[13] ;
+ wire \cby_1__1__52_chany_top_out[14] ;
+ wire \cby_1__1__52_chany_top_out[15] ;
+ wire \cby_1__1__52_chany_top_out[16] ;
+ wire \cby_1__1__52_chany_top_out[17] ;
+ wire \cby_1__1__52_chany_top_out[18] ;
+ wire \cby_1__1__52_chany_top_out[19] ;
+ wire \cby_1__1__52_chany_top_out[1] ;
+ wire \cby_1__1__52_chany_top_out[2] ;
+ wire \cby_1__1__52_chany_top_out[3] ;
+ wire \cby_1__1__52_chany_top_out[4] ;
+ wire \cby_1__1__52_chany_top_out[5] ;
+ wire \cby_1__1__52_chany_top_out[6] ;
+ wire \cby_1__1__52_chany_top_out[7] ;
+ wire \cby_1__1__52_chany_top_out[8] ;
+ wire \cby_1__1__52_chany_top_out[9] ;
+ wire cby_1__1__52_left_grid_pin_16_;
+ wire cby_1__1__52_left_grid_pin_17_;
+ wire cby_1__1__52_left_grid_pin_18_;
+ wire cby_1__1__52_left_grid_pin_19_;
+ wire cby_1__1__52_left_grid_pin_20_;
+ wire cby_1__1__52_left_grid_pin_21_;
+ wire cby_1__1__52_left_grid_pin_22_;
+ wire cby_1__1__52_left_grid_pin_23_;
+ wire cby_1__1__52_left_grid_pin_24_;
+ wire cby_1__1__52_left_grid_pin_25_;
+ wire cby_1__1__52_left_grid_pin_26_;
+ wire cby_1__1__52_left_grid_pin_27_;
+ wire cby_1__1__52_left_grid_pin_28_;
+ wire cby_1__1__52_left_grid_pin_29_;
+ wire cby_1__1__52_left_grid_pin_30_;
+ wire cby_1__1__52_left_grid_pin_31_;
+ wire cby_1__1__53_ccff_tail;
+ wire \cby_1__1__53_chany_bottom_out[0] ;
+ wire \cby_1__1__53_chany_bottom_out[10] ;
+ wire \cby_1__1__53_chany_bottom_out[11] ;
+ wire \cby_1__1__53_chany_bottom_out[12] ;
+ wire \cby_1__1__53_chany_bottom_out[13] ;
+ wire \cby_1__1__53_chany_bottom_out[14] ;
+ wire \cby_1__1__53_chany_bottom_out[15] ;
+ wire \cby_1__1__53_chany_bottom_out[16] ;
+ wire \cby_1__1__53_chany_bottom_out[17] ;
+ wire \cby_1__1__53_chany_bottom_out[18] ;
+ wire \cby_1__1__53_chany_bottom_out[19] ;
+ wire \cby_1__1__53_chany_bottom_out[1] ;
+ wire \cby_1__1__53_chany_bottom_out[2] ;
+ wire \cby_1__1__53_chany_bottom_out[3] ;
+ wire \cby_1__1__53_chany_bottom_out[4] ;
+ wire \cby_1__1__53_chany_bottom_out[5] ;
+ wire \cby_1__1__53_chany_bottom_out[6] ;
+ wire \cby_1__1__53_chany_bottom_out[7] ;
+ wire \cby_1__1__53_chany_bottom_out[8] ;
+ wire \cby_1__1__53_chany_bottom_out[9] ;
+ wire \cby_1__1__53_chany_top_out[0] ;
+ wire \cby_1__1__53_chany_top_out[10] ;
+ wire \cby_1__1__53_chany_top_out[11] ;
+ wire \cby_1__1__53_chany_top_out[12] ;
+ wire \cby_1__1__53_chany_top_out[13] ;
+ wire \cby_1__1__53_chany_top_out[14] ;
+ wire \cby_1__1__53_chany_top_out[15] ;
+ wire \cby_1__1__53_chany_top_out[16] ;
+ wire \cby_1__1__53_chany_top_out[17] ;
+ wire \cby_1__1__53_chany_top_out[18] ;
+ wire \cby_1__1__53_chany_top_out[19] ;
+ wire \cby_1__1__53_chany_top_out[1] ;
+ wire \cby_1__1__53_chany_top_out[2] ;
+ wire \cby_1__1__53_chany_top_out[3] ;
+ wire \cby_1__1__53_chany_top_out[4] ;
+ wire \cby_1__1__53_chany_top_out[5] ;
+ wire \cby_1__1__53_chany_top_out[6] ;
+ wire \cby_1__1__53_chany_top_out[7] ;
+ wire \cby_1__1__53_chany_top_out[8] ;
+ wire \cby_1__1__53_chany_top_out[9] ;
+ wire cby_1__1__53_left_grid_pin_16_;
+ wire cby_1__1__53_left_grid_pin_17_;
+ wire cby_1__1__53_left_grid_pin_18_;
+ wire cby_1__1__53_left_grid_pin_19_;
+ wire cby_1__1__53_left_grid_pin_20_;
+ wire cby_1__1__53_left_grid_pin_21_;
+ wire cby_1__1__53_left_grid_pin_22_;
+ wire cby_1__1__53_left_grid_pin_23_;
+ wire cby_1__1__53_left_grid_pin_24_;
+ wire cby_1__1__53_left_grid_pin_25_;
+ wire cby_1__1__53_left_grid_pin_26_;
+ wire cby_1__1__53_left_grid_pin_27_;
+ wire cby_1__1__53_left_grid_pin_28_;
+ wire cby_1__1__53_left_grid_pin_29_;
+ wire cby_1__1__53_left_grid_pin_30_;
+ wire cby_1__1__53_left_grid_pin_31_;
+ wire cby_1__1__54_ccff_tail;
+ wire \cby_1__1__54_chany_bottom_out[0] ;
+ wire \cby_1__1__54_chany_bottom_out[10] ;
+ wire \cby_1__1__54_chany_bottom_out[11] ;
+ wire \cby_1__1__54_chany_bottom_out[12] ;
+ wire \cby_1__1__54_chany_bottom_out[13] ;
+ wire \cby_1__1__54_chany_bottom_out[14] ;
+ wire \cby_1__1__54_chany_bottom_out[15] ;
+ wire \cby_1__1__54_chany_bottom_out[16] ;
+ wire \cby_1__1__54_chany_bottom_out[17] ;
+ wire \cby_1__1__54_chany_bottom_out[18] ;
+ wire \cby_1__1__54_chany_bottom_out[19] ;
+ wire \cby_1__1__54_chany_bottom_out[1] ;
+ wire \cby_1__1__54_chany_bottom_out[2] ;
+ wire \cby_1__1__54_chany_bottom_out[3] ;
+ wire \cby_1__1__54_chany_bottom_out[4] ;
+ wire \cby_1__1__54_chany_bottom_out[5] ;
+ wire \cby_1__1__54_chany_bottom_out[6] ;
+ wire \cby_1__1__54_chany_bottom_out[7] ;
+ wire \cby_1__1__54_chany_bottom_out[8] ;
+ wire \cby_1__1__54_chany_bottom_out[9] ;
+ wire \cby_1__1__54_chany_top_out[0] ;
+ wire \cby_1__1__54_chany_top_out[10] ;
+ wire \cby_1__1__54_chany_top_out[11] ;
+ wire \cby_1__1__54_chany_top_out[12] ;
+ wire \cby_1__1__54_chany_top_out[13] ;
+ wire \cby_1__1__54_chany_top_out[14] ;
+ wire \cby_1__1__54_chany_top_out[15] ;
+ wire \cby_1__1__54_chany_top_out[16] ;
+ wire \cby_1__1__54_chany_top_out[17] ;
+ wire \cby_1__1__54_chany_top_out[18] ;
+ wire \cby_1__1__54_chany_top_out[19] ;
+ wire \cby_1__1__54_chany_top_out[1] ;
+ wire \cby_1__1__54_chany_top_out[2] ;
+ wire \cby_1__1__54_chany_top_out[3] ;
+ wire \cby_1__1__54_chany_top_out[4] ;
+ wire \cby_1__1__54_chany_top_out[5] ;
+ wire \cby_1__1__54_chany_top_out[6] ;
+ wire \cby_1__1__54_chany_top_out[7] ;
+ wire \cby_1__1__54_chany_top_out[8] ;
+ wire \cby_1__1__54_chany_top_out[9] ;
+ wire cby_1__1__54_left_grid_pin_16_;
+ wire cby_1__1__54_left_grid_pin_17_;
+ wire cby_1__1__54_left_grid_pin_18_;
+ wire cby_1__1__54_left_grid_pin_19_;
+ wire cby_1__1__54_left_grid_pin_20_;
+ wire cby_1__1__54_left_grid_pin_21_;
+ wire cby_1__1__54_left_grid_pin_22_;
+ wire cby_1__1__54_left_grid_pin_23_;
+ wire cby_1__1__54_left_grid_pin_24_;
+ wire cby_1__1__54_left_grid_pin_25_;
+ wire cby_1__1__54_left_grid_pin_26_;
+ wire cby_1__1__54_left_grid_pin_27_;
+ wire cby_1__1__54_left_grid_pin_28_;
+ wire cby_1__1__54_left_grid_pin_29_;
+ wire cby_1__1__54_left_grid_pin_30_;
+ wire cby_1__1__54_left_grid_pin_31_;
+ wire cby_1__1__55_ccff_tail;
+ wire \cby_1__1__55_chany_bottom_out[0] ;
+ wire \cby_1__1__55_chany_bottom_out[10] ;
+ wire \cby_1__1__55_chany_bottom_out[11] ;
+ wire \cby_1__1__55_chany_bottom_out[12] ;
+ wire \cby_1__1__55_chany_bottom_out[13] ;
+ wire \cby_1__1__55_chany_bottom_out[14] ;
+ wire \cby_1__1__55_chany_bottom_out[15] ;
+ wire \cby_1__1__55_chany_bottom_out[16] ;
+ wire \cby_1__1__55_chany_bottom_out[17] ;
+ wire \cby_1__1__55_chany_bottom_out[18] ;
+ wire \cby_1__1__55_chany_bottom_out[19] ;
+ wire \cby_1__1__55_chany_bottom_out[1] ;
+ wire \cby_1__1__55_chany_bottom_out[2] ;
+ wire \cby_1__1__55_chany_bottom_out[3] ;
+ wire \cby_1__1__55_chany_bottom_out[4] ;
+ wire \cby_1__1__55_chany_bottom_out[5] ;
+ wire \cby_1__1__55_chany_bottom_out[6] ;
+ wire \cby_1__1__55_chany_bottom_out[7] ;
+ wire \cby_1__1__55_chany_bottom_out[8] ;
+ wire \cby_1__1__55_chany_bottom_out[9] ;
+ wire \cby_1__1__55_chany_top_out[0] ;
+ wire \cby_1__1__55_chany_top_out[10] ;
+ wire \cby_1__1__55_chany_top_out[11] ;
+ wire \cby_1__1__55_chany_top_out[12] ;
+ wire \cby_1__1__55_chany_top_out[13] ;
+ wire \cby_1__1__55_chany_top_out[14] ;
+ wire \cby_1__1__55_chany_top_out[15] ;
+ wire \cby_1__1__55_chany_top_out[16] ;
+ wire \cby_1__1__55_chany_top_out[17] ;
+ wire \cby_1__1__55_chany_top_out[18] ;
+ wire \cby_1__1__55_chany_top_out[19] ;
+ wire \cby_1__1__55_chany_top_out[1] ;
+ wire \cby_1__1__55_chany_top_out[2] ;
+ wire \cby_1__1__55_chany_top_out[3] ;
+ wire \cby_1__1__55_chany_top_out[4] ;
+ wire \cby_1__1__55_chany_top_out[5] ;
+ wire \cby_1__1__55_chany_top_out[6] ;
+ wire \cby_1__1__55_chany_top_out[7] ;
+ wire \cby_1__1__55_chany_top_out[8] ;
+ wire \cby_1__1__55_chany_top_out[9] ;
+ wire cby_1__1__55_left_grid_pin_16_;
+ wire cby_1__1__55_left_grid_pin_17_;
+ wire cby_1__1__55_left_grid_pin_18_;
+ wire cby_1__1__55_left_grid_pin_19_;
+ wire cby_1__1__55_left_grid_pin_20_;
+ wire cby_1__1__55_left_grid_pin_21_;
+ wire cby_1__1__55_left_grid_pin_22_;
+ wire cby_1__1__55_left_grid_pin_23_;
+ wire cby_1__1__55_left_grid_pin_24_;
+ wire cby_1__1__55_left_grid_pin_25_;
+ wire cby_1__1__55_left_grid_pin_26_;
+ wire cby_1__1__55_left_grid_pin_27_;
+ wire cby_1__1__55_left_grid_pin_28_;
+ wire cby_1__1__55_left_grid_pin_29_;
+ wire cby_1__1__55_left_grid_pin_30_;
+ wire cby_1__1__55_left_grid_pin_31_;
+ wire cby_1__1__5_ccff_tail;
+ wire \cby_1__1__5_chany_bottom_out[0] ;
+ wire \cby_1__1__5_chany_bottom_out[10] ;
+ wire \cby_1__1__5_chany_bottom_out[11] ;
+ wire \cby_1__1__5_chany_bottom_out[12] ;
+ wire \cby_1__1__5_chany_bottom_out[13] ;
+ wire \cby_1__1__5_chany_bottom_out[14] ;
+ wire \cby_1__1__5_chany_bottom_out[15] ;
+ wire \cby_1__1__5_chany_bottom_out[16] ;
+ wire \cby_1__1__5_chany_bottom_out[17] ;
+ wire \cby_1__1__5_chany_bottom_out[18] ;
+ wire \cby_1__1__5_chany_bottom_out[19] ;
+ wire \cby_1__1__5_chany_bottom_out[1] ;
+ wire \cby_1__1__5_chany_bottom_out[2] ;
+ wire \cby_1__1__5_chany_bottom_out[3] ;
+ wire \cby_1__1__5_chany_bottom_out[4] ;
+ wire \cby_1__1__5_chany_bottom_out[5] ;
+ wire \cby_1__1__5_chany_bottom_out[6] ;
+ wire \cby_1__1__5_chany_bottom_out[7] ;
+ wire \cby_1__1__5_chany_bottom_out[8] ;
+ wire \cby_1__1__5_chany_bottom_out[9] ;
+ wire \cby_1__1__5_chany_top_out[0] ;
+ wire \cby_1__1__5_chany_top_out[10] ;
+ wire \cby_1__1__5_chany_top_out[11] ;
+ wire \cby_1__1__5_chany_top_out[12] ;
+ wire \cby_1__1__5_chany_top_out[13] ;
+ wire \cby_1__1__5_chany_top_out[14] ;
+ wire \cby_1__1__5_chany_top_out[15] ;
+ wire \cby_1__1__5_chany_top_out[16] ;
+ wire \cby_1__1__5_chany_top_out[17] ;
+ wire \cby_1__1__5_chany_top_out[18] ;
+ wire \cby_1__1__5_chany_top_out[19] ;
+ wire \cby_1__1__5_chany_top_out[1] ;
+ wire \cby_1__1__5_chany_top_out[2] ;
+ wire \cby_1__1__5_chany_top_out[3] ;
+ wire \cby_1__1__5_chany_top_out[4] ;
+ wire \cby_1__1__5_chany_top_out[5] ;
+ wire \cby_1__1__5_chany_top_out[6] ;
+ wire \cby_1__1__5_chany_top_out[7] ;
+ wire \cby_1__1__5_chany_top_out[8] ;
+ wire \cby_1__1__5_chany_top_out[9] ;
+ wire cby_1__1__5_left_grid_pin_16_;
+ wire cby_1__1__5_left_grid_pin_17_;
+ wire cby_1__1__5_left_grid_pin_18_;
+ wire cby_1__1__5_left_grid_pin_19_;
+ wire cby_1__1__5_left_grid_pin_20_;
+ wire cby_1__1__5_left_grid_pin_21_;
+ wire cby_1__1__5_left_grid_pin_22_;
+ wire cby_1__1__5_left_grid_pin_23_;
+ wire cby_1__1__5_left_grid_pin_24_;
+ wire cby_1__1__5_left_grid_pin_25_;
+ wire cby_1__1__5_left_grid_pin_26_;
+ wire cby_1__1__5_left_grid_pin_27_;
+ wire cby_1__1__5_left_grid_pin_28_;
+ wire cby_1__1__5_left_grid_pin_29_;
+ wire cby_1__1__5_left_grid_pin_30_;
+ wire cby_1__1__5_left_grid_pin_31_;
+ wire cby_1__1__6_ccff_tail;
+ wire \cby_1__1__6_chany_bottom_out[0] ;
+ wire \cby_1__1__6_chany_bottom_out[10] ;
+ wire \cby_1__1__6_chany_bottom_out[11] ;
+ wire \cby_1__1__6_chany_bottom_out[12] ;
+ wire \cby_1__1__6_chany_bottom_out[13] ;
+ wire \cby_1__1__6_chany_bottom_out[14] ;
+ wire \cby_1__1__6_chany_bottom_out[15] ;
+ wire \cby_1__1__6_chany_bottom_out[16] ;
+ wire \cby_1__1__6_chany_bottom_out[17] ;
+ wire \cby_1__1__6_chany_bottom_out[18] ;
+ wire \cby_1__1__6_chany_bottom_out[19] ;
+ wire \cby_1__1__6_chany_bottom_out[1] ;
+ wire \cby_1__1__6_chany_bottom_out[2] ;
+ wire \cby_1__1__6_chany_bottom_out[3] ;
+ wire \cby_1__1__6_chany_bottom_out[4] ;
+ wire \cby_1__1__6_chany_bottom_out[5] ;
+ wire \cby_1__1__6_chany_bottom_out[6] ;
+ wire \cby_1__1__6_chany_bottom_out[7] ;
+ wire \cby_1__1__6_chany_bottom_out[8] ;
+ wire \cby_1__1__6_chany_bottom_out[9] ;
+ wire \cby_1__1__6_chany_top_out[0] ;
+ wire \cby_1__1__6_chany_top_out[10] ;
+ wire \cby_1__1__6_chany_top_out[11] ;
+ wire \cby_1__1__6_chany_top_out[12] ;
+ wire \cby_1__1__6_chany_top_out[13] ;
+ wire \cby_1__1__6_chany_top_out[14] ;
+ wire \cby_1__1__6_chany_top_out[15] ;
+ wire \cby_1__1__6_chany_top_out[16] ;
+ wire \cby_1__1__6_chany_top_out[17] ;
+ wire \cby_1__1__6_chany_top_out[18] ;
+ wire \cby_1__1__6_chany_top_out[19] ;
+ wire \cby_1__1__6_chany_top_out[1] ;
+ wire \cby_1__1__6_chany_top_out[2] ;
+ wire \cby_1__1__6_chany_top_out[3] ;
+ wire \cby_1__1__6_chany_top_out[4] ;
+ wire \cby_1__1__6_chany_top_out[5] ;
+ wire \cby_1__1__6_chany_top_out[6] ;
+ wire \cby_1__1__6_chany_top_out[7] ;
+ wire \cby_1__1__6_chany_top_out[8] ;
+ wire \cby_1__1__6_chany_top_out[9] ;
+ wire cby_1__1__6_left_grid_pin_16_;
+ wire cby_1__1__6_left_grid_pin_17_;
+ wire cby_1__1__6_left_grid_pin_18_;
+ wire cby_1__1__6_left_grid_pin_19_;
+ wire cby_1__1__6_left_grid_pin_20_;
+ wire cby_1__1__6_left_grid_pin_21_;
+ wire cby_1__1__6_left_grid_pin_22_;
+ wire cby_1__1__6_left_grid_pin_23_;
+ wire cby_1__1__6_left_grid_pin_24_;
+ wire cby_1__1__6_left_grid_pin_25_;
+ wire cby_1__1__6_left_grid_pin_26_;
+ wire cby_1__1__6_left_grid_pin_27_;
+ wire cby_1__1__6_left_grid_pin_28_;
+ wire cby_1__1__6_left_grid_pin_29_;
+ wire cby_1__1__6_left_grid_pin_30_;
+ wire cby_1__1__6_left_grid_pin_31_;
+ wire cby_1__1__7_ccff_tail;
+ wire \cby_1__1__7_chany_bottom_out[0] ;
+ wire \cby_1__1__7_chany_bottom_out[10] ;
+ wire \cby_1__1__7_chany_bottom_out[11] ;
+ wire \cby_1__1__7_chany_bottom_out[12] ;
+ wire \cby_1__1__7_chany_bottom_out[13] ;
+ wire \cby_1__1__7_chany_bottom_out[14] ;
+ wire \cby_1__1__7_chany_bottom_out[15] ;
+ wire \cby_1__1__7_chany_bottom_out[16] ;
+ wire \cby_1__1__7_chany_bottom_out[17] ;
+ wire \cby_1__1__7_chany_bottom_out[18] ;
+ wire \cby_1__1__7_chany_bottom_out[19] ;
+ wire \cby_1__1__7_chany_bottom_out[1] ;
+ wire \cby_1__1__7_chany_bottom_out[2] ;
+ wire \cby_1__1__7_chany_bottom_out[3] ;
+ wire \cby_1__1__7_chany_bottom_out[4] ;
+ wire \cby_1__1__7_chany_bottom_out[5] ;
+ wire \cby_1__1__7_chany_bottom_out[6] ;
+ wire \cby_1__1__7_chany_bottom_out[7] ;
+ wire \cby_1__1__7_chany_bottom_out[8] ;
+ wire \cby_1__1__7_chany_bottom_out[9] ;
+ wire \cby_1__1__7_chany_top_out[0] ;
+ wire \cby_1__1__7_chany_top_out[10] ;
+ wire \cby_1__1__7_chany_top_out[11] ;
+ wire \cby_1__1__7_chany_top_out[12] ;
+ wire \cby_1__1__7_chany_top_out[13] ;
+ wire \cby_1__1__7_chany_top_out[14] ;
+ wire \cby_1__1__7_chany_top_out[15] ;
+ wire \cby_1__1__7_chany_top_out[16] ;
+ wire \cby_1__1__7_chany_top_out[17] ;
+ wire \cby_1__1__7_chany_top_out[18] ;
+ wire \cby_1__1__7_chany_top_out[19] ;
+ wire \cby_1__1__7_chany_top_out[1] ;
+ wire \cby_1__1__7_chany_top_out[2] ;
+ wire \cby_1__1__7_chany_top_out[3] ;
+ wire \cby_1__1__7_chany_top_out[4] ;
+ wire \cby_1__1__7_chany_top_out[5] ;
+ wire \cby_1__1__7_chany_top_out[6] ;
+ wire \cby_1__1__7_chany_top_out[7] ;
+ wire \cby_1__1__7_chany_top_out[8] ;
+ wire \cby_1__1__7_chany_top_out[9] ;
+ wire cby_1__1__7_left_grid_pin_16_;
+ wire cby_1__1__7_left_grid_pin_17_;
+ wire cby_1__1__7_left_grid_pin_18_;
+ wire cby_1__1__7_left_grid_pin_19_;
+ wire cby_1__1__7_left_grid_pin_20_;
+ wire cby_1__1__7_left_grid_pin_21_;
+ wire cby_1__1__7_left_grid_pin_22_;
+ wire cby_1__1__7_left_grid_pin_23_;
+ wire cby_1__1__7_left_grid_pin_24_;
+ wire cby_1__1__7_left_grid_pin_25_;
+ wire cby_1__1__7_left_grid_pin_26_;
+ wire cby_1__1__7_left_grid_pin_27_;
+ wire cby_1__1__7_left_grid_pin_28_;
+ wire cby_1__1__7_left_grid_pin_29_;
+ wire cby_1__1__7_left_grid_pin_30_;
+ wire cby_1__1__7_left_grid_pin_31_;
+ wire cby_1__1__8_ccff_tail;
+ wire \cby_1__1__8_chany_bottom_out[0] ;
+ wire \cby_1__1__8_chany_bottom_out[10] ;
+ wire \cby_1__1__8_chany_bottom_out[11] ;
+ wire \cby_1__1__8_chany_bottom_out[12] ;
+ wire \cby_1__1__8_chany_bottom_out[13] ;
+ wire \cby_1__1__8_chany_bottom_out[14] ;
+ wire \cby_1__1__8_chany_bottom_out[15] ;
+ wire \cby_1__1__8_chany_bottom_out[16] ;
+ wire \cby_1__1__8_chany_bottom_out[17] ;
+ wire \cby_1__1__8_chany_bottom_out[18] ;
+ wire \cby_1__1__8_chany_bottom_out[19] ;
+ wire \cby_1__1__8_chany_bottom_out[1] ;
+ wire \cby_1__1__8_chany_bottom_out[2] ;
+ wire \cby_1__1__8_chany_bottom_out[3] ;
+ wire \cby_1__1__8_chany_bottom_out[4] ;
+ wire \cby_1__1__8_chany_bottom_out[5] ;
+ wire \cby_1__1__8_chany_bottom_out[6] ;
+ wire \cby_1__1__8_chany_bottom_out[7] ;
+ wire \cby_1__1__8_chany_bottom_out[8] ;
+ wire \cby_1__1__8_chany_bottom_out[9] ;
+ wire \cby_1__1__8_chany_top_out[0] ;
+ wire \cby_1__1__8_chany_top_out[10] ;
+ wire \cby_1__1__8_chany_top_out[11] ;
+ wire \cby_1__1__8_chany_top_out[12] ;
+ wire \cby_1__1__8_chany_top_out[13] ;
+ wire \cby_1__1__8_chany_top_out[14] ;
+ wire \cby_1__1__8_chany_top_out[15] ;
+ wire \cby_1__1__8_chany_top_out[16] ;
+ wire \cby_1__1__8_chany_top_out[17] ;
+ wire \cby_1__1__8_chany_top_out[18] ;
+ wire \cby_1__1__8_chany_top_out[19] ;
+ wire \cby_1__1__8_chany_top_out[1] ;
+ wire \cby_1__1__8_chany_top_out[2] ;
+ wire \cby_1__1__8_chany_top_out[3] ;
+ wire \cby_1__1__8_chany_top_out[4] ;
+ wire \cby_1__1__8_chany_top_out[5] ;
+ wire \cby_1__1__8_chany_top_out[6] ;
+ wire \cby_1__1__8_chany_top_out[7] ;
+ wire \cby_1__1__8_chany_top_out[8] ;
+ wire \cby_1__1__8_chany_top_out[9] ;
+ wire cby_1__1__8_left_grid_pin_16_;
+ wire cby_1__1__8_left_grid_pin_17_;
+ wire cby_1__1__8_left_grid_pin_18_;
+ wire cby_1__1__8_left_grid_pin_19_;
+ wire cby_1__1__8_left_grid_pin_20_;
+ wire cby_1__1__8_left_grid_pin_21_;
+ wire cby_1__1__8_left_grid_pin_22_;
+ wire cby_1__1__8_left_grid_pin_23_;
+ wire cby_1__1__8_left_grid_pin_24_;
+ wire cby_1__1__8_left_grid_pin_25_;
+ wire cby_1__1__8_left_grid_pin_26_;
+ wire cby_1__1__8_left_grid_pin_27_;
+ wire cby_1__1__8_left_grid_pin_28_;
+ wire cby_1__1__8_left_grid_pin_29_;
+ wire cby_1__1__8_left_grid_pin_30_;
+ wire cby_1__1__8_left_grid_pin_31_;
+ wire cby_1__1__9_ccff_tail;
+ wire \cby_1__1__9_chany_bottom_out[0] ;
+ wire \cby_1__1__9_chany_bottom_out[10] ;
+ wire \cby_1__1__9_chany_bottom_out[11] ;
+ wire \cby_1__1__9_chany_bottom_out[12] ;
+ wire \cby_1__1__9_chany_bottom_out[13] ;
+ wire \cby_1__1__9_chany_bottom_out[14] ;
+ wire \cby_1__1__9_chany_bottom_out[15] ;
+ wire \cby_1__1__9_chany_bottom_out[16] ;
+ wire \cby_1__1__9_chany_bottom_out[17] ;
+ wire \cby_1__1__9_chany_bottom_out[18] ;
+ wire \cby_1__1__9_chany_bottom_out[19] ;
+ wire \cby_1__1__9_chany_bottom_out[1] ;
+ wire \cby_1__1__9_chany_bottom_out[2] ;
+ wire \cby_1__1__9_chany_bottom_out[3] ;
+ wire \cby_1__1__9_chany_bottom_out[4] ;
+ wire \cby_1__1__9_chany_bottom_out[5] ;
+ wire \cby_1__1__9_chany_bottom_out[6] ;
+ wire \cby_1__1__9_chany_bottom_out[7] ;
+ wire \cby_1__1__9_chany_bottom_out[8] ;
+ wire \cby_1__1__9_chany_bottom_out[9] ;
+ wire \cby_1__1__9_chany_top_out[0] ;
+ wire \cby_1__1__9_chany_top_out[10] ;
+ wire \cby_1__1__9_chany_top_out[11] ;
+ wire \cby_1__1__9_chany_top_out[12] ;
+ wire \cby_1__1__9_chany_top_out[13] ;
+ wire \cby_1__1__9_chany_top_out[14] ;
+ wire \cby_1__1__9_chany_top_out[15] ;
+ wire \cby_1__1__9_chany_top_out[16] ;
+ wire \cby_1__1__9_chany_top_out[17] ;
+ wire \cby_1__1__9_chany_top_out[18] ;
+ wire \cby_1__1__9_chany_top_out[19] ;
+ wire \cby_1__1__9_chany_top_out[1] ;
+ wire \cby_1__1__9_chany_top_out[2] ;
+ wire \cby_1__1__9_chany_top_out[3] ;
+ wire \cby_1__1__9_chany_top_out[4] ;
+ wire \cby_1__1__9_chany_top_out[5] ;
+ wire \cby_1__1__9_chany_top_out[6] ;
+ wire \cby_1__1__9_chany_top_out[7] ;
+ wire \cby_1__1__9_chany_top_out[8] ;
+ wire \cby_1__1__9_chany_top_out[9] ;
+ wire cby_1__1__9_left_grid_pin_16_;
+ wire cby_1__1__9_left_grid_pin_17_;
+ wire cby_1__1__9_left_grid_pin_18_;
+ wire cby_1__1__9_left_grid_pin_19_;
+ wire cby_1__1__9_left_grid_pin_20_;
+ wire cby_1__1__9_left_grid_pin_21_;
+ wire cby_1__1__9_left_grid_pin_22_;
+ wire cby_1__1__9_left_grid_pin_23_;
+ wire cby_1__1__9_left_grid_pin_24_;
+ wire cby_1__1__9_left_grid_pin_25_;
+ wire cby_1__1__9_left_grid_pin_26_;
+ wire cby_1__1__9_left_grid_pin_27_;
+ wire cby_1__1__9_left_grid_pin_28_;
+ wire cby_1__1__9_left_grid_pin_29_;
+ wire cby_1__1__9_left_grid_pin_30_;
+ wire cby_1__1__9_left_grid_pin_31_;
+ wire \cby_8__1__0_chany_bottom_out[0] ;
+ wire \cby_8__1__0_chany_bottom_out[10] ;
+ wire \cby_8__1__0_chany_bottom_out[11] ;
+ wire \cby_8__1__0_chany_bottom_out[12] ;
+ wire \cby_8__1__0_chany_bottom_out[13] ;
+ wire \cby_8__1__0_chany_bottom_out[14] ;
+ wire \cby_8__1__0_chany_bottom_out[15] ;
+ wire \cby_8__1__0_chany_bottom_out[16] ;
+ wire \cby_8__1__0_chany_bottom_out[17] ;
+ wire \cby_8__1__0_chany_bottom_out[18] ;
+ wire \cby_8__1__0_chany_bottom_out[19] ;
+ wire \cby_8__1__0_chany_bottom_out[1] ;
+ wire \cby_8__1__0_chany_bottom_out[2] ;
+ wire \cby_8__1__0_chany_bottom_out[3] ;
+ wire \cby_8__1__0_chany_bottom_out[4] ;
+ wire \cby_8__1__0_chany_bottom_out[5] ;
+ wire \cby_8__1__0_chany_bottom_out[6] ;
+ wire \cby_8__1__0_chany_bottom_out[7] ;
+ wire \cby_8__1__0_chany_bottom_out[8] ;
+ wire \cby_8__1__0_chany_bottom_out[9] ;
+ wire \cby_8__1__0_chany_top_out[0] ;
+ wire \cby_8__1__0_chany_top_out[10] ;
+ wire \cby_8__1__0_chany_top_out[11] ;
+ wire \cby_8__1__0_chany_top_out[12] ;
+ wire \cby_8__1__0_chany_top_out[13] ;
+ wire \cby_8__1__0_chany_top_out[14] ;
+ wire \cby_8__1__0_chany_top_out[15] ;
+ wire \cby_8__1__0_chany_top_out[16] ;
+ wire \cby_8__1__0_chany_top_out[17] ;
+ wire \cby_8__1__0_chany_top_out[18] ;
+ wire \cby_8__1__0_chany_top_out[19] ;
+ wire \cby_8__1__0_chany_top_out[1] ;
+ wire \cby_8__1__0_chany_top_out[2] ;
+ wire \cby_8__1__0_chany_top_out[3] ;
+ wire \cby_8__1__0_chany_top_out[4] ;
+ wire \cby_8__1__0_chany_top_out[5] ;
+ wire \cby_8__1__0_chany_top_out[6] ;
+ wire \cby_8__1__0_chany_top_out[7] ;
+ wire \cby_8__1__0_chany_top_out[8] ;
+ wire \cby_8__1__0_chany_top_out[9] ;
+ wire cby_8__1__0_left_grid_pin_16_;
+ wire cby_8__1__0_left_grid_pin_17_;
+ wire cby_8__1__0_left_grid_pin_18_;
+ wire cby_8__1__0_left_grid_pin_19_;
+ wire cby_8__1__0_left_grid_pin_20_;
+ wire cby_8__1__0_left_grid_pin_21_;
+ wire cby_8__1__0_left_grid_pin_22_;
+ wire cby_8__1__0_left_grid_pin_23_;
+ wire cby_8__1__0_left_grid_pin_24_;
+ wire cby_8__1__0_left_grid_pin_25_;
+ wire cby_8__1__0_left_grid_pin_26_;
+ wire cby_8__1__0_left_grid_pin_27_;
+ wire cby_8__1__0_left_grid_pin_28_;
+ wire cby_8__1__0_left_grid_pin_29_;
+ wire cby_8__1__0_left_grid_pin_30_;
+ wire cby_8__1__0_left_grid_pin_31_;
+ wire cby_8__1__0_right_grid_pin_0_;
+ wire \cby_8__1__1_chany_bottom_out[0] ;
+ wire \cby_8__1__1_chany_bottom_out[10] ;
+ wire \cby_8__1__1_chany_bottom_out[11] ;
+ wire \cby_8__1__1_chany_bottom_out[12] ;
+ wire \cby_8__1__1_chany_bottom_out[13] ;
+ wire \cby_8__1__1_chany_bottom_out[14] ;
+ wire \cby_8__1__1_chany_bottom_out[15] ;
+ wire \cby_8__1__1_chany_bottom_out[16] ;
+ wire \cby_8__1__1_chany_bottom_out[17] ;
+ wire \cby_8__1__1_chany_bottom_out[18] ;
+ wire \cby_8__1__1_chany_bottom_out[19] ;
+ wire \cby_8__1__1_chany_bottom_out[1] ;
+ wire \cby_8__1__1_chany_bottom_out[2] ;
+ wire \cby_8__1__1_chany_bottom_out[3] ;
+ wire \cby_8__1__1_chany_bottom_out[4] ;
+ wire \cby_8__1__1_chany_bottom_out[5] ;
+ wire \cby_8__1__1_chany_bottom_out[6] ;
+ wire \cby_8__1__1_chany_bottom_out[7] ;
+ wire \cby_8__1__1_chany_bottom_out[8] ;
+ wire \cby_8__1__1_chany_bottom_out[9] ;
+ wire \cby_8__1__1_chany_top_out[0] ;
+ wire \cby_8__1__1_chany_top_out[10] ;
+ wire \cby_8__1__1_chany_top_out[11] ;
+ wire \cby_8__1__1_chany_top_out[12] ;
+ wire \cby_8__1__1_chany_top_out[13] ;
+ wire \cby_8__1__1_chany_top_out[14] ;
+ wire \cby_8__1__1_chany_top_out[15] ;
+ wire \cby_8__1__1_chany_top_out[16] ;
+ wire \cby_8__1__1_chany_top_out[17] ;
+ wire \cby_8__1__1_chany_top_out[18] ;
+ wire \cby_8__1__1_chany_top_out[19] ;
+ wire \cby_8__1__1_chany_top_out[1] ;
+ wire \cby_8__1__1_chany_top_out[2] ;
+ wire \cby_8__1__1_chany_top_out[3] ;
+ wire \cby_8__1__1_chany_top_out[4] ;
+ wire \cby_8__1__1_chany_top_out[5] ;
+ wire \cby_8__1__1_chany_top_out[6] ;
+ wire \cby_8__1__1_chany_top_out[7] ;
+ wire \cby_8__1__1_chany_top_out[8] ;
+ wire \cby_8__1__1_chany_top_out[9] ;
+ wire cby_8__1__1_left_grid_pin_16_;
+ wire cby_8__1__1_left_grid_pin_17_;
+ wire cby_8__1__1_left_grid_pin_18_;
+ wire cby_8__1__1_left_grid_pin_19_;
+ wire cby_8__1__1_left_grid_pin_20_;
+ wire cby_8__1__1_left_grid_pin_21_;
+ wire cby_8__1__1_left_grid_pin_22_;
+ wire cby_8__1__1_left_grid_pin_23_;
+ wire cby_8__1__1_left_grid_pin_24_;
+ wire cby_8__1__1_left_grid_pin_25_;
+ wire cby_8__1__1_left_grid_pin_26_;
+ wire cby_8__1__1_left_grid_pin_27_;
+ wire cby_8__1__1_left_grid_pin_28_;
+ wire cby_8__1__1_left_grid_pin_29_;
+ wire cby_8__1__1_left_grid_pin_30_;
+ wire cby_8__1__1_left_grid_pin_31_;
+ wire cby_8__1__1_right_grid_pin_0_;
+ wire \cby_8__1__2_chany_bottom_out[0] ;
+ wire \cby_8__1__2_chany_bottom_out[10] ;
+ wire \cby_8__1__2_chany_bottom_out[11] ;
+ wire \cby_8__1__2_chany_bottom_out[12] ;
+ wire \cby_8__1__2_chany_bottom_out[13] ;
+ wire \cby_8__1__2_chany_bottom_out[14] ;
+ wire \cby_8__1__2_chany_bottom_out[15] ;
+ wire \cby_8__1__2_chany_bottom_out[16] ;
+ wire \cby_8__1__2_chany_bottom_out[17] ;
+ wire \cby_8__1__2_chany_bottom_out[18] ;
+ wire \cby_8__1__2_chany_bottom_out[19] ;
+ wire \cby_8__1__2_chany_bottom_out[1] ;
+ wire \cby_8__1__2_chany_bottom_out[2] ;
+ wire \cby_8__1__2_chany_bottom_out[3] ;
+ wire \cby_8__1__2_chany_bottom_out[4] ;
+ wire \cby_8__1__2_chany_bottom_out[5] ;
+ wire \cby_8__1__2_chany_bottom_out[6] ;
+ wire \cby_8__1__2_chany_bottom_out[7] ;
+ wire \cby_8__1__2_chany_bottom_out[8] ;
+ wire \cby_8__1__2_chany_bottom_out[9] ;
+ wire \cby_8__1__2_chany_top_out[0] ;
+ wire \cby_8__1__2_chany_top_out[10] ;
+ wire \cby_8__1__2_chany_top_out[11] ;
+ wire \cby_8__1__2_chany_top_out[12] ;
+ wire \cby_8__1__2_chany_top_out[13] ;
+ wire \cby_8__1__2_chany_top_out[14] ;
+ wire \cby_8__1__2_chany_top_out[15] ;
+ wire \cby_8__1__2_chany_top_out[16] ;
+ wire \cby_8__1__2_chany_top_out[17] ;
+ wire \cby_8__1__2_chany_top_out[18] ;
+ wire \cby_8__1__2_chany_top_out[19] ;
+ wire \cby_8__1__2_chany_top_out[1] ;
+ wire \cby_8__1__2_chany_top_out[2] ;
+ wire \cby_8__1__2_chany_top_out[3] ;
+ wire \cby_8__1__2_chany_top_out[4] ;
+ wire \cby_8__1__2_chany_top_out[5] ;
+ wire \cby_8__1__2_chany_top_out[6] ;
+ wire \cby_8__1__2_chany_top_out[7] ;
+ wire \cby_8__1__2_chany_top_out[8] ;
+ wire \cby_8__1__2_chany_top_out[9] ;
+ wire cby_8__1__2_left_grid_pin_16_;
+ wire cby_8__1__2_left_grid_pin_17_;
+ wire cby_8__1__2_left_grid_pin_18_;
+ wire cby_8__1__2_left_grid_pin_19_;
+ wire cby_8__1__2_left_grid_pin_20_;
+ wire cby_8__1__2_left_grid_pin_21_;
+ wire cby_8__1__2_left_grid_pin_22_;
+ wire cby_8__1__2_left_grid_pin_23_;
+ wire cby_8__1__2_left_grid_pin_24_;
+ wire cby_8__1__2_left_grid_pin_25_;
+ wire cby_8__1__2_left_grid_pin_26_;
+ wire cby_8__1__2_left_grid_pin_27_;
+ wire cby_8__1__2_left_grid_pin_28_;
+ wire cby_8__1__2_left_grid_pin_29_;
+ wire cby_8__1__2_left_grid_pin_30_;
+ wire cby_8__1__2_left_grid_pin_31_;
+ wire cby_8__1__2_right_grid_pin_0_;
+ wire \cby_8__1__3_chany_bottom_out[0] ;
+ wire \cby_8__1__3_chany_bottom_out[10] ;
+ wire \cby_8__1__3_chany_bottom_out[11] ;
+ wire \cby_8__1__3_chany_bottom_out[12] ;
+ wire \cby_8__1__3_chany_bottom_out[13] ;
+ wire \cby_8__1__3_chany_bottom_out[14] ;
+ wire \cby_8__1__3_chany_bottom_out[15] ;
+ wire \cby_8__1__3_chany_bottom_out[16] ;
+ wire \cby_8__1__3_chany_bottom_out[17] ;
+ wire \cby_8__1__3_chany_bottom_out[18] ;
+ wire \cby_8__1__3_chany_bottom_out[19] ;
+ wire \cby_8__1__3_chany_bottom_out[1] ;
+ wire \cby_8__1__3_chany_bottom_out[2] ;
+ wire \cby_8__1__3_chany_bottom_out[3] ;
+ wire \cby_8__1__3_chany_bottom_out[4] ;
+ wire \cby_8__1__3_chany_bottom_out[5] ;
+ wire \cby_8__1__3_chany_bottom_out[6] ;
+ wire \cby_8__1__3_chany_bottom_out[7] ;
+ wire \cby_8__1__3_chany_bottom_out[8] ;
+ wire \cby_8__1__3_chany_bottom_out[9] ;
+ wire \cby_8__1__3_chany_top_out[0] ;
+ wire \cby_8__1__3_chany_top_out[10] ;
+ wire \cby_8__1__3_chany_top_out[11] ;
+ wire \cby_8__1__3_chany_top_out[12] ;
+ wire \cby_8__1__3_chany_top_out[13] ;
+ wire \cby_8__1__3_chany_top_out[14] ;
+ wire \cby_8__1__3_chany_top_out[15] ;
+ wire \cby_8__1__3_chany_top_out[16] ;
+ wire \cby_8__1__3_chany_top_out[17] ;
+ wire \cby_8__1__3_chany_top_out[18] ;
+ wire \cby_8__1__3_chany_top_out[19] ;
+ wire \cby_8__1__3_chany_top_out[1] ;
+ wire \cby_8__1__3_chany_top_out[2] ;
+ wire \cby_8__1__3_chany_top_out[3] ;
+ wire \cby_8__1__3_chany_top_out[4] ;
+ wire \cby_8__1__3_chany_top_out[5] ;
+ wire \cby_8__1__3_chany_top_out[6] ;
+ wire \cby_8__1__3_chany_top_out[7] ;
+ wire \cby_8__1__3_chany_top_out[8] ;
+ wire \cby_8__1__3_chany_top_out[9] ;
+ wire cby_8__1__3_left_grid_pin_16_;
+ wire cby_8__1__3_left_grid_pin_17_;
+ wire cby_8__1__3_left_grid_pin_18_;
+ wire cby_8__1__3_left_grid_pin_19_;
+ wire cby_8__1__3_left_grid_pin_20_;
+ wire cby_8__1__3_left_grid_pin_21_;
+ wire cby_8__1__3_left_grid_pin_22_;
+ wire cby_8__1__3_left_grid_pin_23_;
+ wire cby_8__1__3_left_grid_pin_24_;
+ wire cby_8__1__3_left_grid_pin_25_;
+ wire cby_8__1__3_left_grid_pin_26_;
+ wire cby_8__1__3_left_grid_pin_27_;
+ wire cby_8__1__3_left_grid_pin_28_;
+ wire cby_8__1__3_left_grid_pin_29_;
+ wire cby_8__1__3_left_grid_pin_30_;
+ wire cby_8__1__3_left_grid_pin_31_;
+ wire cby_8__1__3_right_grid_pin_0_;
+ wire \cby_8__1__4_chany_bottom_out[0] ;
+ wire \cby_8__1__4_chany_bottom_out[10] ;
+ wire \cby_8__1__4_chany_bottom_out[11] ;
+ wire \cby_8__1__4_chany_bottom_out[12] ;
+ wire \cby_8__1__4_chany_bottom_out[13] ;
+ wire \cby_8__1__4_chany_bottom_out[14] ;
+ wire \cby_8__1__4_chany_bottom_out[15] ;
+ wire \cby_8__1__4_chany_bottom_out[16] ;
+ wire \cby_8__1__4_chany_bottom_out[17] ;
+ wire \cby_8__1__4_chany_bottom_out[18] ;
+ wire \cby_8__1__4_chany_bottom_out[19] ;
+ wire \cby_8__1__4_chany_bottom_out[1] ;
+ wire \cby_8__1__4_chany_bottom_out[2] ;
+ wire \cby_8__1__4_chany_bottom_out[3] ;
+ wire \cby_8__1__4_chany_bottom_out[4] ;
+ wire \cby_8__1__4_chany_bottom_out[5] ;
+ wire \cby_8__1__4_chany_bottom_out[6] ;
+ wire \cby_8__1__4_chany_bottom_out[7] ;
+ wire \cby_8__1__4_chany_bottom_out[8] ;
+ wire \cby_8__1__4_chany_bottom_out[9] ;
+ wire \cby_8__1__4_chany_top_out[0] ;
+ wire \cby_8__1__4_chany_top_out[10] ;
+ wire \cby_8__1__4_chany_top_out[11] ;
+ wire \cby_8__1__4_chany_top_out[12] ;
+ wire \cby_8__1__4_chany_top_out[13] ;
+ wire \cby_8__1__4_chany_top_out[14] ;
+ wire \cby_8__1__4_chany_top_out[15] ;
+ wire \cby_8__1__4_chany_top_out[16] ;
+ wire \cby_8__1__4_chany_top_out[17] ;
+ wire \cby_8__1__4_chany_top_out[18] ;
+ wire \cby_8__1__4_chany_top_out[19] ;
+ wire \cby_8__1__4_chany_top_out[1] ;
+ wire \cby_8__1__4_chany_top_out[2] ;
+ wire \cby_8__1__4_chany_top_out[3] ;
+ wire \cby_8__1__4_chany_top_out[4] ;
+ wire \cby_8__1__4_chany_top_out[5] ;
+ wire \cby_8__1__4_chany_top_out[6] ;
+ wire \cby_8__1__4_chany_top_out[7] ;
+ wire \cby_8__1__4_chany_top_out[8] ;
+ wire \cby_8__1__4_chany_top_out[9] ;
+ wire cby_8__1__4_left_grid_pin_16_;
+ wire cby_8__1__4_left_grid_pin_17_;
+ wire cby_8__1__4_left_grid_pin_18_;
+ wire cby_8__1__4_left_grid_pin_19_;
+ wire cby_8__1__4_left_grid_pin_20_;
+ wire cby_8__1__4_left_grid_pin_21_;
+ wire cby_8__1__4_left_grid_pin_22_;
+ wire cby_8__1__4_left_grid_pin_23_;
+ wire cby_8__1__4_left_grid_pin_24_;
+ wire cby_8__1__4_left_grid_pin_25_;
+ wire cby_8__1__4_left_grid_pin_26_;
+ wire cby_8__1__4_left_grid_pin_27_;
+ wire cby_8__1__4_left_grid_pin_28_;
+ wire cby_8__1__4_left_grid_pin_29_;
+ wire cby_8__1__4_left_grid_pin_30_;
+ wire cby_8__1__4_left_grid_pin_31_;
+ wire cby_8__1__4_right_grid_pin_0_;
+ wire \cby_8__1__5_chany_bottom_out[0] ;
+ wire \cby_8__1__5_chany_bottom_out[10] ;
+ wire \cby_8__1__5_chany_bottom_out[11] ;
+ wire \cby_8__1__5_chany_bottom_out[12] ;
+ wire \cby_8__1__5_chany_bottom_out[13] ;
+ wire \cby_8__1__5_chany_bottom_out[14] ;
+ wire \cby_8__1__5_chany_bottom_out[15] ;
+ wire \cby_8__1__5_chany_bottom_out[16] ;
+ wire \cby_8__1__5_chany_bottom_out[17] ;
+ wire \cby_8__1__5_chany_bottom_out[18] ;
+ wire \cby_8__1__5_chany_bottom_out[19] ;
+ wire \cby_8__1__5_chany_bottom_out[1] ;
+ wire \cby_8__1__5_chany_bottom_out[2] ;
+ wire \cby_8__1__5_chany_bottom_out[3] ;
+ wire \cby_8__1__5_chany_bottom_out[4] ;
+ wire \cby_8__1__5_chany_bottom_out[5] ;
+ wire \cby_8__1__5_chany_bottom_out[6] ;
+ wire \cby_8__1__5_chany_bottom_out[7] ;
+ wire \cby_8__1__5_chany_bottom_out[8] ;
+ wire \cby_8__1__5_chany_bottom_out[9] ;
+ wire \cby_8__1__5_chany_top_out[0] ;
+ wire \cby_8__1__5_chany_top_out[10] ;
+ wire \cby_8__1__5_chany_top_out[11] ;
+ wire \cby_8__1__5_chany_top_out[12] ;
+ wire \cby_8__1__5_chany_top_out[13] ;
+ wire \cby_8__1__5_chany_top_out[14] ;
+ wire \cby_8__1__5_chany_top_out[15] ;
+ wire \cby_8__1__5_chany_top_out[16] ;
+ wire \cby_8__1__5_chany_top_out[17] ;
+ wire \cby_8__1__5_chany_top_out[18] ;
+ wire \cby_8__1__5_chany_top_out[19] ;
+ wire \cby_8__1__5_chany_top_out[1] ;
+ wire \cby_8__1__5_chany_top_out[2] ;
+ wire \cby_8__1__5_chany_top_out[3] ;
+ wire \cby_8__1__5_chany_top_out[4] ;
+ wire \cby_8__1__5_chany_top_out[5] ;
+ wire \cby_8__1__5_chany_top_out[6] ;
+ wire \cby_8__1__5_chany_top_out[7] ;
+ wire \cby_8__1__5_chany_top_out[8] ;
+ wire \cby_8__1__5_chany_top_out[9] ;
+ wire cby_8__1__5_left_grid_pin_16_;
+ wire cby_8__1__5_left_grid_pin_17_;
+ wire cby_8__1__5_left_grid_pin_18_;
+ wire cby_8__1__5_left_grid_pin_19_;
+ wire cby_8__1__5_left_grid_pin_20_;
+ wire cby_8__1__5_left_grid_pin_21_;
+ wire cby_8__1__5_left_grid_pin_22_;
+ wire cby_8__1__5_left_grid_pin_23_;
+ wire cby_8__1__5_left_grid_pin_24_;
+ wire cby_8__1__5_left_grid_pin_25_;
+ wire cby_8__1__5_left_grid_pin_26_;
+ wire cby_8__1__5_left_grid_pin_27_;
+ wire cby_8__1__5_left_grid_pin_28_;
+ wire cby_8__1__5_left_grid_pin_29_;
+ wire cby_8__1__5_left_grid_pin_30_;
+ wire cby_8__1__5_left_grid_pin_31_;
+ wire cby_8__1__5_right_grid_pin_0_;
+ wire \cby_8__1__6_chany_bottom_out[0] ;
+ wire \cby_8__1__6_chany_bottom_out[10] ;
+ wire \cby_8__1__6_chany_bottom_out[11] ;
+ wire \cby_8__1__6_chany_bottom_out[12] ;
+ wire \cby_8__1__6_chany_bottom_out[13] ;
+ wire \cby_8__1__6_chany_bottom_out[14] ;
+ wire \cby_8__1__6_chany_bottom_out[15] ;
+ wire \cby_8__1__6_chany_bottom_out[16] ;
+ wire \cby_8__1__6_chany_bottom_out[17] ;
+ wire \cby_8__1__6_chany_bottom_out[18] ;
+ wire \cby_8__1__6_chany_bottom_out[19] ;
+ wire \cby_8__1__6_chany_bottom_out[1] ;
+ wire \cby_8__1__6_chany_bottom_out[2] ;
+ wire \cby_8__1__6_chany_bottom_out[3] ;
+ wire \cby_8__1__6_chany_bottom_out[4] ;
+ wire \cby_8__1__6_chany_bottom_out[5] ;
+ wire \cby_8__1__6_chany_bottom_out[6] ;
+ wire \cby_8__1__6_chany_bottom_out[7] ;
+ wire \cby_8__1__6_chany_bottom_out[8] ;
+ wire \cby_8__1__6_chany_bottom_out[9] ;
+ wire \cby_8__1__6_chany_top_out[0] ;
+ wire \cby_8__1__6_chany_top_out[10] ;
+ wire \cby_8__1__6_chany_top_out[11] ;
+ wire \cby_8__1__6_chany_top_out[12] ;
+ wire \cby_8__1__6_chany_top_out[13] ;
+ wire \cby_8__1__6_chany_top_out[14] ;
+ wire \cby_8__1__6_chany_top_out[15] ;
+ wire \cby_8__1__6_chany_top_out[16] ;
+ wire \cby_8__1__6_chany_top_out[17] ;
+ wire \cby_8__1__6_chany_top_out[18] ;
+ wire \cby_8__1__6_chany_top_out[19] ;
+ wire \cby_8__1__6_chany_top_out[1] ;
+ wire \cby_8__1__6_chany_top_out[2] ;
+ wire \cby_8__1__6_chany_top_out[3] ;
+ wire \cby_8__1__6_chany_top_out[4] ;
+ wire \cby_8__1__6_chany_top_out[5] ;
+ wire \cby_8__1__6_chany_top_out[6] ;
+ wire \cby_8__1__6_chany_top_out[7] ;
+ wire \cby_8__1__6_chany_top_out[8] ;
+ wire \cby_8__1__6_chany_top_out[9] ;
+ wire cby_8__1__6_left_grid_pin_16_;
+ wire cby_8__1__6_left_grid_pin_17_;
+ wire cby_8__1__6_left_grid_pin_18_;
+ wire cby_8__1__6_left_grid_pin_19_;
+ wire cby_8__1__6_left_grid_pin_20_;
+ wire cby_8__1__6_left_grid_pin_21_;
+ wire cby_8__1__6_left_grid_pin_22_;
+ wire cby_8__1__6_left_grid_pin_23_;
+ wire cby_8__1__6_left_grid_pin_24_;
+ wire cby_8__1__6_left_grid_pin_25_;
+ wire cby_8__1__6_left_grid_pin_26_;
+ wire cby_8__1__6_left_grid_pin_27_;
+ wire cby_8__1__6_left_grid_pin_28_;
+ wire cby_8__1__6_left_grid_pin_29_;
+ wire cby_8__1__6_left_grid_pin_30_;
+ wire cby_8__1__6_left_grid_pin_31_;
+ wire cby_8__1__6_right_grid_pin_0_;
+ wire \cby_8__1__7_chany_bottom_out[0] ;
+ wire \cby_8__1__7_chany_bottom_out[10] ;
+ wire \cby_8__1__7_chany_bottom_out[11] ;
+ wire \cby_8__1__7_chany_bottom_out[12] ;
+ wire \cby_8__1__7_chany_bottom_out[13] ;
+ wire \cby_8__1__7_chany_bottom_out[14] ;
+ wire \cby_8__1__7_chany_bottom_out[15] ;
+ wire \cby_8__1__7_chany_bottom_out[16] ;
+ wire \cby_8__1__7_chany_bottom_out[17] ;
+ wire \cby_8__1__7_chany_bottom_out[18] ;
+ wire \cby_8__1__7_chany_bottom_out[19] ;
+ wire \cby_8__1__7_chany_bottom_out[1] ;
+ wire \cby_8__1__7_chany_bottom_out[2] ;
+ wire \cby_8__1__7_chany_bottom_out[3] ;
+ wire \cby_8__1__7_chany_bottom_out[4] ;
+ wire \cby_8__1__7_chany_bottom_out[5] ;
+ wire \cby_8__1__7_chany_bottom_out[6] ;
+ wire \cby_8__1__7_chany_bottom_out[7] ;
+ wire \cby_8__1__7_chany_bottom_out[8] ;
+ wire \cby_8__1__7_chany_bottom_out[9] ;
+ wire \cby_8__1__7_chany_top_out[0] ;
+ wire \cby_8__1__7_chany_top_out[10] ;
+ wire \cby_8__1__7_chany_top_out[11] ;
+ wire \cby_8__1__7_chany_top_out[12] ;
+ wire \cby_8__1__7_chany_top_out[13] ;
+ wire \cby_8__1__7_chany_top_out[14] ;
+ wire \cby_8__1__7_chany_top_out[15] ;
+ wire \cby_8__1__7_chany_top_out[16] ;
+ wire \cby_8__1__7_chany_top_out[17] ;
+ wire \cby_8__1__7_chany_top_out[18] ;
+ wire \cby_8__1__7_chany_top_out[19] ;
+ wire \cby_8__1__7_chany_top_out[1] ;
+ wire \cby_8__1__7_chany_top_out[2] ;
+ wire \cby_8__1__7_chany_top_out[3] ;
+ wire \cby_8__1__7_chany_top_out[4] ;
+ wire \cby_8__1__7_chany_top_out[5] ;
+ wire \cby_8__1__7_chany_top_out[6] ;
+ wire \cby_8__1__7_chany_top_out[7] ;
+ wire \cby_8__1__7_chany_top_out[8] ;
+ wire \cby_8__1__7_chany_top_out[9] ;
+ wire cby_8__1__7_left_grid_pin_16_;
+ wire cby_8__1__7_left_grid_pin_17_;
+ wire cby_8__1__7_left_grid_pin_18_;
+ wire cby_8__1__7_left_grid_pin_19_;
+ wire cby_8__1__7_left_grid_pin_20_;
+ wire cby_8__1__7_left_grid_pin_21_;
+ wire cby_8__1__7_left_grid_pin_22_;
+ wire cby_8__1__7_left_grid_pin_23_;
+ wire cby_8__1__7_left_grid_pin_24_;
+ wire cby_8__1__7_left_grid_pin_25_;
+ wire cby_8__1__7_left_grid_pin_26_;
+ wire cby_8__1__7_left_grid_pin_27_;
+ wire cby_8__1__7_left_grid_pin_28_;
+ wire cby_8__1__7_left_grid_pin_29_;
+ wire cby_8__1__7_left_grid_pin_30_;
+ wire cby_8__1__7_left_grid_pin_31_;
+ wire cby_8__1__7_right_grid_pin_0_;
+ wire \clk_1_wires[100] ;
+ wire \clk_1_wires[101] ;
+ wire \clk_1_wires[102] ;
+ wire \clk_1_wires[103] ;
+ wire \clk_1_wires[104] ;
+ wire \clk_1_wires[106] ;
+ wire \clk_1_wires[107] ;
+ wire \clk_1_wires[108] ;
+ wire \clk_1_wires[109] ;
+ wire \clk_1_wires[10] ;
+ wire \clk_1_wires[110] ;
+ wire \clk_1_wires[111] ;
+ wire \clk_1_wires[11] ;
+ wire \clk_1_wires[12] ;
+ wire \clk_1_wires[13] ;
+ wire \clk_1_wires[15] ;
+ wire \clk_1_wires[16] ;
+ wire \clk_1_wires[17] ;
+ wire \clk_1_wires[18] ;
+ wire \clk_1_wires[19] ;
+ wire \clk_1_wires[1] ;
+ wire \clk_1_wires[20] ;
+ wire \clk_1_wires[22] ;
+ wire \clk_1_wires[23] ;
+ wire \clk_1_wires[24] ;
+ wire \clk_1_wires[25] ;
+ wire \clk_1_wires[26] ;
+ wire \clk_1_wires[27] ;
+ wire \clk_1_wires[29] ;
+ wire \clk_1_wires[2] ;
+ wire \clk_1_wires[30] ;
+ wire \clk_1_wires[31] ;
+ wire \clk_1_wires[32] ;
+ wire \clk_1_wires[33] ;
+ wire \clk_1_wires[34] ;
+ wire \clk_1_wires[36] ;
+ wire \clk_1_wires[37] ;
+ wire \clk_1_wires[38] ;
+ wire \clk_1_wires[39] ;
+ wire \clk_1_wires[3] ;
+ wire \clk_1_wires[40] ;
+ wire \clk_1_wires[41] ;
+ wire \clk_1_wires[43] ;
+ wire \clk_1_wires[44] ;
+ wire \clk_1_wires[45] ;
+ wire \clk_1_wires[46] ;
+ wire \clk_1_wires[47] ;
+ wire \clk_1_wires[48] ;
+ wire \clk_1_wires[4] ;
+ wire \clk_1_wires[50] ;
+ wire \clk_1_wires[51] ;
+ wire \clk_1_wires[52] ;
+ wire \clk_1_wires[53] ;
+ wire \clk_1_wires[54] ;
+ wire \clk_1_wires[55] ;
+ wire \clk_1_wires[57] ;
+ wire \clk_1_wires[58] ;
+ wire \clk_1_wires[59] ;
+ wire \clk_1_wires[5] ;
+ wire \clk_1_wires[60] ;
+ wire \clk_1_wires[61] ;
+ wire \clk_1_wires[62] ;
+ wire \clk_1_wires[64] ;
+ wire \clk_1_wires[65] ;
+ wire \clk_1_wires[66] ;
+ wire \clk_1_wires[67] ;
+ wire \clk_1_wires[68] ;
+ wire \clk_1_wires[69] ;
+ wire \clk_1_wires[6] ;
+ wire \clk_1_wires[71] ;
+ wire \clk_1_wires[72] ;
+ wire \clk_1_wires[73] ;
+ wire \clk_1_wires[74] ;
+ wire \clk_1_wires[75] ;
+ wire \clk_1_wires[76] ;
+ wire \clk_1_wires[78] ;
+ wire \clk_1_wires[79] ;
+ wire \clk_1_wires[80] ;
+ wire \clk_1_wires[81] ;
+ wire \clk_1_wires[82] ;
+ wire \clk_1_wires[83] ;
+ wire \clk_1_wires[85] ;
+ wire \clk_1_wires[86] ;
+ wire \clk_1_wires[87] ;
+ wire \clk_1_wires[88] ;
+ wire \clk_1_wires[89] ;
+ wire \clk_1_wires[8] ;
+ wire \clk_1_wires[90] ;
+ wire \clk_1_wires[92] ;
+ wire \clk_1_wires[93] ;
+ wire \clk_1_wires[94] ;
+ wire \clk_1_wires[95] ;
+ wire \clk_1_wires[96] ;
+ wire \clk_1_wires[97] ;
+ wire \clk_1_wires[99] ;
+ wire \clk_1_wires[9] ;
+ wire \clk_2_wires[10] ;
+ wire \clk_2_wires[11] ;
+ wire \clk_2_wires[12] ;
+ wire \clk_2_wires[14] ;
+ wire \clk_2_wires[15] ;
+ wire \clk_2_wires[16] ;
+ wire \clk_2_wires[17] ;
+ wire \clk_2_wires[18] ;
+ wire \clk_2_wires[19] ;
+ wire \clk_2_wires[1] ;
+ wire \clk_2_wires[20] ;
+ wire \clk_2_wires[21] ;
+ wire \clk_2_wires[22] ;
+ wire \clk_2_wires[23] ;
+ wire \clk_2_wires[24] ;
+ wire \clk_2_wires[25] ;
+ wire \clk_2_wires[27] ;
+ wire \clk_2_wires[28] ;
+ wire \clk_2_wires[29] ;
+ wire \clk_2_wires[2] ;
+ wire \clk_2_wires[30] ;
+ wire \clk_2_wires[31] ;
+ wire \clk_2_wires[32] ;
+ wire \clk_2_wires[33] ;
+ wire \clk_2_wires[34] ;
+ wire \clk_2_wires[35] ;
+ wire \clk_2_wires[36] ;
+ wire \clk_2_wires[37] ;
+ wire \clk_2_wires[38] ;
+ wire \clk_2_wires[3] ;
+ wire \clk_2_wires[40] ;
+ wire \clk_2_wires[41] ;
+ wire \clk_2_wires[42] ;
+ wire \clk_2_wires[43] ;
+ wire \clk_2_wires[44] ;
+ wire \clk_2_wires[45] ;
+ wire \clk_2_wires[46] ;
+ wire \clk_2_wires[47] ;
+ wire \clk_2_wires[48] ;
+ wire \clk_2_wires[49] ;
+ wire \clk_2_wires[4] ;
+ wire \clk_2_wires[50] ;
+ wire \clk_2_wires[51] ;
+ wire \clk_2_wires[5] ;
+ wire \clk_2_wires[6] ;
+ wire \clk_2_wires[7] ;
+ wire \clk_2_wires[8] ;
+ wire \clk_2_wires[9] ;
+ wire \clk_3_wires[10] ;
+ wire \clk_3_wires[11] ;
+ wire \clk_3_wires[12] ;
+ wire \clk_3_wires[13] ;
+ wire \clk_3_wires[14] ;
+ wire \clk_3_wires[15] ;
+ wire \clk_3_wires[16] ;
+ wire \clk_3_wires[17] ;
+ wire \clk_3_wires[18] ;
+ wire \clk_3_wires[19] ;
+ wire \clk_3_wires[1] ;
+ wire \clk_3_wires[20] ;
+ wire \clk_3_wires[21] ;
+ wire \clk_3_wires[22] ;
+ wire \clk_3_wires[23] ;
+ wire \clk_3_wires[24] ;
+ wire \clk_3_wires[25] ;
+ wire \clk_3_wires[27] ;
+ wire \clk_3_wires[28] ;
+ wire \clk_3_wires[29] ;
+ wire \clk_3_wires[2] ;
+ wire \clk_3_wires[30] ;
+ wire \clk_3_wires[31] ;
+ wire \clk_3_wires[32] ;
+ wire \clk_3_wires[33] ;
+ wire \clk_3_wires[34] ;
+ wire \clk_3_wires[3] ;
+ wire \clk_3_wires[4] ;
+ wire \clk_3_wires[6] ;
+ wire \clk_3_wires[7] ;
+ wire \clk_3_wires[8] ;
+ wire \clk_3_wires[9] ;
+ wire direct_interc_0_out;
+ wire direct_interc_100_out;
+ wire direct_interc_101_out;
+ wire direct_interc_102_out;
+ wire direct_interc_103_out;
+ wire direct_interc_104_out;
+ wire direct_interc_105_out;
+ wire direct_interc_106_out;
+ wire direct_interc_107_out;
+ wire direct_interc_108_out;
+ wire direct_interc_109_out;
+ wire direct_interc_10_out;
+ wire direct_interc_110_out;
+ wire direct_interc_111_out;
+ wire direct_interc_112_out;
+ wire direct_interc_113_out;
+ wire direct_interc_114_out;
+ wire direct_interc_115_out;
+ wire direct_interc_116_out;
+ wire direct_interc_117_out;
+ wire direct_interc_118_out;
+ wire direct_interc_11_out;
+ wire direct_interc_12_out;
+ wire direct_interc_13_out;
+ wire direct_interc_14_out;
+ wire direct_interc_15_out;
+ wire direct_interc_16_out;
+ wire direct_interc_17_out;
+ wire direct_interc_18_out;
+ wire direct_interc_19_out;
+ wire direct_interc_1_out;
+ wire direct_interc_20_out;
+ wire direct_interc_21_out;
+ wire direct_interc_22_out;
+ wire direct_interc_23_out;
+ wire direct_interc_24_out;
+ wire direct_interc_25_out;
+ wire direct_interc_26_out;
+ wire direct_interc_27_out;
+ wire direct_interc_28_out;
+ wire direct_interc_29_out;
+ wire direct_interc_2_out;
+ wire direct_interc_30_out;
+ wire direct_interc_31_out;
+ wire direct_interc_32_out;
+ wire direct_interc_33_out;
+ wire direct_interc_34_out;
+ wire direct_interc_35_out;
+ wire direct_interc_36_out;
+ wire direct_interc_37_out;
+ wire direct_interc_38_out;
+ wire direct_interc_39_out;
+ wire direct_interc_3_out;
+ wire direct_interc_40_out;
+ wire direct_interc_41_out;
+ wire direct_interc_42_out;
+ wire direct_interc_43_out;
+ wire direct_interc_44_out;
+ wire direct_interc_45_out;
+ wire direct_interc_46_out;
+ wire direct_interc_47_out;
+ wire direct_interc_48_out;
+ wire direct_interc_49_out;
+ wire direct_interc_4_out;
+ wire direct_interc_50_out;
+ wire direct_interc_51_out;
+ wire direct_interc_52_out;
+ wire direct_interc_53_out;
+ wire direct_interc_54_out;
+ wire direct_interc_55_out;
+ wire direct_interc_56_out;
+ wire direct_interc_57_out;
+ wire direct_interc_58_out;
+ wire direct_interc_59_out;
+ wire direct_interc_5_out;
+ wire direct_interc_60_out;
+ wire direct_interc_61_out;
+ wire direct_interc_62_out;
+ wire direct_interc_63_out;
+ wire direct_interc_64_out;
+ wire direct_interc_65_out;
+ wire direct_interc_66_out;
+ wire direct_interc_67_out;
+ wire direct_interc_68_out;
+ wire direct_interc_69_out;
+ wire direct_interc_6_out;
+ wire direct_interc_70_out;
+ wire direct_interc_71_out;
+ wire direct_interc_72_out;
+ wire direct_interc_73_out;
+ wire direct_interc_74_out;
+ wire direct_interc_75_out;
+ wire direct_interc_76_out;
+ wire direct_interc_77_out;
+ wire direct_interc_78_out;
+ wire direct_interc_79_out;
+ wire direct_interc_7_out;
+ wire direct_interc_80_out;
+ wire direct_interc_81_out;
+ wire direct_interc_82_out;
+ wire direct_interc_83_out;
+ wire direct_interc_84_out;
+ wire direct_interc_85_out;
+ wire direct_interc_86_out;
+ wire direct_interc_87_out;
+ wire direct_interc_88_out;
+ wire direct_interc_89_out;
+ wire direct_interc_8_out;
+ wire direct_interc_90_out;
+ wire direct_interc_91_out;
+ wire direct_interc_92_out;
+ wire direct_interc_93_out;
+ wire direct_interc_94_out;
+ wire direct_interc_95_out;
+ wire direct_interc_96_out;
+ wire direct_interc_97_out;
+ wire direct_interc_98_out;
+ wire direct_interc_99_out;
+ wire direct_interc_9_out;
+ wire grid_clb_0_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_0_ccff_tail;
+ wire grid_clb_0_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_0_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_0_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_0_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_0_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_10_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_10_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_10_ccff_tail;
+ wire grid_clb_10_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_10_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_10_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_10_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_10_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_11_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_11_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_11_ccff_tail;
+ wire grid_clb_11_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_11_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_11_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_11_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_11_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_12_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_12_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_12_ccff_tail;
+ wire grid_clb_12_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_12_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_12_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_12_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_12_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_13_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_13_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_13_ccff_tail;
+ wire grid_clb_13_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_13_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_13_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_13_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_13_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_14_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_14_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_14_ccff_tail;
+ wire grid_clb_14_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_14_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_14_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_14_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_14_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_15_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_15_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_15_ccff_tail;
+ wire grid_clb_15_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_15_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_15_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_15_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_15_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_16_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_16_ccff_tail;
+ wire grid_clb_16_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_16_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_16_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_16_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_16_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_17_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_17_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_17_ccff_tail;
+ wire grid_clb_17_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_17_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_17_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_17_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_17_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_18_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_18_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_18_ccff_tail;
+ wire grid_clb_18_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_18_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_18_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_18_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_18_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_19_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_19_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_19_ccff_tail;
+ wire grid_clb_19_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_19_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_19_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_19_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_19_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_1_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_1_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_1_ccff_tail;
+ wire grid_clb_1_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_1_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_1_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_1_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_1_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_20_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_20_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_20_ccff_tail;
+ wire grid_clb_20_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_20_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_20_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_20_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_20_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_21_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_21_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_21_ccff_tail;
+ wire grid_clb_21_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_21_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_21_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_21_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_21_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_22_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_22_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_22_ccff_tail;
+ wire grid_clb_22_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_22_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_22_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_22_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_22_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_23_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_23_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_23_ccff_tail;
+ wire grid_clb_23_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_23_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_23_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_23_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_23_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_24_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_24_ccff_tail;
+ wire grid_clb_24_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_24_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_24_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_24_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_24_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_25_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_25_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_25_ccff_tail;
+ wire grid_clb_25_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_25_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_25_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_25_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_25_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_26_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_26_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_26_ccff_tail;
+ wire grid_clb_26_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_26_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_26_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_26_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_26_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_27_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_27_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_27_ccff_tail;
+ wire grid_clb_27_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_27_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_27_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_27_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_27_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_28_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_28_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_28_ccff_tail;
+ wire grid_clb_28_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_28_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_28_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_28_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_28_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_29_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_29_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_29_ccff_tail;
+ wire grid_clb_29_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_29_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_29_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_29_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_29_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_2_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_2_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_2_ccff_tail;
+ wire grid_clb_2_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_2_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_2_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_2_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_2_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_30_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_30_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_30_ccff_tail;
+ wire grid_clb_30_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_30_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_30_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_30_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_30_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_31_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_31_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_31_ccff_tail;
+ wire grid_clb_31_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_31_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_31_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_31_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_31_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_32_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_32_ccff_tail;
+ wire grid_clb_32_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_32_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_32_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_32_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_32_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_33_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_33_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_33_ccff_tail;
+ wire grid_clb_33_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_33_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_33_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_33_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_33_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_34_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_34_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_34_ccff_tail;
+ wire grid_clb_34_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_34_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_34_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_34_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_34_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_35_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_35_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_35_ccff_tail;
+ wire grid_clb_35_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_35_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_35_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_35_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_35_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_36_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_36_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_36_ccff_tail;
+ wire grid_clb_36_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_36_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_36_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_36_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_36_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_37_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_37_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_37_ccff_tail;
+ wire grid_clb_37_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_37_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_37_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_37_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_37_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_38_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_38_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_38_ccff_tail;
+ wire grid_clb_38_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_38_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_38_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_38_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_38_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_39_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_39_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_39_ccff_tail;
+ wire grid_clb_39_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_39_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_39_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_39_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_39_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_3_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_3_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_3_ccff_tail;
+ wire grid_clb_3_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_3_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_3_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_3_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_3_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_40_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_40_ccff_tail;
+ wire grid_clb_40_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_40_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_40_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_40_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_40_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_41_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_41_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_41_ccff_tail;
+ wire grid_clb_41_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_41_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_41_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_41_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_41_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_42_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_42_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_42_ccff_tail;
+ wire grid_clb_42_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_42_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_42_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_42_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_42_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_43_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_43_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_43_ccff_tail;
+ wire grid_clb_43_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_43_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_43_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_43_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_43_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_44_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_44_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_44_ccff_tail;
+ wire grid_clb_44_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_44_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_44_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_44_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_44_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_45_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_45_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_45_ccff_tail;
+ wire grid_clb_45_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_45_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_45_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_45_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_45_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_46_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_46_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_46_ccff_tail;
+ wire grid_clb_46_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_46_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_46_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_46_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_46_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_47_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_47_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_47_ccff_tail;
+ wire grid_clb_47_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_47_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_47_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_47_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_47_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_48_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_48_ccff_tail;
+ wire grid_clb_48_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_48_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_48_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_48_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_48_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_49_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_49_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_49_ccff_tail;
+ wire grid_clb_49_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_49_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_49_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_49_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_49_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_4_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_4_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_4_ccff_tail;
+ wire grid_clb_4_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_4_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_4_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_4_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_4_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_50_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_50_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_50_ccff_tail;
+ wire grid_clb_50_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_50_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_50_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_50_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_50_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_51_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_51_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_51_ccff_tail;
+ wire grid_clb_51_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_51_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_51_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_51_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_51_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_52_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_52_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_52_ccff_tail;
+ wire grid_clb_52_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_52_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_52_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_52_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_52_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_53_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_53_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_53_ccff_tail;
+ wire grid_clb_53_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_53_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_53_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_53_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_53_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_54_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_54_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_54_ccff_tail;
+ wire grid_clb_54_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_54_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_54_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_54_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_54_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_55_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_55_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_55_ccff_tail;
+ wire grid_clb_55_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_55_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_55_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_55_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_55_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_56_ccff_tail;
+ wire grid_clb_56_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_56_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_56_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_56_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_56_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_57_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_57_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_57_ccff_tail;
+ wire grid_clb_57_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_57_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_57_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_57_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_57_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_58_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_58_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_58_ccff_tail;
+ wire grid_clb_58_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_58_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_58_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_58_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_58_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_59_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_59_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_59_ccff_tail;
+ wire grid_clb_59_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_59_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_59_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_59_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_59_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_5_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_5_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_5_ccff_tail;
+ wire grid_clb_5_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_5_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_5_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_5_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_5_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_60_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_60_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_60_ccff_tail;
+ wire grid_clb_60_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_60_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_60_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_60_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_60_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_61_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_61_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_61_ccff_tail;
+ wire grid_clb_61_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_61_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_61_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_61_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_61_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_62_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_62_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_62_ccff_tail;
+ wire grid_clb_62_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_62_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_62_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_62_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_62_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_63_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_63_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_63_ccff_tail;
+ wire grid_clb_63_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_63_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_63_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_63_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_63_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_6_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_6_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_6_ccff_tail;
+ wire grid_clb_6_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_6_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_6_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_6_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_6_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_7_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_7_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_7_ccff_tail;
+ wire grid_clb_7_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_7_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_7_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_7_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_7_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_8_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_8_ccff_tail;
+ wire grid_clb_8_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_8_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_8_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_8_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_8_top_width_0_height_0__pin_41_upper;
+ wire grid_clb_9_bottom_width_0_height_0__pin_50_;
+ wire grid_clb_9_bottom_width_0_height_0__pin_51_;
+ wire grid_clb_9_ccff_tail;
+ wire grid_clb_9_right_width_0_height_0__pin_42_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_42_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_43_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_43_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_44_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_44_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_45_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_45_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_46_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_46_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_47_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_47_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_48_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_48_upper;
+ wire grid_clb_9_right_width_0_height_0__pin_49_lower;
+ wire grid_clb_9_right_width_0_height_0__pin_49_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_34_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_34_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_35_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_35_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_36_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_36_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_37_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_37_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_38_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_38_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_39_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_39_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_40_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_40_upper;
+ wire grid_clb_9_top_width_0_height_0__pin_41_lower;
+ wire grid_clb_9_top_width_0_height_0__pin_41_upper;
+ wire grid_io_bottom_0_ccff_tail;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_0_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_1_ccff_tail;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_1_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_2_ccff_tail;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_2_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_3_ccff_tail;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_3_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_4_ccff_tail;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_4_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_5_ccff_tail;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_5_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_6_ccff_tail;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_6_top_width_0_height_0__pin_9_upper;
+ wire grid_io_bottom_7_ccff_tail;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_11_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_11_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_13_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_13_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_15_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_15_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_17_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_17_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_1_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_1_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_3_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_3_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_5_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_5_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_7_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_7_upper;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_9_lower;
+ wire grid_io_bottom_7_top_width_0_height_0__pin_9_upper;
+ wire grid_io_left_0_ccff_tail;
+ wire grid_io_left_0_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_0_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_1_ccff_tail;
+ wire grid_io_left_1_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_1_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_2_ccff_tail;
+ wire grid_io_left_2_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_2_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_3_ccff_tail;
+ wire grid_io_left_3_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_3_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_4_ccff_tail;
+ wire grid_io_left_4_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_4_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_5_ccff_tail;
+ wire grid_io_left_5_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_5_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_6_ccff_tail;
+ wire grid_io_left_6_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_6_right_width_0_height_0__pin_1_upper;
+ wire grid_io_left_7_ccff_tail;
+ wire grid_io_left_7_right_width_0_height_0__pin_1_lower;
+ wire grid_io_left_7_right_width_0_height_0__pin_1_upper;
+ wire grid_io_right_0_ccff_tail;
+ wire grid_io_right_0_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_0_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_1_ccff_tail;
+ wire grid_io_right_1_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_1_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_2_ccff_tail;
+ wire grid_io_right_2_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_2_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_3_ccff_tail;
+ wire grid_io_right_3_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_3_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_4_ccff_tail;
+ wire grid_io_right_4_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_4_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_5_ccff_tail;
+ wire grid_io_right_5_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_5_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_6_ccff_tail;
+ wire grid_io_right_6_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_6_left_width_0_height_0__pin_1_upper;
+ wire grid_io_right_7_ccff_tail;
+ wire grid_io_right_7_left_width_0_height_0__pin_1_lower;
+ wire grid_io_right_7_left_width_0_height_0__pin_1_upper;
+ wire grid_io_top_0_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_0_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_0_ccff_tail;
+ wire grid_io_top_1_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_1_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_1_ccff_tail;
+ wire grid_io_top_2_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_2_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_2_ccff_tail;
+ wire grid_io_top_3_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_3_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_3_ccff_tail;
+ wire grid_io_top_4_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_4_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_4_ccff_tail;
+ wire grid_io_top_5_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_5_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_5_ccff_tail;
+ wire grid_io_top_6_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_6_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_6_ccff_tail;
+ wire grid_io_top_7_bottom_width_0_height_0__pin_1_lower;
+ wire grid_io_top_7_bottom_width_0_height_0__pin_1_upper;
+ wire grid_io_top_7_ccff_tail;
+ wire \logic_zero_tie[0] ;
+ wire \logic_zero_tie[1] ;
+ wire \logic_zero_tie[2] ;
+ wire \logic_zero_tie[3] ;
+ wire \logic_zero_tie[4] ;
+ wire \logic_zero_tie[5] ;
+ wire \logic_zero_tie[6] ;
+ wire \logic_zero_tie[7] ;
+ wire \prog_clk_0_wires[0] ;
+ wire \prog_clk_0_wires[100] ;
+ wire \prog_clk_0_wires[101] ;
+ wire \prog_clk_0_wires[102] ;
+ wire \prog_clk_0_wires[103] ;
+ wire \prog_clk_0_wires[104] ;
+ wire \prog_clk_0_wires[105] ;
+ wire \prog_clk_0_wires[106] ;
+ wire \prog_clk_0_wires[107] ;
+ wire \prog_clk_0_wires[108] ;
+ wire \prog_clk_0_wires[109] ;
+ wire \prog_clk_0_wires[10] ;
+ wire \prog_clk_0_wires[110] ;
+ wire \prog_clk_0_wires[111] ;
+ wire \prog_clk_0_wires[112] ;
+ wire \prog_clk_0_wires[113] ;
+ wire \prog_clk_0_wires[114] ;
+ wire \prog_clk_0_wires[115] ;
+ wire \prog_clk_0_wires[116] ;
+ wire \prog_clk_0_wires[117] ;
+ wire \prog_clk_0_wires[118] ;
+ wire \prog_clk_0_wires[119] ;
+ wire \prog_clk_0_wires[11] ;
+ wire \prog_clk_0_wires[120] ;
+ wire \prog_clk_0_wires[121] ;
+ wire \prog_clk_0_wires[122] ;
+ wire \prog_clk_0_wires[123] ;
+ wire \prog_clk_0_wires[124] ;
+ wire \prog_clk_0_wires[125] ;
+ wire \prog_clk_0_wires[126] ;
+ wire \prog_clk_0_wires[127] ;
+ wire \prog_clk_0_wires[128] ;
+ wire \prog_clk_0_wires[129] ;
+ wire \prog_clk_0_wires[12] ;
+ wire \prog_clk_0_wires[130] ;
+ wire \prog_clk_0_wires[131] ;
+ wire \prog_clk_0_wires[132] ;
+ wire \prog_clk_0_wires[133] ;
+ wire \prog_clk_0_wires[134] ;
+ wire \prog_clk_0_wires[135] ;
+ wire \prog_clk_0_wires[136] ;
+ wire \prog_clk_0_wires[137] ;
+ wire \prog_clk_0_wires[138] ;
+ wire \prog_clk_0_wires[139] ;
+ wire \prog_clk_0_wires[13] ;
+ wire \prog_clk_0_wires[140] ;
+ wire \prog_clk_0_wires[141] ;
+ wire \prog_clk_0_wires[142] ;
+ wire \prog_clk_0_wires[143] ;
+ wire \prog_clk_0_wires[144] ;
+ wire \prog_clk_0_wires[145] ;
+ wire \prog_clk_0_wires[146] ;
+ wire \prog_clk_0_wires[147] ;
+ wire \prog_clk_0_wires[148] ;
+ wire \prog_clk_0_wires[149] ;
+ wire \prog_clk_0_wires[14] ;
+ wire \prog_clk_0_wires[150] ;
+ wire \prog_clk_0_wires[151] ;
+ wire \prog_clk_0_wires[152] ;
+ wire \prog_clk_0_wires[153] ;
+ wire \prog_clk_0_wires[154] ;
+ wire \prog_clk_0_wires[155] ;
+ wire \prog_clk_0_wires[156] ;
+ wire \prog_clk_0_wires[157] ;
+ wire \prog_clk_0_wires[158] ;
+ wire \prog_clk_0_wires[159] ;
+ wire \prog_clk_0_wires[15] ;
+ wire \prog_clk_0_wires[160] ;
+ wire \prog_clk_0_wires[161] ;
+ wire \prog_clk_0_wires[162] ;
+ wire \prog_clk_0_wires[163] ;
+ wire \prog_clk_0_wires[164] ;
+ wire \prog_clk_0_wires[165] ;
+ wire \prog_clk_0_wires[166] ;
+ wire \prog_clk_0_wires[167] ;
+ wire \prog_clk_0_wires[168] ;
+ wire \prog_clk_0_wires[169] ;
+ wire \prog_clk_0_wires[16] ;
+ wire \prog_clk_0_wires[170] ;
+ wire \prog_clk_0_wires[171] ;
+ wire \prog_clk_0_wires[172] ;
+ wire \prog_clk_0_wires[173] ;
+ wire \prog_clk_0_wires[174] ;
+ wire \prog_clk_0_wires[175] ;
+ wire \prog_clk_0_wires[176] ;
+ wire \prog_clk_0_wires[177] ;
+ wire \prog_clk_0_wires[178] ;
+ wire \prog_clk_0_wires[179] ;
+ wire \prog_clk_0_wires[17] ;
+ wire \prog_clk_0_wires[180] ;
+ wire \prog_clk_0_wires[181] ;
+ wire \prog_clk_0_wires[182] ;
+ wire \prog_clk_0_wires[183] ;
+ wire \prog_clk_0_wires[184] ;
+ wire \prog_clk_0_wires[185] ;
+ wire \prog_clk_0_wires[186] ;
+ wire \prog_clk_0_wires[187] ;
+ wire \prog_clk_0_wires[188] ;
+ wire \prog_clk_0_wires[189] ;
+ wire \prog_clk_0_wires[18] ;
+ wire \prog_clk_0_wires[190] ;
+ wire \prog_clk_0_wires[191] ;
+ wire \prog_clk_0_wires[192] ;
+ wire \prog_clk_0_wires[193] ;
+ wire \prog_clk_0_wires[194] ;
+ wire \prog_clk_0_wires[195] ;
+ wire \prog_clk_0_wires[196] ;
+ wire \prog_clk_0_wires[197] ;
+ wire \prog_clk_0_wires[198] ;
+ wire \prog_clk_0_wires[199] ;
+ wire \prog_clk_0_wires[19] ;
+ wire \prog_clk_0_wires[1] ;
+ wire \prog_clk_0_wires[200] ;
+ wire \prog_clk_0_wires[201] ;
+ wire \prog_clk_0_wires[202] ;
+ wire \prog_clk_0_wires[203] ;
+ wire \prog_clk_0_wires[204] ;
+ wire \prog_clk_0_wires[205] ;
+ wire \prog_clk_0_wires[206] ;
+ wire \prog_clk_0_wires[207] ;
+ wire \prog_clk_0_wires[208] ;
+ wire \prog_clk_0_wires[209] ;
+ wire \prog_clk_0_wires[20] ;
+ wire \prog_clk_0_wires[210] ;
+ wire \prog_clk_0_wires[211] ;
+ wire \prog_clk_0_wires[212] ;
+ wire \prog_clk_0_wires[213] ;
+ wire \prog_clk_0_wires[214] ;
+ wire \prog_clk_0_wires[215] ;
+ wire \prog_clk_0_wires[216] ;
+ wire \prog_clk_0_wires[217] ;
+ wire \prog_clk_0_wires[218] ;
+ wire \prog_clk_0_wires[219] ;
+ wire \prog_clk_0_wires[21] ;
+ wire \prog_clk_0_wires[220] ;
+ wire \prog_clk_0_wires[221] ;
+ wire \prog_clk_0_wires[222] ;
+ wire \prog_clk_0_wires[223] ;
+ wire \prog_clk_0_wires[224] ;
+ wire \prog_clk_0_wires[22] ;
+ wire \prog_clk_0_wires[23] ;
+ wire \prog_clk_0_wires[24] ;
+ wire \prog_clk_0_wires[25] ;
+ wire \prog_clk_0_wires[26] ;
+ wire \prog_clk_0_wires[27] ;
+ wire \prog_clk_0_wires[28] ;
+ wire \prog_clk_0_wires[29] ;
+ wire \prog_clk_0_wires[2] ;
+ wire \prog_clk_0_wires[30] ;
+ wire \prog_clk_0_wires[31] ;
+ wire \prog_clk_0_wires[32] ;
+ wire \prog_clk_0_wires[33] ;
+ wire \prog_clk_0_wires[34] ;
+ wire \prog_clk_0_wires[35] ;
+ wire \prog_clk_0_wires[36] ;
+ wire \prog_clk_0_wires[37] ;
+ wire \prog_clk_0_wires[38] ;
+ wire \prog_clk_0_wires[39] ;
+ wire \prog_clk_0_wires[3] ;
+ wire \prog_clk_0_wires[40] ;
+ wire \prog_clk_0_wires[41] ;
+ wire \prog_clk_0_wires[42] ;
+ wire \prog_clk_0_wires[43] ;
+ wire \prog_clk_0_wires[44] ;
+ wire \prog_clk_0_wires[45] ;
+ wire \prog_clk_0_wires[46] ;
+ wire \prog_clk_0_wires[47] ;
+ wire \prog_clk_0_wires[48] ;
+ wire \prog_clk_0_wires[49] ;
+ wire \prog_clk_0_wires[4] ;
+ wire \prog_clk_0_wires[50] ;
+ wire \prog_clk_0_wires[51] ;
+ wire \prog_clk_0_wires[52] ;
+ wire \prog_clk_0_wires[53] ;
+ wire \prog_clk_0_wires[54] ;
+ wire \prog_clk_0_wires[55] ;
+ wire \prog_clk_0_wires[56] ;
+ wire \prog_clk_0_wires[57] ;
+ wire \prog_clk_0_wires[58] ;
+ wire \prog_clk_0_wires[59] ;
+ wire \prog_clk_0_wires[5] ;
+ wire \prog_clk_0_wires[60] ;
+ wire \prog_clk_0_wires[61] ;
+ wire \prog_clk_0_wires[62] ;
+ wire \prog_clk_0_wires[63] ;
+ wire \prog_clk_0_wires[64] ;
+ wire \prog_clk_0_wires[65] ;
+ wire \prog_clk_0_wires[66] ;
+ wire \prog_clk_0_wires[67] ;
+ wire \prog_clk_0_wires[68] ;
+ wire \prog_clk_0_wires[69] ;
+ wire \prog_clk_0_wires[6] ;
+ wire \prog_clk_0_wires[70] ;
+ wire \prog_clk_0_wires[71] ;
+ wire \prog_clk_0_wires[72] ;
+ wire \prog_clk_0_wires[73] ;
+ wire \prog_clk_0_wires[74] ;
+ wire \prog_clk_0_wires[75] ;
+ wire \prog_clk_0_wires[76] ;
+ wire \prog_clk_0_wires[77] ;
+ wire \prog_clk_0_wires[78] ;
+ wire \prog_clk_0_wires[79] ;
+ wire \prog_clk_0_wires[7] ;
+ wire \prog_clk_0_wires[80] ;
+ wire \prog_clk_0_wires[81] ;
+ wire \prog_clk_0_wires[82] ;
+ wire \prog_clk_0_wires[83] ;
+ wire \prog_clk_0_wires[84] ;
+ wire \prog_clk_0_wires[85] ;
+ wire \prog_clk_0_wires[86] ;
+ wire \prog_clk_0_wires[87] ;
+ wire \prog_clk_0_wires[88] ;
+ wire \prog_clk_0_wires[89] ;
+ wire \prog_clk_0_wires[8] ;
+ wire \prog_clk_0_wires[90] ;
+ wire \prog_clk_0_wires[91] ;
+ wire \prog_clk_0_wires[92] ;
+ wire \prog_clk_0_wires[93] ;
+ wire \prog_clk_0_wires[94] ;
+ wire \prog_clk_0_wires[95] ;
+ wire \prog_clk_0_wires[96] ;
+ wire \prog_clk_0_wires[97] ;
+ wire \prog_clk_0_wires[98] ;
+ wire \prog_clk_0_wires[99] ;
+ wire \prog_clk_0_wires[9] ;
+ wire \prog_clk_1_wires[100] ;
+ wire \prog_clk_1_wires[101] ;
+ wire \prog_clk_1_wires[102] ;
+ wire \prog_clk_1_wires[103] ;
+ wire \prog_clk_1_wires[104] ;
+ wire \prog_clk_1_wires[106] ;
+ wire \prog_clk_1_wires[107] ;
+ wire \prog_clk_1_wires[108] ;
+ wire \prog_clk_1_wires[109] ;
+ wire \prog_clk_1_wires[10] ;
+ wire \prog_clk_1_wires[110] ;
+ wire \prog_clk_1_wires[111] ;
+ wire \prog_clk_1_wires[11] ;
+ wire \prog_clk_1_wires[12] ;
+ wire \prog_clk_1_wires[13] ;
+ wire \prog_clk_1_wires[15] ;
+ wire \prog_clk_1_wires[16] ;
+ wire \prog_clk_1_wires[17] ;
+ wire \prog_clk_1_wires[18] ;
+ wire \prog_clk_1_wires[19] ;
+ wire \prog_clk_1_wires[1] ;
+ wire \prog_clk_1_wires[20] ;
+ wire \prog_clk_1_wires[22] ;
+ wire \prog_clk_1_wires[23] ;
+ wire \prog_clk_1_wires[24] ;
+ wire \prog_clk_1_wires[25] ;
+ wire \prog_clk_1_wires[26] ;
+ wire \prog_clk_1_wires[27] ;
+ wire \prog_clk_1_wires[29] ;
+ wire \prog_clk_1_wires[2] ;
+ wire \prog_clk_1_wires[30] ;
+ wire \prog_clk_1_wires[31] ;
+ wire \prog_clk_1_wires[32] ;
+ wire \prog_clk_1_wires[33] ;
+ wire \prog_clk_1_wires[34] ;
+ wire \prog_clk_1_wires[36] ;
+ wire \prog_clk_1_wires[37] ;
+ wire \prog_clk_1_wires[38] ;
+ wire \prog_clk_1_wires[39] ;
+ wire \prog_clk_1_wires[3] ;
+ wire \prog_clk_1_wires[40] ;
+ wire \prog_clk_1_wires[41] ;
+ wire \prog_clk_1_wires[43] ;
+ wire \prog_clk_1_wires[44] ;
+ wire \prog_clk_1_wires[45] ;
+ wire \prog_clk_1_wires[46] ;
+ wire \prog_clk_1_wires[47] ;
+ wire \prog_clk_1_wires[48] ;
+ wire \prog_clk_1_wires[4] ;
+ wire \prog_clk_1_wires[50] ;
+ wire \prog_clk_1_wires[51] ;
+ wire \prog_clk_1_wires[52] ;
+ wire \prog_clk_1_wires[53] ;
+ wire \prog_clk_1_wires[54] ;
+ wire \prog_clk_1_wires[55] ;
+ wire \prog_clk_1_wires[57] ;
+ wire \prog_clk_1_wires[58] ;
+ wire \prog_clk_1_wires[59] ;
+ wire \prog_clk_1_wires[5] ;
+ wire \prog_clk_1_wires[60] ;
+ wire \prog_clk_1_wires[61] ;
+ wire \prog_clk_1_wires[62] ;
+ wire \prog_clk_1_wires[64] ;
+ wire \prog_clk_1_wires[65] ;
+ wire \prog_clk_1_wires[66] ;
+ wire \prog_clk_1_wires[67] ;
+ wire \prog_clk_1_wires[68] ;
+ wire \prog_clk_1_wires[69] ;
+ wire \prog_clk_1_wires[6] ;
+ wire \prog_clk_1_wires[71] ;
+ wire \prog_clk_1_wires[72] ;
+ wire \prog_clk_1_wires[73] ;
+ wire \prog_clk_1_wires[74] ;
+ wire \prog_clk_1_wires[75] ;
+ wire \prog_clk_1_wires[76] ;
+ wire \prog_clk_1_wires[78] ;
+ wire \prog_clk_1_wires[79] ;
+ wire \prog_clk_1_wires[80] ;
+ wire \prog_clk_1_wires[81] ;
+ wire \prog_clk_1_wires[82] ;
+ wire \prog_clk_1_wires[83] ;
+ wire \prog_clk_1_wires[85] ;
+ wire \prog_clk_1_wires[86] ;
+ wire \prog_clk_1_wires[87] ;
+ wire \prog_clk_1_wires[88] ;
+ wire \prog_clk_1_wires[89] ;
+ wire \prog_clk_1_wires[8] ;
+ wire \prog_clk_1_wires[90] ;
+ wire \prog_clk_1_wires[92] ;
+ wire \prog_clk_1_wires[93] ;
+ wire \prog_clk_1_wires[94] ;
+ wire \prog_clk_1_wires[95] ;
+ wire \prog_clk_1_wires[96] ;
+ wire \prog_clk_1_wires[97] ;
+ wire \prog_clk_1_wires[99] ;
+ wire \prog_clk_1_wires[9] ;
+ wire \prog_clk_2_wires[10] ;
+ wire \prog_clk_2_wires[11] ;
+ wire \prog_clk_2_wires[12] ;
+ wire \prog_clk_2_wires[14] ;
+ wire \prog_clk_2_wires[15] ;
+ wire \prog_clk_2_wires[16] ;
+ wire \prog_clk_2_wires[17] ;
+ wire \prog_clk_2_wires[18] ;
+ wire \prog_clk_2_wires[19] ;
+ wire \prog_clk_2_wires[1] ;
+ wire \prog_clk_2_wires[20] ;
+ wire \prog_clk_2_wires[21] ;
+ wire \prog_clk_2_wires[22] ;
+ wire \prog_clk_2_wires[23] ;
+ wire \prog_clk_2_wires[24] ;
+ wire \prog_clk_2_wires[25] ;
+ wire \prog_clk_2_wires[27] ;
+ wire \prog_clk_2_wires[28] ;
+ wire \prog_clk_2_wires[29] ;
+ wire \prog_clk_2_wires[2] ;
+ wire \prog_clk_2_wires[30] ;
+ wire \prog_clk_2_wires[31] ;
+ wire \prog_clk_2_wires[32] ;
+ wire \prog_clk_2_wires[33] ;
+ wire \prog_clk_2_wires[34] ;
+ wire \prog_clk_2_wires[35] ;
+ wire \prog_clk_2_wires[36] ;
+ wire \prog_clk_2_wires[37] ;
+ wire \prog_clk_2_wires[38] ;
+ wire \prog_clk_2_wires[3] ;
+ wire \prog_clk_2_wires[40] ;
+ wire \prog_clk_2_wires[41] ;
+ wire \prog_clk_2_wires[42] ;
+ wire \prog_clk_2_wires[43] ;
+ wire \prog_clk_2_wires[44] ;
+ wire \prog_clk_2_wires[45] ;
+ wire \prog_clk_2_wires[46] ;
+ wire \prog_clk_2_wires[47] ;
+ wire \prog_clk_2_wires[48] ;
+ wire \prog_clk_2_wires[49] ;
+ wire \prog_clk_2_wires[4] ;
+ wire \prog_clk_2_wires[50] ;
+ wire \prog_clk_2_wires[51] ;
+ wire \prog_clk_2_wires[5] ;
+ wire \prog_clk_2_wires[6] ;
+ wire \prog_clk_2_wires[7] ;
+ wire \prog_clk_2_wires[8] ;
+ wire \prog_clk_2_wires[9] ;
+ wire \prog_clk_3_wires[10] ;
+ wire \prog_clk_3_wires[11] ;
+ wire \prog_clk_3_wires[12] ;
+ wire \prog_clk_3_wires[13] ;
+ wire \prog_clk_3_wires[14] ;
+ wire \prog_clk_3_wires[15] ;
+ wire \prog_clk_3_wires[16] ;
+ wire \prog_clk_3_wires[17] ;
+ wire \prog_clk_3_wires[18] ;
+ wire \prog_clk_3_wires[19] ;
+ wire \prog_clk_3_wires[1] ;
+ wire \prog_clk_3_wires[20] ;
+ wire \prog_clk_3_wires[21] ;
+ wire \prog_clk_3_wires[22] ;
+ wire \prog_clk_3_wires[23] ;
+ wire \prog_clk_3_wires[24] ;
+ wire \prog_clk_3_wires[25] ;
+ wire \prog_clk_3_wires[27] ;
+ wire \prog_clk_3_wires[28] ;
+ wire \prog_clk_3_wires[29] ;
+ wire \prog_clk_3_wires[2] ;
+ wire \prog_clk_3_wires[30] ;
+ wire \prog_clk_3_wires[31] ;
+ wire \prog_clk_3_wires[32] ;
+ wire \prog_clk_3_wires[33] ;
+ wire \prog_clk_3_wires[34] ;
+ wire \prog_clk_3_wires[3] ;
+ wire \prog_clk_3_wires[4] ;
+ wire \prog_clk_3_wires[6] ;
+ wire \prog_clk_3_wires[7] ;
+ wire \prog_clk_3_wires[8] ;
+ wire \prog_clk_3_wires[9] ;
+ wire \regin_feedthrough_wires[0] ;
+ wire \regin_feedthrough_wires[10] ;
+ wire \regin_feedthrough_wires[11] ;
+ wire \regin_feedthrough_wires[12] ;
+ wire \regin_feedthrough_wires[13] ;
+ wire \regin_feedthrough_wires[14] ;
+ wire \regin_feedthrough_wires[15] ;
+ wire \regin_feedthrough_wires[16] ;
+ wire \regin_feedthrough_wires[17] ;
+ wire \regin_feedthrough_wires[18] ;
+ wire \regin_feedthrough_wires[19] ;
+ wire \regin_feedthrough_wires[1] ;
+ wire \regin_feedthrough_wires[20] ;
+ wire \regin_feedthrough_wires[21] ;
+ wire \regin_feedthrough_wires[22] ;
+ wire \regin_feedthrough_wires[23] ;
+ wire \regin_feedthrough_wires[24] ;
+ wire \regin_feedthrough_wires[25] ;
+ wire \regin_feedthrough_wires[26] ;
+ wire \regin_feedthrough_wires[27] ;
+ wire \regin_feedthrough_wires[28] ;
+ wire \regin_feedthrough_wires[29] ;
+ wire \regin_feedthrough_wires[2] ;
+ wire \regin_feedthrough_wires[30] ;
+ wire \regin_feedthrough_wires[31] ;
+ wire \regin_feedthrough_wires[32] ;
+ wire \regin_feedthrough_wires[33] ;
+ wire \regin_feedthrough_wires[34] ;
+ wire \regin_feedthrough_wires[35] ;
+ wire \regin_feedthrough_wires[36] ;
+ wire \regin_feedthrough_wires[37] ;
+ wire \regin_feedthrough_wires[38] ;
+ wire \regin_feedthrough_wires[39] ;
+ wire \regin_feedthrough_wires[3] ;
+ wire \regin_feedthrough_wires[40] ;
+ wire \regin_feedthrough_wires[41] ;
+ wire \regin_feedthrough_wires[42] ;
+ wire \regin_feedthrough_wires[43] ;
+ wire \regin_feedthrough_wires[44] ;
+ wire \regin_feedthrough_wires[45] ;
+ wire \regin_feedthrough_wires[46] ;
+ wire \regin_feedthrough_wires[47] ;
+ wire \regin_feedthrough_wires[48] ;
+ wire \regin_feedthrough_wires[49] ;
+ wire \regin_feedthrough_wires[4] ;
+ wire \regin_feedthrough_wires[50] ;
+ wire \regin_feedthrough_wires[51] ;
+ wire \regin_feedthrough_wires[52] ;
+ wire \regin_feedthrough_wires[53] ;
+ wire \regin_feedthrough_wires[54] ;
+ wire \regin_feedthrough_wires[55] ;
+ wire \regin_feedthrough_wires[5] ;
+ wire \regin_feedthrough_wires[6] ;
+ wire \regin_feedthrough_wires[7] ;
+ wire \regin_feedthrough_wires[8] ;
+ wire \regin_feedthrough_wires[9] ;
+ wire \regout_feedthrough_wires[0] ;
+ wire \regout_feedthrough_wires[10] ;
+ wire \regout_feedthrough_wires[11] ;
+ wire \regout_feedthrough_wires[12] ;
+ wire \regout_feedthrough_wires[13] ;
+ wire \regout_feedthrough_wires[14] ;
+ wire \regout_feedthrough_wires[15] ;
+ wire \regout_feedthrough_wires[16] ;
+ wire \regout_feedthrough_wires[17] ;
+ wire \regout_feedthrough_wires[18] ;
+ wire \regout_feedthrough_wires[19] ;
+ wire \regout_feedthrough_wires[1] ;
+ wire \regout_feedthrough_wires[20] ;
+ wire \regout_feedthrough_wires[21] ;
+ wire \regout_feedthrough_wires[22] ;
+ wire \regout_feedthrough_wires[23] ;
+ wire \regout_feedthrough_wires[24] ;
+ wire \regout_feedthrough_wires[25] ;
+ wire \regout_feedthrough_wires[26] ;
+ wire \regout_feedthrough_wires[27] ;
+ wire \regout_feedthrough_wires[28] ;
+ wire \regout_feedthrough_wires[29] ;
+ wire \regout_feedthrough_wires[2] ;
+ wire \regout_feedthrough_wires[30] ;
+ wire \regout_feedthrough_wires[31] ;
+ wire \regout_feedthrough_wires[32] ;
+ wire \regout_feedthrough_wires[33] ;
+ wire \regout_feedthrough_wires[34] ;
+ wire \regout_feedthrough_wires[35] ;
+ wire \regout_feedthrough_wires[36] ;
+ wire \regout_feedthrough_wires[37] ;
+ wire \regout_feedthrough_wires[38] ;
+ wire \regout_feedthrough_wires[39] ;
+ wire \regout_feedthrough_wires[3] ;
+ wire \regout_feedthrough_wires[40] ;
+ wire \regout_feedthrough_wires[41] ;
+ wire \regout_feedthrough_wires[42] ;
+ wire \regout_feedthrough_wires[43] ;
+ wire \regout_feedthrough_wires[44] ;
+ wire \regout_feedthrough_wires[45] ;
+ wire \regout_feedthrough_wires[46] ;
+ wire \regout_feedthrough_wires[47] ;
+ wire \regout_feedthrough_wires[48] ;
+ wire \regout_feedthrough_wires[49] ;
+ wire \regout_feedthrough_wires[4] ;
+ wire \regout_feedthrough_wires[50] ;
+ wire \regout_feedthrough_wires[51] ;
+ wire \regout_feedthrough_wires[52] ;
+ wire \regout_feedthrough_wires[53] ;
+ wire \regout_feedthrough_wires[54] ;
+ wire \regout_feedthrough_wires[55] ;
+ wire \regout_feedthrough_wires[5] ;
+ wire \regout_feedthrough_wires[6] ;
+ wire \regout_feedthrough_wires[7] ;
+ wire \regout_feedthrough_wires[8] ;
+ wire \regout_feedthrough_wires[9] ;
+ wire \sb_0__0__0_chanx_right_out[0] ;
+ wire \sb_0__0__0_chanx_right_out[10] ;
+ wire \sb_0__0__0_chanx_right_out[11] ;
+ wire \sb_0__0__0_chanx_right_out[12] ;
+ wire \sb_0__0__0_chanx_right_out[13] ;
+ wire \sb_0__0__0_chanx_right_out[14] ;
+ wire \sb_0__0__0_chanx_right_out[15] ;
+ wire \sb_0__0__0_chanx_right_out[16] ;
+ wire \sb_0__0__0_chanx_right_out[17] ;
+ wire \sb_0__0__0_chanx_right_out[18] ;
+ wire \sb_0__0__0_chanx_right_out[19] ;
+ wire \sb_0__0__0_chanx_right_out[1] ;
+ wire \sb_0__0__0_chanx_right_out[2] ;
+ wire \sb_0__0__0_chanx_right_out[3] ;
+ wire \sb_0__0__0_chanx_right_out[4] ;
+ wire \sb_0__0__0_chanx_right_out[5] ;
+ wire \sb_0__0__0_chanx_right_out[6] ;
+ wire \sb_0__0__0_chanx_right_out[7] ;
+ wire \sb_0__0__0_chanx_right_out[8] ;
+ wire \sb_0__0__0_chanx_right_out[9] ;
+ wire \sb_0__0__0_chany_top_out[0] ;
+ wire \sb_0__0__0_chany_top_out[10] ;
+ wire \sb_0__0__0_chany_top_out[11] ;
+ wire \sb_0__0__0_chany_top_out[12] ;
+ wire \sb_0__0__0_chany_top_out[13] ;
+ wire \sb_0__0__0_chany_top_out[14] ;
+ wire \sb_0__0__0_chany_top_out[15] ;
+ wire \sb_0__0__0_chany_top_out[16] ;
+ wire \sb_0__0__0_chany_top_out[17] ;
+ wire \sb_0__0__0_chany_top_out[18] ;
+ wire \sb_0__0__0_chany_top_out[19] ;
+ wire \sb_0__0__0_chany_top_out[1] ;
+ wire \sb_0__0__0_chany_top_out[2] ;
+ wire \sb_0__0__0_chany_top_out[3] ;
+ wire \sb_0__0__0_chany_top_out[4] ;
+ wire \sb_0__0__0_chany_top_out[5] ;
+ wire \sb_0__0__0_chany_top_out[6] ;
+ wire \sb_0__0__0_chany_top_out[7] ;
+ wire \sb_0__0__0_chany_top_out[8] ;
+ wire \sb_0__0__0_chany_top_out[9] ;
+ wire sb_0__1__0_ccff_tail;
+ wire \sb_0__1__0_chanx_right_out[0] ;
+ wire \sb_0__1__0_chanx_right_out[10] ;
+ wire \sb_0__1__0_chanx_right_out[11] ;
+ wire \sb_0__1__0_chanx_right_out[12] ;
+ wire \sb_0__1__0_chanx_right_out[13] ;
+ wire \sb_0__1__0_chanx_right_out[14] ;
+ wire \sb_0__1__0_chanx_right_out[15] ;
+ wire \sb_0__1__0_chanx_right_out[16] ;
+ wire \sb_0__1__0_chanx_right_out[17] ;
+ wire \sb_0__1__0_chanx_right_out[18] ;
+ wire \sb_0__1__0_chanx_right_out[19] ;
+ wire \sb_0__1__0_chanx_right_out[1] ;
+ wire \sb_0__1__0_chanx_right_out[2] ;
+ wire \sb_0__1__0_chanx_right_out[3] ;
+ wire \sb_0__1__0_chanx_right_out[4] ;
+ wire \sb_0__1__0_chanx_right_out[5] ;
+ wire \sb_0__1__0_chanx_right_out[6] ;
+ wire \sb_0__1__0_chanx_right_out[7] ;
+ wire \sb_0__1__0_chanx_right_out[8] ;
+ wire \sb_0__1__0_chanx_right_out[9] ;
+ wire \sb_0__1__0_chany_bottom_out[0] ;
+ wire \sb_0__1__0_chany_bottom_out[10] ;
+ wire \sb_0__1__0_chany_bottom_out[11] ;
+ wire \sb_0__1__0_chany_bottom_out[12] ;
+ wire \sb_0__1__0_chany_bottom_out[13] ;
+ wire \sb_0__1__0_chany_bottom_out[14] ;
+ wire \sb_0__1__0_chany_bottom_out[15] ;
+ wire \sb_0__1__0_chany_bottom_out[16] ;
+ wire \sb_0__1__0_chany_bottom_out[17] ;
+ wire \sb_0__1__0_chany_bottom_out[18] ;
+ wire \sb_0__1__0_chany_bottom_out[19] ;
+ wire \sb_0__1__0_chany_bottom_out[1] ;
+ wire \sb_0__1__0_chany_bottom_out[2] ;
+ wire \sb_0__1__0_chany_bottom_out[3] ;
+ wire \sb_0__1__0_chany_bottom_out[4] ;
+ wire \sb_0__1__0_chany_bottom_out[5] ;
+ wire \sb_0__1__0_chany_bottom_out[6] ;
+ wire \sb_0__1__0_chany_bottom_out[7] ;
+ wire \sb_0__1__0_chany_bottom_out[8] ;
+ wire \sb_0__1__0_chany_bottom_out[9] ;
+ wire \sb_0__1__0_chany_top_out[0] ;
+ wire \sb_0__1__0_chany_top_out[10] ;
+ wire \sb_0__1__0_chany_top_out[11] ;
+ wire \sb_0__1__0_chany_top_out[12] ;
+ wire \sb_0__1__0_chany_top_out[13] ;
+ wire \sb_0__1__0_chany_top_out[14] ;
+ wire \sb_0__1__0_chany_top_out[15] ;
+ wire \sb_0__1__0_chany_top_out[16] ;
+ wire \sb_0__1__0_chany_top_out[17] ;
+ wire \sb_0__1__0_chany_top_out[18] ;
+ wire \sb_0__1__0_chany_top_out[19] ;
+ wire \sb_0__1__0_chany_top_out[1] ;
+ wire \sb_0__1__0_chany_top_out[2] ;
+ wire \sb_0__1__0_chany_top_out[3] ;
+ wire \sb_0__1__0_chany_top_out[4] ;
+ wire \sb_0__1__0_chany_top_out[5] ;
+ wire \sb_0__1__0_chany_top_out[6] ;
+ wire \sb_0__1__0_chany_top_out[7] ;
+ wire \sb_0__1__0_chany_top_out[8] ;
+ wire \sb_0__1__0_chany_top_out[9] ;
+ wire sb_0__1__1_ccff_tail;
+ wire \sb_0__1__1_chanx_right_out[0] ;
+ wire \sb_0__1__1_chanx_right_out[10] ;
+ wire \sb_0__1__1_chanx_right_out[11] ;
+ wire \sb_0__1__1_chanx_right_out[12] ;
+ wire \sb_0__1__1_chanx_right_out[13] ;
+ wire \sb_0__1__1_chanx_right_out[14] ;
+ wire \sb_0__1__1_chanx_right_out[15] ;
+ wire \sb_0__1__1_chanx_right_out[16] ;
+ wire \sb_0__1__1_chanx_right_out[17] ;
+ wire \sb_0__1__1_chanx_right_out[18] ;
+ wire \sb_0__1__1_chanx_right_out[19] ;
+ wire \sb_0__1__1_chanx_right_out[1] ;
+ wire \sb_0__1__1_chanx_right_out[2] ;
+ wire \sb_0__1__1_chanx_right_out[3] ;
+ wire \sb_0__1__1_chanx_right_out[4] ;
+ wire \sb_0__1__1_chanx_right_out[5] ;
+ wire \sb_0__1__1_chanx_right_out[6] ;
+ wire \sb_0__1__1_chanx_right_out[7] ;
+ wire \sb_0__1__1_chanx_right_out[8] ;
+ wire \sb_0__1__1_chanx_right_out[9] ;
+ wire \sb_0__1__1_chany_bottom_out[0] ;
+ wire \sb_0__1__1_chany_bottom_out[10] ;
+ wire \sb_0__1__1_chany_bottom_out[11] ;
+ wire \sb_0__1__1_chany_bottom_out[12] ;
+ wire \sb_0__1__1_chany_bottom_out[13] ;
+ wire \sb_0__1__1_chany_bottom_out[14] ;
+ wire \sb_0__1__1_chany_bottom_out[15] ;
+ wire \sb_0__1__1_chany_bottom_out[16] ;
+ wire \sb_0__1__1_chany_bottom_out[17] ;
+ wire \sb_0__1__1_chany_bottom_out[18] ;
+ wire \sb_0__1__1_chany_bottom_out[19] ;
+ wire \sb_0__1__1_chany_bottom_out[1] ;
+ wire \sb_0__1__1_chany_bottom_out[2] ;
+ wire \sb_0__1__1_chany_bottom_out[3] ;
+ wire \sb_0__1__1_chany_bottom_out[4] ;
+ wire \sb_0__1__1_chany_bottom_out[5] ;
+ wire \sb_0__1__1_chany_bottom_out[6] ;
+ wire \sb_0__1__1_chany_bottom_out[7] ;
+ wire \sb_0__1__1_chany_bottom_out[8] ;
+ wire \sb_0__1__1_chany_bottom_out[9] ;
+ wire \sb_0__1__1_chany_top_out[0] ;
+ wire \sb_0__1__1_chany_top_out[10] ;
+ wire \sb_0__1__1_chany_top_out[11] ;
+ wire \sb_0__1__1_chany_top_out[12] ;
+ wire \sb_0__1__1_chany_top_out[13] ;
+ wire \sb_0__1__1_chany_top_out[14] ;
+ wire \sb_0__1__1_chany_top_out[15] ;
+ wire \sb_0__1__1_chany_top_out[16] ;
+ wire \sb_0__1__1_chany_top_out[17] ;
+ wire \sb_0__1__1_chany_top_out[18] ;
+ wire \sb_0__1__1_chany_top_out[19] ;
+ wire \sb_0__1__1_chany_top_out[1] ;
+ wire \sb_0__1__1_chany_top_out[2] ;
+ wire \sb_0__1__1_chany_top_out[3] ;
+ wire \sb_0__1__1_chany_top_out[4] ;
+ wire \sb_0__1__1_chany_top_out[5] ;
+ wire \sb_0__1__1_chany_top_out[6] ;
+ wire \sb_0__1__1_chany_top_out[7] ;
+ wire \sb_0__1__1_chany_top_out[8] ;
+ wire \sb_0__1__1_chany_top_out[9] ;
+ wire sb_0__1__2_ccff_tail;
+ wire \sb_0__1__2_chanx_right_out[0] ;
+ wire \sb_0__1__2_chanx_right_out[10] ;
+ wire \sb_0__1__2_chanx_right_out[11] ;
+ wire \sb_0__1__2_chanx_right_out[12] ;
+ wire \sb_0__1__2_chanx_right_out[13] ;
+ wire \sb_0__1__2_chanx_right_out[14] ;
+ wire \sb_0__1__2_chanx_right_out[15] ;
+ wire \sb_0__1__2_chanx_right_out[16] ;
+ wire \sb_0__1__2_chanx_right_out[17] ;
+ wire \sb_0__1__2_chanx_right_out[18] ;
+ wire \sb_0__1__2_chanx_right_out[19] ;
+ wire \sb_0__1__2_chanx_right_out[1] ;
+ wire \sb_0__1__2_chanx_right_out[2] ;
+ wire \sb_0__1__2_chanx_right_out[3] ;
+ wire \sb_0__1__2_chanx_right_out[4] ;
+ wire \sb_0__1__2_chanx_right_out[5] ;
+ wire \sb_0__1__2_chanx_right_out[6] ;
+ wire \sb_0__1__2_chanx_right_out[7] ;
+ wire \sb_0__1__2_chanx_right_out[8] ;
+ wire \sb_0__1__2_chanx_right_out[9] ;
+ wire \sb_0__1__2_chany_bottom_out[0] ;
+ wire \sb_0__1__2_chany_bottom_out[10] ;
+ wire \sb_0__1__2_chany_bottom_out[11] ;
+ wire \sb_0__1__2_chany_bottom_out[12] ;
+ wire \sb_0__1__2_chany_bottom_out[13] ;
+ wire \sb_0__1__2_chany_bottom_out[14] ;
+ wire \sb_0__1__2_chany_bottom_out[15] ;
+ wire \sb_0__1__2_chany_bottom_out[16] ;
+ wire \sb_0__1__2_chany_bottom_out[17] ;
+ wire \sb_0__1__2_chany_bottom_out[18] ;
+ wire \sb_0__1__2_chany_bottom_out[19] ;
+ wire \sb_0__1__2_chany_bottom_out[1] ;
+ wire \sb_0__1__2_chany_bottom_out[2] ;
+ wire \sb_0__1__2_chany_bottom_out[3] ;
+ wire \sb_0__1__2_chany_bottom_out[4] ;
+ wire \sb_0__1__2_chany_bottom_out[5] ;
+ wire \sb_0__1__2_chany_bottom_out[6] ;
+ wire \sb_0__1__2_chany_bottom_out[7] ;
+ wire \sb_0__1__2_chany_bottom_out[8] ;
+ wire \sb_0__1__2_chany_bottom_out[9] ;
+ wire \sb_0__1__2_chany_top_out[0] ;
+ wire \sb_0__1__2_chany_top_out[10] ;
+ wire \sb_0__1__2_chany_top_out[11] ;
+ wire \sb_0__1__2_chany_top_out[12] ;
+ wire \sb_0__1__2_chany_top_out[13] ;
+ wire \sb_0__1__2_chany_top_out[14] ;
+ wire \sb_0__1__2_chany_top_out[15] ;
+ wire \sb_0__1__2_chany_top_out[16] ;
+ wire \sb_0__1__2_chany_top_out[17] ;
+ wire \sb_0__1__2_chany_top_out[18] ;
+ wire \sb_0__1__2_chany_top_out[19] ;
+ wire \sb_0__1__2_chany_top_out[1] ;
+ wire \sb_0__1__2_chany_top_out[2] ;
+ wire \sb_0__1__2_chany_top_out[3] ;
+ wire \sb_0__1__2_chany_top_out[4] ;
+ wire \sb_0__1__2_chany_top_out[5] ;
+ wire \sb_0__1__2_chany_top_out[6] ;
+ wire \sb_0__1__2_chany_top_out[7] ;
+ wire \sb_0__1__2_chany_top_out[8] ;
+ wire \sb_0__1__2_chany_top_out[9] ;
+ wire sb_0__1__3_ccff_tail;
+ wire \sb_0__1__3_chanx_right_out[0] ;
+ wire \sb_0__1__3_chanx_right_out[10] ;
+ wire \sb_0__1__3_chanx_right_out[11] ;
+ wire \sb_0__1__3_chanx_right_out[12] ;
+ wire \sb_0__1__3_chanx_right_out[13] ;
+ wire \sb_0__1__3_chanx_right_out[14] ;
+ wire \sb_0__1__3_chanx_right_out[15] ;
+ wire \sb_0__1__3_chanx_right_out[16] ;
+ wire \sb_0__1__3_chanx_right_out[17] ;
+ wire \sb_0__1__3_chanx_right_out[18] ;
+ wire \sb_0__1__3_chanx_right_out[19] ;
+ wire \sb_0__1__3_chanx_right_out[1] ;
+ wire \sb_0__1__3_chanx_right_out[2] ;
+ wire \sb_0__1__3_chanx_right_out[3] ;
+ wire \sb_0__1__3_chanx_right_out[4] ;
+ wire \sb_0__1__3_chanx_right_out[5] ;
+ wire \sb_0__1__3_chanx_right_out[6] ;
+ wire \sb_0__1__3_chanx_right_out[7] ;
+ wire \sb_0__1__3_chanx_right_out[8] ;
+ wire \sb_0__1__3_chanx_right_out[9] ;
+ wire \sb_0__1__3_chany_bottom_out[0] ;
+ wire \sb_0__1__3_chany_bottom_out[10] ;
+ wire \sb_0__1__3_chany_bottom_out[11] ;
+ wire \sb_0__1__3_chany_bottom_out[12] ;
+ wire \sb_0__1__3_chany_bottom_out[13] ;
+ wire \sb_0__1__3_chany_bottom_out[14] ;
+ wire \sb_0__1__3_chany_bottom_out[15] ;
+ wire \sb_0__1__3_chany_bottom_out[16] ;
+ wire \sb_0__1__3_chany_bottom_out[17] ;
+ wire \sb_0__1__3_chany_bottom_out[18] ;
+ wire \sb_0__1__3_chany_bottom_out[19] ;
+ wire \sb_0__1__3_chany_bottom_out[1] ;
+ wire \sb_0__1__3_chany_bottom_out[2] ;
+ wire \sb_0__1__3_chany_bottom_out[3] ;
+ wire \sb_0__1__3_chany_bottom_out[4] ;
+ wire \sb_0__1__3_chany_bottom_out[5] ;
+ wire \sb_0__1__3_chany_bottom_out[6] ;
+ wire \sb_0__1__3_chany_bottom_out[7] ;
+ wire \sb_0__1__3_chany_bottom_out[8] ;
+ wire \sb_0__1__3_chany_bottom_out[9] ;
+ wire \sb_0__1__3_chany_top_out[0] ;
+ wire \sb_0__1__3_chany_top_out[10] ;
+ wire \sb_0__1__3_chany_top_out[11] ;
+ wire \sb_0__1__3_chany_top_out[12] ;
+ wire \sb_0__1__3_chany_top_out[13] ;
+ wire \sb_0__1__3_chany_top_out[14] ;
+ wire \sb_0__1__3_chany_top_out[15] ;
+ wire \sb_0__1__3_chany_top_out[16] ;
+ wire \sb_0__1__3_chany_top_out[17] ;
+ wire \sb_0__1__3_chany_top_out[18] ;
+ wire \sb_0__1__3_chany_top_out[19] ;
+ wire \sb_0__1__3_chany_top_out[1] ;
+ wire \sb_0__1__3_chany_top_out[2] ;
+ wire \sb_0__1__3_chany_top_out[3] ;
+ wire \sb_0__1__3_chany_top_out[4] ;
+ wire \sb_0__1__3_chany_top_out[5] ;
+ wire \sb_0__1__3_chany_top_out[6] ;
+ wire \sb_0__1__3_chany_top_out[7] ;
+ wire \sb_0__1__3_chany_top_out[8] ;
+ wire \sb_0__1__3_chany_top_out[9] ;
+ wire sb_0__1__4_ccff_tail;
+ wire \sb_0__1__4_chanx_right_out[0] ;
+ wire \sb_0__1__4_chanx_right_out[10] ;
+ wire \sb_0__1__4_chanx_right_out[11] ;
+ wire \sb_0__1__4_chanx_right_out[12] ;
+ wire \sb_0__1__4_chanx_right_out[13] ;
+ wire \sb_0__1__4_chanx_right_out[14] ;
+ wire \sb_0__1__4_chanx_right_out[15] ;
+ wire \sb_0__1__4_chanx_right_out[16] ;
+ wire \sb_0__1__4_chanx_right_out[17] ;
+ wire \sb_0__1__4_chanx_right_out[18] ;
+ wire \sb_0__1__4_chanx_right_out[19] ;
+ wire \sb_0__1__4_chanx_right_out[1] ;
+ wire \sb_0__1__4_chanx_right_out[2] ;
+ wire \sb_0__1__4_chanx_right_out[3] ;
+ wire \sb_0__1__4_chanx_right_out[4] ;
+ wire \sb_0__1__4_chanx_right_out[5] ;
+ wire \sb_0__1__4_chanx_right_out[6] ;
+ wire \sb_0__1__4_chanx_right_out[7] ;
+ wire \sb_0__1__4_chanx_right_out[8] ;
+ wire \sb_0__1__4_chanx_right_out[9] ;
+ wire \sb_0__1__4_chany_bottom_out[0] ;
+ wire \sb_0__1__4_chany_bottom_out[10] ;
+ wire \sb_0__1__4_chany_bottom_out[11] ;
+ wire \sb_0__1__4_chany_bottom_out[12] ;
+ wire \sb_0__1__4_chany_bottom_out[13] ;
+ wire \sb_0__1__4_chany_bottom_out[14] ;
+ wire \sb_0__1__4_chany_bottom_out[15] ;
+ wire \sb_0__1__4_chany_bottom_out[16] ;
+ wire \sb_0__1__4_chany_bottom_out[17] ;
+ wire \sb_0__1__4_chany_bottom_out[18] ;
+ wire \sb_0__1__4_chany_bottom_out[19] ;
+ wire \sb_0__1__4_chany_bottom_out[1] ;
+ wire \sb_0__1__4_chany_bottom_out[2] ;
+ wire \sb_0__1__4_chany_bottom_out[3] ;
+ wire \sb_0__1__4_chany_bottom_out[4] ;
+ wire \sb_0__1__4_chany_bottom_out[5] ;
+ wire \sb_0__1__4_chany_bottom_out[6] ;
+ wire \sb_0__1__4_chany_bottom_out[7] ;
+ wire \sb_0__1__4_chany_bottom_out[8] ;
+ wire \sb_0__1__4_chany_bottom_out[9] ;
+ wire \sb_0__1__4_chany_top_out[0] ;
+ wire \sb_0__1__4_chany_top_out[10] ;
+ wire \sb_0__1__4_chany_top_out[11] ;
+ wire \sb_0__1__4_chany_top_out[12] ;
+ wire \sb_0__1__4_chany_top_out[13] ;
+ wire \sb_0__1__4_chany_top_out[14] ;
+ wire \sb_0__1__4_chany_top_out[15] ;
+ wire \sb_0__1__4_chany_top_out[16] ;
+ wire \sb_0__1__4_chany_top_out[17] ;
+ wire \sb_0__1__4_chany_top_out[18] ;
+ wire \sb_0__1__4_chany_top_out[19] ;
+ wire \sb_0__1__4_chany_top_out[1] ;
+ wire \sb_0__1__4_chany_top_out[2] ;
+ wire \sb_0__1__4_chany_top_out[3] ;
+ wire \sb_0__1__4_chany_top_out[4] ;
+ wire \sb_0__1__4_chany_top_out[5] ;
+ wire \sb_0__1__4_chany_top_out[6] ;
+ wire \sb_0__1__4_chany_top_out[7] ;
+ wire \sb_0__1__4_chany_top_out[8] ;
+ wire \sb_0__1__4_chany_top_out[9] ;
+ wire sb_0__1__5_ccff_tail;
+ wire \sb_0__1__5_chanx_right_out[0] ;
+ wire \sb_0__1__5_chanx_right_out[10] ;
+ wire \sb_0__1__5_chanx_right_out[11] ;
+ wire \sb_0__1__5_chanx_right_out[12] ;
+ wire \sb_0__1__5_chanx_right_out[13] ;
+ wire \sb_0__1__5_chanx_right_out[14] ;
+ wire \sb_0__1__5_chanx_right_out[15] ;
+ wire \sb_0__1__5_chanx_right_out[16] ;
+ wire \sb_0__1__5_chanx_right_out[17] ;
+ wire \sb_0__1__5_chanx_right_out[18] ;
+ wire \sb_0__1__5_chanx_right_out[19] ;
+ wire \sb_0__1__5_chanx_right_out[1] ;
+ wire \sb_0__1__5_chanx_right_out[2] ;
+ wire \sb_0__1__5_chanx_right_out[3] ;
+ wire \sb_0__1__5_chanx_right_out[4] ;
+ wire \sb_0__1__5_chanx_right_out[5] ;
+ wire \sb_0__1__5_chanx_right_out[6] ;
+ wire \sb_0__1__5_chanx_right_out[7] ;
+ wire \sb_0__1__5_chanx_right_out[8] ;
+ wire \sb_0__1__5_chanx_right_out[9] ;
+ wire \sb_0__1__5_chany_bottom_out[0] ;
+ wire \sb_0__1__5_chany_bottom_out[10] ;
+ wire \sb_0__1__5_chany_bottom_out[11] ;
+ wire \sb_0__1__5_chany_bottom_out[12] ;
+ wire \sb_0__1__5_chany_bottom_out[13] ;
+ wire \sb_0__1__5_chany_bottom_out[14] ;
+ wire \sb_0__1__5_chany_bottom_out[15] ;
+ wire \sb_0__1__5_chany_bottom_out[16] ;
+ wire \sb_0__1__5_chany_bottom_out[17] ;
+ wire \sb_0__1__5_chany_bottom_out[18] ;
+ wire \sb_0__1__5_chany_bottom_out[19] ;
+ wire \sb_0__1__5_chany_bottom_out[1] ;
+ wire \sb_0__1__5_chany_bottom_out[2] ;
+ wire \sb_0__1__5_chany_bottom_out[3] ;
+ wire \sb_0__1__5_chany_bottom_out[4] ;
+ wire \sb_0__1__5_chany_bottom_out[5] ;
+ wire \sb_0__1__5_chany_bottom_out[6] ;
+ wire \sb_0__1__5_chany_bottom_out[7] ;
+ wire \sb_0__1__5_chany_bottom_out[8] ;
+ wire \sb_0__1__5_chany_bottom_out[9] ;
+ wire \sb_0__1__5_chany_top_out[0] ;
+ wire \sb_0__1__5_chany_top_out[10] ;
+ wire \sb_0__1__5_chany_top_out[11] ;
+ wire \sb_0__1__5_chany_top_out[12] ;
+ wire \sb_0__1__5_chany_top_out[13] ;
+ wire \sb_0__1__5_chany_top_out[14] ;
+ wire \sb_0__1__5_chany_top_out[15] ;
+ wire \sb_0__1__5_chany_top_out[16] ;
+ wire \sb_0__1__5_chany_top_out[17] ;
+ wire \sb_0__1__5_chany_top_out[18] ;
+ wire \sb_0__1__5_chany_top_out[19] ;
+ wire \sb_0__1__5_chany_top_out[1] ;
+ wire \sb_0__1__5_chany_top_out[2] ;
+ wire \sb_0__1__5_chany_top_out[3] ;
+ wire \sb_0__1__5_chany_top_out[4] ;
+ wire \sb_0__1__5_chany_top_out[5] ;
+ wire \sb_0__1__5_chany_top_out[6] ;
+ wire \sb_0__1__5_chany_top_out[7] ;
+ wire \sb_0__1__5_chany_top_out[8] ;
+ wire \sb_0__1__5_chany_top_out[9] ;
+ wire sb_0__1__6_ccff_tail;
+ wire \sb_0__1__6_chanx_right_out[0] ;
+ wire \sb_0__1__6_chanx_right_out[10] ;
+ wire \sb_0__1__6_chanx_right_out[11] ;
+ wire \sb_0__1__6_chanx_right_out[12] ;
+ wire \sb_0__1__6_chanx_right_out[13] ;
+ wire \sb_0__1__6_chanx_right_out[14] ;
+ wire \sb_0__1__6_chanx_right_out[15] ;
+ wire \sb_0__1__6_chanx_right_out[16] ;
+ wire \sb_0__1__6_chanx_right_out[17] ;
+ wire \sb_0__1__6_chanx_right_out[18] ;
+ wire \sb_0__1__6_chanx_right_out[19] ;
+ wire \sb_0__1__6_chanx_right_out[1] ;
+ wire \sb_0__1__6_chanx_right_out[2] ;
+ wire \sb_0__1__6_chanx_right_out[3] ;
+ wire \sb_0__1__6_chanx_right_out[4] ;
+ wire \sb_0__1__6_chanx_right_out[5] ;
+ wire \sb_0__1__6_chanx_right_out[6] ;
+ wire \sb_0__1__6_chanx_right_out[7] ;
+ wire \sb_0__1__6_chanx_right_out[8] ;
+ wire \sb_0__1__6_chanx_right_out[9] ;
+ wire \sb_0__1__6_chany_bottom_out[0] ;
+ wire \sb_0__1__6_chany_bottom_out[10] ;
+ wire \sb_0__1__6_chany_bottom_out[11] ;
+ wire \sb_0__1__6_chany_bottom_out[12] ;
+ wire \sb_0__1__6_chany_bottom_out[13] ;
+ wire \sb_0__1__6_chany_bottom_out[14] ;
+ wire \sb_0__1__6_chany_bottom_out[15] ;
+ wire \sb_0__1__6_chany_bottom_out[16] ;
+ wire \sb_0__1__6_chany_bottom_out[17] ;
+ wire \sb_0__1__6_chany_bottom_out[18] ;
+ wire \sb_0__1__6_chany_bottom_out[19] ;
+ wire \sb_0__1__6_chany_bottom_out[1] ;
+ wire \sb_0__1__6_chany_bottom_out[2] ;
+ wire \sb_0__1__6_chany_bottom_out[3] ;
+ wire \sb_0__1__6_chany_bottom_out[4] ;
+ wire \sb_0__1__6_chany_bottom_out[5] ;
+ wire \sb_0__1__6_chany_bottom_out[6] ;
+ wire \sb_0__1__6_chany_bottom_out[7] ;
+ wire \sb_0__1__6_chany_bottom_out[8] ;
+ wire \sb_0__1__6_chany_bottom_out[9] ;
+ wire \sb_0__1__6_chany_top_out[0] ;
+ wire \sb_0__1__6_chany_top_out[10] ;
+ wire \sb_0__1__6_chany_top_out[11] ;
+ wire \sb_0__1__6_chany_top_out[12] ;
+ wire \sb_0__1__6_chany_top_out[13] ;
+ wire \sb_0__1__6_chany_top_out[14] ;
+ wire \sb_0__1__6_chany_top_out[15] ;
+ wire \sb_0__1__6_chany_top_out[16] ;
+ wire \sb_0__1__6_chany_top_out[17] ;
+ wire \sb_0__1__6_chany_top_out[18] ;
+ wire \sb_0__1__6_chany_top_out[19] ;
+ wire \sb_0__1__6_chany_top_out[1] ;
+ wire \sb_0__1__6_chany_top_out[2] ;
+ wire \sb_0__1__6_chany_top_out[3] ;
+ wire \sb_0__1__6_chany_top_out[4] ;
+ wire \sb_0__1__6_chany_top_out[5] ;
+ wire \sb_0__1__6_chany_top_out[6] ;
+ wire \sb_0__1__6_chany_top_out[7] ;
+ wire \sb_0__1__6_chany_top_out[8] ;
+ wire \sb_0__1__6_chany_top_out[9] ;
+ wire sb_0__8__0_ccff_tail;
+ wire \sb_0__8__0_chanx_right_out[0] ;
+ wire \sb_0__8__0_chanx_right_out[10] ;
+ wire \sb_0__8__0_chanx_right_out[11] ;
+ wire \sb_0__8__0_chanx_right_out[12] ;
+ wire \sb_0__8__0_chanx_right_out[13] ;
+ wire \sb_0__8__0_chanx_right_out[14] ;
+ wire \sb_0__8__0_chanx_right_out[15] ;
+ wire \sb_0__8__0_chanx_right_out[16] ;
+ wire \sb_0__8__0_chanx_right_out[17] ;
+ wire \sb_0__8__0_chanx_right_out[18] ;
+ wire \sb_0__8__0_chanx_right_out[19] ;
+ wire \sb_0__8__0_chanx_right_out[1] ;
+ wire \sb_0__8__0_chanx_right_out[2] ;
+ wire \sb_0__8__0_chanx_right_out[3] ;
+ wire \sb_0__8__0_chanx_right_out[4] ;
+ wire \sb_0__8__0_chanx_right_out[5] ;
+ wire \sb_0__8__0_chanx_right_out[6] ;
+ wire \sb_0__8__0_chanx_right_out[7] ;
+ wire \sb_0__8__0_chanx_right_out[8] ;
+ wire \sb_0__8__0_chanx_right_out[9] ;
+ wire \sb_0__8__0_chany_bottom_out[0] ;
+ wire \sb_0__8__0_chany_bottom_out[10] ;
+ wire \sb_0__8__0_chany_bottom_out[11] ;
+ wire \sb_0__8__0_chany_bottom_out[12] ;
+ wire \sb_0__8__0_chany_bottom_out[13] ;
+ wire \sb_0__8__0_chany_bottom_out[14] ;
+ wire \sb_0__8__0_chany_bottom_out[15] ;
+ wire \sb_0__8__0_chany_bottom_out[16] ;
+ wire \sb_0__8__0_chany_bottom_out[17] ;
+ wire \sb_0__8__0_chany_bottom_out[18] ;
+ wire \sb_0__8__0_chany_bottom_out[19] ;
+ wire \sb_0__8__0_chany_bottom_out[1] ;
+ wire \sb_0__8__0_chany_bottom_out[2] ;
+ wire \sb_0__8__0_chany_bottom_out[3] ;
+ wire \sb_0__8__0_chany_bottom_out[4] ;
+ wire \sb_0__8__0_chany_bottom_out[5] ;
+ wire \sb_0__8__0_chany_bottom_out[6] ;
+ wire \sb_0__8__0_chany_bottom_out[7] ;
+ wire \sb_0__8__0_chany_bottom_out[8] ;
+ wire \sb_0__8__0_chany_bottom_out[9] ;
+ wire sb_1__0__0_ccff_tail;
+ wire \sb_1__0__0_chanx_left_out[0] ;
+ wire \sb_1__0__0_chanx_left_out[10] ;
+ wire \sb_1__0__0_chanx_left_out[11] ;
+ wire \sb_1__0__0_chanx_left_out[12] ;
+ wire \sb_1__0__0_chanx_left_out[13] ;
+ wire \sb_1__0__0_chanx_left_out[14] ;
+ wire \sb_1__0__0_chanx_left_out[15] ;
+ wire \sb_1__0__0_chanx_left_out[16] ;
+ wire \sb_1__0__0_chanx_left_out[17] ;
+ wire \sb_1__0__0_chanx_left_out[18] ;
+ wire \sb_1__0__0_chanx_left_out[19] ;
+ wire \sb_1__0__0_chanx_left_out[1] ;
+ wire \sb_1__0__0_chanx_left_out[2] ;
+ wire \sb_1__0__0_chanx_left_out[3] ;
+ wire \sb_1__0__0_chanx_left_out[4] ;
+ wire \sb_1__0__0_chanx_left_out[5] ;
+ wire \sb_1__0__0_chanx_left_out[6] ;
+ wire \sb_1__0__0_chanx_left_out[7] ;
+ wire \sb_1__0__0_chanx_left_out[8] ;
+ wire \sb_1__0__0_chanx_left_out[9] ;
+ wire \sb_1__0__0_chanx_right_out[0] ;
+ wire \sb_1__0__0_chanx_right_out[10] ;
+ wire \sb_1__0__0_chanx_right_out[11] ;
+ wire \sb_1__0__0_chanx_right_out[12] ;
+ wire \sb_1__0__0_chanx_right_out[13] ;
+ wire \sb_1__0__0_chanx_right_out[14] ;
+ wire \sb_1__0__0_chanx_right_out[15] ;
+ wire \sb_1__0__0_chanx_right_out[16] ;
+ wire \sb_1__0__0_chanx_right_out[17] ;
+ wire \sb_1__0__0_chanx_right_out[18] ;
+ wire \sb_1__0__0_chanx_right_out[19] ;
+ wire \sb_1__0__0_chanx_right_out[1] ;
+ wire \sb_1__0__0_chanx_right_out[2] ;
+ wire \sb_1__0__0_chanx_right_out[3] ;
+ wire \sb_1__0__0_chanx_right_out[4] ;
+ wire \sb_1__0__0_chanx_right_out[5] ;
+ wire \sb_1__0__0_chanx_right_out[6] ;
+ wire \sb_1__0__0_chanx_right_out[7] ;
+ wire \sb_1__0__0_chanx_right_out[8] ;
+ wire \sb_1__0__0_chanx_right_out[9] ;
+ wire \sb_1__0__0_chany_top_out[0] ;
+ wire \sb_1__0__0_chany_top_out[10] ;
+ wire \sb_1__0__0_chany_top_out[11] ;
+ wire \sb_1__0__0_chany_top_out[12] ;
+ wire \sb_1__0__0_chany_top_out[13] ;
+ wire \sb_1__0__0_chany_top_out[14] ;
+ wire \sb_1__0__0_chany_top_out[15] ;
+ wire \sb_1__0__0_chany_top_out[16] ;
+ wire \sb_1__0__0_chany_top_out[17] ;
+ wire \sb_1__0__0_chany_top_out[18] ;
+ wire \sb_1__0__0_chany_top_out[19] ;
+ wire \sb_1__0__0_chany_top_out[1] ;
+ wire \sb_1__0__0_chany_top_out[2] ;
+ wire \sb_1__0__0_chany_top_out[3] ;
+ wire \sb_1__0__0_chany_top_out[4] ;
+ wire \sb_1__0__0_chany_top_out[5] ;
+ wire \sb_1__0__0_chany_top_out[6] ;
+ wire \sb_1__0__0_chany_top_out[7] ;
+ wire \sb_1__0__0_chany_top_out[8] ;
+ wire \sb_1__0__0_chany_top_out[9] ;
+ wire sb_1__0__1_ccff_tail;
+ wire \sb_1__0__1_chanx_left_out[0] ;
+ wire \sb_1__0__1_chanx_left_out[10] ;
+ wire \sb_1__0__1_chanx_left_out[11] ;
+ wire \sb_1__0__1_chanx_left_out[12] ;
+ wire \sb_1__0__1_chanx_left_out[13] ;
+ wire \sb_1__0__1_chanx_left_out[14] ;
+ wire \sb_1__0__1_chanx_left_out[15] ;
+ wire \sb_1__0__1_chanx_left_out[16] ;
+ wire \sb_1__0__1_chanx_left_out[17] ;
+ wire \sb_1__0__1_chanx_left_out[18] ;
+ wire \sb_1__0__1_chanx_left_out[19] ;
+ wire \sb_1__0__1_chanx_left_out[1] ;
+ wire \sb_1__0__1_chanx_left_out[2] ;
+ wire \sb_1__0__1_chanx_left_out[3] ;
+ wire \sb_1__0__1_chanx_left_out[4] ;
+ wire \sb_1__0__1_chanx_left_out[5] ;
+ wire \sb_1__0__1_chanx_left_out[6] ;
+ wire \sb_1__0__1_chanx_left_out[7] ;
+ wire \sb_1__0__1_chanx_left_out[8] ;
+ wire \sb_1__0__1_chanx_left_out[9] ;
+ wire \sb_1__0__1_chanx_right_out[0] ;
+ wire \sb_1__0__1_chanx_right_out[10] ;
+ wire \sb_1__0__1_chanx_right_out[11] ;
+ wire \sb_1__0__1_chanx_right_out[12] ;
+ wire \sb_1__0__1_chanx_right_out[13] ;
+ wire \sb_1__0__1_chanx_right_out[14] ;
+ wire \sb_1__0__1_chanx_right_out[15] ;
+ wire \sb_1__0__1_chanx_right_out[16] ;
+ wire \sb_1__0__1_chanx_right_out[17] ;
+ wire \sb_1__0__1_chanx_right_out[18] ;
+ wire \sb_1__0__1_chanx_right_out[19] ;
+ wire \sb_1__0__1_chanx_right_out[1] ;
+ wire \sb_1__0__1_chanx_right_out[2] ;
+ wire \sb_1__0__1_chanx_right_out[3] ;
+ wire \sb_1__0__1_chanx_right_out[4] ;
+ wire \sb_1__0__1_chanx_right_out[5] ;
+ wire \sb_1__0__1_chanx_right_out[6] ;
+ wire \sb_1__0__1_chanx_right_out[7] ;
+ wire \sb_1__0__1_chanx_right_out[8] ;
+ wire \sb_1__0__1_chanx_right_out[9] ;
+ wire \sb_1__0__1_chany_top_out[0] ;
+ wire \sb_1__0__1_chany_top_out[10] ;
+ wire \sb_1__0__1_chany_top_out[11] ;
+ wire \sb_1__0__1_chany_top_out[12] ;
+ wire \sb_1__0__1_chany_top_out[13] ;
+ wire \sb_1__0__1_chany_top_out[14] ;
+ wire \sb_1__0__1_chany_top_out[15] ;
+ wire \sb_1__0__1_chany_top_out[16] ;
+ wire \sb_1__0__1_chany_top_out[17] ;
+ wire \sb_1__0__1_chany_top_out[18] ;
+ wire \sb_1__0__1_chany_top_out[19] ;
+ wire \sb_1__0__1_chany_top_out[1] ;
+ wire \sb_1__0__1_chany_top_out[2] ;
+ wire \sb_1__0__1_chany_top_out[3] ;
+ wire \sb_1__0__1_chany_top_out[4] ;
+ wire \sb_1__0__1_chany_top_out[5] ;
+ wire \sb_1__0__1_chany_top_out[6] ;
+ wire \sb_1__0__1_chany_top_out[7] ;
+ wire \sb_1__0__1_chany_top_out[8] ;
+ wire \sb_1__0__1_chany_top_out[9] ;
+ wire sb_1__0__2_ccff_tail;
+ wire \sb_1__0__2_chanx_left_out[0] ;
+ wire \sb_1__0__2_chanx_left_out[10] ;
+ wire \sb_1__0__2_chanx_left_out[11] ;
+ wire \sb_1__0__2_chanx_left_out[12] ;
+ wire \sb_1__0__2_chanx_left_out[13] ;
+ wire \sb_1__0__2_chanx_left_out[14] ;
+ wire \sb_1__0__2_chanx_left_out[15] ;
+ wire \sb_1__0__2_chanx_left_out[16] ;
+ wire \sb_1__0__2_chanx_left_out[17] ;
+ wire \sb_1__0__2_chanx_left_out[18] ;
+ wire \sb_1__0__2_chanx_left_out[19] ;
+ wire \sb_1__0__2_chanx_left_out[1] ;
+ wire \sb_1__0__2_chanx_left_out[2] ;
+ wire \sb_1__0__2_chanx_left_out[3] ;
+ wire \sb_1__0__2_chanx_left_out[4] ;
+ wire \sb_1__0__2_chanx_left_out[5] ;
+ wire \sb_1__0__2_chanx_left_out[6] ;
+ wire \sb_1__0__2_chanx_left_out[7] ;
+ wire \sb_1__0__2_chanx_left_out[8] ;
+ wire \sb_1__0__2_chanx_left_out[9] ;
+ wire \sb_1__0__2_chanx_right_out[0] ;
+ wire \sb_1__0__2_chanx_right_out[10] ;
+ wire \sb_1__0__2_chanx_right_out[11] ;
+ wire \sb_1__0__2_chanx_right_out[12] ;
+ wire \sb_1__0__2_chanx_right_out[13] ;
+ wire \sb_1__0__2_chanx_right_out[14] ;
+ wire \sb_1__0__2_chanx_right_out[15] ;
+ wire \sb_1__0__2_chanx_right_out[16] ;
+ wire \sb_1__0__2_chanx_right_out[17] ;
+ wire \sb_1__0__2_chanx_right_out[18] ;
+ wire \sb_1__0__2_chanx_right_out[19] ;
+ wire \sb_1__0__2_chanx_right_out[1] ;
+ wire \sb_1__0__2_chanx_right_out[2] ;
+ wire \sb_1__0__2_chanx_right_out[3] ;
+ wire \sb_1__0__2_chanx_right_out[4] ;
+ wire \sb_1__0__2_chanx_right_out[5] ;
+ wire \sb_1__0__2_chanx_right_out[6] ;
+ wire \sb_1__0__2_chanx_right_out[7] ;
+ wire \sb_1__0__2_chanx_right_out[8] ;
+ wire \sb_1__0__2_chanx_right_out[9] ;
+ wire \sb_1__0__2_chany_top_out[0] ;
+ wire \sb_1__0__2_chany_top_out[10] ;
+ wire \sb_1__0__2_chany_top_out[11] ;
+ wire \sb_1__0__2_chany_top_out[12] ;
+ wire \sb_1__0__2_chany_top_out[13] ;
+ wire \sb_1__0__2_chany_top_out[14] ;
+ wire \sb_1__0__2_chany_top_out[15] ;
+ wire \sb_1__0__2_chany_top_out[16] ;
+ wire \sb_1__0__2_chany_top_out[17] ;
+ wire \sb_1__0__2_chany_top_out[18] ;
+ wire \sb_1__0__2_chany_top_out[19] ;
+ wire \sb_1__0__2_chany_top_out[1] ;
+ wire \sb_1__0__2_chany_top_out[2] ;
+ wire \sb_1__0__2_chany_top_out[3] ;
+ wire \sb_1__0__2_chany_top_out[4] ;
+ wire \sb_1__0__2_chany_top_out[5] ;
+ wire \sb_1__0__2_chany_top_out[6] ;
+ wire \sb_1__0__2_chany_top_out[7] ;
+ wire \sb_1__0__2_chany_top_out[8] ;
+ wire \sb_1__0__2_chany_top_out[9] ;
+ wire sb_1__0__3_ccff_tail;
+ wire \sb_1__0__3_chanx_left_out[0] ;
+ wire \sb_1__0__3_chanx_left_out[10] ;
+ wire \sb_1__0__3_chanx_left_out[11] ;
+ wire \sb_1__0__3_chanx_left_out[12] ;
+ wire \sb_1__0__3_chanx_left_out[13] ;
+ wire \sb_1__0__3_chanx_left_out[14] ;
+ wire \sb_1__0__3_chanx_left_out[15] ;
+ wire \sb_1__0__3_chanx_left_out[16] ;
+ wire \sb_1__0__3_chanx_left_out[17] ;
+ wire \sb_1__0__3_chanx_left_out[18] ;
+ wire \sb_1__0__3_chanx_left_out[19] ;
+ wire \sb_1__0__3_chanx_left_out[1] ;
+ wire \sb_1__0__3_chanx_left_out[2] ;
+ wire \sb_1__0__3_chanx_left_out[3] ;
+ wire \sb_1__0__3_chanx_left_out[4] ;
+ wire \sb_1__0__3_chanx_left_out[5] ;
+ wire \sb_1__0__3_chanx_left_out[6] ;
+ wire \sb_1__0__3_chanx_left_out[7] ;
+ wire \sb_1__0__3_chanx_left_out[8] ;
+ wire \sb_1__0__3_chanx_left_out[9] ;
+ wire \sb_1__0__3_chanx_right_out[0] ;
+ wire \sb_1__0__3_chanx_right_out[10] ;
+ wire \sb_1__0__3_chanx_right_out[11] ;
+ wire \sb_1__0__3_chanx_right_out[12] ;
+ wire \sb_1__0__3_chanx_right_out[13] ;
+ wire \sb_1__0__3_chanx_right_out[14] ;
+ wire \sb_1__0__3_chanx_right_out[15] ;
+ wire \sb_1__0__3_chanx_right_out[16] ;
+ wire \sb_1__0__3_chanx_right_out[17] ;
+ wire \sb_1__0__3_chanx_right_out[18] ;
+ wire \sb_1__0__3_chanx_right_out[19] ;
+ wire \sb_1__0__3_chanx_right_out[1] ;
+ wire \sb_1__0__3_chanx_right_out[2] ;
+ wire \sb_1__0__3_chanx_right_out[3] ;
+ wire \sb_1__0__3_chanx_right_out[4] ;
+ wire \sb_1__0__3_chanx_right_out[5] ;
+ wire \sb_1__0__3_chanx_right_out[6] ;
+ wire \sb_1__0__3_chanx_right_out[7] ;
+ wire \sb_1__0__3_chanx_right_out[8] ;
+ wire \sb_1__0__3_chanx_right_out[9] ;
+ wire \sb_1__0__3_chany_top_out[0] ;
+ wire \sb_1__0__3_chany_top_out[10] ;
+ wire \sb_1__0__3_chany_top_out[11] ;
+ wire \sb_1__0__3_chany_top_out[12] ;
+ wire \sb_1__0__3_chany_top_out[13] ;
+ wire \sb_1__0__3_chany_top_out[14] ;
+ wire \sb_1__0__3_chany_top_out[15] ;
+ wire \sb_1__0__3_chany_top_out[16] ;
+ wire \sb_1__0__3_chany_top_out[17] ;
+ wire \sb_1__0__3_chany_top_out[18] ;
+ wire \sb_1__0__3_chany_top_out[19] ;
+ wire \sb_1__0__3_chany_top_out[1] ;
+ wire \sb_1__0__3_chany_top_out[2] ;
+ wire \sb_1__0__3_chany_top_out[3] ;
+ wire \sb_1__0__3_chany_top_out[4] ;
+ wire \sb_1__0__3_chany_top_out[5] ;
+ wire \sb_1__0__3_chany_top_out[6] ;
+ wire \sb_1__0__3_chany_top_out[7] ;
+ wire \sb_1__0__3_chany_top_out[8] ;
+ wire \sb_1__0__3_chany_top_out[9] ;
+ wire sb_1__0__4_ccff_tail;
+ wire \sb_1__0__4_chanx_left_out[0] ;
+ wire \sb_1__0__4_chanx_left_out[10] ;
+ wire \sb_1__0__4_chanx_left_out[11] ;
+ wire \sb_1__0__4_chanx_left_out[12] ;
+ wire \sb_1__0__4_chanx_left_out[13] ;
+ wire \sb_1__0__4_chanx_left_out[14] ;
+ wire \sb_1__0__4_chanx_left_out[15] ;
+ wire \sb_1__0__4_chanx_left_out[16] ;
+ wire \sb_1__0__4_chanx_left_out[17] ;
+ wire \sb_1__0__4_chanx_left_out[18] ;
+ wire \sb_1__0__4_chanx_left_out[19] ;
+ wire \sb_1__0__4_chanx_left_out[1] ;
+ wire \sb_1__0__4_chanx_left_out[2] ;
+ wire \sb_1__0__4_chanx_left_out[3] ;
+ wire \sb_1__0__4_chanx_left_out[4] ;
+ wire \sb_1__0__4_chanx_left_out[5] ;
+ wire \sb_1__0__4_chanx_left_out[6] ;
+ wire \sb_1__0__4_chanx_left_out[7] ;
+ wire \sb_1__0__4_chanx_left_out[8] ;
+ wire \sb_1__0__4_chanx_left_out[9] ;
+ wire \sb_1__0__4_chanx_right_out[0] ;
+ wire \sb_1__0__4_chanx_right_out[10] ;
+ wire \sb_1__0__4_chanx_right_out[11] ;
+ wire \sb_1__0__4_chanx_right_out[12] ;
+ wire \sb_1__0__4_chanx_right_out[13] ;
+ wire \sb_1__0__4_chanx_right_out[14] ;
+ wire \sb_1__0__4_chanx_right_out[15] ;
+ wire \sb_1__0__4_chanx_right_out[16] ;
+ wire \sb_1__0__4_chanx_right_out[17] ;
+ wire \sb_1__0__4_chanx_right_out[18] ;
+ wire \sb_1__0__4_chanx_right_out[19] ;
+ wire \sb_1__0__4_chanx_right_out[1] ;
+ wire \sb_1__0__4_chanx_right_out[2] ;
+ wire \sb_1__0__4_chanx_right_out[3] ;
+ wire \sb_1__0__4_chanx_right_out[4] ;
+ wire \sb_1__0__4_chanx_right_out[5] ;
+ wire \sb_1__0__4_chanx_right_out[6] ;
+ wire \sb_1__0__4_chanx_right_out[7] ;
+ wire \sb_1__0__4_chanx_right_out[8] ;
+ wire \sb_1__0__4_chanx_right_out[9] ;
+ wire \sb_1__0__4_chany_top_out[0] ;
+ wire \sb_1__0__4_chany_top_out[10] ;
+ wire \sb_1__0__4_chany_top_out[11] ;
+ wire \sb_1__0__4_chany_top_out[12] ;
+ wire \sb_1__0__4_chany_top_out[13] ;
+ wire \sb_1__0__4_chany_top_out[14] ;
+ wire \sb_1__0__4_chany_top_out[15] ;
+ wire \sb_1__0__4_chany_top_out[16] ;
+ wire \sb_1__0__4_chany_top_out[17] ;
+ wire \sb_1__0__4_chany_top_out[18] ;
+ wire \sb_1__0__4_chany_top_out[19] ;
+ wire \sb_1__0__4_chany_top_out[1] ;
+ wire \sb_1__0__4_chany_top_out[2] ;
+ wire \sb_1__0__4_chany_top_out[3] ;
+ wire \sb_1__0__4_chany_top_out[4] ;
+ wire \sb_1__0__4_chany_top_out[5] ;
+ wire \sb_1__0__4_chany_top_out[6] ;
+ wire \sb_1__0__4_chany_top_out[7] ;
+ wire \sb_1__0__4_chany_top_out[8] ;
+ wire \sb_1__0__4_chany_top_out[9] ;
+ wire sb_1__0__5_ccff_tail;
+ wire \sb_1__0__5_chanx_left_out[0] ;
+ wire \sb_1__0__5_chanx_left_out[10] ;
+ wire \sb_1__0__5_chanx_left_out[11] ;
+ wire \sb_1__0__5_chanx_left_out[12] ;
+ wire \sb_1__0__5_chanx_left_out[13] ;
+ wire \sb_1__0__5_chanx_left_out[14] ;
+ wire \sb_1__0__5_chanx_left_out[15] ;
+ wire \sb_1__0__5_chanx_left_out[16] ;
+ wire \sb_1__0__5_chanx_left_out[17] ;
+ wire \sb_1__0__5_chanx_left_out[18] ;
+ wire \sb_1__0__5_chanx_left_out[19] ;
+ wire \sb_1__0__5_chanx_left_out[1] ;
+ wire \sb_1__0__5_chanx_left_out[2] ;
+ wire \sb_1__0__5_chanx_left_out[3] ;
+ wire \sb_1__0__5_chanx_left_out[4] ;
+ wire \sb_1__0__5_chanx_left_out[5] ;
+ wire \sb_1__0__5_chanx_left_out[6] ;
+ wire \sb_1__0__5_chanx_left_out[7] ;
+ wire \sb_1__0__5_chanx_left_out[8] ;
+ wire \sb_1__0__5_chanx_left_out[9] ;
+ wire \sb_1__0__5_chanx_right_out[0] ;
+ wire \sb_1__0__5_chanx_right_out[10] ;
+ wire \sb_1__0__5_chanx_right_out[11] ;
+ wire \sb_1__0__5_chanx_right_out[12] ;
+ wire \sb_1__0__5_chanx_right_out[13] ;
+ wire \sb_1__0__5_chanx_right_out[14] ;
+ wire \sb_1__0__5_chanx_right_out[15] ;
+ wire \sb_1__0__5_chanx_right_out[16] ;
+ wire \sb_1__0__5_chanx_right_out[17] ;
+ wire \sb_1__0__5_chanx_right_out[18] ;
+ wire \sb_1__0__5_chanx_right_out[19] ;
+ wire \sb_1__0__5_chanx_right_out[1] ;
+ wire \sb_1__0__5_chanx_right_out[2] ;
+ wire \sb_1__0__5_chanx_right_out[3] ;
+ wire \sb_1__0__5_chanx_right_out[4] ;
+ wire \sb_1__0__5_chanx_right_out[5] ;
+ wire \sb_1__0__5_chanx_right_out[6] ;
+ wire \sb_1__0__5_chanx_right_out[7] ;
+ wire \sb_1__0__5_chanx_right_out[8] ;
+ wire \sb_1__0__5_chanx_right_out[9] ;
+ wire \sb_1__0__5_chany_top_out[0] ;
+ wire \sb_1__0__5_chany_top_out[10] ;
+ wire \sb_1__0__5_chany_top_out[11] ;
+ wire \sb_1__0__5_chany_top_out[12] ;
+ wire \sb_1__0__5_chany_top_out[13] ;
+ wire \sb_1__0__5_chany_top_out[14] ;
+ wire \sb_1__0__5_chany_top_out[15] ;
+ wire \sb_1__0__5_chany_top_out[16] ;
+ wire \sb_1__0__5_chany_top_out[17] ;
+ wire \sb_1__0__5_chany_top_out[18] ;
+ wire \sb_1__0__5_chany_top_out[19] ;
+ wire \sb_1__0__5_chany_top_out[1] ;
+ wire \sb_1__0__5_chany_top_out[2] ;
+ wire \sb_1__0__5_chany_top_out[3] ;
+ wire \sb_1__0__5_chany_top_out[4] ;
+ wire \sb_1__0__5_chany_top_out[5] ;
+ wire \sb_1__0__5_chany_top_out[6] ;
+ wire \sb_1__0__5_chany_top_out[7] ;
+ wire \sb_1__0__5_chany_top_out[8] ;
+ wire \sb_1__0__5_chany_top_out[9] ;
+ wire sb_1__0__6_ccff_tail;
+ wire \sb_1__0__6_chanx_left_out[0] ;
+ wire \sb_1__0__6_chanx_left_out[10] ;
+ wire \sb_1__0__6_chanx_left_out[11] ;
+ wire \sb_1__0__6_chanx_left_out[12] ;
+ wire \sb_1__0__6_chanx_left_out[13] ;
+ wire \sb_1__0__6_chanx_left_out[14] ;
+ wire \sb_1__0__6_chanx_left_out[15] ;
+ wire \sb_1__0__6_chanx_left_out[16] ;
+ wire \sb_1__0__6_chanx_left_out[17] ;
+ wire \sb_1__0__6_chanx_left_out[18] ;
+ wire \sb_1__0__6_chanx_left_out[19] ;
+ wire \sb_1__0__6_chanx_left_out[1] ;
+ wire \sb_1__0__6_chanx_left_out[2] ;
+ wire \sb_1__0__6_chanx_left_out[3] ;
+ wire \sb_1__0__6_chanx_left_out[4] ;
+ wire \sb_1__0__6_chanx_left_out[5] ;
+ wire \sb_1__0__6_chanx_left_out[6] ;
+ wire \sb_1__0__6_chanx_left_out[7] ;
+ wire \sb_1__0__6_chanx_left_out[8] ;
+ wire \sb_1__0__6_chanx_left_out[9] ;
+ wire \sb_1__0__6_chanx_right_out[0] ;
+ wire \sb_1__0__6_chanx_right_out[10] ;
+ wire \sb_1__0__6_chanx_right_out[11] ;
+ wire \sb_1__0__6_chanx_right_out[12] ;
+ wire \sb_1__0__6_chanx_right_out[13] ;
+ wire \sb_1__0__6_chanx_right_out[14] ;
+ wire \sb_1__0__6_chanx_right_out[15] ;
+ wire \sb_1__0__6_chanx_right_out[16] ;
+ wire \sb_1__0__6_chanx_right_out[17] ;
+ wire \sb_1__0__6_chanx_right_out[18] ;
+ wire \sb_1__0__6_chanx_right_out[19] ;
+ wire \sb_1__0__6_chanx_right_out[1] ;
+ wire \sb_1__0__6_chanx_right_out[2] ;
+ wire \sb_1__0__6_chanx_right_out[3] ;
+ wire \sb_1__0__6_chanx_right_out[4] ;
+ wire \sb_1__0__6_chanx_right_out[5] ;
+ wire \sb_1__0__6_chanx_right_out[6] ;
+ wire \sb_1__0__6_chanx_right_out[7] ;
+ wire \sb_1__0__6_chanx_right_out[8] ;
+ wire \sb_1__0__6_chanx_right_out[9] ;
+ wire \sb_1__0__6_chany_top_out[0] ;
+ wire \sb_1__0__6_chany_top_out[10] ;
+ wire \sb_1__0__6_chany_top_out[11] ;
+ wire \sb_1__0__6_chany_top_out[12] ;
+ wire \sb_1__0__6_chany_top_out[13] ;
+ wire \sb_1__0__6_chany_top_out[14] ;
+ wire \sb_1__0__6_chany_top_out[15] ;
+ wire \sb_1__0__6_chany_top_out[16] ;
+ wire \sb_1__0__6_chany_top_out[17] ;
+ wire \sb_1__0__6_chany_top_out[18] ;
+ wire \sb_1__0__6_chany_top_out[19] ;
+ wire \sb_1__0__6_chany_top_out[1] ;
+ wire \sb_1__0__6_chany_top_out[2] ;
+ wire \sb_1__0__6_chany_top_out[3] ;
+ wire \sb_1__0__6_chany_top_out[4] ;
+ wire \sb_1__0__6_chany_top_out[5] ;
+ wire \sb_1__0__6_chany_top_out[6] ;
+ wire \sb_1__0__6_chany_top_out[7] ;
+ wire \sb_1__0__6_chany_top_out[8] ;
+ wire \sb_1__0__6_chany_top_out[9] ;
+ wire sb_1__1__0_ccff_tail;
+ wire \sb_1__1__0_chanx_left_out[0] ;
+ wire \sb_1__1__0_chanx_left_out[10] ;
+ wire \sb_1__1__0_chanx_left_out[11] ;
+ wire \sb_1__1__0_chanx_left_out[12] ;
+ wire \sb_1__1__0_chanx_left_out[13] ;
+ wire \sb_1__1__0_chanx_left_out[14] ;
+ wire \sb_1__1__0_chanx_left_out[15] ;
+ wire \sb_1__1__0_chanx_left_out[16] ;
+ wire \sb_1__1__0_chanx_left_out[17] ;
+ wire \sb_1__1__0_chanx_left_out[18] ;
+ wire \sb_1__1__0_chanx_left_out[19] ;
+ wire \sb_1__1__0_chanx_left_out[1] ;
+ wire \sb_1__1__0_chanx_left_out[2] ;
+ wire \sb_1__1__0_chanx_left_out[3] ;
+ wire \sb_1__1__0_chanx_left_out[4] ;
+ wire \sb_1__1__0_chanx_left_out[5] ;
+ wire \sb_1__1__0_chanx_left_out[6] ;
+ wire \sb_1__1__0_chanx_left_out[7] ;
+ wire \sb_1__1__0_chanx_left_out[8] ;
+ wire \sb_1__1__0_chanx_left_out[9] ;
+ wire \sb_1__1__0_chanx_right_out[0] ;
+ wire \sb_1__1__0_chanx_right_out[10] ;
+ wire \sb_1__1__0_chanx_right_out[11] ;
+ wire \sb_1__1__0_chanx_right_out[12] ;
+ wire \sb_1__1__0_chanx_right_out[13] ;
+ wire \sb_1__1__0_chanx_right_out[14] ;
+ wire \sb_1__1__0_chanx_right_out[15] ;
+ wire \sb_1__1__0_chanx_right_out[16] ;
+ wire \sb_1__1__0_chanx_right_out[17] ;
+ wire \sb_1__1__0_chanx_right_out[18] ;
+ wire \sb_1__1__0_chanx_right_out[19] ;
+ wire \sb_1__1__0_chanx_right_out[1] ;
+ wire \sb_1__1__0_chanx_right_out[2] ;
+ wire \sb_1__1__0_chanx_right_out[3] ;
+ wire \sb_1__1__0_chanx_right_out[4] ;
+ wire \sb_1__1__0_chanx_right_out[5] ;
+ wire \sb_1__1__0_chanx_right_out[6] ;
+ wire \sb_1__1__0_chanx_right_out[7] ;
+ wire \sb_1__1__0_chanx_right_out[8] ;
+ wire \sb_1__1__0_chanx_right_out[9] ;
+ wire \sb_1__1__0_chany_bottom_out[0] ;
+ wire \sb_1__1__0_chany_bottom_out[10] ;
+ wire \sb_1__1__0_chany_bottom_out[11] ;
+ wire \sb_1__1__0_chany_bottom_out[12] ;
+ wire \sb_1__1__0_chany_bottom_out[13] ;
+ wire \sb_1__1__0_chany_bottom_out[14] ;
+ wire \sb_1__1__0_chany_bottom_out[15] ;
+ wire \sb_1__1__0_chany_bottom_out[16] ;
+ wire \sb_1__1__0_chany_bottom_out[17] ;
+ wire \sb_1__1__0_chany_bottom_out[18] ;
+ wire \sb_1__1__0_chany_bottom_out[19] ;
+ wire \sb_1__1__0_chany_bottom_out[1] ;
+ wire \sb_1__1__0_chany_bottom_out[2] ;
+ wire \sb_1__1__0_chany_bottom_out[3] ;
+ wire \sb_1__1__0_chany_bottom_out[4] ;
+ wire \sb_1__1__0_chany_bottom_out[5] ;
+ wire \sb_1__1__0_chany_bottom_out[6] ;
+ wire \sb_1__1__0_chany_bottom_out[7] ;
+ wire \sb_1__1__0_chany_bottom_out[8] ;
+ wire \sb_1__1__0_chany_bottom_out[9] ;
+ wire \sb_1__1__0_chany_top_out[0] ;
+ wire \sb_1__1__0_chany_top_out[10] ;
+ wire \sb_1__1__0_chany_top_out[11] ;
+ wire \sb_1__1__0_chany_top_out[12] ;
+ wire \sb_1__1__0_chany_top_out[13] ;
+ wire \sb_1__1__0_chany_top_out[14] ;
+ wire \sb_1__1__0_chany_top_out[15] ;
+ wire \sb_1__1__0_chany_top_out[16] ;
+ wire \sb_1__1__0_chany_top_out[17] ;
+ wire \sb_1__1__0_chany_top_out[18] ;
+ wire \sb_1__1__0_chany_top_out[19] ;
+ wire \sb_1__1__0_chany_top_out[1] ;
+ wire \sb_1__1__0_chany_top_out[2] ;
+ wire \sb_1__1__0_chany_top_out[3] ;
+ wire \sb_1__1__0_chany_top_out[4] ;
+ wire \sb_1__1__0_chany_top_out[5] ;
+ wire \sb_1__1__0_chany_top_out[6] ;
+ wire \sb_1__1__0_chany_top_out[7] ;
+ wire \sb_1__1__0_chany_top_out[8] ;
+ wire \sb_1__1__0_chany_top_out[9] ;
+ wire sb_1__1__10_ccff_tail;
+ wire \sb_1__1__10_chanx_left_out[0] ;
+ wire \sb_1__1__10_chanx_left_out[10] ;
+ wire \sb_1__1__10_chanx_left_out[11] ;
+ wire \sb_1__1__10_chanx_left_out[12] ;
+ wire \sb_1__1__10_chanx_left_out[13] ;
+ wire \sb_1__1__10_chanx_left_out[14] ;
+ wire \sb_1__1__10_chanx_left_out[15] ;
+ wire \sb_1__1__10_chanx_left_out[16] ;
+ wire \sb_1__1__10_chanx_left_out[17] ;
+ wire \sb_1__1__10_chanx_left_out[18] ;
+ wire \sb_1__1__10_chanx_left_out[19] ;
+ wire \sb_1__1__10_chanx_left_out[1] ;
+ wire \sb_1__1__10_chanx_left_out[2] ;
+ wire \sb_1__1__10_chanx_left_out[3] ;
+ wire \sb_1__1__10_chanx_left_out[4] ;
+ wire \sb_1__1__10_chanx_left_out[5] ;
+ wire \sb_1__1__10_chanx_left_out[6] ;
+ wire \sb_1__1__10_chanx_left_out[7] ;
+ wire \sb_1__1__10_chanx_left_out[8] ;
+ wire \sb_1__1__10_chanx_left_out[9] ;
+ wire \sb_1__1__10_chanx_right_out[0] ;
+ wire \sb_1__1__10_chanx_right_out[10] ;
+ wire \sb_1__1__10_chanx_right_out[11] ;
+ wire \sb_1__1__10_chanx_right_out[12] ;
+ wire \sb_1__1__10_chanx_right_out[13] ;
+ wire \sb_1__1__10_chanx_right_out[14] ;
+ wire \sb_1__1__10_chanx_right_out[15] ;
+ wire \sb_1__1__10_chanx_right_out[16] ;
+ wire \sb_1__1__10_chanx_right_out[17] ;
+ wire \sb_1__1__10_chanx_right_out[18] ;
+ wire \sb_1__1__10_chanx_right_out[19] ;
+ wire \sb_1__1__10_chanx_right_out[1] ;
+ wire \sb_1__1__10_chanx_right_out[2] ;
+ wire \sb_1__1__10_chanx_right_out[3] ;
+ wire \sb_1__1__10_chanx_right_out[4] ;
+ wire \sb_1__1__10_chanx_right_out[5] ;
+ wire \sb_1__1__10_chanx_right_out[6] ;
+ wire \sb_1__1__10_chanx_right_out[7] ;
+ wire \sb_1__1__10_chanx_right_out[8] ;
+ wire \sb_1__1__10_chanx_right_out[9] ;
+ wire \sb_1__1__10_chany_bottom_out[0] ;
+ wire \sb_1__1__10_chany_bottom_out[10] ;
+ wire \sb_1__1__10_chany_bottom_out[11] ;
+ wire \sb_1__1__10_chany_bottom_out[12] ;
+ wire \sb_1__1__10_chany_bottom_out[13] ;
+ wire \sb_1__1__10_chany_bottom_out[14] ;
+ wire \sb_1__1__10_chany_bottom_out[15] ;
+ wire \sb_1__1__10_chany_bottom_out[16] ;
+ wire \sb_1__1__10_chany_bottom_out[17] ;
+ wire \sb_1__1__10_chany_bottom_out[18] ;
+ wire \sb_1__1__10_chany_bottom_out[19] ;
+ wire \sb_1__1__10_chany_bottom_out[1] ;
+ wire \sb_1__1__10_chany_bottom_out[2] ;
+ wire \sb_1__1__10_chany_bottom_out[3] ;
+ wire \sb_1__1__10_chany_bottom_out[4] ;
+ wire \sb_1__1__10_chany_bottom_out[5] ;
+ wire \sb_1__1__10_chany_bottom_out[6] ;
+ wire \sb_1__1__10_chany_bottom_out[7] ;
+ wire \sb_1__1__10_chany_bottom_out[8] ;
+ wire \sb_1__1__10_chany_bottom_out[9] ;
+ wire \sb_1__1__10_chany_top_out[0] ;
+ wire \sb_1__1__10_chany_top_out[10] ;
+ wire \sb_1__1__10_chany_top_out[11] ;
+ wire \sb_1__1__10_chany_top_out[12] ;
+ wire \sb_1__1__10_chany_top_out[13] ;
+ wire \sb_1__1__10_chany_top_out[14] ;
+ wire \sb_1__1__10_chany_top_out[15] ;
+ wire \sb_1__1__10_chany_top_out[16] ;
+ wire \sb_1__1__10_chany_top_out[17] ;
+ wire \sb_1__1__10_chany_top_out[18] ;
+ wire \sb_1__1__10_chany_top_out[19] ;
+ wire \sb_1__1__10_chany_top_out[1] ;
+ wire \sb_1__1__10_chany_top_out[2] ;
+ wire \sb_1__1__10_chany_top_out[3] ;
+ wire \sb_1__1__10_chany_top_out[4] ;
+ wire \sb_1__1__10_chany_top_out[5] ;
+ wire \sb_1__1__10_chany_top_out[6] ;
+ wire \sb_1__1__10_chany_top_out[7] ;
+ wire \sb_1__1__10_chany_top_out[8] ;
+ wire \sb_1__1__10_chany_top_out[9] ;
+ wire sb_1__1__11_ccff_tail;
+ wire \sb_1__1__11_chanx_left_out[0] ;
+ wire \sb_1__1__11_chanx_left_out[10] ;
+ wire \sb_1__1__11_chanx_left_out[11] ;
+ wire \sb_1__1__11_chanx_left_out[12] ;
+ wire \sb_1__1__11_chanx_left_out[13] ;
+ wire \sb_1__1__11_chanx_left_out[14] ;
+ wire \sb_1__1__11_chanx_left_out[15] ;
+ wire \sb_1__1__11_chanx_left_out[16] ;
+ wire \sb_1__1__11_chanx_left_out[17] ;
+ wire \sb_1__1__11_chanx_left_out[18] ;
+ wire \sb_1__1__11_chanx_left_out[19] ;
+ wire \sb_1__1__11_chanx_left_out[1] ;
+ wire \sb_1__1__11_chanx_left_out[2] ;
+ wire \sb_1__1__11_chanx_left_out[3] ;
+ wire \sb_1__1__11_chanx_left_out[4] ;
+ wire \sb_1__1__11_chanx_left_out[5] ;
+ wire \sb_1__1__11_chanx_left_out[6] ;
+ wire \sb_1__1__11_chanx_left_out[7] ;
+ wire \sb_1__1__11_chanx_left_out[8] ;
+ wire \sb_1__1__11_chanx_left_out[9] ;
+ wire \sb_1__1__11_chanx_right_out[0] ;
+ wire \sb_1__1__11_chanx_right_out[10] ;
+ wire \sb_1__1__11_chanx_right_out[11] ;
+ wire \sb_1__1__11_chanx_right_out[12] ;
+ wire \sb_1__1__11_chanx_right_out[13] ;
+ wire \sb_1__1__11_chanx_right_out[14] ;
+ wire \sb_1__1__11_chanx_right_out[15] ;
+ wire \sb_1__1__11_chanx_right_out[16] ;
+ wire \sb_1__1__11_chanx_right_out[17] ;
+ wire \sb_1__1__11_chanx_right_out[18] ;
+ wire \sb_1__1__11_chanx_right_out[19] ;
+ wire \sb_1__1__11_chanx_right_out[1] ;
+ wire \sb_1__1__11_chanx_right_out[2] ;
+ wire \sb_1__1__11_chanx_right_out[3] ;
+ wire \sb_1__1__11_chanx_right_out[4] ;
+ wire \sb_1__1__11_chanx_right_out[5] ;
+ wire \sb_1__1__11_chanx_right_out[6] ;
+ wire \sb_1__1__11_chanx_right_out[7] ;
+ wire \sb_1__1__11_chanx_right_out[8] ;
+ wire \sb_1__1__11_chanx_right_out[9] ;
+ wire \sb_1__1__11_chany_bottom_out[0] ;
+ wire \sb_1__1__11_chany_bottom_out[10] ;
+ wire \sb_1__1__11_chany_bottom_out[11] ;
+ wire \sb_1__1__11_chany_bottom_out[12] ;
+ wire \sb_1__1__11_chany_bottom_out[13] ;
+ wire \sb_1__1__11_chany_bottom_out[14] ;
+ wire \sb_1__1__11_chany_bottom_out[15] ;
+ wire \sb_1__1__11_chany_bottom_out[16] ;
+ wire \sb_1__1__11_chany_bottom_out[17] ;
+ wire \sb_1__1__11_chany_bottom_out[18] ;
+ wire \sb_1__1__11_chany_bottom_out[19] ;
+ wire \sb_1__1__11_chany_bottom_out[1] ;
+ wire \sb_1__1__11_chany_bottom_out[2] ;
+ wire \sb_1__1__11_chany_bottom_out[3] ;
+ wire \sb_1__1__11_chany_bottom_out[4] ;
+ wire \sb_1__1__11_chany_bottom_out[5] ;
+ wire \sb_1__1__11_chany_bottom_out[6] ;
+ wire \sb_1__1__11_chany_bottom_out[7] ;
+ wire \sb_1__1__11_chany_bottom_out[8] ;
+ wire \sb_1__1__11_chany_bottom_out[9] ;
+ wire \sb_1__1__11_chany_top_out[0] ;
+ wire \sb_1__1__11_chany_top_out[10] ;
+ wire \sb_1__1__11_chany_top_out[11] ;
+ wire \sb_1__1__11_chany_top_out[12] ;
+ wire \sb_1__1__11_chany_top_out[13] ;
+ wire \sb_1__1__11_chany_top_out[14] ;
+ wire \sb_1__1__11_chany_top_out[15] ;
+ wire \sb_1__1__11_chany_top_out[16] ;
+ wire \sb_1__1__11_chany_top_out[17] ;
+ wire \sb_1__1__11_chany_top_out[18] ;
+ wire \sb_1__1__11_chany_top_out[19] ;
+ wire \sb_1__1__11_chany_top_out[1] ;
+ wire \sb_1__1__11_chany_top_out[2] ;
+ wire \sb_1__1__11_chany_top_out[3] ;
+ wire \sb_1__1__11_chany_top_out[4] ;
+ wire \sb_1__1__11_chany_top_out[5] ;
+ wire \sb_1__1__11_chany_top_out[6] ;
+ wire \sb_1__1__11_chany_top_out[7] ;
+ wire \sb_1__1__11_chany_top_out[8] ;
+ wire \sb_1__1__11_chany_top_out[9] ;
+ wire sb_1__1__12_ccff_tail;
+ wire \sb_1__1__12_chanx_left_out[0] ;
+ wire \sb_1__1__12_chanx_left_out[10] ;
+ wire \sb_1__1__12_chanx_left_out[11] ;
+ wire \sb_1__1__12_chanx_left_out[12] ;
+ wire \sb_1__1__12_chanx_left_out[13] ;
+ wire \sb_1__1__12_chanx_left_out[14] ;
+ wire \sb_1__1__12_chanx_left_out[15] ;
+ wire \sb_1__1__12_chanx_left_out[16] ;
+ wire \sb_1__1__12_chanx_left_out[17] ;
+ wire \sb_1__1__12_chanx_left_out[18] ;
+ wire \sb_1__1__12_chanx_left_out[19] ;
+ wire \sb_1__1__12_chanx_left_out[1] ;
+ wire \sb_1__1__12_chanx_left_out[2] ;
+ wire \sb_1__1__12_chanx_left_out[3] ;
+ wire \sb_1__1__12_chanx_left_out[4] ;
+ wire \sb_1__1__12_chanx_left_out[5] ;
+ wire \sb_1__1__12_chanx_left_out[6] ;
+ wire \sb_1__1__12_chanx_left_out[7] ;
+ wire \sb_1__1__12_chanx_left_out[8] ;
+ wire \sb_1__1__12_chanx_left_out[9] ;
+ wire \sb_1__1__12_chanx_right_out[0] ;
+ wire \sb_1__1__12_chanx_right_out[10] ;
+ wire \sb_1__1__12_chanx_right_out[11] ;
+ wire \sb_1__1__12_chanx_right_out[12] ;
+ wire \sb_1__1__12_chanx_right_out[13] ;
+ wire \sb_1__1__12_chanx_right_out[14] ;
+ wire \sb_1__1__12_chanx_right_out[15] ;
+ wire \sb_1__1__12_chanx_right_out[16] ;
+ wire \sb_1__1__12_chanx_right_out[17] ;
+ wire \sb_1__1__12_chanx_right_out[18] ;
+ wire \sb_1__1__12_chanx_right_out[19] ;
+ wire \sb_1__1__12_chanx_right_out[1] ;
+ wire \sb_1__1__12_chanx_right_out[2] ;
+ wire \sb_1__1__12_chanx_right_out[3] ;
+ wire \sb_1__1__12_chanx_right_out[4] ;
+ wire \sb_1__1__12_chanx_right_out[5] ;
+ wire \sb_1__1__12_chanx_right_out[6] ;
+ wire \sb_1__1__12_chanx_right_out[7] ;
+ wire \sb_1__1__12_chanx_right_out[8] ;
+ wire \sb_1__1__12_chanx_right_out[9] ;
+ wire \sb_1__1__12_chany_bottom_out[0] ;
+ wire \sb_1__1__12_chany_bottom_out[10] ;
+ wire \sb_1__1__12_chany_bottom_out[11] ;
+ wire \sb_1__1__12_chany_bottom_out[12] ;
+ wire \sb_1__1__12_chany_bottom_out[13] ;
+ wire \sb_1__1__12_chany_bottom_out[14] ;
+ wire \sb_1__1__12_chany_bottom_out[15] ;
+ wire \sb_1__1__12_chany_bottom_out[16] ;
+ wire \sb_1__1__12_chany_bottom_out[17] ;
+ wire \sb_1__1__12_chany_bottom_out[18] ;
+ wire \sb_1__1__12_chany_bottom_out[19] ;
+ wire \sb_1__1__12_chany_bottom_out[1] ;
+ wire \sb_1__1__12_chany_bottom_out[2] ;
+ wire \sb_1__1__12_chany_bottom_out[3] ;
+ wire \sb_1__1__12_chany_bottom_out[4] ;
+ wire \sb_1__1__12_chany_bottom_out[5] ;
+ wire \sb_1__1__12_chany_bottom_out[6] ;
+ wire \sb_1__1__12_chany_bottom_out[7] ;
+ wire \sb_1__1__12_chany_bottom_out[8] ;
+ wire \sb_1__1__12_chany_bottom_out[9] ;
+ wire \sb_1__1__12_chany_top_out[0] ;
+ wire \sb_1__1__12_chany_top_out[10] ;
+ wire \sb_1__1__12_chany_top_out[11] ;
+ wire \sb_1__1__12_chany_top_out[12] ;
+ wire \sb_1__1__12_chany_top_out[13] ;
+ wire \sb_1__1__12_chany_top_out[14] ;
+ wire \sb_1__1__12_chany_top_out[15] ;
+ wire \sb_1__1__12_chany_top_out[16] ;
+ wire \sb_1__1__12_chany_top_out[17] ;
+ wire \sb_1__1__12_chany_top_out[18] ;
+ wire \sb_1__1__12_chany_top_out[19] ;
+ wire \sb_1__1__12_chany_top_out[1] ;
+ wire \sb_1__1__12_chany_top_out[2] ;
+ wire \sb_1__1__12_chany_top_out[3] ;
+ wire \sb_1__1__12_chany_top_out[4] ;
+ wire \sb_1__1__12_chany_top_out[5] ;
+ wire \sb_1__1__12_chany_top_out[6] ;
+ wire \sb_1__1__12_chany_top_out[7] ;
+ wire \sb_1__1__12_chany_top_out[8] ;
+ wire \sb_1__1__12_chany_top_out[9] ;
+ wire sb_1__1__13_ccff_tail;
+ wire \sb_1__1__13_chanx_left_out[0] ;
+ wire \sb_1__1__13_chanx_left_out[10] ;
+ wire \sb_1__1__13_chanx_left_out[11] ;
+ wire \sb_1__1__13_chanx_left_out[12] ;
+ wire \sb_1__1__13_chanx_left_out[13] ;
+ wire \sb_1__1__13_chanx_left_out[14] ;
+ wire \sb_1__1__13_chanx_left_out[15] ;
+ wire \sb_1__1__13_chanx_left_out[16] ;
+ wire \sb_1__1__13_chanx_left_out[17] ;
+ wire \sb_1__1__13_chanx_left_out[18] ;
+ wire \sb_1__1__13_chanx_left_out[19] ;
+ wire \sb_1__1__13_chanx_left_out[1] ;
+ wire \sb_1__1__13_chanx_left_out[2] ;
+ wire \sb_1__1__13_chanx_left_out[3] ;
+ wire \sb_1__1__13_chanx_left_out[4] ;
+ wire \sb_1__1__13_chanx_left_out[5] ;
+ wire \sb_1__1__13_chanx_left_out[6] ;
+ wire \sb_1__1__13_chanx_left_out[7] ;
+ wire \sb_1__1__13_chanx_left_out[8] ;
+ wire \sb_1__1__13_chanx_left_out[9] ;
+ wire \sb_1__1__13_chanx_right_out[0] ;
+ wire \sb_1__1__13_chanx_right_out[10] ;
+ wire \sb_1__1__13_chanx_right_out[11] ;
+ wire \sb_1__1__13_chanx_right_out[12] ;
+ wire \sb_1__1__13_chanx_right_out[13] ;
+ wire \sb_1__1__13_chanx_right_out[14] ;
+ wire \sb_1__1__13_chanx_right_out[15] ;
+ wire \sb_1__1__13_chanx_right_out[16] ;
+ wire \sb_1__1__13_chanx_right_out[17] ;
+ wire \sb_1__1__13_chanx_right_out[18] ;
+ wire \sb_1__1__13_chanx_right_out[19] ;
+ wire \sb_1__1__13_chanx_right_out[1] ;
+ wire \sb_1__1__13_chanx_right_out[2] ;
+ wire \sb_1__1__13_chanx_right_out[3] ;
+ wire \sb_1__1__13_chanx_right_out[4] ;
+ wire \sb_1__1__13_chanx_right_out[5] ;
+ wire \sb_1__1__13_chanx_right_out[6] ;
+ wire \sb_1__1__13_chanx_right_out[7] ;
+ wire \sb_1__1__13_chanx_right_out[8] ;
+ wire \sb_1__1__13_chanx_right_out[9] ;
+ wire \sb_1__1__13_chany_bottom_out[0] ;
+ wire \sb_1__1__13_chany_bottom_out[10] ;
+ wire \sb_1__1__13_chany_bottom_out[11] ;
+ wire \sb_1__1__13_chany_bottom_out[12] ;
+ wire \sb_1__1__13_chany_bottom_out[13] ;
+ wire \sb_1__1__13_chany_bottom_out[14] ;
+ wire \sb_1__1__13_chany_bottom_out[15] ;
+ wire \sb_1__1__13_chany_bottom_out[16] ;
+ wire \sb_1__1__13_chany_bottom_out[17] ;
+ wire \sb_1__1__13_chany_bottom_out[18] ;
+ wire \sb_1__1__13_chany_bottom_out[19] ;
+ wire \sb_1__1__13_chany_bottom_out[1] ;
+ wire \sb_1__1__13_chany_bottom_out[2] ;
+ wire \sb_1__1__13_chany_bottom_out[3] ;
+ wire \sb_1__1__13_chany_bottom_out[4] ;
+ wire \sb_1__1__13_chany_bottom_out[5] ;
+ wire \sb_1__1__13_chany_bottom_out[6] ;
+ wire \sb_1__1__13_chany_bottom_out[7] ;
+ wire \sb_1__1__13_chany_bottom_out[8] ;
+ wire \sb_1__1__13_chany_bottom_out[9] ;
+ wire \sb_1__1__13_chany_top_out[0] ;
+ wire \sb_1__1__13_chany_top_out[10] ;
+ wire \sb_1__1__13_chany_top_out[11] ;
+ wire \sb_1__1__13_chany_top_out[12] ;
+ wire \sb_1__1__13_chany_top_out[13] ;
+ wire \sb_1__1__13_chany_top_out[14] ;
+ wire \sb_1__1__13_chany_top_out[15] ;
+ wire \sb_1__1__13_chany_top_out[16] ;
+ wire \sb_1__1__13_chany_top_out[17] ;
+ wire \sb_1__1__13_chany_top_out[18] ;
+ wire \sb_1__1__13_chany_top_out[19] ;
+ wire \sb_1__1__13_chany_top_out[1] ;
+ wire \sb_1__1__13_chany_top_out[2] ;
+ wire \sb_1__1__13_chany_top_out[3] ;
+ wire \sb_1__1__13_chany_top_out[4] ;
+ wire \sb_1__1__13_chany_top_out[5] ;
+ wire \sb_1__1__13_chany_top_out[6] ;
+ wire \sb_1__1__13_chany_top_out[7] ;
+ wire \sb_1__1__13_chany_top_out[8] ;
+ wire \sb_1__1__13_chany_top_out[9] ;
+ wire sb_1__1__14_ccff_tail;
+ wire \sb_1__1__14_chanx_left_out[0] ;
+ wire \sb_1__1__14_chanx_left_out[10] ;
+ wire \sb_1__1__14_chanx_left_out[11] ;
+ wire \sb_1__1__14_chanx_left_out[12] ;
+ wire \sb_1__1__14_chanx_left_out[13] ;
+ wire \sb_1__1__14_chanx_left_out[14] ;
+ wire \sb_1__1__14_chanx_left_out[15] ;
+ wire \sb_1__1__14_chanx_left_out[16] ;
+ wire \sb_1__1__14_chanx_left_out[17] ;
+ wire \sb_1__1__14_chanx_left_out[18] ;
+ wire \sb_1__1__14_chanx_left_out[19] ;
+ wire \sb_1__1__14_chanx_left_out[1] ;
+ wire \sb_1__1__14_chanx_left_out[2] ;
+ wire \sb_1__1__14_chanx_left_out[3] ;
+ wire \sb_1__1__14_chanx_left_out[4] ;
+ wire \sb_1__1__14_chanx_left_out[5] ;
+ wire \sb_1__1__14_chanx_left_out[6] ;
+ wire \sb_1__1__14_chanx_left_out[7] ;
+ wire \sb_1__1__14_chanx_left_out[8] ;
+ wire \sb_1__1__14_chanx_left_out[9] ;
+ wire \sb_1__1__14_chanx_right_out[0] ;
+ wire \sb_1__1__14_chanx_right_out[10] ;
+ wire \sb_1__1__14_chanx_right_out[11] ;
+ wire \sb_1__1__14_chanx_right_out[12] ;
+ wire \sb_1__1__14_chanx_right_out[13] ;
+ wire \sb_1__1__14_chanx_right_out[14] ;
+ wire \sb_1__1__14_chanx_right_out[15] ;
+ wire \sb_1__1__14_chanx_right_out[16] ;
+ wire \sb_1__1__14_chanx_right_out[17] ;
+ wire \sb_1__1__14_chanx_right_out[18] ;
+ wire \sb_1__1__14_chanx_right_out[19] ;
+ wire \sb_1__1__14_chanx_right_out[1] ;
+ wire \sb_1__1__14_chanx_right_out[2] ;
+ wire \sb_1__1__14_chanx_right_out[3] ;
+ wire \sb_1__1__14_chanx_right_out[4] ;
+ wire \sb_1__1__14_chanx_right_out[5] ;
+ wire \sb_1__1__14_chanx_right_out[6] ;
+ wire \sb_1__1__14_chanx_right_out[7] ;
+ wire \sb_1__1__14_chanx_right_out[8] ;
+ wire \sb_1__1__14_chanx_right_out[9] ;
+ wire \sb_1__1__14_chany_bottom_out[0] ;
+ wire \sb_1__1__14_chany_bottom_out[10] ;
+ wire \sb_1__1__14_chany_bottom_out[11] ;
+ wire \sb_1__1__14_chany_bottom_out[12] ;
+ wire \sb_1__1__14_chany_bottom_out[13] ;
+ wire \sb_1__1__14_chany_bottom_out[14] ;
+ wire \sb_1__1__14_chany_bottom_out[15] ;
+ wire \sb_1__1__14_chany_bottom_out[16] ;
+ wire \sb_1__1__14_chany_bottom_out[17] ;
+ wire \sb_1__1__14_chany_bottom_out[18] ;
+ wire \sb_1__1__14_chany_bottom_out[19] ;
+ wire \sb_1__1__14_chany_bottom_out[1] ;
+ wire \sb_1__1__14_chany_bottom_out[2] ;
+ wire \sb_1__1__14_chany_bottom_out[3] ;
+ wire \sb_1__1__14_chany_bottom_out[4] ;
+ wire \sb_1__1__14_chany_bottom_out[5] ;
+ wire \sb_1__1__14_chany_bottom_out[6] ;
+ wire \sb_1__1__14_chany_bottom_out[7] ;
+ wire \sb_1__1__14_chany_bottom_out[8] ;
+ wire \sb_1__1__14_chany_bottom_out[9] ;
+ wire \sb_1__1__14_chany_top_out[0] ;
+ wire \sb_1__1__14_chany_top_out[10] ;
+ wire \sb_1__1__14_chany_top_out[11] ;
+ wire \sb_1__1__14_chany_top_out[12] ;
+ wire \sb_1__1__14_chany_top_out[13] ;
+ wire \sb_1__1__14_chany_top_out[14] ;
+ wire \sb_1__1__14_chany_top_out[15] ;
+ wire \sb_1__1__14_chany_top_out[16] ;
+ wire \sb_1__1__14_chany_top_out[17] ;
+ wire \sb_1__1__14_chany_top_out[18] ;
+ wire \sb_1__1__14_chany_top_out[19] ;
+ wire \sb_1__1__14_chany_top_out[1] ;
+ wire \sb_1__1__14_chany_top_out[2] ;
+ wire \sb_1__1__14_chany_top_out[3] ;
+ wire \sb_1__1__14_chany_top_out[4] ;
+ wire \sb_1__1__14_chany_top_out[5] ;
+ wire \sb_1__1__14_chany_top_out[6] ;
+ wire \sb_1__1__14_chany_top_out[7] ;
+ wire \sb_1__1__14_chany_top_out[8] ;
+ wire \sb_1__1__14_chany_top_out[9] ;
+ wire sb_1__1__15_ccff_tail;
+ wire \sb_1__1__15_chanx_left_out[0] ;
+ wire \sb_1__1__15_chanx_left_out[10] ;
+ wire \sb_1__1__15_chanx_left_out[11] ;
+ wire \sb_1__1__15_chanx_left_out[12] ;
+ wire \sb_1__1__15_chanx_left_out[13] ;
+ wire \sb_1__1__15_chanx_left_out[14] ;
+ wire \sb_1__1__15_chanx_left_out[15] ;
+ wire \sb_1__1__15_chanx_left_out[16] ;
+ wire \sb_1__1__15_chanx_left_out[17] ;
+ wire \sb_1__1__15_chanx_left_out[18] ;
+ wire \sb_1__1__15_chanx_left_out[19] ;
+ wire \sb_1__1__15_chanx_left_out[1] ;
+ wire \sb_1__1__15_chanx_left_out[2] ;
+ wire \sb_1__1__15_chanx_left_out[3] ;
+ wire \sb_1__1__15_chanx_left_out[4] ;
+ wire \sb_1__1__15_chanx_left_out[5] ;
+ wire \sb_1__1__15_chanx_left_out[6] ;
+ wire \sb_1__1__15_chanx_left_out[7] ;
+ wire \sb_1__1__15_chanx_left_out[8] ;
+ wire \sb_1__1__15_chanx_left_out[9] ;
+ wire \sb_1__1__15_chanx_right_out[0] ;
+ wire \sb_1__1__15_chanx_right_out[10] ;
+ wire \sb_1__1__15_chanx_right_out[11] ;
+ wire \sb_1__1__15_chanx_right_out[12] ;
+ wire \sb_1__1__15_chanx_right_out[13] ;
+ wire \sb_1__1__15_chanx_right_out[14] ;
+ wire \sb_1__1__15_chanx_right_out[15] ;
+ wire \sb_1__1__15_chanx_right_out[16] ;
+ wire \sb_1__1__15_chanx_right_out[17] ;
+ wire \sb_1__1__15_chanx_right_out[18] ;
+ wire \sb_1__1__15_chanx_right_out[19] ;
+ wire \sb_1__1__15_chanx_right_out[1] ;
+ wire \sb_1__1__15_chanx_right_out[2] ;
+ wire \sb_1__1__15_chanx_right_out[3] ;
+ wire \sb_1__1__15_chanx_right_out[4] ;
+ wire \sb_1__1__15_chanx_right_out[5] ;
+ wire \sb_1__1__15_chanx_right_out[6] ;
+ wire \sb_1__1__15_chanx_right_out[7] ;
+ wire \sb_1__1__15_chanx_right_out[8] ;
+ wire \sb_1__1__15_chanx_right_out[9] ;
+ wire \sb_1__1__15_chany_bottom_out[0] ;
+ wire \sb_1__1__15_chany_bottom_out[10] ;
+ wire \sb_1__1__15_chany_bottom_out[11] ;
+ wire \sb_1__1__15_chany_bottom_out[12] ;
+ wire \sb_1__1__15_chany_bottom_out[13] ;
+ wire \sb_1__1__15_chany_bottom_out[14] ;
+ wire \sb_1__1__15_chany_bottom_out[15] ;
+ wire \sb_1__1__15_chany_bottom_out[16] ;
+ wire \sb_1__1__15_chany_bottom_out[17] ;
+ wire \sb_1__1__15_chany_bottom_out[18] ;
+ wire \sb_1__1__15_chany_bottom_out[19] ;
+ wire \sb_1__1__15_chany_bottom_out[1] ;
+ wire \sb_1__1__15_chany_bottom_out[2] ;
+ wire \sb_1__1__15_chany_bottom_out[3] ;
+ wire \sb_1__1__15_chany_bottom_out[4] ;
+ wire \sb_1__1__15_chany_bottom_out[5] ;
+ wire \sb_1__1__15_chany_bottom_out[6] ;
+ wire \sb_1__1__15_chany_bottom_out[7] ;
+ wire \sb_1__1__15_chany_bottom_out[8] ;
+ wire \sb_1__1__15_chany_bottom_out[9] ;
+ wire \sb_1__1__15_chany_top_out[0] ;
+ wire \sb_1__1__15_chany_top_out[10] ;
+ wire \sb_1__1__15_chany_top_out[11] ;
+ wire \sb_1__1__15_chany_top_out[12] ;
+ wire \sb_1__1__15_chany_top_out[13] ;
+ wire \sb_1__1__15_chany_top_out[14] ;
+ wire \sb_1__1__15_chany_top_out[15] ;
+ wire \sb_1__1__15_chany_top_out[16] ;
+ wire \sb_1__1__15_chany_top_out[17] ;
+ wire \sb_1__1__15_chany_top_out[18] ;
+ wire \sb_1__1__15_chany_top_out[19] ;
+ wire \sb_1__1__15_chany_top_out[1] ;
+ wire \sb_1__1__15_chany_top_out[2] ;
+ wire \sb_1__1__15_chany_top_out[3] ;
+ wire \sb_1__1__15_chany_top_out[4] ;
+ wire \sb_1__1__15_chany_top_out[5] ;
+ wire \sb_1__1__15_chany_top_out[6] ;
+ wire \sb_1__1__15_chany_top_out[7] ;
+ wire \sb_1__1__15_chany_top_out[8] ;
+ wire \sb_1__1__15_chany_top_out[9] ;
+ wire sb_1__1__16_ccff_tail;
+ wire \sb_1__1__16_chanx_left_out[0] ;
+ wire \sb_1__1__16_chanx_left_out[10] ;
+ wire \sb_1__1__16_chanx_left_out[11] ;
+ wire \sb_1__1__16_chanx_left_out[12] ;
+ wire \sb_1__1__16_chanx_left_out[13] ;
+ wire \sb_1__1__16_chanx_left_out[14] ;
+ wire \sb_1__1__16_chanx_left_out[15] ;
+ wire \sb_1__1__16_chanx_left_out[16] ;
+ wire \sb_1__1__16_chanx_left_out[17] ;
+ wire \sb_1__1__16_chanx_left_out[18] ;
+ wire \sb_1__1__16_chanx_left_out[19] ;
+ wire \sb_1__1__16_chanx_left_out[1] ;
+ wire \sb_1__1__16_chanx_left_out[2] ;
+ wire \sb_1__1__16_chanx_left_out[3] ;
+ wire \sb_1__1__16_chanx_left_out[4] ;
+ wire \sb_1__1__16_chanx_left_out[5] ;
+ wire \sb_1__1__16_chanx_left_out[6] ;
+ wire \sb_1__1__16_chanx_left_out[7] ;
+ wire \sb_1__1__16_chanx_left_out[8] ;
+ wire \sb_1__1__16_chanx_left_out[9] ;
+ wire \sb_1__1__16_chanx_right_out[0] ;
+ wire \sb_1__1__16_chanx_right_out[10] ;
+ wire \sb_1__1__16_chanx_right_out[11] ;
+ wire \sb_1__1__16_chanx_right_out[12] ;
+ wire \sb_1__1__16_chanx_right_out[13] ;
+ wire \sb_1__1__16_chanx_right_out[14] ;
+ wire \sb_1__1__16_chanx_right_out[15] ;
+ wire \sb_1__1__16_chanx_right_out[16] ;
+ wire \sb_1__1__16_chanx_right_out[17] ;
+ wire \sb_1__1__16_chanx_right_out[18] ;
+ wire \sb_1__1__16_chanx_right_out[19] ;
+ wire \sb_1__1__16_chanx_right_out[1] ;
+ wire \sb_1__1__16_chanx_right_out[2] ;
+ wire \sb_1__1__16_chanx_right_out[3] ;
+ wire \sb_1__1__16_chanx_right_out[4] ;
+ wire \sb_1__1__16_chanx_right_out[5] ;
+ wire \sb_1__1__16_chanx_right_out[6] ;
+ wire \sb_1__1__16_chanx_right_out[7] ;
+ wire \sb_1__1__16_chanx_right_out[8] ;
+ wire \sb_1__1__16_chanx_right_out[9] ;
+ wire \sb_1__1__16_chany_bottom_out[0] ;
+ wire \sb_1__1__16_chany_bottom_out[10] ;
+ wire \sb_1__1__16_chany_bottom_out[11] ;
+ wire \sb_1__1__16_chany_bottom_out[12] ;
+ wire \sb_1__1__16_chany_bottom_out[13] ;
+ wire \sb_1__1__16_chany_bottom_out[14] ;
+ wire \sb_1__1__16_chany_bottom_out[15] ;
+ wire \sb_1__1__16_chany_bottom_out[16] ;
+ wire \sb_1__1__16_chany_bottom_out[17] ;
+ wire \sb_1__1__16_chany_bottom_out[18] ;
+ wire \sb_1__1__16_chany_bottom_out[19] ;
+ wire \sb_1__1__16_chany_bottom_out[1] ;
+ wire \sb_1__1__16_chany_bottom_out[2] ;
+ wire \sb_1__1__16_chany_bottom_out[3] ;
+ wire \sb_1__1__16_chany_bottom_out[4] ;
+ wire \sb_1__1__16_chany_bottom_out[5] ;
+ wire \sb_1__1__16_chany_bottom_out[6] ;
+ wire \sb_1__1__16_chany_bottom_out[7] ;
+ wire \sb_1__1__16_chany_bottom_out[8] ;
+ wire \sb_1__1__16_chany_bottom_out[9] ;
+ wire \sb_1__1__16_chany_top_out[0] ;
+ wire \sb_1__1__16_chany_top_out[10] ;
+ wire \sb_1__1__16_chany_top_out[11] ;
+ wire \sb_1__1__16_chany_top_out[12] ;
+ wire \sb_1__1__16_chany_top_out[13] ;
+ wire \sb_1__1__16_chany_top_out[14] ;
+ wire \sb_1__1__16_chany_top_out[15] ;
+ wire \sb_1__1__16_chany_top_out[16] ;
+ wire \sb_1__1__16_chany_top_out[17] ;
+ wire \sb_1__1__16_chany_top_out[18] ;
+ wire \sb_1__1__16_chany_top_out[19] ;
+ wire \sb_1__1__16_chany_top_out[1] ;
+ wire \sb_1__1__16_chany_top_out[2] ;
+ wire \sb_1__1__16_chany_top_out[3] ;
+ wire \sb_1__1__16_chany_top_out[4] ;
+ wire \sb_1__1__16_chany_top_out[5] ;
+ wire \sb_1__1__16_chany_top_out[6] ;
+ wire \sb_1__1__16_chany_top_out[7] ;
+ wire \sb_1__1__16_chany_top_out[8] ;
+ wire \sb_1__1__16_chany_top_out[9] ;
+ wire sb_1__1__17_ccff_tail;
+ wire \sb_1__1__17_chanx_left_out[0] ;
+ wire \sb_1__1__17_chanx_left_out[10] ;
+ wire \sb_1__1__17_chanx_left_out[11] ;
+ wire \sb_1__1__17_chanx_left_out[12] ;
+ wire \sb_1__1__17_chanx_left_out[13] ;
+ wire \sb_1__1__17_chanx_left_out[14] ;
+ wire \sb_1__1__17_chanx_left_out[15] ;
+ wire \sb_1__1__17_chanx_left_out[16] ;
+ wire \sb_1__1__17_chanx_left_out[17] ;
+ wire \sb_1__1__17_chanx_left_out[18] ;
+ wire \sb_1__1__17_chanx_left_out[19] ;
+ wire \sb_1__1__17_chanx_left_out[1] ;
+ wire \sb_1__1__17_chanx_left_out[2] ;
+ wire \sb_1__1__17_chanx_left_out[3] ;
+ wire \sb_1__1__17_chanx_left_out[4] ;
+ wire \sb_1__1__17_chanx_left_out[5] ;
+ wire \sb_1__1__17_chanx_left_out[6] ;
+ wire \sb_1__1__17_chanx_left_out[7] ;
+ wire \sb_1__1__17_chanx_left_out[8] ;
+ wire \sb_1__1__17_chanx_left_out[9] ;
+ wire \sb_1__1__17_chanx_right_out[0] ;
+ wire \sb_1__1__17_chanx_right_out[10] ;
+ wire \sb_1__1__17_chanx_right_out[11] ;
+ wire \sb_1__1__17_chanx_right_out[12] ;
+ wire \sb_1__1__17_chanx_right_out[13] ;
+ wire \sb_1__1__17_chanx_right_out[14] ;
+ wire \sb_1__1__17_chanx_right_out[15] ;
+ wire \sb_1__1__17_chanx_right_out[16] ;
+ wire \sb_1__1__17_chanx_right_out[17] ;
+ wire \sb_1__1__17_chanx_right_out[18] ;
+ wire \sb_1__1__17_chanx_right_out[19] ;
+ wire \sb_1__1__17_chanx_right_out[1] ;
+ wire \sb_1__1__17_chanx_right_out[2] ;
+ wire \sb_1__1__17_chanx_right_out[3] ;
+ wire \sb_1__1__17_chanx_right_out[4] ;
+ wire \sb_1__1__17_chanx_right_out[5] ;
+ wire \sb_1__1__17_chanx_right_out[6] ;
+ wire \sb_1__1__17_chanx_right_out[7] ;
+ wire \sb_1__1__17_chanx_right_out[8] ;
+ wire \sb_1__1__17_chanx_right_out[9] ;
+ wire \sb_1__1__17_chany_bottom_out[0] ;
+ wire \sb_1__1__17_chany_bottom_out[10] ;
+ wire \sb_1__1__17_chany_bottom_out[11] ;
+ wire \sb_1__1__17_chany_bottom_out[12] ;
+ wire \sb_1__1__17_chany_bottom_out[13] ;
+ wire \sb_1__1__17_chany_bottom_out[14] ;
+ wire \sb_1__1__17_chany_bottom_out[15] ;
+ wire \sb_1__1__17_chany_bottom_out[16] ;
+ wire \sb_1__1__17_chany_bottom_out[17] ;
+ wire \sb_1__1__17_chany_bottom_out[18] ;
+ wire \sb_1__1__17_chany_bottom_out[19] ;
+ wire \sb_1__1__17_chany_bottom_out[1] ;
+ wire \sb_1__1__17_chany_bottom_out[2] ;
+ wire \sb_1__1__17_chany_bottom_out[3] ;
+ wire \sb_1__1__17_chany_bottom_out[4] ;
+ wire \sb_1__1__17_chany_bottom_out[5] ;
+ wire \sb_1__1__17_chany_bottom_out[6] ;
+ wire \sb_1__1__17_chany_bottom_out[7] ;
+ wire \sb_1__1__17_chany_bottom_out[8] ;
+ wire \sb_1__1__17_chany_bottom_out[9] ;
+ wire \sb_1__1__17_chany_top_out[0] ;
+ wire \sb_1__1__17_chany_top_out[10] ;
+ wire \sb_1__1__17_chany_top_out[11] ;
+ wire \sb_1__1__17_chany_top_out[12] ;
+ wire \sb_1__1__17_chany_top_out[13] ;
+ wire \sb_1__1__17_chany_top_out[14] ;
+ wire \sb_1__1__17_chany_top_out[15] ;
+ wire \sb_1__1__17_chany_top_out[16] ;
+ wire \sb_1__1__17_chany_top_out[17] ;
+ wire \sb_1__1__17_chany_top_out[18] ;
+ wire \sb_1__1__17_chany_top_out[19] ;
+ wire \sb_1__1__17_chany_top_out[1] ;
+ wire \sb_1__1__17_chany_top_out[2] ;
+ wire \sb_1__1__17_chany_top_out[3] ;
+ wire \sb_1__1__17_chany_top_out[4] ;
+ wire \sb_1__1__17_chany_top_out[5] ;
+ wire \sb_1__1__17_chany_top_out[6] ;
+ wire \sb_1__1__17_chany_top_out[7] ;
+ wire \sb_1__1__17_chany_top_out[8] ;
+ wire \sb_1__1__17_chany_top_out[9] ;
+ wire sb_1__1__18_ccff_tail;
+ wire \sb_1__1__18_chanx_left_out[0] ;
+ wire \sb_1__1__18_chanx_left_out[10] ;
+ wire \sb_1__1__18_chanx_left_out[11] ;
+ wire \sb_1__1__18_chanx_left_out[12] ;
+ wire \sb_1__1__18_chanx_left_out[13] ;
+ wire \sb_1__1__18_chanx_left_out[14] ;
+ wire \sb_1__1__18_chanx_left_out[15] ;
+ wire \sb_1__1__18_chanx_left_out[16] ;
+ wire \sb_1__1__18_chanx_left_out[17] ;
+ wire \sb_1__1__18_chanx_left_out[18] ;
+ wire \sb_1__1__18_chanx_left_out[19] ;
+ wire \sb_1__1__18_chanx_left_out[1] ;
+ wire \sb_1__1__18_chanx_left_out[2] ;
+ wire \sb_1__1__18_chanx_left_out[3] ;
+ wire \sb_1__1__18_chanx_left_out[4] ;
+ wire \sb_1__1__18_chanx_left_out[5] ;
+ wire \sb_1__1__18_chanx_left_out[6] ;
+ wire \sb_1__1__18_chanx_left_out[7] ;
+ wire \sb_1__1__18_chanx_left_out[8] ;
+ wire \sb_1__1__18_chanx_left_out[9] ;
+ wire \sb_1__1__18_chanx_right_out[0] ;
+ wire \sb_1__1__18_chanx_right_out[10] ;
+ wire \sb_1__1__18_chanx_right_out[11] ;
+ wire \sb_1__1__18_chanx_right_out[12] ;
+ wire \sb_1__1__18_chanx_right_out[13] ;
+ wire \sb_1__1__18_chanx_right_out[14] ;
+ wire \sb_1__1__18_chanx_right_out[15] ;
+ wire \sb_1__1__18_chanx_right_out[16] ;
+ wire \sb_1__1__18_chanx_right_out[17] ;
+ wire \sb_1__1__18_chanx_right_out[18] ;
+ wire \sb_1__1__18_chanx_right_out[19] ;
+ wire \sb_1__1__18_chanx_right_out[1] ;
+ wire \sb_1__1__18_chanx_right_out[2] ;
+ wire \sb_1__1__18_chanx_right_out[3] ;
+ wire \sb_1__1__18_chanx_right_out[4] ;
+ wire \sb_1__1__18_chanx_right_out[5] ;
+ wire \sb_1__1__18_chanx_right_out[6] ;
+ wire \sb_1__1__18_chanx_right_out[7] ;
+ wire \sb_1__1__18_chanx_right_out[8] ;
+ wire \sb_1__1__18_chanx_right_out[9] ;
+ wire \sb_1__1__18_chany_bottom_out[0] ;
+ wire \sb_1__1__18_chany_bottom_out[10] ;
+ wire \sb_1__1__18_chany_bottom_out[11] ;
+ wire \sb_1__1__18_chany_bottom_out[12] ;
+ wire \sb_1__1__18_chany_bottom_out[13] ;
+ wire \sb_1__1__18_chany_bottom_out[14] ;
+ wire \sb_1__1__18_chany_bottom_out[15] ;
+ wire \sb_1__1__18_chany_bottom_out[16] ;
+ wire \sb_1__1__18_chany_bottom_out[17] ;
+ wire \sb_1__1__18_chany_bottom_out[18] ;
+ wire \sb_1__1__18_chany_bottom_out[19] ;
+ wire \sb_1__1__18_chany_bottom_out[1] ;
+ wire \sb_1__1__18_chany_bottom_out[2] ;
+ wire \sb_1__1__18_chany_bottom_out[3] ;
+ wire \sb_1__1__18_chany_bottom_out[4] ;
+ wire \sb_1__1__18_chany_bottom_out[5] ;
+ wire \sb_1__1__18_chany_bottom_out[6] ;
+ wire \sb_1__1__18_chany_bottom_out[7] ;
+ wire \sb_1__1__18_chany_bottom_out[8] ;
+ wire \sb_1__1__18_chany_bottom_out[9] ;
+ wire \sb_1__1__18_chany_top_out[0] ;
+ wire \sb_1__1__18_chany_top_out[10] ;
+ wire \sb_1__1__18_chany_top_out[11] ;
+ wire \sb_1__1__18_chany_top_out[12] ;
+ wire \sb_1__1__18_chany_top_out[13] ;
+ wire \sb_1__1__18_chany_top_out[14] ;
+ wire \sb_1__1__18_chany_top_out[15] ;
+ wire \sb_1__1__18_chany_top_out[16] ;
+ wire \sb_1__1__18_chany_top_out[17] ;
+ wire \sb_1__1__18_chany_top_out[18] ;
+ wire \sb_1__1__18_chany_top_out[19] ;
+ wire \sb_1__1__18_chany_top_out[1] ;
+ wire \sb_1__1__18_chany_top_out[2] ;
+ wire \sb_1__1__18_chany_top_out[3] ;
+ wire \sb_1__1__18_chany_top_out[4] ;
+ wire \sb_1__1__18_chany_top_out[5] ;
+ wire \sb_1__1__18_chany_top_out[6] ;
+ wire \sb_1__1__18_chany_top_out[7] ;
+ wire \sb_1__1__18_chany_top_out[8] ;
+ wire \sb_1__1__18_chany_top_out[9] ;
+ wire sb_1__1__19_ccff_tail;
+ wire \sb_1__1__19_chanx_left_out[0] ;
+ wire \sb_1__1__19_chanx_left_out[10] ;
+ wire \sb_1__1__19_chanx_left_out[11] ;
+ wire \sb_1__1__19_chanx_left_out[12] ;
+ wire \sb_1__1__19_chanx_left_out[13] ;
+ wire \sb_1__1__19_chanx_left_out[14] ;
+ wire \sb_1__1__19_chanx_left_out[15] ;
+ wire \sb_1__1__19_chanx_left_out[16] ;
+ wire \sb_1__1__19_chanx_left_out[17] ;
+ wire \sb_1__1__19_chanx_left_out[18] ;
+ wire \sb_1__1__19_chanx_left_out[19] ;
+ wire \sb_1__1__19_chanx_left_out[1] ;
+ wire \sb_1__1__19_chanx_left_out[2] ;
+ wire \sb_1__1__19_chanx_left_out[3] ;
+ wire \sb_1__1__19_chanx_left_out[4] ;
+ wire \sb_1__1__19_chanx_left_out[5] ;
+ wire \sb_1__1__19_chanx_left_out[6] ;
+ wire \sb_1__1__19_chanx_left_out[7] ;
+ wire \sb_1__1__19_chanx_left_out[8] ;
+ wire \sb_1__1__19_chanx_left_out[9] ;
+ wire \sb_1__1__19_chanx_right_out[0] ;
+ wire \sb_1__1__19_chanx_right_out[10] ;
+ wire \sb_1__1__19_chanx_right_out[11] ;
+ wire \sb_1__1__19_chanx_right_out[12] ;
+ wire \sb_1__1__19_chanx_right_out[13] ;
+ wire \sb_1__1__19_chanx_right_out[14] ;
+ wire \sb_1__1__19_chanx_right_out[15] ;
+ wire \sb_1__1__19_chanx_right_out[16] ;
+ wire \sb_1__1__19_chanx_right_out[17] ;
+ wire \sb_1__1__19_chanx_right_out[18] ;
+ wire \sb_1__1__19_chanx_right_out[19] ;
+ wire \sb_1__1__19_chanx_right_out[1] ;
+ wire \sb_1__1__19_chanx_right_out[2] ;
+ wire \sb_1__1__19_chanx_right_out[3] ;
+ wire \sb_1__1__19_chanx_right_out[4] ;
+ wire \sb_1__1__19_chanx_right_out[5] ;
+ wire \sb_1__1__19_chanx_right_out[6] ;
+ wire \sb_1__1__19_chanx_right_out[7] ;
+ wire \sb_1__1__19_chanx_right_out[8] ;
+ wire \sb_1__1__19_chanx_right_out[9] ;
+ wire \sb_1__1__19_chany_bottom_out[0] ;
+ wire \sb_1__1__19_chany_bottom_out[10] ;
+ wire \sb_1__1__19_chany_bottom_out[11] ;
+ wire \sb_1__1__19_chany_bottom_out[12] ;
+ wire \sb_1__1__19_chany_bottom_out[13] ;
+ wire \sb_1__1__19_chany_bottom_out[14] ;
+ wire \sb_1__1__19_chany_bottom_out[15] ;
+ wire \sb_1__1__19_chany_bottom_out[16] ;
+ wire \sb_1__1__19_chany_bottom_out[17] ;
+ wire \sb_1__1__19_chany_bottom_out[18] ;
+ wire \sb_1__1__19_chany_bottom_out[19] ;
+ wire \sb_1__1__19_chany_bottom_out[1] ;
+ wire \sb_1__1__19_chany_bottom_out[2] ;
+ wire \sb_1__1__19_chany_bottom_out[3] ;
+ wire \sb_1__1__19_chany_bottom_out[4] ;
+ wire \sb_1__1__19_chany_bottom_out[5] ;
+ wire \sb_1__1__19_chany_bottom_out[6] ;
+ wire \sb_1__1__19_chany_bottom_out[7] ;
+ wire \sb_1__1__19_chany_bottom_out[8] ;
+ wire \sb_1__1__19_chany_bottom_out[9] ;
+ wire \sb_1__1__19_chany_top_out[0] ;
+ wire \sb_1__1__19_chany_top_out[10] ;
+ wire \sb_1__1__19_chany_top_out[11] ;
+ wire \sb_1__1__19_chany_top_out[12] ;
+ wire \sb_1__1__19_chany_top_out[13] ;
+ wire \sb_1__1__19_chany_top_out[14] ;
+ wire \sb_1__1__19_chany_top_out[15] ;
+ wire \sb_1__1__19_chany_top_out[16] ;
+ wire \sb_1__1__19_chany_top_out[17] ;
+ wire \sb_1__1__19_chany_top_out[18] ;
+ wire \sb_1__1__19_chany_top_out[19] ;
+ wire \sb_1__1__19_chany_top_out[1] ;
+ wire \sb_1__1__19_chany_top_out[2] ;
+ wire \sb_1__1__19_chany_top_out[3] ;
+ wire \sb_1__1__19_chany_top_out[4] ;
+ wire \sb_1__1__19_chany_top_out[5] ;
+ wire \sb_1__1__19_chany_top_out[6] ;
+ wire \sb_1__1__19_chany_top_out[7] ;
+ wire \sb_1__1__19_chany_top_out[8] ;
+ wire \sb_1__1__19_chany_top_out[9] ;
+ wire sb_1__1__1_ccff_tail;
+ wire \sb_1__1__1_chanx_left_out[0] ;
+ wire \sb_1__1__1_chanx_left_out[10] ;
+ wire \sb_1__1__1_chanx_left_out[11] ;
+ wire \sb_1__1__1_chanx_left_out[12] ;
+ wire \sb_1__1__1_chanx_left_out[13] ;
+ wire \sb_1__1__1_chanx_left_out[14] ;
+ wire \sb_1__1__1_chanx_left_out[15] ;
+ wire \sb_1__1__1_chanx_left_out[16] ;
+ wire \sb_1__1__1_chanx_left_out[17] ;
+ wire \sb_1__1__1_chanx_left_out[18] ;
+ wire \sb_1__1__1_chanx_left_out[19] ;
+ wire \sb_1__1__1_chanx_left_out[1] ;
+ wire \sb_1__1__1_chanx_left_out[2] ;
+ wire \sb_1__1__1_chanx_left_out[3] ;
+ wire \sb_1__1__1_chanx_left_out[4] ;
+ wire \sb_1__1__1_chanx_left_out[5] ;
+ wire \sb_1__1__1_chanx_left_out[6] ;
+ wire \sb_1__1__1_chanx_left_out[7] ;
+ wire \sb_1__1__1_chanx_left_out[8] ;
+ wire \sb_1__1__1_chanx_left_out[9] ;
+ wire \sb_1__1__1_chanx_right_out[0] ;
+ wire \sb_1__1__1_chanx_right_out[10] ;
+ wire \sb_1__1__1_chanx_right_out[11] ;
+ wire \sb_1__1__1_chanx_right_out[12] ;
+ wire \sb_1__1__1_chanx_right_out[13] ;
+ wire \sb_1__1__1_chanx_right_out[14] ;
+ wire \sb_1__1__1_chanx_right_out[15] ;
+ wire \sb_1__1__1_chanx_right_out[16] ;
+ wire \sb_1__1__1_chanx_right_out[17] ;
+ wire \sb_1__1__1_chanx_right_out[18] ;
+ wire \sb_1__1__1_chanx_right_out[19] ;
+ wire \sb_1__1__1_chanx_right_out[1] ;
+ wire \sb_1__1__1_chanx_right_out[2] ;
+ wire \sb_1__1__1_chanx_right_out[3] ;
+ wire \sb_1__1__1_chanx_right_out[4] ;
+ wire \sb_1__1__1_chanx_right_out[5] ;
+ wire \sb_1__1__1_chanx_right_out[6] ;
+ wire \sb_1__1__1_chanx_right_out[7] ;
+ wire \sb_1__1__1_chanx_right_out[8] ;
+ wire \sb_1__1__1_chanx_right_out[9] ;
+ wire \sb_1__1__1_chany_bottom_out[0] ;
+ wire \sb_1__1__1_chany_bottom_out[10] ;
+ wire \sb_1__1__1_chany_bottom_out[11] ;
+ wire \sb_1__1__1_chany_bottom_out[12] ;
+ wire \sb_1__1__1_chany_bottom_out[13] ;
+ wire \sb_1__1__1_chany_bottom_out[14] ;
+ wire \sb_1__1__1_chany_bottom_out[15] ;
+ wire \sb_1__1__1_chany_bottom_out[16] ;
+ wire \sb_1__1__1_chany_bottom_out[17] ;
+ wire \sb_1__1__1_chany_bottom_out[18] ;
+ wire \sb_1__1__1_chany_bottom_out[19] ;
+ wire \sb_1__1__1_chany_bottom_out[1] ;
+ wire \sb_1__1__1_chany_bottom_out[2] ;
+ wire \sb_1__1__1_chany_bottom_out[3] ;
+ wire \sb_1__1__1_chany_bottom_out[4] ;
+ wire \sb_1__1__1_chany_bottom_out[5] ;
+ wire \sb_1__1__1_chany_bottom_out[6] ;
+ wire \sb_1__1__1_chany_bottom_out[7] ;
+ wire \sb_1__1__1_chany_bottom_out[8] ;
+ wire \sb_1__1__1_chany_bottom_out[9] ;
+ wire \sb_1__1__1_chany_top_out[0] ;
+ wire \sb_1__1__1_chany_top_out[10] ;
+ wire \sb_1__1__1_chany_top_out[11] ;
+ wire \sb_1__1__1_chany_top_out[12] ;
+ wire \sb_1__1__1_chany_top_out[13] ;
+ wire \sb_1__1__1_chany_top_out[14] ;
+ wire \sb_1__1__1_chany_top_out[15] ;
+ wire \sb_1__1__1_chany_top_out[16] ;
+ wire \sb_1__1__1_chany_top_out[17] ;
+ wire \sb_1__1__1_chany_top_out[18] ;
+ wire \sb_1__1__1_chany_top_out[19] ;
+ wire \sb_1__1__1_chany_top_out[1] ;
+ wire \sb_1__1__1_chany_top_out[2] ;
+ wire \sb_1__1__1_chany_top_out[3] ;
+ wire \sb_1__1__1_chany_top_out[4] ;
+ wire \sb_1__1__1_chany_top_out[5] ;
+ wire \sb_1__1__1_chany_top_out[6] ;
+ wire \sb_1__1__1_chany_top_out[7] ;
+ wire \sb_1__1__1_chany_top_out[8] ;
+ wire \sb_1__1__1_chany_top_out[9] ;
+ wire sb_1__1__20_ccff_tail;
+ wire \sb_1__1__20_chanx_left_out[0] ;
+ wire \sb_1__1__20_chanx_left_out[10] ;
+ wire \sb_1__1__20_chanx_left_out[11] ;
+ wire \sb_1__1__20_chanx_left_out[12] ;
+ wire \sb_1__1__20_chanx_left_out[13] ;
+ wire \sb_1__1__20_chanx_left_out[14] ;
+ wire \sb_1__1__20_chanx_left_out[15] ;
+ wire \sb_1__1__20_chanx_left_out[16] ;
+ wire \sb_1__1__20_chanx_left_out[17] ;
+ wire \sb_1__1__20_chanx_left_out[18] ;
+ wire \sb_1__1__20_chanx_left_out[19] ;
+ wire \sb_1__1__20_chanx_left_out[1] ;
+ wire \sb_1__1__20_chanx_left_out[2] ;
+ wire \sb_1__1__20_chanx_left_out[3] ;
+ wire \sb_1__1__20_chanx_left_out[4] ;
+ wire \sb_1__1__20_chanx_left_out[5] ;
+ wire \sb_1__1__20_chanx_left_out[6] ;
+ wire \sb_1__1__20_chanx_left_out[7] ;
+ wire \sb_1__1__20_chanx_left_out[8] ;
+ wire \sb_1__1__20_chanx_left_out[9] ;
+ wire \sb_1__1__20_chanx_right_out[0] ;
+ wire \sb_1__1__20_chanx_right_out[10] ;
+ wire \sb_1__1__20_chanx_right_out[11] ;
+ wire \sb_1__1__20_chanx_right_out[12] ;
+ wire \sb_1__1__20_chanx_right_out[13] ;
+ wire \sb_1__1__20_chanx_right_out[14] ;
+ wire \sb_1__1__20_chanx_right_out[15] ;
+ wire \sb_1__1__20_chanx_right_out[16] ;
+ wire \sb_1__1__20_chanx_right_out[17] ;
+ wire \sb_1__1__20_chanx_right_out[18] ;
+ wire \sb_1__1__20_chanx_right_out[19] ;
+ wire \sb_1__1__20_chanx_right_out[1] ;
+ wire \sb_1__1__20_chanx_right_out[2] ;
+ wire \sb_1__1__20_chanx_right_out[3] ;
+ wire \sb_1__1__20_chanx_right_out[4] ;
+ wire \sb_1__1__20_chanx_right_out[5] ;
+ wire \sb_1__1__20_chanx_right_out[6] ;
+ wire \sb_1__1__20_chanx_right_out[7] ;
+ wire \sb_1__1__20_chanx_right_out[8] ;
+ wire \sb_1__1__20_chanx_right_out[9] ;
+ wire \sb_1__1__20_chany_bottom_out[0] ;
+ wire \sb_1__1__20_chany_bottom_out[10] ;
+ wire \sb_1__1__20_chany_bottom_out[11] ;
+ wire \sb_1__1__20_chany_bottom_out[12] ;
+ wire \sb_1__1__20_chany_bottom_out[13] ;
+ wire \sb_1__1__20_chany_bottom_out[14] ;
+ wire \sb_1__1__20_chany_bottom_out[15] ;
+ wire \sb_1__1__20_chany_bottom_out[16] ;
+ wire \sb_1__1__20_chany_bottom_out[17] ;
+ wire \sb_1__1__20_chany_bottom_out[18] ;
+ wire \sb_1__1__20_chany_bottom_out[19] ;
+ wire \sb_1__1__20_chany_bottom_out[1] ;
+ wire \sb_1__1__20_chany_bottom_out[2] ;
+ wire \sb_1__1__20_chany_bottom_out[3] ;
+ wire \sb_1__1__20_chany_bottom_out[4] ;
+ wire \sb_1__1__20_chany_bottom_out[5] ;
+ wire \sb_1__1__20_chany_bottom_out[6] ;
+ wire \sb_1__1__20_chany_bottom_out[7] ;
+ wire \sb_1__1__20_chany_bottom_out[8] ;
+ wire \sb_1__1__20_chany_bottom_out[9] ;
+ wire \sb_1__1__20_chany_top_out[0] ;
+ wire \sb_1__1__20_chany_top_out[10] ;
+ wire \sb_1__1__20_chany_top_out[11] ;
+ wire \sb_1__1__20_chany_top_out[12] ;
+ wire \sb_1__1__20_chany_top_out[13] ;
+ wire \sb_1__1__20_chany_top_out[14] ;
+ wire \sb_1__1__20_chany_top_out[15] ;
+ wire \sb_1__1__20_chany_top_out[16] ;
+ wire \sb_1__1__20_chany_top_out[17] ;
+ wire \sb_1__1__20_chany_top_out[18] ;
+ wire \sb_1__1__20_chany_top_out[19] ;
+ wire \sb_1__1__20_chany_top_out[1] ;
+ wire \sb_1__1__20_chany_top_out[2] ;
+ wire \sb_1__1__20_chany_top_out[3] ;
+ wire \sb_1__1__20_chany_top_out[4] ;
+ wire \sb_1__1__20_chany_top_out[5] ;
+ wire \sb_1__1__20_chany_top_out[6] ;
+ wire \sb_1__1__20_chany_top_out[7] ;
+ wire \sb_1__1__20_chany_top_out[8] ;
+ wire \sb_1__1__20_chany_top_out[9] ;
+ wire sb_1__1__21_ccff_tail;
+ wire \sb_1__1__21_chanx_left_out[0] ;
+ wire \sb_1__1__21_chanx_left_out[10] ;
+ wire \sb_1__1__21_chanx_left_out[11] ;
+ wire \sb_1__1__21_chanx_left_out[12] ;
+ wire \sb_1__1__21_chanx_left_out[13] ;
+ wire \sb_1__1__21_chanx_left_out[14] ;
+ wire \sb_1__1__21_chanx_left_out[15] ;
+ wire \sb_1__1__21_chanx_left_out[16] ;
+ wire \sb_1__1__21_chanx_left_out[17] ;
+ wire \sb_1__1__21_chanx_left_out[18] ;
+ wire \sb_1__1__21_chanx_left_out[19] ;
+ wire \sb_1__1__21_chanx_left_out[1] ;
+ wire \sb_1__1__21_chanx_left_out[2] ;
+ wire \sb_1__1__21_chanx_left_out[3] ;
+ wire \sb_1__1__21_chanx_left_out[4] ;
+ wire \sb_1__1__21_chanx_left_out[5] ;
+ wire \sb_1__1__21_chanx_left_out[6] ;
+ wire \sb_1__1__21_chanx_left_out[7] ;
+ wire \sb_1__1__21_chanx_left_out[8] ;
+ wire \sb_1__1__21_chanx_left_out[9] ;
+ wire \sb_1__1__21_chanx_right_out[0] ;
+ wire \sb_1__1__21_chanx_right_out[10] ;
+ wire \sb_1__1__21_chanx_right_out[11] ;
+ wire \sb_1__1__21_chanx_right_out[12] ;
+ wire \sb_1__1__21_chanx_right_out[13] ;
+ wire \sb_1__1__21_chanx_right_out[14] ;
+ wire \sb_1__1__21_chanx_right_out[15] ;
+ wire \sb_1__1__21_chanx_right_out[16] ;
+ wire \sb_1__1__21_chanx_right_out[17] ;
+ wire \sb_1__1__21_chanx_right_out[18] ;
+ wire \sb_1__1__21_chanx_right_out[19] ;
+ wire \sb_1__1__21_chanx_right_out[1] ;
+ wire \sb_1__1__21_chanx_right_out[2] ;
+ wire \sb_1__1__21_chanx_right_out[3] ;
+ wire \sb_1__1__21_chanx_right_out[4] ;
+ wire \sb_1__1__21_chanx_right_out[5] ;
+ wire \sb_1__1__21_chanx_right_out[6] ;
+ wire \sb_1__1__21_chanx_right_out[7] ;
+ wire \sb_1__1__21_chanx_right_out[8] ;
+ wire \sb_1__1__21_chanx_right_out[9] ;
+ wire \sb_1__1__21_chany_bottom_out[0] ;
+ wire \sb_1__1__21_chany_bottom_out[10] ;
+ wire \sb_1__1__21_chany_bottom_out[11] ;
+ wire \sb_1__1__21_chany_bottom_out[12] ;
+ wire \sb_1__1__21_chany_bottom_out[13] ;
+ wire \sb_1__1__21_chany_bottom_out[14] ;
+ wire \sb_1__1__21_chany_bottom_out[15] ;
+ wire \sb_1__1__21_chany_bottom_out[16] ;
+ wire \sb_1__1__21_chany_bottom_out[17] ;
+ wire \sb_1__1__21_chany_bottom_out[18] ;
+ wire \sb_1__1__21_chany_bottom_out[19] ;
+ wire \sb_1__1__21_chany_bottom_out[1] ;
+ wire \sb_1__1__21_chany_bottom_out[2] ;
+ wire \sb_1__1__21_chany_bottom_out[3] ;
+ wire \sb_1__1__21_chany_bottom_out[4] ;
+ wire \sb_1__1__21_chany_bottom_out[5] ;
+ wire \sb_1__1__21_chany_bottom_out[6] ;
+ wire \sb_1__1__21_chany_bottom_out[7] ;
+ wire \sb_1__1__21_chany_bottom_out[8] ;
+ wire \sb_1__1__21_chany_bottom_out[9] ;
+ wire \sb_1__1__21_chany_top_out[0] ;
+ wire \sb_1__1__21_chany_top_out[10] ;
+ wire \sb_1__1__21_chany_top_out[11] ;
+ wire \sb_1__1__21_chany_top_out[12] ;
+ wire \sb_1__1__21_chany_top_out[13] ;
+ wire \sb_1__1__21_chany_top_out[14] ;
+ wire \sb_1__1__21_chany_top_out[15] ;
+ wire \sb_1__1__21_chany_top_out[16] ;
+ wire \sb_1__1__21_chany_top_out[17] ;
+ wire \sb_1__1__21_chany_top_out[18] ;
+ wire \sb_1__1__21_chany_top_out[19] ;
+ wire \sb_1__1__21_chany_top_out[1] ;
+ wire \sb_1__1__21_chany_top_out[2] ;
+ wire \sb_1__1__21_chany_top_out[3] ;
+ wire \sb_1__1__21_chany_top_out[4] ;
+ wire \sb_1__1__21_chany_top_out[5] ;
+ wire \sb_1__1__21_chany_top_out[6] ;
+ wire \sb_1__1__21_chany_top_out[7] ;
+ wire \sb_1__1__21_chany_top_out[8] ;
+ wire \sb_1__1__21_chany_top_out[9] ;
+ wire sb_1__1__22_ccff_tail;
+ wire \sb_1__1__22_chanx_left_out[0] ;
+ wire \sb_1__1__22_chanx_left_out[10] ;
+ wire \sb_1__1__22_chanx_left_out[11] ;
+ wire \sb_1__1__22_chanx_left_out[12] ;
+ wire \sb_1__1__22_chanx_left_out[13] ;
+ wire \sb_1__1__22_chanx_left_out[14] ;
+ wire \sb_1__1__22_chanx_left_out[15] ;
+ wire \sb_1__1__22_chanx_left_out[16] ;
+ wire \sb_1__1__22_chanx_left_out[17] ;
+ wire \sb_1__1__22_chanx_left_out[18] ;
+ wire \sb_1__1__22_chanx_left_out[19] ;
+ wire \sb_1__1__22_chanx_left_out[1] ;
+ wire \sb_1__1__22_chanx_left_out[2] ;
+ wire \sb_1__1__22_chanx_left_out[3] ;
+ wire \sb_1__1__22_chanx_left_out[4] ;
+ wire \sb_1__1__22_chanx_left_out[5] ;
+ wire \sb_1__1__22_chanx_left_out[6] ;
+ wire \sb_1__1__22_chanx_left_out[7] ;
+ wire \sb_1__1__22_chanx_left_out[8] ;
+ wire \sb_1__1__22_chanx_left_out[9] ;
+ wire \sb_1__1__22_chanx_right_out[0] ;
+ wire \sb_1__1__22_chanx_right_out[10] ;
+ wire \sb_1__1__22_chanx_right_out[11] ;
+ wire \sb_1__1__22_chanx_right_out[12] ;
+ wire \sb_1__1__22_chanx_right_out[13] ;
+ wire \sb_1__1__22_chanx_right_out[14] ;
+ wire \sb_1__1__22_chanx_right_out[15] ;
+ wire \sb_1__1__22_chanx_right_out[16] ;
+ wire \sb_1__1__22_chanx_right_out[17] ;
+ wire \sb_1__1__22_chanx_right_out[18] ;
+ wire \sb_1__1__22_chanx_right_out[19] ;
+ wire \sb_1__1__22_chanx_right_out[1] ;
+ wire \sb_1__1__22_chanx_right_out[2] ;
+ wire \sb_1__1__22_chanx_right_out[3] ;
+ wire \sb_1__1__22_chanx_right_out[4] ;
+ wire \sb_1__1__22_chanx_right_out[5] ;
+ wire \sb_1__1__22_chanx_right_out[6] ;
+ wire \sb_1__1__22_chanx_right_out[7] ;
+ wire \sb_1__1__22_chanx_right_out[8] ;
+ wire \sb_1__1__22_chanx_right_out[9] ;
+ wire \sb_1__1__22_chany_bottom_out[0] ;
+ wire \sb_1__1__22_chany_bottom_out[10] ;
+ wire \sb_1__1__22_chany_bottom_out[11] ;
+ wire \sb_1__1__22_chany_bottom_out[12] ;
+ wire \sb_1__1__22_chany_bottom_out[13] ;
+ wire \sb_1__1__22_chany_bottom_out[14] ;
+ wire \sb_1__1__22_chany_bottom_out[15] ;
+ wire \sb_1__1__22_chany_bottom_out[16] ;
+ wire \sb_1__1__22_chany_bottom_out[17] ;
+ wire \sb_1__1__22_chany_bottom_out[18] ;
+ wire \sb_1__1__22_chany_bottom_out[19] ;
+ wire \sb_1__1__22_chany_bottom_out[1] ;
+ wire \sb_1__1__22_chany_bottom_out[2] ;
+ wire \sb_1__1__22_chany_bottom_out[3] ;
+ wire \sb_1__1__22_chany_bottom_out[4] ;
+ wire \sb_1__1__22_chany_bottom_out[5] ;
+ wire \sb_1__1__22_chany_bottom_out[6] ;
+ wire \sb_1__1__22_chany_bottom_out[7] ;
+ wire \sb_1__1__22_chany_bottom_out[8] ;
+ wire \sb_1__1__22_chany_bottom_out[9] ;
+ wire \sb_1__1__22_chany_top_out[0] ;
+ wire \sb_1__1__22_chany_top_out[10] ;
+ wire \sb_1__1__22_chany_top_out[11] ;
+ wire \sb_1__1__22_chany_top_out[12] ;
+ wire \sb_1__1__22_chany_top_out[13] ;
+ wire \sb_1__1__22_chany_top_out[14] ;
+ wire \sb_1__1__22_chany_top_out[15] ;
+ wire \sb_1__1__22_chany_top_out[16] ;
+ wire \sb_1__1__22_chany_top_out[17] ;
+ wire \sb_1__1__22_chany_top_out[18] ;
+ wire \sb_1__1__22_chany_top_out[19] ;
+ wire \sb_1__1__22_chany_top_out[1] ;
+ wire \sb_1__1__22_chany_top_out[2] ;
+ wire \sb_1__1__22_chany_top_out[3] ;
+ wire \sb_1__1__22_chany_top_out[4] ;
+ wire \sb_1__1__22_chany_top_out[5] ;
+ wire \sb_1__1__22_chany_top_out[6] ;
+ wire \sb_1__1__22_chany_top_out[7] ;
+ wire \sb_1__1__22_chany_top_out[8] ;
+ wire \sb_1__1__22_chany_top_out[9] ;
+ wire sb_1__1__23_ccff_tail;
+ wire \sb_1__1__23_chanx_left_out[0] ;
+ wire \sb_1__1__23_chanx_left_out[10] ;
+ wire \sb_1__1__23_chanx_left_out[11] ;
+ wire \sb_1__1__23_chanx_left_out[12] ;
+ wire \sb_1__1__23_chanx_left_out[13] ;
+ wire \sb_1__1__23_chanx_left_out[14] ;
+ wire \sb_1__1__23_chanx_left_out[15] ;
+ wire \sb_1__1__23_chanx_left_out[16] ;
+ wire \sb_1__1__23_chanx_left_out[17] ;
+ wire \sb_1__1__23_chanx_left_out[18] ;
+ wire \sb_1__1__23_chanx_left_out[19] ;
+ wire \sb_1__1__23_chanx_left_out[1] ;
+ wire \sb_1__1__23_chanx_left_out[2] ;
+ wire \sb_1__1__23_chanx_left_out[3] ;
+ wire \sb_1__1__23_chanx_left_out[4] ;
+ wire \sb_1__1__23_chanx_left_out[5] ;
+ wire \sb_1__1__23_chanx_left_out[6] ;
+ wire \sb_1__1__23_chanx_left_out[7] ;
+ wire \sb_1__1__23_chanx_left_out[8] ;
+ wire \sb_1__1__23_chanx_left_out[9] ;
+ wire \sb_1__1__23_chanx_right_out[0] ;
+ wire \sb_1__1__23_chanx_right_out[10] ;
+ wire \sb_1__1__23_chanx_right_out[11] ;
+ wire \sb_1__1__23_chanx_right_out[12] ;
+ wire \sb_1__1__23_chanx_right_out[13] ;
+ wire \sb_1__1__23_chanx_right_out[14] ;
+ wire \sb_1__1__23_chanx_right_out[15] ;
+ wire \sb_1__1__23_chanx_right_out[16] ;
+ wire \sb_1__1__23_chanx_right_out[17] ;
+ wire \sb_1__1__23_chanx_right_out[18] ;
+ wire \sb_1__1__23_chanx_right_out[19] ;
+ wire \sb_1__1__23_chanx_right_out[1] ;
+ wire \sb_1__1__23_chanx_right_out[2] ;
+ wire \sb_1__1__23_chanx_right_out[3] ;
+ wire \sb_1__1__23_chanx_right_out[4] ;
+ wire \sb_1__1__23_chanx_right_out[5] ;
+ wire \sb_1__1__23_chanx_right_out[6] ;
+ wire \sb_1__1__23_chanx_right_out[7] ;
+ wire \sb_1__1__23_chanx_right_out[8] ;
+ wire \sb_1__1__23_chanx_right_out[9] ;
+ wire \sb_1__1__23_chany_bottom_out[0] ;
+ wire \sb_1__1__23_chany_bottom_out[10] ;
+ wire \sb_1__1__23_chany_bottom_out[11] ;
+ wire \sb_1__1__23_chany_bottom_out[12] ;
+ wire \sb_1__1__23_chany_bottom_out[13] ;
+ wire \sb_1__1__23_chany_bottom_out[14] ;
+ wire \sb_1__1__23_chany_bottom_out[15] ;
+ wire \sb_1__1__23_chany_bottom_out[16] ;
+ wire \sb_1__1__23_chany_bottom_out[17] ;
+ wire \sb_1__1__23_chany_bottom_out[18] ;
+ wire \sb_1__1__23_chany_bottom_out[19] ;
+ wire \sb_1__1__23_chany_bottom_out[1] ;
+ wire \sb_1__1__23_chany_bottom_out[2] ;
+ wire \sb_1__1__23_chany_bottom_out[3] ;
+ wire \sb_1__1__23_chany_bottom_out[4] ;
+ wire \sb_1__1__23_chany_bottom_out[5] ;
+ wire \sb_1__1__23_chany_bottom_out[6] ;
+ wire \sb_1__1__23_chany_bottom_out[7] ;
+ wire \sb_1__1__23_chany_bottom_out[8] ;
+ wire \sb_1__1__23_chany_bottom_out[9] ;
+ wire \sb_1__1__23_chany_top_out[0] ;
+ wire \sb_1__1__23_chany_top_out[10] ;
+ wire \sb_1__1__23_chany_top_out[11] ;
+ wire \sb_1__1__23_chany_top_out[12] ;
+ wire \sb_1__1__23_chany_top_out[13] ;
+ wire \sb_1__1__23_chany_top_out[14] ;
+ wire \sb_1__1__23_chany_top_out[15] ;
+ wire \sb_1__1__23_chany_top_out[16] ;
+ wire \sb_1__1__23_chany_top_out[17] ;
+ wire \sb_1__1__23_chany_top_out[18] ;
+ wire \sb_1__1__23_chany_top_out[19] ;
+ wire \sb_1__1__23_chany_top_out[1] ;
+ wire \sb_1__1__23_chany_top_out[2] ;
+ wire \sb_1__1__23_chany_top_out[3] ;
+ wire \sb_1__1__23_chany_top_out[4] ;
+ wire \sb_1__1__23_chany_top_out[5] ;
+ wire \sb_1__1__23_chany_top_out[6] ;
+ wire \sb_1__1__23_chany_top_out[7] ;
+ wire \sb_1__1__23_chany_top_out[8] ;
+ wire \sb_1__1__23_chany_top_out[9] ;
+ wire sb_1__1__24_ccff_tail;
+ wire \sb_1__1__24_chanx_left_out[0] ;
+ wire \sb_1__1__24_chanx_left_out[10] ;
+ wire \sb_1__1__24_chanx_left_out[11] ;
+ wire \sb_1__1__24_chanx_left_out[12] ;
+ wire \sb_1__1__24_chanx_left_out[13] ;
+ wire \sb_1__1__24_chanx_left_out[14] ;
+ wire \sb_1__1__24_chanx_left_out[15] ;
+ wire \sb_1__1__24_chanx_left_out[16] ;
+ wire \sb_1__1__24_chanx_left_out[17] ;
+ wire \sb_1__1__24_chanx_left_out[18] ;
+ wire \sb_1__1__24_chanx_left_out[19] ;
+ wire \sb_1__1__24_chanx_left_out[1] ;
+ wire \sb_1__1__24_chanx_left_out[2] ;
+ wire \sb_1__1__24_chanx_left_out[3] ;
+ wire \sb_1__1__24_chanx_left_out[4] ;
+ wire \sb_1__1__24_chanx_left_out[5] ;
+ wire \sb_1__1__24_chanx_left_out[6] ;
+ wire \sb_1__1__24_chanx_left_out[7] ;
+ wire \sb_1__1__24_chanx_left_out[8] ;
+ wire \sb_1__1__24_chanx_left_out[9] ;
+ wire \sb_1__1__24_chanx_right_out[0] ;
+ wire \sb_1__1__24_chanx_right_out[10] ;
+ wire \sb_1__1__24_chanx_right_out[11] ;
+ wire \sb_1__1__24_chanx_right_out[12] ;
+ wire \sb_1__1__24_chanx_right_out[13] ;
+ wire \sb_1__1__24_chanx_right_out[14] ;
+ wire \sb_1__1__24_chanx_right_out[15] ;
+ wire \sb_1__1__24_chanx_right_out[16] ;
+ wire \sb_1__1__24_chanx_right_out[17] ;
+ wire \sb_1__1__24_chanx_right_out[18] ;
+ wire \sb_1__1__24_chanx_right_out[19] ;
+ wire \sb_1__1__24_chanx_right_out[1] ;
+ wire \sb_1__1__24_chanx_right_out[2] ;
+ wire \sb_1__1__24_chanx_right_out[3] ;
+ wire \sb_1__1__24_chanx_right_out[4] ;
+ wire \sb_1__1__24_chanx_right_out[5] ;
+ wire \sb_1__1__24_chanx_right_out[6] ;
+ wire \sb_1__1__24_chanx_right_out[7] ;
+ wire \sb_1__1__24_chanx_right_out[8] ;
+ wire \sb_1__1__24_chanx_right_out[9] ;
+ wire \sb_1__1__24_chany_bottom_out[0] ;
+ wire \sb_1__1__24_chany_bottom_out[10] ;
+ wire \sb_1__1__24_chany_bottom_out[11] ;
+ wire \sb_1__1__24_chany_bottom_out[12] ;
+ wire \sb_1__1__24_chany_bottom_out[13] ;
+ wire \sb_1__1__24_chany_bottom_out[14] ;
+ wire \sb_1__1__24_chany_bottom_out[15] ;
+ wire \sb_1__1__24_chany_bottom_out[16] ;
+ wire \sb_1__1__24_chany_bottom_out[17] ;
+ wire \sb_1__1__24_chany_bottom_out[18] ;
+ wire \sb_1__1__24_chany_bottom_out[19] ;
+ wire \sb_1__1__24_chany_bottom_out[1] ;
+ wire \sb_1__1__24_chany_bottom_out[2] ;
+ wire \sb_1__1__24_chany_bottom_out[3] ;
+ wire \sb_1__1__24_chany_bottom_out[4] ;
+ wire \sb_1__1__24_chany_bottom_out[5] ;
+ wire \sb_1__1__24_chany_bottom_out[6] ;
+ wire \sb_1__1__24_chany_bottom_out[7] ;
+ wire \sb_1__1__24_chany_bottom_out[8] ;
+ wire \sb_1__1__24_chany_bottom_out[9] ;
+ wire \sb_1__1__24_chany_top_out[0] ;
+ wire \sb_1__1__24_chany_top_out[10] ;
+ wire \sb_1__1__24_chany_top_out[11] ;
+ wire \sb_1__1__24_chany_top_out[12] ;
+ wire \sb_1__1__24_chany_top_out[13] ;
+ wire \sb_1__1__24_chany_top_out[14] ;
+ wire \sb_1__1__24_chany_top_out[15] ;
+ wire \sb_1__1__24_chany_top_out[16] ;
+ wire \sb_1__1__24_chany_top_out[17] ;
+ wire \sb_1__1__24_chany_top_out[18] ;
+ wire \sb_1__1__24_chany_top_out[19] ;
+ wire \sb_1__1__24_chany_top_out[1] ;
+ wire \sb_1__1__24_chany_top_out[2] ;
+ wire \sb_1__1__24_chany_top_out[3] ;
+ wire \sb_1__1__24_chany_top_out[4] ;
+ wire \sb_1__1__24_chany_top_out[5] ;
+ wire \sb_1__1__24_chany_top_out[6] ;
+ wire \sb_1__1__24_chany_top_out[7] ;
+ wire \sb_1__1__24_chany_top_out[8] ;
+ wire \sb_1__1__24_chany_top_out[9] ;
+ wire sb_1__1__25_ccff_tail;
+ wire \sb_1__1__25_chanx_left_out[0] ;
+ wire \sb_1__1__25_chanx_left_out[10] ;
+ wire \sb_1__1__25_chanx_left_out[11] ;
+ wire \sb_1__1__25_chanx_left_out[12] ;
+ wire \sb_1__1__25_chanx_left_out[13] ;
+ wire \sb_1__1__25_chanx_left_out[14] ;
+ wire \sb_1__1__25_chanx_left_out[15] ;
+ wire \sb_1__1__25_chanx_left_out[16] ;
+ wire \sb_1__1__25_chanx_left_out[17] ;
+ wire \sb_1__1__25_chanx_left_out[18] ;
+ wire \sb_1__1__25_chanx_left_out[19] ;
+ wire \sb_1__1__25_chanx_left_out[1] ;
+ wire \sb_1__1__25_chanx_left_out[2] ;
+ wire \sb_1__1__25_chanx_left_out[3] ;
+ wire \sb_1__1__25_chanx_left_out[4] ;
+ wire \sb_1__1__25_chanx_left_out[5] ;
+ wire \sb_1__1__25_chanx_left_out[6] ;
+ wire \sb_1__1__25_chanx_left_out[7] ;
+ wire \sb_1__1__25_chanx_left_out[8] ;
+ wire \sb_1__1__25_chanx_left_out[9] ;
+ wire \sb_1__1__25_chanx_right_out[0] ;
+ wire \sb_1__1__25_chanx_right_out[10] ;
+ wire \sb_1__1__25_chanx_right_out[11] ;
+ wire \sb_1__1__25_chanx_right_out[12] ;
+ wire \sb_1__1__25_chanx_right_out[13] ;
+ wire \sb_1__1__25_chanx_right_out[14] ;
+ wire \sb_1__1__25_chanx_right_out[15] ;
+ wire \sb_1__1__25_chanx_right_out[16] ;
+ wire \sb_1__1__25_chanx_right_out[17] ;
+ wire \sb_1__1__25_chanx_right_out[18] ;
+ wire \sb_1__1__25_chanx_right_out[19] ;
+ wire \sb_1__1__25_chanx_right_out[1] ;
+ wire \sb_1__1__25_chanx_right_out[2] ;
+ wire \sb_1__1__25_chanx_right_out[3] ;
+ wire \sb_1__1__25_chanx_right_out[4] ;
+ wire \sb_1__1__25_chanx_right_out[5] ;
+ wire \sb_1__1__25_chanx_right_out[6] ;
+ wire \sb_1__1__25_chanx_right_out[7] ;
+ wire \sb_1__1__25_chanx_right_out[8] ;
+ wire \sb_1__1__25_chanx_right_out[9] ;
+ wire \sb_1__1__25_chany_bottom_out[0] ;
+ wire \sb_1__1__25_chany_bottom_out[10] ;
+ wire \sb_1__1__25_chany_bottom_out[11] ;
+ wire \sb_1__1__25_chany_bottom_out[12] ;
+ wire \sb_1__1__25_chany_bottom_out[13] ;
+ wire \sb_1__1__25_chany_bottom_out[14] ;
+ wire \sb_1__1__25_chany_bottom_out[15] ;
+ wire \sb_1__1__25_chany_bottom_out[16] ;
+ wire \sb_1__1__25_chany_bottom_out[17] ;
+ wire \sb_1__1__25_chany_bottom_out[18] ;
+ wire \sb_1__1__25_chany_bottom_out[19] ;
+ wire \sb_1__1__25_chany_bottom_out[1] ;
+ wire \sb_1__1__25_chany_bottom_out[2] ;
+ wire \sb_1__1__25_chany_bottom_out[3] ;
+ wire \sb_1__1__25_chany_bottom_out[4] ;
+ wire \sb_1__1__25_chany_bottom_out[5] ;
+ wire \sb_1__1__25_chany_bottom_out[6] ;
+ wire \sb_1__1__25_chany_bottom_out[7] ;
+ wire \sb_1__1__25_chany_bottom_out[8] ;
+ wire \sb_1__1__25_chany_bottom_out[9] ;
+ wire \sb_1__1__25_chany_top_out[0] ;
+ wire \sb_1__1__25_chany_top_out[10] ;
+ wire \sb_1__1__25_chany_top_out[11] ;
+ wire \sb_1__1__25_chany_top_out[12] ;
+ wire \sb_1__1__25_chany_top_out[13] ;
+ wire \sb_1__1__25_chany_top_out[14] ;
+ wire \sb_1__1__25_chany_top_out[15] ;
+ wire \sb_1__1__25_chany_top_out[16] ;
+ wire \sb_1__1__25_chany_top_out[17] ;
+ wire \sb_1__1__25_chany_top_out[18] ;
+ wire \sb_1__1__25_chany_top_out[19] ;
+ wire \sb_1__1__25_chany_top_out[1] ;
+ wire \sb_1__1__25_chany_top_out[2] ;
+ wire \sb_1__1__25_chany_top_out[3] ;
+ wire \sb_1__1__25_chany_top_out[4] ;
+ wire \sb_1__1__25_chany_top_out[5] ;
+ wire \sb_1__1__25_chany_top_out[6] ;
+ wire \sb_1__1__25_chany_top_out[7] ;
+ wire \sb_1__1__25_chany_top_out[8] ;
+ wire \sb_1__1__25_chany_top_out[9] ;
+ wire sb_1__1__26_ccff_tail;
+ wire \sb_1__1__26_chanx_left_out[0] ;
+ wire \sb_1__1__26_chanx_left_out[10] ;
+ wire \sb_1__1__26_chanx_left_out[11] ;
+ wire \sb_1__1__26_chanx_left_out[12] ;
+ wire \sb_1__1__26_chanx_left_out[13] ;
+ wire \sb_1__1__26_chanx_left_out[14] ;
+ wire \sb_1__1__26_chanx_left_out[15] ;
+ wire \sb_1__1__26_chanx_left_out[16] ;
+ wire \sb_1__1__26_chanx_left_out[17] ;
+ wire \sb_1__1__26_chanx_left_out[18] ;
+ wire \sb_1__1__26_chanx_left_out[19] ;
+ wire \sb_1__1__26_chanx_left_out[1] ;
+ wire \sb_1__1__26_chanx_left_out[2] ;
+ wire \sb_1__1__26_chanx_left_out[3] ;
+ wire \sb_1__1__26_chanx_left_out[4] ;
+ wire \sb_1__1__26_chanx_left_out[5] ;
+ wire \sb_1__1__26_chanx_left_out[6] ;
+ wire \sb_1__1__26_chanx_left_out[7] ;
+ wire \sb_1__1__26_chanx_left_out[8] ;
+ wire \sb_1__1__26_chanx_left_out[9] ;
+ wire \sb_1__1__26_chanx_right_out[0] ;
+ wire \sb_1__1__26_chanx_right_out[10] ;
+ wire \sb_1__1__26_chanx_right_out[11] ;
+ wire \sb_1__1__26_chanx_right_out[12] ;
+ wire \sb_1__1__26_chanx_right_out[13] ;
+ wire \sb_1__1__26_chanx_right_out[14] ;
+ wire \sb_1__1__26_chanx_right_out[15] ;
+ wire \sb_1__1__26_chanx_right_out[16] ;
+ wire \sb_1__1__26_chanx_right_out[17] ;
+ wire \sb_1__1__26_chanx_right_out[18] ;
+ wire \sb_1__1__26_chanx_right_out[19] ;
+ wire \sb_1__1__26_chanx_right_out[1] ;
+ wire \sb_1__1__26_chanx_right_out[2] ;
+ wire \sb_1__1__26_chanx_right_out[3] ;
+ wire \sb_1__1__26_chanx_right_out[4] ;
+ wire \sb_1__1__26_chanx_right_out[5] ;
+ wire \sb_1__1__26_chanx_right_out[6] ;
+ wire \sb_1__1__26_chanx_right_out[7] ;
+ wire \sb_1__1__26_chanx_right_out[8] ;
+ wire \sb_1__1__26_chanx_right_out[9] ;
+ wire \sb_1__1__26_chany_bottom_out[0] ;
+ wire \sb_1__1__26_chany_bottom_out[10] ;
+ wire \sb_1__1__26_chany_bottom_out[11] ;
+ wire \sb_1__1__26_chany_bottom_out[12] ;
+ wire \sb_1__1__26_chany_bottom_out[13] ;
+ wire \sb_1__1__26_chany_bottom_out[14] ;
+ wire \sb_1__1__26_chany_bottom_out[15] ;
+ wire \sb_1__1__26_chany_bottom_out[16] ;
+ wire \sb_1__1__26_chany_bottom_out[17] ;
+ wire \sb_1__1__26_chany_bottom_out[18] ;
+ wire \sb_1__1__26_chany_bottom_out[19] ;
+ wire \sb_1__1__26_chany_bottom_out[1] ;
+ wire \sb_1__1__26_chany_bottom_out[2] ;
+ wire \sb_1__1__26_chany_bottom_out[3] ;
+ wire \sb_1__1__26_chany_bottom_out[4] ;
+ wire \sb_1__1__26_chany_bottom_out[5] ;
+ wire \sb_1__1__26_chany_bottom_out[6] ;
+ wire \sb_1__1__26_chany_bottom_out[7] ;
+ wire \sb_1__1__26_chany_bottom_out[8] ;
+ wire \sb_1__1__26_chany_bottom_out[9] ;
+ wire \sb_1__1__26_chany_top_out[0] ;
+ wire \sb_1__1__26_chany_top_out[10] ;
+ wire \sb_1__1__26_chany_top_out[11] ;
+ wire \sb_1__1__26_chany_top_out[12] ;
+ wire \sb_1__1__26_chany_top_out[13] ;
+ wire \sb_1__1__26_chany_top_out[14] ;
+ wire \sb_1__1__26_chany_top_out[15] ;
+ wire \sb_1__1__26_chany_top_out[16] ;
+ wire \sb_1__1__26_chany_top_out[17] ;
+ wire \sb_1__1__26_chany_top_out[18] ;
+ wire \sb_1__1__26_chany_top_out[19] ;
+ wire \sb_1__1__26_chany_top_out[1] ;
+ wire \sb_1__1__26_chany_top_out[2] ;
+ wire \sb_1__1__26_chany_top_out[3] ;
+ wire \sb_1__1__26_chany_top_out[4] ;
+ wire \sb_1__1__26_chany_top_out[5] ;
+ wire \sb_1__1__26_chany_top_out[6] ;
+ wire \sb_1__1__26_chany_top_out[7] ;
+ wire \sb_1__1__26_chany_top_out[8] ;
+ wire \sb_1__1__26_chany_top_out[9] ;
+ wire sb_1__1__27_ccff_tail;
+ wire \sb_1__1__27_chanx_left_out[0] ;
+ wire \sb_1__1__27_chanx_left_out[10] ;
+ wire \sb_1__1__27_chanx_left_out[11] ;
+ wire \sb_1__1__27_chanx_left_out[12] ;
+ wire \sb_1__1__27_chanx_left_out[13] ;
+ wire \sb_1__1__27_chanx_left_out[14] ;
+ wire \sb_1__1__27_chanx_left_out[15] ;
+ wire \sb_1__1__27_chanx_left_out[16] ;
+ wire \sb_1__1__27_chanx_left_out[17] ;
+ wire \sb_1__1__27_chanx_left_out[18] ;
+ wire \sb_1__1__27_chanx_left_out[19] ;
+ wire \sb_1__1__27_chanx_left_out[1] ;
+ wire \sb_1__1__27_chanx_left_out[2] ;
+ wire \sb_1__1__27_chanx_left_out[3] ;
+ wire \sb_1__1__27_chanx_left_out[4] ;
+ wire \sb_1__1__27_chanx_left_out[5] ;
+ wire \sb_1__1__27_chanx_left_out[6] ;
+ wire \sb_1__1__27_chanx_left_out[7] ;
+ wire \sb_1__1__27_chanx_left_out[8] ;
+ wire \sb_1__1__27_chanx_left_out[9] ;
+ wire \sb_1__1__27_chanx_right_out[0] ;
+ wire \sb_1__1__27_chanx_right_out[10] ;
+ wire \sb_1__1__27_chanx_right_out[11] ;
+ wire \sb_1__1__27_chanx_right_out[12] ;
+ wire \sb_1__1__27_chanx_right_out[13] ;
+ wire \sb_1__1__27_chanx_right_out[14] ;
+ wire \sb_1__1__27_chanx_right_out[15] ;
+ wire \sb_1__1__27_chanx_right_out[16] ;
+ wire \sb_1__1__27_chanx_right_out[17] ;
+ wire \sb_1__1__27_chanx_right_out[18] ;
+ wire \sb_1__1__27_chanx_right_out[19] ;
+ wire \sb_1__1__27_chanx_right_out[1] ;
+ wire \sb_1__1__27_chanx_right_out[2] ;
+ wire \sb_1__1__27_chanx_right_out[3] ;
+ wire \sb_1__1__27_chanx_right_out[4] ;
+ wire \sb_1__1__27_chanx_right_out[5] ;
+ wire \sb_1__1__27_chanx_right_out[6] ;
+ wire \sb_1__1__27_chanx_right_out[7] ;
+ wire \sb_1__1__27_chanx_right_out[8] ;
+ wire \sb_1__1__27_chanx_right_out[9] ;
+ wire \sb_1__1__27_chany_bottom_out[0] ;
+ wire \sb_1__1__27_chany_bottom_out[10] ;
+ wire \sb_1__1__27_chany_bottom_out[11] ;
+ wire \sb_1__1__27_chany_bottom_out[12] ;
+ wire \sb_1__1__27_chany_bottom_out[13] ;
+ wire \sb_1__1__27_chany_bottom_out[14] ;
+ wire \sb_1__1__27_chany_bottom_out[15] ;
+ wire \sb_1__1__27_chany_bottom_out[16] ;
+ wire \sb_1__1__27_chany_bottom_out[17] ;
+ wire \sb_1__1__27_chany_bottom_out[18] ;
+ wire \sb_1__1__27_chany_bottom_out[19] ;
+ wire \sb_1__1__27_chany_bottom_out[1] ;
+ wire \sb_1__1__27_chany_bottom_out[2] ;
+ wire \sb_1__1__27_chany_bottom_out[3] ;
+ wire \sb_1__1__27_chany_bottom_out[4] ;
+ wire \sb_1__1__27_chany_bottom_out[5] ;
+ wire \sb_1__1__27_chany_bottom_out[6] ;
+ wire \sb_1__1__27_chany_bottom_out[7] ;
+ wire \sb_1__1__27_chany_bottom_out[8] ;
+ wire \sb_1__1__27_chany_bottom_out[9] ;
+ wire \sb_1__1__27_chany_top_out[0] ;
+ wire \sb_1__1__27_chany_top_out[10] ;
+ wire \sb_1__1__27_chany_top_out[11] ;
+ wire \sb_1__1__27_chany_top_out[12] ;
+ wire \sb_1__1__27_chany_top_out[13] ;
+ wire \sb_1__1__27_chany_top_out[14] ;
+ wire \sb_1__1__27_chany_top_out[15] ;
+ wire \sb_1__1__27_chany_top_out[16] ;
+ wire \sb_1__1__27_chany_top_out[17] ;
+ wire \sb_1__1__27_chany_top_out[18] ;
+ wire \sb_1__1__27_chany_top_out[19] ;
+ wire \sb_1__1__27_chany_top_out[1] ;
+ wire \sb_1__1__27_chany_top_out[2] ;
+ wire \sb_1__1__27_chany_top_out[3] ;
+ wire \sb_1__1__27_chany_top_out[4] ;
+ wire \sb_1__1__27_chany_top_out[5] ;
+ wire \sb_1__1__27_chany_top_out[6] ;
+ wire \sb_1__1__27_chany_top_out[7] ;
+ wire \sb_1__1__27_chany_top_out[8] ;
+ wire \sb_1__1__27_chany_top_out[9] ;
+ wire sb_1__1__28_ccff_tail;
+ wire \sb_1__1__28_chanx_left_out[0] ;
+ wire \sb_1__1__28_chanx_left_out[10] ;
+ wire \sb_1__1__28_chanx_left_out[11] ;
+ wire \sb_1__1__28_chanx_left_out[12] ;
+ wire \sb_1__1__28_chanx_left_out[13] ;
+ wire \sb_1__1__28_chanx_left_out[14] ;
+ wire \sb_1__1__28_chanx_left_out[15] ;
+ wire \sb_1__1__28_chanx_left_out[16] ;
+ wire \sb_1__1__28_chanx_left_out[17] ;
+ wire \sb_1__1__28_chanx_left_out[18] ;
+ wire \sb_1__1__28_chanx_left_out[19] ;
+ wire \sb_1__1__28_chanx_left_out[1] ;
+ wire \sb_1__1__28_chanx_left_out[2] ;
+ wire \sb_1__1__28_chanx_left_out[3] ;
+ wire \sb_1__1__28_chanx_left_out[4] ;
+ wire \sb_1__1__28_chanx_left_out[5] ;
+ wire \sb_1__1__28_chanx_left_out[6] ;
+ wire \sb_1__1__28_chanx_left_out[7] ;
+ wire \sb_1__1__28_chanx_left_out[8] ;
+ wire \sb_1__1__28_chanx_left_out[9] ;
+ wire \sb_1__1__28_chanx_right_out[0] ;
+ wire \sb_1__1__28_chanx_right_out[10] ;
+ wire \sb_1__1__28_chanx_right_out[11] ;
+ wire \sb_1__1__28_chanx_right_out[12] ;
+ wire \sb_1__1__28_chanx_right_out[13] ;
+ wire \sb_1__1__28_chanx_right_out[14] ;
+ wire \sb_1__1__28_chanx_right_out[15] ;
+ wire \sb_1__1__28_chanx_right_out[16] ;
+ wire \sb_1__1__28_chanx_right_out[17] ;
+ wire \sb_1__1__28_chanx_right_out[18] ;
+ wire \sb_1__1__28_chanx_right_out[19] ;
+ wire \sb_1__1__28_chanx_right_out[1] ;
+ wire \sb_1__1__28_chanx_right_out[2] ;
+ wire \sb_1__1__28_chanx_right_out[3] ;
+ wire \sb_1__1__28_chanx_right_out[4] ;
+ wire \sb_1__1__28_chanx_right_out[5] ;
+ wire \sb_1__1__28_chanx_right_out[6] ;
+ wire \sb_1__1__28_chanx_right_out[7] ;
+ wire \sb_1__1__28_chanx_right_out[8] ;
+ wire \sb_1__1__28_chanx_right_out[9] ;
+ wire \sb_1__1__28_chany_bottom_out[0] ;
+ wire \sb_1__1__28_chany_bottom_out[10] ;
+ wire \sb_1__1__28_chany_bottom_out[11] ;
+ wire \sb_1__1__28_chany_bottom_out[12] ;
+ wire \sb_1__1__28_chany_bottom_out[13] ;
+ wire \sb_1__1__28_chany_bottom_out[14] ;
+ wire \sb_1__1__28_chany_bottom_out[15] ;
+ wire \sb_1__1__28_chany_bottom_out[16] ;
+ wire \sb_1__1__28_chany_bottom_out[17] ;
+ wire \sb_1__1__28_chany_bottom_out[18] ;
+ wire \sb_1__1__28_chany_bottom_out[19] ;
+ wire \sb_1__1__28_chany_bottom_out[1] ;
+ wire \sb_1__1__28_chany_bottom_out[2] ;
+ wire \sb_1__1__28_chany_bottom_out[3] ;
+ wire \sb_1__1__28_chany_bottom_out[4] ;
+ wire \sb_1__1__28_chany_bottom_out[5] ;
+ wire \sb_1__1__28_chany_bottom_out[6] ;
+ wire \sb_1__1__28_chany_bottom_out[7] ;
+ wire \sb_1__1__28_chany_bottom_out[8] ;
+ wire \sb_1__1__28_chany_bottom_out[9] ;
+ wire \sb_1__1__28_chany_top_out[0] ;
+ wire \sb_1__1__28_chany_top_out[10] ;
+ wire \sb_1__1__28_chany_top_out[11] ;
+ wire \sb_1__1__28_chany_top_out[12] ;
+ wire \sb_1__1__28_chany_top_out[13] ;
+ wire \sb_1__1__28_chany_top_out[14] ;
+ wire \sb_1__1__28_chany_top_out[15] ;
+ wire \sb_1__1__28_chany_top_out[16] ;
+ wire \sb_1__1__28_chany_top_out[17] ;
+ wire \sb_1__1__28_chany_top_out[18] ;
+ wire \sb_1__1__28_chany_top_out[19] ;
+ wire \sb_1__1__28_chany_top_out[1] ;
+ wire \sb_1__1__28_chany_top_out[2] ;
+ wire \sb_1__1__28_chany_top_out[3] ;
+ wire \sb_1__1__28_chany_top_out[4] ;
+ wire \sb_1__1__28_chany_top_out[5] ;
+ wire \sb_1__1__28_chany_top_out[6] ;
+ wire \sb_1__1__28_chany_top_out[7] ;
+ wire \sb_1__1__28_chany_top_out[8] ;
+ wire \sb_1__1__28_chany_top_out[9] ;
+ wire sb_1__1__29_ccff_tail;
+ wire \sb_1__1__29_chanx_left_out[0] ;
+ wire \sb_1__1__29_chanx_left_out[10] ;
+ wire \sb_1__1__29_chanx_left_out[11] ;
+ wire \sb_1__1__29_chanx_left_out[12] ;
+ wire \sb_1__1__29_chanx_left_out[13] ;
+ wire \sb_1__1__29_chanx_left_out[14] ;
+ wire \sb_1__1__29_chanx_left_out[15] ;
+ wire \sb_1__1__29_chanx_left_out[16] ;
+ wire \sb_1__1__29_chanx_left_out[17] ;
+ wire \sb_1__1__29_chanx_left_out[18] ;
+ wire \sb_1__1__29_chanx_left_out[19] ;
+ wire \sb_1__1__29_chanx_left_out[1] ;
+ wire \sb_1__1__29_chanx_left_out[2] ;
+ wire \sb_1__1__29_chanx_left_out[3] ;
+ wire \sb_1__1__29_chanx_left_out[4] ;
+ wire \sb_1__1__29_chanx_left_out[5] ;
+ wire \sb_1__1__29_chanx_left_out[6] ;
+ wire \sb_1__1__29_chanx_left_out[7] ;
+ wire \sb_1__1__29_chanx_left_out[8] ;
+ wire \sb_1__1__29_chanx_left_out[9] ;
+ wire \sb_1__1__29_chanx_right_out[0] ;
+ wire \sb_1__1__29_chanx_right_out[10] ;
+ wire \sb_1__1__29_chanx_right_out[11] ;
+ wire \sb_1__1__29_chanx_right_out[12] ;
+ wire \sb_1__1__29_chanx_right_out[13] ;
+ wire \sb_1__1__29_chanx_right_out[14] ;
+ wire \sb_1__1__29_chanx_right_out[15] ;
+ wire \sb_1__1__29_chanx_right_out[16] ;
+ wire \sb_1__1__29_chanx_right_out[17] ;
+ wire \sb_1__1__29_chanx_right_out[18] ;
+ wire \sb_1__1__29_chanx_right_out[19] ;
+ wire \sb_1__1__29_chanx_right_out[1] ;
+ wire \sb_1__1__29_chanx_right_out[2] ;
+ wire \sb_1__1__29_chanx_right_out[3] ;
+ wire \sb_1__1__29_chanx_right_out[4] ;
+ wire \sb_1__1__29_chanx_right_out[5] ;
+ wire \sb_1__1__29_chanx_right_out[6] ;
+ wire \sb_1__1__29_chanx_right_out[7] ;
+ wire \sb_1__1__29_chanx_right_out[8] ;
+ wire \sb_1__1__29_chanx_right_out[9] ;
+ wire \sb_1__1__29_chany_bottom_out[0] ;
+ wire \sb_1__1__29_chany_bottom_out[10] ;
+ wire \sb_1__1__29_chany_bottom_out[11] ;
+ wire \sb_1__1__29_chany_bottom_out[12] ;
+ wire \sb_1__1__29_chany_bottom_out[13] ;
+ wire \sb_1__1__29_chany_bottom_out[14] ;
+ wire \sb_1__1__29_chany_bottom_out[15] ;
+ wire \sb_1__1__29_chany_bottom_out[16] ;
+ wire \sb_1__1__29_chany_bottom_out[17] ;
+ wire \sb_1__1__29_chany_bottom_out[18] ;
+ wire \sb_1__1__29_chany_bottom_out[19] ;
+ wire \sb_1__1__29_chany_bottom_out[1] ;
+ wire \sb_1__1__29_chany_bottom_out[2] ;
+ wire \sb_1__1__29_chany_bottom_out[3] ;
+ wire \sb_1__1__29_chany_bottom_out[4] ;
+ wire \sb_1__1__29_chany_bottom_out[5] ;
+ wire \sb_1__1__29_chany_bottom_out[6] ;
+ wire \sb_1__1__29_chany_bottom_out[7] ;
+ wire \sb_1__1__29_chany_bottom_out[8] ;
+ wire \sb_1__1__29_chany_bottom_out[9] ;
+ wire \sb_1__1__29_chany_top_out[0] ;
+ wire \sb_1__1__29_chany_top_out[10] ;
+ wire \sb_1__1__29_chany_top_out[11] ;
+ wire \sb_1__1__29_chany_top_out[12] ;
+ wire \sb_1__1__29_chany_top_out[13] ;
+ wire \sb_1__1__29_chany_top_out[14] ;
+ wire \sb_1__1__29_chany_top_out[15] ;
+ wire \sb_1__1__29_chany_top_out[16] ;
+ wire \sb_1__1__29_chany_top_out[17] ;
+ wire \sb_1__1__29_chany_top_out[18] ;
+ wire \sb_1__1__29_chany_top_out[19] ;
+ wire \sb_1__1__29_chany_top_out[1] ;
+ wire \sb_1__1__29_chany_top_out[2] ;
+ wire \sb_1__1__29_chany_top_out[3] ;
+ wire \sb_1__1__29_chany_top_out[4] ;
+ wire \sb_1__1__29_chany_top_out[5] ;
+ wire \sb_1__1__29_chany_top_out[6] ;
+ wire \sb_1__1__29_chany_top_out[7] ;
+ wire \sb_1__1__29_chany_top_out[8] ;
+ wire \sb_1__1__29_chany_top_out[9] ;
+ wire sb_1__1__2_ccff_tail;
+ wire \sb_1__1__2_chanx_left_out[0] ;
+ wire \sb_1__1__2_chanx_left_out[10] ;
+ wire \sb_1__1__2_chanx_left_out[11] ;
+ wire \sb_1__1__2_chanx_left_out[12] ;
+ wire \sb_1__1__2_chanx_left_out[13] ;
+ wire \sb_1__1__2_chanx_left_out[14] ;
+ wire \sb_1__1__2_chanx_left_out[15] ;
+ wire \sb_1__1__2_chanx_left_out[16] ;
+ wire \sb_1__1__2_chanx_left_out[17] ;
+ wire \sb_1__1__2_chanx_left_out[18] ;
+ wire \sb_1__1__2_chanx_left_out[19] ;
+ wire \sb_1__1__2_chanx_left_out[1] ;
+ wire \sb_1__1__2_chanx_left_out[2] ;
+ wire \sb_1__1__2_chanx_left_out[3] ;
+ wire \sb_1__1__2_chanx_left_out[4] ;
+ wire \sb_1__1__2_chanx_left_out[5] ;
+ wire \sb_1__1__2_chanx_left_out[6] ;
+ wire \sb_1__1__2_chanx_left_out[7] ;
+ wire \sb_1__1__2_chanx_left_out[8] ;
+ wire \sb_1__1__2_chanx_left_out[9] ;
+ wire \sb_1__1__2_chanx_right_out[0] ;
+ wire \sb_1__1__2_chanx_right_out[10] ;
+ wire \sb_1__1__2_chanx_right_out[11] ;
+ wire \sb_1__1__2_chanx_right_out[12] ;
+ wire \sb_1__1__2_chanx_right_out[13] ;
+ wire \sb_1__1__2_chanx_right_out[14] ;
+ wire \sb_1__1__2_chanx_right_out[15] ;
+ wire \sb_1__1__2_chanx_right_out[16] ;
+ wire \sb_1__1__2_chanx_right_out[17] ;
+ wire \sb_1__1__2_chanx_right_out[18] ;
+ wire \sb_1__1__2_chanx_right_out[19] ;
+ wire \sb_1__1__2_chanx_right_out[1] ;
+ wire \sb_1__1__2_chanx_right_out[2] ;
+ wire \sb_1__1__2_chanx_right_out[3] ;
+ wire \sb_1__1__2_chanx_right_out[4] ;
+ wire \sb_1__1__2_chanx_right_out[5] ;
+ wire \sb_1__1__2_chanx_right_out[6] ;
+ wire \sb_1__1__2_chanx_right_out[7] ;
+ wire \sb_1__1__2_chanx_right_out[8] ;
+ wire \sb_1__1__2_chanx_right_out[9] ;
+ wire \sb_1__1__2_chany_bottom_out[0] ;
+ wire \sb_1__1__2_chany_bottom_out[10] ;
+ wire \sb_1__1__2_chany_bottom_out[11] ;
+ wire \sb_1__1__2_chany_bottom_out[12] ;
+ wire \sb_1__1__2_chany_bottom_out[13] ;
+ wire \sb_1__1__2_chany_bottom_out[14] ;
+ wire \sb_1__1__2_chany_bottom_out[15] ;
+ wire \sb_1__1__2_chany_bottom_out[16] ;
+ wire \sb_1__1__2_chany_bottom_out[17] ;
+ wire \sb_1__1__2_chany_bottom_out[18] ;
+ wire \sb_1__1__2_chany_bottom_out[19] ;
+ wire \sb_1__1__2_chany_bottom_out[1] ;
+ wire \sb_1__1__2_chany_bottom_out[2] ;
+ wire \sb_1__1__2_chany_bottom_out[3] ;
+ wire \sb_1__1__2_chany_bottom_out[4] ;
+ wire \sb_1__1__2_chany_bottom_out[5] ;
+ wire \sb_1__1__2_chany_bottom_out[6] ;
+ wire \sb_1__1__2_chany_bottom_out[7] ;
+ wire \sb_1__1__2_chany_bottom_out[8] ;
+ wire \sb_1__1__2_chany_bottom_out[9] ;
+ wire \sb_1__1__2_chany_top_out[0] ;
+ wire \sb_1__1__2_chany_top_out[10] ;
+ wire \sb_1__1__2_chany_top_out[11] ;
+ wire \sb_1__1__2_chany_top_out[12] ;
+ wire \sb_1__1__2_chany_top_out[13] ;
+ wire \sb_1__1__2_chany_top_out[14] ;
+ wire \sb_1__1__2_chany_top_out[15] ;
+ wire \sb_1__1__2_chany_top_out[16] ;
+ wire \sb_1__1__2_chany_top_out[17] ;
+ wire \sb_1__1__2_chany_top_out[18] ;
+ wire \sb_1__1__2_chany_top_out[19] ;
+ wire \sb_1__1__2_chany_top_out[1] ;
+ wire \sb_1__1__2_chany_top_out[2] ;
+ wire \sb_1__1__2_chany_top_out[3] ;
+ wire \sb_1__1__2_chany_top_out[4] ;
+ wire \sb_1__1__2_chany_top_out[5] ;
+ wire \sb_1__1__2_chany_top_out[6] ;
+ wire \sb_1__1__2_chany_top_out[7] ;
+ wire \sb_1__1__2_chany_top_out[8] ;
+ wire \sb_1__1__2_chany_top_out[9] ;
+ wire sb_1__1__30_ccff_tail;
+ wire \sb_1__1__30_chanx_left_out[0] ;
+ wire \sb_1__1__30_chanx_left_out[10] ;
+ wire \sb_1__1__30_chanx_left_out[11] ;
+ wire \sb_1__1__30_chanx_left_out[12] ;
+ wire \sb_1__1__30_chanx_left_out[13] ;
+ wire \sb_1__1__30_chanx_left_out[14] ;
+ wire \sb_1__1__30_chanx_left_out[15] ;
+ wire \sb_1__1__30_chanx_left_out[16] ;
+ wire \sb_1__1__30_chanx_left_out[17] ;
+ wire \sb_1__1__30_chanx_left_out[18] ;
+ wire \sb_1__1__30_chanx_left_out[19] ;
+ wire \sb_1__1__30_chanx_left_out[1] ;
+ wire \sb_1__1__30_chanx_left_out[2] ;
+ wire \sb_1__1__30_chanx_left_out[3] ;
+ wire \sb_1__1__30_chanx_left_out[4] ;
+ wire \sb_1__1__30_chanx_left_out[5] ;
+ wire \sb_1__1__30_chanx_left_out[6] ;
+ wire \sb_1__1__30_chanx_left_out[7] ;
+ wire \sb_1__1__30_chanx_left_out[8] ;
+ wire \sb_1__1__30_chanx_left_out[9] ;
+ wire \sb_1__1__30_chanx_right_out[0] ;
+ wire \sb_1__1__30_chanx_right_out[10] ;
+ wire \sb_1__1__30_chanx_right_out[11] ;
+ wire \sb_1__1__30_chanx_right_out[12] ;
+ wire \sb_1__1__30_chanx_right_out[13] ;
+ wire \sb_1__1__30_chanx_right_out[14] ;
+ wire \sb_1__1__30_chanx_right_out[15] ;
+ wire \sb_1__1__30_chanx_right_out[16] ;
+ wire \sb_1__1__30_chanx_right_out[17] ;
+ wire \sb_1__1__30_chanx_right_out[18] ;
+ wire \sb_1__1__30_chanx_right_out[19] ;
+ wire \sb_1__1__30_chanx_right_out[1] ;
+ wire \sb_1__1__30_chanx_right_out[2] ;
+ wire \sb_1__1__30_chanx_right_out[3] ;
+ wire \sb_1__1__30_chanx_right_out[4] ;
+ wire \sb_1__1__30_chanx_right_out[5] ;
+ wire \sb_1__1__30_chanx_right_out[6] ;
+ wire \sb_1__1__30_chanx_right_out[7] ;
+ wire \sb_1__1__30_chanx_right_out[8] ;
+ wire \sb_1__1__30_chanx_right_out[9] ;
+ wire \sb_1__1__30_chany_bottom_out[0] ;
+ wire \sb_1__1__30_chany_bottom_out[10] ;
+ wire \sb_1__1__30_chany_bottom_out[11] ;
+ wire \sb_1__1__30_chany_bottom_out[12] ;
+ wire \sb_1__1__30_chany_bottom_out[13] ;
+ wire \sb_1__1__30_chany_bottom_out[14] ;
+ wire \sb_1__1__30_chany_bottom_out[15] ;
+ wire \sb_1__1__30_chany_bottom_out[16] ;
+ wire \sb_1__1__30_chany_bottom_out[17] ;
+ wire \sb_1__1__30_chany_bottom_out[18] ;
+ wire \sb_1__1__30_chany_bottom_out[19] ;
+ wire \sb_1__1__30_chany_bottom_out[1] ;
+ wire \sb_1__1__30_chany_bottom_out[2] ;
+ wire \sb_1__1__30_chany_bottom_out[3] ;
+ wire \sb_1__1__30_chany_bottom_out[4] ;
+ wire \sb_1__1__30_chany_bottom_out[5] ;
+ wire \sb_1__1__30_chany_bottom_out[6] ;
+ wire \sb_1__1__30_chany_bottom_out[7] ;
+ wire \sb_1__1__30_chany_bottom_out[8] ;
+ wire \sb_1__1__30_chany_bottom_out[9] ;
+ wire \sb_1__1__30_chany_top_out[0] ;
+ wire \sb_1__1__30_chany_top_out[10] ;
+ wire \sb_1__1__30_chany_top_out[11] ;
+ wire \sb_1__1__30_chany_top_out[12] ;
+ wire \sb_1__1__30_chany_top_out[13] ;
+ wire \sb_1__1__30_chany_top_out[14] ;
+ wire \sb_1__1__30_chany_top_out[15] ;
+ wire \sb_1__1__30_chany_top_out[16] ;
+ wire \sb_1__1__30_chany_top_out[17] ;
+ wire \sb_1__1__30_chany_top_out[18] ;
+ wire \sb_1__1__30_chany_top_out[19] ;
+ wire \sb_1__1__30_chany_top_out[1] ;
+ wire \sb_1__1__30_chany_top_out[2] ;
+ wire \sb_1__1__30_chany_top_out[3] ;
+ wire \sb_1__1__30_chany_top_out[4] ;
+ wire \sb_1__1__30_chany_top_out[5] ;
+ wire \sb_1__1__30_chany_top_out[6] ;
+ wire \sb_1__1__30_chany_top_out[7] ;
+ wire \sb_1__1__30_chany_top_out[8] ;
+ wire \sb_1__1__30_chany_top_out[9] ;
+ wire sb_1__1__31_ccff_tail;
+ wire \sb_1__1__31_chanx_left_out[0] ;
+ wire \sb_1__1__31_chanx_left_out[10] ;
+ wire \sb_1__1__31_chanx_left_out[11] ;
+ wire \sb_1__1__31_chanx_left_out[12] ;
+ wire \sb_1__1__31_chanx_left_out[13] ;
+ wire \sb_1__1__31_chanx_left_out[14] ;
+ wire \sb_1__1__31_chanx_left_out[15] ;
+ wire \sb_1__1__31_chanx_left_out[16] ;
+ wire \sb_1__1__31_chanx_left_out[17] ;
+ wire \sb_1__1__31_chanx_left_out[18] ;
+ wire \sb_1__1__31_chanx_left_out[19] ;
+ wire \sb_1__1__31_chanx_left_out[1] ;
+ wire \sb_1__1__31_chanx_left_out[2] ;
+ wire \sb_1__1__31_chanx_left_out[3] ;
+ wire \sb_1__1__31_chanx_left_out[4] ;
+ wire \sb_1__1__31_chanx_left_out[5] ;
+ wire \sb_1__1__31_chanx_left_out[6] ;
+ wire \sb_1__1__31_chanx_left_out[7] ;
+ wire \sb_1__1__31_chanx_left_out[8] ;
+ wire \sb_1__1__31_chanx_left_out[9] ;
+ wire \sb_1__1__31_chanx_right_out[0] ;
+ wire \sb_1__1__31_chanx_right_out[10] ;
+ wire \sb_1__1__31_chanx_right_out[11] ;
+ wire \sb_1__1__31_chanx_right_out[12] ;
+ wire \sb_1__1__31_chanx_right_out[13] ;
+ wire \sb_1__1__31_chanx_right_out[14] ;
+ wire \sb_1__1__31_chanx_right_out[15] ;
+ wire \sb_1__1__31_chanx_right_out[16] ;
+ wire \sb_1__1__31_chanx_right_out[17] ;
+ wire \sb_1__1__31_chanx_right_out[18] ;
+ wire \sb_1__1__31_chanx_right_out[19] ;
+ wire \sb_1__1__31_chanx_right_out[1] ;
+ wire \sb_1__1__31_chanx_right_out[2] ;
+ wire \sb_1__1__31_chanx_right_out[3] ;
+ wire \sb_1__1__31_chanx_right_out[4] ;
+ wire \sb_1__1__31_chanx_right_out[5] ;
+ wire \sb_1__1__31_chanx_right_out[6] ;
+ wire \sb_1__1__31_chanx_right_out[7] ;
+ wire \sb_1__1__31_chanx_right_out[8] ;
+ wire \sb_1__1__31_chanx_right_out[9] ;
+ wire \sb_1__1__31_chany_bottom_out[0] ;
+ wire \sb_1__1__31_chany_bottom_out[10] ;
+ wire \sb_1__1__31_chany_bottom_out[11] ;
+ wire \sb_1__1__31_chany_bottom_out[12] ;
+ wire \sb_1__1__31_chany_bottom_out[13] ;
+ wire \sb_1__1__31_chany_bottom_out[14] ;
+ wire \sb_1__1__31_chany_bottom_out[15] ;
+ wire \sb_1__1__31_chany_bottom_out[16] ;
+ wire \sb_1__1__31_chany_bottom_out[17] ;
+ wire \sb_1__1__31_chany_bottom_out[18] ;
+ wire \sb_1__1__31_chany_bottom_out[19] ;
+ wire \sb_1__1__31_chany_bottom_out[1] ;
+ wire \sb_1__1__31_chany_bottom_out[2] ;
+ wire \sb_1__1__31_chany_bottom_out[3] ;
+ wire \sb_1__1__31_chany_bottom_out[4] ;
+ wire \sb_1__1__31_chany_bottom_out[5] ;
+ wire \sb_1__1__31_chany_bottom_out[6] ;
+ wire \sb_1__1__31_chany_bottom_out[7] ;
+ wire \sb_1__1__31_chany_bottom_out[8] ;
+ wire \sb_1__1__31_chany_bottom_out[9] ;
+ wire \sb_1__1__31_chany_top_out[0] ;
+ wire \sb_1__1__31_chany_top_out[10] ;
+ wire \sb_1__1__31_chany_top_out[11] ;
+ wire \sb_1__1__31_chany_top_out[12] ;
+ wire \sb_1__1__31_chany_top_out[13] ;
+ wire \sb_1__1__31_chany_top_out[14] ;
+ wire \sb_1__1__31_chany_top_out[15] ;
+ wire \sb_1__1__31_chany_top_out[16] ;
+ wire \sb_1__1__31_chany_top_out[17] ;
+ wire \sb_1__1__31_chany_top_out[18] ;
+ wire \sb_1__1__31_chany_top_out[19] ;
+ wire \sb_1__1__31_chany_top_out[1] ;
+ wire \sb_1__1__31_chany_top_out[2] ;
+ wire \sb_1__1__31_chany_top_out[3] ;
+ wire \sb_1__1__31_chany_top_out[4] ;
+ wire \sb_1__1__31_chany_top_out[5] ;
+ wire \sb_1__1__31_chany_top_out[6] ;
+ wire \sb_1__1__31_chany_top_out[7] ;
+ wire \sb_1__1__31_chany_top_out[8] ;
+ wire \sb_1__1__31_chany_top_out[9] ;
+ wire sb_1__1__32_ccff_tail;
+ wire \sb_1__1__32_chanx_left_out[0] ;
+ wire \sb_1__1__32_chanx_left_out[10] ;
+ wire \sb_1__1__32_chanx_left_out[11] ;
+ wire \sb_1__1__32_chanx_left_out[12] ;
+ wire \sb_1__1__32_chanx_left_out[13] ;
+ wire \sb_1__1__32_chanx_left_out[14] ;
+ wire \sb_1__1__32_chanx_left_out[15] ;
+ wire \sb_1__1__32_chanx_left_out[16] ;
+ wire \sb_1__1__32_chanx_left_out[17] ;
+ wire \sb_1__1__32_chanx_left_out[18] ;
+ wire \sb_1__1__32_chanx_left_out[19] ;
+ wire \sb_1__1__32_chanx_left_out[1] ;
+ wire \sb_1__1__32_chanx_left_out[2] ;
+ wire \sb_1__1__32_chanx_left_out[3] ;
+ wire \sb_1__1__32_chanx_left_out[4] ;
+ wire \sb_1__1__32_chanx_left_out[5] ;
+ wire \sb_1__1__32_chanx_left_out[6] ;
+ wire \sb_1__1__32_chanx_left_out[7] ;
+ wire \sb_1__1__32_chanx_left_out[8] ;
+ wire \sb_1__1__32_chanx_left_out[9] ;
+ wire \sb_1__1__32_chanx_right_out[0] ;
+ wire \sb_1__1__32_chanx_right_out[10] ;
+ wire \sb_1__1__32_chanx_right_out[11] ;
+ wire \sb_1__1__32_chanx_right_out[12] ;
+ wire \sb_1__1__32_chanx_right_out[13] ;
+ wire \sb_1__1__32_chanx_right_out[14] ;
+ wire \sb_1__1__32_chanx_right_out[15] ;
+ wire \sb_1__1__32_chanx_right_out[16] ;
+ wire \sb_1__1__32_chanx_right_out[17] ;
+ wire \sb_1__1__32_chanx_right_out[18] ;
+ wire \sb_1__1__32_chanx_right_out[19] ;
+ wire \sb_1__1__32_chanx_right_out[1] ;
+ wire \sb_1__1__32_chanx_right_out[2] ;
+ wire \sb_1__1__32_chanx_right_out[3] ;
+ wire \sb_1__1__32_chanx_right_out[4] ;
+ wire \sb_1__1__32_chanx_right_out[5] ;
+ wire \sb_1__1__32_chanx_right_out[6] ;
+ wire \sb_1__1__32_chanx_right_out[7] ;
+ wire \sb_1__1__32_chanx_right_out[8] ;
+ wire \sb_1__1__32_chanx_right_out[9] ;
+ wire \sb_1__1__32_chany_bottom_out[0] ;
+ wire \sb_1__1__32_chany_bottom_out[10] ;
+ wire \sb_1__1__32_chany_bottom_out[11] ;
+ wire \sb_1__1__32_chany_bottom_out[12] ;
+ wire \sb_1__1__32_chany_bottom_out[13] ;
+ wire \sb_1__1__32_chany_bottom_out[14] ;
+ wire \sb_1__1__32_chany_bottom_out[15] ;
+ wire \sb_1__1__32_chany_bottom_out[16] ;
+ wire \sb_1__1__32_chany_bottom_out[17] ;
+ wire \sb_1__1__32_chany_bottom_out[18] ;
+ wire \sb_1__1__32_chany_bottom_out[19] ;
+ wire \sb_1__1__32_chany_bottom_out[1] ;
+ wire \sb_1__1__32_chany_bottom_out[2] ;
+ wire \sb_1__1__32_chany_bottom_out[3] ;
+ wire \sb_1__1__32_chany_bottom_out[4] ;
+ wire \sb_1__1__32_chany_bottom_out[5] ;
+ wire \sb_1__1__32_chany_bottom_out[6] ;
+ wire \sb_1__1__32_chany_bottom_out[7] ;
+ wire \sb_1__1__32_chany_bottom_out[8] ;
+ wire \sb_1__1__32_chany_bottom_out[9] ;
+ wire \sb_1__1__32_chany_top_out[0] ;
+ wire \sb_1__1__32_chany_top_out[10] ;
+ wire \sb_1__1__32_chany_top_out[11] ;
+ wire \sb_1__1__32_chany_top_out[12] ;
+ wire \sb_1__1__32_chany_top_out[13] ;
+ wire \sb_1__1__32_chany_top_out[14] ;
+ wire \sb_1__1__32_chany_top_out[15] ;
+ wire \sb_1__1__32_chany_top_out[16] ;
+ wire \sb_1__1__32_chany_top_out[17] ;
+ wire \sb_1__1__32_chany_top_out[18] ;
+ wire \sb_1__1__32_chany_top_out[19] ;
+ wire \sb_1__1__32_chany_top_out[1] ;
+ wire \sb_1__1__32_chany_top_out[2] ;
+ wire \sb_1__1__32_chany_top_out[3] ;
+ wire \sb_1__1__32_chany_top_out[4] ;
+ wire \sb_1__1__32_chany_top_out[5] ;
+ wire \sb_1__1__32_chany_top_out[6] ;
+ wire \sb_1__1__32_chany_top_out[7] ;
+ wire \sb_1__1__32_chany_top_out[8] ;
+ wire \sb_1__1__32_chany_top_out[9] ;
+ wire sb_1__1__33_ccff_tail;
+ wire \sb_1__1__33_chanx_left_out[0] ;
+ wire \sb_1__1__33_chanx_left_out[10] ;
+ wire \sb_1__1__33_chanx_left_out[11] ;
+ wire \sb_1__1__33_chanx_left_out[12] ;
+ wire \sb_1__1__33_chanx_left_out[13] ;
+ wire \sb_1__1__33_chanx_left_out[14] ;
+ wire \sb_1__1__33_chanx_left_out[15] ;
+ wire \sb_1__1__33_chanx_left_out[16] ;
+ wire \sb_1__1__33_chanx_left_out[17] ;
+ wire \sb_1__1__33_chanx_left_out[18] ;
+ wire \sb_1__1__33_chanx_left_out[19] ;
+ wire \sb_1__1__33_chanx_left_out[1] ;
+ wire \sb_1__1__33_chanx_left_out[2] ;
+ wire \sb_1__1__33_chanx_left_out[3] ;
+ wire \sb_1__1__33_chanx_left_out[4] ;
+ wire \sb_1__1__33_chanx_left_out[5] ;
+ wire \sb_1__1__33_chanx_left_out[6] ;
+ wire \sb_1__1__33_chanx_left_out[7] ;
+ wire \sb_1__1__33_chanx_left_out[8] ;
+ wire \sb_1__1__33_chanx_left_out[9] ;
+ wire \sb_1__1__33_chanx_right_out[0] ;
+ wire \sb_1__1__33_chanx_right_out[10] ;
+ wire \sb_1__1__33_chanx_right_out[11] ;
+ wire \sb_1__1__33_chanx_right_out[12] ;
+ wire \sb_1__1__33_chanx_right_out[13] ;
+ wire \sb_1__1__33_chanx_right_out[14] ;
+ wire \sb_1__1__33_chanx_right_out[15] ;
+ wire \sb_1__1__33_chanx_right_out[16] ;
+ wire \sb_1__1__33_chanx_right_out[17] ;
+ wire \sb_1__1__33_chanx_right_out[18] ;
+ wire \sb_1__1__33_chanx_right_out[19] ;
+ wire \sb_1__1__33_chanx_right_out[1] ;
+ wire \sb_1__1__33_chanx_right_out[2] ;
+ wire \sb_1__1__33_chanx_right_out[3] ;
+ wire \sb_1__1__33_chanx_right_out[4] ;
+ wire \sb_1__1__33_chanx_right_out[5] ;
+ wire \sb_1__1__33_chanx_right_out[6] ;
+ wire \sb_1__1__33_chanx_right_out[7] ;
+ wire \sb_1__1__33_chanx_right_out[8] ;
+ wire \sb_1__1__33_chanx_right_out[9] ;
+ wire \sb_1__1__33_chany_bottom_out[0] ;
+ wire \sb_1__1__33_chany_bottom_out[10] ;
+ wire \sb_1__1__33_chany_bottom_out[11] ;
+ wire \sb_1__1__33_chany_bottom_out[12] ;
+ wire \sb_1__1__33_chany_bottom_out[13] ;
+ wire \sb_1__1__33_chany_bottom_out[14] ;
+ wire \sb_1__1__33_chany_bottom_out[15] ;
+ wire \sb_1__1__33_chany_bottom_out[16] ;
+ wire \sb_1__1__33_chany_bottom_out[17] ;
+ wire \sb_1__1__33_chany_bottom_out[18] ;
+ wire \sb_1__1__33_chany_bottom_out[19] ;
+ wire \sb_1__1__33_chany_bottom_out[1] ;
+ wire \sb_1__1__33_chany_bottom_out[2] ;
+ wire \sb_1__1__33_chany_bottom_out[3] ;
+ wire \sb_1__1__33_chany_bottom_out[4] ;
+ wire \sb_1__1__33_chany_bottom_out[5] ;
+ wire \sb_1__1__33_chany_bottom_out[6] ;
+ wire \sb_1__1__33_chany_bottom_out[7] ;
+ wire \sb_1__1__33_chany_bottom_out[8] ;
+ wire \sb_1__1__33_chany_bottom_out[9] ;
+ wire \sb_1__1__33_chany_top_out[0] ;
+ wire \sb_1__1__33_chany_top_out[10] ;
+ wire \sb_1__1__33_chany_top_out[11] ;
+ wire \sb_1__1__33_chany_top_out[12] ;
+ wire \sb_1__1__33_chany_top_out[13] ;
+ wire \sb_1__1__33_chany_top_out[14] ;
+ wire \sb_1__1__33_chany_top_out[15] ;
+ wire \sb_1__1__33_chany_top_out[16] ;
+ wire \sb_1__1__33_chany_top_out[17] ;
+ wire \sb_1__1__33_chany_top_out[18] ;
+ wire \sb_1__1__33_chany_top_out[19] ;
+ wire \sb_1__1__33_chany_top_out[1] ;
+ wire \sb_1__1__33_chany_top_out[2] ;
+ wire \sb_1__1__33_chany_top_out[3] ;
+ wire \sb_1__1__33_chany_top_out[4] ;
+ wire \sb_1__1__33_chany_top_out[5] ;
+ wire \sb_1__1__33_chany_top_out[6] ;
+ wire \sb_1__1__33_chany_top_out[7] ;
+ wire \sb_1__1__33_chany_top_out[8] ;
+ wire \sb_1__1__33_chany_top_out[9] ;
+ wire sb_1__1__34_ccff_tail;
+ wire \sb_1__1__34_chanx_left_out[0] ;
+ wire \sb_1__1__34_chanx_left_out[10] ;
+ wire \sb_1__1__34_chanx_left_out[11] ;
+ wire \sb_1__1__34_chanx_left_out[12] ;
+ wire \sb_1__1__34_chanx_left_out[13] ;
+ wire \sb_1__1__34_chanx_left_out[14] ;
+ wire \sb_1__1__34_chanx_left_out[15] ;
+ wire \sb_1__1__34_chanx_left_out[16] ;
+ wire \sb_1__1__34_chanx_left_out[17] ;
+ wire \sb_1__1__34_chanx_left_out[18] ;
+ wire \sb_1__1__34_chanx_left_out[19] ;
+ wire \sb_1__1__34_chanx_left_out[1] ;
+ wire \sb_1__1__34_chanx_left_out[2] ;
+ wire \sb_1__1__34_chanx_left_out[3] ;
+ wire \sb_1__1__34_chanx_left_out[4] ;
+ wire \sb_1__1__34_chanx_left_out[5] ;
+ wire \sb_1__1__34_chanx_left_out[6] ;
+ wire \sb_1__1__34_chanx_left_out[7] ;
+ wire \sb_1__1__34_chanx_left_out[8] ;
+ wire \sb_1__1__34_chanx_left_out[9] ;
+ wire \sb_1__1__34_chanx_right_out[0] ;
+ wire \sb_1__1__34_chanx_right_out[10] ;
+ wire \sb_1__1__34_chanx_right_out[11] ;
+ wire \sb_1__1__34_chanx_right_out[12] ;
+ wire \sb_1__1__34_chanx_right_out[13] ;
+ wire \sb_1__1__34_chanx_right_out[14] ;
+ wire \sb_1__1__34_chanx_right_out[15] ;
+ wire \sb_1__1__34_chanx_right_out[16] ;
+ wire \sb_1__1__34_chanx_right_out[17] ;
+ wire \sb_1__1__34_chanx_right_out[18] ;
+ wire \sb_1__1__34_chanx_right_out[19] ;
+ wire \sb_1__1__34_chanx_right_out[1] ;
+ wire \sb_1__1__34_chanx_right_out[2] ;
+ wire \sb_1__1__34_chanx_right_out[3] ;
+ wire \sb_1__1__34_chanx_right_out[4] ;
+ wire \sb_1__1__34_chanx_right_out[5] ;
+ wire \sb_1__1__34_chanx_right_out[6] ;
+ wire \sb_1__1__34_chanx_right_out[7] ;
+ wire \sb_1__1__34_chanx_right_out[8] ;
+ wire \sb_1__1__34_chanx_right_out[9] ;
+ wire \sb_1__1__34_chany_bottom_out[0] ;
+ wire \sb_1__1__34_chany_bottom_out[10] ;
+ wire \sb_1__1__34_chany_bottom_out[11] ;
+ wire \sb_1__1__34_chany_bottom_out[12] ;
+ wire \sb_1__1__34_chany_bottom_out[13] ;
+ wire \sb_1__1__34_chany_bottom_out[14] ;
+ wire \sb_1__1__34_chany_bottom_out[15] ;
+ wire \sb_1__1__34_chany_bottom_out[16] ;
+ wire \sb_1__1__34_chany_bottom_out[17] ;
+ wire \sb_1__1__34_chany_bottom_out[18] ;
+ wire \sb_1__1__34_chany_bottom_out[19] ;
+ wire \sb_1__1__34_chany_bottom_out[1] ;
+ wire \sb_1__1__34_chany_bottom_out[2] ;
+ wire \sb_1__1__34_chany_bottom_out[3] ;
+ wire \sb_1__1__34_chany_bottom_out[4] ;
+ wire \sb_1__1__34_chany_bottom_out[5] ;
+ wire \sb_1__1__34_chany_bottom_out[6] ;
+ wire \sb_1__1__34_chany_bottom_out[7] ;
+ wire \sb_1__1__34_chany_bottom_out[8] ;
+ wire \sb_1__1__34_chany_bottom_out[9] ;
+ wire \sb_1__1__34_chany_top_out[0] ;
+ wire \sb_1__1__34_chany_top_out[10] ;
+ wire \sb_1__1__34_chany_top_out[11] ;
+ wire \sb_1__1__34_chany_top_out[12] ;
+ wire \sb_1__1__34_chany_top_out[13] ;
+ wire \sb_1__1__34_chany_top_out[14] ;
+ wire \sb_1__1__34_chany_top_out[15] ;
+ wire \sb_1__1__34_chany_top_out[16] ;
+ wire \sb_1__1__34_chany_top_out[17] ;
+ wire \sb_1__1__34_chany_top_out[18] ;
+ wire \sb_1__1__34_chany_top_out[19] ;
+ wire \sb_1__1__34_chany_top_out[1] ;
+ wire \sb_1__1__34_chany_top_out[2] ;
+ wire \sb_1__1__34_chany_top_out[3] ;
+ wire \sb_1__1__34_chany_top_out[4] ;
+ wire \sb_1__1__34_chany_top_out[5] ;
+ wire \sb_1__1__34_chany_top_out[6] ;
+ wire \sb_1__1__34_chany_top_out[7] ;
+ wire \sb_1__1__34_chany_top_out[8] ;
+ wire \sb_1__1__34_chany_top_out[9] ;
+ wire sb_1__1__35_ccff_tail;
+ wire \sb_1__1__35_chanx_left_out[0] ;
+ wire \sb_1__1__35_chanx_left_out[10] ;
+ wire \sb_1__1__35_chanx_left_out[11] ;
+ wire \sb_1__1__35_chanx_left_out[12] ;
+ wire \sb_1__1__35_chanx_left_out[13] ;
+ wire \sb_1__1__35_chanx_left_out[14] ;
+ wire \sb_1__1__35_chanx_left_out[15] ;
+ wire \sb_1__1__35_chanx_left_out[16] ;
+ wire \sb_1__1__35_chanx_left_out[17] ;
+ wire \sb_1__1__35_chanx_left_out[18] ;
+ wire \sb_1__1__35_chanx_left_out[19] ;
+ wire \sb_1__1__35_chanx_left_out[1] ;
+ wire \sb_1__1__35_chanx_left_out[2] ;
+ wire \sb_1__1__35_chanx_left_out[3] ;
+ wire \sb_1__1__35_chanx_left_out[4] ;
+ wire \sb_1__1__35_chanx_left_out[5] ;
+ wire \sb_1__1__35_chanx_left_out[6] ;
+ wire \sb_1__1__35_chanx_left_out[7] ;
+ wire \sb_1__1__35_chanx_left_out[8] ;
+ wire \sb_1__1__35_chanx_left_out[9] ;
+ wire \sb_1__1__35_chanx_right_out[0] ;
+ wire \sb_1__1__35_chanx_right_out[10] ;
+ wire \sb_1__1__35_chanx_right_out[11] ;
+ wire \sb_1__1__35_chanx_right_out[12] ;
+ wire \sb_1__1__35_chanx_right_out[13] ;
+ wire \sb_1__1__35_chanx_right_out[14] ;
+ wire \sb_1__1__35_chanx_right_out[15] ;
+ wire \sb_1__1__35_chanx_right_out[16] ;
+ wire \sb_1__1__35_chanx_right_out[17] ;
+ wire \sb_1__1__35_chanx_right_out[18] ;
+ wire \sb_1__1__35_chanx_right_out[19] ;
+ wire \sb_1__1__35_chanx_right_out[1] ;
+ wire \sb_1__1__35_chanx_right_out[2] ;
+ wire \sb_1__1__35_chanx_right_out[3] ;
+ wire \sb_1__1__35_chanx_right_out[4] ;
+ wire \sb_1__1__35_chanx_right_out[5] ;
+ wire \sb_1__1__35_chanx_right_out[6] ;
+ wire \sb_1__1__35_chanx_right_out[7] ;
+ wire \sb_1__1__35_chanx_right_out[8] ;
+ wire \sb_1__1__35_chanx_right_out[9] ;
+ wire \sb_1__1__35_chany_bottom_out[0] ;
+ wire \sb_1__1__35_chany_bottom_out[10] ;
+ wire \sb_1__1__35_chany_bottom_out[11] ;
+ wire \sb_1__1__35_chany_bottom_out[12] ;
+ wire \sb_1__1__35_chany_bottom_out[13] ;
+ wire \sb_1__1__35_chany_bottom_out[14] ;
+ wire \sb_1__1__35_chany_bottom_out[15] ;
+ wire \sb_1__1__35_chany_bottom_out[16] ;
+ wire \sb_1__1__35_chany_bottom_out[17] ;
+ wire \sb_1__1__35_chany_bottom_out[18] ;
+ wire \sb_1__1__35_chany_bottom_out[19] ;
+ wire \sb_1__1__35_chany_bottom_out[1] ;
+ wire \sb_1__1__35_chany_bottom_out[2] ;
+ wire \sb_1__1__35_chany_bottom_out[3] ;
+ wire \sb_1__1__35_chany_bottom_out[4] ;
+ wire \sb_1__1__35_chany_bottom_out[5] ;
+ wire \sb_1__1__35_chany_bottom_out[6] ;
+ wire \sb_1__1__35_chany_bottom_out[7] ;
+ wire \sb_1__1__35_chany_bottom_out[8] ;
+ wire \sb_1__1__35_chany_bottom_out[9] ;
+ wire \sb_1__1__35_chany_top_out[0] ;
+ wire \sb_1__1__35_chany_top_out[10] ;
+ wire \sb_1__1__35_chany_top_out[11] ;
+ wire \sb_1__1__35_chany_top_out[12] ;
+ wire \sb_1__1__35_chany_top_out[13] ;
+ wire \sb_1__1__35_chany_top_out[14] ;
+ wire \sb_1__1__35_chany_top_out[15] ;
+ wire \sb_1__1__35_chany_top_out[16] ;
+ wire \sb_1__1__35_chany_top_out[17] ;
+ wire \sb_1__1__35_chany_top_out[18] ;
+ wire \sb_1__1__35_chany_top_out[19] ;
+ wire \sb_1__1__35_chany_top_out[1] ;
+ wire \sb_1__1__35_chany_top_out[2] ;
+ wire \sb_1__1__35_chany_top_out[3] ;
+ wire \sb_1__1__35_chany_top_out[4] ;
+ wire \sb_1__1__35_chany_top_out[5] ;
+ wire \sb_1__1__35_chany_top_out[6] ;
+ wire \sb_1__1__35_chany_top_out[7] ;
+ wire \sb_1__1__35_chany_top_out[8] ;
+ wire \sb_1__1__35_chany_top_out[9] ;
+ wire sb_1__1__36_ccff_tail;
+ wire \sb_1__1__36_chanx_left_out[0] ;
+ wire \sb_1__1__36_chanx_left_out[10] ;
+ wire \sb_1__1__36_chanx_left_out[11] ;
+ wire \sb_1__1__36_chanx_left_out[12] ;
+ wire \sb_1__1__36_chanx_left_out[13] ;
+ wire \sb_1__1__36_chanx_left_out[14] ;
+ wire \sb_1__1__36_chanx_left_out[15] ;
+ wire \sb_1__1__36_chanx_left_out[16] ;
+ wire \sb_1__1__36_chanx_left_out[17] ;
+ wire \sb_1__1__36_chanx_left_out[18] ;
+ wire \sb_1__1__36_chanx_left_out[19] ;
+ wire \sb_1__1__36_chanx_left_out[1] ;
+ wire \sb_1__1__36_chanx_left_out[2] ;
+ wire \sb_1__1__36_chanx_left_out[3] ;
+ wire \sb_1__1__36_chanx_left_out[4] ;
+ wire \sb_1__1__36_chanx_left_out[5] ;
+ wire \sb_1__1__36_chanx_left_out[6] ;
+ wire \sb_1__1__36_chanx_left_out[7] ;
+ wire \sb_1__1__36_chanx_left_out[8] ;
+ wire \sb_1__1__36_chanx_left_out[9] ;
+ wire \sb_1__1__36_chanx_right_out[0] ;
+ wire \sb_1__1__36_chanx_right_out[10] ;
+ wire \sb_1__1__36_chanx_right_out[11] ;
+ wire \sb_1__1__36_chanx_right_out[12] ;
+ wire \sb_1__1__36_chanx_right_out[13] ;
+ wire \sb_1__1__36_chanx_right_out[14] ;
+ wire \sb_1__1__36_chanx_right_out[15] ;
+ wire \sb_1__1__36_chanx_right_out[16] ;
+ wire \sb_1__1__36_chanx_right_out[17] ;
+ wire \sb_1__1__36_chanx_right_out[18] ;
+ wire \sb_1__1__36_chanx_right_out[19] ;
+ wire \sb_1__1__36_chanx_right_out[1] ;
+ wire \sb_1__1__36_chanx_right_out[2] ;
+ wire \sb_1__1__36_chanx_right_out[3] ;
+ wire \sb_1__1__36_chanx_right_out[4] ;
+ wire \sb_1__1__36_chanx_right_out[5] ;
+ wire \sb_1__1__36_chanx_right_out[6] ;
+ wire \sb_1__1__36_chanx_right_out[7] ;
+ wire \sb_1__1__36_chanx_right_out[8] ;
+ wire \sb_1__1__36_chanx_right_out[9] ;
+ wire \sb_1__1__36_chany_bottom_out[0] ;
+ wire \sb_1__1__36_chany_bottom_out[10] ;
+ wire \sb_1__1__36_chany_bottom_out[11] ;
+ wire \sb_1__1__36_chany_bottom_out[12] ;
+ wire \sb_1__1__36_chany_bottom_out[13] ;
+ wire \sb_1__1__36_chany_bottom_out[14] ;
+ wire \sb_1__1__36_chany_bottom_out[15] ;
+ wire \sb_1__1__36_chany_bottom_out[16] ;
+ wire \sb_1__1__36_chany_bottom_out[17] ;
+ wire \sb_1__1__36_chany_bottom_out[18] ;
+ wire \sb_1__1__36_chany_bottom_out[19] ;
+ wire \sb_1__1__36_chany_bottom_out[1] ;
+ wire \sb_1__1__36_chany_bottom_out[2] ;
+ wire \sb_1__1__36_chany_bottom_out[3] ;
+ wire \sb_1__1__36_chany_bottom_out[4] ;
+ wire \sb_1__1__36_chany_bottom_out[5] ;
+ wire \sb_1__1__36_chany_bottom_out[6] ;
+ wire \sb_1__1__36_chany_bottom_out[7] ;
+ wire \sb_1__1__36_chany_bottom_out[8] ;
+ wire \sb_1__1__36_chany_bottom_out[9] ;
+ wire \sb_1__1__36_chany_top_out[0] ;
+ wire \sb_1__1__36_chany_top_out[10] ;
+ wire \sb_1__1__36_chany_top_out[11] ;
+ wire \sb_1__1__36_chany_top_out[12] ;
+ wire \sb_1__1__36_chany_top_out[13] ;
+ wire \sb_1__1__36_chany_top_out[14] ;
+ wire \sb_1__1__36_chany_top_out[15] ;
+ wire \sb_1__1__36_chany_top_out[16] ;
+ wire \sb_1__1__36_chany_top_out[17] ;
+ wire \sb_1__1__36_chany_top_out[18] ;
+ wire \sb_1__1__36_chany_top_out[19] ;
+ wire \sb_1__1__36_chany_top_out[1] ;
+ wire \sb_1__1__36_chany_top_out[2] ;
+ wire \sb_1__1__36_chany_top_out[3] ;
+ wire \sb_1__1__36_chany_top_out[4] ;
+ wire \sb_1__1__36_chany_top_out[5] ;
+ wire \sb_1__1__36_chany_top_out[6] ;
+ wire \sb_1__1__36_chany_top_out[7] ;
+ wire \sb_1__1__36_chany_top_out[8] ;
+ wire \sb_1__1__36_chany_top_out[9] ;
+ wire sb_1__1__37_ccff_tail;
+ wire \sb_1__1__37_chanx_left_out[0] ;
+ wire \sb_1__1__37_chanx_left_out[10] ;
+ wire \sb_1__1__37_chanx_left_out[11] ;
+ wire \sb_1__1__37_chanx_left_out[12] ;
+ wire \sb_1__1__37_chanx_left_out[13] ;
+ wire \sb_1__1__37_chanx_left_out[14] ;
+ wire \sb_1__1__37_chanx_left_out[15] ;
+ wire \sb_1__1__37_chanx_left_out[16] ;
+ wire \sb_1__1__37_chanx_left_out[17] ;
+ wire \sb_1__1__37_chanx_left_out[18] ;
+ wire \sb_1__1__37_chanx_left_out[19] ;
+ wire \sb_1__1__37_chanx_left_out[1] ;
+ wire \sb_1__1__37_chanx_left_out[2] ;
+ wire \sb_1__1__37_chanx_left_out[3] ;
+ wire \sb_1__1__37_chanx_left_out[4] ;
+ wire \sb_1__1__37_chanx_left_out[5] ;
+ wire \sb_1__1__37_chanx_left_out[6] ;
+ wire \sb_1__1__37_chanx_left_out[7] ;
+ wire \sb_1__1__37_chanx_left_out[8] ;
+ wire \sb_1__1__37_chanx_left_out[9] ;
+ wire \sb_1__1__37_chanx_right_out[0] ;
+ wire \sb_1__1__37_chanx_right_out[10] ;
+ wire \sb_1__1__37_chanx_right_out[11] ;
+ wire \sb_1__1__37_chanx_right_out[12] ;
+ wire \sb_1__1__37_chanx_right_out[13] ;
+ wire \sb_1__1__37_chanx_right_out[14] ;
+ wire \sb_1__1__37_chanx_right_out[15] ;
+ wire \sb_1__1__37_chanx_right_out[16] ;
+ wire \sb_1__1__37_chanx_right_out[17] ;
+ wire \sb_1__1__37_chanx_right_out[18] ;
+ wire \sb_1__1__37_chanx_right_out[19] ;
+ wire \sb_1__1__37_chanx_right_out[1] ;
+ wire \sb_1__1__37_chanx_right_out[2] ;
+ wire \sb_1__1__37_chanx_right_out[3] ;
+ wire \sb_1__1__37_chanx_right_out[4] ;
+ wire \sb_1__1__37_chanx_right_out[5] ;
+ wire \sb_1__1__37_chanx_right_out[6] ;
+ wire \sb_1__1__37_chanx_right_out[7] ;
+ wire \sb_1__1__37_chanx_right_out[8] ;
+ wire \sb_1__1__37_chanx_right_out[9] ;
+ wire \sb_1__1__37_chany_bottom_out[0] ;
+ wire \sb_1__1__37_chany_bottom_out[10] ;
+ wire \sb_1__1__37_chany_bottom_out[11] ;
+ wire \sb_1__1__37_chany_bottom_out[12] ;
+ wire \sb_1__1__37_chany_bottom_out[13] ;
+ wire \sb_1__1__37_chany_bottom_out[14] ;
+ wire \sb_1__1__37_chany_bottom_out[15] ;
+ wire \sb_1__1__37_chany_bottom_out[16] ;
+ wire \sb_1__1__37_chany_bottom_out[17] ;
+ wire \sb_1__1__37_chany_bottom_out[18] ;
+ wire \sb_1__1__37_chany_bottom_out[19] ;
+ wire \sb_1__1__37_chany_bottom_out[1] ;
+ wire \sb_1__1__37_chany_bottom_out[2] ;
+ wire \sb_1__1__37_chany_bottom_out[3] ;
+ wire \sb_1__1__37_chany_bottom_out[4] ;
+ wire \sb_1__1__37_chany_bottom_out[5] ;
+ wire \sb_1__1__37_chany_bottom_out[6] ;
+ wire \sb_1__1__37_chany_bottom_out[7] ;
+ wire \sb_1__1__37_chany_bottom_out[8] ;
+ wire \sb_1__1__37_chany_bottom_out[9] ;
+ wire \sb_1__1__37_chany_top_out[0] ;
+ wire \sb_1__1__37_chany_top_out[10] ;
+ wire \sb_1__1__37_chany_top_out[11] ;
+ wire \sb_1__1__37_chany_top_out[12] ;
+ wire \sb_1__1__37_chany_top_out[13] ;
+ wire \sb_1__1__37_chany_top_out[14] ;
+ wire \sb_1__1__37_chany_top_out[15] ;
+ wire \sb_1__1__37_chany_top_out[16] ;
+ wire \sb_1__1__37_chany_top_out[17] ;
+ wire \sb_1__1__37_chany_top_out[18] ;
+ wire \sb_1__1__37_chany_top_out[19] ;
+ wire \sb_1__1__37_chany_top_out[1] ;
+ wire \sb_1__1__37_chany_top_out[2] ;
+ wire \sb_1__1__37_chany_top_out[3] ;
+ wire \sb_1__1__37_chany_top_out[4] ;
+ wire \sb_1__1__37_chany_top_out[5] ;
+ wire \sb_1__1__37_chany_top_out[6] ;
+ wire \sb_1__1__37_chany_top_out[7] ;
+ wire \sb_1__1__37_chany_top_out[8] ;
+ wire \sb_1__1__37_chany_top_out[9] ;
+ wire sb_1__1__38_ccff_tail;
+ wire \sb_1__1__38_chanx_left_out[0] ;
+ wire \sb_1__1__38_chanx_left_out[10] ;
+ wire \sb_1__1__38_chanx_left_out[11] ;
+ wire \sb_1__1__38_chanx_left_out[12] ;
+ wire \sb_1__1__38_chanx_left_out[13] ;
+ wire \sb_1__1__38_chanx_left_out[14] ;
+ wire \sb_1__1__38_chanx_left_out[15] ;
+ wire \sb_1__1__38_chanx_left_out[16] ;
+ wire \sb_1__1__38_chanx_left_out[17] ;
+ wire \sb_1__1__38_chanx_left_out[18] ;
+ wire \sb_1__1__38_chanx_left_out[19] ;
+ wire \sb_1__1__38_chanx_left_out[1] ;
+ wire \sb_1__1__38_chanx_left_out[2] ;
+ wire \sb_1__1__38_chanx_left_out[3] ;
+ wire \sb_1__1__38_chanx_left_out[4] ;
+ wire \sb_1__1__38_chanx_left_out[5] ;
+ wire \sb_1__1__38_chanx_left_out[6] ;
+ wire \sb_1__1__38_chanx_left_out[7] ;
+ wire \sb_1__1__38_chanx_left_out[8] ;
+ wire \sb_1__1__38_chanx_left_out[9] ;
+ wire \sb_1__1__38_chanx_right_out[0] ;
+ wire \sb_1__1__38_chanx_right_out[10] ;
+ wire \sb_1__1__38_chanx_right_out[11] ;
+ wire \sb_1__1__38_chanx_right_out[12] ;
+ wire \sb_1__1__38_chanx_right_out[13] ;
+ wire \sb_1__1__38_chanx_right_out[14] ;
+ wire \sb_1__1__38_chanx_right_out[15] ;
+ wire \sb_1__1__38_chanx_right_out[16] ;
+ wire \sb_1__1__38_chanx_right_out[17] ;
+ wire \sb_1__1__38_chanx_right_out[18] ;
+ wire \sb_1__1__38_chanx_right_out[19] ;
+ wire \sb_1__1__38_chanx_right_out[1] ;
+ wire \sb_1__1__38_chanx_right_out[2] ;
+ wire \sb_1__1__38_chanx_right_out[3] ;
+ wire \sb_1__1__38_chanx_right_out[4] ;
+ wire \sb_1__1__38_chanx_right_out[5] ;
+ wire \sb_1__1__38_chanx_right_out[6] ;
+ wire \sb_1__1__38_chanx_right_out[7] ;
+ wire \sb_1__1__38_chanx_right_out[8] ;
+ wire \sb_1__1__38_chanx_right_out[9] ;
+ wire \sb_1__1__38_chany_bottom_out[0] ;
+ wire \sb_1__1__38_chany_bottom_out[10] ;
+ wire \sb_1__1__38_chany_bottom_out[11] ;
+ wire \sb_1__1__38_chany_bottom_out[12] ;
+ wire \sb_1__1__38_chany_bottom_out[13] ;
+ wire \sb_1__1__38_chany_bottom_out[14] ;
+ wire \sb_1__1__38_chany_bottom_out[15] ;
+ wire \sb_1__1__38_chany_bottom_out[16] ;
+ wire \sb_1__1__38_chany_bottom_out[17] ;
+ wire \sb_1__1__38_chany_bottom_out[18] ;
+ wire \sb_1__1__38_chany_bottom_out[19] ;
+ wire \sb_1__1__38_chany_bottom_out[1] ;
+ wire \sb_1__1__38_chany_bottom_out[2] ;
+ wire \sb_1__1__38_chany_bottom_out[3] ;
+ wire \sb_1__1__38_chany_bottom_out[4] ;
+ wire \sb_1__1__38_chany_bottom_out[5] ;
+ wire \sb_1__1__38_chany_bottom_out[6] ;
+ wire \sb_1__1__38_chany_bottom_out[7] ;
+ wire \sb_1__1__38_chany_bottom_out[8] ;
+ wire \sb_1__1__38_chany_bottom_out[9] ;
+ wire \sb_1__1__38_chany_top_out[0] ;
+ wire \sb_1__1__38_chany_top_out[10] ;
+ wire \sb_1__1__38_chany_top_out[11] ;
+ wire \sb_1__1__38_chany_top_out[12] ;
+ wire \sb_1__1__38_chany_top_out[13] ;
+ wire \sb_1__1__38_chany_top_out[14] ;
+ wire \sb_1__1__38_chany_top_out[15] ;
+ wire \sb_1__1__38_chany_top_out[16] ;
+ wire \sb_1__1__38_chany_top_out[17] ;
+ wire \sb_1__1__38_chany_top_out[18] ;
+ wire \sb_1__1__38_chany_top_out[19] ;
+ wire \sb_1__1__38_chany_top_out[1] ;
+ wire \sb_1__1__38_chany_top_out[2] ;
+ wire \sb_1__1__38_chany_top_out[3] ;
+ wire \sb_1__1__38_chany_top_out[4] ;
+ wire \sb_1__1__38_chany_top_out[5] ;
+ wire \sb_1__1__38_chany_top_out[6] ;
+ wire \sb_1__1__38_chany_top_out[7] ;
+ wire \sb_1__1__38_chany_top_out[8] ;
+ wire \sb_1__1__38_chany_top_out[9] ;
+ wire sb_1__1__39_ccff_tail;
+ wire \sb_1__1__39_chanx_left_out[0] ;
+ wire \sb_1__1__39_chanx_left_out[10] ;
+ wire \sb_1__1__39_chanx_left_out[11] ;
+ wire \sb_1__1__39_chanx_left_out[12] ;
+ wire \sb_1__1__39_chanx_left_out[13] ;
+ wire \sb_1__1__39_chanx_left_out[14] ;
+ wire \sb_1__1__39_chanx_left_out[15] ;
+ wire \sb_1__1__39_chanx_left_out[16] ;
+ wire \sb_1__1__39_chanx_left_out[17] ;
+ wire \sb_1__1__39_chanx_left_out[18] ;
+ wire \sb_1__1__39_chanx_left_out[19] ;
+ wire \sb_1__1__39_chanx_left_out[1] ;
+ wire \sb_1__1__39_chanx_left_out[2] ;
+ wire \sb_1__1__39_chanx_left_out[3] ;
+ wire \sb_1__1__39_chanx_left_out[4] ;
+ wire \sb_1__1__39_chanx_left_out[5] ;
+ wire \sb_1__1__39_chanx_left_out[6] ;
+ wire \sb_1__1__39_chanx_left_out[7] ;
+ wire \sb_1__1__39_chanx_left_out[8] ;
+ wire \sb_1__1__39_chanx_left_out[9] ;
+ wire \sb_1__1__39_chanx_right_out[0] ;
+ wire \sb_1__1__39_chanx_right_out[10] ;
+ wire \sb_1__1__39_chanx_right_out[11] ;
+ wire \sb_1__1__39_chanx_right_out[12] ;
+ wire \sb_1__1__39_chanx_right_out[13] ;
+ wire \sb_1__1__39_chanx_right_out[14] ;
+ wire \sb_1__1__39_chanx_right_out[15] ;
+ wire \sb_1__1__39_chanx_right_out[16] ;
+ wire \sb_1__1__39_chanx_right_out[17] ;
+ wire \sb_1__1__39_chanx_right_out[18] ;
+ wire \sb_1__1__39_chanx_right_out[19] ;
+ wire \sb_1__1__39_chanx_right_out[1] ;
+ wire \sb_1__1__39_chanx_right_out[2] ;
+ wire \sb_1__1__39_chanx_right_out[3] ;
+ wire \sb_1__1__39_chanx_right_out[4] ;
+ wire \sb_1__1__39_chanx_right_out[5] ;
+ wire \sb_1__1__39_chanx_right_out[6] ;
+ wire \sb_1__1__39_chanx_right_out[7] ;
+ wire \sb_1__1__39_chanx_right_out[8] ;
+ wire \sb_1__1__39_chanx_right_out[9] ;
+ wire \sb_1__1__39_chany_bottom_out[0] ;
+ wire \sb_1__1__39_chany_bottom_out[10] ;
+ wire \sb_1__1__39_chany_bottom_out[11] ;
+ wire \sb_1__1__39_chany_bottom_out[12] ;
+ wire \sb_1__1__39_chany_bottom_out[13] ;
+ wire \sb_1__1__39_chany_bottom_out[14] ;
+ wire \sb_1__1__39_chany_bottom_out[15] ;
+ wire \sb_1__1__39_chany_bottom_out[16] ;
+ wire \sb_1__1__39_chany_bottom_out[17] ;
+ wire \sb_1__1__39_chany_bottom_out[18] ;
+ wire \sb_1__1__39_chany_bottom_out[19] ;
+ wire \sb_1__1__39_chany_bottom_out[1] ;
+ wire \sb_1__1__39_chany_bottom_out[2] ;
+ wire \sb_1__1__39_chany_bottom_out[3] ;
+ wire \sb_1__1__39_chany_bottom_out[4] ;
+ wire \sb_1__1__39_chany_bottom_out[5] ;
+ wire \sb_1__1__39_chany_bottom_out[6] ;
+ wire \sb_1__1__39_chany_bottom_out[7] ;
+ wire \sb_1__1__39_chany_bottom_out[8] ;
+ wire \sb_1__1__39_chany_bottom_out[9] ;
+ wire \sb_1__1__39_chany_top_out[0] ;
+ wire \sb_1__1__39_chany_top_out[10] ;
+ wire \sb_1__1__39_chany_top_out[11] ;
+ wire \sb_1__1__39_chany_top_out[12] ;
+ wire \sb_1__1__39_chany_top_out[13] ;
+ wire \sb_1__1__39_chany_top_out[14] ;
+ wire \sb_1__1__39_chany_top_out[15] ;
+ wire \sb_1__1__39_chany_top_out[16] ;
+ wire \sb_1__1__39_chany_top_out[17] ;
+ wire \sb_1__1__39_chany_top_out[18] ;
+ wire \sb_1__1__39_chany_top_out[19] ;
+ wire \sb_1__1__39_chany_top_out[1] ;
+ wire \sb_1__1__39_chany_top_out[2] ;
+ wire \sb_1__1__39_chany_top_out[3] ;
+ wire \sb_1__1__39_chany_top_out[4] ;
+ wire \sb_1__1__39_chany_top_out[5] ;
+ wire \sb_1__1__39_chany_top_out[6] ;
+ wire \sb_1__1__39_chany_top_out[7] ;
+ wire \sb_1__1__39_chany_top_out[8] ;
+ wire \sb_1__1__39_chany_top_out[9] ;
+ wire sb_1__1__3_ccff_tail;
+ wire \sb_1__1__3_chanx_left_out[0] ;
+ wire \sb_1__1__3_chanx_left_out[10] ;
+ wire \sb_1__1__3_chanx_left_out[11] ;
+ wire \sb_1__1__3_chanx_left_out[12] ;
+ wire \sb_1__1__3_chanx_left_out[13] ;
+ wire \sb_1__1__3_chanx_left_out[14] ;
+ wire \sb_1__1__3_chanx_left_out[15] ;
+ wire \sb_1__1__3_chanx_left_out[16] ;
+ wire \sb_1__1__3_chanx_left_out[17] ;
+ wire \sb_1__1__3_chanx_left_out[18] ;
+ wire \sb_1__1__3_chanx_left_out[19] ;
+ wire \sb_1__1__3_chanx_left_out[1] ;
+ wire \sb_1__1__3_chanx_left_out[2] ;
+ wire \sb_1__1__3_chanx_left_out[3] ;
+ wire \sb_1__1__3_chanx_left_out[4] ;
+ wire \sb_1__1__3_chanx_left_out[5] ;
+ wire \sb_1__1__3_chanx_left_out[6] ;
+ wire \sb_1__1__3_chanx_left_out[7] ;
+ wire \sb_1__1__3_chanx_left_out[8] ;
+ wire \sb_1__1__3_chanx_left_out[9] ;
+ wire \sb_1__1__3_chanx_right_out[0] ;
+ wire \sb_1__1__3_chanx_right_out[10] ;
+ wire \sb_1__1__3_chanx_right_out[11] ;
+ wire \sb_1__1__3_chanx_right_out[12] ;
+ wire \sb_1__1__3_chanx_right_out[13] ;
+ wire \sb_1__1__3_chanx_right_out[14] ;
+ wire \sb_1__1__3_chanx_right_out[15] ;
+ wire \sb_1__1__3_chanx_right_out[16] ;
+ wire \sb_1__1__3_chanx_right_out[17] ;
+ wire \sb_1__1__3_chanx_right_out[18] ;
+ wire \sb_1__1__3_chanx_right_out[19] ;
+ wire \sb_1__1__3_chanx_right_out[1] ;
+ wire \sb_1__1__3_chanx_right_out[2] ;
+ wire \sb_1__1__3_chanx_right_out[3] ;
+ wire \sb_1__1__3_chanx_right_out[4] ;
+ wire \sb_1__1__3_chanx_right_out[5] ;
+ wire \sb_1__1__3_chanx_right_out[6] ;
+ wire \sb_1__1__3_chanx_right_out[7] ;
+ wire \sb_1__1__3_chanx_right_out[8] ;
+ wire \sb_1__1__3_chanx_right_out[9] ;
+ wire \sb_1__1__3_chany_bottom_out[0] ;
+ wire \sb_1__1__3_chany_bottom_out[10] ;
+ wire \sb_1__1__3_chany_bottom_out[11] ;
+ wire \sb_1__1__3_chany_bottom_out[12] ;
+ wire \sb_1__1__3_chany_bottom_out[13] ;
+ wire \sb_1__1__3_chany_bottom_out[14] ;
+ wire \sb_1__1__3_chany_bottom_out[15] ;
+ wire \sb_1__1__3_chany_bottom_out[16] ;
+ wire \sb_1__1__3_chany_bottom_out[17] ;
+ wire \sb_1__1__3_chany_bottom_out[18] ;
+ wire \sb_1__1__3_chany_bottom_out[19] ;
+ wire \sb_1__1__3_chany_bottom_out[1] ;
+ wire \sb_1__1__3_chany_bottom_out[2] ;
+ wire \sb_1__1__3_chany_bottom_out[3] ;
+ wire \sb_1__1__3_chany_bottom_out[4] ;
+ wire \sb_1__1__3_chany_bottom_out[5] ;
+ wire \sb_1__1__3_chany_bottom_out[6] ;
+ wire \sb_1__1__3_chany_bottom_out[7] ;
+ wire \sb_1__1__3_chany_bottom_out[8] ;
+ wire \sb_1__1__3_chany_bottom_out[9] ;
+ wire \sb_1__1__3_chany_top_out[0] ;
+ wire \sb_1__1__3_chany_top_out[10] ;
+ wire \sb_1__1__3_chany_top_out[11] ;
+ wire \sb_1__1__3_chany_top_out[12] ;
+ wire \sb_1__1__3_chany_top_out[13] ;
+ wire \sb_1__1__3_chany_top_out[14] ;
+ wire \sb_1__1__3_chany_top_out[15] ;
+ wire \sb_1__1__3_chany_top_out[16] ;
+ wire \sb_1__1__3_chany_top_out[17] ;
+ wire \sb_1__1__3_chany_top_out[18] ;
+ wire \sb_1__1__3_chany_top_out[19] ;
+ wire \sb_1__1__3_chany_top_out[1] ;
+ wire \sb_1__1__3_chany_top_out[2] ;
+ wire \sb_1__1__3_chany_top_out[3] ;
+ wire \sb_1__1__3_chany_top_out[4] ;
+ wire \sb_1__1__3_chany_top_out[5] ;
+ wire \sb_1__1__3_chany_top_out[6] ;
+ wire \sb_1__1__3_chany_top_out[7] ;
+ wire \sb_1__1__3_chany_top_out[8] ;
+ wire \sb_1__1__3_chany_top_out[9] ;
+ wire sb_1__1__40_ccff_tail;
+ wire \sb_1__1__40_chanx_left_out[0] ;
+ wire \sb_1__1__40_chanx_left_out[10] ;
+ wire \sb_1__1__40_chanx_left_out[11] ;
+ wire \sb_1__1__40_chanx_left_out[12] ;
+ wire \sb_1__1__40_chanx_left_out[13] ;
+ wire \sb_1__1__40_chanx_left_out[14] ;
+ wire \sb_1__1__40_chanx_left_out[15] ;
+ wire \sb_1__1__40_chanx_left_out[16] ;
+ wire \sb_1__1__40_chanx_left_out[17] ;
+ wire \sb_1__1__40_chanx_left_out[18] ;
+ wire \sb_1__1__40_chanx_left_out[19] ;
+ wire \sb_1__1__40_chanx_left_out[1] ;
+ wire \sb_1__1__40_chanx_left_out[2] ;
+ wire \sb_1__1__40_chanx_left_out[3] ;
+ wire \sb_1__1__40_chanx_left_out[4] ;
+ wire \sb_1__1__40_chanx_left_out[5] ;
+ wire \sb_1__1__40_chanx_left_out[6] ;
+ wire \sb_1__1__40_chanx_left_out[7] ;
+ wire \sb_1__1__40_chanx_left_out[8] ;
+ wire \sb_1__1__40_chanx_left_out[9] ;
+ wire \sb_1__1__40_chanx_right_out[0] ;
+ wire \sb_1__1__40_chanx_right_out[10] ;
+ wire \sb_1__1__40_chanx_right_out[11] ;
+ wire \sb_1__1__40_chanx_right_out[12] ;
+ wire \sb_1__1__40_chanx_right_out[13] ;
+ wire \sb_1__1__40_chanx_right_out[14] ;
+ wire \sb_1__1__40_chanx_right_out[15] ;
+ wire \sb_1__1__40_chanx_right_out[16] ;
+ wire \sb_1__1__40_chanx_right_out[17] ;
+ wire \sb_1__1__40_chanx_right_out[18] ;
+ wire \sb_1__1__40_chanx_right_out[19] ;
+ wire \sb_1__1__40_chanx_right_out[1] ;
+ wire \sb_1__1__40_chanx_right_out[2] ;
+ wire \sb_1__1__40_chanx_right_out[3] ;
+ wire \sb_1__1__40_chanx_right_out[4] ;
+ wire \sb_1__1__40_chanx_right_out[5] ;
+ wire \sb_1__1__40_chanx_right_out[6] ;
+ wire \sb_1__1__40_chanx_right_out[7] ;
+ wire \sb_1__1__40_chanx_right_out[8] ;
+ wire \sb_1__1__40_chanx_right_out[9] ;
+ wire \sb_1__1__40_chany_bottom_out[0] ;
+ wire \sb_1__1__40_chany_bottom_out[10] ;
+ wire \sb_1__1__40_chany_bottom_out[11] ;
+ wire \sb_1__1__40_chany_bottom_out[12] ;
+ wire \sb_1__1__40_chany_bottom_out[13] ;
+ wire \sb_1__1__40_chany_bottom_out[14] ;
+ wire \sb_1__1__40_chany_bottom_out[15] ;
+ wire \sb_1__1__40_chany_bottom_out[16] ;
+ wire \sb_1__1__40_chany_bottom_out[17] ;
+ wire \sb_1__1__40_chany_bottom_out[18] ;
+ wire \sb_1__1__40_chany_bottom_out[19] ;
+ wire \sb_1__1__40_chany_bottom_out[1] ;
+ wire \sb_1__1__40_chany_bottom_out[2] ;
+ wire \sb_1__1__40_chany_bottom_out[3] ;
+ wire \sb_1__1__40_chany_bottom_out[4] ;
+ wire \sb_1__1__40_chany_bottom_out[5] ;
+ wire \sb_1__1__40_chany_bottom_out[6] ;
+ wire \sb_1__1__40_chany_bottom_out[7] ;
+ wire \sb_1__1__40_chany_bottom_out[8] ;
+ wire \sb_1__1__40_chany_bottom_out[9] ;
+ wire \sb_1__1__40_chany_top_out[0] ;
+ wire \sb_1__1__40_chany_top_out[10] ;
+ wire \sb_1__1__40_chany_top_out[11] ;
+ wire \sb_1__1__40_chany_top_out[12] ;
+ wire \sb_1__1__40_chany_top_out[13] ;
+ wire \sb_1__1__40_chany_top_out[14] ;
+ wire \sb_1__1__40_chany_top_out[15] ;
+ wire \sb_1__1__40_chany_top_out[16] ;
+ wire \sb_1__1__40_chany_top_out[17] ;
+ wire \sb_1__1__40_chany_top_out[18] ;
+ wire \sb_1__1__40_chany_top_out[19] ;
+ wire \sb_1__1__40_chany_top_out[1] ;
+ wire \sb_1__1__40_chany_top_out[2] ;
+ wire \sb_1__1__40_chany_top_out[3] ;
+ wire \sb_1__1__40_chany_top_out[4] ;
+ wire \sb_1__1__40_chany_top_out[5] ;
+ wire \sb_1__1__40_chany_top_out[6] ;
+ wire \sb_1__1__40_chany_top_out[7] ;
+ wire \sb_1__1__40_chany_top_out[8] ;
+ wire \sb_1__1__40_chany_top_out[9] ;
+ wire sb_1__1__41_ccff_tail;
+ wire \sb_1__1__41_chanx_left_out[0] ;
+ wire \sb_1__1__41_chanx_left_out[10] ;
+ wire \sb_1__1__41_chanx_left_out[11] ;
+ wire \sb_1__1__41_chanx_left_out[12] ;
+ wire \sb_1__1__41_chanx_left_out[13] ;
+ wire \sb_1__1__41_chanx_left_out[14] ;
+ wire \sb_1__1__41_chanx_left_out[15] ;
+ wire \sb_1__1__41_chanx_left_out[16] ;
+ wire \sb_1__1__41_chanx_left_out[17] ;
+ wire \sb_1__1__41_chanx_left_out[18] ;
+ wire \sb_1__1__41_chanx_left_out[19] ;
+ wire \sb_1__1__41_chanx_left_out[1] ;
+ wire \sb_1__1__41_chanx_left_out[2] ;
+ wire \sb_1__1__41_chanx_left_out[3] ;
+ wire \sb_1__1__41_chanx_left_out[4] ;
+ wire \sb_1__1__41_chanx_left_out[5] ;
+ wire \sb_1__1__41_chanx_left_out[6] ;
+ wire \sb_1__1__41_chanx_left_out[7] ;
+ wire \sb_1__1__41_chanx_left_out[8] ;
+ wire \sb_1__1__41_chanx_left_out[9] ;
+ wire \sb_1__1__41_chanx_right_out[0] ;
+ wire \sb_1__1__41_chanx_right_out[10] ;
+ wire \sb_1__1__41_chanx_right_out[11] ;
+ wire \sb_1__1__41_chanx_right_out[12] ;
+ wire \sb_1__1__41_chanx_right_out[13] ;
+ wire \sb_1__1__41_chanx_right_out[14] ;
+ wire \sb_1__1__41_chanx_right_out[15] ;
+ wire \sb_1__1__41_chanx_right_out[16] ;
+ wire \sb_1__1__41_chanx_right_out[17] ;
+ wire \sb_1__1__41_chanx_right_out[18] ;
+ wire \sb_1__1__41_chanx_right_out[19] ;
+ wire \sb_1__1__41_chanx_right_out[1] ;
+ wire \sb_1__1__41_chanx_right_out[2] ;
+ wire \sb_1__1__41_chanx_right_out[3] ;
+ wire \sb_1__1__41_chanx_right_out[4] ;
+ wire \sb_1__1__41_chanx_right_out[5] ;
+ wire \sb_1__1__41_chanx_right_out[6] ;
+ wire \sb_1__1__41_chanx_right_out[7] ;
+ wire \sb_1__1__41_chanx_right_out[8] ;
+ wire \sb_1__1__41_chanx_right_out[9] ;
+ wire \sb_1__1__41_chany_bottom_out[0] ;
+ wire \sb_1__1__41_chany_bottom_out[10] ;
+ wire \sb_1__1__41_chany_bottom_out[11] ;
+ wire \sb_1__1__41_chany_bottom_out[12] ;
+ wire \sb_1__1__41_chany_bottom_out[13] ;
+ wire \sb_1__1__41_chany_bottom_out[14] ;
+ wire \sb_1__1__41_chany_bottom_out[15] ;
+ wire \sb_1__1__41_chany_bottom_out[16] ;
+ wire \sb_1__1__41_chany_bottom_out[17] ;
+ wire \sb_1__1__41_chany_bottom_out[18] ;
+ wire \sb_1__1__41_chany_bottom_out[19] ;
+ wire \sb_1__1__41_chany_bottom_out[1] ;
+ wire \sb_1__1__41_chany_bottom_out[2] ;
+ wire \sb_1__1__41_chany_bottom_out[3] ;
+ wire \sb_1__1__41_chany_bottom_out[4] ;
+ wire \sb_1__1__41_chany_bottom_out[5] ;
+ wire \sb_1__1__41_chany_bottom_out[6] ;
+ wire \sb_1__1__41_chany_bottom_out[7] ;
+ wire \sb_1__1__41_chany_bottom_out[8] ;
+ wire \sb_1__1__41_chany_bottom_out[9] ;
+ wire \sb_1__1__41_chany_top_out[0] ;
+ wire \sb_1__1__41_chany_top_out[10] ;
+ wire \sb_1__1__41_chany_top_out[11] ;
+ wire \sb_1__1__41_chany_top_out[12] ;
+ wire \sb_1__1__41_chany_top_out[13] ;
+ wire \sb_1__1__41_chany_top_out[14] ;
+ wire \sb_1__1__41_chany_top_out[15] ;
+ wire \sb_1__1__41_chany_top_out[16] ;
+ wire \sb_1__1__41_chany_top_out[17] ;
+ wire \sb_1__1__41_chany_top_out[18] ;
+ wire \sb_1__1__41_chany_top_out[19] ;
+ wire \sb_1__1__41_chany_top_out[1] ;
+ wire \sb_1__1__41_chany_top_out[2] ;
+ wire \sb_1__1__41_chany_top_out[3] ;
+ wire \sb_1__1__41_chany_top_out[4] ;
+ wire \sb_1__1__41_chany_top_out[5] ;
+ wire \sb_1__1__41_chany_top_out[6] ;
+ wire \sb_1__1__41_chany_top_out[7] ;
+ wire \sb_1__1__41_chany_top_out[8] ;
+ wire \sb_1__1__41_chany_top_out[9] ;
+ wire sb_1__1__42_ccff_tail;
+ wire \sb_1__1__42_chanx_left_out[0] ;
+ wire \sb_1__1__42_chanx_left_out[10] ;
+ wire \sb_1__1__42_chanx_left_out[11] ;
+ wire \sb_1__1__42_chanx_left_out[12] ;
+ wire \sb_1__1__42_chanx_left_out[13] ;
+ wire \sb_1__1__42_chanx_left_out[14] ;
+ wire \sb_1__1__42_chanx_left_out[15] ;
+ wire \sb_1__1__42_chanx_left_out[16] ;
+ wire \sb_1__1__42_chanx_left_out[17] ;
+ wire \sb_1__1__42_chanx_left_out[18] ;
+ wire \sb_1__1__42_chanx_left_out[19] ;
+ wire \sb_1__1__42_chanx_left_out[1] ;
+ wire \sb_1__1__42_chanx_left_out[2] ;
+ wire \sb_1__1__42_chanx_left_out[3] ;
+ wire \sb_1__1__42_chanx_left_out[4] ;
+ wire \sb_1__1__42_chanx_left_out[5] ;
+ wire \sb_1__1__42_chanx_left_out[6] ;
+ wire \sb_1__1__42_chanx_left_out[7] ;
+ wire \sb_1__1__42_chanx_left_out[8] ;
+ wire \sb_1__1__42_chanx_left_out[9] ;
+ wire \sb_1__1__42_chanx_right_out[0] ;
+ wire \sb_1__1__42_chanx_right_out[10] ;
+ wire \sb_1__1__42_chanx_right_out[11] ;
+ wire \sb_1__1__42_chanx_right_out[12] ;
+ wire \sb_1__1__42_chanx_right_out[13] ;
+ wire \sb_1__1__42_chanx_right_out[14] ;
+ wire \sb_1__1__42_chanx_right_out[15] ;
+ wire \sb_1__1__42_chanx_right_out[16] ;
+ wire \sb_1__1__42_chanx_right_out[17] ;
+ wire \sb_1__1__42_chanx_right_out[18] ;
+ wire \sb_1__1__42_chanx_right_out[19] ;
+ wire \sb_1__1__42_chanx_right_out[1] ;
+ wire \sb_1__1__42_chanx_right_out[2] ;
+ wire \sb_1__1__42_chanx_right_out[3] ;
+ wire \sb_1__1__42_chanx_right_out[4] ;
+ wire \sb_1__1__42_chanx_right_out[5] ;
+ wire \sb_1__1__42_chanx_right_out[6] ;
+ wire \sb_1__1__42_chanx_right_out[7] ;
+ wire \sb_1__1__42_chanx_right_out[8] ;
+ wire \sb_1__1__42_chanx_right_out[9] ;
+ wire \sb_1__1__42_chany_bottom_out[0] ;
+ wire \sb_1__1__42_chany_bottom_out[10] ;
+ wire \sb_1__1__42_chany_bottom_out[11] ;
+ wire \sb_1__1__42_chany_bottom_out[12] ;
+ wire \sb_1__1__42_chany_bottom_out[13] ;
+ wire \sb_1__1__42_chany_bottom_out[14] ;
+ wire \sb_1__1__42_chany_bottom_out[15] ;
+ wire \sb_1__1__42_chany_bottom_out[16] ;
+ wire \sb_1__1__42_chany_bottom_out[17] ;
+ wire \sb_1__1__42_chany_bottom_out[18] ;
+ wire \sb_1__1__42_chany_bottom_out[19] ;
+ wire \sb_1__1__42_chany_bottom_out[1] ;
+ wire \sb_1__1__42_chany_bottom_out[2] ;
+ wire \sb_1__1__42_chany_bottom_out[3] ;
+ wire \sb_1__1__42_chany_bottom_out[4] ;
+ wire \sb_1__1__42_chany_bottom_out[5] ;
+ wire \sb_1__1__42_chany_bottom_out[6] ;
+ wire \sb_1__1__42_chany_bottom_out[7] ;
+ wire \sb_1__1__42_chany_bottom_out[8] ;
+ wire \sb_1__1__42_chany_bottom_out[9] ;
+ wire \sb_1__1__42_chany_top_out[0] ;
+ wire \sb_1__1__42_chany_top_out[10] ;
+ wire \sb_1__1__42_chany_top_out[11] ;
+ wire \sb_1__1__42_chany_top_out[12] ;
+ wire \sb_1__1__42_chany_top_out[13] ;
+ wire \sb_1__1__42_chany_top_out[14] ;
+ wire \sb_1__1__42_chany_top_out[15] ;
+ wire \sb_1__1__42_chany_top_out[16] ;
+ wire \sb_1__1__42_chany_top_out[17] ;
+ wire \sb_1__1__42_chany_top_out[18] ;
+ wire \sb_1__1__42_chany_top_out[19] ;
+ wire \sb_1__1__42_chany_top_out[1] ;
+ wire \sb_1__1__42_chany_top_out[2] ;
+ wire \sb_1__1__42_chany_top_out[3] ;
+ wire \sb_1__1__42_chany_top_out[4] ;
+ wire \sb_1__1__42_chany_top_out[5] ;
+ wire \sb_1__1__42_chany_top_out[6] ;
+ wire \sb_1__1__42_chany_top_out[7] ;
+ wire \sb_1__1__42_chany_top_out[8] ;
+ wire \sb_1__1__42_chany_top_out[9] ;
+ wire sb_1__1__43_ccff_tail;
+ wire \sb_1__1__43_chanx_left_out[0] ;
+ wire \sb_1__1__43_chanx_left_out[10] ;
+ wire \sb_1__1__43_chanx_left_out[11] ;
+ wire \sb_1__1__43_chanx_left_out[12] ;
+ wire \sb_1__1__43_chanx_left_out[13] ;
+ wire \sb_1__1__43_chanx_left_out[14] ;
+ wire \sb_1__1__43_chanx_left_out[15] ;
+ wire \sb_1__1__43_chanx_left_out[16] ;
+ wire \sb_1__1__43_chanx_left_out[17] ;
+ wire \sb_1__1__43_chanx_left_out[18] ;
+ wire \sb_1__1__43_chanx_left_out[19] ;
+ wire \sb_1__1__43_chanx_left_out[1] ;
+ wire \sb_1__1__43_chanx_left_out[2] ;
+ wire \sb_1__1__43_chanx_left_out[3] ;
+ wire \sb_1__1__43_chanx_left_out[4] ;
+ wire \sb_1__1__43_chanx_left_out[5] ;
+ wire \sb_1__1__43_chanx_left_out[6] ;
+ wire \sb_1__1__43_chanx_left_out[7] ;
+ wire \sb_1__1__43_chanx_left_out[8] ;
+ wire \sb_1__1__43_chanx_left_out[9] ;
+ wire \sb_1__1__43_chanx_right_out[0] ;
+ wire \sb_1__1__43_chanx_right_out[10] ;
+ wire \sb_1__1__43_chanx_right_out[11] ;
+ wire \sb_1__1__43_chanx_right_out[12] ;
+ wire \sb_1__1__43_chanx_right_out[13] ;
+ wire \sb_1__1__43_chanx_right_out[14] ;
+ wire \sb_1__1__43_chanx_right_out[15] ;
+ wire \sb_1__1__43_chanx_right_out[16] ;
+ wire \sb_1__1__43_chanx_right_out[17] ;
+ wire \sb_1__1__43_chanx_right_out[18] ;
+ wire \sb_1__1__43_chanx_right_out[19] ;
+ wire \sb_1__1__43_chanx_right_out[1] ;
+ wire \sb_1__1__43_chanx_right_out[2] ;
+ wire \sb_1__1__43_chanx_right_out[3] ;
+ wire \sb_1__1__43_chanx_right_out[4] ;
+ wire \sb_1__1__43_chanx_right_out[5] ;
+ wire \sb_1__1__43_chanx_right_out[6] ;
+ wire \sb_1__1__43_chanx_right_out[7] ;
+ wire \sb_1__1__43_chanx_right_out[8] ;
+ wire \sb_1__1__43_chanx_right_out[9] ;
+ wire \sb_1__1__43_chany_bottom_out[0] ;
+ wire \sb_1__1__43_chany_bottom_out[10] ;
+ wire \sb_1__1__43_chany_bottom_out[11] ;
+ wire \sb_1__1__43_chany_bottom_out[12] ;
+ wire \sb_1__1__43_chany_bottom_out[13] ;
+ wire \sb_1__1__43_chany_bottom_out[14] ;
+ wire \sb_1__1__43_chany_bottom_out[15] ;
+ wire \sb_1__1__43_chany_bottom_out[16] ;
+ wire \sb_1__1__43_chany_bottom_out[17] ;
+ wire \sb_1__1__43_chany_bottom_out[18] ;
+ wire \sb_1__1__43_chany_bottom_out[19] ;
+ wire \sb_1__1__43_chany_bottom_out[1] ;
+ wire \sb_1__1__43_chany_bottom_out[2] ;
+ wire \sb_1__1__43_chany_bottom_out[3] ;
+ wire \sb_1__1__43_chany_bottom_out[4] ;
+ wire \sb_1__1__43_chany_bottom_out[5] ;
+ wire \sb_1__1__43_chany_bottom_out[6] ;
+ wire \sb_1__1__43_chany_bottom_out[7] ;
+ wire \sb_1__1__43_chany_bottom_out[8] ;
+ wire \sb_1__1__43_chany_bottom_out[9] ;
+ wire \sb_1__1__43_chany_top_out[0] ;
+ wire \sb_1__1__43_chany_top_out[10] ;
+ wire \sb_1__1__43_chany_top_out[11] ;
+ wire \sb_1__1__43_chany_top_out[12] ;
+ wire \sb_1__1__43_chany_top_out[13] ;
+ wire \sb_1__1__43_chany_top_out[14] ;
+ wire \sb_1__1__43_chany_top_out[15] ;
+ wire \sb_1__1__43_chany_top_out[16] ;
+ wire \sb_1__1__43_chany_top_out[17] ;
+ wire \sb_1__1__43_chany_top_out[18] ;
+ wire \sb_1__1__43_chany_top_out[19] ;
+ wire \sb_1__1__43_chany_top_out[1] ;
+ wire \sb_1__1__43_chany_top_out[2] ;
+ wire \sb_1__1__43_chany_top_out[3] ;
+ wire \sb_1__1__43_chany_top_out[4] ;
+ wire \sb_1__1__43_chany_top_out[5] ;
+ wire \sb_1__1__43_chany_top_out[6] ;
+ wire \sb_1__1__43_chany_top_out[7] ;
+ wire \sb_1__1__43_chany_top_out[8] ;
+ wire \sb_1__1__43_chany_top_out[9] ;
+ wire sb_1__1__44_ccff_tail;
+ wire \sb_1__1__44_chanx_left_out[0] ;
+ wire \sb_1__1__44_chanx_left_out[10] ;
+ wire \sb_1__1__44_chanx_left_out[11] ;
+ wire \sb_1__1__44_chanx_left_out[12] ;
+ wire \sb_1__1__44_chanx_left_out[13] ;
+ wire \sb_1__1__44_chanx_left_out[14] ;
+ wire \sb_1__1__44_chanx_left_out[15] ;
+ wire \sb_1__1__44_chanx_left_out[16] ;
+ wire \sb_1__1__44_chanx_left_out[17] ;
+ wire \sb_1__1__44_chanx_left_out[18] ;
+ wire \sb_1__1__44_chanx_left_out[19] ;
+ wire \sb_1__1__44_chanx_left_out[1] ;
+ wire \sb_1__1__44_chanx_left_out[2] ;
+ wire \sb_1__1__44_chanx_left_out[3] ;
+ wire \sb_1__1__44_chanx_left_out[4] ;
+ wire \sb_1__1__44_chanx_left_out[5] ;
+ wire \sb_1__1__44_chanx_left_out[6] ;
+ wire \sb_1__1__44_chanx_left_out[7] ;
+ wire \sb_1__1__44_chanx_left_out[8] ;
+ wire \sb_1__1__44_chanx_left_out[9] ;
+ wire \sb_1__1__44_chanx_right_out[0] ;
+ wire \sb_1__1__44_chanx_right_out[10] ;
+ wire \sb_1__1__44_chanx_right_out[11] ;
+ wire \sb_1__1__44_chanx_right_out[12] ;
+ wire \sb_1__1__44_chanx_right_out[13] ;
+ wire \sb_1__1__44_chanx_right_out[14] ;
+ wire \sb_1__1__44_chanx_right_out[15] ;
+ wire \sb_1__1__44_chanx_right_out[16] ;
+ wire \sb_1__1__44_chanx_right_out[17] ;
+ wire \sb_1__1__44_chanx_right_out[18] ;
+ wire \sb_1__1__44_chanx_right_out[19] ;
+ wire \sb_1__1__44_chanx_right_out[1] ;
+ wire \sb_1__1__44_chanx_right_out[2] ;
+ wire \sb_1__1__44_chanx_right_out[3] ;
+ wire \sb_1__1__44_chanx_right_out[4] ;
+ wire \sb_1__1__44_chanx_right_out[5] ;
+ wire \sb_1__1__44_chanx_right_out[6] ;
+ wire \sb_1__1__44_chanx_right_out[7] ;
+ wire \sb_1__1__44_chanx_right_out[8] ;
+ wire \sb_1__1__44_chanx_right_out[9] ;
+ wire \sb_1__1__44_chany_bottom_out[0] ;
+ wire \sb_1__1__44_chany_bottom_out[10] ;
+ wire \sb_1__1__44_chany_bottom_out[11] ;
+ wire \sb_1__1__44_chany_bottom_out[12] ;
+ wire \sb_1__1__44_chany_bottom_out[13] ;
+ wire \sb_1__1__44_chany_bottom_out[14] ;
+ wire \sb_1__1__44_chany_bottom_out[15] ;
+ wire \sb_1__1__44_chany_bottom_out[16] ;
+ wire \sb_1__1__44_chany_bottom_out[17] ;
+ wire \sb_1__1__44_chany_bottom_out[18] ;
+ wire \sb_1__1__44_chany_bottom_out[19] ;
+ wire \sb_1__1__44_chany_bottom_out[1] ;
+ wire \sb_1__1__44_chany_bottom_out[2] ;
+ wire \sb_1__1__44_chany_bottom_out[3] ;
+ wire \sb_1__1__44_chany_bottom_out[4] ;
+ wire \sb_1__1__44_chany_bottom_out[5] ;
+ wire \sb_1__1__44_chany_bottom_out[6] ;
+ wire \sb_1__1__44_chany_bottom_out[7] ;
+ wire \sb_1__1__44_chany_bottom_out[8] ;
+ wire \sb_1__1__44_chany_bottom_out[9] ;
+ wire \sb_1__1__44_chany_top_out[0] ;
+ wire \sb_1__1__44_chany_top_out[10] ;
+ wire \sb_1__1__44_chany_top_out[11] ;
+ wire \sb_1__1__44_chany_top_out[12] ;
+ wire \sb_1__1__44_chany_top_out[13] ;
+ wire \sb_1__1__44_chany_top_out[14] ;
+ wire \sb_1__1__44_chany_top_out[15] ;
+ wire \sb_1__1__44_chany_top_out[16] ;
+ wire \sb_1__1__44_chany_top_out[17] ;
+ wire \sb_1__1__44_chany_top_out[18] ;
+ wire \sb_1__1__44_chany_top_out[19] ;
+ wire \sb_1__1__44_chany_top_out[1] ;
+ wire \sb_1__1__44_chany_top_out[2] ;
+ wire \sb_1__1__44_chany_top_out[3] ;
+ wire \sb_1__1__44_chany_top_out[4] ;
+ wire \sb_1__1__44_chany_top_out[5] ;
+ wire \sb_1__1__44_chany_top_out[6] ;
+ wire \sb_1__1__44_chany_top_out[7] ;
+ wire \sb_1__1__44_chany_top_out[8] ;
+ wire \sb_1__1__44_chany_top_out[9] ;
+ wire sb_1__1__45_ccff_tail;
+ wire \sb_1__1__45_chanx_left_out[0] ;
+ wire \sb_1__1__45_chanx_left_out[10] ;
+ wire \sb_1__1__45_chanx_left_out[11] ;
+ wire \sb_1__1__45_chanx_left_out[12] ;
+ wire \sb_1__1__45_chanx_left_out[13] ;
+ wire \sb_1__1__45_chanx_left_out[14] ;
+ wire \sb_1__1__45_chanx_left_out[15] ;
+ wire \sb_1__1__45_chanx_left_out[16] ;
+ wire \sb_1__1__45_chanx_left_out[17] ;
+ wire \sb_1__1__45_chanx_left_out[18] ;
+ wire \sb_1__1__45_chanx_left_out[19] ;
+ wire \sb_1__1__45_chanx_left_out[1] ;
+ wire \sb_1__1__45_chanx_left_out[2] ;
+ wire \sb_1__1__45_chanx_left_out[3] ;
+ wire \sb_1__1__45_chanx_left_out[4] ;
+ wire \sb_1__1__45_chanx_left_out[5] ;
+ wire \sb_1__1__45_chanx_left_out[6] ;
+ wire \sb_1__1__45_chanx_left_out[7] ;
+ wire \sb_1__1__45_chanx_left_out[8] ;
+ wire \sb_1__1__45_chanx_left_out[9] ;
+ wire \sb_1__1__45_chanx_right_out[0] ;
+ wire \sb_1__1__45_chanx_right_out[10] ;
+ wire \sb_1__1__45_chanx_right_out[11] ;
+ wire \sb_1__1__45_chanx_right_out[12] ;
+ wire \sb_1__1__45_chanx_right_out[13] ;
+ wire \sb_1__1__45_chanx_right_out[14] ;
+ wire \sb_1__1__45_chanx_right_out[15] ;
+ wire \sb_1__1__45_chanx_right_out[16] ;
+ wire \sb_1__1__45_chanx_right_out[17] ;
+ wire \sb_1__1__45_chanx_right_out[18] ;
+ wire \sb_1__1__45_chanx_right_out[19] ;
+ wire \sb_1__1__45_chanx_right_out[1] ;
+ wire \sb_1__1__45_chanx_right_out[2] ;
+ wire \sb_1__1__45_chanx_right_out[3] ;
+ wire \sb_1__1__45_chanx_right_out[4] ;
+ wire \sb_1__1__45_chanx_right_out[5] ;
+ wire \sb_1__1__45_chanx_right_out[6] ;
+ wire \sb_1__1__45_chanx_right_out[7] ;
+ wire \sb_1__1__45_chanx_right_out[8] ;
+ wire \sb_1__1__45_chanx_right_out[9] ;
+ wire \sb_1__1__45_chany_bottom_out[0] ;
+ wire \sb_1__1__45_chany_bottom_out[10] ;
+ wire \sb_1__1__45_chany_bottom_out[11] ;
+ wire \sb_1__1__45_chany_bottom_out[12] ;
+ wire \sb_1__1__45_chany_bottom_out[13] ;
+ wire \sb_1__1__45_chany_bottom_out[14] ;
+ wire \sb_1__1__45_chany_bottom_out[15] ;
+ wire \sb_1__1__45_chany_bottom_out[16] ;
+ wire \sb_1__1__45_chany_bottom_out[17] ;
+ wire \sb_1__1__45_chany_bottom_out[18] ;
+ wire \sb_1__1__45_chany_bottom_out[19] ;
+ wire \sb_1__1__45_chany_bottom_out[1] ;
+ wire \sb_1__1__45_chany_bottom_out[2] ;
+ wire \sb_1__1__45_chany_bottom_out[3] ;
+ wire \sb_1__1__45_chany_bottom_out[4] ;
+ wire \sb_1__1__45_chany_bottom_out[5] ;
+ wire \sb_1__1__45_chany_bottom_out[6] ;
+ wire \sb_1__1__45_chany_bottom_out[7] ;
+ wire \sb_1__1__45_chany_bottom_out[8] ;
+ wire \sb_1__1__45_chany_bottom_out[9] ;
+ wire \sb_1__1__45_chany_top_out[0] ;
+ wire \sb_1__1__45_chany_top_out[10] ;
+ wire \sb_1__1__45_chany_top_out[11] ;
+ wire \sb_1__1__45_chany_top_out[12] ;
+ wire \sb_1__1__45_chany_top_out[13] ;
+ wire \sb_1__1__45_chany_top_out[14] ;
+ wire \sb_1__1__45_chany_top_out[15] ;
+ wire \sb_1__1__45_chany_top_out[16] ;
+ wire \sb_1__1__45_chany_top_out[17] ;
+ wire \sb_1__1__45_chany_top_out[18] ;
+ wire \sb_1__1__45_chany_top_out[19] ;
+ wire \sb_1__1__45_chany_top_out[1] ;
+ wire \sb_1__1__45_chany_top_out[2] ;
+ wire \sb_1__1__45_chany_top_out[3] ;
+ wire \sb_1__1__45_chany_top_out[4] ;
+ wire \sb_1__1__45_chany_top_out[5] ;
+ wire \sb_1__1__45_chany_top_out[6] ;
+ wire \sb_1__1__45_chany_top_out[7] ;
+ wire \sb_1__1__45_chany_top_out[8] ;
+ wire \sb_1__1__45_chany_top_out[9] ;
+ wire sb_1__1__46_ccff_tail;
+ wire \sb_1__1__46_chanx_left_out[0] ;
+ wire \sb_1__1__46_chanx_left_out[10] ;
+ wire \sb_1__1__46_chanx_left_out[11] ;
+ wire \sb_1__1__46_chanx_left_out[12] ;
+ wire \sb_1__1__46_chanx_left_out[13] ;
+ wire \sb_1__1__46_chanx_left_out[14] ;
+ wire \sb_1__1__46_chanx_left_out[15] ;
+ wire \sb_1__1__46_chanx_left_out[16] ;
+ wire \sb_1__1__46_chanx_left_out[17] ;
+ wire \sb_1__1__46_chanx_left_out[18] ;
+ wire \sb_1__1__46_chanx_left_out[19] ;
+ wire \sb_1__1__46_chanx_left_out[1] ;
+ wire \sb_1__1__46_chanx_left_out[2] ;
+ wire \sb_1__1__46_chanx_left_out[3] ;
+ wire \sb_1__1__46_chanx_left_out[4] ;
+ wire \sb_1__1__46_chanx_left_out[5] ;
+ wire \sb_1__1__46_chanx_left_out[6] ;
+ wire \sb_1__1__46_chanx_left_out[7] ;
+ wire \sb_1__1__46_chanx_left_out[8] ;
+ wire \sb_1__1__46_chanx_left_out[9] ;
+ wire \sb_1__1__46_chanx_right_out[0] ;
+ wire \sb_1__1__46_chanx_right_out[10] ;
+ wire \sb_1__1__46_chanx_right_out[11] ;
+ wire \sb_1__1__46_chanx_right_out[12] ;
+ wire \sb_1__1__46_chanx_right_out[13] ;
+ wire \sb_1__1__46_chanx_right_out[14] ;
+ wire \sb_1__1__46_chanx_right_out[15] ;
+ wire \sb_1__1__46_chanx_right_out[16] ;
+ wire \sb_1__1__46_chanx_right_out[17] ;
+ wire \sb_1__1__46_chanx_right_out[18] ;
+ wire \sb_1__1__46_chanx_right_out[19] ;
+ wire \sb_1__1__46_chanx_right_out[1] ;
+ wire \sb_1__1__46_chanx_right_out[2] ;
+ wire \sb_1__1__46_chanx_right_out[3] ;
+ wire \sb_1__1__46_chanx_right_out[4] ;
+ wire \sb_1__1__46_chanx_right_out[5] ;
+ wire \sb_1__1__46_chanx_right_out[6] ;
+ wire \sb_1__1__46_chanx_right_out[7] ;
+ wire \sb_1__1__46_chanx_right_out[8] ;
+ wire \sb_1__1__46_chanx_right_out[9] ;
+ wire \sb_1__1__46_chany_bottom_out[0] ;
+ wire \sb_1__1__46_chany_bottom_out[10] ;
+ wire \sb_1__1__46_chany_bottom_out[11] ;
+ wire \sb_1__1__46_chany_bottom_out[12] ;
+ wire \sb_1__1__46_chany_bottom_out[13] ;
+ wire \sb_1__1__46_chany_bottom_out[14] ;
+ wire \sb_1__1__46_chany_bottom_out[15] ;
+ wire \sb_1__1__46_chany_bottom_out[16] ;
+ wire \sb_1__1__46_chany_bottom_out[17] ;
+ wire \sb_1__1__46_chany_bottom_out[18] ;
+ wire \sb_1__1__46_chany_bottom_out[19] ;
+ wire \sb_1__1__46_chany_bottom_out[1] ;
+ wire \sb_1__1__46_chany_bottom_out[2] ;
+ wire \sb_1__1__46_chany_bottom_out[3] ;
+ wire \sb_1__1__46_chany_bottom_out[4] ;
+ wire \sb_1__1__46_chany_bottom_out[5] ;
+ wire \sb_1__1__46_chany_bottom_out[6] ;
+ wire \sb_1__1__46_chany_bottom_out[7] ;
+ wire \sb_1__1__46_chany_bottom_out[8] ;
+ wire \sb_1__1__46_chany_bottom_out[9] ;
+ wire \sb_1__1__46_chany_top_out[0] ;
+ wire \sb_1__1__46_chany_top_out[10] ;
+ wire \sb_1__1__46_chany_top_out[11] ;
+ wire \sb_1__1__46_chany_top_out[12] ;
+ wire \sb_1__1__46_chany_top_out[13] ;
+ wire \sb_1__1__46_chany_top_out[14] ;
+ wire \sb_1__1__46_chany_top_out[15] ;
+ wire \sb_1__1__46_chany_top_out[16] ;
+ wire \sb_1__1__46_chany_top_out[17] ;
+ wire \sb_1__1__46_chany_top_out[18] ;
+ wire \sb_1__1__46_chany_top_out[19] ;
+ wire \sb_1__1__46_chany_top_out[1] ;
+ wire \sb_1__1__46_chany_top_out[2] ;
+ wire \sb_1__1__46_chany_top_out[3] ;
+ wire \sb_1__1__46_chany_top_out[4] ;
+ wire \sb_1__1__46_chany_top_out[5] ;
+ wire \sb_1__1__46_chany_top_out[6] ;
+ wire \sb_1__1__46_chany_top_out[7] ;
+ wire \sb_1__1__46_chany_top_out[8] ;
+ wire \sb_1__1__46_chany_top_out[9] ;
+ wire sb_1__1__47_ccff_tail;
+ wire \sb_1__1__47_chanx_left_out[0] ;
+ wire \sb_1__1__47_chanx_left_out[10] ;
+ wire \sb_1__1__47_chanx_left_out[11] ;
+ wire \sb_1__1__47_chanx_left_out[12] ;
+ wire \sb_1__1__47_chanx_left_out[13] ;
+ wire \sb_1__1__47_chanx_left_out[14] ;
+ wire \sb_1__1__47_chanx_left_out[15] ;
+ wire \sb_1__1__47_chanx_left_out[16] ;
+ wire \sb_1__1__47_chanx_left_out[17] ;
+ wire \sb_1__1__47_chanx_left_out[18] ;
+ wire \sb_1__1__47_chanx_left_out[19] ;
+ wire \sb_1__1__47_chanx_left_out[1] ;
+ wire \sb_1__1__47_chanx_left_out[2] ;
+ wire \sb_1__1__47_chanx_left_out[3] ;
+ wire \sb_1__1__47_chanx_left_out[4] ;
+ wire \sb_1__1__47_chanx_left_out[5] ;
+ wire \sb_1__1__47_chanx_left_out[6] ;
+ wire \sb_1__1__47_chanx_left_out[7] ;
+ wire \sb_1__1__47_chanx_left_out[8] ;
+ wire \sb_1__1__47_chanx_left_out[9] ;
+ wire \sb_1__1__47_chanx_right_out[0] ;
+ wire \sb_1__1__47_chanx_right_out[10] ;
+ wire \sb_1__1__47_chanx_right_out[11] ;
+ wire \sb_1__1__47_chanx_right_out[12] ;
+ wire \sb_1__1__47_chanx_right_out[13] ;
+ wire \sb_1__1__47_chanx_right_out[14] ;
+ wire \sb_1__1__47_chanx_right_out[15] ;
+ wire \sb_1__1__47_chanx_right_out[16] ;
+ wire \sb_1__1__47_chanx_right_out[17] ;
+ wire \sb_1__1__47_chanx_right_out[18] ;
+ wire \sb_1__1__47_chanx_right_out[19] ;
+ wire \sb_1__1__47_chanx_right_out[1] ;
+ wire \sb_1__1__47_chanx_right_out[2] ;
+ wire \sb_1__1__47_chanx_right_out[3] ;
+ wire \sb_1__1__47_chanx_right_out[4] ;
+ wire \sb_1__1__47_chanx_right_out[5] ;
+ wire \sb_1__1__47_chanx_right_out[6] ;
+ wire \sb_1__1__47_chanx_right_out[7] ;
+ wire \sb_1__1__47_chanx_right_out[8] ;
+ wire \sb_1__1__47_chanx_right_out[9] ;
+ wire \sb_1__1__47_chany_bottom_out[0] ;
+ wire \sb_1__1__47_chany_bottom_out[10] ;
+ wire \sb_1__1__47_chany_bottom_out[11] ;
+ wire \sb_1__1__47_chany_bottom_out[12] ;
+ wire \sb_1__1__47_chany_bottom_out[13] ;
+ wire \sb_1__1__47_chany_bottom_out[14] ;
+ wire \sb_1__1__47_chany_bottom_out[15] ;
+ wire \sb_1__1__47_chany_bottom_out[16] ;
+ wire \sb_1__1__47_chany_bottom_out[17] ;
+ wire \sb_1__1__47_chany_bottom_out[18] ;
+ wire \sb_1__1__47_chany_bottom_out[19] ;
+ wire \sb_1__1__47_chany_bottom_out[1] ;
+ wire \sb_1__1__47_chany_bottom_out[2] ;
+ wire \sb_1__1__47_chany_bottom_out[3] ;
+ wire \sb_1__1__47_chany_bottom_out[4] ;
+ wire \sb_1__1__47_chany_bottom_out[5] ;
+ wire \sb_1__1__47_chany_bottom_out[6] ;
+ wire \sb_1__1__47_chany_bottom_out[7] ;
+ wire \sb_1__1__47_chany_bottom_out[8] ;
+ wire \sb_1__1__47_chany_bottom_out[9] ;
+ wire \sb_1__1__47_chany_top_out[0] ;
+ wire \sb_1__1__47_chany_top_out[10] ;
+ wire \sb_1__1__47_chany_top_out[11] ;
+ wire \sb_1__1__47_chany_top_out[12] ;
+ wire \sb_1__1__47_chany_top_out[13] ;
+ wire \sb_1__1__47_chany_top_out[14] ;
+ wire \sb_1__1__47_chany_top_out[15] ;
+ wire \sb_1__1__47_chany_top_out[16] ;
+ wire \sb_1__1__47_chany_top_out[17] ;
+ wire \sb_1__1__47_chany_top_out[18] ;
+ wire \sb_1__1__47_chany_top_out[19] ;
+ wire \sb_1__1__47_chany_top_out[1] ;
+ wire \sb_1__1__47_chany_top_out[2] ;
+ wire \sb_1__1__47_chany_top_out[3] ;
+ wire \sb_1__1__47_chany_top_out[4] ;
+ wire \sb_1__1__47_chany_top_out[5] ;
+ wire \sb_1__1__47_chany_top_out[6] ;
+ wire \sb_1__1__47_chany_top_out[7] ;
+ wire \sb_1__1__47_chany_top_out[8] ;
+ wire \sb_1__1__47_chany_top_out[9] ;
+ wire sb_1__1__48_ccff_tail;
+ wire \sb_1__1__48_chanx_left_out[0] ;
+ wire \sb_1__1__48_chanx_left_out[10] ;
+ wire \sb_1__1__48_chanx_left_out[11] ;
+ wire \sb_1__1__48_chanx_left_out[12] ;
+ wire \sb_1__1__48_chanx_left_out[13] ;
+ wire \sb_1__1__48_chanx_left_out[14] ;
+ wire \sb_1__1__48_chanx_left_out[15] ;
+ wire \sb_1__1__48_chanx_left_out[16] ;
+ wire \sb_1__1__48_chanx_left_out[17] ;
+ wire \sb_1__1__48_chanx_left_out[18] ;
+ wire \sb_1__1__48_chanx_left_out[19] ;
+ wire \sb_1__1__48_chanx_left_out[1] ;
+ wire \sb_1__1__48_chanx_left_out[2] ;
+ wire \sb_1__1__48_chanx_left_out[3] ;
+ wire \sb_1__1__48_chanx_left_out[4] ;
+ wire \sb_1__1__48_chanx_left_out[5] ;
+ wire \sb_1__1__48_chanx_left_out[6] ;
+ wire \sb_1__1__48_chanx_left_out[7] ;
+ wire \sb_1__1__48_chanx_left_out[8] ;
+ wire \sb_1__1__48_chanx_left_out[9] ;
+ wire \sb_1__1__48_chanx_right_out[0] ;
+ wire \sb_1__1__48_chanx_right_out[10] ;
+ wire \sb_1__1__48_chanx_right_out[11] ;
+ wire \sb_1__1__48_chanx_right_out[12] ;
+ wire \sb_1__1__48_chanx_right_out[13] ;
+ wire \sb_1__1__48_chanx_right_out[14] ;
+ wire \sb_1__1__48_chanx_right_out[15] ;
+ wire \sb_1__1__48_chanx_right_out[16] ;
+ wire \sb_1__1__48_chanx_right_out[17] ;
+ wire \sb_1__1__48_chanx_right_out[18] ;
+ wire \sb_1__1__48_chanx_right_out[19] ;
+ wire \sb_1__1__48_chanx_right_out[1] ;
+ wire \sb_1__1__48_chanx_right_out[2] ;
+ wire \sb_1__1__48_chanx_right_out[3] ;
+ wire \sb_1__1__48_chanx_right_out[4] ;
+ wire \sb_1__1__48_chanx_right_out[5] ;
+ wire \sb_1__1__48_chanx_right_out[6] ;
+ wire \sb_1__1__48_chanx_right_out[7] ;
+ wire \sb_1__1__48_chanx_right_out[8] ;
+ wire \sb_1__1__48_chanx_right_out[9] ;
+ wire \sb_1__1__48_chany_bottom_out[0] ;
+ wire \sb_1__1__48_chany_bottom_out[10] ;
+ wire \sb_1__1__48_chany_bottom_out[11] ;
+ wire \sb_1__1__48_chany_bottom_out[12] ;
+ wire \sb_1__1__48_chany_bottom_out[13] ;
+ wire \sb_1__1__48_chany_bottom_out[14] ;
+ wire \sb_1__1__48_chany_bottom_out[15] ;
+ wire \sb_1__1__48_chany_bottom_out[16] ;
+ wire \sb_1__1__48_chany_bottom_out[17] ;
+ wire \sb_1__1__48_chany_bottom_out[18] ;
+ wire \sb_1__1__48_chany_bottom_out[19] ;
+ wire \sb_1__1__48_chany_bottom_out[1] ;
+ wire \sb_1__1__48_chany_bottom_out[2] ;
+ wire \sb_1__1__48_chany_bottom_out[3] ;
+ wire \sb_1__1__48_chany_bottom_out[4] ;
+ wire \sb_1__1__48_chany_bottom_out[5] ;
+ wire \sb_1__1__48_chany_bottom_out[6] ;
+ wire \sb_1__1__48_chany_bottom_out[7] ;
+ wire \sb_1__1__48_chany_bottom_out[8] ;
+ wire \sb_1__1__48_chany_bottom_out[9] ;
+ wire \sb_1__1__48_chany_top_out[0] ;
+ wire \sb_1__1__48_chany_top_out[10] ;
+ wire \sb_1__1__48_chany_top_out[11] ;
+ wire \sb_1__1__48_chany_top_out[12] ;
+ wire \sb_1__1__48_chany_top_out[13] ;
+ wire \sb_1__1__48_chany_top_out[14] ;
+ wire \sb_1__1__48_chany_top_out[15] ;
+ wire \sb_1__1__48_chany_top_out[16] ;
+ wire \sb_1__1__48_chany_top_out[17] ;
+ wire \sb_1__1__48_chany_top_out[18] ;
+ wire \sb_1__1__48_chany_top_out[19] ;
+ wire \sb_1__1__48_chany_top_out[1] ;
+ wire \sb_1__1__48_chany_top_out[2] ;
+ wire \sb_1__1__48_chany_top_out[3] ;
+ wire \sb_1__1__48_chany_top_out[4] ;
+ wire \sb_1__1__48_chany_top_out[5] ;
+ wire \sb_1__1__48_chany_top_out[6] ;
+ wire \sb_1__1__48_chany_top_out[7] ;
+ wire \sb_1__1__48_chany_top_out[8] ;
+ wire \sb_1__1__48_chany_top_out[9] ;
+ wire sb_1__1__4_ccff_tail;
+ wire \sb_1__1__4_chanx_left_out[0] ;
+ wire \sb_1__1__4_chanx_left_out[10] ;
+ wire \sb_1__1__4_chanx_left_out[11] ;
+ wire \sb_1__1__4_chanx_left_out[12] ;
+ wire \sb_1__1__4_chanx_left_out[13] ;
+ wire \sb_1__1__4_chanx_left_out[14] ;
+ wire \sb_1__1__4_chanx_left_out[15] ;
+ wire \sb_1__1__4_chanx_left_out[16] ;
+ wire \sb_1__1__4_chanx_left_out[17] ;
+ wire \sb_1__1__4_chanx_left_out[18] ;
+ wire \sb_1__1__4_chanx_left_out[19] ;
+ wire \sb_1__1__4_chanx_left_out[1] ;
+ wire \sb_1__1__4_chanx_left_out[2] ;
+ wire \sb_1__1__4_chanx_left_out[3] ;
+ wire \sb_1__1__4_chanx_left_out[4] ;
+ wire \sb_1__1__4_chanx_left_out[5] ;
+ wire \sb_1__1__4_chanx_left_out[6] ;
+ wire \sb_1__1__4_chanx_left_out[7] ;
+ wire \sb_1__1__4_chanx_left_out[8] ;
+ wire \sb_1__1__4_chanx_left_out[9] ;
+ wire \sb_1__1__4_chanx_right_out[0] ;
+ wire \sb_1__1__4_chanx_right_out[10] ;
+ wire \sb_1__1__4_chanx_right_out[11] ;
+ wire \sb_1__1__4_chanx_right_out[12] ;
+ wire \sb_1__1__4_chanx_right_out[13] ;
+ wire \sb_1__1__4_chanx_right_out[14] ;
+ wire \sb_1__1__4_chanx_right_out[15] ;
+ wire \sb_1__1__4_chanx_right_out[16] ;
+ wire \sb_1__1__4_chanx_right_out[17] ;
+ wire \sb_1__1__4_chanx_right_out[18] ;
+ wire \sb_1__1__4_chanx_right_out[19] ;
+ wire \sb_1__1__4_chanx_right_out[1] ;
+ wire \sb_1__1__4_chanx_right_out[2] ;
+ wire \sb_1__1__4_chanx_right_out[3] ;
+ wire \sb_1__1__4_chanx_right_out[4] ;
+ wire \sb_1__1__4_chanx_right_out[5] ;
+ wire \sb_1__1__4_chanx_right_out[6] ;
+ wire \sb_1__1__4_chanx_right_out[7] ;
+ wire \sb_1__1__4_chanx_right_out[8] ;
+ wire \sb_1__1__4_chanx_right_out[9] ;
+ wire \sb_1__1__4_chany_bottom_out[0] ;
+ wire \sb_1__1__4_chany_bottom_out[10] ;
+ wire \sb_1__1__4_chany_bottom_out[11] ;
+ wire \sb_1__1__4_chany_bottom_out[12] ;
+ wire \sb_1__1__4_chany_bottom_out[13] ;
+ wire \sb_1__1__4_chany_bottom_out[14] ;
+ wire \sb_1__1__4_chany_bottom_out[15] ;
+ wire \sb_1__1__4_chany_bottom_out[16] ;
+ wire \sb_1__1__4_chany_bottom_out[17] ;
+ wire \sb_1__1__4_chany_bottom_out[18] ;
+ wire \sb_1__1__4_chany_bottom_out[19] ;
+ wire \sb_1__1__4_chany_bottom_out[1] ;
+ wire \sb_1__1__4_chany_bottom_out[2] ;
+ wire \sb_1__1__4_chany_bottom_out[3] ;
+ wire \sb_1__1__4_chany_bottom_out[4] ;
+ wire \sb_1__1__4_chany_bottom_out[5] ;
+ wire \sb_1__1__4_chany_bottom_out[6] ;
+ wire \sb_1__1__4_chany_bottom_out[7] ;
+ wire \sb_1__1__4_chany_bottom_out[8] ;
+ wire \sb_1__1__4_chany_bottom_out[9] ;
+ wire \sb_1__1__4_chany_top_out[0] ;
+ wire \sb_1__1__4_chany_top_out[10] ;
+ wire \sb_1__1__4_chany_top_out[11] ;
+ wire \sb_1__1__4_chany_top_out[12] ;
+ wire \sb_1__1__4_chany_top_out[13] ;
+ wire \sb_1__1__4_chany_top_out[14] ;
+ wire \sb_1__1__4_chany_top_out[15] ;
+ wire \sb_1__1__4_chany_top_out[16] ;
+ wire \sb_1__1__4_chany_top_out[17] ;
+ wire \sb_1__1__4_chany_top_out[18] ;
+ wire \sb_1__1__4_chany_top_out[19] ;
+ wire \sb_1__1__4_chany_top_out[1] ;
+ wire \sb_1__1__4_chany_top_out[2] ;
+ wire \sb_1__1__4_chany_top_out[3] ;
+ wire \sb_1__1__4_chany_top_out[4] ;
+ wire \sb_1__1__4_chany_top_out[5] ;
+ wire \sb_1__1__4_chany_top_out[6] ;
+ wire \sb_1__1__4_chany_top_out[7] ;
+ wire \sb_1__1__4_chany_top_out[8] ;
+ wire \sb_1__1__4_chany_top_out[9] ;
+ wire sb_1__1__5_ccff_tail;
+ wire \sb_1__1__5_chanx_left_out[0] ;
+ wire \sb_1__1__5_chanx_left_out[10] ;
+ wire \sb_1__1__5_chanx_left_out[11] ;
+ wire \sb_1__1__5_chanx_left_out[12] ;
+ wire \sb_1__1__5_chanx_left_out[13] ;
+ wire \sb_1__1__5_chanx_left_out[14] ;
+ wire \sb_1__1__5_chanx_left_out[15] ;
+ wire \sb_1__1__5_chanx_left_out[16] ;
+ wire \sb_1__1__5_chanx_left_out[17] ;
+ wire \sb_1__1__5_chanx_left_out[18] ;
+ wire \sb_1__1__5_chanx_left_out[19] ;
+ wire \sb_1__1__5_chanx_left_out[1] ;
+ wire \sb_1__1__5_chanx_left_out[2] ;
+ wire \sb_1__1__5_chanx_left_out[3] ;
+ wire \sb_1__1__5_chanx_left_out[4] ;
+ wire \sb_1__1__5_chanx_left_out[5] ;
+ wire \sb_1__1__5_chanx_left_out[6] ;
+ wire \sb_1__1__5_chanx_left_out[7] ;
+ wire \sb_1__1__5_chanx_left_out[8] ;
+ wire \sb_1__1__5_chanx_left_out[9] ;
+ wire \sb_1__1__5_chanx_right_out[0] ;
+ wire \sb_1__1__5_chanx_right_out[10] ;
+ wire \sb_1__1__5_chanx_right_out[11] ;
+ wire \sb_1__1__5_chanx_right_out[12] ;
+ wire \sb_1__1__5_chanx_right_out[13] ;
+ wire \sb_1__1__5_chanx_right_out[14] ;
+ wire \sb_1__1__5_chanx_right_out[15] ;
+ wire \sb_1__1__5_chanx_right_out[16] ;
+ wire \sb_1__1__5_chanx_right_out[17] ;
+ wire \sb_1__1__5_chanx_right_out[18] ;
+ wire \sb_1__1__5_chanx_right_out[19] ;
+ wire \sb_1__1__5_chanx_right_out[1] ;
+ wire \sb_1__1__5_chanx_right_out[2] ;
+ wire \sb_1__1__5_chanx_right_out[3] ;
+ wire \sb_1__1__5_chanx_right_out[4] ;
+ wire \sb_1__1__5_chanx_right_out[5] ;
+ wire \sb_1__1__5_chanx_right_out[6] ;
+ wire \sb_1__1__5_chanx_right_out[7] ;
+ wire \sb_1__1__5_chanx_right_out[8] ;
+ wire \sb_1__1__5_chanx_right_out[9] ;
+ wire \sb_1__1__5_chany_bottom_out[0] ;
+ wire \sb_1__1__5_chany_bottom_out[10] ;
+ wire \sb_1__1__5_chany_bottom_out[11] ;
+ wire \sb_1__1__5_chany_bottom_out[12] ;
+ wire \sb_1__1__5_chany_bottom_out[13] ;
+ wire \sb_1__1__5_chany_bottom_out[14] ;
+ wire \sb_1__1__5_chany_bottom_out[15] ;
+ wire \sb_1__1__5_chany_bottom_out[16] ;
+ wire \sb_1__1__5_chany_bottom_out[17] ;
+ wire \sb_1__1__5_chany_bottom_out[18] ;
+ wire \sb_1__1__5_chany_bottom_out[19] ;
+ wire \sb_1__1__5_chany_bottom_out[1] ;
+ wire \sb_1__1__5_chany_bottom_out[2] ;
+ wire \sb_1__1__5_chany_bottom_out[3] ;
+ wire \sb_1__1__5_chany_bottom_out[4] ;
+ wire \sb_1__1__5_chany_bottom_out[5] ;
+ wire \sb_1__1__5_chany_bottom_out[6] ;
+ wire \sb_1__1__5_chany_bottom_out[7] ;
+ wire \sb_1__1__5_chany_bottom_out[8] ;
+ wire \sb_1__1__5_chany_bottom_out[9] ;
+ wire \sb_1__1__5_chany_top_out[0] ;
+ wire \sb_1__1__5_chany_top_out[10] ;
+ wire \sb_1__1__5_chany_top_out[11] ;
+ wire \sb_1__1__5_chany_top_out[12] ;
+ wire \sb_1__1__5_chany_top_out[13] ;
+ wire \sb_1__1__5_chany_top_out[14] ;
+ wire \sb_1__1__5_chany_top_out[15] ;
+ wire \sb_1__1__5_chany_top_out[16] ;
+ wire \sb_1__1__5_chany_top_out[17] ;
+ wire \sb_1__1__5_chany_top_out[18] ;
+ wire \sb_1__1__5_chany_top_out[19] ;
+ wire \sb_1__1__5_chany_top_out[1] ;
+ wire \sb_1__1__5_chany_top_out[2] ;
+ wire \sb_1__1__5_chany_top_out[3] ;
+ wire \sb_1__1__5_chany_top_out[4] ;
+ wire \sb_1__1__5_chany_top_out[5] ;
+ wire \sb_1__1__5_chany_top_out[6] ;
+ wire \sb_1__1__5_chany_top_out[7] ;
+ wire \sb_1__1__5_chany_top_out[8] ;
+ wire \sb_1__1__5_chany_top_out[9] ;
+ wire sb_1__1__6_ccff_tail;
+ wire \sb_1__1__6_chanx_left_out[0] ;
+ wire \sb_1__1__6_chanx_left_out[10] ;
+ wire \sb_1__1__6_chanx_left_out[11] ;
+ wire \sb_1__1__6_chanx_left_out[12] ;
+ wire \sb_1__1__6_chanx_left_out[13] ;
+ wire \sb_1__1__6_chanx_left_out[14] ;
+ wire \sb_1__1__6_chanx_left_out[15] ;
+ wire \sb_1__1__6_chanx_left_out[16] ;
+ wire \sb_1__1__6_chanx_left_out[17] ;
+ wire \sb_1__1__6_chanx_left_out[18] ;
+ wire \sb_1__1__6_chanx_left_out[19] ;
+ wire \sb_1__1__6_chanx_left_out[1] ;
+ wire \sb_1__1__6_chanx_left_out[2] ;
+ wire \sb_1__1__6_chanx_left_out[3] ;
+ wire \sb_1__1__6_chanx_left_out[4] ;
+ wire \sb_1__1__6_chanx_left_out[5] ;
+ wire \sb_1__1__6_chanx_left_out[6] ;
+ wire \sb_1__1__6_chanx_left_out[7] ;
+ wire \sb_1__1__6_chanx_left_out[8] ;
+ wire \sb_1__1__6_chanx_left_out[9] ;
+ wire \sb_1__1__6_chanx_right_out[0] ;
+ wire \sb_1__1__6_chanx_right_out[10] ;
+ wire \sb_1__1__6_chanx_right_out[11] ;
+ wire \sb_1__1__6_chanx_right_out[12] ;
+ wire \sb_1__1__6_chanx_right_out[13] ;
+ wire \sb_1__1__6_chanx_right_out[14] ;
+ wire \sb_1__1__6_chanx_right_out[15] ;
+ wire \sb_1__1__6_chanx_right_out[16] ;
+ wire \sb_1__1__6_chanx_right_out[17] ;
+ wire \sb_1__1__6_chanx_right_out[18] ;
+ wire \sb_1__1__6_chanx_right_out[19] ;
+ wire \sb_1__1__6_chanx_right_out[1] ;
+ wire \sb_1__1__6_chanx_right_out[2] ;
+ wire \sb_1__1__6_chanx_right_out[3] ;
+ wire \sb_1__1__6_chanx_right_out[4] ;
+ wire \sb_1__1__6_chanx_right_out[5] ;
+ wire \sb_1__1__6_chanx_right_out[6] ;
+ wire \sb_1__1__6_chanx_right_out[7] ;
+ wire \sb_1__1__6_chanx_right_out[8] ;
+ wire \sb_1__1__6_chanx_right_out[9] ;
+ wire \sb_1__1__6_chany_bottom_out[0] ;
+ wire \sb_1__1__6_chany_bottom_out[10] ;
+ wire \sb_1__1__6_chany_bottom_out[11] ;
+ wire \sb_1__1__6_chany_bottom_out[12] ;
+ wire \sb_1__1__6_chany_bottom_out[13] ;
+ wire \sb_1__1__6_chany_bottom_out[14] ;
+ wire \sb_1__1__6_chany_bottom_out[15] ;
+ wire \sb_1__1__6_chany_bottom_out[16] ;
+ wire \sb_1__1__6_chany_bottom_out[17] ;
+ wire \sb_1__1__6_chany_bottom_out[18] ;
+ wire \sb_1__1__6_chany_bottom_out[19] ;
+ wire \sb_1__1__6_chany_bottom_out[1] ;
+ wire \sb_1__1__6_chany_bottom_out[2] ;
+ wire \sb_1__1__6_chany_bottom_out[3] ;
+ wire \sb_1__1__6_chany_bottom_out[4] ;
+ wire \sb_1__1__6_chany_bottom_out[5] ;
+ wire \sb_1__1__6_chany_bottom_out[6] ;
+ wire \sb_1__1__6_chany_bottom_out[7] ;
+ wire \sb_1__1__6_chany_bottom_out[8] ;
+ wire \sb_1__1__6_chany_bottom_out[9] ;
+ wire \sb_1__1__6_chany_top_out[0] ;
+ wire \sb_1__1__6_chany_top_out[10] ;
+ wire \sb_1__1__6_chany_top_out[11] ;
+ wire \sb_1__1__6_chany_top_out[12] ;
+ wire \sb_1__1__6_chany_top_out[13] ;
+ wire \sb_1__1__6_chany_top_out[14] ;
+ wire \sb_1__1__6_chany_top_out[15] ;
+ wire \sb_1__1__6_chany_top_out[16] ;
+ wire \sb_1__1__6_chany_top_out[17] ;
+ wire \sb_1__1__6_chany_top_out[18] ;
+ wire \sb_1__1__6_chany_top_out[19] ;
+ wire \sb_1__1__6_chany_top_out[1] ;
+ wire \sb_1__1__6_chany_top_out[2] ;
+ wire \sb_1__1__6_chany_top_out[3] ;
+ wire \sb_1__1__6_chany_top_out[4] ;
+ wire \sb_1__1__6_chany_top_out[5] ;
+ wire \sb_1__1__6_chany_top_out[6] ;
+ wire \sb_1__1__6_chany_top_out[7] ;
+ wire \sb_1__1__6_chany_top_out[8] ;
+ wire \sb_1__1__6_chany_top_out[9] ;
+ wire sb_1__1__7_ccff_tail;
+ wire \sb_1__1__7_chanx_left_out[0] ;
+ wire \sb_1__1__7_chanx_left_out[10] ;
+ wire \sb_1__1__7_chanx_left_out[11] ;
+ wire \sb_1__1__7_chanx_left_out[12] ;
+ wire \sb_1__1__7_chanx_left_out[13] ;
+ wire \sb_1__1__7_chanx_left_out[14] ;
+ wire \sb_1__1__7_chanx_left_out[15] ;
+ wire \sb_1__1__7_chanx_left_out[16] ;
+ wire \sb_1__1__7_chanx_left_out[17] ;
+ wire \sb_1__1__7_chanx_left_out[18] ;
+ wire \sb_1__1__7_chanx_left_out[19] ;
+ wire \sb_1__1__7_chanx_left_out[1] ;
+ wire \sb_1__1__7_chanx_left_out[2] ;
+ wire \sb_1__1__7_chanx_left_out[3] ;
+ wire \sb_1__1__7_chanx_left_out[4] ;
+ wire \sb_1__1__7_chanx_left_out[5] ;
+ wire \sb_1__1__7_chanx_left_out[6] ;
+ wire \sb_1__1__7_chanx_left_out[7] ;
+ wire \sb_1__1__7_chanx_left_out[8] ;
+ wire \sb_1__1__7_chanx_left_out[9] ;
+ wire \sb_1__1__7_chanx_right_out[0] ;
+ wire \sb_1__1__7_chanx_right_out[10] ;
+ wire \sb_1__1__7_chanx_right_out[11] ;
+ wire \sb_1__1__7_chanx_right_out[12] ;
+ wire \sb_1__1__7_chanx_right_out[13] ;
+ wire \sb_1__1__7_chanx_right_out[14] ;
+ wire \sb_1__1__7_chanx_right_out[15] ;
+ wire \sb_1__1__7_chanx_right_out[16] ;
+ wire \sb_1__1__7_chanx_right_out[17] ;
+ wire \sb_1__1__7_chanx_right_out[18] ;
+ wire \sb_1__1__7_chanx_right_out[19] ;
+ wire \sb_1__1__7_chanx_right_out[1] ;
+ wire \sb_1__1__7_chanx_right_out[2] ;
+ wire \sb_1__1__7_chanx_right_out[3] ;
+ wire \sb_1__1__7_chanx_right_out[4] ;
+ wire \sb_1__1__7_chanx_right_out[5] ;
+ wire \sb_1__1__7_chanx_right_out[6] ;
+ wire \sb_1__1__7_chanx_right_out[7] ;
+ wire \sb_1__1__7_chanx_right_out[8] ;
+ wire \sb_1__1__7_chanx_right_out[9] ;
+ wire \sb_1__1__7_chany_bottom_out[0] ;
+ wire \sb_1__1__7_chany_bottom_out[10] ;
+ wire \sb_1__1__7_chany_bottom_out[11] ;
+ wire \sb_1__1__7_chany_bottom_out[12] ;
+ wire \sb_1__1__7_chany_bottom_out[13] ;
+ wire \sb_1__1__7_chany_bottom_out[14] ;
+ wire \sb_1__1__7_chany_bottom_out[15] ;
+ wire \sb_1__1__7_chany_bottom_out[16] ;
+ wire \sb_1__1__7_chany_bottom_out[17] ;
+ wire \sb_1__1__7_chany_bottom_out[18] ;
+ wire \sb_1__1__7_chany_bottom_out[19] ;
+ wire \sb_1__1__7_chany_bottom_out[1] ;
+ wire \sb_1__1__7_chany_bottom_out[2] ;
+ wire \sb_1__1__7_chany_bottom_out[3] ;
+ wire \sb_1__1__7_chany_bottom_out[4] ;
+ wire \sb_1__1__7_chany_bottom_out[5] ;
+ wire \sb_1__1__7_chany_bottom_out[6] ;
+ wire \sb_1__1__7_chany_bottom_out[7] ;
+ wire \sb_1__1__7_chany_bottom_out[8] ;
+ wire \sb_1__1__7_chany_bottom_out[9] ;
+ wire \sb_1__1__7_chany_top_out[0] ;
+ wire \sb_1__1__7_chany_top_out[10] ;
+ wire \sb_1__1__7_chany_top_out[11] ;
+ wire \sb_1__1__7_chany_top_out[12] ;
+ wire \sb_1__1__7_chany_top_out[13] ;
+ wire \sb_1__1__7_chany_top_out[14] ;
+ wire \sb_1__1__7_chany_top_out[15] ;
+ wire \sb_1__1__7_chany_top_out[16] ;
+ wire \sb_1__1__7_chany_top_out[17] ;
+ wire \sb_1__1__7_chany_top_out[18] ;
+ wire \sb_1__1__7_chany_top_out[19] ;
+ wire \sb_1__1__7_chany_top_out[1] ;
+ wire \sb_1__1__7_chany_top_out[2] ;
+ wire \sb_1__1__7_chany_top_out[3] ;
+ wire \sb_1__1__7_chany_top_out[4] ;
+ wire \sb_1__1__7_chany_top_out[5] ;
+ wire \sb_1__1__7_chany_top_out[6] ;
+ wire \sb_1__1__7_chany_top_out[7] ;
+ wire \sb_1__1__7_chany_top_out[8] ;
+ wire \sb_1__1__7_chany_top_out[9] ;
+ wire sb_1__1__8_ccff_tail;
+ wire \sb_1__1__8_chanx_left_out[0] ;
+ wire \sb_1__1__8_chanx_left_out[10] ;
+ wire \sb_1__1__8_chanx_left_out[11] ;
+ wire \sb_1__1__8_chanx_left_out[12] ;
+ wire \sb_1__1__8_chanx_left_out[13] ;
+ wire \sb_1__1__8_chanx_left_out[14] ;
+ wire \sb_1__1__8_chanx_left_out[15] ;
+ wire \sb_1__1__8_chanx_left_out[16] ;
+ wire \sb_1__1__8_chanx_left_out[17] ;
+ wire \sb_1__1__8_chanx_left_out[18] ;
+ wire \sb_1__1__8_chanx_left_out[19] ;
+ wire \sb_1__1__8_chanx_left_out[1] ;
+ wire \sb_1__1__8_chanx_left_out[2] ;
+ wire \sb_1__1__8_chanx_left_out[3] ;
+ wire \sb_1__1__8_chanx_left_out[4] ;
+ wire \sb_1__1__8_chanx_left_out[5] ;
+ wire \sb_1__1__8_chanx_left_out[6] ;
+ wire \sb_1__1__8_chanx_left_out[7] ;
+ wire \sb_1__1__8_chanx_left_out[8] ;
+ wire \sb_1__1__8_chanx_left_out[9] ;
+ wire \sb_1__1__8_chanx_right_out[0] ;
+ wire \sb_1__1__8_chanx_right_out[10] ;
+ wire \sb_1__1__8_chanx_right_out[11] ;
+ wire \sb_1__1__8_chanx_right_out[12] ;
+ wire \sb_1__1__8_chanx_right_out[13] ;
+ wire \sb_1__1__8_chanx_right_out[14] ;
+ wire \sb_1__1__8_chanx_right_out[15] ;
+ wire \sb_1__1__8_chanx_right_out[16] ;
+ wire \sb_1__1__8_chanx_right_out[17] ;
+ wire \sb_1__1__8_chanx_right_out[18] ;
+ wire \sb_1__1__8_chanx_right_out[19] ;
+ wire \sb_1__1__8_chanx_right_out[1] ;
+ wire \sb_1__1__8_chanx_right_out[2] ;
+ wire \sb_1__1__8_chanx_right_out[3] ;
+ wire \sb_1__1__8_chanx_right_out[4] ;
+ wire \sb_1__1__8_chanx_right_out[5] ;
+ wire \sb_1__1__8_chanx_right_out[6] ;
+ wire \sb_1__1__8_chanx_right_out[7] ;
+ wire \sb_1__1__8_chanx_right_out[8] ;
+ wire \sb_1__1__8_chanx_right_out[9] ;
+ wire \sb_1__1__8_chany_bottom_out[0] ;
+ wire \sb_1__1__8_chany_bottom_out[10] ;
+ wire \sb_1__1__8_chany_bottom_out[11] ;
+ wire \sb_1__1__8_chany_bottom_out[12] ;
+ wire \sb_1__1__8_chany_bottom_out[13] ;
+ wire \sb_1__1__8_chany_bottom_out[14] ;
+ wire \sb_1__1__8_chany_bottom_out[15] ;
+ wire \sb_1__1__8_chany_bottom_out[16] ;
+ wire \sb_1__1__8_chany_bottom_out[17] ;
+ wire \sb_1__1__8_chany_bottom_out[18] ;
+ wire \sb_1__1__8_chany_bottom_out[19] ;
+ wire \sb_1__1__8_chany_bottom_out[1] ;
+ wire \sb_1__1__8_chany_bottom_out[2] ;
+ wire \sb_1__1__8_chany_bottom_out[3] ;
+ wire \sb_1__1__8_chany_bottom_out[4] ;
+ wire \sb_1__1__8_chany_bottom_out[5] ;
+ wire \sb_1__1__8_chany_bottom_out[6] ;
+ wire \sb_1__1__8_chany_bottom_out[7] ;
+ wire \sb_1__1__8_chany_bottom_out[8] ;
+ wire \sb_1__1__8_chany_bottom_out[9] ;
+ wire \sb_1__1__8_chany_top_out[0] ;
+ wire \sb_1__1__8_chany_top_out[10] ;
+ wire \sb_1__1__8_chany_top_out[11] ;
+ wire \sb_1__1__8_chany_top_out[12] ;
+ wire \sb_1__1__8_chany_top_out[13] ;
+ wire \sb_1__1__8_chany_top_out[14] ;
+ wire \sb_1__1__8_chany_top_out[15] ;
+ wire \sb_1__1__8_chany_top_out[16] ;
+ wire \sb_1__1__8_chany_top_out[17] ;
+ wire \sb_1__1__8_chany_top_out[18] ;
+ wire \sb_1__1__8_chany_top_out[19] ;
+ wire \sb_1__1__8_chany_top_out[1] ;
+ wire \sb_1__1__8_chany_top_out[2] ;
+ wire \sb_1__1__8_chany_top_out[3] ;
+ wire \sb_1__1__8_chany_top_out[4] ;
+ wire \sb_1__1__8_chany_top_out[5] ;
+ wire \sb_1__1__8_chany_top_out[6] ;
+ wire \sb_1__1__8_chany_top_out[7] ;
+ wire \sb_1__1__8_chany_top_out[8] ;
+ wire \sb_1__1__8_chany_top_out[9] ;
+ wire sb_1__1__9_ccff_tail;
+ wire \sb_1__1__9_chanx_left_out[0] ;
+ wire \sb_1__1__9_chanx_left_out[10] ;
+ wire \sb_1__1__9_chanx_left_out[11] ;
+ wire \sb_1__1__9_chanx_left_out[12] ;
+ wire \sb_1__1__9_chanx_left_out[13] ;
+ wire \sb_1__1__9_chanx_left_out[14] ;
+ wire \sb_1__1__9_chanx_left_out[15] ;
+ wire \sb_1__1__9_chanx_left_out[16] ;
+ wire \sb_1__1__9_chanx_left_out[17] ;
+ wire \sb_1__1__9_chanx_left_out[18] ;
+ wire \sb_1__1__9_chanx_left_out[19] ;
+ wire \sb_1__1__9_chanx_left_out[1] ;
+ wire \sb_1__1__9_chanx_left_out[2] ;
+ wire \sb_1__1__9_chanx_left_out[3] ;
+ wire \sb_1__1__9_chanx_left_out[4] ;
+ wire \sb_1__1__9_chanx_left_out[5] ;
+ wire \sb_1__1__9_chanx_left_out[6] ;
+ wire \sb_1__1__9_chanx_left_out[7] ;
+ wire \sb_1__1__9_chanx_left_out[8] ;
+ wire \sb_1__1__9_chanx_left_out[9] ;
+ wire \sb_1__1__9_chanx_right_out[0] ;
+ wire \sb_1__1__9_chanx_right_out[10] ;
+ wire \sb_1__1__9_chanx_right_out[11] ;
+ wire \sb_1__1__9_chanx_right_out[12] ;
+ wire \sb_1__1__9_chanx_right_out[13] ;
+ wire \sb_1__1__9_chanx_right_out[14] ;
+ wire \sb_1__1__9_chanx_right_out[15] ;
+ wire \sb_1__1__9_chanx_right_out[16] ;
+ wire \sb_1__1__9_chanx_right_out[17] ;
+ wire \sb_1__1__9_chanx_right_out[18] ;
+ wire \sb_1__1__9_chanx_right_out[19] ;
+ wire \sb_1__1__9_chanx_right_out[1] ;
+ wire \sb_1__1__9_chanx_right_out[2] ;
+ wire \sb_1__1__9_chanx_right_out[3] ;
+ wire \sb_1__1__9_chanx_right_out[4] ;
+ wire \sb_1__1__9_chanx_right_out[5] ;
+ wire \sb_1__1__9_chanx_right_out[6] ;
+ wire \sb_1__1__9_chanx_right_out[7] ;
+ wire \sb_1__1__9_chanx_right_out[8] ;
+ wire \sb_1__1__9_chanx_right_out[9] ;
+ wire \sb_1__1__9_chany_bottom_out[0] ;
+ wire \sb_1__1__9_chany_bottom_out[10] ;
+ wire \sb_1__1__9_chany_bottom_out[11] ;
+ wire \sb_1__1__9_chany_bottom_out[12] ;
+ wire \sb_1__1__9_chany_bottom_out[13] ;
+ wire \sb_1__1__9_chany_bottom_out[14] ;
+ wire \sb_1__1__9_chany_bottom_out[15] ;
+ wire \sb_1__1__9_chany_bottom_out[16] ;
+ wire \sb_1__1__9_chany_bottom_out[17] ;
+ wire \sb_1__1__9_chany_bottom_out[18] ;
+ wire \sb_1__1__9_chany_bottom_out[19] ;
+ wire \sb_1__1__9_chany_bottom_out[1] ;
+ wire \sb_1__1__9_chany_bottom_out[2] ;
+ wire \sb_1__1__9_chany_bottom_out[3] ;
+ wire \sb_1__1__9_chany_bottom_out[4] ;
+ wire \sb_1__1__9_chany_bottom_out[5] ;
+ wire \sb_1__1__9_chany_bottom_out[6] ;
+ wire \sb_1__1__9_chany_bottom_out[7] ;
+ wire \sb_1__1__9_chany_bottom_out[8] ;
+ wire \sb_1__1__9_chany_bottom_out[9] ;
+ wire \sb_1__1__9_chany_top_out[0] ;
+ wire \sb_1__1__9_chany_top_out[10] ;
+ wire \sb_1__1__9_chany_top_out[11] ;
+ wire \sb_1__1__9_chany_top_out[12] ;
+ wire \sb_1__1__9_chany_top_out[13] ;
+ wire \sb_1__1__9_chany_top_out[14] ;
+ wire \sb_1__1__9_chany_top_out[15] ;
+ wire \sb_1__1__9_chany_top_out[16] ;
+ wire \sb_1__1__9_chany_top_out[17] ;
+ wire \sb_1__1__9_chany_top_out[18] ;
+ wire \sb_1__1__9_chany_top_out[19] ;
+ wire \sb_1__1__9_chany_top_out[1] ;
+ wire \sb_1__1__9_chany_top_out[2] ;
+ wire \sb_1__1__9_chany_top_out[3] ;
+ wire \sb_1__1__9_chany_top_out[4] ;
+ wire \sb_1__1__9_chany_top_out[5] ;
+ wire \sb_1__1__9_chany_top_out[6] ;
+ wire \sb_1__1__9_chany_top_out[7] ;
+ wire \sb_1__1__9_chany_top_out[8] ;
+ wire \sb_1__1__9_chany_top_out[9] ;
+ wire sb_1__8__0_ccff_tail;
+ wire \sb_1__8__0_chanx_left_out[0] ;
+ wire \sb_1__8__0_chanx_left_out[10] ;
+ wire \sb_1__8__0_chanx_left_out[11] ;
+ wire \sb_1__8__0_chanx_left_out[12] ;
+ wire \sb_1__8__0_chanx_left_out[13] ;
+ wire \sb_1__8__0_chanx_left_out[14] ;
+ wire \sb_1__8__0_chanx_left_out[15] ;
+ wire \sb_1__8__0_chanx_left_out[16] ;
+ wire \sb_1__8__0_chanx_left_out[17] ;
+ wire \sb_1__8__0_chanx_left_out[18] ;
+ wire \sb_1__8__0_chanx_left_out[19] ;
+ wire \sb_1__8__0_chanx_left_out[1] ;
+ wire \sb_1__8__0_chanx_left_out[2] ;
+ wire \sb_1__8__0_chanx_left_out[3] ;
+ wire \sb_1__8__0_chanx_left_out[4] ;
+ wire \sb_1__8__0_chanx_left_out[5] ;
+ wire \sb_1__8__0_chanx_left_out[6] ;
+ wire \sb_1__8__0_chanx_left_out[7] ;
+ wire \sb_1__8__0_chanx_left_out[8] ;
+ wire \sb_1__8__0_chanx_left_out[9] ;
+ wire \sb_1__8__0_chanx_right_out[0] ;
+ wire \sb_1__8__0_chanx_right_out[10] ;
+ wire \sb_1__8__0_chanx_right_out[11] ;
+ wire \sb_1__8__0_chanx_right_out[12] ;
+ wire \sb_1__8__0_chanx_right_out[13] ;
+ wire \sb_1__8__0_chanx_right_out[14] ;
+ wire \sb_1__8__0_chanx_right_out[15] ;
+ wire \sb_1__8__0_chanx_right_out[16] ;
+ wire \sb_1__8__0_chanx_right_out[17] ;
+ wire \sb_1__8__0_chanx_right_out[18] ;
+ wire \sb_1__8__0_chanx_right_out[19] ;
+ wire \sb_1__8__0_chanx_right_out[1] ;
+ wire \sb_1__8__0_chanx_right_out[2] ;
+ wire \sb_1__8__0_chanx_right_out[3] ;
+ wire \sb_1__8__0_chanx_right_out[4] ;
+ wire \sb_1__8__0_chanx_right_out[5] ;
+ wire \sb_1__8__0_chanx_right_out[6] ;
+ wire \sb_1__8__0_chanx_right_out[7] ;
+ wire \sb_1__8__0_chanx_right_out[8] ;
+ wire \sb_1__8__0_chanx_right_out[9] ;
+ wire \sb_1__8__0_chany_bottom_out[0] ;
+ wire \sb_1__8__0_chany_bottom_out[10] ;
+ wire \sb_1__8__0_chany_bottom_out[11] ;
+ wire \sb_1__8__0_chany_bottom_out[12] ;
+ wire \sb_1__8__0_chany_bottom_out[13] ;
+ wire \sb_1__8__0_chany_bottom_out[14] ;
+ wire \sb_1__8__0_chany_bottom_out[15] ;
+ wire \sb_1__8__0_chany_bottom_out[16] ;
+ wire \sb_1__8__0_chany_bottom_out[17] ;
+ wire \sb_1__8__0_chany_bottom_out[18] ;
+ wire \sb_1__8__0_chany_bottom_out[19] ;
+ wire \sb_1__8__0_chany_bottom_out[1] ;
+ wire \sb_1__8__0_chany_bottom_out[2] ;
+ wire \sb_1__8__0_chany_bottom_out[3] ;
+ wire \sb_1__8__0_chany_bottom_out[4] ;
+ wire \sb_1__8__0_chany_bottom_out[5] ;
+ wire \sb_1__8__0_chany_bottom_out[6] ;
+ wire \sb_1__8__0_chany_bottom_out[7] ;
+ wire \sb_1__8__0_chany_bottom_out[8] ;
+ wire \sb_1__8__0_chany_bottom_out[9] ;
+ wire sb_1__8__1_ccff_tail;
+ wire \sb_1__8__1_chanx_left_out[0] ;
+ wire \sb_1__8__1_chanx_left_out[10] ;
+ wire \sb_1__8__1_chanx_left_out[11] ;
+ wire \sb_1__8__1_chanx_left_out[12] ;
+ wire \sb_1__8__1_chanx_left_out[13] ;
+ wire \sb_1__8__1_chanx_left_out[14] ;
+ wire \sb_1__8__1_chanx_left_out[15] ;
+ wire \sb_1__8__1_chanx_left_out[16] ;
+ wire \sb_1__8__1_chanx_left_out[17] ;
+ wire \sb_1__8__1_chanx_left_out[18] ;
+ wire \sb_1__8__1_chanx_left_out[19] ;
+ wire \sb_1__8__1_chanx_left_out[1] ;
+ wire \sb_1__8__1_chanx_left_out[2] ;
+ wire \sb_1__8__1_chanx_left_out[3] ;
+ wire \sb_1__8__1_chanx_left_out[4] ;
+ wire \sb_1__8__1_chanx_left_out[5] ;
+ wire \sb_1__8__1_chanx_left_out[6] ;
+ wire \sb_1__8__1_chanx_left_out[7] ;
+ wire \sb_1__8__1_chanx_left_out[8] ;
+ wire \sb_1__8__1_chanx_left_out[9] ;
+ wire \sb_1__8__1_chanx_right_out[0] ;
+ wire \sb_1__8__1_chanx_right_out[10] ;
+ wire \sb_1__8__1_chanx_right_out[11] ;
+ wire \sb_1__8__1_chanx_right_out[12] ;
+ wire \sb_1__8__1_chanx_right_out[13] ;
+ wire \sb_1__8__1_chanx_right_out[14] ;
+ wire \sb_1__8__1_chanx_right_out[15] ;
+ wire \sb_1__8__1_chanx_right_out[16] ;
+ wire \sb_1__8__1_chanx_right_out[17] ;
+ wire \sb_1__8__1_chanx_right_out[18] ;
+ wire \sb_1__8__1_chanx_right_out[19] ;
+ wire \sb_1__8__1_chanx_right_out[1] ;
+ wire \sb_1__8__1_chanx_right_out[2] ;
+ wire \sb_1__8__1_chanx_right_out[3] ;
+ wire \sb_1__8__1_chanx_right_out[4] ;
+ wire \sb_1__8__1_chanx_right_out[5] ;
+ wire \sb_1__8__1_chanx_right_out[6] ;
+ wire \sb_1__8__1_chanx_right_out[7] ;
+ wire \sb_1__8__1_chanx_right_out[8] ;
+ wire \sb_1__8__1_chanx_right_out[9] ;
+ wire \sb_1__8__1_chany_bottom_out[0] ;
+ wire \sb_1__8__1_chany_bottom_out[10] ;
+ wire \sb_1__8__1_chany_bottom_out[11] ;
+ wire \sb_1__8__1_chany_bottom_out[12] ;
+ wire \sb_1__8__1_chany_bottom_out[13] ;
+ wire \sb_1__8__1_chany_bottom_out[14] ;
+ wire \sb_1__8__1_chany_bottom_out[15] ;
+ wire \sb_1__8__1_chany_bottom_out[16] ;
+ wire \sb_1__8__1_chany_bottom_out[17] ;
+ wire \sb_1__8__1_chany_bottom_out[18] ;
+ wire \sb_1__8__1_chany_bottom_out[19] ;
+ wire \sb_1__8__1_chany_bottom_out[1] ;
+ wire \sb_1__8__1_chany_bottom_out[2] ;
+ wire \sb_1__8__1_chany_bottom_out[3] ;
+ wire \sb_1__8__1_chany_bottom_out[4] ;
+ wire \sb_1__8__1_chany_bottom_out[5] ;
+ wire \sb_1__8__1_chany_bottom_out[6] ;
+ wire \sb_1__8__1_chany_bottom_out[7] ;
+ wire \sb_1__8__1_chany_bottom_out[8] ;
+ wire \sb_1__8__1_chany_bottom_out[9] ;
+ wire sb_1__8__2_ccff_tail;
+ wire \sb_1__8__2_chanx_left_out[0] ;
+ wire \sb_1__8__2_chanx_left_out[10] ;
+ wire \sb_1__8__2_chanx_left_out[11] ;
+ wire \sb_1__8__2_chanx_left_out[12] ;
+ wire \sb_1__8__2_chanx_left_out[13] ;
+ wire \sb_1__8__2_chanx_left_out[14] ;
+ wire \sb_1__8__2_chanx_left_out[15] ;
+ wire \sb_1__8__2_chanx_left_out[16] ;
+ wire \sb_1__8__2_chanx_left_out[17] ;
+ wire \sb_1__8__2_chanx_left_out[18] ;
+ wire \sb_1__8__2_chanx_left_out[19] ;
+ wire \sb_1__8__2_chanx_left_out[1] ;
+ wire \sb_1__8__2_chanx_left_out[2] ;
+ wire \sb_1__8__2_chanx_left_out[3] ;
+ wire \sb_1__8__2_chanx_left_out[4] ;
+ wire \sb_1__8__2_chanx_left_out[5] ;
+ wire \sb_1__8__2_chanx_left_out[6] ;
+ wire \sb_1__8__2_chanx_left_out[7] ;
+ wire \sb_1__8__2_chanx_left_out[8] ;
+ wire \sb_1__8__2_chanx_left_out[9] ;
+ wire \sb_1__8__2_chanx_right_out[0] ;
+ wire \sb_1__8__2_chanx_right_out[10] ;
+ wire \sb_1__8__2_chanx_right_out[11] ;
+ wire \sb_1__8__2_chanx_right_out[12] ;
+ wire \sb_1__8__2_chanx_right_out[13] ;
+ wire \sb_1__8__2_chanx_right_out[14] ;
+ wire \sb_1__8__2_chanx_right_out[15] ;
+ wire \sb_1__8__2_chanx_right_out[16] ;
+ wire \sb_1__8__2_chanx_right_out[17] ;
+ wire \sb_1__8__2_chanx_right_out[18] ;
+ wire \sb_1__8__2_chanx_right_out[19] ;
+ wire \sb_1__8__2_chanx_right_out[1] ;
+ wire \sb_1__8__2_chanx_right_out[2] ;
+ wire \sb_1__8__2_chanx_right_out[3] ;
+ wire \sb_1__8__2_chanx_right_out[4] ;
+ wire \sb_1__8__2_chanx_right_out[5] ;
+ wire \sb_1__8__2_chanx_right_out[6] ;
+ wire \sb_1__8__2_chanx_right_out[7] ;
+ wire \sb_1__8__2_chanx_right_out[8] ;
+ wire \sb_1__8__2_chanx_right_out[9] ;
+ wire \sb_1__8__2_chany_bottom_out[0] ;
+ wire \sb_1__8__2_chany_bottom_out[10] ;
+ wire \sb_1__8__2_chany_bottom_out[11] ;
+ wire \sb_1__8__2_chany_bottom_out[12] ;
+ wire \sb_1__8__2_chany_bottom_out[13] ;
+ wire \sb_1__8__2_chany_bottom_out[14] ;
+ wire \sb_1__8__2_chany_bottom_out[15] ;
+ wire \sb_1__8__2_chany_bottom_out[16] ;
+ wire \sb_1__8__2_chany_bottom_out[17] ;
+ wire \sb_1__8__2_chany_bottom_out[18] ;
+ wire \sb_1__8__2_chany_bottom_out[19] ;
+ wire \sb_1__8__2_chany_bottom_out[1] ;
+ wire \sb_1__8__2_chany_bottom_out[2] ;
+ wire \sb_1__8__2_chany_bottom_out[3] ;
+ wire \sb_1__8__2_chany_bottom_out[4] ;
+ wire \sb_1__8__2_chany_bottom_out[5] ;
+ wire \sb_1__8__2_chany_bottom_out[6] ;
+ wire \sb_1__8__2_chany_bottom_out[7] ;
+ wire \sb_1__8__2_chany_bottom_out[8] ;
+ wire \sb_1__8__2_chany_bottom_out[9] ;
+ wire sb_1__8__3_ccff_tail;
+ wire \sb_1__8__3_chanx_left_out[0] ;
+ wire \sb_1__8__3_chanx_left_out[10] ;
+ wire \sb_1__8__3_chanx_left_out[11] ;
+ wire \sb_1__8__3_chanx_left_out[12] ;
+ wire \sb_1__8__3_chanx_left_out[13] ;
+ wire \sb_1__8__3_chanx_left_out[14] ;
+ wire \sb_1__8__3_chanx_left_out[15] ;
+ wire \sb_1__8__3_chanx_left_out[16] ;
+ wire \sb_1__8__3_chanx_left_out[17] ;
+ wire \sb_1__8__3_chanx_left_out[18] ;
+ wire \sb_1__8__3_chanx_left_out[19] ;
+ wire \sb_1__8__3_chanx_left_out[1] ;
+ wire \sb_1__8__3_chanx_left_out[2] ;
+ wire \sb_1__8__3_chanx_left_out[3] ;
+ wire \sb_1__8__3_chanx_left_out[4] ;
+ wire \sb_1__8__3_chanx_left_out[5] ;
+ wire \sb_1__8__3_chanx_left_out[6] ;
+ wire \sb_1__8__3_chanx_left_out[7] ;
+ wire \sb_1__8__3_chanx_left_out[8] ;
+ wire \sb_1__8__3_chanx_left_out[9] ;
+ wire \sb_1__8__3_chanx_right_out[0] ;
+ wire \sb_1__8__3_chanx_right_out[10] ;
+ wire \sb_1__8__3_chanx_right_out[11] ;
+ wire \sb_1__8__3_chanx_right_out[12] ;
+ wire \sb_1__8__3_chanx_right_out[13] ;
+ wire \sb_1__8__3_chanx_right_out[14] ;
+ wire \sb_1__8__3_chanx_right_out[15] ;
+ wire \sb_1__8__3_chanx_right_out[16] ;
+ wire \sb_1__8__3_chanx_right_out[17] ;
+ wire \sb_1__8__3_chanx_right_out[18] ;
+ wire \sb_1__8__3_chanx_right_out[19] ;
+ wire \sb_1__8__3_chanx_right_out[1] ;
+ wire \sb_1__8__3_chanx_right_out[2] ;
+ wire \sb_1__8__3_chanx_right_out[3] ;
+ wire \sb_1__8__3_chanx_right_out[4] ;
+ wire \sb_1__8__3_chanx_right_out[5] ;
+ wire \sb_1__8__3_chanx_right_out[6] ;
+ wire \sb_1__8__3_chanx_right_out[7] ;
+ wire \sb_1__8__3_chanx_right_out[8] ;
+ wire \sb_1__8__3_chanx_right_out[9] ;
+ wire \sb_1__8__3_chany_bottom_out[0] ;
+ wire \sb_1__8__3_chany_bottom_out[10] ;
+ wire \sb_1__8__3_chany_bottom_out[11] ;
+ wire \sb_1__8__3_chany_bottom_out[12] ;
+ wire \sb_1__8__3_chany_bottom_out[13] ;
+ wire \sb_1__8__3_chany_bottom_out[14] ;
+ wire \sb_1__8__3_chany_bottom_out[15] ;
+ wire \sb_1__8__3_chany_bottom_out[16] ;
+ wire \sb_1__8__3_chany_bottom_out[17] ;
+ wire \sb_1__8__3_chany_bottom_out[18] ;
+ wire \sb_1__8__3_chany_bottom_out[19] ;
+ wire \sb_1__8__3_chany_bottom_out[1] ;
+ wire \sb_1__8__3_chany_bottom_out[2] ;
+ wire \sb_1__8__3_chany_bottom_out[3] ;
+ wire \sb_1__8__3_chany_bottom_out[4] ;
+ wire \sb_1__8__3_chany_bottom_out[5] ;
+ wire \sb_1__8__3_chany_bottom_out[6] ;
+ wire \sb_1__8__3_chany_bottom_out[7] ;
+ wire \sb_1__8__3_chany_bottom_out[8] ;
+ wire \sb_1__8__3_chany_bottom_out[9] ;
+ wire sb_1__8__4_ccff_tail;
+ wire \sb_1__8__4_chanx_left_out[0] ;
+ wire \sb_1__8__4_chanx_left_out[10] ;
+ wire \sb_1__8__4_chanx_left_out[11] ;
+ wire \sb_1__8__4_chanx_left_out[12] ;
+ wire \sb_1__8__4_chanx_left_out[13] ;
+ wire \sb_1__8__4_chanx_left_out[14] ;
+ wire \sb_1__8__4_chanx_left_out[15] ;
+ wire \sb_1__8__4_chanx_left_out[16] ;
+ wire \sb_1__8__4_chanx_left_out[17] ;
+ wire \sb_1__8__4_chanx_left_out[18] ;
+ wire \sb_1__8__4_chanx_left_out[19] ;
+ wire \sb_1__8__4_chanx_left_out[1] ;
+ wire \sb_1__8__4_chanx_left_out[2] ;
+ wire \sb_1__8__4_chanx_left_out[3] ;
+ wire \sb_1__8__4_chanx_left_out[4] ;
+ wire \sb_1__8__4_chanx_left_out[5] ;
+ wire \sb_1__8__4_chanx_left_out[6] ;
+ wire \sb_1__8__4_chanx_left_out[7] ;
+ wire \sb_1__8__4_chanx_left_out[8] ;
+ wire \sb_1__8__4_chanx_left_out[9] ;
+ wire \sb_1__8__4_chanx_right_out[0] ;
+ wire \sb_1__8__4_chanx_right_out[10] ;
+ wire \sb_1__8__4_chanx_right_out[11] ;
+ wire \sb_1__8__4_chanx_right_out[12] ;
+ wire \sb_1__8__4_chanx_right_out[13] ;
+ wire \sb_1__8__4_chanx_right_out[14] ;
+ wire \sb_1__8__4_chanx_right_out[15] ;
+ wire \sb_1__8__4_chanx_right_out[16] ;
+ wire \sb_1__8__4_chanx_right_out[17] ;
+ wire \sb_1__8__4_chanx_right_out[18] ;
+ wire \sb_1__8__4_chanx_right_out[19] ;
+ wire \sb_1__8__4_chanx_right_out[1] ;
+ wire \sb_1__8__4_chanx_right_out[2] ;
+ wire \sb_1__8__4_chanx_right_out[3] ;
+ wire \sb_1__8__4_chanx_right_out[4] ;
+ wire \sb_1__8__4_chanx_right_out[5] ;
+ wire \sb_1__8__4_chanx_right_out[6] ;
+ wire \sb_1__8__4_chanx_right_out[7] ;
+ wire \sb_1__8__4_chanx_right_out[8] ;
+ wire \sb_1__8__4_chanx_right_out[9] ;
+ wire \sb_1__8__4_chany_bottom_out[0] ;
+ wire \sb_1__8__4_chany_bottom_out[10] ;
+ wire \sb_1__8__4_chany_bottom_out[11] ;
+ wire \sb_1__8__4_chany_bottom_out[12] ;
+ wire \sb_1__8__4_chany_bottom_out[13] ;
+ wire \sb_1__8__4_chany_bottom_out[14] ;
+ wire \sb_1__8__4_chany_bottom_out[15] ;
+ wire \sb_1__8__4_chany_bottom_out[16] ;
+ wire \sb_1__8__4_chany_bottom_out[17] ;
+ wire \sb_1__8__4_chany_bottom_out[18] ;
+ wire \sb_1__8__4_chany_bottom_out[19] ;
+ wire \sb_1__8__4_chany_bottom_out[1] ;
+ wire \sb_1__8__4_chany_bottom_out[2] ;
+ wire \sb_1__8__4_chany_bottom_out[3] ;
+ wire \sb_1__8__4_chany_bottom_out[4] ;
+ wire \sb_1__8__4_chany_bottom_out[5] ;
+ wire \sb_1__8__4_chany_bottom_out[6] ;
+ wire \sb_1__8__4_chany_bottom_out[7] ;
+ wire \sb_1__8__4_chany_bottom_out[8] ;
+ wire \sb_1__8__4_chany_bottom_out[9] ;
+ wire sb_1__8__5_ccff_tail;
+ wire \sb_1__8__5_chanx_left_out[0] ;
+ wire \sb_1__8__5_chanx_left_out[10] ;
+ wire \sb_1__8__5_chanx_left_out[11] ;
+ wire \sb_1__8__5_chanx_left_out[12] ;
+ wire \sb_1__8__5_chanx_left_out[13] ;
+ wire \sb_1__8__5_chanx_left_out[14] ;
+ wire \sb_1__8__5_chanx_left_out[15] ;
+ wire \sb_1__8__5_chanx_left_out[16] ;
+ wire \sb_1__8__5_chanx_left_out[17] ;
+ wire \sb_1__8__5_chanx_left_out[18] ;
+ wire \sb_1__8__5_chanx_left_out[19] ;
+ wire \sb_1__8__5_chanx_left_out[1] ;
+ wire \sb_1__8__5_chanx_left_out[2] ;
+ wire \sb_1__8__5_chanx_left_out[3] ;
+ wire \sb_1__8__5_chanx_left_out[4] ;
+ wire \sb_1__8__5_chanx_left_out[5] ;
+ wire \sb_1__8__5_chanx_left_out[6] ;
+ wire \sb_1__8__5_chanx_left_out[7] ;
+ wire \sb_1__8__5_chanx_left_out[8] ;
+ wire \sb_1__8__5_chanx_left_out[9] ;
+ wire \sb_1__8__5_chanx_right_out[0] ;
+ wire \sb_1__8__5_chanx_right_out[10] ;
+ wire \sb_1__8__5_chanx_right_out[11] ;
+ wire \sb_1__8__5_chanx_right_out[12] ;
+ wire \sb_1__8__5_chanx_right_out[13] ;
+ wire \sb_1__8__5_chanx_right_out[14] ;
+ wire \sb_1__8__5_chanx_right_out[15] ;
+ wire \sb_1__8__5_chanx_right_out[16] ;
+ wire \sb_1__8__5_chanx_right_out[17] ;
+ wire \sb_1__8__5_chanx_right_out[18] ;
+ wire \sb_1__8__5_chanx_right_out[19] ;
+ wire \sb_1__8__5_chanx_right_out[1] ;
+ wire \sb_1__8__5_chanx_right_out[2] ;
+ wire \sb_1__8__5_chanx_right_out[3] ;
+ wire \sb_1__8__5_chanx_right_out[4] ;
+ wire \sb_1__8__5_chanx_right_out[5] ;
+ wire \sb_1__8__5_chanx_right_out[6] ;
+ wire \sb_1__8__5_chanx_right_out[7] ;
+ wire \sb_1__8__5_chanx_right_out[8] ;
+ wire \sb_1__8__5_chanx_right_out[9] ;
+ wire \sb_1__8__5_chany_bottom_out[0] ;
+ wire \sb_1__8__5_chany_bottom_out[10] ;
+ wire \sb_1__8__5_chany_bottom_out[11] ;
+ wire \sb_1__8__5_chany_bottom_out[12] ;
+ wire \sb_1__8__5_chany_bottom_out[13] ;
+ wire \sb_1__8__5_chany_bottom_out[14] ;
+ wire \sb_1__8__5_chany_bottom_out[15] ;
+ wire \sb_1__8__5_chany_bottom_out[16] ;
+ wire \sb_1__8__5_chany_bottom_out[17] ;
+ wire \sb_1__8__5_chany_bottom_out[18] ;
+ wire \sb_1__8__5_chany_bottom_out[19] ;
+ wire \sb_1__8__5_chany_bottom_out[1] ;
+ wire \sb_1__8__5_chany_bottom_out[2] ;
+ wire \sb_1__8__5_chany_bottom_out[3] ;
+ wire \sb_1__8__5_chany_bottom_out[4] ;
+ wire \sb_1__8__5_chany_bottom_out[5] ;
+ wire \sb_1__8__5_chany_bottom_out[6] ;
+ wire \sb_1__8__5_chany_bottom_out[7] ;
+ wire \sb_1__8__5_chany_bottom_out[8] ;
+ wire \sb_1__8__5_chany_bottom_out[9] ;
+ wire sb_1__8__6_ccff_tail;
+ wire \sb_1__8__6_chanx_left_out[0] ;
+ wire \sb_1__8__6_chanx_left_out[10] ;
+ wire \sb_1__8__6_chanx_left_out[11] ;
+ wire \sb_1__8__6_chanx_left_out[12] ;
+ wire \sb_1__8__6_chanx_left_out[13] ;
+ wire \sb_1__8__6_chanx_left_out[14] ;
+ wire \sb_1__8__6_chanx_left_out[15] ;
+ wire \sb_1__8__6_chanx_left_out[16] ;
+ wire \sb_1__8__6_chanx_left_out[17] ;
+ wire \sb_1__8__6_chanx_left_out[18] ;
+ wire \sb_1__8__6_chanx_left_out[19] ;
+ wire \sb_1__8__6_chanx_left_out[1] ;
+ wire \sb_1__8__6_chanx_left_out[2] ;
+ wire \sb_1__8__6_chanx_left_out[3] ;
+ wire \sb_1__8__6_chanx_left_out[4] ;
+ wire \sb_1__8__6_chanx_left_out[5] ;
+ wire \sb_1__8__6_chanx_left_out[6] ;
+ wire \sb_1__8__6_chanx_left_out[7] ;
+ wire \sb_1__8__6_chanx_left_out[8] ;
+ wire \sb_1__8__6_chanx_left_out[9] ;
+ wire \sb_1__8__6_chanx_right_out[0] ;
+ wire \sb_1__8__6_chanx_right_out[10] ;
+ wire \sb_1__8__6_chanx_right_out[11] ;
+ wire \sb_1__8__6_chanx_right_out[12] ;
+ wire \sb_1__8__6_chanx_right_out[13] ;
+ wire \sb_1__8__6_chanx_right_out[14] ;
+ wire \sb_1__8__6_chanx_right_out[15] ;
+ wire \sb_1__8__6_chanx_right_out[16] ;
+ wire \sb_1__8__6_chanx_right_out[17] ;
+ wire \sb_1__8__6_chanx_right_out[18] ;
+ wire \sb_1__8__6_chanx_right_out[19] ;
+ wire \sb_1__8__6_chanx_right_out[1] ;
+ wire \sb_1__8__6_chanx_right_out[2] ;
+ wire \sb_1__8__6_chanx_right_out[3] ;
+ wire \sb_1__8__6_chanx_right_out[4] ;
+ wire \sb_1__8__6_chanx_right_out[5] ;
+ wire \sb_1__8__6_chanx_right_out[6] ;
+ wire \sb_1__8__6_chanx_right_out[7] ;
+ wire \sb_1__8__6_chanx_right_out[8] ;
+ wire \sb_1__8__6_chanx_right_out[9] ;
+ wire \sb_1__8__6_chany_bottom_out[0] ;
+ wire \sb_1__8__6_chany_bottom_out[10] ;
+ wire \sb_1__8__6_chany_bottom_out[11] ;
+ wire \sb_1__8__6_chany_bottom_out[12] ;
+ wire \sb_1__8__6_chany_bottom_out[13] ;
+ wire \sb_1__8__6_chany_bottom_out[14] ;
+ wire \sb_1__8__6_chany_bottom_out[15] ;
+ wire \sb_1__8__6_chany_bottom_out[16] ;
+ wire \sb_1__8__6_chany_bottom_out[17] ;
+ wire \sb_1__8__6_chany_bottom_out[18] ;
+ wire \sb_1__8__6_chany_bottom_out[19] ;
+ wire \sb_1__8__6_chany_bottom_out[1] ;
+ wire \sb_1__8__6_chany_bottom_out[2] ;
+ wire \sb_1__8__6_chany_bottom_out[3] ;
+ wire \sb_1__8__6_chany_bottom_out[4] ;
+ wire \sb_1__8__6_chany_bottom_out[5] ;
+ wire \sb_1__8__6_chany_bottom_out[6] ;
+ wire \sb_1__8__6_chany_bottom_out[7] ;
+ wire \sb_1__8__6_chany_bottom_out[8] ;
+ wire \sb_1__8__6_chany_bottom_out[9] ;
+ wire sb_8__0__0_ccff_tail;
+ wire \sb_8__0__0_chanx_left_out[0] ;
+ wire \sb_8__0__0_chanx_left_out[10] ;
+ wire \sb_8__0__0_chanx_left_out[11] ;
+ wire \sb_8__0__0_chanx_left_out[12] ;
+ wire \sb_8__0__0_chanx_left_out[13] ;
+ wire \sb_8__0__0_chanx_left_out[14] ;
+ wire \sb_8__0__0_chanx_left_out[15] ;
+ wire \sb_8__0__0_chanx_left_out[16] ;
+ wire \sb_8__0__0_chanx_left_out[17] ;
+ wire \sb_8__0__0_chanx_left_out[18] ;
+ wire \sb_8__0__0_chanx_left_out[19] ;
+ wire \sb_8__0__0_chanx_left_out[1] ;
+ wire \sb_8__0__0_chanx_left_out[2] ;
+ wire \sb_8__0__0_chanx_left_out[3] ;
+ wire \sb_8__0__0_chanx_left_out[4] ;
+ wire \sb_8__0__0_chanx_left_out[5] ;
+ wire \sb_8__0__0_chanx_left_out[6] ;
+ wire \sb_8__0__0_chanx_left_out[7] ;
+ wire \sb_8__0__0_chanx_left_out[8] ;
+ wire \sb_8__0__0_chanx_left_out[9] ;
+ wire \sb_8__0__0_chany_top_out[0] ;
+ wire \sb_8__0__0_chany_top_out[10] ;
+ wire \sb_8__0__0_chany_top_out[11] ;
+ wire \sb_8__0__0_chany_top_out[12] ;
+ wire \sb_8__0__0_chany_top_out[13] ;
+ wire \sb_8__0__0_chany_top_out[14] ;
+ wire \sb_8__0__0_chany_top_out[15] ;
+ wire \sb_8__0__0_chany_top_out[16] ;
+ wire \sb_8__0__0_chany_top_out[17] ;
+ wire \sb_8__0__0_chany_top_out[18] ;
+ wire \sb_8__0__0_chany_top_out[19] ;
+ wire \sb_8__0__0_chany_top_out[1] ;
+ wire \sb_8__0__0_chany_top_out[2] ;
+ wire \sb_8__0__0_chany_top_out[3] ;
+ wire \sb_8__0__0_chany_top_out[4] ;
+ wire \sb_8__0__0_chany_top_out[5] ;
+ wire \sb_8__0__0_chany_top_out[6] ;
+ wire \sb_8__0__0_chany_top_out[7] ;
+ wire \sb_8__0__0_chany_top_out[8] ;
+ wire \sb_8__0__0_chany_top_out[9] ;
+ wire sb_8__1__0_ccff_tail;
+ wire \sb_8__1__0_chanx_left_out[0] ;
+ wire \sb_8__1__0_chanx_left_out[10] ;
+ wire \sb_8__1__0_chanx_left_out[11] ;
+ wire \sb_8__1__0_chanx_left_out[12] ;
+ wire \sb_8__1__0_chanx_left_out[13] ;
+ wire \sb_8__1__0_chanx_left_out[14] ;
+ wire \sb_8__1__0_chanx_left_out[15] ;
+ wire \sb_8__1__0_chanx_left_out[16] ;
+ wire \sb_8__1__0_chanx_left_out[17] ;
+ wire \sb_8__1__0_chanx_left_out[18] ;
+ wire \sb_8__1__0_chanx_left_out[19] ;
+ wire \sb_8__1__0_chanx_left_out[1] ;
+ wire \sb_8__1__0_chanx_left_out[2] ;
+ wire \sb_8__1__0_chanx_left_out[3] ;
+ wire \sb_8__1__0_chanx_left_out[4] ;
+ wire \sb_8__1__0_chanx_left_out[5] ;
+ wire \sb_8__1__0_chanx_left_out[6] ;
+ wire \sb_8__1__0_chanx_left_out[7] ;
+ wire \sb_8__1__0_chanx_left_out[8] ;
+ wire \sb_8__1__0_chanx_left_out[9] ;
+ wire \sb_8__1__0_chany_bottom_out[0] ;
+ wire \sb_8__1__0_chany_bottom_out[10] ;
+ wire \sb_8__1__0_chany_bottom_out[11] ;
+ wire \sb_8__1__0_chany_bottom_out[12] ;
+ wire \sb_8__1__0_chany_bottom_out[13] ;
+ wire \sb_8__1__0_chany_bottom_out[14] ;
+ wire \sb_8__1__0_chany_bottom_out[15] ;
+ wire \sb_8__1__0_chany_bottom_out[16] ;
+ wire \sb_8__1__0_chany_bottom_out[17] ;
+ wire \sb_8__1__0_chany_bottom_out[18] ;
+ wire \sb_8__1__0_chany_bottom_out[19] ;
+ wire \sb_8__1__0_chany_bottom_out[1] ;
+ wire \sb_8__1__0_chany_bottom_out[2] ;
+ wire \sb_8__1__0_chany_bottom_out[3] ;
+ wire \sb_8__1__0_chany_bottom_out[4] ;
+ wire \sb_8__1__0_chany_bottom_out[5] ;
+ wire \sb_8__1__0_chany_bottom_out[6] ;
+ wire \sb_8__1__0_chany_bottom_out[7] ;
+ wire \sb_8__1__0_chany_bottom_out[8] ;
+ wire \sb_8__1__0_chany_bottom_out[9] ;
+ wire \sb_8__1__0_chany_top_out[0] ;
+ wire \sb_8__1__0_chany_top_out[10] ;
+ wire \sb_8__1__0_chany_top_out[11] ;
+ wire \sb_8__1__0_chany_top_out[12] ;
+ wire \sb_8__1__0_chany_top_out[13] ;
+ wire \sb_8__1__0_chany_top_out[14] ;
+ wire \sb_8__1__0_chany_top_out[15] ;
+ wire \sb_8__1__0_chany_top_out[16] ;
+ wire \sb_8__1__0_chany_top_out[17] ;
+ wire \sb_8__1__0_chany_top_out[18] ;
+ wire \sb_8__1__0_chany_top_out[19] ;
+ wire \sb_8__1__0_chany_top_out[1] ;
+ wire \sb_8__1__0_chany_top_out[2] ;
+ wire \sb_8__1__0_chany_top_out[3] ;
+ wire \sb_8__1__0_chany_top_out[4] ;
+ wire \sb_8__1__0_chany_top_out[5] ;
+ wire \sb_8__1__0_chany_top_out[6] ;
+ wire \sb_8__1__0_chany_top_out[7] ;
+ wire \sb_8__1__0_chany_top_out[8] ;
+ wire \sb_8__1__0_chany_top_out[9] ;
+ wire sb_8__1__1_ccff_tail;
+ wire \sb_8__1__1_chanx_left_out[0] ;
+ wire \sb_8__1__1_chanx_left_out[10] ;
+ wire \sb_8__1__1_chanx_left_out[11] ;
+ wire \sb_8__1__1_chanx_left_out[12] ;
+ wire \sb_8__1__1_chanx_left_out[13] ;
+ wire \sb_8__1__1_chanx_left_out[14] ;
+ wire \sb_8__1__1_chanx_left_out[15] ;
+ wire \sb_8__1__1_chanx_left_out[16] ;
+ wire \sb_8__1__1_chanx_left_out[17] ;
+ wire \sb_8__1__1_chanx_left_out[18] ;
+ wire \sb_8__1__1_chanx_left_out[19] ;
+ wire \sb_8__1__1_chanx_left_out[1] ;
+ wire \sb_8__1__1_chanx_left_out[2] ;
+ wire \sb_8__1__1_chanx_left_out[3] ;
+ wire \sb_8__1__1_chanx_left_out[4] ;
+ wire \sb_8__1__1_chanx_left_out[5] ;
+ wire \sb_8__1__1_chanx_left_out[6] ;
+ wire \sb_8__1__1_chanx_left_out[7] ;
+ wire \sb_8__1__1_chanx_left_out[8] ;
+ wire \sb_8__1__1_chanx_left_out[9] ;
+ wire \sb_8__1__1_chany_bottom_out[0] ;
+ wire \sb_8__1__1_chany_bottom_out[10] ;
+ wire \sb_8__1__1_chany_bottom_out[11] ;
+ wire \sb_8__1__1_chany_bottom_out[12] ;
+ wire \sb_8__1__1_chany_bottom_out[13] ;
+ wire \sb_8__1__1_chany_bottom_out[14] ;
+ wire \sb_8__1__1_chany_bottom_out[15] ;
+ wire \sb_8__1__1_chany_bottom_out[16] ;
+ wire \sb_8__1__1_chany_bottom_out[17] ;
+ wire \sb_8__1__1_chany_bottom_out[18] ;
+ wire \sb_8__1__1_chany_bottom_out[19] ;
+ wire \sb_8__1__1_chany_bottom_out[1] ;
+ wire \sb_8__1__1_chany_bottom_out[2] ;
+ wire \sb_8__1__1_chany_bottom_out[3] ;
+ wire \sb_8__1__1_chany_bottom_out[4] ;
+ wire \sb_8__1__1_chany_bottom_out[5] ;
+ wire \sb_8__1__1_chany_bottom_out[6] ;
+ wire \sb_8__1__1_chany_bottom_out[7] ;
+ wire \sb_8__1__1_chany_bottom_out[8] ;
+ wire \sb_8__1__1_chany_bottom_out[9] ;
+ wire \sb_8__1__1_chany_top_out[0] ;
+ wire \sb_8__1__1_chany_top_out[10] ;
+ wire \sb_8__1__1_chany_top_out[11] ;
+ wire \sb_8__1__1_chany_top_out[12] ;
+ wire \sb_8__1__1_chany_top_out[13] ;
+ wire \sb_8__1__1_chany_top_out[14] ;
+ wire \sb_8__1__1_chany_top_out[15] ;
+ wire \sb_8__1__1_chany_top_out[16] ;
+ wire \sb_8__1__1_chany_top_out[17] ;
+ wire \sb_8__1__1_chany_top_out[18] ;
+ wire \sb_8__1__1_chany_top_out[19] ;
+ wire \sb_8__1__1_chany_top_out[1] ;
+ wire \sb_8__1__1_chany_top_out[2] ;
+ wire \sb_8__1__1_chany_top_out[3] ;
+ wire \sb_8__1__1_chany_top_out[4] ;
+ wire \sb_8__1__1_chany_top_out[5] ;
+ wire \sb_8__1__1_chany_top_out[6] ;
+ wire \sb_8__1__1_chany_top_out[7] ;
+ wire \sb_8__1__1_chany_top_out[8] ;
+ wire \sb_8__1__1_chany_top_out[9] ;
+ wire sb_8__1__2_ccff_tail;
+ wire \sb_8__1__2_chanx_left_out[0] ;
+ wire \sb_8__1__2_chanx_left_out[10] ;
+ wire \sb_8__1__2_chanx_left_out[11] ;
+ wire \sb_8__1__2_chanx_left_out[12] ;
+ wire \sb_8__1__2_chanx_left_out[13] ;
+ wire \sb_8__1__2_chanx_left_out[14] ;
+ wire \sb_8__1__2_chanx_left_out[15] ;
+ wire \sb_8__1__2_chanx_left_out[16] ;
+ wire \sb_8__1__2_chanx_left_out[17] ;
+ wire \sb_8__1__2_chanx_left_out[18] ;
+ wire \sb_8__1__2_chanx_left_out[19] ;
+ wire \sb_8__1__2_chanx_left_out[1] ;
+ wire \sb_8__1__2_chanx_left_out[2] ;
+ wire \sb_8__1__2_chanx_left_out[3] ;
+ wire \sb_8__1__2_chanx_left_out[4] ;
+ wire \sb_8__1__2_chanx_left_out[5] ;
+ wire \sb_8__1__2_chanx_left_out[6] ;
+ wire \sb_8__1__2_chanx_left_out[7] ;
+ wire \sb_8__1__2_chanx_left_out[8] ;
+ wire \sb_8__1__2_chanx_left_out[9] ;
+ wire \sb_8__1__2_chany_bottom_out[0] ;
+ wire \sb_8__1__2_chany_bottom_out[10] ;
+ wire \sb_8__1__2_chany_bottom_out[11] ;
+ wire \sb_8__1__2_chany_bottom_out[12] ;
+ wire \sb_8__1__2_chany_bottom_out[13] ;
+ wire \sb_8__1__2_chany_bottom_out[14] ;
+ wire \sb_8__1__2_chany_bottom_out[15] ;
+ wire \sb_8__1__2_chany_bottom_out[16] ;
+ wire \sb_8__1__2_chany_bottom_out[17] ;
+ wire \sb_8__1__2_chany_bottom_out[18] ;
+ wire \sb_8__1__2_chany_bottom_out[19] ;
+ wire \sb_8__1__2_chany_bottom_out[1] ;
+ wire \sb_8__1__2_chany_bottom_out[2] ;
+ wire \sb_8__1__2_chany_bottom_out[3] ;
+ wire \sb_8__1__2_chany_bottom_out[4] ;
+ wire \sb_8__1__2_chany_bottom_out[5] ;
+ wire \sb_8__1__2_chany_bottom_out[6] ;
+ wire \sb_8__1__2_chany_bottom_out[7] ;
+ wire \sb_8__1__2_chany_bottom_out[8] ;
+ wire \sb_8__1__2_chany_bottom_out[9] ;
+ wire \sb_8__1__2_chany_top_out[0] ;
+ wire \sb_8__1__2_chany_top_out[10] ;
+ wire \sb_8__1__2_chany_top_out[11] ;
+ wire \sb_8__1__2_chany_top_out[12] ;
+ wire \sb_8__1__2_chany_top_out[13] ;
+ wire \sb_8__1__2_chany_top_out[14] ;
+ wire \sb_8__1__2_chany_top_out[15] ;
+ wire \sb_8__1__2_chany_top_out[16] ;
+ wire \sb_8__1__2_chany_top_out[17] ;
+ wire \sb_8__1__2_chany_top_out[18] ;
+ wire \sb_8__1__2_chany_top_out[19] ;
+ wire \sb_8__1__2_chany_top_out[1] ;
+ wire \sb_8__1__2_chany_top_out[2] ;
+ wire \sb_8__1__2_chany_top_out[3] ;
+ wire \sb_8__1__2_chany_top_out[4] ;
+ wire \sb_8__1__2_chany_top_out[5] ;
+ wire \sb_8__1__2_chany_top_out[6] ;
+ wire \sb_8__1__2_chany_top_out[7] ;
+ wire \sb_8__1__2_chany_top_out[8] ;
+ wire \sb_8__1__2_chany_top_out[9] ;
+ wire sb_8__1__3_ccff_tail;
+ wire \sb_8__1__3_chanx_left_out[0] ;
+ wire \sb_8__1__3_chanx_left_out[10] ;
+ wire \sb_8__1__3_chanx_left_out[11] ;
+ wire \sb_8__1__3_chanx_left_out[12] ;
+ wire \sb_8__1__3_chanx_left_out[13] ;
+ wire \sb_8__1__3_chanx_left_out[14] ;
+ wire \sb_8__1__3_chanx_left_out[15] ;
+ wire \sb_8__1__3_chanx_left_out[16] ;
+ wire \sb_8__1__3_chanx_left_out[17] ;
+ wire \sb_8__1__3_chanx_left_out[18] ;
+ wire \sb_8__1__3_chanx_left_out[19] ;
+ wire \sb_8__1__3_chanx_left_out[1] ;
+ wire \sb_8__1__3_chanx_left_out[2] ;
+ wire \sb_8__1__3_chanx_left_out[3] ;
+ wire \sb_8__1__3_chanx_left_out[4] ;
+ wire \sb_8__1__3_chanx_left_out[5] ;
+ wire \sb_8__1__3_chanx_left_out[6] ;
+ wire \sb_8__1__3_chanx_left_out[7] ;
+ wire \sb_8__1__3_chanx_left_out[8] ;
+ wire \sb_8__1__3_chanx_left_out[9] ;
+ wire \sb_8__1__3_chany_bottom_out[0] ;
+ wire \sb_8__1__3_chany_bottom_out[10] ;
+ wire \sb_8__1__3_chany_bottom_out[11] ;
+ wire \sb_8__1__3_chany_bottom_out[12] ;
+ wire \sb_8__1__3_chany_bottom_out[13] ;
+ wire \sb_8__1__3_chany_bottom_out[14] ;
+ wire \sb_8__1__3_chany_bottom_out[15] ;
+ wire \sb_8__1__3_chany_bottom_out[16] ;
+ wire \sb_8__1__3_chany_bottom_out[17] ;
+ wire \sb_8__1__3_chany_bottom_out[18] ;
+ wire \sb_8__1__3_chany_bottom_out[19] ;
+ wire \sb_8__1__3_chany_bottom_out[1] ;
+ wire \sb_8__1__3_chany_bottom_out[2] ;
+ wire \sb_8__1__3_chany_bottom_out[3] ;
+ wire \sb_8__1__3_chany_bottom_out[4] ;
+ wire \sb_8__1__3_chany_bottom_out[5] ;
+ wire \sb_8__1__3_chany_bottom_out[6] ;
+ wire \sb_8__1__3_chany_bottom_out[7] ;
+ wire \sb_8__1__3_chany_bottom_out[8] ;
+ wire \sb_8__1__3_chany_bottom_out[9] ;
+ wire \sb_8__1__3_chany_top_out[0] ;
+ wire \sb_8__1__3_chany_top_out[10] ;
+ wire \sb_8__1__3_chany_top_out[11] ;
+ wire \sb_8__1__3_chany_top_out[12] ;
+ wire \sb_8__1__3_chany_top_out[13] ;
+ wire \sb_8__1__3_chany_top_out[14] ;
+ wire \sb_8__1__3_chany_top_out[15] ;
+ wire \sb_8__1__3_chany_top_out[16] ;
+ wire \sb_8__1__3_chany_top_out[17] ;
+ wire \sb_8__1__3_chany_top_out[18] ;
+ wire \sb_8__1__3_chany_top_out[19] ;
+ wire \sb_8__1__3_chany_top_out[1] ;
+ wire \sb_8__1__3_chany_top_out[2] ;
+ wire \sb_8__1__3_chany_top_out[3] ;
+ wire \sb_8__1__3_chany_top_out[4] ;
+ wire \sb_8__1__3_chany_top_out[5] ;
+ wire \sb_8__1__3_chany_top_out[6] ;
+ wire \sb_8__1__3_chany_top_out[7] ;
+ wire \sb_8__1__3_chany_top_out[8] ;
+ wire \sb_8__1__3_chany_top_out[9] ;
+ wire sb_8__1__4_ccff_tail;
+ wire \sb_8__1__4_chanx_left_out[0] ;
+ wire \sb_8__1__4_chanx_left_out[10] ;
+ wire \sb_8__1__4_chanx_left_out[11] ;
+ wire \sb_8__1__4_chanx_left_out[12] ;
+ wire \sb_8__1__4_chanx_left_out[13] ;
+ wire \sb_8__1__4_chanx_left_out[14] ;
+ wire \sb_8__1__4_chanx_left_out[15] ;
+ wire \sb_8__1__4_chanx_left_out[16] ;
+ wire \sb_8__1__4_chanx_left_out[17] ;
+ wire \sb_8__1__4_chanx_left_out[18] ;
+ wire \sb_8__1__4_chanx_left_out[19] ;
+ wire \sb_8__1__4_chanx_left_out[1] ;
+ wire \sb_8__1__4_chanx_left_out[2] ;
+ wire \sb_8__1__4_chanx_left_out[3] ;
+ wire \sb_8__1__4_chanx_left_out[4] ;
+ wire \sb_8__1__4_chanx_left_out[5] ;
+ wire \sb_8__1__4_chanx_left_out[6] ;
+ wire \sb_8__1__4_chanx_left_out[7] ;
+ wire \sb_8__1__4_chanx_left_out[8] ;
+ wire \sb_8__1__4_chanx_left_out[9] ;
+ wire \sb_8__1__4_chany_bottom_out[0] ;
+ wire \sb_8__1__4_chany_bottom_out[10] ;
+ wire \sb_8__1__4_chany_bottom_out[11] ;
+ wire \sb_8__1__4_chany_bottom_out[12] ;
+ wire \sb_8__1__4_chany_bottom_out[13] ;
+ wire \sb_8__1__4_chany_bottom_out[14] ;
+ wire \sb_8__1__4_chany_bottom_out[15] ;
+ wire \sb_8__1__4_chany_bottom_out[16] ;
+ wire \sb_8__1__4_chany_bottom_out[17] ;
+ wire \sb_8__1__4_chany_bottom_out[18] ;
+ wire \sb_8__1__4_chany_bottom_out[19] ;
+ wire \sb_8__1__4_chany_bottom_out[1] ;
+ wire \sb_8__1__4_chany_bottom_out[2] ;
+ wire \sb_8__1__4_chany_bottom_out[3] ;
+ wire \sb_8__1__4_chany_bottom_out[4] ;
+ wire \sb_8__1__4_chany_bottom_out[5] ;
+ wire \sb_8__1__4_chany_bottom_out[6] ;
+ wire \sb_8__1__4_chany_bottom_out[7] ;
+ wire \sb_8__1__4_chany_bottom_out[8] ;
+ wire \sb_8__1__4_chany_bottom_out[9] ;
+ wire \sb_8__1__4_chany_top_out[0] ;
+ wire \sb_8__1__4_chany_top_out[10] ;
+ wire \sb_8__1__4_chany_top_out[11] ;
+ wire \sb_8__1__4_chany_top_out[12] ;
+ wire \sb_8__1__4_chany_top_out[13] ;
+ wire \sb_8__1__4_chany_top_out[14] ;
+ wire \sb_8__1__4_chany_top_out[15] ;
+ wire \sb_8__1__4_chany_top_out[16] ;
+ wire \sb_8__1__4_chany_top_out[17] ;
+ wire \sb_8__1__4_chany_top_out[18] ;
+ wire \sb_8__1__4_chany_top_out[19] ;
+ wire \sb_8__1__4_chany_top_out[1] ;
+ wire \sb_8__1__4_chany_top_out[2] ;
+ wire \sb_8__1__4_chany_top_out[3] ;
+ wire \sb_8__1__4_chany_top_out[4] ;
+ wire \sb_8__1__4_chany_top_out[5] ;
+ wire \sb_8__1__4_chany_top_out[6] ;
+ wire \sb_8__1__4_chany_top_out[7] ;
+ wire \sb_8__1__4_chany_top_out[8] ;
+ wire \sb_8__1__4_chany_top_out[9] ;
+ wire sb_8__1__5_ccff_tail;
+ wire \sb_8__1__5_chanx_left_out[0] ;
+ wire \sb_8__1__5_chanx_left_out[10] ;
+ wire \sb_8__1__5_chanx_left_out[11] ;
+ wire \sb_8__1__5_chanx_left_out[12] ;
+ wire \sb_8__1__5_chanx_left_out[13] ;
+ wire \sb_8__1__5_chanx_left_out[14] ;
+ wire \sb_8__1__5_chanx_left_out[15] ;
+ wire \sb_8__1__5_chanx_left_out[16] ;
+ wire \sb_8__1__5_chanx_left_out[17] ;
+ wire \sb_8__1__5_chanx_left_out[18] ;
+ wire \sb_8__1__5_chanx_left_out[19] ;
+ wire \sb_8__1__5_chanx_left_out[1] ;
+ wire \sb_8__1__5_chanx_left_out[2] ;
+ wire \sb_8__1__5_chanx_left_out[3] ;
+ wire \sb_8__1__5_chanx_left_out[4] ;
+ wire \sb_8__1__5_chanx_left_out[5] ;
+ wire \sb_8__1__5_chanx_left_out[6] ;
+ wire \sb_8__1__5_chanx_left_out[7] ;
+ wire \sb_8__1__5_chanx_left_out[8] ;
+ wire \sb_8__1__5_chanx_left_out[9] ;
+ wire \sb_8__1__5_chany_bottom_out[0] ;
+ wire \sb_8__1__5_chany_bottom_out[10] ;
+ wire \sb_8__1__5_chany_bottom_out[11] ;
+ wire \sb_8__1__5_chany_bottom_out[12] ;
+ wire \sb_8__1__5_chany_bottom_out[13] ;
+ wire \sb_8__1__5_chany_bottom_out[14] ;
+ wire \sb_8__1__5_chany_bottom_out[15] ;
+ wire \sb_8__1__5_chany_bottom_out[16] ;
+ wire \sb_8__1__5_chany_bottom_out[17] ;
+ wire \sb_8__1__5_chany_bottom_out[18] ;
+ wire \sb_8__1__5_chany_bottom_out[19] ;
+ wire \sb_8__1__5_chany_bottom_out[1] ;
+ wire \sb_8__1__5_chany_bottom_out[2] ;
+ wire \sb_8__1__5_chany_bottom_out[3] ;
+ wire \sb_8__1__5_chany_bottom_out[4] ;
+ wire \sb_8__1__5_chany_bottom_out[5] ;
+ wire \sb_8__1__5_chany_bottom_out[6] ;
+ wire \sb_8__1__5_chany_bottom_out[7] ;
+ wire \sb_8__1__5_chany_bottom_out[8] ;
+ wire \sb_8__1__5_chany_bottom_out[9] ;
+ wire \sb_8__1__5_chany_top_out[0] ;
+ wire \sb_8__1__5_chany_top_out[10] ;
+ wire \sb_8__1__5_chany_top_out[11] ;
+ wire \sb_8__1__5_chany_top_out[12] ;
+ wire \sb_8__1__5_chany_top_out[13] ;
+ wire \sb_8__1__5_chany_top_out[14] ;
+ wire \sb_8__1__5_chany_top_out[15] ;
+ wire \sb_8__1__5_chany_top_out[16] ;
+ wire \sb_8__1__5_chany_top_out[17] ;
+ wire \sb_8__1__5_chany_top_out[18] ;
+ wire \sb_8__1__5_chany_top_out[19] ;
+ wire \sb_8__1__5_chany_top_out[1] ;
+ wire \sb_8__1__5_chany_top_out[2] ;
+ wire \sb_8__1__5_chany_top_out[3] ;
+ wire \sb_8__1__5_chany_top_out[4] ;
+ wire \sb_8__1__5_chany_top_out[5] ;
+ wire \sb_8__1__5_chany_top_out[6] ;
+ wire \sb_8__1__5_chany_top_out[7] ;
+ wire \sb_8__1__5_chany_top_out[8] ;
+ wire \sb_8__1__5_chany_top_out[9] ;
+ wire sb_8__1__6_ccff_tail;
+ wire \sb_8__1__6_chanx_left_out[0] ;
+ wire \sb_8__1__6_chanx_left_out[10] ;
+ wire \sb_8__1__6_chanx_left_out[11] ;
+ wire \sb_8__1__6_chanx_left_out[12] ;
+ wire \sb_8__1__6_chanx_left_out[13] ;
+ wire \sb_8__1__6_chanx_left_out[14] ;
+ wire \sb_8__1__6_chanx_left_out[15] ;
+ wire \sb_8__1__6_chanx_left_out[16] ;
+ wire \sb_8__1__6_chanx_left_out[17] ;
+ wire \sb_8__1__6_chanx_left_out[18] ;
+ wire \sb_8__1__6_chanx_left_out[19] ;
+ wire \sb_8__1__6_chanx_left_out[1] ;
+ wire \sb_8__1__6_chanx_left_out[2] ;
+ wire \sb_8__1__6_chanx_left_out[3] ;
+ wire \sb_8__1__6_chanx_left_out[4] ;
+ wire \sb_8__1__6_chanx_left_out[5] ;
+ wire \sb_8__1__6_chanx_left_out[6] ;
+ wire \sb_8__1__6_chanx_left_out[7] ;
+ wire \sb_8__1__6_chanx_left_out[8] ;
+ wire \sb_8__1__6_chanx_left_out[9] ;
+ wire \sb_8__1__6_chany_bottom_out[0] ;
+ wire \sb_8__1__6_chany_bottom_out[10] ;
+ wire \sb_8__1__6_chany_bottom_out[11] ;
+ wire \sb_8__1__6_chany_bottom_out[12] ;
+ wire \sb_8__1__6_chany_bottom_out[13] ;
+ wire \sb_8__1__6_chany_bottom_out[14] ;
+ wire \sb_8__1__6_chany_bottom_out[15] ;
+ wire \sb_8__1__6_chany_bottom_out[16] ;
+ wire \sb_8__1__6_chany_bottom_out[17] ;
+ wire \sb_8__1__6_chany_bottom_out[18] ;
+ wire \sb_8__1__6_chany_bottom_out[19] ;
+ wire \sb_8__1__6_chany_bottom_out[1] ;
+ wire \sb_8__1__6_chany_bottom_out[2] ;
+ wire \sb_8__1__6_chany_bottom_out[3] ;
+ wire \sb_8__1__6_chany_bottom_out[4] ;
+ wire \sb_8__1__6_chany_bottom_out[5] ;
+ wire \sb_8__1__6_chany_bottom_out[6] ;
+ wire \sb_8__1__6_chany_bottom_out[7] ;
+ wire \sb_8__1__6_chany_bottom_out[8] ;
+ wire \sb_8__1__6_chany_bottom_out[9] ;
+ wire \sb_8__1__6_chany_top_out[0] ;
+ wire \sb_8__1__6_chany_top_out[10] ;
+ wire \sb_8__1__6_chany_top_out[11] ;
+ wire \sb_8__1__6_chany_top_out[12] ;
+ wire \sb_8__1__6_chany_top_out[13] ;
+ wire \sb_8__1__6_chany_top_out[14] ;
+ wire \sb_8__1__6_chany_top_out[15] ;
+ wire \sb_8__1__6_chany_top_out[16] ;
+ wire \sb_8__1__6_chany_top_out[17] ;
+ wire \sb_8__1__6_chany_top_out[18] ;
+ wire \sb_8__1__6_chany_top_out[19] ;
+ wire \sb_8__1__6_chany_top_out[1] ;
+ wire \sb_8__1__6_chany_top_out[2] ;
+ wire \sb_8__1__6_chany_top_out[3] ;
+ wire \sb_8__1__6_chany_top_out[4] ;
+ wire \sb_8__1__6_chany_top_out[5] ;
+ wire \sb_8__1__6_chany_top_out[6] ;
+ wire \sb_8__1__6_chany_top_out[7] ;
+ wire \sb_8__1__6_chany_top_out[8] ;
+ wire \sb_8__1__6_chany_top_out[9] ;
+ wire sb_8__8__0_ccff_tail;
+ wire \sb_8__8__0_chanx_left_out[0] ;
+ wire \sb_8__8__0_chanx_left_out[10] ;
+ wire \sb_8__8__0_chanx_left_out[11] ;
+ wire \sb_8__8__0_chanx_left_out[12] ;
+ wire \sb_8__8__0_chanx_left_out[13] ;
+ wire \sb_8__8__0_chanx_left_out[14] ;
+ wire \sb_8__8__0_chanx_left_out[15] ;
+ wire \sb_8__8__0_chanx_left_out[16] ;
+ wire \sb_8__8__0_chanx_left_out[17] ;
+ wire \sb_8__8__0_chanx_left_out[18] ;
+ wire \sb_8__8__0_chanx_left_out[19] ;
+ wire \sb_8__8__0_chanx_left_out[1] ;
+ wire \sb_8__8__0_chanx_left_out[2] ;
+ wire \sb_8__8__0_chanx_left_out[3] ;
+ wire \sb_8__8__0_chanx_left_out[4] ;
+ wire \sb_8__8__0_chanx_left_out[5] ;
+ wire \sb_8__8__0_chanx_left_out[6] ;
+ wire \sb_8__8__0_chanx_left_out[7] ;
+ wire \sb_8__8__0_chanx_left_out[8] ;
+ wire \sb_8__8__0_chanx_left_out[9] ;
+ wire \sb_8__8__0_chany_bottom_out[0] ;
+ wire \sb_8__8__0_chany_bottom_out[10] ;
+ wire \sb_8__8__0_chany_bottom_out[11] ;
+ wire \sb_8__8__0_chany_bottom_out[12] ;
+ wire \sb_8__8__0_chany_bottom_out[13] ;
+ wire \sb_8__8__0_chany_bottom_out[14] ;
+ wire \sb_8__8__0_chany_bottom_out[15] ;
+ wire \sb_8__8__0_chany_bottom_out[16] ;
+ wire \sb_8__8__0_chany_bottom_out[17] ;
+ wire \sb_8__8__0_chany_bottom_out[18] ;
+ wire \sb_8__8__0_chany_bottom_out[19] ;
+ wire \sb_8__8__0_chany_bottom_out[1] ;
+ wire \sb_8__8__0_chany_bottom_out[2] ;
+ wire \sb_8__8__0_chany_bottom_out[3] ;
+ wire \sb_8__8__0_chany_bottom_out[4] ;
+ wire \sb_8__8__0_chany_bottom_out[5] ;
+ wire \sb_8__8__0_chany_bottom_out[6] ;
+ wire \sb_8__8__0_chany_bottom_out[7] ;
+ wire \sb_8__8__0_chany_bottom_out[8] ;
+ wire \sb_8__8__0_chany_bottom_out[9] ;
+ wire \scff_Wires[0] ;
+ wire \scff_Wires[100] ;
+ wire \scff_Wires[101] ;
+ wire \scff_Wires[102] ;
+ wire \scff_Wires[103] ;
+ wire \scff_Wires[104] ;
+ wire \scff_Wires[105] ;
+ wire \scff_Wires[106] ;
+ wire \scff_Wires[107] ;
+ wire \scff_Wires[108] ;
+ wire \scff_Wires[109] ;
+ wire \scff_Wires[10] ;
+ wire \scff_Wires[110] ;
+ wire \scff_Wires[111] ;
+ wire \scff_Wires[112] ;
+ wire \scff_Wires[113] ;
+ wire \scff_Wires[114] ;
+ wire \scff_Wires[115] ;
+ wire \scff_Wires[116] ;
+ wire \scff_Wires[117] ;
+ wire \scff_Wires[118] ;
+ wire \scff_Wires[119] ;
+ wire \scff_Wires[11] ;
+ wire \scff_Wires[120] ;
+ wire \scff_Wires[121] ;
+ wire \scff_Wires[122] ;
+ wire \scff_Wires[123] ;
+ wire \scff_Wires[124] ;
+ wire \scff_Wires[125] ;
+ wire \scff_Wires[126] ;
+ wire \scff_Wires[128] ;
+ wire \scff_Wires[129] ;
+ wire \scff_Wires[12] ;
+ wire \scff_Wires[130] ;
+ wire \scff_Wires[131] ;
+ wire \scff_Wires[132] ;
+ wire \scff_Wires[133] ;
+ wire \scff_Wires[134] ;
+ wire \scff_Wires[135] ;
+ wire \scff_Wires[136] ;
+ wire \scff_Wires[137] ;
+ wire \scff_Wires[138] ;
+ wire \scff_Wires[139] ;
+ wire \scff_Wires[13] ;
+ wire \scff_Wires[140] ;
+ wire \scff_Wires[141] ;
+ wire \scff_Wires[142] ;
+ wire \scff_Wires[143] ;
+ wire \scff_Wires[144] ;
+ wire \scff_Wires[145] ;
+ wire \scff_Wires[146] ;
+ wire \scff_Wires[147] ;
+ wire \scff_Wires[14] ;
+ wire \scff_Wires[15] ;
+ wire \scff_Wires[17] ;
+ wire \scff_Wires[18] ;
+ wire \scff_Wires[19] ;
+ wire \scff_Wires[1] ;
+ wire \scff_Wires[20] ;
+ wire \scff_Wires[21] ;
+ wire \scff_Wires[22] ;
+ wire \scff_Wires[23] ;
+ wire \scff_Wires[24] ;
+ wire \scff_Wires[25] ;
+ wire \scff_Wires[26] ;
+ wire \scff_Wires[27] ;
+ wire \scff_Wires[28] ;
+ wire \scff_Wires[29] ;
+ wire \scff_Wires[2] ;
+ wire \scff_Wires[30] ;
+ wire \scff_Wires[31] ;
+ wire \scff_Wires[32] ;
+ wire \scff_Wires[33] ;
+ wire \scff_Wires[34] ;
+ wire \scff_Wires[35] ;
+ wire \scff_Wires[36] ;
+ wire \scff_Wires[37] ;
+ wire \scff_Wires[38] ;
+ wire \scff_Wires[39] ;
+ wire \scff_Wires[3] ;
+ wire \scff_Wires[40] ;
+ wire \scff_Wires[41] ;
+ wire \scff_Wires[42] ;
+ wire \scff_Wires[43] ;
+ wire \scff_Wires[44] ;
+ wire \scff_Wires[45] ;
+ wire \scff_Wires[46] ;
+ wire \scff_Wires[47] ;
+ wire \scff_Wires[48] ;
+ wire \scff_Wires[49] ;
+ wire \scff_Wires[4] ;
+ wire \scff_Wires[50] ;
+ wire \scff_Wires[51] ;
+ wire \scff_Wires[52] ;
+ wire \scff_Wires[54] ;
+ wire \scff_Wires[55] ;
+ wire \scff_Wires[56] ;
+ wire \scff_Wires[57] ;
+ wire \scff_Wires[58] ;
+ wire \scff_Wires[59] ;
+ wire \scff_Wires[5] ;
+ wire \scff_Wires[60] ;
+ wire \scff_Wires[61] ;
+ wire \scff_Wires[62] ;
+ wire \scff_Wires[63] ;
+ wire \scff_Wires[64] ;
+ wire \scff_Wires[65] ;
+ wire \scff_Wires[66] ;
+ wire \scff_Wires[67] ;
+ wire \scff_Wires[68] ;
+ wire \scff_Wires[69] ;
+ wire \scff_Wires[6] ;
+ wire \scff_Wires[70] ;
+ wire \scff_Wires[71] ;
+ wire \scff_Wires[72] ;
+ wire \scff_Wires[73] ;
+ wire \scff_Wires[74] ;
+ wire \scff_Wires[75] ;
+ wire \scff_Wires[76] ;
+ wire \scff_Wires[77] ;
+ wire \scff_Wires[78] ;
+ wire \scff_Wires[79] ;
+ wire \scff_Wires[7] ;
+ wire \scff_Wires[80] ;
+ wire \scff_Wires[81] ;
+ wire \scff_Wires[82] ;
+ wire \scff_Wires[83] ;
+ wire \scff_Wires[84] ;
+ wire \scff_Wires[85] ;
+ wire \scff_Wires[86] ;
+ wire \scff_Wires[87] ;
+ wire \scff_Wires[88] ;
+ wire \scff_Wires[89] ;
+ wire \scff_Wires[8] ;
+ wire \scff_Wires[91] ;
+ wire \scff_Wires[92] ;
+ wire \scff_Wires[93] ;
+ wire \scff_Wires[94] ;
+ wire \scff_Wires[95] ;
+ wire \scff_Wires[96] ;
+ wire \scff_Wires[97] ;
+ wire \scff_Wires[98] ;
+ wire \scff_Wires[99] ;
+ wire \scff_Wires[9] ;
+
  cbx_1__0_ cbx_1__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[17] ),
     .SC_OUT_BOT(\scff_Wires[18] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__0_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__0_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__0_bottom_grid_pin_12_),
@@ -68,8 +17469,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__0_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_7_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_7_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__0__0_chanx_right_out[0] ,
     \sb_0__0__0_chanx_right_out[1] ,
     \sb_0__0__0_chanx_right_out[2] ,
@@ -181,6 +17580,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[0] ),
     .SC_IN_TOP(\scff_Wires[14] ),
     .SC_OUT_BOT(\scff_Wires[15] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__0_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__0_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__0_bottom_grid_pin_11_),
@@ -207,8 +17608,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[3] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[4] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[2] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__0_chanx_right_out[0] ,
     \sb_0__1__0_chanx_right_out[1] ,
     \sb_0__1__0_chanx_right_out[2] ,
@@ -293,6 +17692,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[1] ),
     .SC_IN_TOP(\scff_Wires[12] ),
     .SC_OUT_BOT(\scff_Wires[13] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__1_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__1_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__1_bottom_grid_pin_11_),
@@ -313,8 +17714,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_tail(cbx_1__1__1_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[11] ),
     .prog_clk_0_W_out(\prog_clk_0_wires[10] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__1_chanx_right_out[0] ,
     \sb_0__1__1_chanx_right_out[1] ,
     \sb_0__1__1_chanx_right_out[2] ,
@@ -399,6 +17798,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[2] ),
     .SC_IN_TOP(\scff_Wires[10] ),
     .SC_OUT_BOT(\scff_Wires[11] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__2_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__2_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__2_bottom_grid_pin_11_),
@@ -425,8 +17826,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[10] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[11] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[9] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__2_chanx_right_out[0] ,
     \sb_0__1__2_chanx_right_out[1] ,
     \sb_0__1__2_chanx_right_out[2] ,
@@ -511,6 +17910,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[3] ),
     .SC_IN_TOP(\scff_Wires[8] ),
     .SC_OUT_BOT(\scff_Wires[9] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__3_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__3_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__3_bottom_grid_pin_11_),
@@ -531,8 +17932,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_tail(cbx_1__1__3_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[21] ),
     .prog_clk_0_W_out(\prog_clk_0_wires[20] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__3_chanx_right_out[0] ,
     \sb_0__1__3_chanx_right_out[1] ,
     \sb_0__1__3_chanx_right_out[2] ,
@@ -617,6 +18016,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[4] ),
     .SC_IN_TOP(\scff_Wires[6] ),
     .SC_OUT_BOT(\scff_Wires[7] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__4_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__4_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__4_bottom_grid_pin_11_),
@@ -643,8 +18044,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[17] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[18] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[16] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__4_chanx_right_out[0] ,
     \sb_0__1__4_chanx_right_out[1] ,
     \sb_0__1__4_chanx_right_out[2] ,
@@ -729,6 +18128,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[5] ),
     .SC_IN_TOP(\scff_Wires[4] ),
     .SC_OUT_BOT(\scff_Wires[5] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__5_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__5_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__5_bottom_grid_pin_11_),
@@ -749,8 +18150,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_tail(cbx_1__1__5_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[31] ),
     .prog_clk_0_W_out(\prog_clk_0_wires[30] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__5_chanx_right_out[0] ,
     \sb_0__1__5_chanx_right_out[1] ,
     \sb_0__1__5_chanx_right_out[2] ,
@@ -835,6 +18234,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[6] ),
     .SC_IN_TOP(\scff_Wires[2] ),
     .SC_OUT_BOT(\scff_Wires[3] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__6_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__6_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__6_bottom_grid_pin_11_),
@@ -861,8 +18262,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[24] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[25] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[23] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__1__6_chanx_right_out[0] ,
     \sb_0__1__6_chanx_right_out[1] ,
     \sb_0__1__6_chanx_right_out[2] ,
@@ -946,6 +18345,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_1__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[0] ),
     .SC_OUT_BOT(\scff_Wires[1] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__0_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__0_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__0_bottom_grid_pin_11_),
@@ -973,8 +18374,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_in(\prog_clk_0_wires[39] ),
     .prog_clk_0_W_out(\prog_clk_0_wires[42] ),
     .top_grid_pin_0_(cbx_1__8__0_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_0__8__0_chanx_right_out[0] ,
     \sb_0__8__0_chanx_right_out[1] ,
     \sb_0__8__0_chanx_right_out[2] ,
@@ -1058,6 +18457,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_2__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[19] ),
     .SC_OUT_TOP(\scff_Wires[20] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__1_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__1_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__1_bottom_grid_pin_12_),
@@ -1097,8 +18498,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__1_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_6_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_6_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__0_chanx_right_out[0] ,
     \sb_1__0__0_chanx_right_out[1] ,
     \sb_1__0__0_chanx_right_out[2] ,
@@ -1210,6 +18609,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[7] ),
     .SC_IN_BOT(\scff_Wires[21] ),
     .SC_OUT_TOP(\scff_Wires[22] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__7_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__7_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__7_bottom_grid_pin_11_),
@@ -1235,8 +18636,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[5] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[6] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[1] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__0_chanx_right_out[0] ,
     \sb_1__1__0_chanx_right_out[1] ,
     \sb_1__1__0_chanx_right_out[2] ,
@@ -1321,6 +18720,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[8] ),
     .SC_IN_BOT(\scff_Wires[23] ),
     .SC_OUT_TOP(\scff_Wires[24] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__8_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__8_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__8_bottom_grid_pin_11_),
@@ -1344,8 +18745,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[49] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[3] ),
     .prog_clk_2_W_out(\prog_clk_2_wires[4] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__1_chanx_right_out[0] ,
     \sb_1__1__1_chanx_right_out[1] ,
     \sb_1__1__1_chanx_right_out[2] ,
@@ -1430,6 +18829,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[9] ),
     .SC_IN_BOT(\scff_Wires[25] ),
     .SC_OUT_TOP(\scff_Wires[26] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__9_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__9_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__9_bottom_grid_pin_11_),
@@ -1455,8 +18856,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[12] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[13] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[8] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__2_chanx_right_out[0] ,
     \sb_1__1__2_chanx_right_out[1] ,
     \sb_1__1__2_chanx_right_out[2] ,
@@ -1541,6 +18940,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[10] ),
     .SC_IN_BOT(\scff_Wires[27] ),
     .SC_OUT_TOP(\scff_Wires[28] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__10_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__10_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__10_bottom_grid_pin_11_),
@@ -1560,8 +18961,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__10_ccff_tail),
     .ccff_tail(cbx_1__1__10_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[55] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__3_chanx_right_out[0] ,
     \sb_1__1__3_chanx_right_out[1] ,
     \sb_1__1__3_chanx_right_out[2] ,
@@ -1646,6 +19045,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[11] ),
     .SC_IN_BOT(\scff_Wires[29] ),
     .SC_OUT_TOP(\scff_Wires[30] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__11_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__11_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__11_bottom_grid_pin_11_),
@@ -1671,8 +19072,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[19] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[20] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[15] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__4_chanx_right_out[0] ,
     \sb_1__1__4_chanx_right_out[1] ,
     \sb_1__1__4_chanx_right_out[2] ,
@@ -1757,6 +19156,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[12] ),
     .SC_IN_BOT(\scff_Wires[31] ),
     .SC_OUT_TOP(\scff_Wires[32] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__12_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__12_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__12_bottom_grid_pin_11_),
@@ -1780,8 +19181,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[61] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[16] ),
     .prog_clk_2_W_out(\prog_clk_2_wires[17] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__5_chanx_right_out[0] ,
     \sb_1__1__5_chanx_right_out[1] ,
     \sb_1__1__5_chanx_right_out[2] ,
@@ -1866,6 +19265,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[13] ),
     .SC_IN_BOT(\scff_Wires[33] ),
     .SC_OUT_TOP(\scff_Wires[34] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__13_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__13_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__13_bottom_grid_pin_11_),
@@ -1891,8 +19292,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[26] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[27] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[22] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__6_chanx_right_out[0] ,
     \sb_1__1__6_chanx_right_out[1] ,
     \sb_1__1__6_chanx_right_out[2] ,
@@ -1976,6 +19375,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_2__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[35] ),
     .SC_OUT_TOP(\scff_Wires[36] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__1_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__1_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__1_bottom_grid_pin_11_),
@@ -2002,8 +19403,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[1]),
     .prog_clk_0_S_in(\prog_clk_0_wires[67] ),
     .top_grid_pin_0_(cbx_1__8__1_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__0_chanx_right_out[0] ,
     \sb_1__8__0_chanx_right_out[1] ,
     \sb_1__8__0_chanx_right_out[2] ,
@@ -2087,6 +19486,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_3__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[54] ),
     .SC_OUT_BOT(\scff_Wires[55] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__2_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__2_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__2_bottom_grid_pin_12_),
@@ -2126,8 +19527,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__2_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_5_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_5_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__1_chanx_right_out[0] ,
     \sb_1__0__1_chanx_right_out[1] ,
     \sb_1__0__1_chanx_right_out[2] ,
@@ -2239,6 +19638,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[14] ),
     .SC_IN_TOP(\scff_Wires[51] ),
     .SC_OUT_BOT(\scff_Wires[52] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__14_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__14_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__14_bottom_grid_pin_11_),
@@ -2264,8 +19665,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[31] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[32] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[30] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__7_chanx_right_out[0] ,
     \sb_1__1__7_chanx_right_out[1] ,
     \sb_1__1__7_chanx_right_out[2] ,
@@ -2350,6 +19749,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[15] ),
     .SC_IN_TOP(\scff_Wires[49] ),
     .SC_OUT_BOT(\scff_Wires[50] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__15_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__15_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__15_bottom_grid_pin_11_),
@@ -2373,8 +19774,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[75] ),
     .prog_clk_2_E_out(\prog_clk_2_wires[2] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[1] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__8_chanx_right_out[0] ,
     \sb_1__1__8_chanx_right_out[1] ,
     \sb_1__1__8_chanx_right_out[2] ,
@@ -2459,6 +19858,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[16] ),
     .SC_IN_TOP(\scff_Wires[47] ),
     .SC_OUT_BOT(\scff_Wires[48] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__16_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__16_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__16_bottom_grid_pin_11_),
@@ -2484,8 +19885,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[38] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[39] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[37] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__9_chanx_right_out[0] ,
     \sb_1__1__9_chanx_right_out[1] ,
     \sb_1__1__9_chanx_right_out[2] ,
@@ -2570,6 +19969,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[17] ),
     .SC_IN_TOP(\scff_Wires[45] ),
     .SC_OUT_BOT(\scff_Wires[46] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__17_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__17_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__17_bottom_grid_pin_11_),
@@ -2593,8 +19994,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[81] ),
     .prog_clk_3_W_in(\prog_clk_3_wires[8] ),
     .prog_clk_3_W_out(\prog_clk_3_wires[9] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__10_chanx_right_out[0] ,
     \sb_1__1__10_chanx_right_out[1] ,
     \sb_1__1__10_chanx_right_out[2] ,
@@ -2679,6 +20078,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[18] ),
     .SC_IN_TOP(\scff_Wires[43] ),
     .SC_OUT_BOT(\scff_Wires[44] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__18_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__18_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__18_bottom_grid_pin_11_),
@@ -2704,8 +20105,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[45] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[46] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[44] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__11_chanx_right_out[0] ,
     \sb_1__1__11_chanx_right_out[1] ,
     \sb_1__1__11_chanx_right_out[2] ,
@@ -2790,6 +20189,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[19] ),
     .SC_IN_TOP(\scff_Wires[41] ),
     .SC_OUT_BOT(\scff_Wires[42] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__19_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__19_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__19_bottom_grid_pin_11_),
@@ -2813,8 +20214,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[87] ),
     .prog_clk_2_E_out(\prog_clk_2_wires[15] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[14] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__12_chanx_right_out[0] ,
     \sb_1__1__12_chanx_right_out[1] ,
     \sb_1__1__12_chanx_right_out[2] ,
@@ -2899,6 +20298,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[20] ),
     .SC_IN_TOP(\scff_Wires[39] ),
     .SC_OUT_BOT(\scff_Wires[40] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__20_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__20_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__20_bottom_grid_pin_11_),
@@ -2924,8 +20325,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[52] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[53] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[51] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__13_chanx_right_out[0] ,
     \sb_1__1__13_chanx_right_out[1] ,
     \sb_1__1__13_chanx_right_out[2] ,
@@ -3009,6 +20408,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_3__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[37] ),
     .SC_OUT_BOT(\scff_Wires[38] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__2_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__2_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__2_bottom_grid_pin_11_),
@@ -3035,8 +20436,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[2]),
     .prog_clk_0_S_in(\prog_clk_0_wires[93] ),
     .top_grid_pin_0_(cbx_1__8__2_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__1_chanx_right_out[0] ,
     \sb_1__8__1_chanx_right_out[1] ,
     \sb_1__8__1_chanx_right_out[2] ,
@@ -3120,6 +20519,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_4__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[56] ),
     .SC_OUT_TOP(\scff_Wires[57] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__3_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__3_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__3_bottom_grid_pin_12_),
@@ -3159,8 +20560,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__3_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_4_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_4_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__2_chanx_right_out[0] ,
     \sb_1__0__2_chanx_right_out[1] ,
     \sb_1__0__2_chanx_right_out[2] ,
@@ -3272,6 +20671,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[21] ),
     .SC_IN_BOT(\scff_Wires[58] ),
     .SC_OUT_TOP(\scff_Wires[59] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__21_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__21_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__21_bottom_grid_pin_11_),
@@ -3297,8 +20698,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[33] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[34] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[29] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__14_chanx_right_out[0] ,
     \sb_1__1__14_chanx_right_out[1] ,
     \sb_1__1__14_chanx_right_out[2] ,
@@ -3383,6 +20782,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[22] ),
     .SC_IN_BOT(\scff_Wires[60] ),
     .SC_OUT_TOP(\scff_Wires[61] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__22_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__22_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__22_bottom_grid_pin_11_),
@@ -3402,8 +20803,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__22_ccff_tail),
     .ccff_tail(cbx_1__1__22_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[101] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__15_chanx_right_out[0] ,
     \sb_1__1__15_chanx_right_out[1] ,
     \sb_1__1__15_chanx_right_out[2] ,
@@ -3488,6 +20887,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[23] ),
     .SC_IN_BOT(\scff_Wires[62] ),
     .SC_OUT_TOP(\scff_Wires[63] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__23_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__23_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__23_bottom_grid_pin_11_),
@@ -3513,8 +20914,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[40] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[41] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[36] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__16_chanx_right_out[0] ,
     \sb_1__1__16_chanx_right_out[1] ,
     \sb_1__1__16_chanx_right_out[2] ,
@@ -3599,6 +20998,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[24] ),
     .SC_IN_BOT(\scff_Wires[64] ),
     .SC_OUT_TOP(\scff_Wires[65] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__24_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__24_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__24_bottom_grid_pin_11_),
@@ -3622,8 +21023,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[107] ),
     .prog_clk_3_W_in(\prog_clk_3_wires[3] ),
     .prog_clk_3_W_out(\prog_clk_3_wires[4] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__17_chanx_right_out[0] ,
     \sb_1__1__17_chanx_right_out[1] ,
     \sb_1__1__17_chanx_right_out[2] ,
@@ -3708,6 +21107,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[25] ),
     .SC_IN_BOT(\scff_Wires[66] ),
     .SC_OUT_TOP(\scff_Wires[67] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__25_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__25_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__25_bottom_grid_pin_11_),
@@ -3733,8 +21134,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[47] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[48] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[43] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__18_chanx_right_out[0] ,
     \sb_1__1__18_chanx_right_out[1] ,
     \sb_1__1__18_chanx_right_out[2] ,
@@ -3819,6 +21218,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[26] ),
     .SC_IN_BOT(\scff_Wires[68] ),
     .SC_OUT_TOP(\scff_Wires[69] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__26_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__26_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__26_bottom_grid_pin_11_),
@@ -3838,8 +21239,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__26_ccff_tail),
     .ccff_tail(cbx_1__1__26_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[113] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__19_chanx_right_out[0] ,
     \sb_1__1__19_chanx_right_out[1] ,
     \sb_1__1__19_chanx_right_out[2] ,
@@ -3924,6 +21323,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[27] ),
     .SC_IN_BOT(\scff_Wires[70] ),
     .SC_OUT_TOP(\scff_Wires[71] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__27_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__27_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__27_bottom_grid_pin_11_),
@@ -3949,8 +21350,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[54] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[55] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[50] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__20_chanx_right_out[0] ,
     \sb_1__1__20_chanx_right_out[1] ,
     \sb_1__1__20_chanx_right_out[2] ,
@@ -4034,6 +21433,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_4__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[72] ),
     .SC_OUT_TOP(\scff_Wires[73] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__3_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__3_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__3_bottom_grid_pin_11_),
@@ -4060,8 +21461,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[3]),
     .prog_clk_0_S_in(\prog_clk_0_wires[119] ),
     .top_grid_pin_0_(cbx_1__8__3_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__2_chanx_right_out[0] ,
     \sb_1__8__2_chanx_right_out[1] ,
     \sb_1__8__2_chanx_right_out[2] ,
@@ -4145,6 +21544,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_5__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[91] ),
     .SC_OUT_BOT(\scff_Wires[92] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__4_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__4_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__4_bottom_grid_pin_12_),
@@ -4184,8 +21585,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__4_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_3_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_3_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__3_chanx_right_out[0] ,
     \sb_1__0__3_chanx_right_out[1] ,
     \sb_1__0__3_chanx_right_out[2] ,
@@ -4297,6 +21696,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[28] ),
     .SC_IN_TOP(\scff_Wires[88] ),
     .SC_OUT_BOT(\scff_Wires[89] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__28_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__28_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__28_bottom_grid_pin_11_),
@@ -4322,8 +21723,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[59] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[60] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[58] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__21_chanx_right_out[0] ,
     \sb_1__1__21_chanx_right_out[1] ,
     \sb_1__1__21_chanx_right_out[2] ,
@@ -4408,6 +21807,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[29] ),
     .SC_IN_TOP(\scff_Wires[86] ),
     .SC_OUT_BOT(\scff_Wires[87] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__29_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__29_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__29_bottom_grid_pin_11_),
@@ -4427,8 +21828,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__29_ccff_tail),
     .ccff_tail(cbx_1__1__29_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[127] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__22_chanx_right_out[0] ,
     \sb_1__1__22_chanx_right_out[1] ,
     \sb_1__1__22_chanx_right_out[2] ,
@@ -4513,6 +21912,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[30] ),
     .SC_IN_TOP(\scff_Wires[84] ),
     .SC_OUT_BOT(\scff_Wires[85] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__30_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__30_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__30_bottom_grid_pin_11_),
@@ -4538,8 +21939,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[66] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[67] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[65] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__23_chanx_right_out[0] ,
     \sb_1__1__23_chanx_right_out[1] ,
     \sb_1__1__23_chanx_right_out[2] ,
@@ -4624,6 +22023,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[31] ),
     .SC_IN_TOP(\scff_Wires[82] ),
     .SC_OUT_BOT(\scff_Wires[83] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__31_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__31_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__31_bottom_grid_pin_11_),
@@ -4647,8 +22048,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[133] ),
     .prog_clk_3_E_out(\prog_clk_3_wires[2] ),
     .prog_clk_3_W_in(\prog_clk_3_wires[1] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__24_chanx_right_out[0] ,
     \sb_1__1__24_chanx_right_out[1] ,
     \sb_1__1__24_chanx_right_out[2] ,
@@ -4733,6 +22132,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[32] ),
     .SC_IN_TOP(\scff_Wires[80] ),
     .SC_OUT_BOT(\scff_Wires[81] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__32_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__32_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__32_bottom_grid_pin_11_),
@@ -4758,8 +22159,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[73] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[74] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[72] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__25_chanx_right_out[0] ,
     \sb_1__1__25_chanx_right_out[1] ,
     \sb_1__1__25_chanx_right_out[2] ,
@@ -4844,6 +22243,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[33] ),
     .SC_IN_TOP(\scff_Wires[78] ),
     .SC_OUT_BOT(\scff_Wires[79] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__33_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__33_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__33_bottom_grid_pin_11_),
@@ -4863,8 +22264,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__33_ccff_tail),
     .ccff_tail(cbx_1__1__33_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[139] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__26_chanx_right_out[0] ,
     \sb_1__1__26_chanx_right_out[1] ,
     \sb_1__1__26_chanx_right_out[2] ,
@@ -4949,6 +22348,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[34] ),
     .SC_IN_TOP(\scff_Wires[76] ),
     .SC_OUT_BOT(\scff_Wires[77] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__34_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__34_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__34_bottom_grid_pin_11_),
@@ -4974,8 +22375,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[80] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[81] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[79] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__27_chanx_right_out[0] ,
     \sb_1__1__27_chanx_right_out[1] ,
     \sb_1__1__27_chanx_right_out[2] ,
@@ -5059,6 +22458,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_5__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[74] ),
     .SC_OUT_BOT(\scff_Wires[75] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__4_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__4_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__4_bottom_grid_pin_11_),
@@ -5085,8 +22486,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[4]),
     .prog_clk_0_S_in(\prog_clk_0_wires[145] ),
     .top_grid_pin_0_(cbx_1__8__4_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__3_chanx_right_out[0] ,
     \sb_1__8__3_chanx_right_out[1] ,
     \sb_1__8__3_chanx_right_out[2] ,
@@ -5170,6 +22569,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_6__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[93] ),
     .SC_OUT_TOP(\scff_Wires[94] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__5_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__5_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__5_bottom_grid_pin_12_),
@@ -5209,8 +22610,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__5_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_2_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_2_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__4_chanx_right_out[0] ,
     \sb_1__0__4_chanx_right_out[1] ,
     \sb_1__0__4_chanx_right_out[2] ,
@@ -5322,6 +22721,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[35] ),
     .SC_IN_BOT(\scff_Wires[95] ),
     .SC_OUT_TOP(\scff_Wires[96] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__35_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__35_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__35_bottom_grid_pin_11_),
@@ -5347,8 +22748,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[61] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[62] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[57] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__28_chanx_right_out[0] ,
     \sb_1__1__28_chanx_right_out[1] ,
     \sb_1__1__28_chanx_right_out[2] ,
@@ -5433,6 +22832,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[36] ),
     .SC_IN_BOT(\scff_Wires[97] ),
     .SC_OUT_TOP(\scff_Wires[98] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__36_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__36_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__36_bottom_grid_pin_11_),
@@ -5456,8 +22857,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[153] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[29] ),
     .prog_clk_2_W_out(\prog_clk_2_wires[30] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__29_chanx_right_out[0] ,
     \sb_1__1__29_chanx_right_out[1] ,
     \sb_1__1__29_chanx_right_out[2] ,
@@ -5542,6 +22941,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[37] ),
     .SC_IN_BOT(\scff_Wires[99] ),
     .SC_OUT_TOP(\scff_Wires[100] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__37_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__37_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__37_bottom_grid_pin_11_),
@@ -5567,8 +22968,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[68] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[69] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[64] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__30_chanx_right_out[0] ,
     \sb_1__1__30_chanx_right_out[1] ,
     \sb_1__1__30_chanx_right_out[2] ,
@@ -5653,6 +23052,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[38] ),
     .SC_IN_BOT(\scff_Wires[101] ),
     .SC_OUT_TOP(\scff_Wires[102] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__38_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__38_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__38_bottom_grid_pin_11_),
@@ -5676,8 +23077,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[159] ),
     .prog_clk_3_E_out(\prog_clk_3_wires[7] ),
     .prog_clk_3_W_in(\prog_clk_3_wires[6] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__31_chanx_right_out[0] ,
     \sb_1__1__31_chanx_right_out[1] ,
     \sb_1__1__31_chanx_right_out[2] ,
@@ -5762,6 +23161,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[39] ),
     .SC_IN_BOT(\scff_Wires[103] ),
     .SC_OUT_TOP(\scff_Wires[104] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__39_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__39_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__39_bottom_grid_pin_11_),
@@ -5787,8 +23188,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[75] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[76] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[71] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__32_chanx_right_out[0] ,
     \sb_1__1__32_chanx_right_out[1] ,
     \sb_1__1__32_chanx_right_out[2] ,
@@ -5873,6 +23272,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[40] ),
     .SC_IN_BOT(\scff_Wires[105] ),
     .SC_OUT_TOP(\scff_Wires[106] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__40_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__40_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__40_bottom_grid_pin_11_),
@@ -5896,8 +23297,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[165] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[42] ),
     .prog_clk_2_W_out(\prog_clk_2_wires[43] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__33_chanx_right_out[0] ,
     \sb_1__1__33_chanx_right_out[1] ,
     \sb_1__1__33_chanx_right_out[2] ,
@@ -5982,6 +23381,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[41] ),
     .SC_IN_BOT(\scff_Wires[107] ),
     .SC_OUT_TOP(\scff_Wires[108] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__41_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__41_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__41_bottom_grid_pin_11_),
@@ -6007,8 +23408,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[82] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[83] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[78] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__34_chanx_right_out[0] ,
     \sb_1__1__34_chanx_right_out[1] ,
     \sb_1__1__34_chanx_right_out[2] ,
@@ -6092,6 +23491,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_6__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[109] ),
     .SC_OUT_TOP(\scff_Wires[110] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__5_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__5_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__5_bottom_grid_pin_11_),
@@ -6118,8 +23519,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[5]),
     .prog_clk_0_S_in(\prog_clk_0_wires[171] ),
     .top_grid_pin_0_(cbx_1__8__5_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__4_chanx_right_out[0] ,
     \sb_1__8__4_chanx_right_out[1] ,
     \sb_1__8__4_chanx_right_out[2] ,
@@ -6203,6 +23602,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_7__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[128] ),
     .SC_OUT_BOT(\scff_Wires[129] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__6_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__6_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__6_bottom_grid_pin_12_),
@@ -6242,8 +23643,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__6_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_1_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_1_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__5_chanx_right_out[0] ,
     \sb_1__0__5_chanx_right_out[1] ,
     \sb_1__0__5_chanx_right_out[2] ,
@@ -6355,6 +23754,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[42] ),
     .SC_IN_TOP(\scff_Wires[125] ),
     .SC_OUT_BOT(\scff_Wires[126] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__42_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__42_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__42_bottom_grid_pin_11_),
@@ -6380,8 +23781,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[87] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[88] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[86] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__35_chanx_right_out[0] ,
     \sb_1__1__35_chanx_right_out[1] ,
     \sb_1__1__35_chanx_right_out[2] ,
@@ -6466,6 +23865,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[43] ),
     .SC_IN_TOP(\scff_Wires[123] ),
     .SC_OUT_BOT(\scff_Wires[124] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__43_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__43_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__43_bottom_grid_pin_11_),
@@ -6489,8 +23890,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[179] ),
     .prog_clk_2_E_out(\prog_clk_2_wires[28] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[27] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__36_chanx_right_out[0] ,
     \sb_1__1__36_chanx_right_out[1] ,
     \sb_1__1__36_chanx_right_out[2] ,
@@ -6575,6 +23974,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[44] ),
     .SC_IN_TOP(\scff_Wires[121] ),
     .SC_OUT_BOT(\scff_Wires[122] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__44_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__44_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__44_bottom_grid_pin_11_),
@@ -6600,8 +24001,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[94] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[95] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[93] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__37_chanx_right_out[0] ,
     \sb_1__1__37_chanx_right_out[1] ,
     \sb_1__1__37_chanx_right_out[2] ,
@@ -6686,6 +24085,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[45] ),
     .SC_IN_TOP(\scff_Wires[119] ),
     .SC_OUT_BOT(\scff_Wires[120] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__45_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__45_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__45_bottom_grid_pin_11_),
@@ -6705,8 +24106,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_1__1__45_ccff_tail),
     .ccff_tail(cbx_1__1__45_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[185] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__38_chanx_right_out[0] ,
     \sb_1__1__38_chanx_right_out[1] ,
     \sb_1__1__38_chanx_right_out[2] ,
@@ -6791,6 +24190,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[46] ),
     .SC_IN_TOP(\scff_Wires[117] ),
     .SC_OUT_BOT(\scff_Wires[118] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__46_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__46_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__46_bottom_grid_pin_11_),
@@ -6816,8 +24217,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[101] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[102] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[100] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__39_chanx_right_out[0] ,
     \sb_1__1__39_chanx_right_out[1] ,
     \sb_1__1__39_chanx_right_out[2] ,
@@ -6902,6 +24301,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[47] ),
     .SC_IN_TOP(\scff_Wires[115] ),
     .SC_OUT_BOT(\scff_Wires[116] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__47_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__47_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__47_bottom_grid_pin_11_),
@@ -6925,8 +24326,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_in(\prog_clk_0_wires[191] ),
     .prog_clk_2_E_out(\prog_clk_2_wires[41] ),
     .prog_clk_2_W_in(\prog_clk_2_wires[40] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__40_chanx_right_out[0] ,
     \sb_1__1__40_chanx_right_out[1] ,
     \sb_1__1__40_chanx_right_out[2] ,
@@ -7011,6 +24410,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[48] ),
     .SC_IN_TOP(\scff_Wires[113] ),
     .SC_OUT_BOT(\scff_Wires[114] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__48_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__48_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__48_bottom_grid_pin_11_),
@@ -7036,8 +24437,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[108] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[109] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[107] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__41_chanx_right_out[0] ,
     \sb_1__1__41_chanx_right_out[1] ,
     \sb_1__1__41_chanx_right_out[2] ,
@@ -7121,6 +24520,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_7__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_TOP(\scff_Wires[111] ),
     .SC_OUT_BOT(\scff_Wires[112] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__6_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__6_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__6_bottom_grid_pin_11_),
@@ -7147,8 +24548,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[6]),
     .prog_clk_0_S_in(\prog_clk_0_wires[197] ),
     .top_grid_pin_0_(cbx_1__8__6_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__5_chanx_right_out[0] ,
     \sb_1__8__5_chanx_right_out[1] ,
     \sb_1__8__5_chanx_right_out[2] ,
@@ -7232,6 +24631,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__0_ cbx_8__0_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[130] ),
     .SC_OUT_TOP(\scff_Wires[131] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__0__7_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__0__7_bottom_grid_pin_10_),
     .bottom_grid_pin_12_(cbx_1__0__7_bottom_grid_pin_12_),
@@ -7271,8 +24672,6 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_8_(cbx_1__0__7_bottom_grid_pin_8_),
     .top_width_0_height_0__pin_9_lower(grid_io_bottom_0_top_width_0_height_0__pin_9_lower),
     .top_width_0_height_0__pin_9_upper(grid_io_bottom_0_top_width_0_height_0__pin_9_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__0__6_chanx_right_out[0] ,
     \sb_1__0__6_chanx_right_out[1] ,
     \sb_1__0__6_chanx_right_out[2] ,
@@ -7384,6 +24783,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[49] ),
     .SC_IN_BOT(\scff_Wires[132] ),
     .SC_OUT_TOP(\scff_Wires[133] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__49_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__49_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__49_bottom_grid_pin_11_),
@@ -7409,8 +24810,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[89] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[90] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[85] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__42_chanx_right_out[0] ,
     \sb_1__1__42_chanx_right_out[1] ,
     \sb_1__1__42_chanx_right_out[2] ,
@@ -7495,6 +24894,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[50] ),
     .SC_IN_BOT(\scff_Wires[134] ),
     .SC_OUT_TOP(\scff_Wires[135] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__50_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__50_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__50_bottom_grid_pin_11_),
@@ -7514,8 +24915,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_8__1__1_ccff_tail),
     .ccff_tail(cbx_1__1__50_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[205] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__43_chanx_right_out[0] ,
     \sb_1__1__43_chanx_right_out[1] ,
     \sb_1__1__43_chanx_right_out[2] ,
@@ -7600,6 +24999,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[51] ),
     .SC_IN_BOT(\scff_Wires[136] ),
     .SC_OUT_TOP(\scff_Wires[137] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__51_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__51_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__51_bottom_grid_pin_11_),
@@ -7625,8 +25026,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[96] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[97] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[92] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__44_chanx_right_out[0] ,
     \sb_1__1__44_chanx_right_out[1] ,
     \sb_1__1__44_chanx_right_out[2] ,
@@ -7711,6 +25110,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[52] ),
     .SC_IN_BOT(\scff_Wires[138] ),
     .SC_OUT_TOP(\scff_Wires[139] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__52_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__52_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__52_bottom_grid_pin_11_),
@@ -7730,8 +25131,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_8__1__3_ccff_tail),
     .ccff_tail(cbx_1__1__52_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[211] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__45_chanx_right_out[0] ,
     \sb_1__1__45_chanx_right_out[1] ,
     \sb_1__1__45_chanx_right_out[2] ,
@@ -7816,6 +25215,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[53] ),
     .SC_IN_BOT(\scff_Wires[140] ),
     .SC_OUT_TOP(\scff_Wires[141] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__53_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__53_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__53_bottom_grid_pin_11_),
@@ -7841,8 +25242,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[103] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[104] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[99] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__46_chanx_right_out[0] ,
     \sb_1__1__46_chanx_right_out[1] ,
     \sb_1__1__46_chanx_right_out[2] ,
@@ -7927,6 +25326,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[54] ),
     .SC_IN_BOT(\scff_Wires[142] ),
     .SC_OUT_TOP(\scff_Wires[143] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__54_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__54_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__54_bottom_grid_pin_11_),
@@ -7946,8 +25347,6 @@ module fpga_core (IO_ISOL_N,
     .ccff_head(sb_8__1__5_ccff_tail),
     .ccff_tail(cbx_1__1__54_ccff_tail),
     .prog_clk_0_N_in(\prog_clk_0_wires[217] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__47_chanx_right_out[0] ,
     \sb_1__1__47_chanx_right_out[1] ,
     \sb_1__1__47_chanx_right_out[2] ,
@@ -8032,6 +25431,8 @@ module fpga_core (IO_ISOL_N,
     .REGOUT_FEEDTHROUGH(\regout_feedthrough_wires[55] ),
     .SC_IN_BOT(\scff_Wires[144] ),
     .SC_OUT_TOP(\scff_Wires[145] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__1__55_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__1__55_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__1__55_bottom_grid_pin_11_),
@@ -8057,8 +25458,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_1_N_out(\prog_clk_1_wires[110] ),
     .prog_clk_1_S_out(\prog_clk_1_wires[111] ),
     .prog_clk_1_W_in(\prog_clk_1_wires[106] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__1__48_chanx_right_out[0] ,
     \sb_1__1__48_chanx_right_out[1] ,
     \sb_1__1__48_chanx_right_out[2] ,
@@ -8142,6 +25541,8 @@ module fpga_core (IO_ISOL_N,
  cbx_1__2_ cbx_8__8_ (.IO_ISOL_N(IO_ISOL_N),
     .SC_IN_BOT(\scff_Wires[146] ),
     .SC_OUT_TOP(\scff_Wires[147] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_grid_pin_0_(cbx_1__8__7_bottom_grid_pin_0_),
     .bottom_grid_pin_10_(cbx_1__8__7_bottom_grid_pin_10_),
     .bottom_grid_pin_11_(cbx_1__8__7_bottom_grid_pin_11_),
@@ -8168,8 +25569,6 @@ module fpga_core (IO_ISOL_N,
     .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[7]),
     .prog_clk_0_S_in(\prog_clk_0_wires[223] ),
     .top_grid_pin_0_(cbx_1__8__7_top_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\sb_1__8__6_chanx_right_out[0] ,
     \sb_1__8__6_chanx_right_out[1] ,
     \sb_1__8__6_chanx_right_out[2] ,
@@ -8251,6 +25650,8 @@ module fpga_core (IO_ISOL_N,
     \cbx_1__8__7_chanx_right_out[18] ,
     \cbx_1__8__7_chanx_right_out[19] }));
  cby_0__1_ cby_0__1_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__0_ccff_tail),
     .ccff_tail(grid_io_left_0_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[88]),
@@ -8261,8 +25662,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__0_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_0_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_0_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__0__0_chany_top_out[0] ,
     \sb_0__0__0_chany_top_out[1] ,
     \sb_0__0__0_chany_top_out[2] ,
@@ -8344,6 +25743,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__0_chany_top_out[18] ,
     \cby_0__1__0_chany_top_out[19] }));
  cby_0__1_ cby_0__2_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__1_ccff_tail),
     .ccff_tail(grid_io_left_1_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[89]),
@@ -8354,8 +25755,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__1_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_1_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_1_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__0_chany_top_out[0] ,
     \sb_0__1__0_chany_top_out[1] ,
     \sb_0__1__0_chany_top_out[2] ,
@@ -8437,6 +25836,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__1_chany_top_out[18] ,
     \cby_0__1__1_chany_top_out[19] }));
  cby_0__1_ cby_0__3_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__2_ccff_tail),
     .ccff_tail(grid_io_left_2_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[90]),
@@ -8447,8 +25848,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__2_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_2_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_2_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__1_chany_top_out[0] ,
     \sb_0__1__1_chany_top_out[1] ,
     \sb_0__1__1_chany_top_out[2] ,
@@ -8530,6 +25929,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__2_chany_top_out[18] ,
     \cby_0__1__2_chany_top_out[19] }));
  cby_0__1_ cby_0__4_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__3_ccff_tail),
     .ccff_tail(grid_io_left_3_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[91]),
@@ -8540,8 +25941,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__3_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_3_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_3_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__2_chany_top_out[0] ,
     \sb_0__1__2_chany_top_out[1] ,
     \sb_0__1__2_chany_top_out[2] ,
@@ -8623,6 +26022,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__3_chany_top_out[18] ,
     \cby_0__1__3_chany_top_out[19] }));
  cby_0__1_ cby_0__5_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__4_ccff_tail),
     .ccff_tail(grid_io_left_4_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[92]),
@@ -8633,8 +26034,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__4_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_4_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_4_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__3_chany_top_out[0] ,
     \sb_0__1__3_chany_top_out[1] ,
     \sb_0__1__3_chany_top_out[2] ,
@@ -8716,6 +26115,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__4_chany_top_out[18] ,
     \cby_0__1__4_chany_top_out[19] }));
  cby_0__1_ cby_0__6_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__5_ccff_tail),
     .ccff_tail(grid_io_left_5_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[93]),
@@ -8726,8 +26127,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__5_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_5_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_5_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__4_chany_top_out[0] ,
     \sb_0__1__4_chany_top_out[1] ,
     \sb_0__1__4_chany_top_out[2] ,
@@ -8809,6 +26208,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__5_chany_top_out[18] ,
     \cby_0__1__5_chany_top_out[19] }));
  cby_0__1_ cby_0__7_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__1__6_ccff_tail),
     .ccff_tail(grid_io_left_6_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[94]),
@@ -8819,8 +26220,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__6_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_6_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_6_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__5_chany_top_out[0] ,
     \sb_0__1__5_chany_top_out[1] ,
     \sb_0__1__5_chany_top_out[2] ,
@@ -8902,6 +26301,8 @@ module fpga_core (IO_ISOL_N,
     \cby_0__1__6_chany_top_out[18] ,
     \cby_0__1__6_chany_top_out[19] }));
  cby_0__1_ cby_0__8_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(sb_0__8__0_ccff_tail),
     .ccff_tail(grid_io_left_7_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[95]),
@@ -8912,8 +26313,6 @@ module fpga_core (IO_ISOL_N,
     .right_width_0_height_0__pin_0_(cby_0__1__7_left_grid_pin_0_),
     .right_width_0_height_0__pin_1_lower(grid_io_left_7_right_width_0_height_0__pin_1_lower),
     .right_width_0_height_0__pin_1_upper(grid_io_left_7_right_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_0__1__6_chany_top_out[0] ,
     \sb_0__1__6_chany_top_out[1] ,
     \sb_0__1__6_chany_top_out[2] ,
@@ -8998,6 +26397,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[18] ),
     .Test_en_W_in(\Test_enWires[18] ),
     .Test_en_W_out(\Test_enWires[16] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_0_ccff_tail),
     .ccff_tail(cby_1__1__0_ccff_tail),
     .left_grid_pin_16_(cby_1__1__0_left_grid_pin_16_),
@@ -9018,8 +26419,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__0_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[2] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[1] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__0_chany_top_out[0] ,
     \sb_1__0__0_chany_top_out[1] ,
     \sb_1__0__0_chany_top_out[2] ,
@@ -9104,6 +26503,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[32] ),
     .Test_en_W_in(\Test_enWires[32] ),
     .Test_en_W_out(\Test_enWires[30] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_1_ccff_tail),
     .ccff_tail(cby_1__1__1_ccff_tail),
     .clk_2_S_in(\clk_2_wires[7] ),
@@ -9128,8 +26529,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[7] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[7] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[8] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__0_chany_top_out[0] ,
     \sb_1__1__0_chany_top_out[1] ,
     \sb_1__1__0_chany_top_out[2] ,
@@ -9214,6 +26613,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[46] ),
     .Test_en_W_in(\Test_enWires[46] ),
     .Test_en_W_out(\Test_enWires[44] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_2_ccff_tail),
     .ccff_tail(cby_1__1__2_ccff_tail),
     .clk_2_N_out(\clk_2_wires[6] ),
@@ -9238,8 +26639,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[12] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[6] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[5] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__1_chany_top_out[0] ,
     \sb_1__1__1_chany_top_out[1] ,
     \sb_1__1__1_chany_top_out[2] ,
@@ -9324,6 +26723,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[60] ),
     .Test_en_W_in(\Test_enWires[60] ),
     .Test_en_W_out(\Test_enWires[58] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_3_ccff_tail),
     .ccff_tail(cby_1__1__3_ccff_tail),
     .left_grid_pin_16_(cby_1__1__3_left_grid_pin_16_),
@@ -9344,8 +26745,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__3_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[18] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[17] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__2_chany_top_out[0] ,
     \sb_1__1__2_chany_top_out[1] ,
     \sb_1__1__2_chany_top_out[2] ,
@@ -9430,6 +26829,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[74] ),
     .Test_en_W_in(\Test_enWires[74] ),
     .Test_en_W_out(\Test_enWires[72] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_4_ccff_tail),
     .ccff_tail(cby_1__1__4_ccff_tail),
     .left_grid_pin_16_(cby_1__1__4_left_grid_pin_16_),
@@ -9450,8 +26851,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__4_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[23] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[22] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__3_chany_top_out[0] ,
     \sb_1__1__3_chany_top_out[1] ,
     \sb_1__1__3_chany_top_out[2] ,
@@ -9536,6 +26935,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[88] ),
     .Test_en_W_in(\Test_enWires[88] ),
     .Test_en_W_out(\Test_enWires[86] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_5_ccff_tail),
     .ccff_tail(cby_1__1__5_ccff_tail),
     .clk_2_S_in(\clk_2_wires[20] ),
@@ -9560,8 +26961,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[27] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[20] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[21] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__4_chany_top_out[0] ,
     \sb_1__1__4_chany_top_out[1] ,
     \sb_1__1__4_chany_top_out[2] ,
@@ -9646,6 +27045,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[102] ),
     .Test_en_W_in(\Test_enWires[102] ),
     .Test_en_W_out(\Test_enWires[100] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_6_ccff_tail),
     .ccff_tail(cby_1__1__6_ccff_tail),
     .clk_2_N_out(\clk_2_wires[19] ),
@@ -9670,8 +27071,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[32] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[19] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[18] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__5_chany_top_out[0] ,
     \sb_1__1__5_chany_top_out[1] ,
     \sb_1__1__5_chany_top_out[2] ,
@@ -9756,6 +27155,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[116] ),
     .Test_en_W_in(\Test_enWires[116] ),
     .Test_en_W_out(\Test_enWires[114] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_7_ccff_tail),
     .ccff_tail(cby_1__1__7_ccff_tail),
     .left_grid_pin_16_(cby_1__1__7_left_grid_pin_16_),
@@ -9777,8 +27178,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[40] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[38] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[37] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__6_chany_top_out[0] ,
     \sb_1__1__6_chany_top_out[1] ,
     \sb_1__1__6_chany_top_out[2] ,
@@ -9863,6 +27262,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[20] ),
     .Test_en_W_in(\Test_enWires[20] ),
     .Test_en_W_out(\Test_enWires[17] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_8_ccff_tail),
     .ccff_tail(cby_1__1__8_ccff_tail),
     .left_grid_pin_16_(cby_1__1__8_left_grid_pin_16_),
@@ -9883,8 +27284,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__8_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[45] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[44] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__1_chany_top_out[0] ,
     \sb_1__0__1_chany_top_out[1] ,
     \sb_1__0__1_chany_top_out[2] ,
@@ -9969,6 +27368,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[34] ),
     .Test_en_W_in(\Test_enWires[34] ),
     .Test_en_W_out(\Test_enWires[31] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_9_ccff_tail),
     .ccff_tail(cby_1__1__9_ccff_tail),
     .left_grid_pin_16_(cby_1__1__9_left_grid_pin_16_),
@@ -9989,8 +27390,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__9_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[48] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[47] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__7_chany_top_out[0] ,
     \sb_1__1__7_chany_top_out[1] ,
     \sb_1__1__7_chany_top_out[2] ,
@@ -10075,6 +27474,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[48] ),
     .Test_en_W_in(\Test_enWires[48] ),
     .Test_en_W_out(\Test_enWires[45] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_10_ccff_tail),
     .ccff_tail(cby_1__1__10_ccff_tail),
     .clk_3_S_in(\clk_3_wires[16] ),
@@ -10099,8 +27500,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[50] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[16] ),
     .prog_clk_3_S_out(\prog_clk_3_wires[17] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__8_chany_top_out[0] ,
     \sb_1__1__8_chany_top_out[1] ,
     \sb_1__1__8_chany_top_out[2] ,
@@ -10185,6 +27584,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[62] ),
     .Test_en_W_in(\Test_enWires[62] ),
     .Test_en_W_out(\Test_enWires[59] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_11_ccff_tail),
     .ccff_tail(cby_1__1__11_ccff_tail),
     .clk_3_S_in(\clk_3_wires[12] ),
@@ -10209,8 +27610,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[53] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[12] ),
     .prog_clk_3_S_out(\prog_clk_3_wires[13] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__9_chany_top_out[0] ,
     \sb_1__1__9_chany_top_out[1] ,
     \sb_1__1__9_chany_top_out[2] ,
@@ -10295,6 +27694,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[76] ),
     .Test_en_W_in(\Test_enWires[76] ),
     .Test_en_W_out(\Test_enWires[73] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_12_ccff_tail),
     .ccff_tail(cby_1__1__12_ccff_tail),
     .clk_3_N_out(\clk_3_wires[11] ),
@@ -10319,8 +27720,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[56] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[11] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[10] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__10_chany_top_out[0] ,
     \sb_1__1__10_chany_top_out[1] ,
     \sb_1__1__10_chany_top_out[2] ,
@@ -10405,6 +27804,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[90] ),
     .Test_en_W_in(\Test_enWires[90] ),
     .Test_en_W_out(\Test_enWires[87] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_13_ccff_tail),
     .ccff_tail(cby_1__1__13_ccff_tail),
     .clk_3_N_out(\clk_3_wires[15] ),
@@ -10429,8 +27830,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[59] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[15] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[14] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__11_chany_top_out[0] ,
     \sb_1__1__11_chany_top_out[1] ,
     \sb_1__1__11_chany_top_out[2] ,
@@ -10515,6 +27914,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[104] ),
     .Test_en_W_in(\Test_enWires[104] ),
     .Test_en_W_out(\Test_enWires[101] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_14_ccff_tail),
     .ccff_tail(cby_1__1__14_ccff_tail),
     .left_grid_pin_16_(cby_1__1__14_left_grid_pin_16_),
@@ -10535,8 +27936,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__14_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[63] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[62] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__12_chany_top_out[0] ,
     \sb_1__1__12_chany_top_out[1] ,
     \sb_1__1__12_chany_top_out[2] ,
@@ -10621,6 +28020,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[118] ),
     .Test_en_W_in(\Test_enWires[118] ),
     .Test_en_W_out(\Test_enWires[115] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_15_ccff_tail),
     .ccff_tail(cby_1__1__15_ccff_tail),
     .left_grid_pin_16_(cby_1__1__15_left_grid_pin_16_),
@@ -10642,8 +28043,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[68] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[66] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[65] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__13_chany_top_out[0] ,
     \sb_1__1__13_chany_top_out[1] ,
     \sb_1__1__13_chany_top_out[2] ,
@@ -10728,6 +28127,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[22] ),
     .Test_en_W_in(\Test_enWires[22] ),
     .Test_en_W_out(\Test_enWires[19] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_16_ccff_tail),
     .ccff_tail(cby_1__1__16_ccff_tail),
     .left_grid_pin_16_(cby_1__1__16_left_grid_pin_16_),
@@ -10748,8 +28149,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__16_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[71] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[70] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__2_chany_top_out[0] ,
     \sb_1__0__2_chany_top_out[1] ,
     \sb_1__0__2_chany_top_out[2] ,
@@ -10834,6 +28233,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[36] ),
     .Test_en_W_in(\Test_enWires[36] ),
     .Test_en_W_out(\Test_enWires[33] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_17_ccff_tail),
     .ccff_tail(cby_1__1__17_ccff_tail),
     .clk_2_S_in(\clk_2_wires[11] ),
@@ -10858,8 +28259,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[73] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[11] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[12] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__14_chany_top_out[0] ,
     \sb_1__1__14_chany_top_out[1] ,
     \sb_1__1__14_chany_top_out[2] ,
@@ -10944,6 +28343,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[50] ),
     .Test_en_W_in(\Test_enWires[50] ),
     .Test_en_W_out(\Test_enWires[47] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_18_ccff_tail),
     .ccff_tail(cby_1__1__18_ccff_tail),
     .clk_2_N_out(\clk_2_wires[10] ),
@@ -10968,8 +28369,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[76] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[10] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[9] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__15_chany_top_out[0] ,
     \sb_1__1__15_chany_top_out[1] ,
     \sb_1__1__15_chany_top_out[2] ,
@@ -11054,6 +28453,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[64] ),
     .Test_en_W_in(\Test_enWires[64] ),
     .Test_en_W_out(\Test_enWires[61] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_19_ccff_tail),
     .ccff_tail(cby_1__1__19_ccff_tail),
     .left_grid_pin_16_(cby_1__1__19_left_grid_pin_16_),
@@ -11074,8 +28475,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__19_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[80] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[79] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__16_chany_top_out[0] ,
     \sb_1__1__16_chany_top_out[1] ,
     \sb_1__1__16_chany_top_out[2] ,
@@ -11160,6 +28559,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[78] ),
     .Test_en_W_in(\Test_enWires[78] ),
     .Test_en_W_out(\Test_enWires[75] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_20_ccff_tail),
     .ccff_tail(cby_1__1__20_ccff_tail),
     .left_grid_pin_16_(cby_1__1__20_left_grid_pin_16_),
@@ -11180,8 +28581,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__20_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[83] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[82] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__17_chany_top_out[0] ,
     \sb_1__1__17_chany_top_out[1] ,
     \sb_1__1__17_chany_top_out[2] ,
@@ -11266,6 +28665,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[92] ),
     .Test_en_W_in(\Test_enWires[92] ),
     .Test_en_W_out(\Test_enWires[89] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_21_ccff_tail),
     .ccff_tail(cby_1__1__21_ccff_tail),
     .clk_2_S_in(\clk_2_wires[24] ),
@@ -11290,8 +28691,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[85] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[24] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[25] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__18_chany_top_out[0] ,
     \sb_1__1__18_chany_top_out[1] ,
     \sb_1__1__18_chany_top_out[2] ,
@@ -11376,6 +28775,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[106] ),
     .Test_en_W_in(\Test_enWires[106] ),
     .Test_en_W_out(\Test_enWires[103] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_22_ccff_tail),
     .ccff_tail(cby_1__1__22_ccff_tail),
     .clk_2_N_out(\clk_2_wires[23] ),
@@ -11400,8 +28801,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[88] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[23] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[22] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__19_chany_top_out[0] ,
     \sb_1__1__19_chany_top_out[1] ,
     \sb_1__1__19_chany_top_out[2] ,
@@ -11486,6 +28885,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[120] ),
     .Test_en_W_in(\Test_enWires[120] ),
     .Test_en_W_out(\Test_enWires[117] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_23_ccff_tail),
     .ccff_tail(cby_1__1__23_ccff_tail),
     .left_grid_pin_16_(cby_1__1__23_left_grid_pin_16_),
@@ -11507,8 +28908,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[94] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[92] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[91] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__20_chany_top_out[0] ,
     \sb_1__1__20_chany_top_out[1] ,
     \sb_1__1__20_chany_top_out[2] ,
@@ -11595,6 +28994,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[1] ),
     .Test_en_W_in(\Test_enWires[1] ),
     .Test_en_W_out(\Test_enWires[21] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_24_ccff_tail),
     .ccff_tail(cby_1__1__24_ccff_tail),
     .clk_3_N_out(\clk_3_wires[27] ),
@@ -11619,8 +29020,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[96] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[27] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[28] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__3_chany_top_out[0] ,
     \sb_1__0__3_chany_top_out[1] ,
     \sb_1__0__3_chany_top_out[2] ,
@@ -11707,6 +29106,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[3] ),
     .Test_en_W_in(\Test_enWires[3] ),
     .Test_en_W_out(\Test_enWires[35] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_25_ccff_tail),
     .ccff_tail(cby_1__1__25_ccff_tail),
     .clk_3_N_out(\clk_3_wires[29] ),
@@ -11731,8 +29132,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[99] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[29] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[30] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__21_chany_top_out[0] ,
     \sb_1__1__21_chany_top_out[1] ,
     \sb_1__1__21_chany_top_out[2] ,
@@ -11819,6 +29218,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[5] ),
     .Test_en_W_in(\Test_enWires[5] ),
     .Test_en_W_out(\Test_enWires[49] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_26_ccff_tail),
     .ccff_tail(cby_1__1__26_ccff_tail),
     .clk_3_N_out(\clk_3_wires[31] ),
@@ -11843,8 +29244,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[102] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[31] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[32] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__22_chany_top_out[0] ,
     \sb_1__1__22_chany_top_out[1] ,
     \sb_1__1__22_chany_top_out[2] ,
@@ -11931,6 +29330,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[7] ),
     .Test_en_W_in(\Test_enWires[7] ),
     .Test_en_W_out(\Test_enWires[63] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_27_ccff_tail),
     .ccff_tail(cby_1__1__27_ccff_tail),
     .clk_3_N_out(\clk_3_wires[33] ),
@@ -11955,8 +29356,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[105] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[33] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[34] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__23_chany_top_out[0] ,
     \sb_1__1__23_chany_top_out[1] ,
     \sb_1__1__23_chany_top_out[2] ,
@@ -12043,6 +29442,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[9] ),
     .Test_en_W_in(\Test_enWires[9] ),
     .Test_en_W_out(\Test_enWires[77] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_28_ccff_tail),
     .ccff_tail(cby_1__1__28_ccff_tail),
     .left_grid_pin_16_(cby_1__1__28_left_grid_pin_16_),
@@ -12063,8 +29464,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__28_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[109] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[108] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__24_chany_top_out[0] ,
     \sb_1__1__24_chany_top_out[1] ,
     \sb_1__1__24_chany_top_out[2] ,
@@ -12151,6 +29550,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[11] ),
     .Test_en_W_in(\Test_enWires[11] ),
     .Test_en_W_out(\Test_enWires[91] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_29_ccff_tail),
     .ccff_tail(cby_1__1__29_ccff_tail),
     .left_grid_pin_16_(cby_1__1__29_left_grid_pin_16_),
@@ -12171,8 +29572,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__29_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[112] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[111] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__25_chany_top_out[0] ,
     \sb_1__1__25_chany_top_out[1] ,
     \sb_1__1__25_chany_top_out[2] ,
@@ -12259,6 +29658,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[13] ),
     .Test_en_W_in(\Test_enWires[13] ),
     .Test_en_W_out(\Test_enWires[105] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_30_ccff_tail),
     .ccff_tail(cby_1__1__30_ccff_tail),
     .left_grid_pin_16_(cby_1__1__30_left_grid_pin_16_),
@@ -12279,8 +29680,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__30_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[115] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[114] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__26_chany_top_out[0] ,
     \sb_1__1__26_chany_top_out[1] ,
     \sb_1__1__26_chany_top_out[2] ,
@@ -12366,6 +29765,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_S_in(\Test_enWires[15] ),
     .Test_en_W_in(\Test_enWires[15] ),
     .Test_en_W_out(\Test_enWires[119] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_31_ccff_tail),
     .ccff_tail(cby_1__1__31_ccff_tail),
     .left_grid_pin_16_(cby_1__1__31_left_grid_pin_16_),
@@ -12387,8 +29788,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[120] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[118] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[117] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__27_chany_top_out[0] ,
     \sb_1__1__27_chany_top_out[1] ,
     \sb_1__1__27_chany_top_out[2] ,
@@ -12473,6 +29872,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[25] ),
     .Test_en_S_in(\Test_enWires[24] ),
     .Test_en_W_in(\Test_enWires[24] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_32_ccff_tail),
     .ccff_tail(cby_1__1__32_ccff_tail),
     .left_grid_pin_16_(cby_1__1__32_left_grid_pin_16_),
@@ -12493,8 +29894,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__32_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[123] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[122] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__4_chany_top_out[0] ,
     \sb_1__0__4_chany_top_out[1] ,
     \sb_1__0__4_chany_top_out[2] ,
@@ -12579,6 +29978,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[39] ),
     .Test_en_S_in(\Test_enWires[38] ),
     .Test_en_W_in(\Test_enWires[38] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_33_ccff_tail),
     .ccff_tail(cby_1__1__33_ccff_tail),
     .clk_2_S_in(\clk_2_wires[33] ),
@@ -12603,8 +30004,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[125] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[33] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[34] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__28_chany_top_out[0] ,
     \sb_1__1__28_chany_top_out[1] ,
     \sb_1__1__28_chany_top_out[2] ,
@@ -12689,6 +30088,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[53] ),
     .Test_en_S_in(\Test_enWires[52] ),
     .Test_en_W_in(\Test_enWires[52] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_34_ccff_tail),
     .ccff_tail(cby_1__1__34_ccff_tail),
     .clk_2_N_out(\clk_2_wires[32] ),
@@ -12713,8 +30114,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[128] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[32] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[31] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__29_chany_top_out[0] ,
     \sb_1__1__29_chany_top_out[1] ,
     \sb_1__1__29_chany_top_out[2] ,
@@ -12799,6 +30198,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[67] ),
     .Test_en_S_in(\Test_enWires[66] ),
     .Test_en_W_in(\Test_enWires[66] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_35_ccff_tail),
     .ccff_tail(cby_1__1__35_ccff_tail),
     .left_grid_pin_16_(cby_1__1__35_left_grid_pin_16_),
@@ -12819,8 +30220,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__35_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[132] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[131] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__30_chany_top_out[0] ,
     \sb_1__1__30_chany_top_out[1] ,
     \sb_1__1__30_chany_top_out[2] ,
@@ -12905,6 +30304,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[81] ),
     .Test_en_S_in(\Test_enWires[80] ),
     .Test_en_W_in(\Test_enWires[80] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_36_ccff_tail),
     .ccff_tail(cby_1__1__36_ccff_tail),
     .left_grid_pin_16_(cby_1__1__36_left_grid_pin_16_),
@@ -12925,8 +30326,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__36_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[135] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[134] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__31_chany_top_out[0] ,
     \sb_1__1__31_chany_top_out[1] ,
     \sb_1__1__31_chany_top_out[2] ,
@@ -13011,6 +30410,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[95] ),
     .Test_en_S_in(\Test_enWires[94] ),
     .Test_en_W_in(\Test_enWires[94] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_37_ccff_tail),
     .ccff_tail(cby_1__1__37_ccff_tail),
     .clk_2_S_in(\clk_2_wires[46] ),
@@ -13035,8 +30436,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[137] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[46] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[47] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__32_chany_top_out[0] ,
     \sb_1__1__32_chany_top_out[1] ,
     \sb_1__1__32_chany_top_out[2] ,
@@ -13121,6 +30520,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[109] ),
     .Test_en_S_in(\Test_enWires[108] ),
     .Test_en_W_in(\Test_enWires[108] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_38_ccff_tail),
     .ccff_tail(cby_1__1__38_ccff_tail),
     .clk_2_N_out(\clk_2_wires[45] ),
@@ -13145,8 +30546,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[140] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[45] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[44] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__33_chany_top_out[0] ,
     \sb_1__1__33_chany_top_out[1] ,
     \sb_1__1__33_chany_top_out[2] ,
@@ -13231,6 +30630,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[123] ),
     .Test_en_S_in(\Test_enWires[122] ),
     .Test_en_W_in(\Test_enWires[122] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_39_ccff_tail),
     .ccff_tail(cby_1__1__39_ccff_tail),
     .left_grid_pin_16_(cby_1__1__39_left_grid_pin_16_),
@@ -13252,8 +30653,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[146] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[144] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[143] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__34_chany_top_out[0] ,
     \sb_1__1__34_chany_top_out[1] ,
     \sb_1__1__34_chany_top_out[2] ,
@@ -13338,6 +30737,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[27] ),
     .Test_en_S_in(\Test_enWires[26] ),
     .Test_en_W_in(\Test_enWires[26] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_40_ccff_tail),
     .ccff_tail(cby_1__1__40_ccff_tail),
     .left_grid_pin_16_(cby_1__1__40_left_grid_pin_16_),
@@ -13358,8 +30759,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__40_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[149] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[148] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__5_chany_top_out[0] ,
     \sb_1__0__5_chany_top_out[1] ,
     \sb_1__0__5_chany_top_out[2] ,
@@ -13444,6 +30843,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[41] ),
     .Test_en_S_in(\Test_enWires[40] ),
     .Test_en_W_in(\Test_enWires[40] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_41_ccff_tail),
     .ccff_tail(cby_1__1__41_ccff_tail),
     .left_grid_pin_16_(cby_1__1__41_left_grid_pin_16_),
@@ -13464,8 +30865,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__41_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[152] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[151] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__35_chany_top_out[0] ,
     \sb_1__1__35_chany_top_out[1] ,
     \sb_1__1__35_chany_top_out[2] ,
@@ -13550,6 +30949,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[55] ),
     .Test_en_S_in(\Test_enWires[54] ),
     .Test_en_W_in(\Test_enWires[54] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_42_ccff_tail),
     .ccff_tail(cby_1__1__42_ccff_tail),
     .clk_3_S_in(\clk_3_wires[24] ),
@@ -13574,8 +30975,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[154] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[24] ),
     .prog_clk_3_S_out(\prog_clk_3_wires[25] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__36_chany_top_out[0] ,
     \sb_1__1__36_chany_top_out[1] ,
     \sb_1__1__36_chany_top_out[2] ,
@@ -13660,6 +31059,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[69] ),
     .Test_en_S_in(\Test_enWires[68] ),
     .Test_en_W_in(\Test_enWires[68] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_43_ccff_tail),
     .ccff_tail(cby_1__1__43_ccff_tail),
     .clk_3_S_in(\clk_3_wires[20] ),
@@ -13684,8 +31085,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[157] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[20] ),
     .prog_clk_3_S_out(\prog_clk_3_wires[21] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__37_chany_top_out[0] ,
     \sb_1__1__37_chany_top_out[1] ,
     \sb_1__1__37_chany_top_out[2] ,
@@ -13770,6 +31169,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[83] ),
     .Test_en_S_in(\Test_enWires[82] ),
     .Test_en_W_in(\Test_enWires[82] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_44_ccff_tail),
     .ccff_tail(cby_1__1__44_ccff_tail),
     .clk_3_N_out(\clk_3_wires[19] ),
@@ -13794,8 +31195,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[160] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[19] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[18] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__38_chany_top_out[0] ,
     \sb_1__1__38_chany_top_out[1] ,
     \sb_1__1__38_chany_top_out[2] ,
@@ -13880,6 +31279,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[97] ),
     .Test_en_S_in(\Test_enWires[96] ),
     .Test_en_W_in(\Test_enWires[96] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_45_ccff_tail),
     .ccff_tail(cby_1__1__45_ccff_tail),
     .clk_3_N_out(\clk_3_wires[23] ),
@@ -13904,8 +31305,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[163] ),
     .prog_clk_3_N_out(\prog_clk_3_wires[23] ),
     .prog_clk_3_S_in(\prog_clk_3_wires[22] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__39_chany_top_out[0] ,
     \sb_1__1__39_chany_top_out[1] ,
     \sb_1__1__39_chany_top_out[2] ,
@@ -13990,6 +31389,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[111] ),
     .Test_en_S_in(\Test_enWires[110] ),
     .Test_en_W_in(\Test_enWires[110] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_46_ccff_tail),
     .ccff_tail(cby_1__1__46_ccff_tail),
     .left_grid_pin_16_(cby_1__1__46_left_grid_pin_16_),
@@ -14010,8 +31411,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__46_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[167] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[166] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__40_chany_top_out[0] ,
     \sb_1__1__40_chany_top_out[1] ,
     \sb_1__1__40_chany_top_out[2] ,
@@ -14096,6 +31495,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[125] ),
     .Test_en_S_in(\Test_enWires[124] ),
     .Test_en_W_in(\Test_enWires[124] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_47_ccff_tail),
     .ccff_tail(cby_1__1__47_ccff_tail),
     .left_grid_pin_16_(cby_1__1__47_left_grid_pin_16_),
@@ -14117,8 +31518,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[172] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[170] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[169] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__41_chany_top_out[0] ,
     \sb_1__1__41_chany_top_out[1] ,
     \sb_1__1__41_chany_top_out[2] ,
@@ -14203,6 +31602,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[29] ),
     .Test_en_S_in(\Test_enWires[28] ),
     .Test_en_W_in(\Test_enWires[28] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_48_ccff_tail),
     .ccff_tail(cby_1__1__48_ccff_tail),
     .left_grid_pin_16_(cby_1__1__48_left_grid_pin_16_),
@@ -14223,8 +31624,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__48_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[175] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[174] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__0__6_chany_top_out[0] ,
     \sb_1__0__6_chany_top_out[1] ,
     \sb_1__0__6_chany_top_out[2] ,
@@ -14309,6 +31708,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[43] ),
     .Test_en_S_in(\Test_enWires[42] ),
     .Test_en_W_in(\Test_enWires[42] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_49_ccff_tail),
     .ccff_tail(cby_1__1__49_ccff_tail),
     .clk_2_S_in(\clk_2_wires[37] ),
@@ -14333,8 +31734,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[177] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[37] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[38] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__42_chany_top_out[0] ,
     \sb_1__1__42_chany_top_out[1] ,
     \sb_1__1__42_chany_top_out[2] ,
@@ -14419,6 +31818,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[57] ),
     .Test_en_S_in(\Test_enWires[56] ),
     .Test_en_W_in(\Test_enWires[56] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_50_ccff_tail),
     .ccff_tail(cby_1__1__50_ccff_tail),
     .clk_2_N_out(\clk_2_wires[36] ),
@@ -14443,8 +31844,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[180] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[36] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[35] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__43_chany_top_out[0] ,
     \sb_1__1__43_chany_top_out[1] ,
     \sb_1__1__43_chany_top_out[2] ,
@@ -14529,6 +31928,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[71] ),
     .Test_en_S_in(\Test_enWires[70] ),
     .Test_en_W_in(\Test_enWires[70] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_51_ccff_tail),
     .ccff_tail(cby_1__1__51_ccff_tail),
     .left_grid_pin_16_(cby_1__1__51_left_grid_pin_16_),
@@ -14549,8 +31950,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__51_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[184] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[183] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__44_chany_top_out[0] ,
     \sb_1__1__44_chany_top_out[1] ,
     \sb_1__1__44_chany_top_out[2] ,
@@ -14635,6 +32034,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[85] ),
     .Test_en_S_in(\Test_enWires[84] ),
     .Test_en_W_in(\Test_enWires[84] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_52_ccff_tail),
     .ccff_tail(cby_1__1__52_ccff_tail),
     .left_grid_pin_16_(cby_1__1__52_left_grid_pin_16_),
@@ -14655,8 +32056,6 @@ module fpga_core (IO_ISOL_N,
     .left_grid_pin_31_(cby_1__1__52_left_grid_pin_31_),
     .prog_clk_0_S_out(\prog_clk_0_wires[187] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[186] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__45_chany_top_out[0] ,
     \sb_1__1__45_chany_top_out[1] ,
     \sb_1__1__45_chany_top_out[2] ,
@@ -14741,6 +32140,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[99] ),
     .Test_en_S_in(\Test_enWires[98] ),
     .Test_en_W_in(\Test_enWires[98] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_53_ccff_tail),
     .ccff_tail(cby_1__1__53_ccff_tail),
     .clk_2_S_in(\clk_2_wires[50] ),
@@ -14765,8 +32166,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[189] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[50] ),
     .prog_clk_2_S_out(\prog_clk_2_wires[51] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__46_chany_top_out[0] ,
     \sb_1__1__46_chany_top_out[1] ,
     \sb_1__1__46_chany_top_out[2] ,
@@ -14851,6 +32250,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[113] ),
     .Test_en_S_in(\Test_enWires[112] ),
     .Test_en_W_in(\Test_enWires[112] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_54_ccff_tail),
     .ccff_tail(cby_1__1__54_ccff_tail),
     .clk_2_N_out(\clk_2_wires[49] ),
@@ -14875,8 +32276,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_W_in(\prog_clk_0_wires[192] ),
     .prog_clk_2_N_out(\prog_clk_2_wires[49] ),
     .prog_clk_2_S_in(\prog_clk_2_wires[48] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__47_chany_top_out[0] ,
     \sb_1__1__47_chany_top_out[1] ,
     \sb_1__1__47_chany_top_out[2] ,
@@ -14961,6 +32360,8 @@ module fpga_core (IO_ISOL_N,
     .Test_en_E_out(\Test_enWires[127] ),
     .Test_en_S_in(\Test_enWires[126] ),
     .Test_en_W_in(\Test_enWires[126] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_55_ccff_tail),
     .ccff_tail(cby_1__1__55_ccff_tail),
     .left_grid_pin_16_(cby_1__1__55_left_grid_pin_16_),
@@ -14982,8 +32383,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_N_out(\prog_clk_0_wires[198] ),
     .prog_clk_0_S_out(\prog_clk_0_wires[196] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[195] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_1__1__48_chany_top_out[0] ,
     \sb_1__1__48_chany_top_out[1] ,
     \sb_1__1__48_chany_top_out[2] ,
@@ -15065,6 +32464,8 @@ module fpga_core (IO_ISOL_N,
     \cby_1__1__55_chany_top_out[18] ,
     \cby_1__1__55_chany_top_out[19] }));
  cby_2__1_ cby_8__1_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_56_ccff_tail),
     .ccff_tail(grid_io_right_7_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15]),
@@ -15092,8 +32493,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[201] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[200] ),
     .right_grid_pin_0_(cby_8__1__0_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__0__0_chany_top_out[0] ,
     \sb_8__0__0_chany_top_out[1] ,
     \sb_8__0__0_chany_top_out[2] ,
@@ -15175,6 +32574,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__0_chany_top_out[18] ,
     \cby_8__1__0_chany_top_out[19] }));
  cby_2__1_ cby_8__2_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_57_ccff_tail),
     .ccff_tail(grid_io_right_6_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[14]),
@@ -15202,8 +32603,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[204] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[203] ),
     .right_grid_pin_0_(cby_8__1__1_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__0_chany_top_out[0] ,
     \sb_8__1__0_chany_top_out[1] ,
     \sb_8__1__0_chany_top_out[2] ,
@@ -15285,6 +32684,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__1_chany_top_out[18] ,
     \cby_8__1__1_chany_top_out[19] }));
  cby_2__1_ cby_8__3_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_58_ccff_tail),
     .ccff_tail(grid_io_right_5_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[13]),
@@ -15312,8 +32713,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[207] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[206] ),
     .right_grid_pin_0_(cby_8__1__2_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__1_chany_top_out[0] ,
     \sb_8__1__1_chany_top_out[1] ,
     \sb_8__1__1_chany_top_out[2] ,
@@ -15395,6 +32794,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__2_chany_top_out[18] ,
     \cby_8__1__2_chany_top_out[19] }));
  cby_2__1_ cby_8__4_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_59_ccff_tail),
     .ccff_tail(grid_io_right_4_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[12]),
@@ -15422,8 +32823,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[210] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[209] ),
     .right_grid_pin_0_(cby_8__1__3_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__2_chany_top_out[0] ,
     \sb_8__1__2_chany_top_out[1] ,
     \sb_8__1__2_chany_top_out[2] ,
@@ -15505,6 +32904,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__3_chany_top_out[18] ,
     \cby_8__1__3_chany_top_out[19] }));
  cby_2__1_ cby_8__5_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_60_ccff_tail),
     .ccff_tail(grid_io_right_3_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[11]),
@@ -15532,8 +32933,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[213] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[212] ),
     .right_grid_pin_0_(cby_8__1__4_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__3_chany_top_out[0] ,
     \sb_8__1__3_chany_top_out[1] ,
     \sb_8__1__3_chany_top_out[2] ,
@@ -15615,6 +33014,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__4_chany_top_out[18] ,
     \cby_8__1__4_chany_top_out[19] }));
  cby_2__1_ cby_8__6_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_61_ccff_tail),
     .ccff_tail(grid_io_right_2_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[10]),
@@ -15642,8 +33043,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[216] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[215] ),
     .right_grid_pin_0_(cby_8__1__5_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__4_chany_top_out[0] ,
     \sb_8__1__4_chany_top_out[1] ,
     \sb_8__1__4_chany_top_out[2] ,
@@ -15725,6 +33124,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__5_chany_top_out[18] ,
     \cby_8__1__5_chany_top_out[19] }));
  cby_2__1_ cby_8__7_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_62_ccff_tail),
     .ccff_tail(grid_io_right_1_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[9]),
@@ -15752,8 +33153,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[219] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[218] ),
     .right_grid_pin_0_(cby_8__1__6_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__5_chany_top_out[0] ,
     \sb_8__1__5_chany_top_out[1] ,
     \sb_8__1__5_chany_top_out[2] ,
@@ -15835,6 +33234,8 @@ module fpga_core (IO_ISOL_N,
     \cby_8__1__6_chany_top_out[18] ,
     \cby_8__1__6_chany_top_out[19] }));
  cby_2__1_ cby_8__8_ (.IO_ISOL_N(IO_ISOL_N),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_clb_63_ccff_tail),
     .ccff_tail(grid_io_right_0_ccff_tail),
     .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[8]),
@@ -15863,8 +33264,6 @@ module fpga_core (IO_ISOL_N,
     .prog_clk_0_S_out(\prog_clk_0_wires[222] ),
     .prog_clk_0_W_in(\prog_clk_0_wires[221] ),
     .right_grid_pin_0_(cby_8__1__7_right_grid_pin_0_),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chany_bottom_in({\sb_8__1__6_chany_top_out[0] ,
     \sb_8__1__6_chany_top_out[1] ,
     \sb_8__1__6_chany_top_out[2] ,
@@ -15949,6 +33348,8 @@ module fpga_core (IO_ISOL_N,
     .SC_OUT_BOT(\scff_Wires[17] ),
     .Test_en_E_in(\Test_enWires[16] ),
     .Test_en_W_in(\Test_enWires[16] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_left_0_ccff_tail),
     .ccff_tail(grid_clb_0_ccff_tail),
     .clk_0_N_in(\clk_1_wires[4] ),
@@ -16022,13 +33423,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__0_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__0_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__0_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__0_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__0_bottom_grid_pin_9_));
  grid_clb grid_clb_1__2_ (.SC_IN_TOP(\scff_Wires[13] ),
     .SC_OUT_BOT(\scff_Wires[14] ),
     .Test_en_E_in(\Test_enWires[30] ),
     .Test_en_W_in(\Test_enWires[30] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[0] ),
     .ccff_head(grid_io_left_1_ccff_tail),
     .ccff_tail(grid_clb_1_ccff_tail),
@@ -16103,13 +33504,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__1_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__1_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__1_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__1_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__1_bottom_grid_pin_9_));
  grid_clb grid_clb_1__3_ (.SC_IN_TOP(\scff_Wires[11] ),
     .SC_OUT_BOT(\scff_Wires[12] ),
     .Test_en_E_in(\Test_enWires[44] ),
     .Test_en_W_in(\Test_enWires[44] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[1] ),
     .ccff_head(grid_io_left_2_ccff_tail),
     .ccff_tail(grid_clb_2_ccff_tail),
@@ -16184,13 +33585,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__2_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__2_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__2_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__2_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__2_bottom_grid_pin_9_));
  grid_clb grid_clb_1__4_ (.SC_IN_TOP(\scff_Wires[9] ),
     .SC_OUT_BOT(\scff_Wires[10] ),
     .Test_en_E_in(\Test_enWires[58] ),
     .Test_en_W_in(\Test_enWires[58] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[2] ),
     .ccff_head(grid_io_left_3_ccff_tail),
     .ccff_tail(grid_clb_3_ccff_tail),
@@ -16265,13 +33666,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__3_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__3_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__3_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__3_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__3_bottom_grid_pin_9_));
  grid_clb grid_clb_1__5_ (.SC_IN_TOP(\scff_Wires[7] ),
     .SC_OUT_BOT(\scff_Wires[8] ),
     .Test_en_E_in(\Test_enWires[72] ),
     .Test_en_W_in(\Test_enWires[72] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[3] ),
     .ccff_head(grid_io_left_4_ccff_tail),
     .ccff_tail(grid_clb_4_ccff_tail),
@@ -16346,13 +33747,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__4_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__4_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__4_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__4_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__4_bottom_grid_pin_9_));
  grid_clb grid_clb_1__6_ (.SC_IN_TOP(\scff_Wires[5] ),
     .SC_OUT_BOT(\scff_Wires[6] ),
     .Test_en_E_in(\Test_enWires[86] ),
     .Test_en_W_in(\Test_enWires[86] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[4] ),
     .ccff_head(grid_io_left_5_ccff_tail),
     .ccff_tail(grid_clb_5_ccff_tail),
@@ -16427,13 +33828,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__5_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__5_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__5_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__5_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__5_bottom_grid_pin_9_));
  grid_clb grid_clb_1__7_ (.SC_IN_TOP(\scff_Wires[3] ),
     .SC_OUT_BOT(\scff_Wires[4] ),
     .Test_en_E_in(\Test_enWires[100] ),
     .Test_en_W_in(\Test_enWires[100] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[5] ),
     .ccff_head(grid_io_left_6_ccff_tail),
     .ccff_tail(grid_clb_6_ccff_tail),
@@ -16508,13 +33909,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__6_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__6_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__6_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__6_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__6_bottom_grid_pin_9_));
  grid_clb grid_clb_1__8_ (.SC_IN_TOP(\scff_Wires[1] ),
     .SC_OUT_BOT(\scff_Wires[2] ),
     .Test_en_E_in(\Test_enWires[114] ),
     .Test_en_W_in(\Test_enWires[114] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[6] ),
     .ccff_head(grid_io_left_7_ccff_tail),
     .ccff_tail(grid_clb_7_ccff_tail),
@@ -16590,14 +33991,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__0_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__0_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__0_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__0_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__0_bottom_grid_pin_9_));
  grid_clb grid_clb_2__1_ (.SC_IN_TOP(\scff_Wires[20] ),
     .SC_OUT_TOP(\scff_Wires[21] ),
     .Test_en_E_in(\Test_enWires[17] ),
     .Test_en_W_in(\Test_enWires[17] ),
     .Test_en_W_out(\Test_enWires[18] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__0_ccff_tail),
     .ccff_tail(grid_clb_8_ccff_tail),
     .clk_0_N_in(\clk_1_wires[6] ),
@@ -16670,14 +34071,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__7_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__7_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__7_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__7_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__7_bottom_grid_pin_9_));
  grid_clb grid_clb_2__2_ (.SC_IN_TOP(\scff_Wires[22] ),
     .SC_OUT_TOP(\scff_Wires[23] ),
     .Test_en_E_in(\Test_enWires[31] ),
     .Test_en_W_in(\Test_enWires[31] ),
     .Test_en_W_out(\Test_enWires[32] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[7] ),
     .ccff_head(cby_1__1__1_ccff_tail),
     .ccff_tail(grid_clb_9_ccff_tail),
@@ -16751,14 +34152,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__8_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__8_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__8_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__8_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__8_bottom_grid_pin_9_));
  grid_clb grid_clb_2__3_ (.SC_IN_TOP(\scff_Wires[24] ),
     .SC_OUT_TOP(\scff_Wires[25] ),
     .Test_en_E_in(\Test_enWires[45] ),
     .Test_en_W_in(\Test_enWires[45] ),
     .Test_en_W_out(\Test_enWires[46] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[8] ),
     .ccff_head(cby_1__1__2_ccff_tail),
     .ccff_tail(grid_clb_10_ccff_tail),
@@ -16832,14 +34233,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__9_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__9_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__9_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__9_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__9_bottom_grid_pin_9_));
  grid_clb grid_clb_2__4_ (.SC_IN_TOP(\scff_Wires[26] ),
     .SC_OUT_TOP(\scff_Wires[27] ),
     .Test_en_E_in(\Test_enWires[59] ),
     .Test_en_W_in(\Test_enWires[59] ),
     .Test_en_W_out(\Test_enWires[60] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[9] ),
     .ccff_head(cby_1__1__3_ccff_tail),
     .ccff_tail(grid_clb_11_ccff_tail),
@@ -16913,14 +34314,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__10_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__10_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__10_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__10_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__10_bottom_grid_pin_9_));
  grid_clb grid_clb_2__5_ (.SC_IN_TOP(\scff_Wires[28] ),
     .SC_OUT_TOP(\scff_Wires[29] ),
     .Test_en_E_in(\Test_enWires[73] ),
     .Test_en_W_in(\Test_enWires[73] ),
     .Test_en_W_out(\Test_enWires[74] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[10] ),
     .ccff_head(cby_1__1__4_ccff_tail),
     .ccff_tail(grid_clb_12_ccff_tail),
@@ -16994,14 +34395,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__11_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__11_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__11_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__11_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__11_bottom_grid_pin_9_));
  grid_clb grid_clb_2__6_ (.SC_IN_TOP(\scff_Wires[30] ),
     .SC_OUT_TOP(\scff_Wires[31] ),
     .Test_en_E_in(\Test_enWires[87] ),
     .Test_en_W_in(\Test_enWires[87] ),
     .Test_en_W_out(\Test_enWires[88] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[11] ),
     .ccff_head(cby_1__1__5_ccff_tail),
     .ccff_tail(grid_clb_13_ccff_tail),
@@ -17075,14 +34476,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__12_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__12_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__12_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__12_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__12_bottom_grid_pin_9_));
  grid_clb grid_clb_2__7_ (.SC_IN_TOP(\scff_Wires[32] ),
     .SC_OUT_TOP(\scff_Wires[33] ),
     .Test_en_E_in(\Test_enWires[101] ),
     .Test_en_W_in(\Test_enWires[101] ),
     .Test_en_W_out(\Test_enWires[102] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[12] ),
     .ccff_head(cby_1__1__6_ccff_tail),
     .ccff_tail(grid_clb_14_ccff_tail),
@@ -17156,14 +34557,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__13_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__13_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__13_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__13_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__13_bottom_grid_pin_9_));
  grid_clb grid_clb_2__8_ (.SC_IN_TOP(\scff_Wires[34] ),
     .SC_OUT_TOP(\scff_Wires[35] ),
     .Test_en_E_in(\Test_enWires[115] ),
     .Test_en_W_in(\Test_enWires[115] ),
     .Test_en_W_out(\Test_enWires[116] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[13] ),
     .ccff_head(cby_1__1__7_ccff_tail),
     .ccff_tail(grid_clb_15_ccff_tail),
@@ -17238,14 +34639,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__1_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__1_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__1_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__1_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__1_bottom_grid_pin_9_));
  grid_clb grid_clb_3__1_ (.SC_IN_TOP(\scff_Wires[52] ),
     .SC_OUT_BOT(\scff_Wires[54] ),
     .Test_en_E_in(\Test_enWires[19] ),
     .Test_en_W_in(\Test_enWires[19] ),
     .Test_en_W_out(\Test_enWires[20] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__8_ccff_tail),
     .ccff_tail(grid_clb_16_ccff_tail),
     .clk_0_N_in(\clk_1_wires[32] ),
@@ -17318,14 +34719,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__14_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__14_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__14_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__14_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__14_bottom_grid_pin_9_));
  grid_clb grid_clb_3__2_ (.SC_IN_TOP(\scff_Wires[50] ),
     .SC_OUT_BOT(\scff_Wires[51] ),
     .Test_en_E_in(\Test_enWires[33] ),
     .Test_en_W_in(\Test_enWires[33] ),
     .Test_en_W_out(\Test_enWires[34] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[14] ),
     .ccff_head(cby_1__1__9_ccff_tail),
     .ccff_tail(grid_clb_17_ccff_tail),
@@ -17399,14 +34800,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__15_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__15_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__15_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__15_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__15_bottom_grid_pin_9_));
  grid_clb grid_clb_3__3_ (.SC_IN_TOP(\scff_Wires[48] ),
     .SC_OUT_BOT(\scff_Wires[49] ),
     .Test_en_E_in(\Test_enWires[47] ),
     .Test_en_W_in(\Test_enWires[47] ),
     .Test_en_W_out(\Test_enWires[48] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[15] ),
     .ccff_head(cby_1__1__10_ccff_tail),
     .ccff_tail(grid_clb_18_ccff_tail),
@@ -17480,14 +34881,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__16_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__16_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__16_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__16_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__16_bottom_grid_pin_9_));
  grid_clb grid_clb_3__4_ (.SC_IN_TOP(\scff_Wires[46] ),
     .SC_OUT_BOT(\scff_Wires[47] ),
     .Test_en_E_in(\Test_enWires[61] ),
     .Test_en_W_in(\Test_enWires[61] ),
     .Test_en_W_out(\Test_enWires[62] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[16] ),
     .ccff_head(cby_1__1__11_ccff_tail),
     .ccff_tail(grid_clb_19_ccff_tail),
@@ -17561,14 +34962,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__17_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__17_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__17_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__17_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__17_bottom_grid_pin_9_));
  grid_clb grid_clb_3__5_ (.SC_IN_TOP(\scff_Wires[44] ),
     .SC_OUT_BOT(\scff_Wires[45] ),
     .Test_en_E_in(\Test_enWires[75] ),
     .Test_en_W_in(\Test_enWires[75] ),
     .Test_en_W_out(\Test_enWires[76] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[17] ),
     .ccff_head(cby_1__1__12_ccff_tail),
     .ccff_tail(grid_clb_20_ccff_tail),
@@ -17642,14 +35043,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__18_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__18_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__18_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__18_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__18_bottom_grid_pin_9_));
  grid_clb grid_clb_3__6_ (.SC_IN_TOP(\scff_Wires[42] ),
     .SC_OUT_BOT(\scff_Wires[43] ),
     .Test_en_E_in(\Test_enWires[89] ),
     .Test_en_W_in(\Test_enWires[89] ),
     .Test_en_W_out(\Test_enWires[90] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[18] ),
     .ccff_head(cby_1__1__13_ccff_tail),
     .ccff_tail(grid_clb_21_ccff_tail),
@@ -17723,14 +35124,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__19_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__19_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__19_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__19_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__19_bottom_grid_pin_9_));
  grid_clb grid_clb_3__7_ (.SC_IN_TOP(\scff_Wires[40] ),
     .SC_OUT_BOT(\scff_Wires[41] ),
     .Test_en_E_in(\Test_enWires[103] ),
     .Test_en_W_in(\Test_enWires[103] ),
     .Test_en_W_out(\Test_enWires[104] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[19] ),
     .ccff_head(cby_1__1__14_ccff_tail),
     .ccff_tail(grid_clb_22_ccff_tail),
@@ -17804,14 +35205,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__20_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__20_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__20_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__20_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__20_bottom_grid_pin_9_));
  grid_clb grid_clb_3__8_ (.SC_IN_TOP(\scff_Wires[38] ),
     .SC_OUT_BOT(\scff_Wires[39] ),
     .Test_en_E_in(\Test_enWires[117] ),
     .Test_en_W_in(\Test_enWires[117] ),
     .Test_en_W_out(\Test_enWires[118] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[20] ),
     .ccff_head(cby_1__1__15_ccff_tail),
     .ccff_tail(grid_clb_23_ccff_tail),
@@ -17886,14 +35287,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__2_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__2_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__2_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__2_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__2_bottom_grid_pin_9_));
  grid_clb grid_clb_4__1_ (.SC_IN_TOP(\scff_Wires[57] ),
     .SC_OUT_TOP(\scff_Wires[58] ),
     .Test_en_E_in(\Test_enWires[21] ),
     .Test_en_W_in(\Test_enWires[21] ),
     .Test_en_W_out(\Test_enWires[22] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__16_ccff_tail),
     .ccff_tail(grid_clb_24_ccff_tail),
     .clk_0_N_in(\clk_1_wires[34] ),
@@ -17966,14 +35367,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__21_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__21_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__21_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__21_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__21_bottom_grid_pin_9_));
  grid_clb grid_clb_4__2_ (.SC_IN_TOP(\scff_Wires[59] ),
     .SC_OUT_TOP(\scff_Wires[60] ),
     .Test_en_E_in(\Test_enWires[35] ),
     .Test_en_W_in(\Test_enWires[35] ),
     .Test_en_W_out(\Test_enWires[36] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[21] ),
     .ccff_head(cby_1__1__17_ccff_tail),
     .ccff_tail(grid_clb_25_ccff_tail),
@@ -18047,14 +35448,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__22_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__22_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__22_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__22_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__22_bottom_grid_pin_9_));
  grid_clb grid_clb_4__3_ (.SC_IN_TOP(\scff_Wires[61] ),
     .SC_OUT_TOP(\scff_Wires[62] ),
     .Test_en_E_in(\Test_enWires[49] ),
     .Test_en_W_in(\Test_enWires[49] ),
     .Test_en_W_out(\Test_enWires[50] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[22] ),
     .ccff_head(cby_1__1__18_ccff_tail),
     .ccff_tail(grid_clb_26_ccff_tail),
@@ -18128,14 +35529,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__23_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__23_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__23_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__23_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__23_bottom_grid_pin_9_));
  grid_clb grid_clb_4__4_ (.SC_IN_TOP(\scff_Wires[63] ),
     .SC_OUT_TOP(\scff_Wires[64] ),
     .Test_en_E_in(\Test_enWires[63] ),
     .Test_en_W_in(\Test_enWires[63] ),
     .Test_en_W_out(\Test_enWires[64] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[23] ),
     .ccff_head(cby_1__1__19_ccff_tail),
     .ccff_tail(grid_clb_27_ccff_tail),
@@ -18209,14 +35610,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__24_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__24_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__24_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__24_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__24_bottom_grid_pin_9_));
  grid_clb grid_clb_4__5_ (.SC_IN_TOP(\scff_Wires[65] ),
     .SC_OUT_TOP(\scff_Wires[66] ),
     .Test_en_E_in(\Test_enWires[77] ),
     .Test_en_W_in(\Test_enWires[77] ),
     .Test_en_W_out(\Test_enWires[78] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[24] ),
     .ccff_head(cby_1__1__20_ccff_tail),
     .ccff_tail(grid_clb_28_ccff_tail),
@@ -18290,14 +35691,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__25_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__25_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__25_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__25_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__25_bottom_grid_pin_9_));
  grid_clb grid_clb_4__6_ (.SC_IN_TOP(\scff_Wires[67] ),
     .SC_OUT_TOP(\scff_Wires[68] ),
     .Test_en_E_in(\Test_enWires[91] ),
     .Test_en_W_in(\Test_enWires[91] ),
     .Test_en_W_out(\Test_enWires[92] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[25] ),
     .ccff_head(cby_1__1__21_ccff_tail),
     .ccff_tail(grid_clb_29_ccff_tail),
@@ -18371,14 +35772,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__26_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__26_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__26_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__26_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__26_bottom_grid_pin_9_));
  grid_clb grid_clb_4__7_ (.SC_IN_TOP(\scff_Wires[69] ),
     .SC_OUT_TOP(\scff_Wires[70] ),
     .Test_en_E_in(\Test_enWires[105] ),
     .Test_en_W_in(\Test_enWires[105] ),
     .Test_en_W_out(\Test_enWires[106] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[26] ),
     .ccff_head(cby_1__1__22_ccff_tail),
     .ccff_tail(grid_clb_30_ccff_tail),
@@ -18452,14 +35853,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__27_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__27_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__27_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__27_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__27_bottom_grid_pin_9_));
  grid_clb grid_clb_4__8_ (.SC_IN_TOP(\scff_Wires[71] ),
     .SC_OUT_TOP(\scff_Wires[72] ),
     .Test_en_E_in(\Test_enWires[119] ),
     .Test_en_W_in(\Test_enWires[119] ),
     .Test_en_W_out(\Test_enWires[120] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[27] ),
     .ccff_head(cby_1__1__23_ccff_tail),
     .ccff_tail(grid_clb_31_ccff_tail),
@@ -18534,14 +35935,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__3_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__3_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__3_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__3_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__3_bottom_grid_pin_9_));
  grid_clb grid_clb_5__1_ (.SC_IN_TOP(\scff_Wires[89] ),
     .SC_OUT_BOT(\scff_Wires[91] ),
     .Test_en_E_in(\Test_enWires[23] ),
     .Test_en_E_out(\Test_enWires[24] ),
     .Test_en_W_in(\Test_enWires[23] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__24_ccff_tail),
     .ccff_tail(grid_clb_32_ccff_tail),
     .clk_0_N_in(\clk_1_wires[60] ),
@@ -18614,14 +36015,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__28_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__28_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__28_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__28_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__28_bottom_grid_pin_9_));
  grid_clb grid_clb_5__2_ (.SC_IN_TOP(\scff_Wires[87] ),
     .SC_OUT_BOT(\scff_Wires[88] ),
     .Test_en_E_in(\Test_enWires[37] ),
     .Test_en_E_out(\Test_enWires[38] ),
     .Test_en_W_in(\Test_enWires[37] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[28] ),
     .ccff_head(cby_1__1__25_ccff_tail),
     .ccff_tail(grid_clb_33_ccff_tail),
@@ -18695,14 +36096,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__29_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__29_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__29_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__29_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__29_bottom_grid_pin_9_));
  grid_clb grid_clb_5__3_ (.SC_IN_TOP(\scff_Wires[85] ),
     .SC_OUT_BOT(\scff_Wires[86] ),
     .Test_en_E_in(\Test_enWires[51] ),
     .Test_en_E_out(\Test_enWires[52] ),
     .Test_en_W_in(\Test_enWires[51] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[29] ),
     .ccff_head(cby_1__1__26_ccff_tail),
     .ccff_tail(grid_clb_34_ccff_tail),
@@ -18776,14 +36177,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__30_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__30_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__30_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__30_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__30_bottom_grid_pin_9_));
  grid_clb grid_clb_5__4_ (.SC_IN_TOP(\scff_Wires[83] ),
     .SC_OUT_BOT(\scff_Wires[84] ),
     .Test_en_E_in(\Test_enWires[65] ),
     .Test_en_E_out(\Test_enWires[66] ),
     .Test_en_W_in(\Test_enWires[65] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[30] ),
     .ccff_head(cby_1__1__27_ccff_tail),
     .ccff_tail(grid_clb_35_ccff_tail),
@@ -18857,14 +36258,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__31_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__31_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__31_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__31_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__31_bottom_grid_pin_9_));
  grid_clb grid_clb_5__5_ (.SC_IN_TOP(\scff_Wires[81] ),
     .SC_OUT_BOT(\scff_Wires[82] ),
     .Test_en_E_in(\Test_enWires[79] ),
     .Test_en_E_out(\Test_enWires[80] ),
     .Test_en_W_in(\Test_enWires[79] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[31] ),
     .ccff_head(cby_1__1__28_ccff_tail),
     .ccff_tail(grid_clb_36_ccff_tail),
@@ -18938,14 +36339,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__32_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__32_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__32_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__32_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__32_bottom_grid_pin_9_));
  grid_clb grid_clb_5__6_ (.SC_IN_TOP(\scff_Wires[79] ),
     .SC_OUT_BOT(\scff_Wires[80] ),
     .Test_en_E_in(\Test_enWires[93] ),
     .Test_en_E_out(\Test_enWires[94] ),
     .Test_en_W_in(\Test_enWires[93] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[32] ),
     .ccff_head(cby_1__1__29_ccff_tail),
     .ccff_tail(grid_clb_37_ccff_tail),
@@ -19019,14 +36420,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__33_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__33_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__33_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__33_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__33_bottom_grid_pin_9_));
  grid_clb grid_clb_5__7_ (.SC_IN_TOP(\scff_Wires[77] ),
     .SC_OUT_BOT(\scff_Wires[78] ),
     .Test_en_E_in(\Test_enWires[107] ),
     .Test_en_E_out(\Test_enWires[108] ),
     .Test_en_W_in(\Test_enWires[107] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[33] ),
     .ccff_head(cby_1__1__30_ccff_tail),
     .ccff_tail(grid_clb_38_ccff_tail),
@@ -19100,14 +36501,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__34_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__34_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__34_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__34_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__34_bottom_grid_pin_9_));
  grid_clb grid_clb_5__8_ (.SC_IN_TOP(\scff_Wires[75] ),
     .SC_OUT_BOT(\scff_Wires[76] ),
     .Test_en_E_in(\Test_enWires[121] ),
     .Test_en_E_out(\Test_enWires[122] ),
     .Test_en_W_in(\Test_enWires[121] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[34] ),
     .ccff_head(cby_1__1__31_ccff_tail),
     .ccff_tail(grid_clb_39_ccff_tail),
@@ -19182,14 +36583,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__4_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__4_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__4_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__4_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__4_bottom_grid_pin_9_));
  grid_clb grid_clb_6__1_ (.SC_IN_TOP(\scff_Wires[94] ),
     .SC_OUT_TOP(\scff_Wires[95] ),
     .Test_en_E_in(\Test_enWires[25] ),
     .Test_en_E_out(\Test_enWires[26] ),
     .Test_en_W_in(\Test_enWires[25] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__32_ccff_tail),
     .ccff_tail(grid_clb_40_ccff_tail),
     .clk_0_N_in(\clk_1_wires[62] ),
@@ -19262,14 +36663,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__35_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__35_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__35_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__35_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__35_bottom_grid_pin_9_));
  grid_clb grid_clb_6__2_ (.SC_IN_TOP(\scff_Wires[96] ),
     .SC_OUT_TOP(\scff_Wires[97] ),
     .Test_en_E_in(\Test_enWires[39] ),
     .Test_en_E_out(\Test_enWires[40] ),
     .Test_en_W_in(\Test_enWires[39] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[35] ),
     .ccff_head(cby_1__1__33_ccff_tail),
     .ccff_tail(grid_clb_41_ccff_tail),
@@ -19343,14 +36744,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__36_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__36_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__36_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__36_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__36_bottom_grid_pin_9_));
  grid_clb grid_clb_6__3_ (.SC_IN_TOP(\scff_Wires[98] ),
     .SC_OUT_TOP(\scff_Wires[99] ),
     .Test_en_E_in(\Test_enWires[53] ),
     .Test_en_E_out(\Test_enWires[54] ),
     .Test_en_W_in(\Test_enWires[53] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[36] ),
     .ccff_head(cby_1__1__34_ccff_tail),
     .ccff_tail(grid_clb_42_ccff_tail),
@@ -19424,14 +36825,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__37_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__37_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__37_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__37_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__37_bottom_grid_pin_9_));
  grid_clb grid_clb_6__4_ (.SC_IN_TOP(\scff_Wires[100] ),
     .SC_OUT_TOP(\scff_Wires[101] ),
     .Test_en_E_in(\Test_enWires[67] ),
     .Test_en_E_out(\Test_enWires[68] ),
     .Test_en_W_in(\Test_enWires[67] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[37] ),
     .ccff_head(cby_1__1__35_ccff_tail),
     .ccff_tail(grid_clb_43_ccff_tail),
@@ -19505,14 +36906,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__38_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__38_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__38_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__38_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__38_bottom_grid_pin_9_));
  grid_clb grid_clb_6__5_ (.SC_IN_TOP(\scff_Wires[102] ),
     .SC_OUT_TOP(\scff_Wires[103] ),
     .Test_en_E_in(\Test_enWires[81] ),
     .Test_en_E_out(\Test_enWires[82] ),
     .Test_en_W_in(\Test_enWires[81] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[38] ),
     .ccff_head(cby_1__1__36_ccff_tail),
     .ccff_tail(grid_clb_44_ccff_tail),
@@ -19586,14 +36987,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__39_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__39_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__39_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__39_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__39_bottom_grid_pin_9_));
  grid_clb grid_clb_6__6_ (.SC_IN_TOP(\scff_Wires[104] ),
     .SC_OUT_TOP(\scff_Wires[105] ),
     .Test_en_E_in(\Test_enWires[95] ),
     .Test_en_E_out(\Test_enWires[96] ),
     .Test_en_W_in(\Test_enWires[95] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[39] ),
     .ccff_head(cby_1__1__37_ccff_tail),
     .ccff_tail(grid_clb_45_ccff_tail),
@@ -19667,14 +37068,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__40_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__40_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__40_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__40_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__40_bottom_grid_pin_9_));
  grid_clb grid_clb_6__7_ (.SC_IN_TOP(\scff_Wires[106] ),
     .SC_OUT_TOP(\scff_Wires[107] ),
     .Test_en_E_in(\Test_enWires[109] ),
     .Test_en_E_out(\Test_enWires[110] ),
     .Test_en_W_in(\Test_enWires[109] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[40] ),
     .ccff_head(cby_1__1__38_ccff_tail),
     .ccff_tail(grid_clb_46_ccff_tail),
@@ -19748,14 +37149,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__41_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__41_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__41_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__41_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__41_bottom_grid_pin_9_));
  grid_clb grid_clb_6__8_ (.SC_IN_TOP(\scff_Wires[108] ),
     .SC_OUT_TOP(\scff_Wires[109] ),
     .Test_en_E_in(\Test_enWires[123] ),
     .Test_en_E_out(\Test_enWires[124] ),
     .Test_en_W_in(\Test_enWires[123] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[41] ),
     .ccff_head(cby_1__1__39_ccff_tail),
     .ccff_tail(grid_clb_47_ccff_tail),
@@ -19830,14 +37231,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__5_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__5_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__5_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__5_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__5_bottom_grid_pin_9_));
  grid_clb grid_clb_7__1_ (.SC_IN_TOP(\scff_Wires[126] ),
     .SC_OUT_BOT(\scff_Wires[128] ),
     .Test_en_E_in(\Test_enWires[27] ),
     .Test_en_E_out(\Test_enWires[28] ),
     .Test_en_W_in(\Test_enWires[27] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__40_ccff_tail),
     .ccff_tail(grid_clb_48_ccff_tail),
     .clk_0_N_in(\clk_1_wires[88] ),
@@ -19910,14 +37311,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__42_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__42_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__42_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__42_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__42_bottom_grid_pin_9_));
  grid_clb grid_clb_7__2_ (.SC_IN_TOP(\scff_Wires[124] ),
     .SC_OUT_BOT(\scff_Wires[125] ),
     .Test_en_E_in(\Test_enWires[41] ),
     .Test_en_E_out(\Test_enWires[42] ),
     .Test_en_W_in(\Test_enWires[41] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[42] ),
     .ccff_head(cby_1__1__41_ccff_tail),
     .ccff_tail(grid_clb_49_ccff_tail),
@@ -19991,14 +37392,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__43_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__43_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__43_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__43_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__43_bottom_grid_pin_9_));
  grid_clb grid_clb_7__3_ (.SC_IN_TOP(\scff_Wires[122] ),
     .SC_OUT_BOT(\scff_Wires[123] ),
     .Test_en_E_in(\Test_enWires[55] ),
     .Test_en_E_out(\Test_enWires[56] ),
     .Test_en_W_in(\Test_enWires[55] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[43] ),
     .ccff_head(cby_1__1__42_ccff_tail),
     .ccff_tail(grid_clb_50_ccff_tail),
@@ -20072,14 +37473,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__44_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__44_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__44_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__44_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__44_bottom_grid_pin_9_));
  grid_clb grid_clb_7__4_ (.SC_IN_TOP(\scff_Wires[120] ),
     .SC_OUT_BOT(\scff_Wires[121] ),
     .Test_en_E_in(\Test_enWires[69] ),
     .Test_en_E_out(\Test_enWires[70] ),
     .Test_en_W_in(\Test_enWires[69] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[44] ),
     .ccff_head(cby_1__1__43_ccff_tail),
     .ccff_tail(grid_clb_51_ccff_tail),
@@ -20153,14 +37554,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__45_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__45_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__45_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__45_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__45_bottom_grid_pin_9_));
  grid_clb grid_clb_7__5_ (.SC_IN_TOP(\scff_Wires[118] ),
     .SC_OUT_BOT(\scff_Wires[119] ),
     .Test_en_E_in(\Test_enWires[83] ),
     .Test_en_E_out(\Test_enWires[84] ),
     .Test_en_W_in(\Test_enWires[83] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[45] ),
     .ccff_head(cby_1__1__44_ccff_tail),
     .ccff_tail(grid_clb_52_ccff_tail),
@@ -20234,14 +37635,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__46_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__46_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__46_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__46_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__46_bottom_grid_pin_9_));
  grid_clb grid_clb_7__6_ (.SC_IN_TOP(\scff_Wires[116] ),
     .SC_OUT_BOT(\scff_Wires[117] ),
     .Test_en_E_in(\Test_enWires[97] ),
     .Test_en_E_out(\Test_enWires[98] ),
     .Test_en_W_in(\Test_enWires[97] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[46] ),
     .ccff_head(cby_1__1__45_ccff_tail),
     .ccff_tail(grid_clb_53_ccff_tail),
@@ -20315,14 +37716,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__47_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__47_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__47_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__47_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__47_bottom_grid_pin_9_));
  grid_clb grid_clb_7__7_ (.SC_IN_TOP(\scff_Wires[114] ),
     .SC_OUT_BOT(\scff_Wires[115] ),
     .Test_en_E_in(\Test_enWires[111] ),
     .Test_en_E_out(\Test_enWires[112] ),
     .Test_en_W_in(\Test_enWires[111] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[47] ),
     .ccff_head(cby_1__1__46_ccff_tail),
     .ccff_tail(grid_clb_54_ccff_tail),
@@ -20396,14 +37797,14 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__48_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__48_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__48_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__48_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__48_bottom_grid_pin_9_));
  grid_clb grid_clb_7__8_ (.SC_IN_TOP(\scff_Wires[112] ),
     .SC_OUT_BOT(\scff_Wires[113] ),
     .Test_en_E_in(\Test_enWires[125] ),
     .Test_en_E_out(\Test_enWires[126] ),
     .Test_en_W_in(\Test_enWires[125] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[48] ),
     .ccff_head(cby_1__1__47_ccff_tail),
     .ccff_tail(grid_clb_55_ccff_tail),
@@ -20478,13 +37879,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__6_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__6_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__6_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__6_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__8__6_bottom_grid_pin_9_));
  grid_clb grid_clb_8__1_ (.SC_IN_TOP(\scff_Wires[131] ),
     .SC_OUT_TOP(\scff_Wires[132] ),
     .Test_en_E_in(\Test_enWires[29] ),
     .Test_en_W_in(\Test_enWires[29] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(cby_1__1__48_ccff_tail),
     .ccff_tail(grid_clb_56_ccff_tail),
     .clk_0_N_in(\clk_1_wires[90] ),
@@ -20557,13 +37958,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__49_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__49_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__49_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__49_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__49_bottom_grid_pin_9_));
  grid_clb grid_clb_8__2_ (.SC_IN_TOP(\scff_Wires[133] ),
     .SC_OUT_TOP(\scff_Wires[134] ),
     .Test_en_E_in(\Test_enWires[43] ),
     .Test_en_W_in(\Test_enWires[43] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[49] ),
     .ccff_head(cby_1__1__49_ccff_tail),
     .ccff_tail(grid_clb_57_ccff_tail),
@@ -20637,13 +38038,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__50_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__50_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__50_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__50_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__50_bottom_grid_pin_9_));
  grid_clb grid_clb_8__3_ (.SC_IN_TOP(\scff_Wires[135] ),
     .SC_OUT_TOP(\scff_Wires[136] ),
     .Test_en_E_in(\Test_enWires[57] ),
     .Test_en_W_in(\Test_enWires[57] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[50] ),
     .ccff_head(cby_1__1__50_ccff_tail),
     .ccff_tail(grid_clb_58_ccff_tail),
@@ -20717,13 +38118,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__51_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__51_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__51_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__51_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__51_bottom_grid_pin_9_));
  grid_clb grid_clb_8__4_ (.SC_IN_TOP(\scff_Wires[137] ),
     .SC_OUT_TOP(\scff_Wires[138] ),
     .Test_en_E_in(\Test_enWires[71] ),
     .Test_en_W_in(\Test_enWires[71] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[51] ),
     .ccff_head(cby_1__1__51_ccff_tail),
     .ccff_tail(grid_clb_59_ccff_tail),
@@ -20797,13 +38198,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__52_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__52_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__52_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__52_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__52_bottom_grid_pin_9_));
  grid_clb grid_clb_8__5_ (.SC_IN_TOP(\scff_Wires[139] ),
     .SC_OUT_TOP(\scff_Wires[140] ),
     .Test_en_E_in(\Test_enWires[85] ),
     .Test_en_W_in(\Test_enWires[85] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[52] ),
     .ccff_head(cby_1__1__52_ccff_tail),
     .ccff_tail(grid_clb_60_ccff_tail),
@@ -20877,13 +38278,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__53_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__53_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__53_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__53_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__53_bottom_grid_pin_9_));
  grid_clb grid_clb_8__6_ (.SC_IN_TOP(\scff_Wires[141] ),
     .SC_OUT_TOP(\scff_Wires[142] ),
     .Test_en_E_in(\Test_enWires[99] ),
     .Test_en_W_in(\Test_enWires[99] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[53] ),
     .ccff_head(cby_1__1__53_ccff_tail),
     .ccff_tail(grid_clb_61_ccff_tail),
@@ -20957,13 +38358,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__54_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__54_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__54_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__54_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__54_bottom_grid_pin_9_));
  grid_clb grid_clb_8__7_ (.SC_IN_TOP(\scff_Wires[143] ),
     .SC_OUT_TOP(\scff_Wires[144] ),
     .Test_en_E_in(\Test_enWires[113] ),
     .Test_en_W_in(\Test_enWires[113] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[54] ),
     .ccff_head(cby_1__1__54_ccff_tail),
     .ccff_tail(grid_clb_62_ccff_tail),
@@ -21037,13 +38438,13 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__1__55_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__1__55_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__1__55_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__1__55_bottom_grid_pin_9_),
-    .VPWR(VPWR),
-    .VGND(VGND));
+    .top_width_0_height_0__pin_9_(cbx_1__1__55_bottom_grid_pin_9_));
  grid_clb grid_clb_8__8_ (.SC_IN_TOP(\scff_Wires[145] ),
     .SC_OUT_TOP(\scff_Wires[146] ),
     .Test_en_E_in(\Test_enWires[127] ),
     .Test_en_W_in(\Test_enWires[127] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_width_0_height_0__pin_50_(\regin_feedthrough_wires[55] ),
     .ccff_head(cby_1__1__55_ccff_tail),
     .ccff_tail(grid_clb_63_ccff_tail),
@@ -21118,10 +38519,10 @@ module fpga_core (IO_ISOL_N,
     .top_width_0_height_0__pin_6_(cbx_1__8__7_bottom_grid_pin_6_),
     .top_width_0_height_0__pin_7_(cbx_1__8__7_bottom_grid_pin_7_),
     .top_width_0_height_0__pin_8_(cbx_1__8__7_bottom_grid_pin_8_),
-    .top_width_0_height_0__pin_9_(cbx_1__8__7_bottom_grid_pin_9_),
+    .top_width_0_height_0__pin_9_(cbx_1__8__7_bottom_grid_pin_9_));
+ sb_0__0_ sb_0__0_ (.VGND(VGND),
     .VPWR(VPWR),
-    .VGND(VGND));
- sb_0__0_ sb_0__0_ (.ccff_head(grid_io_bottom_7_ccff_tail),
+    .ccff_head(grid_io_bottom_7_ccff_tail),
     .ccff_tail(ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[5] ),
     .right_bottom_grid_pin_11_(grid_io_bottom_7_top_width_0_height_0__pin_11_upper),
@@ -21134,8 +38535,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_7_(grid_io_bottom_7_top_width_0_height_0__pin_7_upper),
     .right_bottom_grid_pin_9_(grid_io_bottom_7_top_width_0_height_0__pin_9_upper),
     .top_left_grid_pin_1_(grid_io_left_0_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__0__0_chanx_left_out[0] ,
     \cbx_1__0__0_chanx_left_out[1] ,
     \cbx_1__0__0_chanx_left_out[2] ,
@@ -21216,7 +38615,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__0__0_chany_top_out[17] ,
     \sb_0__0__0_chany_top_out[18] ,
     \sb_0__0__0_chany_top_out[19] }));
- sb_0__1_ sb_0__1_ (.bottom_left_grid_pin_1_(grid_io_left_0_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_0_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__0_ccff_tail),
     .ccff_tail(sb_0__1__0_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[4] ),
@@ -21229,8 +38630,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_0_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_0_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_1_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__0_chanx_left_out[0] ,
     \cbx_1__1__0_chanx_left_out[1] ,
     \cbx_1__1__0_chanx_left_out[2] ,
@@ -21351,7 +38750,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__0_chany_top_out[17] ,
     \sb_0__1__0_chany_top_out[18] ,
     \sb_0__1__0_chany_top_out[19] }));
- sb_0__1_ sb_0__2_ (.bottom_left_grid_pin_1_(grid_io_left_1_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_1_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__1_ccff_tail),
     .ccff_tail(sb_0__1__1_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[10] ),
@@ -21364,8 +38765,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_1_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_1_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_2_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__1_chanx_left_out[0] ,
     \cbx_1__1__1_chanx_left_out[1] ,
     \cbx_1__1__1_chanx_left_out[2] ,
@@ -21486,7 +38885,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__1_chany_top_out[17] ,
     \sb_0__1__1_chany_top_out[18] ,
     \sb_0__1__1_chany_top_out[19] }));
- sb_0__1_ sb_0__3_ (.bottom_left_grid_pin_1_(grid_io_left_2_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_2_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__2_ccff_tail),
     .ccff_tail(sb_0__1__2_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[15] ),
@@ -21499,8 +38900,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_2_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_2_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_3_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__2_chanx_left_out[0] ,
     \cbx_1__1__2_chanx_left_out[1] ,
     \cbx_1__1__2_chanx_left_out[2] ,
@@ -21621,7 +39020,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__2_chany_top_out[17] ,
     \sb_0__1__2_chany_top_out[18] ,
     \sb_0__1__2_chany_top_out[19] }));
- sb_0__1_ sb_0__4_ (.bottom_left_grid_pin_1_(grid_io_left_3_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_3_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__3_ccff_tail),
     .ccff_tail(sb_0__1__3_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[20] ),
@@ -21634,8 +39035,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_3_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_3_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_4_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__3_chanx_left_out[0] ,
     \cbx_1__1__3_chanx_left_out[1] ,
     \cbx_1__1__3_chanx_left_out[2] ,
@@ -21756,7 +39155,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__3_chany_top_out[17] ,
     \sb_0__1__3_chany_top_out[18] ,
     \sb_0__1__3_chany_top_out[19] }));
- sb_0__1_ sb_0__5_ (.bottom_left_grid_pin_1_(grid_io_left_4_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_4_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__4_ccff_tail),
     .ccff_tail(sb_0__1__4_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[25] ),
@@ -21769,8 +39170,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_4_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_4_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_5_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__4_chanx_left_out[0] ,
     \cbx_1__1__4_chanx_left_out[1] ,
     \cbx_1__1__4_chanx_left_out[2] ,
@@ -21891,7 +39290,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__4_chany_top_out[17] ,
     \sb_0__1__4_chany_top_out[18] ,
     \sb_0__1__4_chany_top_out[19] }));
- sb_0__1_ sb_0__6_ (.bottom_left_grid_pin_1_(grid_io_left_5_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_5_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__5_ccff_tail),
     .ccff_tail(sb_0__1__5_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[30] ),
@@ -21904,8 +39305,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_5_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_5_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_6_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__5_chanx_left_out[0] ,
     \cbx_1__1__5_chanx_left_out[1] ,
     \cbx_1__1__5_chanx_left_out[2] ,
@@ -22026,7 +39425,9 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__5_chany_top_out[17] ,
     \sb_0__1__5_chany_top_out[18] ,
     \sb_0__1__5_chany_top_out[19] }));
- sb_0__1_ sb_0__7_ (.bottom_left_grid_pin_1_(grid_io_left_6_right_width_0_height_0__pin_1_upper),
+ sb_0__1_ sb_0__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_1_(grid_io_left_6_right_width_0_height_0__pin_1_upper),
     .ccff_head(cbx_1__1__6_ccff_tail),
     .ccff_tail(sb_0__1__6_ccff_tail),
     .prog_clk_0_E_in(\prog_clk_0_wires[35] ),
@@ -22039,8 +39440,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_6_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_6_top_width_0_height_0__pin_41_upper),
     .top_left_grid_pin_1_(grid_io_left_7_right_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__1__6_chanx_left_out[0] ,
     \cbx_1__1__6_chanx_left_out[1] ,
     \cbx_1__1__6_chanx_left_out[2] ,
@@ -22163,6 +39562,8 @@ module fpga_core (IO_ISOL_N,
     \sb_0__1__6_chany_top_out[19] }));
  sb_0__2_ sb_0__8_ (.SC_IN_TOP(sc_head),
     .SC_OUT_BOT(\scff_Wires[0] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_1_(grid_io_left_7_right_width_0_height_0__pin_1_upper),
     .ccff_head(grid_io_top_0_ccff_tail),
     .ccff_tail(sb_0__8__0_ccff_tail),
@@ -22176,8 +39577,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_7_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_7_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_0_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_right_in({\cbx_1__8__0_chanx_left_out[0] ,
     \cbx_1__8__0_chanx_left_out[1] ,
     \cbx_1__8__0_chanx_left_out[2] ,
@@ -22260,6 +39659,8 @@ module fpga_core (IO_ISOL_N,
     \sb_0__8__0_chany_bottom_out[19] }));
  sb_1__0_ sb_1__0_ (.SC_IN_TOP(\scff_Wires[18] ),
     .SC_OUT_TOP(\scff_Wires[19] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_bottom_6_ccff_tail),
     .ccff_tail(sb_1__0__0_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_7_top_width_0_height_0__pin_11_lower),
@@ -22289,8 +39690,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_0_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_0_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_0_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__0_chanx_right_out[0] ,
     \cbx_1__0__0_chanx_right_out[1] ,
     \cbx_1__0__0_chanx_right_out[2] ,
@@ -22411,7 +39810,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__0_chany_top_out[17] ,
     \sb_1__0__0_chany_top_out[18] ,
     \sb_1__0__0_chany_top_out[19] }));
- sb_1__1_ sb_1__1_ (.bottom_left_grid_pin_42_(grid_clb_0_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_0_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_0_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_0_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_0_right_width_0_height_0__pin_45_upper),
@@ -22452,8 +39853,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_1_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_1_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_1_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__0_chanx_right_out[0] ,
     \cbx_1__1__0_chanx_right_out[1] ,
     \cbx_1__1__0_chanx_right_out[2] ,
@@ -22614,7 +40013,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__0_chany_top_out[17] ,
     \sb_1__1__0_chany_top_out[18] ,
     \sb_1__1__0_chany_top_out[19] }));
- sb_1__1_ sb_1__2_ (.bottom_left_grid_pin_42_(grid_clb_1_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_1_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_1_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_1_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_1_right_width_0_height_0__pin_45_upper),
@@ -22655,8 +40056,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_2_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_2_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_2_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__1_chanx_right_out[0] ,
     \cbx_1__1__1_chanx_right_out[1] ,
     \cbx_1__1__1_chanx_right_out[2] ,
@@ -22817,7 +40216,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__1_chany_top_out[17] ,
     \sb_1__1__1_chany_top_out[18] ,
     \sb_1__1__1_chany_top_out[19] }));
- sb_1__1_ sb_1__3_ (.bottom_left_grid_pin_42_(grid_clb_2_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_2_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_2_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_2_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_2_right_width_0_height_0__pin_45_upper),
@@ -22858,8 +40259,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_3_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_3_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_3_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__2_chanx_right_out[0] ,
     \cbx_1__1__2_chanx_right_out[1] ,
     \cbx_1__1__2_chanx_right_out[2] ,
@@ -23020,7 +40419,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__2_chany_top_out[17] ,
     \sb_1__1__2_chany_top_out[18] ,
     \sb_1__1__2_chany_top_out[19] }));
- sb_1__1_ sb_1__4_ (.bottom_left_grid_pin_42_(grid_clb_3_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_3_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_3_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_3_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_3_right_width_0_height_0__pin_45_upper),
@@ -23055,8 +40456,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_4_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_4_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_4_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__3_chanx_right_out[0] ,
     \cbx_1__1__3_chanx_right_out[1] ,
     \cbx_1__1__3_chanx_right_out[2] ,
@@ -23217,7 +40616,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__3_chany_top_out[17] ,
     \sb_1__1__3_chany_top_out[18] ,
     \sb_1__1__3_chany_top_out[19] }));
- sb_1__1_ sb_1__5_ (.bottom_left_grid_pin_42_(grid_clb_4_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_4_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_4_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_4_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_4_right_width_0_height_0__pin_45_upper),
@@ -23258,8 +40659,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_5_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_5_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_5_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__4_chanx_right_out[0] ,
     \cbx_1__1__4_chanx_right_out[1] ,
     \cbx_1__1__4_chanx_right_out[2] ,
@@ -23420,7 +40819,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__4_chany_top_out[17] ,
     \sb_1__1__4_chany_top_out[18] ,
     \sb_1__1__4_chany_top_out[19] }));
- sb_1__1_ sb_1__6_ (.bottom_left_grid_pin_42_(grid_clb_5_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_5_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_5_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_5_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_5_right_width_0_height_0__pin_45_upper),
@@ -23461,8 +40862,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_6_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_6_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_6_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__5_chanx_right_out[0] ,
     \cbx_1__1__5_chanx_right_out[1] ,
     \cbx_1__1__5_chanx_right_out[2] ,
@@ -23623,7 +41022,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__5_chany_top_out[17] ,
     \sb_1__1__5_chany_top_out[18] ,
     \sb_1__1__5_chany_top_out[19] }));
- sb_1__1_ sb_1__7_ (.bottom_left_grid_pin_42_(grid_clb_6_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_1__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_6_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_6_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_6_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_6_right_width_0_height_0__pin_45_upper),
@@ -23664,8 +41065,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_7_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_7_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_7_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__6_chanx_right_out[0] ,
     \cbx_1__1__6_chanx_right_out[1] ,
     \cbx_1__1__6_chanx_right_out[2] ,
@@ -23826,7 +41225,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__6_chany_top_out[17] ,
     \sb_1__1__6_chany_top_out[18] ,
     \sb_1__1__6_chany_top_out[19] }));
- sb_1__2_ sb_1__8_ (.bottom_left_grid_pin_42_(grid_clb_7_right_width_0_height_0__pin_42_upper),
+ sb_1__2_ sb_1__8_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_7_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_7_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_7_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_7_right_width_0_height_0__pin_45_upper),
@@ -23855,8 +41256,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_15_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_15_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_1_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__0_chanx_right_out[0] ,
     \cbx_1__8__0_chanx_right_out[1] ,
     \cbx_1__8__0_chanx_right_out[2] ,
@@ -23977,7 +41376,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__0_chany_bottom_out[17] ,
     \sb_1__8__0_chany_bottom_out[18] ,
     \sb_1__8__0_chany_bottom_out[19] }));
- sb_1__0_ sb_2__0_ (.ccff_head(grid_io_bottom_5_ccff_tail),
+ sb_1__0_ sb_2__0_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .ccff_head(grid_io_bottom_5_ccff_tail),
     .ccff_tail(sb_1__0__1_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_6_top_width_0_height_0__pin_11_lower),
     .left_bottom_grid_pin_13_(grid_io_bottom_6_top_width_0_height_0__pin_13_lower),
@@ -24006,8 +41407,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_8_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_8_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_8_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__1_chanx_right_out[0] ,
     \cbx_1__0__1_chanx_right_out[1] ,
     \cbx_1__0__1_chanx_right_out[2] ,
@@ -24128,7 +41527,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__1_chany_top_out[17] ,
     \sb_1__0__1_chany_top_out[18] ,
     \sb_1__0__1_chany_top_out[19] }));
- sb_1__1_ sb_2__1_ (.bottom_left_grid_pin_42_(grid_clb_8_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_8_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_8_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_8_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_8_right_width_0_height_0__pin_45_upper),
@@ -24163,8 +41564,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_9_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_9_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_9_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__7_chanx_right_out[0] ,
     \cbx_1__1__7_chanx_right_out[1] ,
     \cbx_1__1__7_chanx_right_out[2] ,
@@ -24325,7 +41724,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__7_chany_top_out[17] ,
     \sb_1__1__7_chany_top_out[18] ,
     \sb_1__1__7_chany_top_out[19] }));
- sb_1__1_ sb_2__2_ (.bottom_left_grid_pin_42_(grid_clb_9_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_9_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_9_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_9_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_9_right_width_0_height_0__pin_45_upper),
@@ -24366,8 +41767,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_10_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_10_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_10_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__8_chanx_right_out[0] ,
     \cbx_1__1__8_chanx_right_out[1] ,
     \cbx_1__1__8_chanx_right_out[2] ,
@@ -24528,7 +41927,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__8_chany_top_out[17] ,
     \sb_1__1__8_chany_top_out[18] ,
     \sb_1__1__8_chany_top_out[19] }));
- sb_1__1_ sb_2__3_ (.bottom_left_grid_pin_42_(grid_clb_10_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_10_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_10_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_10_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_10_right_width_0_height_0__pin_45_upper),
@@ -24567,8 +41968,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_11_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_11_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_11_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__9_chanx_right_out[0] ,
     \cbx_1__1__9_chanx_right_out[1] ,
     \cbx_1__1__9_chanx_right_out[2] ,
@@ -24729,7 +42128,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__9_chany_top_out[17] ,
     \sb_1__1__9_chany_top_out[18] ,
     \sb_1__1__9_chany_top_out[19] }));
- sb_1__1_ sb_2__4_ (.bottom_left_grid_pin_42_(grid_clb_11_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_11_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_11_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_11_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_11_right_width_0_height_0__pin_45_upper),
@@ -24770,8 +42171,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_12_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_12_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_12_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__10_chanx_right_out[0] ,
     \cbx_1__1__10_chanx_right_out[1] ,
     \cbx_1__1__10_chanx_right_out[2] ,
@@ -24932,7 +42331,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__10_chany_top_out[17] ,
     \sb_1__1__10_chany_top_out[18] ,
     \sb_1__1__10_chany_top_out[19] }));
- sb_1__1_ sb_2__5_ (.bottom_left_grid_pin_42_(grid_clb_12_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_12_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_12_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_12_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_12_right_width_0_height_0__pin_45_upper),
@@ -24971,8 +42372,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_13_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_13_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_13_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__11_chanx_right_out[0] ,
     \cbx_1__1__11_chanx_right_out[1] ,
     \cbx_1__1__11_chanx_right_out[2] ,
@@ -25133,7 +42532,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__11_chany_top_out[17] ,
     \sb_1__1__11_chany_top_out[18] ,
     \sb_1__1__11_chany_top_out[19] }));
- sb_1__1_ sb_2__6_ (.bottom_left_grid_pin_42_(grid_clb_13_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_13_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_13_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_13_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_13_right_width_0_height_0__pin_45_upper),
@@ -25174,8 +42575,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_14_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_14_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_14_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__12_chanx_right_out[0] ,
     \cbx_1__1__12_chanx_right_out[1] ,
     \cbx_1__1__12_chanx_right_out[2] ,
@@ -25336,7 +42735,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__12_chany_top_out[17] ,
     \sb_1__1__12_chany_top_out[18] ,
     \sb_1__1__12_chany_top_out[19] }));
- sb_1__1_ sb_2__7_ (.bottom_left_grid_pin_42_(grid_clb_14_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_2__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_14_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_14_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_14_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_14_right_width_0_height_0__pin_45_upper),
@@ -25371,8 +42772,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_15_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_15_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_15_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__13_chanx_right_out[0] ,
     \cbx_1__1__13_chanx_right_out[1] ,
     \cbx_1__1__13_chanx_right_out[2] ,
@@ -25535,6 +42934,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__13_chany_top_out[19] }));
  sb_1__2_ sb_2__8_ (.SC_IN_BOT(\scff_Wires[36] ),
     .SC_OUT_BOT(\scff_Wires[37] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_15_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_15_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_15_right_width_0_height_0__pin_44_upper),
@@ -25564,8 +42965,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_23_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_23_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_2_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__1_chanx_right_out[0] ,
     \cbx_1__8__1_chanx_right_out[1] ,
     \cbx_1__8__1_chanx_right_out[2] ,
@@ -25688,6 +43087,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__1_chany_bottom_out[19] }));
  sb_1__0_ sb_3__0_ (.SC_IN_TOP(\scff_Wires[55] ),
     .SC_OUT_TOP(\scff_Wires[56] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_bottom_4_ccff_tail),
     .ccff_tail(sb_1__0__2_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_5_top_width_0_height_0__pin_11_lower),
@@ -25717,8 +43118,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_16_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_16_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_16_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__2_chanx_right_out[0] ,
     \cbx_1__0__2_chanx_right_out[1] ,
     \cbx_1__0__2_chanx_right_out[2] ,
@@ -25839,7 +43238,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__2_chany_top_out[17] ,
     \sb_1__0__2_chany_top_out[18] ,
     \sb_1__0__2_chany_top_out[19] }));
- sb_1__1_ sb_3__1_ (.bottom_left_grid_pin_42_(grid_clb_16_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_16_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_16_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_16_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_16_right_width_0_height_0__pin_45_upper),
@@ -25880,8 +43281,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_17_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_17_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_17_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__14_chanx_right_out[0] ,
     \cbx_1__1__14_chanx_right_out[1] ,
     \cbx_1__1__14_chanx_right_out[2] ,
@@ -26042,7 +43441,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__14_chany_top_out[17] ,
     \sb_1__1__14_chany_top_out[18] ,
     \sb_1__1__14_chany_top_out[19] }));
- sb_1__1_ sb_3__2_ (.bottom_left_grid_pin_42_(grid_clb_17_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_17_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_17_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_17_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_17_right_width_0_height_0__pin_45_upper),
@@ -26083,8 +43484,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_18_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_18_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_18_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__15_chanx_right_out[0] ,
     \cbx_1__1__15_chanx_right_out[1] ,
     \cbx_1__1__15_chanx_right_out[2] ,
@@ -26245,7 +43644,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__15_chany_top_out[17] ,
     \sb_1__1__15_chany_top_out[18] ,
     \sb_1__1__15_chany_top_out[19] }));
- sb_1__1_ sb_3__3_ (.bottom_left_grid_pin_42_(grid_clb_18_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_18_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_18_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_18_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_18_right_width_0_height_0__pin_45_upper),
@@ -26286,8 +43687,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_19_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_19_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_19_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__16_chanx_right_out[0] ,
     \cbx_1__1__16_chanx_right_out[1] ,
     \cbx_1__1__16_chanx_right_out[2] ,
@@ -26448,7 +43847,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__16_chany_top_out[17] ,
     \sb_1__1__16_chany_top_out[18] ,
     \sb_1__1__16_chany_top_out[19] }));
- sb_1__1_ sb_3__4_ (.bottom_left_grid_pin_42_(grid_clb_19_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_19_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_19_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_19_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_19_right_width_0_height_0__pin_45_upper),
@@ -26487,8 +43888,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_20_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_20_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_20_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__17_chanx_right_out[0] ,
     \cbx_1__1__17_chanx_right_out[1] ,
     \cbx_1__1__17_chanx_right_out[2] ,
@@ -26649,7 +44048,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__17_chany_top_out[17] ,
     \sb_1__1__17_chany_top_out[18] ,
     \sb_1__1__17_chany_top_out[19] }));
- sb_1__1_ sb_3__5_ (.bottom_left_grid_pin_42_(grid_clb_20_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_20_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_20_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_20_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_20_right_width_0_height_0__pin_45_upper),
@@ -26690,8 +44091,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_21_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_21_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_21_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__18_chanx_right_out[0] ,
     \cbx_1__1__18_chanx_right_out[1] ,
     \cbx_1__1__18_chanx_right_out[2] ,
@@ -26852,7 +44251,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__18_chany_top_out[17] ,
     \sb_1__1__18_chany_top_out[18] ,
     \sb_1__1__18_chany_top_out[19] }));
- sb_1__1_ sb_3__6_ (.bottom_left_grid_pin_42_(grid_clb_21_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_21_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_21_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_21_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_21_right_width_0_height_0__pin_45_upper),
@@ -26893,8 +44294,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_22_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_22_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_22_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__19_chanx_right_out[0] ,
     \cbx_1__1__19_chanx_right_out[1] ,
     \cbx_1__1__19_chanx_right_out[2] ,
@@ -27055,7 +44454,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__19_chany_top_out[17] ,
     \sb_1__1__19_chany_top_out[18] ,
     \sb_1__1__19_chany_top_out[19] }));
- sb_1__1_ sb_3__7_ (.bottom_left_grid_pin_42_(grid_clb_22_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_3__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_22_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_22_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_22_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_22_right_width_0_height_0__pin_45_upper),
@@ -27096,8 +44497,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_23_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_23_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_23_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__20_chanx_right_out[0] ,
     \cbx_1__1__20_chanx_right_out[1] ,
     \cbx_1__1__20_chanx_right_out[2] ,
@@ -27258,7 +44657,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__20_chany_top_out[17] ,
     \sb_1__1__20_chany_top_out[18] ,
     \sb_1__1__20_chany_top_out[19] }));
- sb_1__2_ sb_3__8_ (.bottom_left_grid_pin_42_(grid_clb_23_right_width_0_height_0__pin_42_upper),
+ sb_1__2_ sb_3__8_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_23_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_23_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_23_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_23_right_width_0_height_0__pin_45_upper),
@@ -27287,8 +44688,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_31_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_31_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_3_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__2_chanx_right_out[0] ,
     \cbx_1__8__2_chanx_right_out[1] ,
     \cbx_1__8__2_chanx_right_out[2] ,
@@ -27411,6 +44810,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__2_chany_bottom_out[19] }));
  sb_1__0_ sb_4__0_ (.Test_en_N_out(\Test_enWires[1] ),
     .Test_en_S_in(Test_en),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_bottom_3_ccff_tail),
     .ccff_tail(sb_1__0__3_ccff_tail),
     .clk_3_N_out(\clk_3_wires[28] ),
@@ -27444,8 +44845,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_24_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_24_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_24_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__3_chanx_right_out[0] ,
     \cbx_1__0__3_chanx_right_out[1] ,
     \cbx_1__0__3_chanx_right_out[2] ,
@@ -27568,6 +44967,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__3_chany_top_out[19] }));
  sb_1__1_ sb_4__1_ (.Test_en_N_out(\Test_enWires[3] ),
     .Test_en_S_in(\Test_enWires[2] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_24_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_24_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_24_right_width_0_height_0__pin_44_upper),
@@ -27607,8 +45008,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_25_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_25_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_25_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__21_chanx_right_out[0] ,
     \cbx_1__1__21_chanx_right_out[1] ,
     \cbx_1__1__21_chanx_right_out[2] ,
@@ -27771,6 +45170,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__21_chany_top_out[19] }));
  sb_1__1_ sb_4__2_ (.Test_en_N_out(\Test_enWires[5] ),
     .Test_en_S_in(\Test_enWires[4] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_25_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_25_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_25_right_width_0_height_0__pin_44_upper),
@@ -27810,8 +45211,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_26_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_26_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_26_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__22_chanx_right_out[0] ,
     \cbx_1__1__22_chanx_right_out[1] ,
     \cbx_1__1__22_chanx_right_out[2] ,
@@ -27974,6 +45373,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__22_chany_top_out[19] }));
  sb_1__1_ sb_4__3_ (.Test_en_N_out(\Test_enWires[7] ),
     .Test_en_S_in(\Test_enWires[6] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_26_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_26_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_26_right_width_0_height_0__pin_44_upper),
@@ -28013,8 +45414,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_27_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_27_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_27_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__23_chanx_right_out[0] ,
     \cbx_1__1__23_chanx_right_out[1] ,
     \cbx_1__1__23_chanx_right_out[2] ,
@@ -28177,6 +45576,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__23_chany_top_out[19] }));
  sb_1__1_ sb_4__4_ (.Test_en_N_out(\Test_enWires[9] ),
     .Test_en_S_in(\Test_enWires[8] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_27_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_27_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_27_right_width_0_height_0__pin_44_upper),
@@ -28218,8 +45619,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_28_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_28_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_28_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__24_chanx_right_out[0] ,
     \cbx_1__1__24_chanx_right_out[1] ,
     \cbx_1__1__24_chanx_right_out[2] ,
@@ -28382,6 +45781,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__24_chany_top_out[19] }));
  sb_1__1_ sb_4__5_ (.Test_en_N_out(\Test_enWires[11] ),
     .Test_en_S_in(\Test_enWires[10] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_28_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_28_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_28_right_width_0_height_0__pin_44_upper),
@@ -28417,8 +45818,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_29_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_29_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_29_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__25_chanx_right_out[0] ,
     \cbx_1__1__25_chanx_right_out[1] ,
     \cbx_1__1__25_chanx_right_out[2] ,
@@ -28581,6 +45980,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__25_chany_top_out[19] }));
  sb_1__1_ sb_4__6_ (.Test_en_N_out(\Test_enWires[13] ),
     .Test_en_S_in(\Test_enWires[12] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_29_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_29_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_29_right_width_0_height_0__pin_44_upper),
@@ -28616,8 +46017,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_30_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_30_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_30_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__26_chanx_right_out[0] ,
     \cbx_1__1__26_chanx_right_out[1] ,
     \cbx_1__1__26_chanx_right_out[2] ,
@@ -28780,6 +46179,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__26_chany_top_out[19] }));
  sb_1__1_ sb_4__7_ (.Test_en_N_out(\Test_enWires[15] ),
     .Test_en_S_in(\Test_enWires[14] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_30_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_30_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_30_right_width_0_height_0__pin_44_upper),
@@ -28815,8 +46216,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_31_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_31_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_31_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__27_chanx_right_out[0] ,
     \cbx_1__1__27_chanx_right_out[1] ,
     \cbx_1__1__27_chanx_right_out[2] ,
@@ -28979,6 +46378,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__27_chany_top_out[19] }));
  sb_1__2_ sb_4__8_ (.SC_IN_BOT(\scff_Wires[73] ),
     .SC_OUT_BOT(\scff_Wires[74] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_31_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_31_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_31_right_width_0_height_0__pin_44_upper),
@@ -29008,8 +46409,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_39_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_39_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_4_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__3_chanx_right_out[0] ,
     \cbx_1__8__3_chanx_right_out[1] ,
     \cbx_1__8__3_chanx_right_out[2] ,
@@ -29132,6 +46531,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__3_chany_bottom_out[19] }));
  sb_1__0_ sb_5__0_ (.SC_IN_TOP(\scff_Wires[92] ),
     .SC_OUT_TOP(\scff_Wires[93] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_bottom_2_ccff_tail),
     .ccff_tail(sb_1__0__4_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_3_top_width_0_height_0__pin_11_lower),
@@ -29161,8 +46562,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_32_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_32_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_32_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__4_chanx_right_out[0] ,
     \cbx_1__0__4_chanx_right_out[1] ,
     \cbx_1__0__4_chanx_right_out[2] ,
@@ -29283,7 +46682,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__4_chany_top_out[17] ,
     \sb_1__0__4_chany_top_out[18] ,
     \sb_1__0__4_chany_top_out[19] }));
- sb_1__1_ sb_5__1_ (.bottom_left_grid_pin_42_(grid_clb_32_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_32_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_32_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_32_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_32_right_width_0_height_0__pin_45_upper),
@@ -29324,8 +46725,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_33_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_33_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_33_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__28_chanx_right_out[0] ,
     \cbx_1__1__28_chanx_right_out[1] ,
     \cbx_1__1__28_chanx_right_out[2] ,
@@ -29486,7 +46885,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__28_chany_top_out[17] ,
     \sb_1__1__28_chany_top_out[18] ,
     \sb_1__1__28_chany_top_out[19] }));
- sb_1__1_ sb_5__2_ (.bottom_left_grid_pin_42_(grid_clb_33_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_33_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_33_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_33_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_33_right_width_0_height_0__pin_45_upper),
@@ -29527,8 +46928,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_34_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_34_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_34_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__29_chanx_right_out[0] ,
     \cbx_1__1__29_chanx_right_out[1] ,
     \cbx_1__1__29_chanx_right_out[2] ,
@@ -29689,7 +47088,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__29_chany_top_out[17] ,
     \sb_1__1__29_chany_top_out[18] ,
     \sb_1__1__29_chany_top_out[19] }));
- sb_1__1_ sb_5__3_ (.bottom_left_grid_pin_42_(grid_clb_34_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_34_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_34_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_34_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_34_right_width_0_height_0__pin_45_upper),
@@ -29730,8 +47131,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_35_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_35_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_35_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__30_chanx_right_out[0] ,
     \cbx_1__1__30_chanx_right_out[1] ,
     \cbx_1__1__30_chanx_right_out[2] ,
@@ -29892,7 +47291,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__30_chany_top_out[17] ,
     \sb_1__1__30_chany_top_out[18] ,
     \sb_1__1__30_chany_top_out[19] }));
- sb_1__1_ sb_5__4_ (.bottom_left_grid_pin_42_(grid_clb_35_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_35_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_35_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_35_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_35_right_width_0_height_0__pin_45_upper),
@@ -29931,8 +47332,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_36_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_36_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_36_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__31_chanx_right_out[0] ,
     \cbx_1__1__31_chanx_right_out[1] ,
     \cbx_1__1__31_chanx_right_out[2] ,
@@ -30093,7 +47492,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__31_chany_top_out[17] ,
     \sb_1__1__31_chany_top_out[18] ,
     \sb_1__1__31_chany_top_out[19] }));
- sb_1__1_ sb_5__5_ (.bottom_left_grid_pin_42_(grid_clb_36_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_36_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_36_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_36_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_36_right_width_0_height_0__pin_45_upper),
@@ -30134,8 +47535,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_37_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_37_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_37_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__32_chanx_right_out[0] ,
     \cbx_1__1__32_chanx_right_out[1] ,
     \cbx_1__1__32_chanx_right_out[2] ,
@@ -30296,7 +47695,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__32_chany_top_out[17] ,
     \sb_1__1__32_chany_top_out[18] ,
     \sb_1__1__32_chany_top_out[19] }));
- sb_1__1_ sb_5__6_ (.bottom_left_grid_pin_42_(grid_clb_37_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_37_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_37_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_37_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_37_right_width_0_height_0__pin_45_upper),
@@ -30337,8 +47738,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_38_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_38_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_38_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__33_chanx_right_out[0] ,
     \cbx_1__1__33_chanx_right_out[1] ,
     \cbx_1__1__33_chanx_right_out[2] ,
@@ -30499,7 +47898,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__33_chany_top_out[17] ,
     \sb_1__1__33_chany_top_out[18] ,
     \sb_1__1__33_chany_top_out[19] }));
- sb_1__1_ sb_5__7_ (.bottom_left_grid_pin_42_(grid_clb_38_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_5__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_38_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_38_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_38_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_38_right_width_0_height_0__pin_45_upper),
@@ -30540,8 +47941,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_39_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_39_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_39_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__34_chanx_right_out[0] ,
     \cbx_1__1__34_chanx_right_out[1] ,
     \cbx_1__1__34_chanx_right_out[2] ,
@@ -30702,7 +48101,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__34_chany_top_out[17] ,
     \sb_1__1__34_chany_top_out[18] ,
     \sb_1__1__34_chany_top_out[19] }));
- sb_1__2_ sb_5__8_ (.bottom_left_grid_pin_42_(grid_clb_39_right_width_0_height_0__pin_42_upper),
+ sb_1__2_ sb_5__8_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_39_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_39_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_39_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_39_right_width_0_height_0__pin_45_upper),
@@ -30731,8 +48132,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_47_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_47_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_5_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__4_chanx_right_out[0] ,
     \cbx_1__8__4_chanx_right_out[1] ,
     \cbx_1__8__4_chanx_right_out[2] ,
@@ -30853,7 +48252,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__4_chany_bottom_out[17] ,
     \sb_1__8__4_chany_bottom_out[18] ,
     \sb_1__8__4_chany_bottom_out[19] }));
- sb_1__0_ sb_6__0_ (.ccff_head(grid_io_bottom_1_ccff_tail),
+ sb_1__0_ sb_6__0_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .ccff_head(grid_io_bottom_1_ccff_tail),
     .ccff_tail(sb_1__0__5_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_2_top_width_0_height_0__pin_11_lower),
     .left_bottom_grid_pin_13_(grid_io_bottom_2_top_width_0_height_0__pin_13_lower),
@@ -30882,8 +48283,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_40_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_40_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_40_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__5_chanx_right_out[0] ,
     \cbx_1__0__5_chanx_right_out[1] ,
     \cbx_1__0__5_chanx_right_out[2] ,
@@ -31004,7 +48403,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__5_chany_top_out[17] ,
     \sb_1__0__5_chany_top_out[18] ,
     \sb_1__0__5_chany_top_out[19] }));
- sb_1__1_ sb_6__1_ (.bottom_left_grid_pin_42_(grid_clb_40_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_40_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_40_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_40_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_40_right_width_0_height_0__pin_45_upper),
@@ -31039,8 +48440,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_41_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_41_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_41_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__35_chanx_right_out[0] ,
     \cbx_1__1__35_chanx_right_out[1] ,
     \cbx_1__1__35_chanx_right_out[2] ,
@@ -31201,7 +48600,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__35_chany_top_out[17] ,
     \sb_1__1__35_chany_top_out[18] ,
     \sb_1__1__35_chany_top_out[19] }));
- sb_1__1_ sb_6__2_ (.bottom_left_grid_pin_42_(grid_clb_41_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_41_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_41_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_41_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_41_right_width_0_height_0__pin_45_upper),
@@ -31242,8 +48643,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_42_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_42_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_42_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__36_chanx_right_out[0] ,
     \cbx_1__1__36_chanx_right_out[1] ,
     \cbx_1__1__36_chanx_right_out[2] ,
@@ -31404,7 +48803,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__36_chany_top_out[17] ,
     \sb_1__1__36_chany_top_out[18] ,
     \sb_1__1__36_chany_top_out[19] }));
- sb_1__1_ sb_6__3_ (.bottom_left_grid_pin_42_(grid_clb_42_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_42_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_42_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_42_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_42_right_width_0_height_0__pin_45_upper),
@@ -31443,8 +48844,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_43_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_43_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_43_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__37_chanx_right_out[0] ,
     \cbx_1__1__37_chanx_right_out[1] ,
     \cbx_1__1__37_chanx_right_out[2] ,
@@ -31605,7 +49004,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__37_chany_top_out[17] ,
     \sb_1__1__37_chany_top_out[18] ,
     \sb_1__1__37_chany_top_out[19] }));
- sb_1__1_ sb_6__4_ (.bottom_left_grid_pin_42_(grid_clb_43_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_43_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_43_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_43_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_43_right_width_0_height_0__pin_45_upper),
@@ -31646,8 +49047,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_44_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_44_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_44_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__38_chanx_right_out[0] ,
     \cbx_1__1__38_chanx_right_out[1] ,
     \cbx_1__1__38_chanx_right_out[2] ,
@@ -31808,7 +49207,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__38_chany_top_out[17] ,
     \sb_1__1__38_chany_top_out[18] ,
     \sb_1__1__38_chany_top_out[19] }));
- sb_1__1_ sb_6__5_ (.bottom_left_grid_pin_42_(grid_clb_44_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_44_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_44_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_44_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_44_right_width_0_height_0__pin_45_upper),
@@ -31847,8 +49248,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_45_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_45_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_45_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__39_chanx_right_out[0] ,
     \cbx_1__1__39_chanx_right_out[1] ,
     \cbx_1__1__39_chanx_right_out[2] ,
@@ -32009,7 +49408,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__39_chany_top_out[17] ,
     \sb_1__1__39_chany_top_out[18] ,
     \sb_1__1__39_chany_top_out[19] }));
- sb_1__1_ sb_6__6_ (.bottom_left_grid_pin_42_(grid_clb_45_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_45_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_45_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_45_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_45_right_width_0_height_0__pin_45_upper),
@@ -32050,8 +49451,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_46_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_46_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_46_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__40_chanx_right_out[0] ,
     \cbx_1__1__40_chanx_right_out[1] ,
     \cbx_1__1__40_chanx_right_out[2] ,
@@ -32212,7 +49611,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__40_chany_top_out[17] ,
     \sb_1__1__40_chany_top_out[18] ,
     \sb_1__1__40_chany_top_out[19] }));
- sb_1__1_ sb_6__7_ (.bottom_left_grid_pin_42_(grid_clb_46_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_6__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_46_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_46_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_46_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_46_right_width_0_height_0__pin_45_upper),
@@ -32247,8 +49648,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_47_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_47_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_47_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__41_chanx_right_out[0] ,
     \cbx_1__1__41_chanx_right_out[1] ,
     \cbx_1__1__41_chanx_right_out[2] ,
@@ -32411,6 +49810,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__41_chany_top_out[19] }));
  sb_1__2_ sb_6__8_ (.SC_IN_BOT(\scff_Wires[110] ),
     .SC_OUT_BOT(\scff_Wires[111] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_47_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_47_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_47_right_width_0_height_0__pin_44_upper),
@@ -32440,8 +49841,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_55_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_55_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_6_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__5_chanx_right_out[0] ,
     \cbx_1__8__5_chanx_right_out[1] ,
     \cbx_1__8__5_chanx_right_out[2] ,
@@ -32564,6 +49963,8 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__5_chany_bottom_out[19] }));
  sb_1__0_ sb_7__0_ (.SC_IN_TOP(\scff_Wires[129] ),
     .SC_OUT_TOP(\scff_Wires[130] ),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .ccff_head(grid_io_bottom_0_ccff_tail),
     .ccff_tail(sb_1__0__6_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_1_top_width_0_height_0__pin_11_lower),
@@ -32593,8 +49994,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_48_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_48_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_48_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__6_chanx_right_out[0] ,
     \cbx_1__0__6_chanx_right_out[1] ,
     \cbx_1__0__6_chanx_right_out[2] ,
@@ -32715,7 +50114,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__0__6_chany_top_out[17] ,
     \sb_1__0__6_chany_top_out[18] ,
     \sb_1__0__6_chany_top_out[19] }));
- sb_1__1_ sb_7__1_ (.bottom_left_grid_pin_42_(grid_clb_48_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_48_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_48_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_48_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_48_right_width_0_height_0__pin_45_upper),
@@ -32756,8 +50157,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_49_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_49_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_49_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__42_chanx_right_out[0] ,
     \cbx_1__1__42_chanx_right_out[1] ,
     \cbx_1__1__42_chanx_right_out[2] ,
@@ -32918,7 +50317,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__42_chany_top_out[17] ,
     \sb_1__1__42_chany_top_out[18] ,
     \sb_1__1__42_chany_top_out[19] }));
- sb_1__1_ sb_7__2_ (.bottom_left_grid_pin_42_(grid_clb_49_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_49_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_49_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_49_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_49_right_width_0_height_0__pin_45_upper),
@@ -32959,8 +50360,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_50_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_50_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_50_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__43_chanx_right_out[0] ,
     \cbx_1__1__43_chanx_right_out[1] ,
     \cbx_1__1__43_chanx_right_out[2] ,
@@ -33121,7 +50520,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__43_chany_top_out[17] ,
     \sb_1__1__43_chany_top_out[18] ,
     \sb_1__1__43_chany_top_out[19] }));
- sb_1__1_ sb_7__3_ (.bottom_left_grid_pin_42_(grid_clb_50_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_50_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_50_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_50_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_50_right_width_0_height_0__pin_45_upper),
@@ -33162,8 +50563,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_51_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_51_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_51_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__44_chanx_right_out[0] ,
     \cbx_1__1__44_chanx_right_out[1] ,
     \cbx_1__1__44_chanx_right_out[2] ,
@@ -33324,7 +50723,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__44_chany_top_out[17] ,
     \sb_1__1__44_chany_top_out[18] ,
     \sb_1__1__44_chany_top_out[19] }));
- sb_1__1_ sb_7__4_ (.bottom_left_grid_pin_42_(grid_clb_51_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_51_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_51_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_51_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_51_right_width_0_height_0__pin_45_upper),
@@ -33359,8 +50760,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_52_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_52_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_52_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__45_chanx_right_out[0] ,
     \cbx_1__1__45_chanx_right_out[1] ,
     \cbx_1__1__45_chanx_right_out[2] ,
@@ -33521,7 +50920,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__45_chany_top_out[17] ,
     \sb_1__1__45_chany_top_out[18] ,
     \sb_1__1__45_chany_top_out[19] }));
- sb_1__1_ sb_7__5_ (.bottom_left_grid_pin_42_(grid_clb_52_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_52_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_52_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_52_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_52_right_width_0_height_0__pin_45_upper),
@@ -33562,8 +50963,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_53_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_53_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_53_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__46_chanx_right_out[0] ,
     \cbx_1__1__46_chanx_right_out[1] ,
     \cbx_1__1__46_chanx_right_out[2] ,
@@ -33724,7 +51123,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__46_chany_top_out[17] ,
     \sb_1__1__46_chany_top_out[18] ,
     \sb_1__1__46_chany_top_out[19] }));
- sb_1__1_ sb_7__6_ (.bottom_left_grid_pin_42_(grid_clb_53_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_53_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_53_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_53_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_53_right_width_0_height_0__pin_45_upper),
@@ -33765,8 +51166,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_54_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_54_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_54_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__47_chanx_right_out[0] ,
     \cbx_1__1__47_chanx_right_out[1] ,
     \cbx_1__1__47_chanx_right_out[2] ,
@@ -33927,7 +51326,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__47_chany_top_out[17] ,
     \sb_1__1__47_chany_top_out[18] ,
     \sb_1__1__47_chany_top_out[19] }));
- sb_1__1_ sb_7__7_ (.bottom_left_grid_pin_42_(grid_clb_54_right_width_0_height_0__pin_42_upper),
+ sb_1__1_ sb_7__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_54_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_54_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_54_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_54_right_width_0_height_0__pin_45_upper),
@@ -33968,8 +51369,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_47_(grid_clb_55_right_width_0_height_0__pin_47_lower),
     .top_left_grid_pin_48_(grid_clb_55_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_55_right_width_0_height_0__pin_49_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__48_chanx_right_out[0] ,
     \cbx_1__1__48_chanx_right_out[1] ,
     \cbx_1__1__48_chanx_right_out[2] ,
@@ -34130,7 +51529,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__1__48_chany_top_out[17] ,
     \sb_1__1__48_chany_top_out[18] ,
     \sb_1__1__48_chany_top_out[19] }));
- sb_1__2_ sb_7__8_ (.bottom_left_grid_pin_42_(grid_clb_55_right_width_0_height_0__pin_42_upper),
+ sb_1__2_ sb_7__8_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_55_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_55_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_55_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_55_right_width_0_height_0__pin_45_upper),
@@ -34159,8 +51560,6 @@ module fpga_core (IO_ISOL_N,
     .right_bottom_grid_pin_40_(grid_clb_63_top_width_0_height_0__pin_40_upper),
     .right_bottom_grid_pin_41_(grid_clb_63_top_width_0_height_0__pin_41_upper),
     .right_top_grid_pin_1_(grid_io_top_7_bottom_width_0_height_0__pin_1_upper),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__6_chanx_right_out[0] ,
     \cbx_1__8__6_chanx_right_out[1] ,
     \cbx_1__8__6_chanx_right_out[2] ,
@@ -34281,7 +51680,9 @@ module fpga_core (IO_ISOL_N,
     \sb_1__8__6_chany_bottom_out[17] ,
     \sb_1__8__6_chany_bottom_out[18] ,
     \sb_1__8__6_chany_bottom_out[19] }));
- sb_2__0_ sb_8__0_ (.ccff_head(grid_io_right_7_ccff_tail),
+ sb_2__0_ sb_8__0_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .ccff_head(grid_io_right_7_ccff_tail),
     .ccff_tail(sb_8__0__0_ccff_tail),
     .left_bottom_grid_pin_11_(grid_io_bottom_0_top_width_0_height_0__pin_11_lower),
     .left_bottom_grid_pin_13_(grid_io_bottom_0_top_width_0_height_0__pin_13_lower),
@@ -34302,8 +51703,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_56_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_56_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_7_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__0__7_chanx_right_out[0] ,
     \cbx_1__0__7_chanx_right_out[1] ,
     \cbx_1__0__7_chanx_right_out[2] ,
@@ -34384,7 +51783,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__0__0_chany_top_out[17] ,
     \sb_8__0__0_chany_top_out[18] ,
     \sb_8__0__0_chany_top_out[19] }));
- sb_2__1_ sb_8__1_ (.bottom_left_grid_pin_42_(grid_clb_56_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__1_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_56_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_56_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_56_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_56_right_width_0_height_0__pin_45_upper),
@@ -34413,8 +51814,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_57_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_57_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_6_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__49_chanx_right_out[0] ,
     \cbx_1__1__49_chanx_right_out[1] ,
     \cbx_1__1__49_chanx_right_out[2] ,
@@ -34535,7 +51934,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__0_chany_top_out[17] ,
     \sb_8__1__0_chany_top_out[18] ,
     \sb_8__1__0_chany_top_out[19] }));
- sb_2__1_ sb_8__2_ (.bottom_left_grid_pin_42_(grid_clb_57_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__2_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_57_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_57_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_57_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_57_right_width_0_height_0__pin_45_upper),
@@ -34564,8 +51965,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_58_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_58_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_5_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__50_chanx_right_out[0] ,
     \cbx_1__1__50_chanx_right_out[1] ,
     \cbx_1__1__50_chanx_right_out[2] ,
@@ -34686,7 +52085,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__1_chany_top_out[17] ,
     \sb_8__1__1_chany_top_out[18] ,
     \sb_8__1__1_chany_top_out[19] }));
- sb_2__1_ sb_8__3_ (.bottom_left_grid_pin_42_(grid_clb_58_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__3_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_58_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_58_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_58_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_58_right_width_0_height_0__pin_45_upper),
@@ -34715,8 +52116,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_59_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_59_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_4_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__51_chanx_right_out[0] ,
     \cbx_1__1__51_chanx_right_out[1] ,
     \cbx_1__1__51_chanx_right_out[2] ,
@@ -34837,7 +52236,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__2_chany_top_out[17] ,
     \sb_8__1__2_chany_top_out[18] ,
     \sb_8__1__2_chany_top_out[19] }));
- sb_2__1_ sb_8__4_ (.bottom_left_grid_pin_42_(grid_clb_59_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__4_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_59_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_59_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_59_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_59_right_width_0_height_0__pin_45_upper),
@@ -34866,8 +52267,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_60_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_60_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_3_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__52_chanx_right_out[0] ,
     \cbx_1__1__52_chanx_right_out[1] ,
     \cbx_1__1__52_chanx_right_out[2] ,
@@ -34988,7 +52387,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__3_chany_top_out[17] ,
     \sb_8__1__3_chany_top_out[18] ,
     \sb_8__1__3_chany_top_out[19] }));
- sb_2__1_ sb_8__5_ (.bottom_left_grid_pin_42_(grid_clb_60_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__5_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_60_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_60_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_60_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_60_right_width_0_height_0__pin_45_upper),
@@ -35017,8 +52418,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_61_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_61_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_2_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__53_chanx_right_out[0] ,
     \cbx_1__1__53_chanx_right_out[1] ,
     \cbx_1__1__53_chanx_right_out[2] ,
@@ -35139,7 +52538,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__4_chany_top_out[17] ,
     \sb_8__1__4_chany_top_out[18] ,
     \sb_8__1__4_chany_top_out[19] }));
- sb_2__1_ sb_8__6_ (.bottom_left_grid_pin_42_(grid_clb_61_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__6_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_61_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_61_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_61_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_61_right_width_0_height_0__pin_45_upper),
@@ -35168,8 +52569,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_62_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_62_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_1_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__54_chanx_right_out[0] ,
     \cbx_1__1__54_chanx_right_out[1] ,
     \cbx_1__1__54_chanx_right_out[2] ,
@@ -35290,7 +52689,9 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__5_chany_top_out[17] ,
     \sb_8__1__5_chany_top_out[18] ,
     \sb_8__1__5_chany_top_out[19] }));
- sb_2__1_ sb_8__7_ (.bottom_left_grid_pin_42_(grid_clb_62_right_width_0_height_0__pin_42_upper),
+ sb_2__1_ sb_8__7_ (.VGND(VGND),
+    .VPWR(VPWR),
+    .bottom_left_grid_pin_42_(grid_clb_62_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_62_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_62_right_width_0_height_0__pin_44_upper),
     .bottom_left_grid_pin_45_(grid_clb_62_right_width_0_height_0__pin_45_upper),
@@ -35319,8 +52720,6 @@ module fpga_core (IO_ISOL_N,
     .top_left_grid_pin_48_(grid_clb_63_right_width_0_height_0__pin_48_lower),
     .top_left_grid_pin_49_(grid_clb_63_right_width_0_height_0__pin_49_lower),
     .top_right_grid_pin_1_(grid_io_right_0_left_width_0_height_0__pin_1_lower),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__1__55_chanx_right_out[0] ,
     \cbx_1__1__55_chanx_right_out[1] ,
     \cbx_1__1__55_chanx_right_out[2] ,
@@ -35443,6 +52842,8 @@ module fpga_core (IO_ISOL_N,
     \sb_8__1__6_chany_top_out[19] }));
  sb_2__2_ sb_8__8_ (.SC_IN_BOT(\scff_Wires[147] ),
     .SC_OUT_BOT(sc_tail),
+    .VGND(VGND),
+    .VPWR(VPWR),
     .bottom_left_grid_pin_42_(grid_clb_63_right_width_0_height_0__pin_42_upper),
     .bottom_left_grid_pin_43_(grid_clb_63_right_width_0_height_0__pin_43_upper),
     .bottom_left_grid_pin_44_(grid_clb_63_right_width_0_height_0__pin_44_upper),
@@ -35464,8 +52865,6 @@ module fpga_core (IO_ISOL_N,
     .left_bottom_grid_pin_41_(grid_clb_63_top_width_0_height_0__pin_41_lower),
     .left_top_grid_pin_1_(grid_io_top_7_bottom_width_0_height_0__pin_1_lower),
     .prog_clk_0_S_in(\prog_clk_0_wires[224] ),
-    .VPWR(VPWR),
-    .VGND(VGND),
     .chanx_left_in({\cbx_1__8__7_chanx_right_out[0] ,
     \cbx_1__8__7_chanx_right_out[1] ,
     \cbx_1__8__7_chanx_right_out[2] ,
@@ -35546,8 +52945,8 @@ module fpga_core (IO_ISOL_N,
     \sb_8__8__0_chany_bottom_out[17] ,
     \sb_8__8__0_chany_bottom_out[18] ,
     \sb_8__8__0_chany_bottom_out[19] }));
- tie_array tie_array (.VPWR(VPWR),
-    .VGND(VGND),
+ tie_array tie_array (.VGND(VGND),
+    .VPWR(VPWR),
     .x({\logic_zero_tie[7] ,
     \logic_zero_tie[6] ,
     \logic_zero_tie[5] ,
