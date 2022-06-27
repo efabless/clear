@@ -55,11 +55,11 @@ set ::env(CHECK_ASSIGN_STATEMENTS) 0
 
 # set ::env(VDD_NET) "vccd1"
 # set ::env(GND_NET) "vssd1"
-set ::env(FP_PDN_MACRO_HOOKS) "fpga_core_uut vccd1 vssd1 VPWR VGND, \
-								fpga_core_uut vccd2 vssd2 VPWR VGND"
+set ::env(FP_PDN_MACRO_HOOKS) "fpga_core_uut vccd1 vssd1 VPWR VGND"
 set ::env(STD_CELL_POWER_PINS) "VPB VPWR"
 set ::env(STD_CELL_GROUND_PINS) "VNB VGND"
 set ::env(FP_PDN_ENABLE_GLOBAL_CONNECTIONS) 1
+set ::env(FP_PDN_IRDROP) 0
 
 set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
 set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
