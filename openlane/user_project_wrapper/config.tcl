@@ -67,7 +67,11 @@ set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
 
 
 set ::env(QUIT_ON_MAGIC_DRC) 0
-
+set ::env(QUIT_ON_LVS_ERROR) 0
+set ::env(CLOCK_TREE_SYNTH) 0
+set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 0
+set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
+set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 
 # Need to fix a FastRoute bug for this to work, but it's good
 # for a sense of "isolation"
