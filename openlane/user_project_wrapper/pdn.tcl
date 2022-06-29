@@ -70,7 +70,8 @@ foreach vdd $::env(VDD_NETS) gnd $::env(GND_NETS) {
     }
 }
 
-set_voltage_domain -name CORE -power $::env(VDD_NET) -ground $::env(GND_NET)
+set_voltage_domain -name CORE -power $::env(VDD_NET) -ground $::env(GND_NET) \
+    -secondary_power $secondary
 
 # Assesses whether the design is the core of the chip or not based on the
 # value of $::env(DESIGN_IS_CORE) and uses the appropriate stdcell section

@@ -10,9 +10,6 @@ add_lefs -src $lefs
 
 run_yosys
 
-exec sed "s/.*wire remove_me;.*//g" $::env(CURRENT_NETLIST) -i
-exec sed "s/remove_me//g" $::env(CURRENT_NETLIST) -i
-
 set ::env(CURRENT_SDC) $::env(BASE_SDC_FILE)
 
 exec tclsh $script_dir/openfpga_fp.tcl

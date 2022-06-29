@@ -102,4 +102,4 @@ set ::env(_SPACING) 1.7
 set ::env(_H_OFFSET) 20
 set ::env(_V_OFFSET) 20
 
-set ::env(QUIT_ON_LVS_ERROR) 0
+# set ::env(QUIT_ON_LVS_ERROR) 0

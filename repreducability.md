@@ -2,4 +2,4 @@
     - caravel and mgmt_core --> main as of june 26th
     - openlane version: `2022.06.24_01.37.58`
     - pdk version: `41c0908b47130d5675ff8484255b43f66463a7d6`
-    - update netgen version to `7550ef9258836973799b092a0d3a246983879538`
+    - update netgen version to `2056b37c95e11ea802f8b06c8948e874a298808a`
