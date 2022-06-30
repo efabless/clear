@@ -8,7 +8,9 @@ set lefs $::env(EXTRA_LEFS)
 puts "LEFS: $lefs"
 add_lefs -src $lefs
 
-run_synthesis
+run_yosys
+
+set ::env(CURRENT_SDC) $::env(BASE_SDC_FILE)
 
 exec tclsh $script_dir/openfpga_fp.tcl
 source $script_dir/openfpga_fp.tcl
@@ -75,14 +77,14 @@ add_macro_placement tie_array [expr {$floorplan_x / 2}] [expr {$switches_y(8,8) 
 
 manual_macro_placement f
 
-detailed_placement
+detailed_placement_or -log $::env(routing_logs)/diode_legalization.log -def $::env(CURRENT_DEF)
 
-gen_pdn
+run_power_grid_generation
 
 run_routing
 
-write_powered_verilog
-set_netlist $::env(lvs_result_file_tag).powered.v
+# write_powered_verilog
+# set_netlist $::env(lvs_result_file_tag).powered.v
 
 if { $::env(DIODE_INSERTION_STRATEGY) == 2 } {
     run_magic_antenna_check; # produces a report of violators; extraction!
@@ -92,19 +94,18 @@ if { $::env(DIODE_INSERTION_STRATEGY) == 2 } {
 
 run_magic 
 
-save_views 	-lef_path $::env(magic_result_file_tag).lef \
-        -def_path $::env(tritonRoute_result_file_tag).def \
-        -gds_path $::env(magic_result_file_tag).gds \
-        -mag_path $::env(magic_result_file_tag).mag \
-        -maglef_path $::env(magic_result_file_tag).lef.mag \
-        -spice_path $::env(magic_result_file_tag).spice \
-        -verilog_path $::env(CURRENT_NETLIST) \
-        -save_path $save_path \
-        -tag $::env(RUN_TAG)
-
-run_magic_drc
-
 run_magic_spice_export
 run_lvs
 
+run_magic_drc
+
 run_antenna_check; # to verify the above and get a final report
+
+save_views 	-lef_path $::env(signoff_results)/$::env(DESIGN_NAME).lef \
+	        -gds_path $::env(signoff_results)/$::env(DESIGN_NAME).gds \
+	        -mag_path $::env(signoff_results)/$::env(DESIGN_NAME).mag \
+	        -maglef_path $::env(signoff_results)/$::env(DESIGN_NAME).lef.mag \
+	        -spice_path $::env(signoff_results)/$::env(DESIGN_NAME).spice \
+            -verilog_path $::env(CURRENT_NETLIST) \
+            -save_path $save_path \
+            -tag $::env(RUN_TAG)

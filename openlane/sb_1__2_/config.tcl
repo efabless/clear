@@ -25,6 +25,8 @@ set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 $sb_x $sb_y"
 set ::env(PL_TARGET_DENSITY) 0.5
 set ::env(CELL_PAD) 2
+set ::env(CLOCK_TREE_SYNTH) 0
+set ::env(RT_MAX_LAYER) "met4"
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin.cfg
 

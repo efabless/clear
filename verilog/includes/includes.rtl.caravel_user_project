@@ -18,8 +18,4 @@
 -v $(USER_PROJECT_VERILOG)/gl/tie_array.v
 -v $(USER_PROJECT_VERILOG)/gl/fpga_core.v
 -v $(USER_PROJECT_VERILOG)/gl/user_project_wrapper.v
--v $(CORE_VERILOG_PATH)/rtl/defines.v
--v $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
--v $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
-
  

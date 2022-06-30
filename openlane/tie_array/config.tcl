@@ -19,6 +19,8 @@ set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 $tie_x $tie_y"
 set ::env(PL_TARGET_DENSITY) 0.1
 set ::env(CELL_PAD) 8
+set ::env(CLOCK_TREE_SYNTH) 0
+set ::env(RT_MAX_LAYER) "met4"
 
 set ::env(PL_SKIP_INITIAL_PLACEMENT) 1
 

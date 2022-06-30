@@ -1,0 +1,5587 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "cby_0__1_"
+*DATE "11:11:11 Fri 11 11, 1111"
+*VENDOR "OpenRCX"
+*PROGRAM "Parallel Extraction"
+*VERSION "1.0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*1 IO_ISOL_N
+*4 ccff_head
+*5 ccff_tail
+*6 chany_bottom_in[0]
+*7 chany_bottom_in[10]
+*8 chany_bottom_in[11]
+*9 chany_bottom_in[12]
+*10 chany_bottom_in[13]
+*11 chany_bottom_in[14]
+*12 chany_bottom_in[15]
+*13 chany_bottom_in[16]
+*14 chany_bottom_in[17]
+*15 chany_bottom_in[18]
+*16 chany_bottom_in[19]
+*17 chany_bottom_in[1]
+*18 chany_bottom_in[2]
+*19 chany_bottom_in[3]
+*20 chany_bottom_in[4]
+*21 chany_bottom_in[5]
+*22 chany_bottom_in[6]
+*23 chany_bottom_in[7]
+*24 chany_bottom_in[8]
+*25 chany_bottom_in[9]
+*26 chany_bottom_out[0]
+*27 chany_bottom_out[10]
+*28 chany_bottom_out[11]
+*29 chany_bottom_out[12]
+*30 chany_bottom_out[13]
+*31 chany_bottom_out[14]
+*32 chany_bottom_out[15]
+*33 chany_bottom_out[16]
+*34 chany_bottom_out[17]
+*35 chany_bottom_out[18]
+*36 chany_bottom_out[19]
+*37 chany_bottom_out[1]
+*38 chany_bottom_out[2]
+*39 chany_bottom_out[3]
+*40 chany_bottom_out[4]
+*41 chany_bottom_out[5]
+*42 chany_bottom_out[6]
+*43 chany_bottom_out[7]
+*44 chany_bottom_out[8]
+*45 chany_bottom_out[9]
+*46 chany_top_in[0]
+*47 chany_top_in[10]
+*48 chany_top_in[11]
+*49 chany_top_in[12]
+*50 chany_top_in[13]
+*51 chany_top_in[14]
+*52 chany_top_in[15]
+*53 chany_top_in[16]
+*54 chany_top_in[17]
+*55 chany_top_in[18]
+*56 chany_top_in[19]
+*57 chany_top_in[1]
+*58 chany_top_in[2]
+*59 chany_top_in[3]
+*60 chany_top_in[4]
+*61 chany_top_in[5]
+*62 chany_top_in[6]
+*63 chany_top_in[7]
+*64 chany_top_in[8]
+*65 chany_top_in[9]
+*66 chany_top_out[0]
+*67 chany_top_out[10]
+*68 chany_top_out[11]
+*69 chany_top_out[12]
+*70 chany_top_out[13]
+*71 chany_top_out[14]
+*72 chany_top_out[15]
+*73 chany_top_out[16]
+*74 chany_top_out[17]
+*75 chany_top_out[18]
+*76 chany_top_out[19]
+*77 chany_top_out[1]
+*78 chany_top_out[2]
+*79 chany_top_out[3]
+*80 chany_top_out[4]
+*81 chany_top_out[5]
+*82 chany_top_out[6]
+*83 chany_top_out[7]
+*84 chany_top_out[8]
+*85 chany_top_out[9]
+*86 gfpga_pad_EMBEDDED_IO_HD_SOC_DIR
+*87 gfpga_pad_EMBEDDED_IO_HD_SOC_IN
+*88 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT
+*89 left_grid_pin_0_
+*90 prog_clk_0_E_in
+*91 right_width_0_height_0__pin_0_
+*92 right_width_0_height_0__pin_1_lower
+*93 right_width_0_height_0__pin_1_upper
+*94 logical_tile_io_mode_io__0\.ccff_head
+*95 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_0_\.SOC_DIR_N
+*96 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_sky130_fd_sc_hd__dfxtp_1_mem\.prog_clk
+*97 mem_right_ipin_0\.mem_out\[0\]
+*98 mem_right_ipin_0\.mem_out\[1\]
+*99 mem_right_ipin_0\.mem_out\[2\]
+*100 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_0_X
+*101 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_1_X
+*102 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_2_X
+*103 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_3_X
+*104 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_4_X
+*105 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_5_X
+*106 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_6_X
+*107 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_7_X
+*108 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_8_X
+*109 mux_right_ipin_0\.sky130_fd_sc_hd__mux2_1_9_X
+*110 net1
+*111 net10
+*112 net11
+*113 net12
+*114 net13
+*115 net14
+*116 net15
+*117 net16
+*118 net17
+*119 net18
+*120 net19
+*121 net2
+*122 net20
+*123 net21
+*124 net22
+*125 net23
+*126 net24
+*127 net25
+*128 net26
+*129 net27
+*130 net28
+*131 net29
+*132 net3
+*133 net30
+*134 net31
+*135 net32
+*136 net33
+*137 net34
+*138 net35
+*139 net36
+*140 net37
+*141 net38
+*142 net39
+*143 net4
+*144 net40
+*145 net41
+*146 net42
+*147 net43
+*148 net44
+*149 net45
+*150 net46
+*151 net47
+*152 net48
+*153 net49
+*154 net5
+*155 net50
+*156 net51
+*157 net52
+*158 net53
+*159 net54
+*160 net55
+*161 net56
+*162 net57
+*163 net58
+*164 net59
+*165 net6
+*166 net60
+*167 net61
+*168 net62
+*169 net63
+*170 net64
+*171 net65
+*172 net66
+*173 net67
+*174 net68
+*175 net69
+*176 net7
+*177 net70
+*178 net71
+*179 net72
+*180 net73
+*181 net74
+*182 net75
+*183 net76
+*184 net77
+*185 net78
+*186 net79
+*187 net8
+*188 net80
+*189 net81
+*190 net82
+*191 net83
+*192 net84
+*193 net85
+*194 net86
+*195 net87
+*196 net88
+*197 net89
+*198 net9
+*199 net90
+*200 ANTENNA__21__A
+*201 ANTENNA_input10_A
+*202 ANTENNA_input11_A
+*203 ANTENNA_input12_A
+*204 ANTENNA_input13_A
+*205 ANTENNA_input14_A
+*206 ANTENNA_input15_A
+*207 ANTENNA_input16_A
+*208 ANTENNA_input17_A
+*209 ANTENNA_input18_A
+*210 ANTENNA_input19_A
+*211 ANTENNA_input1_A
+*212 ANTENNA_input20_A
+*213 ANTENNA_input21_A
+*214 ANTENNA_input22_A
+*215 ANTENNA_input23_A
+*216 ANTENNA_input24_A
+*217 ANTENNA_input25_A
+*218 ANTENNA_input26_A
+*219 ANTENNA_input27_A
+*220 ANTENNA_input28_A
+*221 ANTENNA_input29_A
+*222 ANTENNA_input2_A
+*223 ANTENNA_input30_A
+*224 ANTENNA_input31_A
+*225 ANTENNA_input32_A
+*226 ANTENNA_input33_A
+*227 ANTENNA_input34_A
+*228 ANTENNA_input35_A
+*229 ANTENNA_input36_A
+*230 ANTENNA_input37_A
+*231 ANTENNA_input38_A
+*232 ANTENNA_input39_A
+*233 ANTENNA_input3_A
+*234 ANTENNA_input40_A
+*235 ANTENNA_input41_A
+*236 ANTENNA_input42_A
+*237 ANTENNA_input43_A
+*238 ANTENNA_input44_A
+*239 ANTENNA_input4_A
+*240 ANTENNA_input5_A
+*241 ANTENNA_input6_A
+*242 ANTENNA_input7_A
+*243 ANTENNA_input8_A
+*244 ANTENNA_input9_A
+*245 ANTENNA_prog_clk_0_FTB00_A
+*246 FILLER_0_103
+*247 FILLER_0_107
+*248 FILLER_0_111
+*249 FILLER_0_119
+*250 FILLER_0_123
+*251 FILLER_0_127
+*252 FILLER_0_131
+*253 FILLER_0_135
+*254 FILLER_0_139
+*255 FILLER_0_147
+*256 FILLER_0_151
+*257 FILLER_0_155
+*258 FILLER_0_29
+*259 FILLER_0_3
+*260 FILLER_0_57
+*261 FILLER_0_91
+*262 FILLER_0_95
+*263 FILLER_0_99
+*264 FILLER_10_109
+*265 FILLER_10_121
+*266 FILLER_10_133
+*267 FILLER_10_139
+*268 FILLER_10_141
+*269 FILLER_10_15
+*270 FILLER_10_153
+*271 FILLER_10_27
+*272 FILLER_10_29
+*273 FILLER_10_3
+*274 FILLER_10_41
+*275 FILLER_10_53
+*276 FILLER_10_65
+*277 FILLER_10_77
+*278 FILLER_10_83
+*279 FILLER_10_85
+*280 FILLER_10_97
+*281 FILLER_11_108
+*282 FILLER_11_127
+*283 FILLER_11_139
+*284 FILLER_11_151
+*285 FILLER_11_19
+*286 FILLER_11_31
+*287 FILLER_11_43
+*288 FILLER_11_55
+*289 FILLER_11_57
+*290 FILLER_11_7
+*291 FILLER_11_74
+*292 FILLER_11_84
+*293 FILLER_11_96
+*294 FILLER_12_100
+*295 FILLER_12_112
+*296 FILLER_12_124
+*297 FILLER_12_136
+*298 FILLER_12_141
+*299 FILLER_12_15
+*300 FILLER_12_153
+*301 FILLER_12_27
+*302 FILLER_12_29
+*303 FILLER_12_3
+*304 FILLER_12_41
+*305 FILLER_12_53
+*306 FILLER_12_61
+*307 FILLER_12_82
+*308 FILLER_12_88
+*309 FILLER_13_100
+*310 FILLER_13_104
+*311 FILLER_13_108
+*312 FILLER_13_113
+*313 FILLER_13_125
+*314 FILLER_13_137
+*315 FILLER_13_149
+*316 FILLER_13_157
+*317 FILLER_13_24
+*318 FILLER_13_36
+*319 FILLER_13_47
+*320 FILLER_13_91
+*321 FILLER_13_95
+*322 FILLER_14_134
+*323 FILLER_14_141
+*324 FILLER_14_15
+*325 FILLER_14_153
+*326 FILLER_14_27
+*327 FILLER_14_29
+*328 FILLER_14_3
+*329 FILLER_14_37
+*330 FILLER_14_73
+*331 FILLER_14_85
+*332 FILLER_15_110
+*333 FILLER_15_113
+*334 FILLER_15_125
+*335 FILLER_15_137
+*336 FILLER_15_149
+*337 FILLER_15_15
+*338 FILLER_15_157
+*339 FILLER_15_23
+*340 FILLER_15_28
+*341 FILLER_15_3
+*342 FILLER_15_40
+*343 FILLER_15_48
+*344 FILLER_15_91
+*345 FILLER_15_98
+*346 FILLER_16_106
+*347 FILLER_16_118
+*348 FILLER_16_130
+*349 FILLER_16_138
+*350 FILLER_16_141
+*351 FILLER_16_15
+*352 FILLER_16_153
+*353 FILLER_16_27
+*354 FILLER_16_29
+*355 FILLER_16_3
+*356 FILLER_16_41
+*357 FILLER_16_53
+*358 FILLER_16_61
+*359 FILLER_16_94
+*360 FILLER_17_108
+*361 FILLER_17_113
+*362 FILLER_17_125
+*363 FILLER_17_137
+*364 FILLER_17_149
+*365 FILLER_17_157
+*366 FILLER_17_20
+*367 FILLER_17_32
+*368 FILLER_17_44
+*369 FILLER_17_57
+*370 FILLER_17_65
+*371 FILLER_17_69
+*372 FILLER_17_8
+*373 FILLER_17_84
+*374 FILLER_17_96
+*375 FILLER_18_104
+*376 FILLER_18_116
+*377 FILLER_18_128
+*378 FILLER_18_141
+*379 FILLER_18_15
+*380 FILLER_18_153
+*381 FILLER_18_27
+*382 FILLER_18_29
+*383 FILLER_18_3
+*384 FILLER_18_41
+*385 FILLER_18_46
+*386 FILLER_18_58
+*387 FILLER_18_66
+*388 FILLER_18_71
+*389 FILLER_18_83
+*390 FILLER_18_85
+*391 FILLER_18_92
+*392 FILLER_19_105
+*393 FILLER_19_111
+*394 FILLER_19_113
+*395 FILLER_19_125
+*396 FILLER_19_137
+*397 FILLER_19_146
+*398 FILLER_19_15
+*399 FILLER_19_154
+*400 FILLER_19_27
+*401 FILLER_19_3
+*402 FILLER_19_31
+*403 FILLER_19_54
+*404 FILLER_19_57
+*405 FILLER_19_69
+*406 FILLER_19_81
+*407 FILLER_19_93
+*408 FILLER_1_100
+*409 FILLER_1_104
+*410 FILLER_1_108
+*411 FILLER_1_117
+*412 FILLER_1_120
+*413 FILLER_1_124
+*414 FILLER_1_128
+*415 FILLER_1_13
+*416 FILLER_1_132
+*417 FILLER_1_136
+*418 FILLER_1_141
+*419 FILLER_1_144
+*420 FILLER_1_148
+*421 FILLER_1_25
+*422 FILLER_1_3
+*423 FILLER_1_31
+*424 FILLER_1_36
+*425 FILLER_1_48
+*426 FILLER_1_57
+*427 FILLER_1_69
+*428 FILLER_1_81
+*429 FILLER_1_85
+*430 FILLER_1_88
+*431 FILLER_1_92
+*432 FILLER_1_96
+*433 FILLER_20_109
+*434 FILLER_20_121
+*435 FILLER_20_133
+*436 FILLER_20_139
+*437 FILLER_20_141
+*438 FILLER_20_15
+*439 FILLER_20_153
+*440 FILLER_20_27
+*441 FILLER_20_29
+*442 FILLER_20_3
+*443 FILLER_20_41
+*444 FILLER_20_53
+*445 FILLER_20_65
+*446 FILLER_20_77
+*447 FILLER_20_83
+*448 FILLER_20_85
+*449 FILLER_20_97
+*450 FILLER_21_105
+*451 FILLER_21_111
+*452 FILLER_21_113
+*453 FILLER_21_125
+*454 FILLER_21_137
+*455 FILLER_21_149
+*456 FILLER_21_15
+*457 FILLER_21_157
+*458 FILLER_21_27
+*459 FILLER_21_3
+*460 FILLER_21_35
+*461 FILLER_21_44
+*462 FILLER_21_57
+*463 FILLER_21_69
+*464 FILLER_21_81
+*465 FILLER_21_93
+*466 FILLER_22_109
+*467 FILLER_22_121
+*468 FILLER_22_133
+*469 FILLER_22_139
+*470 FILLER_22_141
+*471 FILLER_22_15
+*472 FILLER_22_153
+*473 FILLER_22_27
+*474 FILLER_22_29
+*475 FILLER_22_3
+*476 FILLER_22_41
+*477 FILLER_22_53
+*478 FILLER_22_65
+*479 FILLER_22_77
+*480 FILLER_22_83
+*481 FILLER_22_85
+*482 FILLER_22_97
+*483 FILLER_23_105
+*484 FILLER_23_111
+*485 FILLER_23_113
+*486 FILLER_23_125
+*487 FILLER_23_137
+*488 FILLER_23_149
+*489 FILLER_23_15
+*490 FILLER_23_157
+*491 FILLER_23_27
+*492 FILLER_23_3
+*493 FILLER_23_39
+*494 FILLER_23_51
+*495 FILLER_23_55
+*496 FILLER_23_57
+*497 FILLER_23_69
+*498 FILLER_23_81
+*499 FILLER_23_93
+*500 FILLER_24_109
+*501 FILLER_24_121
+*502 FILLER_24_133
+*503 FILLER_24_139
+*504 FILLER_24_141
+*505 FILLER_24_15
+*506 FILLER_24_153
+*507 FILLER_24_27
+*508 FILLER_24_29
+*509 FILLER_24_3
+*510 FILLER_24_41
+*511 FILLER_24_53
+*512 FILLER_24_65
+*513 FILLER_24_77
+*514 FILLER_24_83
+*515 FILLER_24_85
+*516 FILLER_24_97
+*517 FILLER_25_105
+*518 FILLER_25_111
+*519 FILLER_25_113
+*520 FILLER_25_125
+*521 FILLER_25_137
+*522 FILLER_25_149
+*523 FILLER_25_153
+*524 FILLER_25_17
+*525 FILLER_25_29
+*526 FILLER_25_41
+*527 FILLER_25_5
+*528 FILLER_25_53
+*529 FILLER_25_57
+*530 FILLER_25_69
+*531 FILLER_25_81
+*532 FILLER_25_93
+*533 FILLER_26_106
+*534 FILLER_26_11
+*535 FILLER_26_110
+*536 FILLER_26_113
+*537 FILLER_26_116
+*538 FILLER_26_119
+*539 FILLER_26_122
+*540 FILLER_26_126
+*541 FILLER_26_134
+*542 FILLER_26_145
+*543 FILLER_26_150
+*544 FILLER_26_23
+*545 FILLER_26_27
+*546 FILLER_26_29
+*547 FILLER_26_34
+*548 FILLER_26_46
+*549 FILLER_26_58
+*550 FILLER_26_70
+*551 FILLER_26_82
+*552 FILLER_26_85
+*553 FILLER_26_91
+*554 FILLER_26_94
+*555 FILLER_26_98
+*556 FILLER_27_101
+*557 FILLER_27_105
+*558 FILLER_27_111
+*559 FILLER_27_125
+*560 FILLER_27_129
+*561 FILLER_27_133
+*562 FILLER_27_139
+*563 FILLER_27_29
+*564 FILLER_27_3
+*565 FILLER_27_57
+*566 FILLER_27_89
+*567 FILLER_27_93
+*568 FILLER_27_97
+*569 FILLER_2_109
+*570 FILLER_2_121
+*571 FILLER_2_133
+*572 FILLER_2_139
+*573 FILLER_2_141
+*574 FILLER_2_15
+*575 FILLER_2_153
+*576 FILLER_2_27
+*577 FILLER_2_29
+*578 FILLER_2_3
+*579 FILLER_2_41
+*580 FILLER_2_53
+*581 FILLER_2_65
+*582 FILLER_2_77
+*583 FILLER_2_83
+*584 FILLER_2_85
+*585 FILLER_2_97
+*586 FILLER_3_105
+*587 FILLER_3_111
+*588 FILLER_3_113
+*589 FILLER_3_125
+*590 FILLER_3_137
+*591 FILLER_3_149
+*592 FILLER_3_15
+*593 FILLER_3_157
+*594 FILLER_3_27
+*595 FILLER_3_3
+*596 FILLER_3_39
+*597 FILLER_3_51
+*598 FILLER_3_55
+*599 FILLER_3_57
+*600 FILLER_3_69
+*601 FILLER_3_81
+*602 FILLER_3_93
+*603 FILLER_4_109
+*604 FILLER_4_121
+*605 FILLER_4_133
+*606 FILLER_4_139
+*607 FILLER_4_141
+*608 FILLER_4_15
+*609 FILLER_4_153
+*610 FILLER_4_27
+*611 FILLER_4_29
+*612 FILLER_4_3
+*613 FILLER_4_41
+*614 FILLER_4_53
+*615 FILLER_4_65
+*616 FILLER_4_77
+*617 FILLER_4_83
+*618 FILLER_4_85
+*619 FILLER_4_97
+*620 FILLER_5_105
+*621 FILLER_5_111
+*622 FILLER_5_113
+*623 FILLER_5_125
+*624 FILLER_5_137
+*625 FILLER_5_149
+*626 FILLER_5_157
+*627 FILLER_5_19
+*628 FILLER_5_31
+*629 FILLER_5_43
+*630 FILLER_5_55
+*631 FILLER_5_57
+*632 FILLER_5_69
+*633 FILLER_5_7
+*634 FILLER_5_81
+*635 FILLER_5_93
+*636 FILLER_6_109
+*637 FILLER_6_121
+*638 FILLER_6_133
+*639 FILLER_6_139
+*640 FILLER_6_141
+*641 FILLER_6_15
+*642 FILLER_6_153
+*643 FILLER_6_27
+*644 FILLER_6_29
+*645 FILLER_6_3
+*646 FILLER_6_41
+*647 FILLER_6_53
+*648 FILLER_6_65
+*649 FILLER_6_77
+*650 FILLER_6_83
+*651 FILLER_6_85
+*652 FILLER_6_97
+*653 FILLER_7_105
+*654 FILLER_7_111
+*655 FILLER_7_113
+*656 FILLER_7_125
+*657 FILLER_7_137
+*658 FILLER_7_149
+*659 FILLER_7_15
+*660 FILLER_7_157
+*661 FILLER_7_27
+*662 FILLER_7_3
+*663 FILLER_7_39
+*664 FILLER_7_51
+*665 FILLER_7_55
+*666 FILLER_7_57
+*667 FILLER_7_69
+*668 FILLER_7_81
+*669 FILLER_7_93
+*670 FILLER_8_109
+*671 FILLER_8_121
+*672 FILLER_8_133
+*673 FILLER_8_139
+*674 FILLER_8_141
+*675 FILLER_8_15
+*676 FILLER_8_153
+*677 FILLER_8_27
+*678 FILLER_8_29
+*679 FILLER_8_3
+*680 FILLER_8_41
+*681 FILLER_8_53
+*682 FILLER_8_65
+*683 FILLER_8_77
+*684 FILLER_8_83
+*685 FILLER_8_85
+*686 FILLER_8_97
+*687 FILLER_9_103
+*688 FILLER_9_111
+*689 FILLER_9_113
+*690 FILLER_9_125
+*691 FILLER_9_137
+*692 FILLER_9_149
+*693 FILLER_9_15
+*694 FILLER_9_157
+*695 FILLER_9_24
+*696 FILLER_9_3
+*697 FILLER_9_36
+*698 FILLER_9_40
+*699 FILLER_9_46
+*700 FILLER_9_52
+*701 FILLER_9_57
+*702 FILLER_9_65
+*703 FILLER_9_71
+*704 FILLER_9_83
+*705 FILLER_9_87
+*706 FILLER_9_91
+*707 PHY_0
+*708 PHY_1
+*709 PHY_10
+*710 PHY_11
+*711 PHY_12
+*712 PHY_13
+*713 PHY_14
+*714 PHY_15
+*715 PHY_16
+*716 PHY_17
+*717 PHY_18
+*718 PHY_19
+*719 PHY_2
+*720 PHY_20
+*721 PHY_21
+*722 PHY_22
+*723 PHY_23
+*724 PHY_24
+*725 PHY_25
+*726 PHY_26
+*727 PHY_27
+*728 PHY_28
+*729 PHY_29
+*730 PHY_3
+*731 PHY_30
+*732 PHY_31
+*733 PHY_32
+*734 PHY_33
+*735 PHY_34
+*736 PHY_35
+*737 PHY_36
+*738 PHY_37
+*739 PHY_38
+*740 PHY_39
+*741 PHY_4
+*742 PHY_40
+*743 PHY_41
+*744 PHY_42
+*745 PHY_43
+*746 PHY_44
+*747 PHY_45
+*748 PHY_46
+*749 PHY_47
+*750 PHY_48
+*751 PHY_49
+*752 PHY_5
+*753 PHY_50
+*754 PHY_51
+*755 PHY_52
+*756 PHY_53
+*757 PHY_54
+*758 PHY_55
+*759 PHY_6
+*760 PHY_7
+*761 PHY_8
+*762 PHY_9
+*763 TAP_100
+*764 TAP_101
+*765 TAP_102
+*766 TAP_103
+*767 TAP_104
+*768 TAP_105
+*769 TAP_106
+*770 TAP_107
+*771 TAP_108
+*772 TAP_109
+*773 TAP_110
+*774 TAP_111
+*775 TAP_112
+*776 TAP_113
+*777 TAP_114
+*778 TAP_115
+*779 TAP_116
+*780 TAP_117
+*781 TAP_118
+*782 TAP_119
+*783 TAP_120
+*784 TAP_121
+*785 TAP_122
+*786 TAP_123
+*787 TAP_124
+*788 TAP_125
+*789 TAP_126
+*790 TAP_127
+*791 TAP_128
+*792 TAP_129
+*793 TAP_130
+*794 TAP_56
+*795 TAP_57
+*796 TAP_58
+*797 TAP_59
+*798 TAP_60
+*799 TAP_61
+*800 TAP_62
+*801 TAP_63
+*802 TAP_64
+*803 TAP_65
+*804 TAP_66
+*805 TAP_67
+*806 TAP_68
+*807 TAP_69
+*808 TAP_70
+*809 TAP_71
+*810 TAP_72
+*811 TAP_73
+*812 TAP_74
+*813 TAP_75
+*814 TAP_76
+*815 TAP_77
+*816 TAP_78
+*817 TAP_79
+*818 TAP_80
+*819 TAP_81
+*820 TAP_82
+*821 TAP_83
+*822 TAP_84
+*823 TAP_85
+*824 TAP_86
+*825 TAP_87
+*826 TAP_88
+*827 TAP_89
+*828 TAP_90
+*829 TAP_91
+*830 TAP_92
+*831 TAP_93
+*832 TAP_94
+*833 TAP_95
+*834 TAP_96
+*835 TAP_97
+*836 TAP_98
+*837 TAP_99
+*838 _02_
+*839 _03_
+*840 _04_
+*841 _05_
+*842 _06_
+*843 _07_
+*844 _08_
+*845 _09_
+*846 _10_
+*847 _11_
+*848 _12_
+*849 _13_
+*850 _14_
+*851 _15_
+*852 _16_
+*853 _17_
+*854 _18_
+*855 _19_
+*856 _20_
+*857 _21_
+*858 _22_
+*859 _23_
+*860 _24_
+*861 _25_
+*862 _26_
+*863 _27_
+*864 _28_
+*865 _29_
+*866 _30_
+*867 _31_
+*868 _32_
+*869 _33_
+*870 _34_
+*871 _35_
+*872 _36_
+*873 _37_
+*874 _38_
+*875 _39_
+*876 _40_
+*877 _41_
+*878 _42_
+*879 hold1
+*880 input1
+*881 input10
+*882 input11
+*883 input12
+*884 input13
+*885 input14
+*886 input15
+*887 input16
+*888 input17
+*889 input18
+*890 input19
+*891 input2
+*892 input20
+*893 input21
+*894 input22
+*895 input23
+*896 input24
+*897 input25
+*898 input26
+*899 input27
+*900 input28
+*901 input29
+*902 input3
+*903 input30
+*904 input31
+*905 input32
+*906 input33
+*907 input34
+*908 input35
+*909 input36
+*910 input37
+*911 input38
+*912 input39
+*913 input4
+*914 input40
+*915 input41
+*916 input42
+*917 input43
+*918 input44
+*919 input5
+*920 input6
+*921 input7
+*922 input8
+*923 input9
+*924 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_0_\.INV_SOC_DIR
+*925 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_0_\.IN_PROTECT_GATE
+*926 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_0_\.ISOL_EN_GATE
+*927 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_0_\.OUT_PROTECT_GATE
+*928 logical_tile_io_mode_io__0\.ltile_phy_iopad_0\.EMBEDDED_IO_HD_sky130_fd_sc_hd__dfxtp_1_mem\.sky130_fd_sc_hd__dfxtp_1_0_
+*929 mem_right_ipin_0\.sky130_fd_sc_hd__dfxtp_1_0_
+*930 mem_right_ipin_0\.sky130_fd_sc_hd__dfxtp_1_1_
+*931 mem_right_ipin_0\.sky130_fd_sc_hd__dfxtp_1_2_
+*932 mem_right_ipin_0\.sky130_fd_sc_hd__dfxtp_1_3_
+*933 mux_right_ipin_0\.mux_l1_in_0_
+*934 mux_right_ipin_0\.mux_l1_in_1_
+*935 mux_right_ipin_0\.mux_l1_in_2_
+*936 mux_right_ipin_0\.mux_l2_in_0_
+*937 mux_right_ipin_0\.mux_l2_in_1_
+*938 mux_right_ipin_0\.mux_l2_in_2_
+*939 mux_right_ipin_0\.mux_l2_in_3_
+*940 mux_right_ipin_0\.mux_l2_in_3__89
+*941 mux_right_ipin_0\.mux_l3_in_0_
+*942 mux_right_ipin_0\.mux_l3_in_1_
+*943 mux_right_ipin_0\.mux_l4_in_0_
+*944 mux_right_ipin_0\.sky130_fd_sc_hd__buf_4_0_
+*945 output45
+*946 output46
+*947 output47
+*948 output48
+*949 output49
+*950 output50
+*951 output51
+*952 output52
+*953 output53
+*954 output54
+*955 output55
+*956 output56
+*957 output57
+*958 output58
+*959 output59
+*960 output60
+*961 output61
+*962 output62
+*963 output63
+*964 output64
+*965 output65
+*966 output66
+*967 output67
+*968 output68
+*969 output69
+*970 output70
+*971 output71
+*972 output72
+*973 output73
+*974 output74
+*975 output75
+*976 output76
+*977 output77
+*978 output78
+*979 output79
+*980 output80
+*981 output81
+*982 output82
+*983 output83
+*984 output84
+*985 output85
+*986 output86
+*987 output87
+*988 output88
+*989 prog_clk_0_FTB00
+
+*PORTS
+IO_ISOL_N I
+ccff_head I
+ccff_tail O
+chany_bottom_in[0] I
+chany_bottom_in[10] I
+chany_bottom_in[11] I
+chany_bottom_in[12] I
+chany_bottom_in[13] I
+chany_bottom_in[14] I
+chany_bottom_in[15] I
+chany_bottom_in[16] I
+chany_bottom_in[17] I
+chany_bottom_in[18] I
+chany_bottom_in[19] I
+chany_bottom_in[1] I
+chany_bottom_in[2] I
+chany_bottom_in[3] I
+chany_bottom_in[4] I
+chany_bottom_in[5] I
+chany_bottom_in[6] I
+chany_bottom_in[7] I
+chany_bottom_in[8] I
+chany_bottom_in[9] I
+chany_bottom_out[0] O
+chany_bottom_out[10] O
+chany_bottom_out[11] O
+chany_bottom_out[12] O
+chany_bottom_out[13] O
+chany_bottom_out[14] O
+chany_bottom_out[15] O
+chany_bottom_out[16] O
+chany_bottom_out[17] O
+chany_bottom_out[18] O
+chany_bottom_out[19] O
+chany_bottom_out[1] O
+chany_bottom_out[2] O
+chany_bottom_out[3] O
+chany_bottom_out[4] O
+chany_bottom_out[5] O
+chany_bottom_out[6] O
+chany_bottom_out[7] O
+chany_bottom_out[8] O
+chany_bottom_out[9] O
+chany_top_in[0] I
+chany_top_in[10] I
+chany_top_in[11] I
+chany_top_in[12] I
+chany_top_in[13] I
+chany_top_in[14] I
+chany_top_in[15] I
+chany_top_in[16] I
+chany_top_in[17] I
+chany_top_in[18] I
+chany_top_in[19] I
+chany_top_in[1] I
+chany_top_in[2] I
+chany_top_in[3] I
+chany_top_in[4] I
+chany_top_in[5] I
+chany_top_in[6] I
+chany_top_in[7] I
+chany_top_in[8] I
+chany_top_in[9] I
+chany_top_out[0] O
+chany_top_out[10] O
+chany_top_out[11] O
+chany_top_out[12] O
+chany_top_out[13] O
+chany_top_out[14] O
+chany_top_out[15] O
+chany_top_out[16] O
+chany_top_out[17] O
+chany_top_out[18] O
+chany_top_out[19] O
+chany_top_out[1] O
+chany_top_out[2] O
+chany_top_out[3] O
+chany_top_out[4] O
+chany_top_out[5] O
+chany_top_out[6] O
+chany_top_out[7] O
+chany_top_out[8] O
+chany_top_out[9] O
+gfpga_pad_EMBEDDED_IO_HD_SOC_DIR O
+gfpga_pad_EMBEDDED_IO_HD_SOC_IN I
+gfpga_pad_EMBEDDED_IO_HD_SOC_OUT O
+left_grid_pin_0_ O
+prog_clk_0_E_in I
+right_width_0_height_0__pin_0_ I
+right_width_0_height_0__pin_1_lower O
+right_width_0_height_0__pin_1_upper O
+
+*D_NET *1 0.00135679
+*CONN
+*P IO_ISOL_N I
+*I *880:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *211:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 IO_ISOL_N 0.000557255
+2 *880:A 2.56688e-05
+3 *211:DIODE 9.54731e-05
+4 *1:9 0.000678397
+5 *211:DIODE *977:A 0
+6 *211:DIODE *110:11 0
+7 *1:9 chany_top_out[0] 0
+8 *1:9 *4:10 0
+*RES
+1 IO_ISOL_N *1:9 12.7143 
+2 *1:9 *211:DIODE 15.9786 
+3 *1:9 *880:A 14.3357 
+*END
+
+*D_NET *4 0.00124567
+*CONN
+*P ccff_head I
+*I *222:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *891:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 ccff_head 0.000557805
+2 *222:DIODE 6.50276e-05
+3 *891:A 0
+4 *4:10 0.000622833
+5 *222:DIODE *121:17 0
+6 *4:10 chany_top_out[0] 0
+7 *4:10 chany_top_out[1] 0
+8 *4:10 *977:A 0
+9 *1:9 *4:10 0
+*RES
+1 ccff_head *4:10 16.0212 
+2 *4:10 *891:A 9.3 
+3 *4:10 *222:DIODE 10.6571 
+*END
+
+*D_NET *5 0.000468888
+*CONN
+*P ccff_tail O
+*I *945:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 ccff_tail 0.000234444
+2 *945:X 0.000234444
+3 ccff_tail *136:8 0
+*RES
+1 *945:X ccff_tail 18.8021 
+*END
+
+*D_NET *6 0.00105031
+*CONN
+*P chany_bottom_in[0] I
+*I *233:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *902:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[0] 0.000343319
+2 *233:DIODE 9.6271e-05
+3 *902:A 8.55626e-05
+4 *6:9 0.000525153
+5 *233:DIODE *846:A 0
+6 *233:DIODE *956:A 0
+7 *902:A *955:A 0
+8 *6:9 chany_bottom_out[19] 0
+9 *6:9 *846:A 0
+10 *6:9 *17:5 0
+*RES
+1 chany_bottom_in[0] *6:9 7.85714 
+2 *6:9 *902:A 15.5857 
+3 *6:9 *233:DIODE 16.05 
+*END
+
+*D_NET *7 0.00102688
+*CONN
+*P chany_bottom_in[10] I
+*I *239:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *913:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[10] 0.000359443
+2 *239:DIODE 0.000108647
+3 *913:A 4.53482e-05
+4 *7:9 0.000513439
+5 *239:DIODE *214:DIODE 0
+6 *239:DIODE *956:A 0
+7 *913:A *165:11 0
+8 *913:A *198:9 0
+9 *7:9 *8:5 0
+10 *7:9 *25:5 0
+*RES
+1 chany_bottom_in[10] *7:9 8.16071 
+2 *7:9 *913:A 14.7464 
+3 *7:9 *239:DIODE 16.2821 
+*END
+
+*D_NET *8 0.000962202
+*CONN
+*P chany_bottom_in[11] I
+*I *240:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *919:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[11] 0.000333095
+2 *240:DIODE 8.29787e-05
+3 *919:A 6.50276e-05
+4 *8:5 0.000481101
+5 *240:DIODE right_width_0_height_0__pin_1_lower 0
+6 *240:DIODE *241:DIODE 0
+7 *240:DIODE *154:21 0
+8 *919:A *165:11 0
+9 *919:A *198:9 0
+10 *8:5 *9:5 0
+11 *7:9 *8:5 0
+*RES
+1 chany_bottom_in[11] *8:5 7.5 
+2 *8:5 *919:A 15.1571 
+3 *8:5 *240:DIODE 15.7464 
+*END
+
+*D_NET *9 0.000962202
+*CONN
+*P chany_bottom_in[12] I
+*I *241:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *920:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[12] 0.000333095
+2 *241:DIODE 8.29787e-05
+3 *920:A 6.50276e-05
+4 *9:5 0.000481101
+5 *241:DIODE *855:A 0
+6 *241:DIODE *187:8 0
+7 *920:A *165:11 0
+8 *920:A *198:9 0
+9 *9:5 *10:9 0
+10 *9:5 *187:8 0
+11 *240:DIODE *241:DIODE 0
+12 *8:5 *9:5 0
+*RES
+1 chany_bottom_in[12] *9:5 7.5 
+2 *9:5 *920:A 15.1571 
+3 *9:5 *241:DIODE 15.7464 
+*END
+
+*D_NET *10 0.00108175
+*CONN
+*P chany_bottom_in[13] I
+*I *242:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *921:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[13] 0.000392871
+2 *242:DIODE 0.000148006
+3 *921:A 0
+4 *10:9 0.000540877
+5 *242:DIODE *243:DIODE 0
+6 *242:DIODE *11:5 0
+7 *242:DIODE *114:7 0
+8 *242:DIODE *187:8 0
+9 *10:9 *11:5 0
+10 *10:9 *187:8 0
+11 *9:5 *10:9 0
+*RES
+1 chany_bottom_in[13] *10:9 8.98214 
+2 *10:9 *921:A 13.8 
+3 *10:9 *242:DIODE 17.1036 
+*END
+
+*D_NET *11 0.00100156
+*CONN
+*P chany_bottom_in[14] I
+*I *243:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *922:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[14] 0.000333095
+2 *243:DIODE 8.29787e-05
+3 *922:A 8.4707e-05
+4 *11:5 0.00050078
+5 *243:DIODE *244:DIODE 0
+6 *922:A *187:8 0
+7 *922:A *198:9 0
+8 *11:5 *12:7 0
+9 *242:DIODE *243:DIODE 0
+10 *242:DIODE *11:5 0
+11 *10:9 *11:5 0
+*RES
+1 chany_bottom_in[14] *11:5 7.5 
+2 *11:5 *922:A 15.5679 
+3 *11:5 *243:DIODE 15.7464 
+*END
+
+*D_NET *12 0.00110784
+*CONN
+*P chany_bottom_in[15] I
+*I *244:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *923:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[15] 0.000355275
+2 *244:DIODE 0.000153299
+3 *923:A 4.53482e-05
+4 *12:7 0.000553922
+5 *244:DIODE *201:DIODE 0
+6 *244:DIODE *114:7 0
+7 *923:A *113:15 0
+8 *12:7 *13:5 0
+9 *243:DIODE *244:DIODE 0
+10 *11:5 *12:7 0
+*RES
+1 chany_bottom_in[15] *12:7 8.03571 
+2 *12:7 *923:A 14.7464 
+3 *12:7 *244:DIODE 17.2286 
+*END
+
+*D_NET *13 0.000956578
+*CONN
+*P chany_bottom_in[16] I
+*I *201:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *881:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[16] 0.000330302
+2 *201:DIODE 8.2959e-05
+3 *881:A 6.50276e-05
+4 *13:5 0.000478289
+5 *201:DIODE *202:DIODE 0
+6 *881:A *113:15 0
+7 *13:5 *14:5 0
+8 *13:5 *111:11 0
+9 *244:DIODE *201:DIODE 0
+10 *12:7 *13:5 0
+*RES
+1 chany_bottom_in[16] *13:5 7.5 
+2 *13:5 *881:A 15.1571 
+3 *13:5 *201:DIODE 15.7464 
+*END
+
+*D_NET *14 0.000979008
+*CONN
+*P chany_bottom_in[17] I
+*I *882:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *202:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_bottom_in[17] 0.000323656
+2 *882:A 7.34504e-05
+3 *202:DIODE 9.23974e-05
+4 *14:5 0.000489504
+5 *202:DIODE *203:DIODE 0
+6 *882:A *15:5 0
+7 *882:A *113:15 0
+8 *14:5 *15:5 0
+9 *14:5 *111:11 0
+10 *14:5 *112:14 0
+11 *201:DIODE *202:DIODE 0
+12 *13:5 *14:5 0
+*RES
+1 chany_bottom_in[17] *14:5 7.34821 
+2 *14:5 *202:DIODE 15.8982 
+3 *14:5 *882:A 15.5589 
+*END
+
+*D_NET *15 0.00104739
+*CONN
+*P chany_bottom_in[18] I
+*I *203:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *883:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[18] 0.000330342
+2 *203:DIODE 0.000128327
+3 *883:A 6.50276e-05
+4 *15:5 0.000523696
+5 *203:DIODE *16:8 0
+6 *203:DIODE *114:7 0
+7 *883:A *113:15 0
+8 *15:5 *16:8 0
+9 *15:5 *112:14 0
+10 *202:DIODE *203:DIODE 0
+11 *882:A *15:5 0
+12 *14:5 *15:5 0
+*RES
+1 chany_bottom_in[18] *15:5 7.5 
+2 *15:5 *883:A 15.1571 
+3 *15:5 *203:DIODE 16.6929 
+*END
+
+*D_NET *16 0.00108223
+*CONN
+*P chany_bottom_in[19] I
+*I *884:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *204:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_bottom_in[19] 0.000476088
+2 *884:A 0
+3 *204:DIODE 6.50276e-05
+4 *16:8 0.000541115
+5 *204:DIODE *114:7 0
+6 *203:DIODE *16:8 0
+7 *15:5 *16:8 0
+*RES
+1 chany_bottom_in[19] *16:8 15.2679 
+2 *16:8 *204:DIODE 10.6571 
+3 *16:8 *884:A 9.3 
+*END
+
+*D_NET *17 0.000964214
+*CONN
+*P chany_bottom_in[1] I
+*I *885:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *205:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_bottom_in[1] 0.000330302
+2 *885:A 6.8944e-05
+3 *205:DIODE 8.28607e-05
+4 *17:5 0.000482107
+5 *205:DIODE *846:A 0
+6 *205:DIODE *111:12 0
+7 *885:A *955:A 0
+8 *17:5 *846:A 0
+9 *17:5 *18:5 0
+10 *17:5 *111:12 0
+11 *17:5 *115:11 0
+12 *6:9 *17:5 0
+*RES
+1 chany_bottom_in[1] *17:5 7.5 
+2 *17:5 *205:DIODE 15.7464 
+3 *17:5 *885:A 15.2821 
+*END
+
+*D_NET *18 0.000973266
+*CONN
+*P chany_bottom_in[2] I
+*I *886:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *206:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_bottom_in[2] 0.00032226
+2 *886:A 7.78549e-05
+3 *206:DIODE 8.65181e-05
+4 *18:5 0.000486633
+5 *206:DIODE *111:12 0
+6 *206:DIODE *116:16 0
+7 *886:A *955:A 0
+8 *18:5 *19:5 0
+9 *18:5 *111:12 0
+10 *17:5 *18:5 0
+*RES
+1 chany_bottom_in[2] *18:5 7.34821 
+2 *18:5 *206:DIODE 15.8982 
+3 *18:5 *886:A 15.5589 
+*END
+
+*D_NET *19 0.000956539
+*CONN
+*P chany_bottom_in[3] I
+*I *207:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *887:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[3] 0.000330302
+2 *207:DIODE 8.29394e-05
+3 *887:A 6.50276e-05
+4 *19:5 0.000478269
+5 *207:DIODE *117:13 0
+6 *207:DIODE *152:8 0
+7 *887:A *955:A 0
+8 *19:5 *20:5 0
+9 *19:5 *155:10 0
+10 *18:5 *19:5 0
+*RES
+1 chany_bottom_in[3] *19:5 7.5 
+2 *19:5 *887:A 15.1571 
+3 *19:5 *207:DIODE 15.7464 
+*END
+
+*D_NET *20 0.000956617
+*CONN
+*P chany_bottom_in[4] I
+*I *208:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *888:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[4] 0.000330302
+2 *208:DIODE 8.29787e-05
+3 *888:A 6.50276e-05
+4 *20:5 0.000478309
+5 *208:DIODE *209:DIODE 0
+6 *208:DIODE *118:13 0
+7 *208:DIODE *155:10 0
+8 *888:A *955:A 0
+9 *20:5 *21:5 0
+10 *20:5 *155:10 0
+11 *19:5 *20:5 0
+*RES
+1 chany_bottom_in[4] *20:5 7.5 
+2 *20:5 *888:A 15.1571 
+3 *20:5 *208:DIODE 15.7464 
+*END
+
+*D_NET *21 0.00106061
+*CONN
+*P chany_bottom_in[5] I
+*I *209:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *889:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[5] 0.000331659
+2 *209:DIODE 0.00013362
+3 *889:A 6.50276e-05
+4 *21:5 0.000530307
+5 *209:DIODE *951:A 0
+6 *209:DIODE *165:17 0
+7 *889:A *955:A 0
+8 *889:A *165:11 0
+9 *21:5 *22:5 0
+10 *21:5 *119:11 0
+11 *208:DIODE *209:DIODE 0
+12 *20:5 *21:5 0
+*RES
+1 chany_bottom_in[5] *21:5 7.5 
+2 *21:5 *889:A 15.1571 
+3 *21:5 *209:DIODE 16.8179 
+*END
+
+*D_NET *22 0.00096445
+*CONN
+*P chany_bottom_in[6] I
+*I *890:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *210:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_bottom_in[6] 0.000330322
+2 *890:A 6.8944e-05
+3 *210:DIODE 8.2959e-05
+4 *22:5 0.000482225
+5 *210:DIODE *112:14 0
+6 *210:DIODE *112:21 0
+7 *210:DIODE *165:17 0
+8 *890:A *955:A 0
+9 *890:A *165:11 0
+10 *22:5 *23:5 0
+11 *22:5 *112:14 0
+12 *22:5 *119:11 0
+13 *22:5 *120:11 0
+14 *21:5 *22:5 0
+*RES
+1 chany_bottom_in[6] *22:5 7.5 
+2 *22:5 *210:DIODE 15.7464 
+3 *22:5 *890:A 15.2821 
+*END
+
+*D_NET *23 0.00108675
+*CONN
+*P chany_bottom_in[7] I
+*I *212:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *892:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[7] 0.000330342
+2 *212:DIODE 0.000128327
+3 *892:A 8.4707e-05
+4 *23:5 0.000543376
+5 *212:DIODE *956:A 0
+6 *212:DIODE *112:14 0
+7 *212:DIODE *112:21 0
+8 *212:DIODE *157:8 0
+9 *892:A *954:A 0
+10 *892:A *955:A 0
+11 *892:A *165:11 0
+12 *23:5 *24:7 0
+13 *23:5 *112:14 0
+14 *23:5 *120:11 0
+15 *23:5 *157:8 0
+16 *22:5 *23:5 0
+*RES
+1 chany_bottom_in[7] *23:5 7.5 
+2 *23:5 *892:A 15.5679 
+3 *23:5 *212:DIODE 16.6929 
+*END
+
+*D_NET *24 0.000964529
+*CONN
+*P chany_bottom_in[8] I
+*I *213:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *893:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[8] 0.000352561
+2 *213:DIODE 8.43551e-05
+3 *893:A 4.53482e-05
+4 *24:7 0.000482265
+5 *213:DIODE *214:DIODE 0
+6 *213:DIODE *852:A 0
+7 *213:DIODE *159:8 0
+8 *893:A *165:11 0
+9 *893:A *198:9 0
+10 *24:7 *25:5 0
+11 *24:7 *122:20 0
+12 *24:7 *124:13 0
+13 *24:7 *157:8 0
+14 *23:5 *24:7 0
+*RES
+1 chany_bottom_in[8] *24:7 8.03571 
+2 *24:7 *893:A 14.7464 
+3 *24:7 *213:DIODE 15.7464 
+*END
+
+*D_NET *25 0.000956696
+*CONN
+*P chany_bottom_in[9] I
+*I *214:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *894:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_bottom_in[9] 0.000330342
+2 *214:DIODE 8.29787e-05
+3 *894:A 6.50276e-05
+4 *25:5 0.000478348
+5 *214:DIODE *852:A 0
+6 *214:DIODE *176:15 0
+7 *894:A *165:11 0
+8 *894:A *198:9 0
+9 *25:5 *124:13 0
+10 *213:DIODE *214:DIODE 0
+11 *239:DIODE *214:DIODE 0
+12 *7:9 *25:5 0
+13 *24:7 *25:5 0
+*RES
+1 chany_bottom_in[9] *25:5 7.5 
+2 *25:5 *894:A 15.1571 
+3 *25:5 *214:DIODE 15.7464 
+*END
+
+*D_NET *26 0.000911832
+*CONN
+*P chany_bottom_out[0] O
+*I *946:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[0] 0.000455916
+2 *946:X 0.000455916
+3 chany_bottom_out[0] chany_bottom_out[1] 0
+4 chany_bottom_out[0] *91:10 0
+*RES
+1 *946:X chany_bottom_out[0] 24.0679 
+*END
+
+*D_NET *27 0.000697817
+*CONN
+*P chany_bottom_out[10] O
+*I *947:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[10] 0.000348909
+2 *947:X 0.000348909
+3 chany_bottom_out[10] chany_bottom_out[11] 0
+4 chany_bottom_out[10] chany_bottom_out[9] 0
+5 chany_bottom_out[10] *838:A 0
+6 chany_bottom_out[10] *171:17 0
+*RES
+1 *947:X chany_bottom_out[10] 21.6393 
+*END
+
+*D_NET *28 0.000697896
+*CONN
+*P chany_bottom_out[11] O
+*I *948:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[11] 0.000348948
+2 *948:X 0.000348948
+3 chany_bottom_out[11] chany_bottom_out[12] 0
+4 chany_bottom_out[11] *838:A 0
+5 chany_bottom_out[11] *119:21 0
+6 chany_bottom_out[11] *164:6 0
+7 chany_bottom_out[11] *171:17 0
+8 chany_bottom_out[10] chany_bottom_out[11] 0
+*RES
+1 *948:X chany_bottom_out[11] 21.6393 
+*END
+
+*D_NET *29 0.000697896
+*CONN
+*P chany_bottom_out[12] O
+*I *949:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[12] 0.000348948
+2 *949:X 0.000348948
+3 chany_bottom_out[12] chany_bottom_out[13] 0
+4 chany_bottom_out[12] *171:17 0
+5 chany_bottom_out[11] chany_bottom_out[12] 0
+*RES
+1 *949:X chany_bottom_out[12] 21.6393 
+*END
+
+*D_NET *30 0.000697896
+*CONN
+*P chany_bottom_out[13] O
+*I *950:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[13] 0.000348948
+2 *950:X 0.000348948
+3 chany_bottom_out[13] chany_bottom_out[14] 0
+4 chany_bottom_out[13] *950:A 0
+5 chany_bottom_out[13] *171:17 0
+6 chany_bottom_out[12] chany_bottom_out[13] 0
+*RES
+1 *950:X chany_bottom_out[13] 21.6393 
+*END
+
+*D_NET *31 0.000697857
+*CONN
+*P chany_bottom_out[14] O
+*I *951:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[14] 0.000348928
+2 *951:X 0.000348928
+3 chany_bottom_out[14] chany_bottom_out[15] 0
+4 chany_bottom_out[14] *950:A 0
+5 chany_bottom_out[14] *171:17 0
+6 chany_bottom_out[13] chany_bottom_out[14] 0
+*RES
+1 *951:X chany_bottom_out[14] 21.6393 
+*END
+
+*D_NET *32 0.000697896
+*CONN
+*P chany_bottom_out[15] O
+*I *952:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[15] 0.000348948
+2 *952:X 0.000348948
+3 chany_bottom_out[15] chany_bottom_out[16] 0
+4 chany_bottom_out[15] *951:A 0
+5 chany_bottom_out[14] chany_bottom_out[15] 0
+*RES
+1 *952:X chany_bottom_out[15] 21.6393 
+*END
+
+*D_NET *33 0.000697896
+*CONN
+*P chany_bottom_out[16] O
+*I *953:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[16] 0.000348948
+2 *953:X 0.000348948
+3 chany_bottom_out[16] chany_bottom_out[17] 0
+4 chany_bottom_out[16] *120:14 0
+5 chany_bottom_out[15] chany_bottom_out[16] 0
+*RES
+1 *953:X chany_bottom_out[16] 21.6393 
+*END
+
+*D_NET *34 0.000697896
+*CONN
+*P chany_bottom_out[17] O
+*I *954:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[17] 0.000348948
+2 *954:X 0.000348948
+3 chany_bottom_out[17] chany_bottom_out[18] 0
+4 chany_bottom_out[17] *951:A 0
+5 chany_bottom_out[17] *120:14 0
+6 chany_bottom_out[16] chany_bottom_out[17] 0
+*RES
+1 *954:X chany_bottom_out[17] 21.6393 
+*END
+
+*D_NET *35 0.000697896
+*CONN
+*P chany_bottom_out[18] O
+*I *955:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[18] 0.000348948
+2 *955:X 0.000348948
+3 chany_bottom_out[18] chany_bottom_out[19] 0
+4 chany_bottom_out[18] *951:A 0
+5 chany_bottom_out[17] chany_bottom_out[18] 0
+*RES
+1 *955:X chany_bottom_out[18] 21.6393 
+*END
+
+*D_NET *36 0.000789952
+*CONN
+*P chany_bottom_out[19] O
+*I *956:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[19] 0.000394976
+2 *956:X 0.000394976
+3 chany_bottom_out[19] *951:A 0
+4 chany_bottom_out[18] chany_bottom_out[19] 0
+5 *6:9 chany_bottom_out[19] 0
+*RES
+1 *956:X chany_bottom_out[19] 22.7107 
+*END
+
+*D_NET *37 0.000697896
+*CONN
+*P chany_bottom_out[1] O
+*I *957:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[1] 0.000348948
+2 *957:X 0.000348948
+3 chany_bottom_out[1] chany_bottom_out[2] 0
+4 chany_bottom_out[1] *91:10 0
+5 chany_bottom_out[0] chany_bottom_out[1] 0
+*RES
+1 *957:X chany_bottom_out[1] 21.6393 
+*END
+
+*D_NET *38 0.000697896
+*CONN
+*P chany_bottom_out[2] O
+*I *958:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[2] 0.000348948
+2 *958:X 0.000348948
+3 chany_bottom_out[2] chany_bottom_out[3] 0
+4 chany_bottom_out[2] *91:10 0
+5 chany_bottom_out[2] *162:17 0
+6 chany_bottom_out[1] chany_bottom_out[2] 0
+*RES
+1 *958:X chany_bottom_out[2] 21.6393 
+*END
+
+*D_NET *39 0.000697896
+*CONN
+*P chany_bottom_out[3] O
+*I *959:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[3] 0.000348948
+2 *959:X 0.000348948
+3 chany_bottom_out[3] chany_bottom_out[4] 0
+4 chany_bottom_out[3] *959:A 0
+5 chany_bottom_out[3] *162:17 0
+6 chany_bottom_out[2] chany_bottom_out[3] 0
+*RES
+1 *959:X chany_bottom_out[3] 21.6393 
+*END
+
+*D_NET *40 0.000697817
+*CONN
+*P chany_bottom_out[4] O
+*I *960:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[4] 0.000348909
+2 *960:X 0.000348909
+3 chany_bottom_out[4] chany_bottom_out[5] 0
+4 chany_bottom_out[4] *959:A 0
+5 chany_bottom_out[3] chany_bottom_out[4] 0
+*RES
+1 *960:X chany_bottom_out[4] 21.6393 
+*END
+
+*D_NET *41 0.000697817
+*CONN
+*P chany_bottom_out[5] O
+*I *961:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[5] 0.000348909
+2 *961:X 0.000348909
+3 chany_bottom_out[5] chany_bottom_out[6] 0
+4 chany_bottom_out[5] *960:A 0
+5 chany_bottom_out[5] *961:A 0
+6 chany_bottom_out[4] chany_bottom_out[5] 0
+*RES
+1 *961:X chany_bottom_out[5] 21.6393 
+*END
+
+*D_NET *42 0.000697896
+*CONN
+*P chany_bottom_out[6] O
+*I *962:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[6] 0.000348948
+2 *962:X 0.000348948
+3 chany_bottom_out[6] chany_bottom_out[7] 0
+4 chany_bottom_out[6] *961:A 0
+5 chany_bottom_out[5] chany_bottom_out[6] 0
+*RES
+1 *962:X chany_bottom_out[6] 21.6393 
+*END
+
+*D_NET *43 0.000911832
+*CONN
+*P chany_bottom_out[7] O
+*I *963:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[7] 0.000455916
+2 *963:X 0.000455916
+3 chany_bottom_out[7] chany_bottom_out[8] 0
+4 chany_bottom_out[7] *961:A 0
+5 chany_bottom_out[7] *162:17 0
+6 chany_bottom_out[7] *166:10 0
+7 chany_bottom_out[7] *170:22 0
+8 chany_bottom_out[6] chany_bottom_out[7] 0
+*RES
+1 *963:X chany_bottom_out[7] 24.0679 
+*END
+
+*D_NET *44 0.000697896
+*CONN
+*P chany_bottom_out[8] O
+*I *964:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[8] 0.000348948
+2 *964:X 0.000348948
+3 chany_bottom_out[8] chany_bottom_out[9] 0
+4 chany_bottom_out[8] *168:17 0
+5 chany_bottom_out[7] chany_bottom_out[8] 0
+*RES
+1 *964:X chany_bottom_out[8] 21.6393 
+*END
+
+*D_NET *45 0.000711195
+*CONN
+*P chany_bottom_out[9] O
+*I *965:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_bottom_out[9] 0.000355598
+2 *965:X 0.000355598
+3 chany_bottom_out[9] *168:17 0
+4 chany_bottom_out[10] chany_bottom_out[9] 0
+5 chany_bottom_out[8] chany_bottom_out[9] 0
+*RES
+1 *965:X chany_bottom_out[9] 21.8893 
+*END
+
+*D_NET *46 0.00126352
+*CONN
+*P chany_top_in[0] I
+*I *215:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *895:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[0] 0.000582563
+2 *215:DIODE 2.26741e-05
+3 *895:A 2.65244e-05
+4 *46:8 0.000631761
+5 *215:DIODE *137:11 0
+6 *46:8 chany_top_out[19] 0
+7 *46:8 *975:A 0
+8 *46:8 *976:A 0
+9 *46:8 *57:7 0
+10 *46:8 *125:8 0
+11 *46:8 *137:11 0
+12 *46:8 *138:14 0
+13 *46:8 *174:15 0
+*RES
+1 chany_top_in[0] *46:8 17.6071 
+2 *46:8 *895:A 9.85357 
+3 *46:8 *215:DIODE 9.83571 
+*END
+
+*D_NET *47 0.00111715
+*CONN
+*P chany_top_in[10] I
+*I *896:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *216:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[10] 0.000407815
+2 *896:A 6.50276e-05
+3 *216:DIODE 8.57316e-05
+4 *47:5 0.000558574
+5 *216:DIODE *126:11 0
+6 *216:DIODE *129:13 0
+7 *216:DIODE *182:8 0
+8 *896:A *133:19 0
+9 *47:5 *48:8 0
+10 *47:5 *65:12 0
+11 *47:5 *126:11 0
+12 *47:5 *182:8 0
+*RES
+1 chany_top_in[10] *47:5 9.32143 
+2 *47:5 *216:DIODE 15.7464 
+3 *47:5 *896:A 15.1571 
+*END
+
+*D_NET *48 0.00119504
+*CONN
+*P chany_top_in[11] I
+*I *217:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *897:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[11] 0.000475595
+2 *217:DIODE 0.000121927
+3 *897:A 0
+4 *48:8 0.000597522
+5 *217:DIODE *898:A 0
+6 *217:DIODE *133:19 0
+7 *48:8 *49:5 0
+8 *48:8 *126:11 0
+9 *48:8 *133:19 0
+10 *48:8 *183:6 0
+11 *47:5 *48:8 0
+*RES
+1 chany_top_in[11] *48:8 15.1786 
+2 *48:8 *897:A 9.3 
+3 *48:8 *217:DIODE 11.9071 
+*END
+
+*D_NET *49 0.00111715
+*CONN
+*P chany_top_in[12] I
+*I *898:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *218:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[12] 0.000407815
+2 *898:A 6.50276e-05
+3 *218:DIODE 8.57316e-05
+4 *49:5 0.000558574
+5 *218:DIODE *128:14 0
+6 *218:DIODE *183:6 0
+7 *898:A *133:19 0
+8 *49:5 *50:9 0
+9 *49:5 *128:14 0
+10 *49:5 *183:6 0
+11 *217:DIODE *898:A 0
+12 *48:8 *49:5 0
+*RES
+1 chany_top_in[12] *49:5 9.32143 
+2 *49:5 *218:DIODE 15.7464 
+3 *49:5 *898:A 15.1571 
+*END
+
+*D_NET *50 0.00137862
+*CONN
+*P chany_top_in[13] I
+*I *899:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *219:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[13] 0.000434163
+2 *899:A 0.000104386
+3 *219:DIODE 0.000150759
+4 *50:9 0.000689309
+5 *219:DIODE *220:DIODE 0
+6 *219:DIODE *128:14 0
+7 *899:A *133:19 0
+8 *50:9 *220:DIODE 0
+9 *50:9 *51:8 0
+10 *50:9 *128:14 0
+11 *49:5 *50:9 0
+*RES
+1 chany_top_in[13] *50:9 9.98214 
+2 *50:9 *219:DIODE 17.1036 
+3 *50:9 *899:A 15.9786 
+*END
+
+*D_NET *51 0.00129953
+*CONN
+*P chany_top_in[14] I
+*I *900:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *220:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[14] 0.000480488
+2 *900:A 4.32091e-05
+3 *220:DIODE 0.000126069
+4 *51:8 0.000649766
+5 *900:A *221:DIODE 0
+6 *900:A *133:19 0
+7 *51:8 *52:12 0
+8 *51:8 *130:11 0
+9 *51:8 *133:19 0
+10 *219:DIODE *220:DIODE 0
+11 *50:9 *220:DIODE 0
+12 *50:9 *51:8 0
+*RES
+1 chany_top_in[14] *51:8 15.2857 
+2 *51:8 *220:DIODE 21.0857 
+3 *51:8 *900:A 10.2643 
+*END
+
+*D_NET *52 0.00120509
+*CONN
+*P chany_top_in[15] I
+*I *221:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *901:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[15] 0.000498798
+2 *221:DIODE 0.000103745
+3 *901:A 0
+4 *52:12 0.000602543
+5 *221:DIODE *903:A 0
+6 *221:DIODE *196:13 0
+7 *52:12 *223:DIODE 0
+8 *52:12 *53:5 0
+9 *52:12 *130:11 0
+10 *52:12 *133:19 0
+11 *900:A *221:DIODE 0
+12 *51:8 *52:12 0
+*RES
+1 chany_top_in[15] *52:12 15.8393 
+2 *52:12 *901:A 9.3 
+3 *52:12 *221:DIODE 11.4964 
+*END
+
+*D_NET *53 0.00113717
+*CONN
+*P chany_top_in[16] I
+*I *903:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *223:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[16] 0.000399753
+2 *903:A 7.94638e-05
+3 *223:DIODE 8.93692e-05
+4 *53:5 0.000568586
+5 *223:DIODE *54:12 0
+6 *223:DIODE *196:13 0
+7 *903:A *196:13 0
+8 *53:5 *54:12 0
+9 *221:DIODE *903:A 0
+10 *52:12 *223:DIODE 0
+11 *52:12 *53:5 0
+*RES
+1 chany_top_in[16] *53:5 9.16964 
+2 *53:5 *223:DIODE 15.8982 
+3 *53:5 *903:A 15.5589 
+*END
+
+*D_NET *54 0.00127087
+*CONN
+*P chany_top_in[17] I
+*I *224:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *904:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[17] 0.000589232
+2 *224:DIODE 2.26741e-05
+3 *904:A 2.35297e-05
+4 *54:12 0.000635436
+5 *904:A *225:DIODE 0
+6 *54:12 *55:16 0
+7 *54:12 *196:13 0
+8 *223:DIODE *54:12 0
+9 *53:5 *54:12 0
+*RES
+1 chany_top_in[17] *54:12 17.8571 
+2 *54:12 *904:A 9.85357 
+3 *54:12 *224:DIODE 9.83571 
+*END
+
+*D_NET *55 0.0015647
+*CONN
+*P chany_top_in[18] I
+*I *225:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *905:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[18] 0.000626199
+2 *225:DIODE 0.000156152
+3 *905:A 0
+4 *55:16 0.000782351
+5 *225:DIODE *134:10 0
+6 *55:16 right_width_0_height_0__pin_1_upper 0
+7 *55:16 *56:8 0
+8 *55:16 *134:10 0
+9 *55:16 *196:13 0
+10 *904:A *225:DIODE 0
+11 *54:12 *55:16 0
+*RES
+1 chany_top_in[18] *55:16 18.8214 
+2 *55:16 *905:A 9.3 
+3 *55:16 *225:DIODE 12.6214 
+*END
+
+*D_NET *56 0.00150305
+*CONN
+*P chany_top_in[19] I
+*I *906:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *226:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[19] 0.000686497
+2 *906:A 0
+3 *226:DIODE 6.50276e-05
+4 *56:8 0.000751524
+5 *56:8 *134:10 0
+6 *55:16 *56:8 0
+*RES
+1 chany_top_in[19] *56:8 20.0357 
+2 *56:8 *226:DIODE 10.6571 
+3 *56:8 *906:A 9.3 
+*END
+
+*D_NET *57 0.0012344
+*CONN
+*P chany_top_in[1] I
+*I *907:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *227:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[1] 0.000410568
+2 *907:A 6.35302e-05
+3 *227:DIODE 0.000143103
+4 *57:7 0.000617201
+5 *227:DIODE chany_top_out[19] 0
+6 *227:DIODE *971:A 0
+7 *227:DIODE *975:A 0
+8 *227:DIODE *174:15 0
+9 *907:A *971:A 0
+10 *57:7 *976:A 0
+11 *57:7 *58:5 0
+12 *57:7 *126:22 0
+13 *46:8 *57:7 0
+*RES
+1 chany_top_in[1] *57:7 13.8214 
+2 *57:7 *227:DIODE 12.3179 
+3 *57:7 *907:A 10.6571 
+*END
+
+*D_NET *58 0.00111715
+*CONN
+*P chany_top_in[2] I
+*I *908:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *228:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[2] 0.000407815
+2 *908:A 6.50276e-05
+3 *228:DIODE 8.57316e-05
+4 *58:5 0.000558574
+5 *228:DIODE *133:19 0
+6 *228:DIODE *141:10 0
+7 *908:A *971:A 0
+8 *908:A *133:19 0
+9 *58:5 *59:5 0
+10 *58:5 *126:22 0
+11 *58:5 *133:19 0
+12 *57:7 *58:5 0
+*RES
+1 chany_top_in[2] *58:5 9.32143 
+2 *58:5 *228:DIODE 15.7464 
+3 *58:5 *908:A 15.1571 
+*END
+
+*D_NET *59 0.00112265
+*CONN
+*P chany_top_in[3] I
+*I *909:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *229:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[3] 0.000407815
+2 *909:A 6.50276e-05
+3 *229:DIODE 8.84844e-05
+4 *59:5 0.000561327
+5 *229:DIODE *231:DIODE 0
+6 *229:DIODE *139:12 0
+7 *229:DIODE *141:10 0
+8 *909:A *971:A 0
+9 *909:A *133:19 0
+10 *59:5 *60:8 0
+11 *58:5 *59:5 0
+*RES
+1 chany_top_in[3] *59:5 9.32143 
+2 *59:5 *229:DIODE 15.7464 
+3 *59:5 *909:A 15.1571 
+*END
+
+*D_NET *60 0.00123983
+*CONN
+*P chany_top_in[4] I
+*I *230:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *910:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 chany_top_in[4] 0.000478309
+2 *230:DIODE 0.000141606
+3 *910:A 0
+4 *60:8 0.000619915
+5 *230:DIODE *911:A 0
+6 *230:DIODE *912:A 0
+7 *230:DIODE *971:A 0
+8 *230:DIODE *133:19 0
+9 *60:8 *971:A 0
+10 *60:8 *61:5 0
+11 *60:8 *133:19 0
+12 *59:5 *60:8 0
+*RES
+1 chany_top_in[4] *60:8 15.1786 
+2 *60:8 *910:A 9.3 
+3 *60:8 *230:DIODE 12.3179 
+*END
+
+*D_NET *61 0.00111707
+*CONN
+*P chany_top_in[5] I
+*I *911:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *231:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[5] 0.000407775
+2 *911:A 6.50276e-05
+3 *231:DIODE 8.57316e-05
+4 *61:5 0.000558535
+5 *231:DIODE *140:16 0
+6 *231:DIODE *142:10 0
+7 *231:DIODE *145:16 0
+8 *911:A *971:A 0
+9 *61:5 *62:5 0
+10 *229:DIODE *231:DIODE 0
+11 *230:DIODE *911:A 0
+12 *60:8 *61:5 0
+*RES
+1 chany_top_in[5] *61:5 9.32143 
+2 *61:5 *231:DIODE 15.7464 
+3 *61:5 *911:A 15.1571 
+*END
+
+*D_NET *62 0.00133143
+*CONN
+*P chany_top_in[6] I
+*I *912:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *232:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[6] 0.000407815
+2 *912:A 0.000124066
+3 *232:DIODE 0.000133833
+4 *62:5 0.000665713
+5 *232:DIODE *142:10 0
+6 *232:DIODE *146:16 0
+7 *912:A *914:A 0
+8 *912:A *971:A 0
+9 *912:A *133:19 0
+10 *912:A *145:16 0
+11 *62:5 *872:A 0
+12 *62:5 *63:5 0
+13 *230:DIODE *912:A 0
+14 *61:5 *62:5 0
+*RES
+1 chany_top_in[6] *62:5 9.32143 
+2 *62:5 *232:DIODE 16.6929 
+3 *62:5 *912:A 16.3893 
+*END
+
+*D_NET *63 0.00128827
+*CONN
+*P chany_top_in[7] I
+*I *914:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *234:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[7] 0.000394444
+2 *914:A 0.000124921
+3 *234:DIODE 0.000124771
+4 *63:5 0.000644137
+5 *234:DIODE *235:DIODE 0
+6 *234:DIODE *872:A 0
+7 *234:DIODE *64:5 0
+8 *234:DIODE *127:13 0
+9 *234:DIODE *178:8 0
+10 *914:A *915:A 0
+11 *914:A *133:19 0
+12 *914:A *145:16 0
+13 *63:5 *872:A 0
+14 *63:5 *64:5 0
+15 *912:A *914:A 0
+16 *62:5 *63:5 0
+*RES
+1 chany_top_in[7] *63:5 9.01786 
+2 *63:5 *234:DIODE 16.5857 
+3 *63:5 *914:A 16.4071 
+*END
+
+*D_NET *64 0.00120308
+*CONN
+*P chany_top_in[8] I
+*I *915:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *235:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[8] 0.000423939
+2 *915:A 0.000105242
+3 *235:DIODE 7.23606e-05
+4 *64:5 0.000601541
+5 *235:DIODE *65:12 0
+6 *235:DIODE *144:9 0
+7 *235:DIODE *146:16 0
+8 *915:A *133:19 0
+9 *915:A *145:16 0
+10 *915:A *146:16 0
+11 *64:5 *65:12 0
+12 *234:DIODE *235:DIODE 0
+13 *234:DIODE *64:5 0
+14 *914:A *915:A 0
+15 *63:5 *64:5 0
+*RES
+1 chany_top_in[8] *64:5 9.625 
+2 *64:5 *235:DIODE 15.4429 
+3 *64:5 *915:A 15.9964 
+*END
+
+*D_NET *65 0.00144735
+*CONN
+*P chany_top_in[9] I
+*I *916:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *236:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 chany_top_in[9] 0.000559338
+2 *916:A 0.000164339
+3 *236:DIODE 0
+4 *65:12 0.000723677
+5 *916:A *127:13 0
+6 *916:A *128:14 0
+7 *65:12 *127:13 0
+8 *65:12 *146:16 0
+9 *65:12 *182:8 0
+10 *235:DIODE *65:12 0
+11 *47:5 *65:12 0
+12 *64:5 *65:12 0
+*RES
+1 chany_top_in[9] *65:12 17.25 
+2 *65:12 *236:DIODE 9.3 
+3 *65:12 *916:A 22.1393 
+*END
+
+*D_NET *66 0.000767651
+*CONN
+*P chany_top_out[0] O
+*I *966:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[0] 0.000383826
+2 *966:X 0.000383826
+3 chany_top_out[0] chany_top_out[1] 0
+4 *1:9 chany_top_out[0] 0
+5 *4:10 chany_top_out[0] 0
+*RES
+1 *966:X chany_top_out[0] 22.5143 
+*END
+
+*D_NET *67 0.000767651
+*CONN
+*P chany_top_out[10] O
+*I *967:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[10] 0.000383826
+2 *967:X 0.000383826
+3 chany_top_out[10] chany_top_out[11] 0
+4 chany_top_out[10] chany_top_out[9] 0
+*RES
+1 *967:X chany_top_out[10] 22.5143 
+*END
+
+*D_NET *68 0.000767651
+*CONN
+*P chany_top_out[11] O
+*I *968:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[11] 0.000383826
+2 *968:X 0.000383826
+3 chany_top_out[11] chany_top_out[12] 0
+4 chany_top_out[10] chany_top_out[11] 0
+*RES
+1 *968:X chany_top_out[11] 22.5143 
+*END
+
+*D_NET *69 0.000767651
+*CONN
+*P chany_top_out[12] O
+*I *969:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[12] 0.000383826
+2 *969:X 0.000383826
+3 chany_top_out[12] chany_top_out[13] 0
+4 chany_top_out[11] chany_top_out[12] 0
+*RES
+1 *969:X chany_top_out[12] 22.5143 
+*END
+
+*D_NET *70 0.000858348
+*CONN
+*P chany_top_out[13] O
+*I *970:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[13] 0.000429174
+2 *970:X 0.000429174
+3 chany_top_out[13] chany_top_out[14] 0
+4 chany_top_out[13] *968:A 0
+5 chany_top_out[12] chany_top_out[13] 0
+*RES
+1 *970:X chany_top_out[13] 23.4607 
+*END
+
+*D_NET *71 0.00085649
+*CONN
+*P chany_top_out[14] O
+*I *971:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[14] 0.000428245
+2 *971:X 0.000428245
+3 chany_top_out[14] chany_top_out[15] 0
+4 chany_top_out[13] chany_top_out[14] 0
+*RES
+1 *971:X chany_top_out[14] 23.5857 
+*END
+
+*D_NET *72 0.000858308
+*CONN
+*P chany_top_out[15] O
+*I *972:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[15] 0.000429154
+2 *972:X 0.000429154
+3 chany_top_out[15] chany_top_out[16] 0
+4 chany_top_out[15] *968:A 0
+5 chany_top_out[14] chany_top_out[15] 0
+*RES
+1 *972:X chany_top_out[15] 23.4607 
+*END
+
+*D_NET *73 0.000858348
+*CONN
+*P chany_top_out[16] O
+*I *973:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[16] 0.000429174
+2 *973:X 0.000429174
+3 chany_top_out[16] chany_top_out[17] 0
+4 chany_top_out[16] *968:A 0
+5 chany_top_out[15] chany_top_out[16] 0
+*RES
+1 *973:X chany_top_out[16] 23.4607 
+*END
+
+*D_NET *74 0.000858348
+*CONN
+*P chany_top_out[17] O
+*I *974:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[17] 0.000429174
+2 *974:X 0.000429174
+3 chany_top_out[17] chany_top_out[18] 0
+4 chany_top_out[17] *968:A 0
+5 chany_top_out[16] chany_top_out[17] 0
+*RES
+1 *974:X chany_top_out[17] 23.4607 
+*END
+
+*D_NET *75 0.000871686
+*CONN
+*P chany_top_out[18] O
+*I *975:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[18] 0.000435843
+2 *975:X 0.000435843
+3 chany_top_out[18] chany_top_out[19] 0
+4 chany_top_out[17] chany_top_out[18] 0
+*RES
+1 *975:X chany_top_out[18] 23.7107 
+*END
+
+*D_NET *76 0.00105065
+*CONN
+*P chany_top_out[19] O
+*I *976:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[19] 0.000525327
+2 *976:X 0.000525327
+3 chany_top_out[18] chany_top_out[19] 0
+4 *227:DIODE chany_top_out[19] 0
+5 *46:8 chany_top_out[19] 0
+*RES
+1 *976:X chany_top_out[19] 26.4071 
+*END
+
+*D_NET *77 0.000767651
+*CONN
+*P chany_top_out[1] O
+*I *977:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[1] 0.000383826
+2 *977:X 0.000383826
+3 chany_top_out[1] chany_top_out[2] 0
+4 chany_top_out[0] chany_top_out[1] 0
+5 *4:10 chany_top_out[1] 0
+*RES
+1 *977:X chany_top_out[1] 22.5143 
+*END
+
+*D_NET *78 0.000767651
+*CONN
+*P chany_top_out[2] O
+*I *978:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[2] 0.000383826
+2 *978:X 0.000383826
+3 chany_top_out[2] chany_top_out[3] 0
+4 chany_top_out[1] chany_top_out[2] 0
+*RES
+1 *978:X chany_top_out[2] 22.5143 
+*END
+
+*D_NET *79 0.000767651
+*CONN
+*P chany_top_out[3] O
+*I *979:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[3] 0.000383826
+2 *979:X 0.000383826
+3 chany_top_out[3] chany_top_out[4] 0
+4 chany_top_out[2] chany_top_out[3] 0
+*RES
+1 *979:X chany_top_out[3] 22.5143 
+*END
+
+*D_NET *80 0.000767612
+*CONN
+*P chany_top_out[4] O
+*I *980:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[4] 0.000383806
+2 *980:X 0.000383806
+3 chany_top_out[4] chany_top_out[5] 0
+4 chany_top_out[3] chany_top_out[4] 0
+*RES
+1 *980:X chany_top_out[4] 22.5143 
+*END
+
+*D_NET *81 0.000767612
+*CONN
+*P chany_top_out[5] O
+*I *981:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[5] 0.000383806
+2 *981:X 0.000383806
+3 chany_top_out[5] chany_top_out[6] 0
+4 chany_top_out[4] chany_top_out[5] 0
+*RES
+1 *981:X chany_top_out[5] 22.5143 
+*END
+
+*D_NET *82 0.00120599
+*CONN
+*P chany_top_out[6] O
+*I *982:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[6] 0.000602997
+2 *982:X 0.000602997
+3 chany_top_out[6] chany_top_out[7] 0
+4 chany_top_out[6] *979:A 0
+5 chany_top_out[6] *981:A 0
+6 chany_top_out[6] *983:A 0
+7 chany_top_out[6] *121:17 0
+8 chany_top_out[6] *193:17 0
+9 chany_top_out[5] chany_top_out[6] 0
+*RES
+1 *982:X chany_top_out[6] 27.4071 
+*END
+
+*D_NET *83 0.000767651
+*CONN
+*P chany_top_out[7] O
+*I *983:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[7] 0.000383826
+2 *983:X 0.000383826
+3 chany_top_out[7] chany_top_out[8] 0
+4 chany_top_out[6] chany_top_out[7] 0
+*RES
+1 *983:X chany_top_out[7] 22.5143 
+*END
+
+*D_NET *84 0.000767651
+*CONN
+*P chany_top_out[8] O
+*I *984:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[8] 0.000383826
+2 *984:X 0.000383826
+3 chany_top_out[8] chany_top_out[9] 0
+4 chany_top_out[7] chany_top_out[8] 0
+*RES
+1 *984:X chany_top_out[8] 22.5143 
+*END
+
+*D_NET *85 0.000947225
+*CONN
+*P chany_top_out[9] O
+*I *985:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 chany_top_out[9] 0.000473613
+2 *985:X 0.000473613
+3 chany_top_out[10] chany_top_out[9] 0
+4 chany_top_out[8] chany_top_out[9] 0
+*RES
+1 *985:X chany_top_out[9] 24.5321 
+*END
+
+*D_NET *86 0.000415444
+*CONN
+*P gfpga_pad_EMBEDDED_IO_HD_SOC_DIR O
+*I *986:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 gfpga_pad_EMBEDDED_IO_HD_SOC_DIR 0.000207722
+2 *986:X 0.000207722
+*RES
+1 *986:X gfpga_pad_EMBEDDED_IO_HD_SOC_DIR 18.1949 
+*END
+
+*D_NET *87 0.000532443
+*CONN
+*P gfpga_pad_EMBEDDED_IO_HD_SOC_IN I
+*I *237:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *917:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 gfpga_pad_EMBEDDED_IO_HD_SOC_IN 0.000201194
+2 *237:DIODE 6.50276e-05
+3 *917:A 0
+4 *87:10 0.000266221
+5 *237:DIODE *147:10 0
+6 *87:10 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT 0
+*RES
+1 gfpga_pad_EMBEDDED_IO_HD_SOC_IN *87:10 9.12642 
+2 *87:10 *917:A 9.3 
+3 *87:10 *237:DIODE 10.6571 
+*END
+
+*D_NET *88 0.00252591
+*CONN
+*P gfpga_pad_EMBEDDED_IO_HD_SOC_OUT O
+*I *927:Z O *D sky130_fd_sc_hd__ebufn_8
+*CAP
+1 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT 0.00126296
+2 *927:Z 0.00126296
+3 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT *977:A 0
+4 *87:10 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT 0
+*RES
+1 *927:Z gfpga_pad_EMBEDDED_IO_HD_SOC_OUT 42.1056 
+*END
+
+*D_NET *89 0.000415444
+*CONN
+*P left_grid_pin_0_ O
+*I *987:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 left_grid_pin_0_ 0.000207722
+2 *987:X 0.000207722
+*RES
+1 *987:X left_grid_pin_0_ 18.1949 
+*END
+
+*D_NET *90 0.00210417
+*CONN
+*P prog_clk_0_E_in I
+*I *989:A I *D sky130_fd_sc_hd__buf_8
+*I *245:DIODE I *D sky130_fd_sc_hd__diode_2
+*CAP
+1 prog_clk_0_E_in 0.000971656
+2 *989:A 8.04288e-05
+3 *245:DIODE 0
+4 *90:10 0.00105209
+5 *90:10 *855:A 0
+6 *90:10 *143:10 0
+*RES
+1 prog_clk_0_E_in *90:10 14.4683 
+2 *90:10 *245:DIODE 9.3 
+3 *90:10 *989:A 10.9786 
+*END
+
+*D_NET *91 0.00115931
+*CONN
+*P right_width_0_height_0__pin_0_ I
+*I *238:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *918:A I *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 right_width_0_height_0__pin_0_ 0.000514625
+2 *238:DIODE 6.50276e-05
+3 *918:A 0
+4 *91:10 0.000579653
+5 *238:DIODE *150:13 0
+6 *91:10 *959:A 0
+7 chany_bottom_out[0] *91:10 0
+8 chany_bottom_out[1] *91:10 0
+9 chany_bottom_out[2] *91:10 0
+*RES
+1 right_width_0_height_0__pin_0_ *91:10 14.3439 
+2 *91:10 *918:A 9.3 
+3 *91:10 *238:DIODE 10.6571 
+*END
+
+*D_NET *92 0.0108357
+*CONN
+*P right_width_0_height_0__pin_1_lower O
+*I *857:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *200:DIODE I *D sky130_fd_sc_hd__diode_2
+*I *925:Z O *D sky130_fd_sc_hd__ebufn_8
+*CAP
+1 right_width_0_height_0__pin_1_lower 0.00224956
+2 *857:A 9.34771e-05
+3 *200:DIODE 0
+4 *925:Z 0
+5 *92:34 0.00199954
+6 *92:8 0.0034183
+7 *92:5 0.0030748
+8 right_width_0_height_0__pin_1_lower *855:A 0
+9 right_width_0_height_0__pin_1_lower *117:13 0
+10 right_width_0_height_0__pin_1_lower *118:13 0
+11 right_width_0_height_0__pin_1_lower *143:10 0
+12 right_width_0_height_0__pin_1_lower *154:21 0
+13 *92:8 *858:A 0
+14 *92:8 *868:A 0
+15 *92:8 *930:CLK 0
+16 *92:8 *937:A0 0
+17 *92:8 *96:10 0
+18 *92:8 *120:14 0
+19 *92:8 *158:10 0
+20 *92:8 *171:17 0
+21 *92:8 *179:32 0
+22 *92:8 *193:11 0
+23 *92:34 *858:A 0
+24 *92:34 *936:A0 0
+25 *92:34 *945:A 0
+26 *92:34 *131:8 0
+27 *92:34 *144:9 0
+28 *92:34 *177:21 0
+29 *92:34 *179:32 0
+30 *92:34 *183:6 0
+31 *240:DIODE right_width_0_height_0__pin_1_lower 0
+*RES
+1 *925:Z *92:5 13.8 
+2 *92:5 *92:8 31.0357 
+3 *92:8 right_width_0_height_0__pin_1_lower 40.6152 
+4 *92:5 *92:34 28.9276 
+5 *92:34 *200:DIODE 9.3 
+6 *92:34 *857:A 11.2821 
+*END
+
+*D_NET *93 0.000415404
+*CONN
+*P right_width_0_height_0__pin_1_upper O
+*I *988:X O *D sky130_fd_sc_hd__buf_2
+*CAP
+1 right_width_0_height_0__pin_1_upper 0.000207702
+2 *988:X 0.000207702
+3 *55:16 right_width_0_height_0__pin_1_upper 0
+*RES
+1 *988:X right_width_0_height_0__pin_1_upper 18.1949 
+*END
+
+*D_NET *94 0.00187221
+*CONN
+*I *879:A I *D sky130_fd_sc_hd__dlygate4sd3_1
+*I *943:S I *D sky130_fd_sc_hd__mux2_1
+*I *932:Q O *D sky130_fd_sc_hd__dfxtp_1
+*CAP
+1 *879:A 0
+2 *943:S 0.000850371
+3 *932:Q 8.57316e-05
+4 *94:8 0.000936103
+5 *943:S *859:A 0
+6 *943:S *925:TE_B 0
+7 *943:S *117:23 0
+8 *943:S *119:21 0
+9 *943:S *147:10 0
+10 *943:S *175:18 0
+11 *943:S *186:10 0
+12 *943:S *191:10 0
+13 *943:S *192:12 0
+14 *94:8 *841:A 0
+15 *94:8 *116:38 0
+*RES
+1 *932:Q *94:8 20.2464 
+2 *94:8 *943:S 36.6214 
+3 *94:8 *879:A 9.3 
+*END
+
+*D_NET *95 0.00125105
+*CONN
+*I *925:TE_B I *D sky130_fd_sc_hd__ebufn_8
+*I *924:Y O *D sky130_fd_sc_hd__inv_1
+*CAP
+1 *925:TE_B 0.000625523
+2 *924:Y 0.000625523
+3 *925:TE_B *117:23 0
+4 *925:TE_B *147:10 0
+5 *925:TE_B *168:7 0
+6 *925:TE_B *189:9 0
+7 *943:S *925:TE_B 0
+*RES
+1 *924:Y *925:TE_B 40.7875 
+*END
+
+*D_NET *96 0.00703393
+*CONN
+*I *928:CLK I *D sky130_fd_sc_hd__dfxtp_1
+*I *932:CLK I *D sky130_fd_sc_hd__dfxtp_1
+*I *929:CLK I *D sky130_fd_sc_hd__dfxtp_1
+*I *930:CLK I *D sky130_fd_sc_hd__dfxtp_1
+*I *931:CLK I *D sky130_fd_sc_hd__dfxtp_1
+*I *989:X O *D sky130_fd_sc_hd__buf_8
+*CAP
+1 *928:CLK 0
+2 *932:CLK 0
+3 *929:CLK 0.000848874
+4 *930:CLK 0.000360143
+5 *931:CLK 0
+6 *989:X 0.000121071
+7 *96:44 0.0014885
+8 *96:32 0.00148516
+9 *96:10 0.00106187
+10 *96:5 0.00166833
+11 *929:CLK *981:A 0
+12 *929:CLK *170:19 0
+13 *929:CLK *193:17 0
+14 *930:CLK *934:S 0
+15 *930:CLK *179:32 0
+16 *96:10 *941:A1 0
+17 *96:10 *102:23 0
+18 *96:32 *864:A 0
+19 *96:32 *867:A 0
+20 *96:32 *869:A 0
+21 *96:32 *871:A 0
+22 *96:32 *872:A 0
+23 *96:32 *112:21 0
+24 *96:32 *128:21 0
+25 *96:32 *156:10 0
+26 *96:44 *853:A 0
+27 *96:44 *866:A 0
+28 *96:44 *939:A0 0
+29 *96:44 *942:A0 0
+30 *96:44 *126:22 0
+31 *96:44 *138:14 0
+32 *96:44 *170:19 0
+33 *92:8 *930:CLK 0
+34 *92:8 *96:10 0
+*RES
+1 *989:X *96:5 11.8893 
+2 *96:5 *96:10 19.3036 
+3 *96:10 *931:CLK 13.8 
+4 *96:10 *930:CLK 21.5321 
+5 *96:5 *96:32 27.3929 
+6 *96:32 *96:44 22.625 
+7 *96:44 *929:CLK 36.6214 
+8 *96:44 *932:CLK 9.3 
+9 *96:32 *928:CLK 9.3 
+*END
+
+*D_NET *97 0.00318084
+*CONN
+*I *933:S I *D sky130_fd_sc_hd__mux2_1
+*I *935:S I *D sky130_fd_sc_hd__mux2_1
+*I *934:S I *D sky130_fd_sc_hd__mux2_1
+*I *930:D I *D sky130_fd_sc_hd__dfxtp_1
+*I *929:Q O *D sky130_fd_sc_hd__dfxtp_1
+*CAP
+1 *933:S 4.62038e-05
+2 *935:S 0.000222463
+3 *934:S 0.000307598
+4 *930:D 0
+5 *929:Q 0.000711574
+6 *97:19 0.000500461
+7 *97:14 0.000525046
+8 *97:12 0.000867499
+9 *934:S *942:A1 0
+10 *934:S *179:32 0
+11 *935:S *868:A 0
+12 *935:S *936:A1 0
+13 *97:12 *878:A 0
+14 *97:12 *942:A0 0
+15 *97:12 *970:A 0
+16 *97:12 *191:10 0
+17 *97:14 *878:A 0
+18 *97:14 *942:A0 0
+19 *97:14 *132:8 0
+20 *97:19 *942:A0 0
+21 *97:19 *132:8 0
+22 *930:CLK *934:S 0
+*RES
+1 *929:Q *97:12 29.5679 
+2 *97:12 *97:14 2.55357 
+3 *97:14 *97:19 8.73214 
+4 *97:19 *930:D 9.3 
+5 *97:19 *934:S 15.9786 
+6 *97:14 *935:S 18.4429 
+7 *97:12 *933:S 14.7643 
+*END
+
+*D_NET *98 0.00301715
+*CONN
+*I *939:S I *D sky130_fd_sc_hd__mux2_1
+*I *936:S I *D sky130_fd_sc_hd__mux2_1
+*I *938:S I *D sky130_fd_sc_hd__mux2_1
+*I *937:S I *D sky130_fd_sc_hd__mux2_1
+*I *931:D I *D sky130_fd_sc_hd__dfxtp_1
+*I *930:Q O *D sky130_fd_sc_hd__dfxtp_1
+*CAP
+1 *939:S 0.000219441
+2 *936:S 0.000224174
+3 *938:S 0
+4 *937:S 0.000442619
+5 *931:D 0.000307916
+6 *930:Q 2.56688e-05
+7 *98:34 0.000249843
+8 *98:31 0.000328089
+9 *98:21 0.000705707
+10 *98:5 0.000513694
+11 *931:D *102:23 0
+12 *931:D *116:38 0
+13 *931:D *139:24 0
+14 *931:D *175:15 0
+15 *931:D *193:11 0
+16 *936:S *936:A1 0
+17 *936:S *140:32 0
+18 *936:S *155:7 0
+19 *937:S *874:A 0
+20 *937:S *937:A0 0
+21 *937:S *941:A1 0
+22 *937:S *116:16 0
+23 *937:S *141:15 0
+24 *937:S *171:11 0
+25 *937:S *175:15 0
+26 *939:S *874:A 0
+27 *939:S *126:22 0
+28 *939:S *133:22 0
+29 *939:S *141:15 0
+30 *939:S *154:21 0
+31 *98:21 *934:A0 0
+32 *98:21 *942:A1 0
+33 *98:21 *179:32 0
+34 *98:31 *874:A 0
+35 *98:31 *154:21 0
+*RES
+1 *930:Q *98:5 9.83571 
+2 *98:5 *931:D 25.0545 
+3 *98:5 *98:21 8.32143 
+4 *98:21 *937:S 23.5143 
+5 *98:21 *98:31 1.94643 
+6 *98:31 *98:34 5.03571 
+7 *98:34 *938:S 9.3 
+8 *98:34 *936:S 14.1036 
+9 *98:31 *939:S 18.7821 
+*END
+
+*D_NET *99 0.00148251
+*CONN
+*I *932:D I *D sky130_fd_sc_hd__dfxtp_1
+*I *942:S I *D sky130_fd_sc_hd__mux2_1
+*I *941:S I *D sky130_fd_sc_hd__mux2_1
+*I *931:Q O *D sky130_fd_sc_hd__dfxtp_1
+*CAP
+1 *932:D 0.000348766
+2 *942:S 0
+3 *941:S 0.000322998
+4 *931:Q 0
+5 *99:17 0.000418256
+6 *99:5 0.000392488
+7 *932:D *942:A0 0
+8 *932:D *970:A 0
+9 *932:D *132:8 0
+10 *932:D *169:8 0
+11 *941:S *941:A0 0
+12 *941:S *941:A1 0
+13 *941:S *943:A1 0
+14 *99:17 *863:A 0
+15 *99:17 *169:8 0
+*RES
+1 *931:Q *99:5 13.8 
+2 *99:5 *941:S 20.8 
+3 *99:5 *99:17 1.64286 
+4 *99:17 *942:S 13.8 
+5 *99:17 *932:D 21.7152 
+*END
+
+*D_NET *100 0.00132441
+*CONN
+*I *936:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *933:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *936:A1 0.000662206
+2 *933:X 0.000662206
+3 *936:A1 *858:A 0
+4 *936:A1 *868:A 0
+5 *936:A1 *140:32 0
+6 *936:A1 *155:7 0
+7 *936:A1 *179:32 0
+8 *936:A1 *181:22 0
+9 *935:S *936:A1 0
+10 *936:S *936:A1 0
+*RES
+1 *933:X *936:A1 41.5286 
+*END
+
+*D_NET *101 0.000621051
+*CONN
+*I *936:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *934:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *936:A0 0.000310526
+2 *934:X 0.000310526
+3 *936:A0 *867:A 0
+4 *936:A0 *139:24 0
+5 *936:A0 *165:17 0
+6 *936:A0 *177:21 0
+7 *936:A0 *179:32 0
+8 *92:34 *936:A0 0
+*RES
+1 *934:X *936:A0 38.4179 
+*END
+
+*D_NET *102 0.00123315
+*CONN
+*I *937:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *935:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *937:A1 0
+2 *935:X 0.000616576
+3 *102:23 0.000616576
+4 *102:23 *841:A 0
+5 *102:23 *846:A 0
+6 *102:23 *868:A 0
+7 *102:23 *934:A1 0
+8 *102:23 *118:30 0
+9 *102:23 *171:11 0
+10 *102:23 *177:21 0
+11 *931:D *102:23 0
+12 *96:10 *102:23 0
+*RES
+1 *935:X *102:23 41.9555 
+2 *102:23 *937:A1 9.3 
+*END
+
+*D_NET *103 0.00169445
+*CONN
+*I *941:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *936:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *941:A1 0.000847227
+2 *936:X 0.000847227
+3 *941:A1 *847:A 0
+4 *941:A1 *937:A0 0
+5 *941:A1 *941:A0 0
+6 *941:A1 *152:8 0
+7 *941:A1 *171:11 0
+8 *937:S *941:A1 0
+9 *941:S *941:A1 0
+10 *96:10 *941:A1 0
+*RES
+1 *936:X *941:A1 46.0286 
+*END
+
+*D_NET *104 0.000248132
+*CONN
+*I *941:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *937:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *941:A0 0.000124066
+2 *937:X 0.000124066
+3 *941:A1 *941:A0 0
+4 *941:S *941:A0 0
+*RES
+1 *937:X *941:A0 21.1893 
+*END
+
+*D_NET *105 0.00109254
+*CONN
+*I *942:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *938:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *942:A1 0.000546269
+2 *938:X 0.000546269
+3 *942:A1 *863:A 0
+4 *942:A1 *942:A0 0
+5 *942:A1 *179:32 0
+6 *934:S *942:A1 0
+7 *98:21 *942:A1 0
+*RES
+1 *938:X *942:A1 39.0464 
+*END
+
+*D_NET *106 0.00167452
+*CONN
+*I *942:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *939:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *942:A0 0.000837258
+2 *939:X 0.000837258
+3 *942:A0 *863:A 0
+4 *942:A0 *866:A 0
+5 *942:A0 *970:A 0
+6 *932:D *942:A0 0
+7 *942:A1 *942:A0 0
+8 *96:44 *942:A0 0
+9 *97:12 *942:A0 0
+10 *97:14 *942:A0 0
+11 *97:19 *942:A0 0
+*RES
+1 *939:X *942:A0 45.725 
+*END
+
+*D_NET *107 0.00120011
+*CONN
+*I *943:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *941:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *943:A1 0.000600054
+2 *941:X 0.000600054
+3 *943:A1 *838:A 0
+4 *943:A1 *119:21 0
+5 *941:S *943:A1 0
+*RES
+1 *941:X *943:A1 40.6 
+*END
+
+*D_NET *108 0.000535525
+*CONN
+*I *943:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *942:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *943:A0 0.000267762
+2 *942:X 0.000267762
+3 *943:A0 *861:A 0
+4 *943:A0 *863:A 0
+5 *943:A0 *117:23 0
+6 *943:A0 *119:21 0
+7 *943:A0 *153:24 0
+*RES
+1 *942:X *943:A0 33.2964 
+*END
+
+*D_NET *109 0.00190525
+*CONN
+*I *944:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *943:X O *D sky130_fd_sc_hd__mux2_1
+*CAP
+1 *944:A 0.000952624
+2 *943:X 0.000952624
+3 *944:A *859:A 0
+4 *944:A *162:7 0
+*RES
+1 *943:X *944:A 48.5107 
+*END
+
+*D_NET *110 0.00251873
+*CONN
+*I *926:B_N I *D sky130_fd_sc_hd__or2b_2
+*I *880:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *926:B_N 0.000459942
+2 *880:X 0.000799425
+3 *110:11 0.00125937
+4 *926:B_N *193:17 0
+5 *110:11 *977:A 0
+6 *211:DIODE *110:11 0
+*RES
+1 *880:X *110:11 39.5679 
+2 *110:11 *926:B_N 24.2464 
+*END
+
+*D_NET *111 0.00668045
+*CONN
+*I *853:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *938:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *881:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *853:A 0.000502675
+2 *938:A0 2.56688e-05
+3 *881:X 0.00123943
+4 *111:12 0.00210079
+5 *111:11 0.00281188
+6 *853:A *847:A 0
+7 *853:A *874:A 0
+8 *853:A *934:A0 0
+9 *853:A *126:22 0
+10 *853:A *133:22 0
+11 *853:A *138:14 0
+12 *111:11 *952:A 0
+13 *111:11 *112:14 0
+14 *111:11 *124:13 0
+15 *111:12 *846:A 0
+16 *111:12 *874:A 0
+17 *111:12 *934:A0 0
+18 *111:12 *115:11 0
+19 *111:12 *116:16 0
+20 *111:12 *118:30 0
+21 *205:DIODE *111:12 0
+22 *206:DIODE *111:12 0
+23 *13:5 *111:11 0
+24 *14:5 *111:11 0
+25 *17:5 *111:12 0
+26 *18:5 *111:12 0
+27 *96:44 *853:A 0
+*RES
+1 *881:X *111:11 48.8 
+2 *111:11 *111:12 35.6429 
+3 *111:12 *938:A0 14.3357 
+4 *111:12 *853:A 25.1929 
+*END
+
+*D_NET *112 0.00550629
+*CONN
+*I *854:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *882:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *854:A 0
+2 *882:X 0.00106315
+3 *112:21 0.00168999
+4 *112:14 0.00275314
+5 *112:14 *952:A 0
+6 *112:14 *120:11 0
+7 *112:21 *851:A 0
+8 *112:21 *872:A 0
+9 *112:21 *875:A 0
+10 *112:21 *876:A 0
+11 *112:21 *156:10 0
+12 *112:21 *157:8 0
+13 *112:21 *159:8 0
+14 *112:21 *160:7 0
+15 *112:21 *165:17 0
+16 *112:21 *181:22 0
+17 *210:DIODE *112:14 0
+18 *210:DIODE *112:21 0
+19 *212:DIODE *112:14 0
+20 *212:DIODE *112:21 0
+21 *14:5 *112:14 0
+22 *15:5 *112:14 0
+23 *22:5 *112:14 0
+24 *23:5 *112:14 0
+25 *96:32 *112:21 0
+26 *111:11 *112:14 0
+*RES
+1 *882:X *112:14 45.3446 
+2 *112:14 *112:21 42.4554 
+3 *112:21 *854:A 9.3 
+*END
+
+*D_NET *113 0.00416475
+*CONN
+*I *855:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *883:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *855:A 0.00150825
+2 *883:X 0.000574125
+3 *113:15 0.00208238
+4 *855:A *875:A 0
+5 *855:A *876:A 0
+6 *855:A *143:10 0
+7 *855:A *154:21 0
+8 *855:A *161:10 0
+9 *855:A *187:8 0
+10 *113:15 *176:7 0
+11 *113:15 *198:9 0
+12 right_width_0_height_0__pin_1_lower *855:A 0
+13 *241:DIODE *855:A 0
+14 *881:A *113:15 0
+15 *882:A *113:15 0
+16 *883:A *113:15 0
+17 *923:A *113:15 0
+18 *90:10 *855:A 0
+*RES
+1 *883:X *113:15 26.1214 
+2 *113:15 *855:A 47.9607 
+*END
+
+*D_NET *114 0.0036291
+*CONN
+*I *856:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *884:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *856:A 0.00135593
+2 *884:X 0.000458616
+3 *114:7 0.00181455
+4 *856:A *161:10 0
+5 *856:A *187:8 0
+6 *203:DIODE *114:7 0
+7 *204:DIODE *114:7 0
+8 *242:DIODE *114:7 0
+9 *244:DIODE *114:7 0
+*RES
+1 *884:X *114:7 23.3714 
+2 *114:7 *856:A 44.5857 
+*END
+
+*D_NET *115 0.00481545
+*CONN
+*I *838:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *885:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *838:A 0.00150284
+2 *885:X 0.000904885
+3 *115:11 0.00240772
+4 *838:A *948:A 0
+5 *838:A *119:21 0
+6 *838:A *151:10 0
+7 *838:A *168:17 0
+8 *115:11 *950:A 0
+9 *115:11 *952:A 0
+10 *115:11 *959:A 0
+11 *115:11 *961:A 0
+12 *115:11 *119:11 0
+13 *115:11 *120:11 0
+14 *115:11 *124:13 0
+15 chany_bottom_out[10] *838:A 0
+16 chany_bottom_out[11] *838:A 0
+17 *943:A1 *838:A 0
+18 *17:5 *115:11 0
+19 *111:12 *115:11 0
+*RES
+1 *885:X *115:11 41.8179 
+2 *115:11 *838:A 47.925 
+*END
+
+*D_NET *116 0.0059799
+*CONN
+*I *934:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *839:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *886:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *934:A1 8.29787e-05
+2 *839:A 0.000636586
+3 *886:X 0.0014555
+4 *116:38 0.00145147
+5 *116:16 0.00235336
+6 *839:A *847:A 0
+7 *839:A *173:10 0
+8 *934:A1 *118:30 0
+9 *116:16 *874:A 0
+10 *116:16 *937:A0 0
+11 *116:16 *117:13 0
+12 *116:16 *118:30 0
+13 *116:16 *138:48 0
+14 *116:16 *152:8 0
+15 *116:16 *177:21 0
+16 *116:38 *841:A 0
+17 *116:38 *118:30 0
+18 *116:38 *123:26 0
+19 *116:38 *139:24 0
+20 *116:38 *141:15 0
+21 *116:38 *179:32 0
+22 *116:38 *181:22 0
+23 *206:DIODE *116:16 0
+24 *931:D *116:38 0
+25 *937:S *116:16 0
+26 *94:8 *116:38 0
+27 *102:23 *934:A1 0
+28 *111:12 *116:16 0
+*RES
+1 *886:X *116:16 49.8541 
+2 *116:16 *116:38 40.8571 
+3 *116:38 *839:A 22.5857 
+4 *116:16 *934:A1 15.7464 
+*END
+
+*D_NET *117 0.00528296
+*CONN
+*I *840:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *887:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *840:A 0
+2 *887:X 0.00105234
+3 *117:23 0.00158914
+4 *117:13 0.00264148
+5 *117:13 *954:A 0
+6 *117:13 *118:13 0
+7 *117:13 *152:8 0
+8 *117:23 *859:A 0
+9 *117:23 *970:A 0
+10 *117:23 *119:21 0
+11 *117:23 *167:6 0
+12 *117:23 *169:8 0
+13 *117:23 *175:18 0
+14 *117:23 *189:9 0
+15 right_width_0_height_0__pin_1_lower *117:13 0
+16 *207:DIODE *117:13 0
+17 *925:TE_B *117:23 0
+18 *943:A0 *117:23 0
+19 *943:S *117:23 0
+20 *116:16 *117:13 0
+*RES
+1 *887:X *117:13 45.2643 
+2 *117:13 *117:23 49.0893 
+3 *117:23 *840:A 9.3 
+*END
+
+*D_NET *118 0.0061231
+*CONN
+*I *841:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *935:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *888:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *841:A 0.00108124
+2 *935:A1 0
+3 *888:X 0.000534369
+4 *118:30 0.00252718
+5 *118:13 0.00198031
+6 *841:A *878:A 0
+7 *841:A *928:D 0
+8 *841:A *945:A 0
+9 *841:A *138:14 0
+10 *841:A *181:22 0
+11 *118:13 *954:A 0
+12 *118:13 *155:10 0
+13 *118:13 *165:17 0
+14 *118:30 *846:A 0
+15 *118:30 *934:A0 0
+16 *118:30 *177:21 0
+17 *118:30 *179:32 0
+18 right_width_0_height_0__pin_1_lower *118:13 0
+19 *208:DIODE *118:13 0
+20 *934:A1 *118:30 0
+21 *94:8 *841:A 0
+22 *102:23 *841:A 0
+23 *102:23 *118:30 0
+24 *111:12 *118:30 0
+25 *116:16 *118:30 0
+26 *116:38 *841:A 0
+27 *116:38 *118:30 0
+28 *117:13 *118:13 0
+*RES
+1 *888:X *118:13 34.4786 
+2 *118:13 *118:30 44.3762 
+3 *118:30 *935:A1 13.8 
+4 *118:30 *841:A 37.5321 
+*END
+
+*D_NET *119 0.00600281
+*CONN
+*I *842:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *889:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *842:A 0
+2 *889:X 0.00115363
+3 *119:21 0.00184777
+4 *119:11 0.0030014
+5 *119:11 *952:A 0
+6 *119:11 *961:A 0
+7 *119:21 *859:A 0
+8 *119:21 *864:A 0
+9 *119:21 *948:A 0
+10 *119:21 *949:A 0
+11 *119:21 *147:10 0
+12 *119:21 *153:24 0
+13 *119:21 *164:6 0
+14 *119:21 *168:7 0
+15 chany_bottom_out[11] *119:21 0
+16 *838:A *119:21 0
+17 *943:A0 *119:21 0
+18 *943:A1 *119:21 0
+19 *943:S *119:21 0
+20 *21:5 *119:11 0
+21 *22:5 *119:11 0
+22 *115:11 *119:11 0
+23 *117:23 *119:21 0
+*RES
+1 *889:X *119:11 46.9607 
+2 *119:11 *119:21 46.25 
+3 *119:21 *842:A 9.3 
+*END
+
+*D_NET *120 0.00570518
+*CONN
+*I *843:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *890:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *843:A 0
+2 *890:X 0.000892268
+3 *120:14 0.00196032
+4 *120:11 0.00285259
+5 *120:11 *950:A 0
+6 *120:11 *124:13 0
+7 *120:14 *858:A 0
+8 *120:14 *862:A 0
+9 *120:14 *868:A 0
+10 *120:14 *878:A 0
+11 *120:14 *952:A 0
+12 *120:14 *125:8 0
+13 *120:14 *132:8 0
+14 *120:14 *158:10 0
+15 *120:14 *179:32 0
+16 chany_bottom_out[16] *120:14 0
+17 chany_bottom_out[17] *120:14 0
+18 *22:5 *120:11 0
+19 *23:5 *120:11 0
+20 *92:8 *120:14 0
+21 *112:14 *120:11 0
+22 *115:11 *120:11 0
+*RES
+1 *890:X *120:11 41.6036 
+2 *120:11 *120:14 48.9464 
+3 *120:14 *843:A 9.3 
+*END
+
+*D_NET *121 0.00273052
+*CONN
+*I *929:D I *D sky130_fd_sc_hd__dfxtp_1
+*I *891:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *929:D 0
+2 *891:X 0.00136526
+3 *121:17 0.00136526
+4 *121:17 *878:A 0
+5 *121:17 *981:A 0
+6 *121:17 *193:17 0
+7 chany_top_out[6] *121:17 0
+8 *222:DIODE *121:17 0
+*RES
+1 *891:X *121:17 48.233 
+2 *121:17 *929:D 9.3 
+*END
+
+*D_NET *122 0.00535695
+*CONN
+*I *844:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *892:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *844:A 0
+2 *892:X 0.00267847
+3 *122:20 0.00267847
+4 *122:20 *948:A 0
+5 *122:20 *123:26 0
+6 *122:20 *149:8 0
+7 *122:20 *157:8 0
+8 *122:20 *181:22 0
+9 *24:7 *122:20 0
+*RES
+1 *892:X *122:20 45.4432 
+2 *122:20 *844:A 9.3 
+*END
+
+*D_NET *123 0.00536091
+*CONN
+*I *845:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *893:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *845:A 0
+2 *893:X 0.00268046
+3 *123:26 0.00268046
+4 *123:26 *948:A 0
+5 *123:26 *144:9 0
+6 *123:26 *154:21 0
+7 *123:26 *157:8 0
+8 *123:26 *160:10 0
+9 *123:26 *165:11 0
+10 *123:26 *181:22 0
+11 *116:38 *123:26 0
+12 *122:20 *123:26 0
+*RES
+1 *893:X *123:26 46.5716 
+2 *123:26 *845:A 9.3 
+*END
+
+*D_NET *124 0.00453889
+*CONN
+*I *846:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *894:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *846:A 0.00150264
+2 *894:X 0.00076681
+3 *124:13 0.00226945
+4 *846:A *138:48 0
+5 *846:A *139:24 0
+6 *846:A *171:11 0
+7 *846:A *175:15 0
+8 *124:13 *952:A 0
+9 *124:13 *165:11 0
+10 *205:DIODE *846:A 0
+11 *233:DIODE *846:A 0
+12 *6:9 *846:A 0
+13 *17:5 *846:A 0
+14 *24:7 *124:13 0
+15 *25:5 *124:13 0
+16 *102:23 *846:A 0
+17 *111:11 *124:13 0
+18 *111:12 *846:A 0
+19 *115:11 *124:13 0
+20 *118:30 *846:A 0
+21 *120:11 *124:13 0
+*RES
+1 *894:X *124:13 38.9607 
+2 *124:13 *846:A 47.675 
+*END
+
+*D_NET *125 0.00565646
+*CONN
+*I *858:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *933:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *895:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *858:A 0.00130632
+2 *933:A0 0
+3 *895:X 0.00152192
+4 *125:10 0.00130632
+5 *125:8 0.00152192
+6 *858:A *862:A 0
+7 *858:A *864:A 0
+8 *858:A *868:A 0
+9 *858:A *138:48 0
+10 *858:A *151:10 0
+11 *858:A *163:10 0
+12 *858:A *166:10 0
+13 *858:A *179:32 0
+14 *125:8 *878:A 0
+15 *125:8 *972:A 0
+16 *125:8 *137:11 0
+17 *125:8 *179:32 0
+18 *125:8 *190:8 0
+19 *936:A1 *858:A 0
+20 *46:8 *125:8 0
+21 *92:8 *858:A 0
+22 *92:34 *858:A 0
+23 *120:14 *858:A 0
+24 *120:14 *125:8 0
+*RES
+1 *895:X *125:8 47.6571 
+2 *125:8 *125:10 4.5 
+3 *125:10 *933:A0 9.3 
+4 *125:10 *858:A 46.7643 
+*END
+
+*D_NET *126 0.00676302
+*CONN
+*I *938:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *868:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *896:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *938:A1 6.20329e-05
+2 *868:A 0.000873782
+3 *896:X 0.000823366
+4 *126:24 0.000935815
+5 *126:22 0.00162233
+6 *126:11 0.0024457
+7 *868:A *862:A 0
+8 *868:A *140:32 0
+9 *126:11 *975:A 0
+10 *126:11 *129:13 0
+11 *126:11 *130:11 0
+12 *126:11 *183:6 0
+13 *126:22 *934:A0 0
+14 *126:22 *975:A 0
+15 *126:22 *133:19 0
+16 *126:22 *133:22 0
+17 *126:22 *137:11 0
+18 *126:22 *138:14 0
+19 *126:22 *141:10 0
+20 *126:22 *141:15 0
+21 *216:DIODE *126:11 0
+22 *853:A *126:22 0
+23 *858:A *868:A 0
+24 *935:S *868:A 0
+25 *936:A1 *868:A 0
+26 *939:S *126:22 0
+27 *47:5 *126:11 0
+28 *48:8 *126:11 0
+29 *57:7 *126:22 0
+30 *58:5 *126:22 0
+31 *92:8 *868:A 0
+32 *96:44 *126:22 0
+33 *102:23 *868:A 0
+34 *120:14 *868:A 0
+*RES
+1 *896:X *126:11 40.1571 
+2 *126:11 *126:22 45.6786 
+3 *126:22 *126:24 4.5 
+4 *126:24 *868:A 37.4786 
+5 *126:24 *938:A1 10.6571 
+*END
+
+*D_NET *127 0.0038705
+*CONN
+*I *869:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *897:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *869:A 0.00145732
+2 *897:X 0.000477927
+3 *127:13 0.00193525
+4 *869:A *872:A 0
+5 *869:A *128:21 0
+6 *869:A *142:10 0
+7 *127:13 *129:13 0
+8 *127:13 *133:19 0
+9 *127:13 *146:16 0
+10 *127:13 *182:8 0
+11 *234:DIODE *127:13 0
+12 *916:A *127:13 0
+13 *65:12 *127:13 0
+14 *96:32 *869:A 0
+*RES
+1 *897:X *127:13 32.9071 
+2 *127:13 *869:A 46.4071 
+*END
+
+*D_NET *128 0.00426782
+*CONN
+*I *870:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *898:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *870:A 0
+2 *898:X 0.000459598
+3 *128:21 0.00167431
+4 *128:14 0.00213391
+5 *128:14 *144:9 0
+6 *128:14 *182:8 0
+7 *128:14 *183:6 0
+8 *128:21 *873:A 0
+9 *128:21 *144:9 0
+10 *128:21 *182:8 0
+11 *218:DIODE *128:14 0
+12 *219:DIODE *128:14 0
+13 *869:A *128:21 0
+14 *916:A *128:14 0
+15 *49:5 *128:14 0
+16 *50:9 *128:14 0
+17 *96:32 *128:21 0
+*RES
+1 *898:X *128:14 32.7911 
+2 *128:14 *128:21 41.5625 
+3 *128:21 *870:A 9.3 
+*END
+
+*D_NET *129 0.00418568
+*CONN
+*I *871:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *899:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *871:A 0.00133479
+2 *899:X 0.000758054
+3 *129:13 0.00209284
+4 *871:A *867:A 0
+5 *871:A *142:10 0
+6 *871:A *145:16 0
+7 *871:A *156:10 0
+8 *871:A *181:22 0
+9 *129:13 *133:19 0
+10 *129:13 *182:8 0
+11 *129:13 *183:6 0
+12 *216:DIODE *129:13 0
+13 *96:32 *871:A 0
+14 *126:11 *129:13 0
+15 *127:13 *129:13 0
+*RES
+1 *899:X *129:13 29.4744 
+2 *129:13 *871:A 44.0589 
+*END
+
+*D_NET *130 0.00445073
+*CONN
+*I *872:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *900:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *872:A 0.00152437
+2 *900:X 0.000700989
+3 *130:11 0.00222536
+4 *872:A *873:A 0
+5 *872:A *142:10 0
+6 *872:A *160:10 0
+7 *872:A *178:8 0
+8 *130:11 *976:A 0
+9 *234:DIODE *872:A 0
+10 *869:A *872:A 0
+11 *51:8 *130:11 0
+12 *52:12 *130:11 0
+13 *62:5 *872:A 0
+14 *63:5 *872:A 0
+15 *96:32 *872:A 0
+16 *112:21 *872:A 0
+17 *126:11 *130:11 0
+*RES
+1 *900:X *130:11 37.5143 
+2 *130:11 *872:A 48.2643 
+*END
+
+*D_NET *131 0.00402112
+*CONN
+*I *873:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *901:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *873:A 0.000721462
+2 *901:X 0.0012891
+3 *131:8 0.00201056
+4 *873:A *160:10 0
+5 *873:A *178:8 0
+6 *131:8 *135:8 0
+7 *131:8 *196:13 0
+8 *872:A *873:A 0
+9 *92:34 *131:8 0
+10 *128:21 *873:A 0
+*RES
+1 *901:X *131:8 47.5679 
+2 *131:8 *873:A 33.5143 
+*END
+
+*D_NET *132 0.0061079
+*CONN
+*I *878:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *933:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *902:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *878:A 0.00109929
+2 *933:A1 0
+3 *902:X 0.000379898
+4 *132:8 0.00267405
+5 *132:7 0.00195466
+6 *878:A *188:17 0
+7 *878:A *190:8 0
+8 *132:7 *954:A 0
+9 *132:7 *171:17 0
+10 *132:8 *862:A 0
+11 *132:8 *863:A 0
+12 *841:A *878:A 0
+13 *932:D *132:8 0
+14 *97:12 *878:A 0
+15 *97:14 *878:A 0
+16 *97:14 *132:8 0
+17 *97:19 *132:8 0
+18 *120:14 *878:A 0
+19 *120:14 *132:8 0
+20 *121:17 *878:A 0
+21 *125:8 *878:A 0
+*RES
+1 *902:X *132:7 21.7286 
+2 *132:7 *132:8 35.6429 
+3 *132:8 *933:A1 13.8 
+4 *132:8 *878:A 37.7107 
+*END
+
+*D_NET *133 0.00647499
+*CONN
+*I *939:A1 I *D sky130_fd_sc_hd__mux2_1
+*I *874:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *903:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *939:A1 0
+2 *874:A 0.000730213
+3 *903:X 0.00140811
+4 *133:22 0.00182939
+5 *133:19 0.00250728
+6 *133:19 *971:A 0
+7 *133:19 *141:10 0
+8 *133:19 *196:13 0
+9 *133:22 *138:14 0
+10 *217:DIODE *133:19 0
+11 *228:DIODE *133:19 0
+12 *230:DIODE *133:19 0
+13 *853:A *874:A 0
+14 *853:A *133:22 0
+15 *896:A *133:19 0
+16 *898:A *133:19 0
+17 *899:A *133:19 0
+18 *900:A *133:19 0
+19 *908:A *133:19 0
+20 *909:A *133:19 0
+21 *912:A *133:19 0
+22 *914:A *133:19 0
+23 *915:A *133:19 0
+24 *937:S *874:A 0
+25 *939:S *874:A 0
+26 *939:S *133:22 0
+27 *48:8 *133:19 0
+28 *51:8 *133:19 0
+29 *52:12 *133:19 0
+30 *58:5 *133:19 0
+31 *60:8 *133:19 0
+32 *98:31 *874:A 0
+33 *111:12 *874:A 0
+34 *116:16 *874:A 0
+35 *126:22 *133:19 0
+36 *126:22 *133:22 0
+37 *127:13 *133:19 0
+38 *129:13 *133:19 0
+*RES
+1 *903:X *133:19 48.0679 
+2 *133:19 *133:22 29.5179 
+3 *133:22 *874:A 30.3179 
+4 *133:22 *939:A1 13.8 
+*END
+
+*D_NET *134 0.00403344
+*CONN
+*I *875:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *904:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *875:A 0.000695624
+2 *904:X 0.0013211
+3 *134:10 0.00201672
+4 *875:A *876:A 0
+5 *875:A *877:A 0
+6 *875:A *161:10 0
+7 *134:10 *135:8 0
+8 *134:10 *136:8 0
+9 *225:DIODE *134:10 0
+10 *855:A *875:A 0
+11 *55:16 *134:10 0
+12 *56:8 *134:10 0
+13 *112:21 *875:A 0
+*RES
+1 *904:X *134:10 48.2107 
+2 *134:10 *875:A 23.8179 
+*END
+
+*D_NET *135 0.0036161
+*CONN
+*I *876:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *905:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *876:A 0.000572414
+2 *905:X 0.00123564
+3 *135:8 0.00180805
+4 *876:A *877:A 0
+5 *876:A *182:8 0
+6 *135:8 *196:13 0
+7 *855:A *876:A 0
+8 *875:A *876:A 0
+9 *112:21 *876:A 0
+10 *131:8 *135:8 0
+11 *134:10 *135:8 0
+*RES
+1 *905:X *135:8 46.3536 
+2 *135:8 *876:A 21.2464 
+*END
+
+*D_NET *136 0.00336045
+*CONN
+*I *877:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *906:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *877:A 0.000538189
+2 *906:X 0.00114204
+3 *136:8 0.00168023
+4 ccff_tail *136:8 0
+5 *875:A *877:A 0
+6 *876:A *877:A 0
+7 *134:10 *136:8 0
+*RES
+1 *906:X *136:8 44.2286 
+2 *136:8 *877:A 20.5321 
+*END
+
+*D_NET *137 0.00466832
+*CONN
+*I *859:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *907:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *859:A 0.00139398
+2 *907:X 0.000940176
+3 *137:11 0.00233416
+4 *859:A *173:10 0
+5 *859:A *186:10 0
+6 *859:A *193:17 0
+7 *137:11 *979:A 0
+8 *137:11 *982:A 0
+9 *137:11 *138:14 0
+10 *215:DIODE *137:11 0
+11 *943:S *859:A 0
+12 *944:A *859:A 0
+13 *46:8 *137:11 0
+14 *117:23 *859:A 0
+15 *119:21 *859:A 0
+16 *125:8 *137:11 0
+17 *126:22 *137:11 0
+*RES
+1 *907:X *137:11 42.4429 
+2 *137:11 *859:A 45.3357 
+*END
+
+*D_NET *138 0.00643154
+*CONN
+*I *860:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *934:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *908:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *860:A 0
+2 *934:A0 0.000241115
+3 *908:X 0.00150555
+4 *138:48 0.00146911
+5 *138:14 0.00321577
+6 *934:A0 *179:32 0
+7 *138:14 *928:D 0
+8 *138:14 *971:A 0
+9 *138:14 *174:15 0
+10 *138:48 *862:A 0
+11 *138:48 *151:10 0
+12 *138:48 *154:21 0
+13 *138:48 *158:10 0
+14 *138:48 *171:11 0
+15 *841:A *138:14 0
+16 *846:A *138:48 0
+17 *853:A *934:A0 0
+18 *853:A *138:14 0
+19 *858:A *138:48 0
+20 *46:8 *138:14 0
+21 *96:44 *138:14 0
+22 *98:21 *934:A0 0
+23 *111:12 *934:A0 0
+24 *116:16 *138:48 0
+25 *118:30 *934:A0 0
+26 *126:22 *934:A0 0
+27 *126:22 *138:14 0
+28 *133:22 *138:14 0
+29 *137:11 *138:14 0
+*RES
+1 *908:X *138:14 47.9161 
+2 *138:14 *934:A0 19.3804 
+3 *138:14 *138:48 41.8911 
+4 *138:48 *860:A 9.3 
+*END
+
+*D_NET *139 0.00537823
+*CONN
+*I *861:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *909:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *861:A 4.53482e-05
+2 *909:X 0.000949339
+3 *139:24 0.00173978
+4 *139:12 0.00264377
+5 *139:12 *140:16 0
+6 *139:12 *141:10 0
+7 *139:12 *141:15 0
+8 *139:24 *847:A 0
+9 *139:24 *867:A 0
+10 *139:24 *949:A 0
+11 *139:24 *140:16 0
+12 *139:24 *141:15 0
+13 *139:24 *152:8 0
+14 *139:24 *153:24 0
+15 *139:24 *155:10 0
+16 *139:24 *167:6 0
+17 *139:24 *175:15 0
+18 *139:24 *175:18 0
+19 *229:DIODE *139:12 0
+20 *846:A *139:24 0
+21 *931:D *139:24 0
+22 *936:A0 *139:24 0
+23 *943:A0 *861:A 0
+24 *116:38 *139:24 0
+*RES
+1 *909:X *139:12 35.4161 
+2 *139:12 *139:24 45.9554 
+3 *139:24 *861:A 14.7464 
+*END
+
+*D_NET *140 0.00626189
+*CONN
+*I *935:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *862:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *910:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *935:A0 0
+2 *862:A 0.00106319
+3 *910:X 0.00155312
+4 *140:32 0.00157782
+5 *140:16 0.00206775
+6 *140:16 *867:A 0
+7 *140:16 *141:10 0
+8 *140:16 *145:16 0
+9 *140:16 *146:16 0
+10 *231:DIODE *140:16 0
+11 *858:A *862:A 0
+12 *868:A *862:A 0
+13 *868:A *140:32 0
+14 *936:A1 *140:32 0
+15 *936:S *140:32 0
+16 *120:14 *862:A 0
+17 *132:8 *862:A 0
+18 *138:48 *862:A 0
+19 *139:12 *140:16 0
+20 *139:24 *140:16 0
+*RES
+1 *910:X *140:16 49.1036 
+2 *140:16 *140:32 24.3929 
+3 *140:32 *862:A 41.4071 
+4 *140:32 *935:A0 9.3 
+*END
+
+*D_NET *141 0.00536221
+*CONN
+*I *863:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *911:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *863:A 0.000299567
+2 *911:X 0.000358516
+3 *141:15 0.00232259
+4 *141:10 0.00238154
+5 *141:10 *971:A 0
+6 *141:15 *847:A 0
+7 *141:15 *154:21 0
+8 *141:15 *175:15 0
+9 *228:DIODE *141:10 0
+10 *229:DIODE *141:10 0
+11 *937:S *141:15 0
+12 *939:S *141:15 0
+13 *942:A0 *863:A 0
+14 *942:A1 *863:A 0
+15 *943:A0 *863:A 0
+16 *99:17 *863:A 0
+17 *116:38 *141:15 0
+18 *126:22 *141:10 0
+19 *126:22 *141:15 0
+20 *132:8 *863:A 0
+21 *133:19 *141:10 0
+22 *139:12 *141:10 0
+23 *139:12 *141:15 0
+24 *139:24 *141:15 0
+25 *140:16 *141:10 0
+*RES
+1 *911:X *141:10 21.6304 
+2 *141:10 *141:15 49.3482 
+3 *141:15 *863:A 24.6036 
+*END
+
+*D_NET *142 0.00489177
+*CONN
+*I *864:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *912:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *864:A 0.00105242
+2 *912:X 0.00139347
+3 *142:10 0.00244589
+4 *864:A *152:8 0
+5 *864:A *153:24 0
+6 *142:10 *971:A 0
+7 *142:10 *145:16 0
+8 *231:DIODE *142:10 0
+9 *232:DIODE *142:10 0
+10 *858:A *864:A 0
+11 *869:A *142:10 0
+12 *871:A *142:10 0
+13 *872:A *142:10 0
+14 *96:32 *864:A 0
+15 *119:21 *864:A 0
+*RES
+1 *912:X *142:10 49.7464 
+2 *142:10 *864:A 31.3893 
+*END
+
+*D_NET *143 0.00701269
+*CONN
+*I *847:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *937:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *913:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *847:A 0.00114625
+2 *937:A0 0.000482743
+3 *913:X 0.0012613
+4 *143:13 0.00224504
+5 *143:10 0.00187735
+6 *847:A *152:8 0
+7 *847:A *175:15 0
+8 *847:A *180:13 0
+9 *937:A0 *152:8 0
+10 *937:A0 *171:11 0
+11 *143:10 *176:7 0
+12 *143:10 *176:15 0
+13 *143:13 *867:A 0
+14 right_width_0_height_0__pin_1_lower *143:10 0
+15 *839:A *847:A 0
+16 *853:A *847:A 0
+17 *855:A *143:10 0
+18 *937:S *937:A0 0
+19 *941:A1 *847:A 0
+20 *941:A1 *937:A0 0
+21 *90:10 *143:10 0
+22 *92:8 *937:A0 0
+23 *116:16 *937:A0 0
+24 *139:24 *847:A 0
+25 *141:15 *847:A 0
+*RES
+1 *913:X *143:10 46.8893 
+2 *143:10 *143:13 17.3571 
+3 *143:13 *937:A0 33.2286 
+4 *143:13 *847:A 39.0321 
+*END
+
+*D_NET *144 0.00468354
+*CONN
+*I *865:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *914:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *865:A 1.21715e-05
+2 *914:X 0.0023296
+3 *144:9 0.00234177
+4 *865:A *970:A 0
+5 *144:9 *146:16 0
+6 *144:9 *177:21 0
+7 *144:9 *178:8 0
+8 *235:DIODE *144:9 0
+9 *92:34 *144:9 0
+10 *123:26 *144:9 0
+11 *128:14 *144:9 0
+12 *128:21 *144:9 0
+*RES
+1 *914:X *144:9 49.354 
+2 *144:9 *865:A 17.4868 
+*END
+
+*D_NET *145 0.00394685
+*CONN
+*I *866:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *915:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *866:A 0.000552734
+2 *915:X 0.00142069
+3 *145:16 0.00197342
+4 *866:A *939:A0 0
+5 *145:16 *867:A 0
+6 *145:16 *146:16 0
+7 *231:DIODE *145:16 0
+8 *871:A *145:16 0
+9 *912:A *145:16 0
+10 *914:A *145:16 0
+11 *915:A *145:16 0
+12 *942:A0 *866:A 0
+13 *96:44 *866:A 0
+14 *140:16 *145:16 0
+15 *142:10 *145:16 0
+*RES
+1 *915:X *145:16 45.6929 
+2 *145:16 *866:A 25.3357 
+*END
+
+*D_NET *146 0.00460433
+*CONN
+*I *867:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *916:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *867:A 0.00108809
+2 *916:X 0.00121407
+3 *146:16 0.00230216
+4 *867:A *156:10 0
+5 *867:A *165:17 0
+6 *867:A *175:15 0
+7 *232:DIODE *146:16 0
+8 *235:DIODE *146:16 0
+9 *871:A *867:A 0
+10 *915:A *146:16 0
+11 *936:A0 *867:A 0
+12 *65:12 *146:16 0
+13 *96:32 *867:A 0
+14 *127:13 *146:16 0
+15 *139:24 *867:A 0
+16 *140:16 *867:A 0
+17 *140:16 *146:16 0
+18 *143:13 *867:A 0
+19 *144:9 *146:16 0
+20 *145:16 *867:A 0
+21 *145:16 *146:16 0
+*RES
+1 *916:X *146:16 49.7911 
+2 *146:16 *867:A 37.8804 
+*END
+
+*D_NET *147 0.00246118
+*CONN
+*I *925:A I *D sky130_fd_sc_hd__ebufn_8
+*I *917:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *925:A 0
+2 *917:X 0.00123059
+3 *147:10 0.00123059
+4 *147:10 *153:24 0
+5 *147:10 *175:18 0
+6 *237:DIODE *147:10 0
+7 *925:TE_B *147:10 0
+8 *943:S *147:10 0
+9 *119:21 *147:10 0
+*RES
+1 *917:X *147:10 44.5321 
+2 *147:10 *925:A 9.3 
+*END
+
+*D_NET *148 0.00319064
+*CONN
+*I *927:A I *D sky130_fd_sc_hd__ebufn_8
+*I *918:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *927:A 4.53482e-05
+2 *918:X 0.00154997
+3 *148:8 0.00159532
+4 *927:A *927:TE_B 0
+5 *927:A *184:7 0
+6 *148:8 *986:A 0
+7 *148:8 *150:13 0
+8 *148:8 *162:17 0
+*RES
+1 *918:X *148:8 48.4429 
+2 *148:8 *927:A 14.7464 
+*END
+
+*D_NET *149 0.00573033
+*CONN
+*I *926:A I *D sky130_fd_sc_hd__or2b_2
+*I *945:A I *D sky130_fd_sc_hd__buf_2
+*I *928:Q O *D sky130_fd_sc_hd__dfxtp_1
+*CAP
+1 *926:A 0.000739896
+2 *945:A 0.00167959
+3 *928:Q 0.000445675
+4 *149:8 0.00286516
+5 *926:A *972:A 0
+6 *926:A *974:A 0
+7 *945:A *196:13 0
+8 *149:8 *972:A 0
+9 *149:8 *974:A 0
+10 *149:8 *153:24 0
+11 *149:8 *179:32 0
+12 *149:8 *181:22 0
+13 *841:A *945:A 0
+14 *92:34 *945:A 0
+15 *122:20 *149:8 0
+*RES
+1 *928:Q *149:8 23.8714 
+2 *149:8 *945:A 48.8536 
+3 *149:8 *926:A 29.6036 
+*END
+
+*D_NET *150 0.00286101
+*CONN
+*I *946:A I *D sky130_fd_sc_hd__buf_2
+*I *858:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *946:A 0
+2 *858:X 0.0014305
+3 *150:13 0.0014305
+4 *150:13 *987:A 0
+5 *150:13 *166:10 0
+6 *238:DIODE *150:13 0
+7 *148:8 *150:13 0
+*RES
+1 *858:X *150:13 49.6393 
+2 *150:13 *946:A 9.3 
+*END
+
+*D_NET *151 0.00291675
+*CONN
+*I *947:A I *D sky130_fd_sc_hd__buf_2
+*I *868:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *947:A 2.56688e-05
+2 *868:X 0.00143271
+3 *151:10 0.00145838
+4 *947:A *171:17 0
+5 *838:A *151:10 0
+6 *858:A *151:10 0
+7 *138:48 *151:10 0
+*RES
+1 *868:X *151:10 49.9607 
+2 *151:10 *947:A 9.83571 
+*END
+
+*D_NET *152 0.00520429
+*CONN
+*I *948:A I *D sky130_fd_sc_hd__buf_2
+*I *869:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *948:A 0.00101343
+2 *869:X 0.00158872
+3 *152:8 0.00260214
+4 *152:8 *155:10 0
+5 *207:DIODE *152:8 0
+6 *838:A *948:A 0
+7 *847:A *152:8 0
+8 *864:A *152:8 0
+9 *937:A0 *152:8 0
+10 *941:A1 *152:8 0
+11 *116:16 *152:8 0
+12 *117:13 *152:8 0
+13 *119:21 *948:A 0
+14 *122:20 *948:A 0
+15 *123:26 *948:A 0
+16 *139:24 *152:8 0
+*RES
+1 *869:X *152:8 49.8268 
+2 *152:8 *948:A 24.7786 
+*END
+
+*D_NET *153 0.00505882
+*CONN
+*I *949:A I *D sky130_fd_sc_hd__buf_2
+*I *870:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *949:A 0.00138799
+2 *870:X 0.00114142
+3 *153:24 0.00252941
+4 *949:A *164:6 0
+5 *949:A *167:6 0
+6 *153:24 *928:D 0
+7 *153:24 *168:7 0
+8 *153:24 *169:8 0
+9 *153:24 *174:15 0
+10 *153:24 *175:18 0
+11 *153:24 *189:9 0
+12 *864:A *153:24 0
+13 *943:A0 *153:24 0
+14 *119:21 *949:A 0
+15 *119:21 *153:24 0
+16 *139:24 *949:A 0
+17 *139:24 *153:24 0
+18 *147:10 *153:24 0
+19 *149:8 *153:24 0
+*RES
+1 *870:X *153:24 38.4161 
+2 *153:24 *949:A 45.3446 
+*END
+
+*D_NET *154 0.00471213
+*CONN
+*I *848:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *919:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *848:A 0
+2 *919:X 0.00235607
+3 *154:21 0.00235607
+4 right_width_0_height_0__pin_1_lower *154:21 0
+5 *240:DIODE *154:21 0
+6 *855:A *154:21 0
+7 *939:S *154:21 0
+8 *98:31 *154:21 0
+9 *123:26 *154:21 0
+10 *138:48 *154:21 0
+11 *141:15 *154:21 0
+*RES
+1 *919:X *154:21 46.6628 
+2 *154:21 *848:A 9.3 
+*END
+
+*D_NET *155 0.00559527
+*CONN
+*I *950:A I *D sky130_fd_sc_hd__buf_2
+*I *871:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *950:A 0.000987848
+2 *871:X 0.000143745
+3 *155:10 0.00265389
+4 *155:7 0.00180979
+5 *950:A *167:6 0
+6 *950:A *171:17 0
+7 *155:7 *181:22 0
+8 *155:10 *165:17 0
+9 chany_bottom_out[13] *950:A 0
+10 chany_bottom_out[14] *950:A 0
+11 *208:DIODE *155:10 0
+12 *936:A1 *155:7 0
+13 *936:S *155:7 0
+14 *19:5 *155:10 0
+15 *20:5 *155:10 0
+16 *115:11 *950:A 0
+17 *118:13 *155:10 0
+18 *120:11 *950:A 0
+19 *139:24 *155:10 0
+20 *152:8 *155:10 0
+*RES
+1 *871:X *155:7 16.8 
+2 *155:7 *155:10 42.2679 
+3 *155:10 *950:A 39.2107 
+*END
+
+*D_NET *156 0.00479905
+*CONN
+*I *951:A I *D sky130_fd_sc_hd__buf_2
+*I *872:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *951:A 0.00100451
+2 *872:X 0.00139501
+3 *156:10 0.00239953
+4 *951:A *952:A 0
+5 *951:A *954:A 0
+6 *951:A *955:A 0
+7 *951:A *956:A 0
+8 *951:A *171:17 0
+9 *156:10 *165:17 0
+10 chany_bottom_out[15] *951:A 0
+11 chany_bottom_out[17] *951:A 0
+12 chany_bottom_out[18] *951:A 0
+13 chany_bottom_out[19] *951:A 0
+14 *209:DIODE *951:A 0
+15 *867:A *156:10 0
+16 *871:A *156:10 0
+17 *96:32 *156:10 0
+18 *112:21 *156:10 0
+*RES
+1 *872:X *156:10 49.925 
+2 *156:10 *951:A 39.4964 
+*END
+
+*D_NET *157 0.00513649
+*CONN
+*I *952:A I *D sky130_fd_sc_hd__buf_2
+*I *873:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *952:A 0.000983283
+2 *873:X 0.00158496
+3 *157:8 0.00256824
+4 *952:A *171:17 0
+5 *157:8 *851:A 0
+6 *157:8 *160:10 0
+7 *212:DIODE *157:8 0
+8 *951:A *952:A 0
+9 *23:5 *157:8 0
+10 *24:7 *157:8 0
+11 *111:11 *952:A 0
+12 *112:14 *952:A 0
+13 *112:21 *157:8 0
+14 *115:11 *952:A 0
+15 *119:11 *952:A 0
+16 *120:14 *952:A 0
+17 *122:20 *157:8 0
+18 *123:26 *157:8 0
+19 *124:13 *952:A 0
+*RES
+1 *873:X *157:8 49.675 
+2 *157:8 *952:A 43.4786 
+*END
+
+*D_NET *158 0.00256395
+*CONN
+*I *953:A I *D sky130_fd_sc_hd__buf_2
+*I *874:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *953:A 0
+2 *874:X 0.00128197
+3 *158:10 0.00128197
+4 *158:10 *171:17 0
+5 *92:8 *158:10 0
+6 *120:14 *158:10 0
+7 *138:48 *158:10 0
+*RES
+1 *874:X *158:10 46.7821 
+2 *158:10 *953:A 9.3 
+*END
+
+*D_NET *159 0.00462494
+*CONN
+*I *954:A I *D sky130_fd_sc_hd__buf_2
+*I *875:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *954:A 0.00083723
+2 *875:X 0.00147524
+3 *159:8 0.00231247
+4 *954:A *955:A 0
+5 *954:A *171:17 0
+6 *159:8 *852:A 0
+7 *159:8 *160:10 0
+8 *213:DIODE *159:8 0
+9 *892:A *954:A 0
+10 *951:A *954:A 0
+11 *112:21 *159:8 0
+12 *117:13 *954:A 0
+13 *118:13 *954:A 0
+14 *132:7 *954:A 0
+*RES
+1 *875:X *159:8 47.2464 
+2 *159:8 *954:A 31.4607 
+*END
+
+*D_NET *160 0.0047963
+*CONN
+*I *955:A I *D sky130_fd_sc_hd__buf_2
+*I *876:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *955:A 0.000718298
+2 *876:X 0.000163425
+3 *160:10 0.00223472
+4 *160:7 0.00167985
+5 *955:A *165:11 0
+6 *160:7 *181:22 0
+7 *160:10 *851:A 0
+8 *872:A *160:10 0
+9 *873:A *160:10 0
+10 *885:A *955:A 0
+11 *886:A *955:A 0
+12 *887:A *955:A 0
+13 *888:A *955:A 0
+14 *889:A *955:A 0
+15 *890:A *955:A 0
+16 *892:A *955:A 0
+17 *902:A *955:A 0
+18 *951:A *955:A 0
+19 *954:A *955:A 0
+20 *112:21 *160:7 0
+21 *123:26 *160:10 0
+22 *157:8 *160:10 0
+23 *159:8 *160:10 0
+*RES
+1 *876:X *160:7 17.2107 
+2 *160:7 *160:10 38.9286 
+3 *160:10 *955:A 24.3536 
+*END
+
+*D_NET *161 0.00491582
+*CONN
+*I *956:A I *D sky130_fd_sc_hd__buf_2
+*I *877:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *956:A 0.00108337
+2 *877:X 0.00137454
+3 *161:10 0.00245791
+4 *212:DIODE *956:A 0
+5 *233:DIODE *956:A 0
+6 *239:DIODE *956:A 0
+7 *855:A *161:10 0
+8 *856:A *161:10 0
+9 *875:A *161:10 0
+10 *951:A *956:A 0
+*RES
+1 *877:X *161:10 49.425 
+2 *161:10 *956:A 41.1929 
+*END
+
+*D_NET *162 0.00435921
+*CONN
+*I *957:A I *D sky130_fd_sc_hd__buf_2
+*I *859:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *957:A 0
+2 *859:X 0.000242142
+3 *162:17 0.00193746
+4 *162:7 0.00217961
+5 *162:17 *958:A 0
+6 *162:17 *959:A 0
+7 *162:17 *960:A 0
+8 *162:17 *986:A 0
+9 *162:17 *166:10 0
+10 *162:17 *170:22 0
+11 *162:17 *194:10 0
+12 chany_bottom_out[2] *162:17 0
+13 chany_bottom_out[3] *162:17 0
+14 chany_bottom_out[7] *162:17 0
+15 *944:A *162:7 0
+16 *148:8 *162:17 0
+*RES
+1 *859:X *162:7 18.8536 
+2 *162:7 *162:17 47.75 
+3 *162:17 *957:A 9.3 
+*END
+
+*D_NET *163 0.00318471
+*CONN
+*I *958:A I *D sky130_fd_sc_hd__buf_2
+*I *860:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *958:A 0.000586959
+2 *860:X 0.00100539
+3 *163:10 0.00159235
+4 *958:A *960:A 0
+5 *958:A *168:17 0
+6 *163:10 *166:10 0
+7 *163:10 *170:22 0
+8 *858:A *163:10 0
+9 *162:17 *958:A 0
+*RES
+1 *860:X *163:10 40.9429 
+2 *163:10 *958:A 21.55 
+*END
+
+*D_NET *164 0.00457889
+*CONN
+*I *959:A I *D sky130_fd_sc_hd__buf_2
+*I *861:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *959:A 0.000813172
+2 *861:X 0.00147627
+3 *164:6 0.00228945
+4 *959:A *961:A 0
+5 *164:6 *167:6 0
+6 chany_bottom_out[11] *164:6 0
+7 chany_bottom_out[3] *959:A 0
+8 chany_bottom_out[4] *959:A 0
+9 *949:A *164:6 0
+10 *91:10 *959:A 0
+11 *115:11 *959:A 0
+12 *119:21 *164:6 0
+13 *162:17 *959:A 0
+*RES
+1 *861:X *164:6 47.3179 
+2 *164:6 *959:A 39.9786 
+*END
+
+*D_NET *165 0.00442652
+*CONN
+*I *849:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *920:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *849:A 0
+2 *920:X 0.000560863
+3 *165:17 0.0016524
+4 *165:11 0.00221326
+5 *165:11 *198:9 0
+6 *165:17 *176:15 0
+7 *209:DIODE *165:17 0
+8 *210:DIODE *165:17 0
+9 *867:A *165:17 0
+10 *889:A *165:11 0
+11 *890:A *165:11 0
+12 *892:A *165:11 0
+13 *893:A *165:11 0
+14 *894:A *165:11 0
+15 *913:A *165:11 0
+16 *919:A *165:11 0
+17 *920:A *165:11 0
+18 *936:A0 *165:17 0
+19 *955:A *165:11 0
+20 *112:21 *165:17 0
+21 *118:13 *165:17 0
+22 *123:26 *165:11 0
+23 *124:13 *165:11 0
+24 *155:10 *165:17 0
+25 *156:10 *165:17 0
+*RES
+1 *920:X *165:11 25.5679 
+2 *165:11 *165:17 41.5714 
+3 *165:17 *849:A 9.3 
+*END
+
+*D_NET *166 0.00323571
+*CONN
+*I *960:A I *D sky130_fd_sc_hd__buf_2
+*I *862:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *960:A 0.000302036
+2 *862:X 0.00131582
+3 *166:10 0.00161785
+4 *960:A *961:A 0
+5 *960:A *168:17 0
+6 *166:10 *170:22 0
+7 chany_bottom_out[5] *960:A 0
+8 chany_bottom_out[7] *166:10 0
+9 *858:A *166:10 0
+10 *958:A *960:A 0
+11 *150:13 *166:10 0
+12 *162:17 *960:A 0
+13 *162:17 *166:10 0
+14 *163:10 *166:10 0
+*RES
+1 *862:X *166:10 47.5857 
+2 *166:10 *960:A 15.6036 
+*END
+
+*D_NET *167 0.00427513
+*CONN
+*I *961:A I *D sky130_fd_sc_hd__buf_2
+*I *863:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *961:A 0.000688033
+2 *863:X 0.00144953
+3 *167:6 0.00213757
+4 *167:6 *169:8 0
+5 *167:6 *175:18 0
+6 chany_bottom_out[5] *961:A 0
+7 chany_bottom_out[6] *961:A 0
+8 chany_bottom_out[7] *961:A 0
+9 *949:A *167:6 0
+10 *950:A *167:6 0
+11 *959:A *961:A 0
+12 *960:A *961:A 0
+13 *115:11 *961:A 0
+14 *117:23 *167:6 0
+15 *119:11 *961:A 0
+16 *139:24 *167:6 0
+17 *164:6 *167:6 0
+*RES
+1 *863:X *167:6 46.7107 
+2 *167:6 *961:A 37.3179 
+*END
+
+*D_NET *168 0.00447686
+*CONN
+*I *962:A I *D sky130_fd_sc_hd__buf_2
+*I *864:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *962:A 0
+2 *864:X 0.000281501
+3 *168:17 0.00195693
+4 *168:7 0.00223843
+5 *168:7 *189:9 0
+6 *168:17 *170:22 0
+7 *168:17 *171:17 0
+8 *168:17 *193:17 0
+9 chany_bottom_out[8] *168:17 0
+10 chany_bottom_out[9] *168:17 0
+11 *838:A *168:17 0
+12 *925:TE_B *168:7 0
+13 *958:A *168:17 0
+14 *960:A *168:17 0
+15 *119:21 *168:7 0
+16 *153:24 *168:7 0
+*RES
+1 *864:X *168:7 19.675 
+2 *168:7 *168:17 48.4286 
+3 *168:17 *962:A 9.3 
+*END
+
+*D_NET *169 0.0039324
+*CONN
+*I *963:A I *D sky130_fd_sc_hd__buf_2
+*I *865:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *963:A 0.000458616
+2 *865:X 0.00150758
+3 *169:8 0.0019662
+4 *169:8 *970:A 0
+5 *932:D *169:8 0
+6 *99:17 *169:8 0
+7 *117:23 *169:8 0
+8 *153:24 *169:8 0
+9 *167:6 *169:8 0
+*RES
+1 *865:X *169:8 47.9607 
+2 *169:8 *963:A 23.3714 
+*END
+
+*D_NET *170 0.0052378
+*CONN
+*I *964:A I *D sky130_fd_sc_hd__buf_2
+*I *866:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *964:A 0
+2 *866:X 0.000912525
+3 *170:22 0.00170637
+4 *170:19 0.0026189
+5 *170:22 *981:A 0
+6 *170:22 *193:17 0
+7 *170:22 *194:8 0
+8 *170:22 *194:10 0
+9 chany_bottom_out[7] *170:22 0
+10 *929:CLK *170:19 0
+11 *96:44 *170:19 0
+12 *162:17 *170:22 0
+13 *163:10 *170:22 0
+14 *166:10 *170:22 0
+15 *168:17 *170:22 0
+*RES
+1 *866:X *170:19 33.2464 
+2 *170:19 *170:22 43.1786 
+3 *170:22 *964:A 9.3 
+*END
+
+*D_NET *171 0.00438577
+*CONN
+*I *965:A I *D sky130_fd_sc_hd__buf_2
+*I *867:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *965:A 0
+2 *867:X 0.000242828
+3 *171:17 0.00195005
+4 *171:11 0.00219288
+5 chany_bottom_out[10] *171:17 0
+6 chany_bottom_out[11] *171:17 0
+7 chany_bottom_out[12] *171:17 0
+8 chany_bottom_out[13] *171:17 0
+9 chany_bottom_out[14] *171:17 0
+10 *846:A *171:11 0
+11 *937:A0 *171:11 0
+12 *937:S *171:11 0
+13 *941:A1 *171:11 0
+14 *947:A *171:17 0
+15 *950:A *171:17 0
+16 *951:A *171:17 0
+17 *952:A *171:17 0
+18 *954:A *171:17 0
+19 *92:8 *171:17 0
+20 *102:23 *171:11 0
+21 *132:7 *171:17 0
+22 *138:48 *171:11 0
+23 *158:10 *171:17 0
+24 *168:17 *171:17 0
+*RES
+1 *867:X *171:11 28.05 
+2 *171:11 *171:17 47.3036 
+3 *171:17 *965:A 9.3 
+*END
+
+*D_NET *172 0.00269064
+*CONN
+*I *966:A I *D sky130_fd_sc_hd__buf_2
+*I *878:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *966:A 0
+2 *878:X 0.00134532
+3 *172:13 0.00134532
+4 *172:13 *979:A 0
+5 *172:13 *981:A 0
+6 *172:13 *185:8 0
+7 *172:13 *194:8 0
+*RES
+1 *878:X *172:13 47.8893 
+2 *172:13 *966:A 9.3 
+*END
+
+*D_NET *173 0.00272138
+*CONN
+*I *967:A I *D sky130_fd_sc_hd__buf_2
+*I *847:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *967:A 0
+2 *847:X 0.00136069
+3 *173:10 0.00136069
+4 *173:10 *175:18 0
+5 *173:10 *186:10 0
+6 *839:A *173:10 0
+7 *859:A *173:10 0
+*RES
+1 *847:X *173:10 48.425 
+2 *173:10 *967:A 9.3 
+*END
+
+*D_NET *174 0.00410547
+*CONN
+*I *968:A I *D sky130_fd_sc_hd__buf_2
+*I *848:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *968:A 0.000655623
+2 *848:X 0.00139711
+3 *174:15 0.00205274
+4 *968:A *970:A 0
+5 *968:A *971:A 0
+6 *968:A *984:A 0
+7 *968:A *180:13 0
+8 *174:15 *928:D 0
+9 *174:15 *974:A 0
+10 *174:15 *975:A 0
+11 chany_top_out[13] *968:A 0
+12 chany_top_out[15] *968:A 0
+13 chany_top_out[16] *968:A 0
+14 chany_top_out[17] *968:A 0
+15 *227:DIODE *174:15 0
+16 *46:8 *174:15 0
+17 *138:14 *174:15 0
+18 *153:24 *174:15 0
+*RES
+1 *848:X *174:15 49.925 
+2 *174:15 *968:A 23.0143 
+*END
+
+*D_NET *175 0.00501375
+*CONN
+*I *969:A I *D sky130_fd_sc_hd__buf_2
+*I *849:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *969:A 0
+2 *849:X 0.000856759
+3 *175:18 0.00165012
+4 *175:15 0.00250688
+5 *175:18 *970:A 0
+6 *175:18 *186:10 0
+7 *175:18 *188:17 0
+8 *846:A *175:15 0
+9 *847:A *175:15 0
+10 *867:A *175:15 0
+11 *931:D *175:15 0
+12 *937:S *175:15 0
+13 *943:S *175:18 0
+14 *117:23 *175:18 0
+15 *139:24 *175:15 0
+16 *139:24 *175:18 0
+17 *141:15 *175:15 0
+18 *147:10 *175:18 0
+19 *153:24 *175:18 0
+20 *167:6 *175:18 0
+21 *173:10 *175:18 0
+*RES
+1 *849:X *175:15 40.925 
+2 *175:15 *175:18 41.9643 
+3 *175:18 *969:A 9.3 
+*END
+
+*D_NET *176 0.00426598
+*CONN
+*I *850:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *921:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *850:A 0
+2 *921:X 0.000360219
+3 *176:15 0.00177277
+4 *176:7 0.00213299
+5 *176:7 *198:9 0
+6 *176:15 *852:A 0
+7 *176:15 *179:32 0
+8 *214:DIODE *176:15 0
+9 *113:15 *176:7 0
+10 *143:10 *176:7 0
+11 *143:10 *176:15 0
+12 *165:17 *176:15 0
+*RES
+1 *921:X *176:7 21.3179 
+2 *176:7 *176:15 44.0714 
+3 *176:15 *850:A 9.3 
+*END
+
+*D_NET *177 0.00518195
+*CONN
+*I *970:A I *D sky130_fd_sc_hd__buf_2
+*I *850:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *970:A 0.00157401
+2 *850:X 0.00101696
+3 *177:21 0.00259097
+4 *970:A *984:A 0
+5 *970:A *191:10 0
+6 *970:A *192:12 0
+7 *177:21 *193:11 0
+8 *865:A *970:A 0
+9 *932:D *970:A 0
+10 *936:A0 *177:21 0
+11 *942:A0 *970:A 0
+12 *968:A *970:A 0
+13 *92:34 *177:21 0
+14 *97:12 *970:A 0
+15 *102:23 *177:21 0
+16 *116:16 *177:21 0
+17 *117:23 *970:A 0
+18 *118:30 *177:21 0
+19 *144:9 *177:21 0
+20 *169:8 *970:A 0
+21 *175:18 *970:A 0
+*RES
+1 *850:X *177:21 25.3901 
+2 *177:21 *970:A 49.3446 
+*END
+
+*D_NET *178 0.00478163
+*CONN
+*I *971:A I *D sky130_fd_sc_hd__buf_2
+*I *851:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *971:A 0.000989531
+2 *851:X 0.00140128
+3 *178:8 0.00239081
+4 *971:A *975:A 0
+5 *971:A *180:13 0
+6 *178:8 *181:22 0
+7 *227:DIODE *971:A 0
+8 *230:DIODE *971:A 0
+9 *234:DIODE *178:8 0
+10 *872:A *178:8 0
+11 *873:A *178:8 0
+12 *907:A *971:A 0
+13 *908:A *971:A 0
+14 *909:A *971:A 0
+15 *911:A *971:A 0
+16 *912:A *971:A 0
+17 *968:A *971:A 0
+18 *60:8 *971:A 0
+19 *133:19 *971:A 0
+20 *138:14 *971:A 0
+21 *141:10 *971:A 0
+22 *142:10 *971:A 0
+23 *144:9 *178:8 0
+*RES
+1 *851:X *178:8 45.5321 
+2 *178:8 *971:A 34.5143 
+*END
+
+*D_NET *179 0.00473187
+*CONN
+*I *972:A I *D sky130_fd_sc_hd__buf_2
+*I *852:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *972:A 0.000939508
+2 *852:X 0.00142643
+3 *179:32 0.00236593
+4 *972:A *974:A 0
+5 *972:A *190:8 0
+6 *179:32 *181:22 0
+7 *858:A *179:32 0
+8 *926:A *972:A 0
+9 *930:CLK *179:32 0
+10 *934:A0 *179:32 0
+11 *934:S *179:32 0
+12 *936:A0 *179:32 0
+13 *936:A1 *179:32 0
+14 *942:A1 *179:32 0
+15 *92:8 *179:32 0
+16 *92:34 *179:32 0
+17 *98:21 *179:32 0
+18 *116:38 *179:32 0
+19 *118:30 *179:32 0
+20 *120:14 *179:32 0
+21 *125:8 *972:A 0
+22 *125:8 *179:32 0
+23 *149:8 *972:A 0
+24 *149:8 *179:32 0
+25 *176:15 *179:32 0
+*RES
+1 *852:X *179:32 45.5589 
+2 *179:32 *972:A 35.1304 
+*END
+
+*D_NET *180 0.00255019
+*CONN
+*I *973:A I *D sky130_fd_sc_hd__buf_2
+*I *853:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *973:A 0
+2 *853:X 0.00127509
+3 *180:13 0.00127509
+4 *180:13 *974:A 0
+5 *180:13 *181:22 0
+6 *847:A *180:13 0
+7 *968:A *180:13 0
+8 *971:A *180:13 0
+*RES
+1 *853:X *180:13 46.6214 
+2 *180:13 *973:A 9.3 
+*END
+
+*D_NET *181 0.00482894
+*CONN
+*I *974:A I *D sky130_fd_sc_hd__buf_2
+*I *854:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *974:A 0.000939508
+2 *854:X 0.00147496
+3 *181:22 0.00241447
+4 *841:A *181:22 0
+5 *871:A *181:22 0
+6 *926:A *974:A 0
+7 *936:A1 *181:22 0
+8 *972:A *974:A 0
+9 *112:21 *181:22 0
+10 *116:38 *181:22 0
+11 *122:20 *181:22 0
+12 *123:26 *181:22 0
+13 *149:8 *974:A 0
+14 *149:8 *181:22 0
+15 *155:7 *181:22 0
+16 *160:7 *181:22 0
+17 *174:15 *974:A 0
+18 *178:8 *181:22 0
+19 *179:32 *181:22 0
+20 *180:13 *974:A 0
+21 *180:13 *181:22 0
+*RES
+1 *854:X *181:22 45.8268 
+2 *181:22 *974:A 35.1304 
+*END
+
+*D_NET *182 0.00495943
+*CONN
+*I *975:A I *D sky130_fd_sc_hd__buf_2
+*I *855:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *975:A 0.000991201
+2 *855:X 0.00148851
+3 *182:8 0.00247971
+4 *975:A *976:A 0
+5 *182:8 *183:6 0
+6 *216:DIODE *182:8 0
+7 *227:DIODE *975:A 0
+8 *876:A *182:8 0
+9 *971:A *975:A 0
+10 *46:8 *975:A 0
+11 *47:5 *182:8 0
+12 *65:12 *182:8 0
+13 *126:11 *975:A 0
+14 *126:22 *975:A 0
+15 *127:13 *182:8 0
+16 *128:14 *182:8 0
+17 *128:21 *182:8 0
+18 *129:13 *182:8 0
+19 *174:15 *975:A 0
+*RES
+1 *855:X *182:8 47.55 
+2 *182:8 *975:A 43.6929 
+*END
+
+*D_NET *183 0.00488194
+*CONN
+*I *976:A I *D sky130_fd_sc_hd__buf_2
+*I *856:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *976:A 0.000964677
+2 *856:X 0.00147629
+3 *183:6 0.00244097
+4 *218:DIODE *183:6 0
+5 *975:A *976:A 0
+6 *46:8 *976:A 0
+7 *48:8 *183:6 0
+8 *49:5 *183:6 0
+9 *57:7 *976:A 0
+10 *92:34 *183:6 0
+11 *126:11 *183:6 0
+12 *128:14 *183:6 0
+13 *129:13 *183:6 0
+14 *130:11 *976:A 0
+15 *182:8 *183:6 0
+*RES
+1 *856:X *183:6 47.3179 
+2 *183:6 *976:A 43.1393 
+*END
+
+*D_NET *184 0.00437041
+*CONN
+*I *977:A I *D sky130_fd_sc_hd__buf_2
+*I *838:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *977:A 0.0015298
+2 *838:X 0.00065541
+3 *184:7 0.00218521
+4 *977:A *185:8 0
+5 *184:7 *927:TE_B 0
+6 gfpga_pad_EMBEDDED_IO_HD_SOC_OUT *977:A 0
+7 *211:DIODE *977:A 0
+8 *927:A *184:7 0
+9 *4:10 *977:A 0
+10 *110:11 *977:A 0
+*RES
+1 *838:X *184:7 27.4786 
+2 *184:7 *977:A 48.5321 
+*END
+
+*D_NET *185 0.00299697
+*CONN
+*I *978:A I *D sky130_fd_sc_hd__buf_2
+*I *839:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *978:A 0
+2 *839:X 0.00149849
+3 *185:8 0.00149849
+4 *977:A *185:8 0
+5 *172:13 *185:8 0
+*RES
+1 *839:X *185:8 46.8 
+2 *185:8 *978:A 13.8 
+*END
+
+*D_NET *186 0.00385948
+*CONN
+*I *979:A I *D sky130_fd_sc_hd__buf_2
+*I *840:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *979:A 0.000715611
+2 *840:X 0.00121413
+3 *186:10 0.00192974
+4 *979:A *982:A 0
+5 *979:A *983:A 0
+6 *979:A *188:17 0
+7 *979:A *193:17 0
+8 *186:10 *188:17 0
+9 *186:10 *189:9 0
+10 chany_top_out[6] *979:A 0
+11 *859:A *186:10 0
+12 *943:S *186:10 0
+13 *137:11 *979:A 0
+14 *172:13 *979:A 0
+15 *173:10 *186:10 0
+16 *175:18 *186:10 0
+*RES
+1 *840:X *186:10 45.7821 
+2 *186:10 *979:A 33.4429 
+*END
+
+*D_NET *187 0.00425337
+*CONN
+*I *851:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *922:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *851:A 0.000576324
+2 *922:X 0.00155036
+3 *187:8 0.00212669
+4 *851:A *852:A 0
+5 *241:DIODE *187:8 0
+6 *242:DIODE *187:8 0
+7 *855:A *187:8 0
+8 *856:A *187:8 0
+9 *922:A *187:8 0
+10 *9:5 *187:8 0
+11 *10:9 *187:8 0
+12 *112:21 *851:A 0
+13 *157:8 *851:A 0
+14 *160:10 *851:A 0
+*RES
+1 *922:X *187:8 48.7821 
+2 *187:8 *851:A 34.9607 
+*END
+
+*D_NET *188 0.00282966
+*CONN
+*I *980:A I *D sky130_fd_sc_hd__buf_2
+*I *841:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *980:A 0
+2 *841:X 0.00141483
+3 *188:17 0.00141483
+4 *188:17 *983:A 0
+5 *188:17 *984:A 0
+6 *188:17 *193:17 0
+7 *878:A *188:17 0
+8 *979:A *188:17 0
+9 *175:18 *188:17 0
+10 *186:10 *188:17 0
+*RES
+1 *841:X *188:17 49.3714 
+2 *188:17 *980:A 9.3 
+*END
+
+*D_NET *189 0.00362736
+*CONN
+*I *981:A I *D sky130_fd_sc_hd__buf_2
+*I *842:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *981:A 0.00127549
+2 *842:X 0.000538189
+3 *189:9 0.00181368
+4 *981:A *193:17 0
+5 *981:A *194:8 0
+6 chany_top_out[6] *981:A 0
+7 *925:TE_B *189:9 0
+8 *929:CLK *981:A 0
+9 *117:23 *189:9 0
+10 *121:17 *981:A 0
+11 *153:24 *189:9 0
+12 *168:7 *189:9 0
+13 *170:22 *981:A 0
+14 *172:13 *981:A 0
+15 *186:10 *189:9 0
+*RES
+1 *842:X *189:9 25.0321 
+2 *189:9 *981:A 42.7643 
+*END
+
+*D_NET *190 0.0031664
+*CONN
+*I *982:A I *D sky130_fd_sc_hd__buf_2
+*I *843:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *982:A 0.00065541
+2 *843:X 0.000927788
+3 *190:8 0.0015832
+4 *878:A *190:8 0
+5 *972:A *190:8 0
+6 *979:A *982:A 0
+7 *125:8 *190:8 0
+8 *137:11 *982:A 0
+*RES
+1 *843:X *190:8 39.3714 
+2 *190:8 *982:A 22.9786 
+*END
+
+*D_NET *191 0.00361638
+*CONN
+*I *983:A I *D sky130_fd_sc_hd__buf_2
+*I *844:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *983:A 0.000484555
+2 *844:X 0.00132363
+3 *191:10 0.00180819
+4 *983:A *984:A 0
+5 *983:A *193:17 0
+6 *191:10 *192:12 0
+7 chany_top_out[6] *983:A 0
+8 *943:S *191:10 0
+9 *970:A *191:10 0
+10 *979:A *983:A 0
+11 *97:12 *191:10 0
+12 *188:17 *983:A 0
+*RES
+1 *844:X *191:10 47.8714 
+2 *191:10 *983:A 28.4964 
+*END
+
+*D_NET *192 0.00361623
+*CONN
+*I *984:A I *D sky130_fd_sc_hd__buf_2
+*I *845:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *984:A 0.000438508
+2 *845:X 0.00136961
+3 *192:12 0.00180811
+4 *943:S *192:12 0
+5 *968:A *984:A 0
+6 *970:A *984:A 0
+7 *970:A *192:12 0
+8 *983:A *984:A 0
+9 *188:17 *984:A 0
+10 *191:10 *192:12 0
+*RES
+1 *845:X *192:12 48.8179 
+2 *192:12 *984:A 18.5143 
+*END
+
+*D_NET *193 0.00524261
+*CONN
+*I *985:A I *D sky130_fd_sc_hd__buf_2
+*I *846:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *985:A 0
+2 *846:X 0.000947305
+3 *193:17 0.001674
+4 *193:11 0.00262131
+5 chany_top_out[6] *193:17 0
+6 *859:A *193:17 0
+7 *926:B_N *193:17 0
+8 *929:CLK *193:17 0
+9 *931:D *193:11 0
+10 *979:A *193:17 0
+11 *981:A *193:17 0
+12 *983:A *193:17 0
+13 *92:8 *193:11 0
+14 *121:17 *193:17 0
+15 *168:17 *193:17 0
+16 *170:22 *193:17 0
+17 *177:21 *193:11 0
+18 *188:17 *193:17 0
+*RES
+1 *846:X *193:11 25.5605 
+2 *193:11 *193:17 42.2054 
+3 *193:17 *985:A 9.3 
+*END
+
+*D_NET *194 0.00365467
+*CONN
+*I *924:A I *D sky130_fd_sc_hd__inv_1
+*I *927:TE_B I *D sky130_fd_sc_hd__ebufn_8
+*I *986:A I *D sky130_fd_sc_hd__buf_2
+*I *926:X O *D sky130_fd_sc_hd__or2b_2
+*CAP
+1 *924:A 1.1337e-05
+2 *927:TE_B 0.000104386
+3 *986:A 0.00063235
+4 *926:X 0.000876025
+5 *194:10 0.000939976
+6 *194:8 0.0010906
+7 *927:A *927:TE_B 0
+8 *981:A *194:8 0
+9 *148:8 *986:A 0
+10 *162:17 *986:A 0
+11 *162:17 *194:10 0
+12 *170:22 *194:8 0
+13 *170:22 *194:10 0
+14 *172:13 *194:8 0
+15 *184:7 *927:TE_B 0
+*RES
+1 *926:X *194:8 33.2464 
+2 *194:8 *194:10 4.67857 
+3 *194:10 *986:A 27.425 
+4 *194:10 *927:TE_B 15.9786 
+5 *194:8 *924:A 14.0366 
+*END
+
+*D_NET *195 0.00147896
+*CONN
+*I *987:A I *D sky130_fd_sc_hd__buf_2
+*I *944:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *987:A 0.000739478
+2 *944:X 0.000739478
+3 *150:13 *987:A 0
+*RES
+1 *944:X *987:A 43.7607 
+*END
+
+*D_NET *196 0.00210081
+*CONN
+*I *988:A I *D sky130_fd_sc_hd__buf_2
+*I *857:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *988:A 0
+2 *857:X 0.0010504
+3 *196:13 0.0010504
+4 *221:DIODE *196:13 0
+5 *223:DIODE *196:13 0
+6 *903:A *196:13 0
+7 *945:A *196:13 0
+8 *54:12 *196:13 0
+9 *55:16 *196:13 0
+10 *131:8 *196:13 0
+11 *133:19 *196:13 0
+12 *135:8 *196:13 0
+*RES
+1 *857:X *196:13 41.7286 
+2 *196:13 *988:A 9.3 
+*END
+
+*D_NET *197 0.000248132
+*CONN
+*I *939:A0 I *D sky130_fd_sc_hd__mux2_1
+*I *940:HI O *D sky130_fd_sc_hd__conb_1
+*CAP
+1 *939:A0 0.000124066
+2 *940:HI 0.000124066
+3 *866:A *939:A0 0
+4 *96:44 *939:A0 0
+*RES
+1 *940:HI *939:A0 21.1893 
+*END
+
+*D_NET *198 0.00431348
+*CONN
+*I *852:A I *D sky130_fd_sc_hd__clkbuf_1
+*I *923:X O *D sky130_fd_sc_hd__clkbuf_1
+*CAP
+1 *852:A 0.00159887
+2 *923:X 0.000557868
+3 *198:9 0.00215674
+4 *213:DIODE *852:A 0
+5 *214:DIODE *852:A 0
+6 *851:A *852:A 0
+7 *893:A *198:9 0
+8 *894:A *198:9 0
+9 *913:A *198:9 0
+10 *919:A *198:9 0
+11 *920:A *198:9 0
+12 *922:A *198:9 0
+13 *113:15 *198:9 0
+14 *159:8 *852:A 0
+15 *165:11 *198:9 0
+16 *176:7 *198:9 0
+17 *176:15 *852:A 0
+*RES
+1 *923:X *198:9 25.4429 
+2 *198:9 *852:A 49.7286 
+*END
+
+*D_NET *199 0.000398924
+*CONN
+*I *928:D I *D sky130_fd_sc_hd__dfxtp_1
+*I *879:X O *D sky130_fd_sc_hd__dlygate4sd3_1
+*CAP
+1 *928:D 0.000199462
+2 *879:X 0.000199462
+3 *841:A *928:D 0
+4 *138:14 *928:D 0
+5 *153:24 *928:D 0
+6 *174:15 *928:D 0
+*RES
+1 *879:X *928:D 32.0687 
+*END

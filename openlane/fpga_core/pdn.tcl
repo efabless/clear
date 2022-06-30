@@ -1,35 +1,55 @@
-# Power nets
-set ::power_nets $::env(VDD_PIN)
-set ::ground_nets $::env(GND_PIN)
-
-set ::macro_blockage_layer_list "li1 met1 met2 met3 met4 met5"
-
-pdngen::specify_grid stdcell {
-    name grid
-    straps {
-	    met5 {width $::env(_WIDTH) pitch $::env(FP_PDN_HPITCH) offset $::env(FP_PDN_HOFFSET)}
-    }
-    core_ring {
-			met5 {width $::env(_WIDTH) spacing $::env(_SPACING) core_offset $::env(_H_OFFSET)}
-			met4 {width $::env(_WIDTH) spacing $::env(_SPACING) core_offset $::env(_V_OFFSET)}
-	}
-    connect {{met4 met5}}
+foreach power_pin $::env(STD_CELL_POWER_PINS) {
+    add_global_connection \
+        -net $::env(VDD_NET) \
+        -inst_pattern .* \
+        -pin_pattern $power_pin \
+        -power
+}
+foreach ground_pin $::env(STD_CELL_GROUND_PINS) {
+    add_global_connection \
+        -net $::env(GND_NET) \
+        -inst_pattern .* \
+        -pin_pattern $ground_pin \
+        -ground
 }
 
-pdngen::specify_grid macro {
-    orient {R0 R180 MX MY R90 R270 MXR90 MYR90}
-    power_pins "VPWR"
-    ground_pins "VGND"
-    blockages "li1 met1 met2 met3 met4"
-    straps { 
-    } 
-    connect {{met4_PIN_ver met5}}
-}
 
-# POWER or GROUND #Std. cell rails starting with power or ground rails at the bottom of the core area
-set ::rails_start_with "POWER" ;
+set_voltage_domain -name CORE -power $::env(VDD_NET) -ground $::env(GND_NET)
 
-# POWER or GROUND #Upper metal stripes starting with power or ground rails at the left/bottom of the core area
-set ::stripes_start_with "POWER" ;
+define_pdn_grid \
+        -name stdcell_grid \
+        -starts_with POWER \
+        -voltage_domain CORE \
+        -pins "met4 met5"
 
-set ::halo 0
+add_pdn_stripe \
+    -grid stdcell_grid \
+    -layer met5 \
+    -width $::env(_WIDTH) \
+    -pitch $::env(FP_PDN_HPITCH) \
+    -offset $::env(FP_PDN_HOFFSET) \
+    -starts_with POWER -extend_to_core_ring
+
+add_pdn_connect \
+    -grid stdcell_grid \
+    -layers "met4 met5"
+
+add_pdn_ring \
+        -grid stdcell_grid \
+        -layers "met4 met5" \
+        -widths "$::env(_WIDTH) $::env(_WIDTH)" \
+        -spacings "$::env(_SPACING) $::env(_SPACING)" \
+        -core_offset "$::env(_V_OFFSET) $::env(_H_OFFSET)"
+
+define_pdn_grid \
+    -macro \
+    -default \
+    -name macro \
+    -starts_with POWER \
+    -halo "0 0"
+
+add_pdn_connect \
+    -grid macro \
+    -layers "met4 met5"
+
+
