@@ -165,13 +165,15 @@ module user_project_wrapper #(
     // assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[15:10] = io_in[7:2];
     // disconnect io_in[3]
     assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[10] = io_in[2];
+    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[11] = io_in[30];
+    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[91] = io_in[3];
     assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[15:12] = io_in[7:4];
-    // assign io_out[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:10];
-    assign io_out[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[10];
-    assign io_out[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:12];
-    // assign io_oeb[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:10];
-    assign io_oeb[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[10];
-    assign io_oeb[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:12];
+    assign io_out[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:10];
+    // assign io_out[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[10];
+    // assign io_out[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:12];
+    assign io_oeb[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:10];
+    // assign io_oeb[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[10];
+    // assign io_oeb[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:12];
 
     // IO_ISOL_N -- Input
     assign io_isol_n = io_in[1];
@@ -211,7 +213,9 @@ module user_project_wrapper #(
     assign io_oeb[35] = 1'b0;
 
     // SOC-IN - Bidirectional
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[95:88] = io_in[34:27];
+    // assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[95:88] = io_in[34:27];
+    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[90:88] = io_in[29:27];
+    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[95:92] = io_in[34:31];
     assign io_out[34:27] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[95:88];
     assign io_oeb[34:27] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[95:88];
 
