@@ -31,12 +31,12 @@
 `define POWER_UP_TIME_PERIOD 100
 `define SOC_RESET_TIME_PERIOD 2000
 `define SOC_SETUP_TIME_PERIOD 1000*2001
-`define SOC_CLOCK_PERIOD 20
-`define FPGA_PROG_CLOCK_PERIOD 20
-`define FPGA_CLOCK_PERIOD 20
+`define SOC_CLOCK_PERIOD 6.5
+`define FPGA_PROG_CLOCK_PERIOD 6.5
+`define FPGA_CLOCK_PERIOD 6.5
 
 // Design parameter for FPGA bitstream sizes
-`define FPGA_BITSTREAM_SIZE 39647
+`define FPGA_BITSTREAM_SIZE 29999
 
 module and2_test;
 reg clock;
@@ -513,7 +513,8 @@ endtask
         $sdf_annotate("../../../sdf/sb_2__1_.sdf", uut.mprj.fpga_core_uut.sb_8__7_) ;
         $sdf_annotate("../../../sdf/sb_2__2_.sdf", uut.mprj.fpga_core_uut.sb_8__8_) ;
         $sdf_annotate("../../../sdf/tie_array.sdf", uut.mprj.fpga_core_uut.tie_array) ;
-		$sdf_annotate("../../../sdf/user_project_wrapper.sdf", uut.mprj) ;
+		$sdf_annotate("../../../sdf/fpga_core.sdf", uut.mprj.fpga_core_uut) ;
+		// $sdf_annotate("../../../sdf/user_project_wrapper.sdf", uut.mprj) ;
         $sdf_annotate("../../../mgmt_core_wrapper/sdf/DFFRAM.sdf", uut.soc.DFFRAM_0) ;
 		$sdf_annotate("../../../mgmt_core_wrapper/sdf/mgmt_core.sdf", uut.soc.core) ;
 		$sdf_annotate("../../../caravel/sdf/housekeeping.sdf", uut.housekeeping) ;

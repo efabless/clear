@@ -35,15 +35,15 @@ output [0:3] mem_out;
 // ----- END Local short connections -----
 // ----- BEGIN Local output short connections -----
 	assign ccff_tail[0] = mem_out[3];
-	wire delayed_ccff_head = ccff_head[0];
+	// wire delayed_ccff_head = ccff_head[0];
 // ----- END Local output short connections -----
 
-	sky130_fd_sc_hd__buf_8
-	delay_buf
-	(
-		.A(ccff_head[0]),
-		.X(delayed_ccff_head)
-	);
+	// sky130_fd_sc_hd__buf_8
+	// delay_buf
+	// (
+	// 	.A(ccff_head[0]),
+	// 	.X(delayed_ccff_head)
+	// );
 
 	sky130_fd_sc_hd__dfxtp_1 sky130_fd_sc_hd__dfxtp_1_0_ (
 		.CLK(prog_clk[0]),
@@ -391,19 +391,11 @@ output [0:2] mem_out;
 // ----- END Local short connections -----
 // ----- BEGIN Local output short connections -----
 	assign ccff_tail[0] = mem_out[2];
-	wire delayed_ccff_head = ccff_head[0];
-	// ----- END Local output short connections -----
-
-	sky130_fd_sc_hd__buf_8
-	delay_buf_2
-	(
-		.A(ccff_head[0]),
-		.X(delayed_ccff_head)
-	);
+// ----- END Local output short connections -----
 
 	sky130_fd_sc_hd__dfxtp_1 sky130_fd_sc_hd__dfxtp_1_0_ (
 		.CLK(prog_clk[0]),
-		.D(delayed_ccff_head),
+		.D(ccff_head[0]),
 		.Q(mem_out[0]));
 
 	sky130_fd_sc_hd__dfxtp_1 sky130_fd_sc_hd__dfxtp_1_1_ (

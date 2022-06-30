@@ -51,6 +51,7 @@
  *
  * - Configure FPGA data I/Os to be input
 */
+int dummy[] = {1,2,3,1,2,3,5,6,6,33,11,33,44,11,68,94,664,1,34,6};
 void main() {
   /* 
   IO Control Registers
