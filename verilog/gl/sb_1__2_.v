@@ -553,6 +553,7 @@ module sb_1__2_ (SC_IN_BOT,
  wire net97;
  wire net98;
  wire net99;
+ wire delayed_net10;
 
  sky130_fd_sc_hd__diode_2 ANTENNA__060__A (.DIODE(net43),
     .VGND(VGND),
@@ -8210,8 +8211,14 @@ module sb_1__2_ (SC_IN_BOT,
     .VPB(VPWR),
     .VPWR(VPWR),
     .Q(\mem_left_track_17.ccff_head ));
+ sky130_fd_sc_hd__buf_2 delay_buf (.A(net10),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(delayed_net10));
  sky130_fd_sc_hd__dfxtp_1 \mem_right_track_0.sky130_fd_sc_hd__dfxtp_1_0_  (.CLK(\mem_bottom_track_1.prog_clk ),
-    .D(net10),
+    .D(delayed_net10),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
