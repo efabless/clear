@@ -20,15 +20,14 @@ PRECHECK_ROOT?=${HOME}/mpw_precheck
 MCW_ROOT?=$(PWD)/mgmt_core_wrapper
 SIM?=RTL
 
-export SKYWATER_COMMIT=c094b6e83a4f9298e47f696ec5a7fd53535ec5eb
+export SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 export OPEN_PDKS_COMMIT=41c0908b47130d5675ff8484255b43f66463a7d6
-export PDK_MAGIC_COMMIT=7d601628e4e05fd17fcb80c3552dacb64e9f6e7b
-export OPENLANE_TAG=2022.06.24_01.37.58
+export OPENLANE_TAG?=2022.06.24_01.37.58
 
 # Install lite version of caravel, (1): caravel-lite, (0): caravel
 CARAVEL_LITE?=0
 
-MPW_TAG ?= main
+MPW_TAG ?= main 
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -57,10 +56,10 @@ install:
 # Install DV setup
 .PHONY: simenv
 simenv:
-	docker pull efabless/dv_setup:latest
+	docker pull efabless/dv:latest
 
 .PHONY: setup
-setup: install check-env install_mcw pdk openlane
+setup: install check-env install_mcw openlane pdk-with-volare
 
 # Openlane
 blocks=$(shell cd openlane && find * -maxdepth 0 -type d)
@@ -210,4 +209,4 @@ help:
 	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 
-
+include timing.mk

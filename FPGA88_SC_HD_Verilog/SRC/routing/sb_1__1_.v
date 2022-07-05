@@ -226,6 +226,7 @@ module sb_1__1_
   assign chanx_right_out[18] = chanx_left_in[17];
   assign chanx_right_out[19] = chanx_left_in[18];
   assign prog_clk  = prog_clk_0;
+  wire ccff_head_delayed;
   // assign prog_clk_1_N_in = prog_clk_1_S_in;
 
   // assign prog_clk_2_N_in = prog_clk_2_W_in;
@@ -326,12 +327,18 @@ module sb_1__1_
     .out(chanx_left_out[1])
   );
 
+  sky130_fd_sc_hd__buf_16
+  delay_buf
+  (
+    .A(ccff_head[0]),
+    .X(ccff_head_delayed)
+  );
 
   mux_tree_tapbuf_size12_mem
   mem_top_track_0
   (
     .prog_clk(prog_clk[0]),
-    .ccff_head(ccff_head[0]),
+    .ccff_head(ccff_head_delayed),
     .ccff_tail(mux_tree_tapbuf_size12_mem_0_ccff_tail[0]),
     .mem_out(mux_tree_tapbuf_size12_0_sram[0:3])
   );

@@ -22,10 +22,13 @@ set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 set ::env(PL_BASIC_PLACEMENT) 0
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 $cby_x $cby_y"
-set ::env(PL_TARGET_DENSITY) 0.64
+set ::env(PL_TARGET_DENSITY) 0.65
 set ::env(CELL_PAD) 0
 set ::env(CLOCK_TREE_SYNTH) 0
 set ::env(RT_MAX_LAYER) "met4"
+set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 0
+set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
+set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin.cfg
 
