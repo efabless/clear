@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1656516895
+timestamp 1657008807
 << obsli1 >>
 rect 16140 21123 492932 574005
 << obsm1 >>
-rect 7258 5740 501822 574036
+rect 7258 5196 501822 574036
 << metal2 >>
 rect 15266 576164 15322 576964
 rect 33666 576164 33722 576964
@@ -1650,8 +1650,8 @@ port 298 nsew signal output
 string FIXED_BBOX 0 0 508988 580760
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 39219262
+string GDS_END 36449988
 string GDS_FILE /home/marwan/clear_signoff_final/openlane/fpga_core/runs/fpga_core/results/signoff/fpga_core.magic.gds
-string GDS_START 21781732
+string GDS_START 18915370
 << end >>
 

@@ -31,12 +31,12 @@
 `define POWER_UP_TIME_PERIOD 100
 `define SOC_RESET_TIME_PERIOD 2000
 `define SOC_SETUP_TIME_PERIOD 1000*2001
-`define SOC_CLOCK_PERIOD 6.5
-`define FPGA_PROG_CLOCK_PERIOD 6.5
-`define FPGA_CLOCK_PERIOD 6.5
+`define SOC_CLOCK_PERIOD 12.5
+`define FPGA_PROG_CLOCK_PERIOD 12.5
+`define FPGA_CLOCK_PERIOD 12.5
 
 // Design parameter for FPGA bitstream sizes
-`define FPGA_BITSTREAM_SIZE 29999
+`define FPGA_BITSTREAM_SIZE 49999
 
 module and2_test;
 reg clock;

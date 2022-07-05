@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Thu Jun 30 07:41:46 2022
+# Mon Jul  4 14:03:38 2022
 ###############################################################################
 current_design sb_1__2_
 ###############################################################################
@@ -9,7 +9,6 @@ current_design sb_1__2_
 create_clock -name prog_clk_0_S_in -period 10.0000 [get_ports {prog_clk_0_S_in}]
 set_clock_transition 0.1500 [get_clocks {prog_clk_0_S_in}]
 set_clock_uncertainty 0.2500 prog_clk_0_S_in
-set_propagated_clock [get_clocks {prog_clk_0_S_in}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_S_in}] -add_delay [get_ports {SC_IN_BOT}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_S_in}] -add_delay [get_ports {bottom_left_grid_pin_42_}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_S_in}] -add_delay [get_ports {bottom_left_grid_pin_43_}]

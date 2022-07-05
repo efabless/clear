@@ -20,10 +20,13 @@ set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 # Floorplan & Placement
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 $clb_x $clb_y"
-set ::env(PL_TARGET_DENSITY) 0.86
+set ::env(PL_TARGET_DENSITY) 0.92
 set ::env(CELL_PAD) 0
 set ::env(CLOCK_TREE_SYNTH) 0
 set ::env(RT_MAX_LAYER) "met4"
+# set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 0
+# set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
+# set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin.cfg
 

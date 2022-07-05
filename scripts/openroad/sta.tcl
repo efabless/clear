@@ -8,16 +8,19 @@ foreach liberty $libs {
     read_liberty $liberty
 }
 
-foreach verilog $verilogs {
-    read_verilog $verilog
-}
+# foreach verilog $verilogs {
+#     read_verilog $verilog
+#     puts "read_verilog $verilog"
+# }
 
+read_verilog $::env(CUP_ROOT)/verilog/gl/fpga_core.v
 link_design $block
 
 puts "read_spef $spef"
 read_spef $spef
 # read_sdc $sdc
 write_sdf $sdf -divider . -include_typ
+exit 0
 puts "block: $block"
 puts "spef: $spef"
 puts "def: $def"

@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Sun Jun 26 12:52:35 2022
+# Mon Jul  4 13:55:58 2022
 ###############################################################################
 current_design cby_1__1_
 ###############################################################################
@@ -9,7 +9,6 @@ current_design cby_1__1_
 create_clock -name prog_clk_0_W_in -period 10.0000 [get_ports {prog_clk_0_W_in}]
 set_clock_transition 0.1500 [get_clocks {prog_clk_0_W_in}]
 set_clock_uncertainty 0.2500 prog_clk_0_W_in
-set_propagated_clock [get_clocks {prog_clk_0_W_in}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_W_in}] -add_delay [get_ports {Test_en_E_in}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_W_in}] -add_delay [get_ports {Test_en_S_in}]
 set_input_delay 2.0000 -clock [get_clocks {prog_clk_0_W_in}] -add_delay [get_ports {Test_en_W_in}]

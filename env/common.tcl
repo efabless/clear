@@ -75,7 +75,6 @@ if { $::env(CUP_ROOT) != $::env(CARAVEL_ROOT) } {
 set verilog_exceptions [list \
     "$::env(CARAVEL_ROOT)/verilog/gl/__user_analog_project_wrapper.v" \
     "$::env(CARAVEL_ROOT)/verilog/gl/__user_project_wrapper.v" \
-    "$::env(TIMING_ROOT)/verilog/gl/fpga_core.v" \
 ]
 
 foreach verilog_exception $verilog_exceptions {

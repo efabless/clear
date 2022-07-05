@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1656242849
+timestamp 1656942747
 << obsli1 >>
 rect 1104 2159 21896 20689
 << obsm1 >>
-rect 198 1912 22802 21004
+rect 198 1980 22802 21004
 << metal2 >>
 rect 202 22200 258 23000
 rect 662 22200 718 23000
@@ -368,11 +368,11 @@ rect 16538 2128 16858 20720
 rect 19137 2128 19457 20720
 rect 21736 2128 22056 20720
 << obsm4 >>
-rect 2451 2347 3463 19549
-rect 3943 2347 6062 19549
-rect 6542 2347 8661 19549
-rect 9141 2347 11260 19549
-rect 11740 2347 12269 19549
+rect 2819 2483 3463 19685
+rect 3943 2483 6062 19685
+rect 6542 2483 8661 19685
+rect 9141 2483 11260 19685
+rect 11740 2483 12085 19685
 << labels >>
 rlabel metal4 s 6142 2128 6462 20720 6 VGND
 port 1 nsew ground bidirectional
@@ -692,8 +692,8 @@ port 151 nsew signal input
 string FIXED_BBOX 0 0 23000 23000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 1760396
+string GDS_END 1555434
 string GDS_FILE /home/marwan/clear_signoff_final/openlane/sb_2__1_/runs/sb_2__1_/results/signoff/sb_2__1_.magic.gds
-string GDS_START 94420
+string GDS_START 65026
 << end >>
 

@@ -13,7 +13,7 @@ set ::env(VERILOG_FILES) "$script_dir/../../FPGA88_SC_HD_Verilog/SRC/routing/sb_
                           $script_dir/../../FPGA88_SC_HD_Verilog/SRC/sub_module/local_encoder.v \ 
                           $script_dir/../../FPGA88_SC_HD_Verilog/SRC/sub_module/arch_encoder.v"
 
-set ::env(CLOCK_PERIOD) "5"
+set ::env(CLOCK_PERIOD) "10"
 set ::env(CLOCK_PORT) "prog_clk_0_E_in"
 set ::env(CLOCK_NET) "mem_bottom_track_1.prog_clk"
 
@@ -27,6 +27,9 @@ set ::env(PL_TARGET_DENSITY) 0.6
 set ::env(CELL_PAD) 2
 set ::env(CLOCK_TREE_SYNTH) 0
 set ::env(RT_MAX_LAYER) "met4"
+set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 0
+set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
+set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin.cfg
 
