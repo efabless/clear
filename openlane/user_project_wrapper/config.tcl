@@ -1,6 +1,6 @@
-source $::env(CARAVEL_ROOT)/openlane/user_project_wrapper/fixed_wrapper_cfgs.tcl
-
 set script_dir [file dirname [file normalize [info script]]]
+
+source $script_dir/fixed_wrapper_cfgs.tcl
 
 set ::env(DESIGN_NAME) user_project_wrapper
 
@@ -64,6 +64,7 @@ set ::env(FP_PDN_IRDROP) 0
 set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
 set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
 set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
+set ::env(FP_DEF_TEMPLATE) $::env(CARAVEL_ROOT)/def/user_project_wrapper.def
 
 
 set ::env(QUIT_ON_MAGIC_DRC) 0
