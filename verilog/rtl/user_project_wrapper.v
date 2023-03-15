@@ -85,8 +85,8 @@ module user_project_wrapper #(
 
         Caravel IO                  | FPGA                 |  Mode
 
-        io_in[0]                    | test_en              | Input
-        io_in[1]                    | IO_ISOL_N            | Input
+        io_in[0]                    | test_enable          | Input
+        io_in[1]                    | isol_n               | Input
         io_in[2]                    | prog_reset           | Input
         io_in[3]                    | reset                | Input
         io_in[12]                   | ccff_head            | Input  
@@ -100,35 +100,35 @@ module user_project_wrapper #(
     */
     // FPGA wires
     wire prog_clk;
-    wire Test_en;
-    wire io_isol_n;
+    wire test_enable;
+    wire isol_n;
     wire clk;
-    wire [127:0] gfpga_pad_EMBEDDED_IO_HD_SOC_IN;
-    wire [127:0] gfpga_pad_EMBEDDED_IO_HD_SOC_OUT;
-    wire [127:0] gfpga_pad_EMBEDDED_IO_HD_SOC_DIR;
+    wire [127:0] gfpga_pad_io_soc_in;
+    wire [127:0] gfpga_pad_io_soc_out;
+    wire [127:0] gfpga_pad_io_soc_dir;
     wire ccff_head;
     wire ccff_tail;
     wire prog_reset;
     wire reset;
     
     // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[44:43] = io_in[14:13];
-    assign io_out[14:13] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[44:43];
-    assign io_oeb[14:13] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[44:43];
+    assign gfpga_pad_io_soc_in[44:43] = io_in[14:13];
+    assign io_out[14:13] = gfpga_pad_io_soc_out[44:43];
+    assign io_oeb[14:13] = gfpga_pad_io_soc_dir[44:43];
 
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[42:36] = io_in[11:4];
-    assign io_out[11:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[42:36];
-    assign io_oeb[11:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[42:36];
+    assign gfpga_pad_io_soc_in[42:36] = io_in[11:4];
+    assign io_out[11:4] = gfpga_pad_io_soc_out[42:36];
+    assign io_oeb[11:4] = gfpga_pad_io_soc_dir[42:36];
 
     // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[123:113] = io_in[34:24];
-    assign io_out[34:24] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[123:113];
-    assign io_oeb[34:24] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[123:113];
+    assign gfpga_pad_io_soc_in[123:113] = io_in[34:24];
+    assign io_out[34:24] = gfpga_pad_io_soc_out[123:113];
+    assign io_oeb[34:24] = gfpga_pad_io_soc_dir[123:113];
     
     // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[20:12] = io_in[23:15];
-    assign io_out[23:15] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[20:12];
-    assign io_oeb[23:15] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[20:12];
+    assign gfpga_pad_io_soc_in[20:12] = io_in[23:15];
+    assign io_out[23:15] = gfpga_pad_io_soc_out[20:12];
+    assign io_oeb[23:15] = gfpga_pad_io_soc_dir[20:12];
 
     // CCFF_HEAD - Input
     assign ccff_head = io_in[12];
@@ -144,13 +144,13 @@ module user_project_wrapper #(
     assign io_out[3] = 1'b0;
     assign io_oeb[3] = 1'b1;
 
-    // IO_ISOL_N -- Input
-    assign io_isol_n = io_in[1];
+    // isol_n -- Input
+    assign isol_n = io_in[1];
     assign io_out[1] = 1'b0;
     assign io_oeb[1] = 1'b1;
 
-    // Test_en -- Input
-    assign Test_en = io_in[0];
+    // test_enable -- Input
+    assign test_enable = io_in[0];
     assign io_out[0] = 1'b0;
     assign io_oeb[0] = 1'b1;
 
@@ -159,8 +159,8 @@ module user_project_wrapper #(
     generate 
         genvar i;
         for(i=0; i<=67; i=i+1) begin
-            assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[45+i] = la_data_in[127-i];
-            assign la_data_out[127-i] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[45+i];
+            assign gfpga_pad_io_soc_in[45+i] = la_data_in[127-i];
+            assign la_data_out[127-i] = gfpga_pad_io_soc_out[45+i];
         end
     endgenerate
     
@@ -181,22 +181,17 @@ module user_project_wrapper #(
     assign io_out[35] = ccff_tail;
     assign io_oeb[35] = 1'b0;
 
-    // SC-HEAD -- Input
-    assign sc_head = io_in[26];
-    assign io_out[26] = 1'b0;
-    assign io_oeb[26] = 1'b1;
-
-    fpga_core fpga_core_uut(.prog_clk(prog_clk),
-        .Test_en(Test_en),
+    fpga_top fpga_top_uut(.prog_clk(prog_clk),
+        .test_enable(test_enable),
         .clk(clk),
-        .IO_ISOL_N(io_isol_n),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_IN(gfpga_pad_EMBEDDED_IO_HD_SOC_IN),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR),
+        .isol_n(isol_n),
+        .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in),
+        .gfpga_pad_io_soc_out(gfpga_pad_io_soc_out),
+        .gfpga_pad_io_soc_dir(gfpga_pad_io_soc_dir),
         .ccff_head(ccff_head),
         .ccff_tail(ccff_tail),
-        .sc_head(sc_head),
-        .sc_tail(sc_tail)
+        .prog_reset(prog_reset),
+        .reset(reset)
     );
 
     // Wishbone 
