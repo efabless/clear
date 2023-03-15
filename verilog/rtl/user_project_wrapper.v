@@ -90,12 +90,13 @@ module user_project_wrapper #(
         io_in[2]                    | prog_reset           | Input
         io_in[3]                    | reset                | Input
         io_in[12]                   | ccff_head            | Input  
-        io_out[35]                  | ccff_tail            | Output
+        io_out[34]                  | ccff_tail            | Output
+        io_out[35]                  | clk_sel              | Output
         io_in[36]                   | clk                  | Input
         io_in[37]                   | prog_clk             | Input
         io_in[11:4]-io_in[14:13]    | EMBEDDED_IO[44:36]   | Bidirectional
         io_in[23:15]                | EMBEDDED_IO[20:12]   | Bidirectional
-        io_in[34:24]                | EMBEDDED_IO[123:113] | Bidirectional
+        io_in[33:24]                | EMBEDDED_IO[123:113] | Bidirectional
 
     */
     // FPGA wires
@@ -121,9 +122,9 @@ module user_project_wrapper #(
     assign io_oeb[11:4] = gfpga_pad_io_soc_dir[42:36];
 
     // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
-    assign gfpga_pad_io_soc_in[123:113] = io_in[34:24];
-    assign io_out[34:24] = gfpga_pad_io_soc_out[123:113];
-    assign io_oeb[34:24] = gfpga_pad_io_soc_dir[123:113];
+    assign gfpga_pad_io_soc_in[123:113] = io_in[33:24];
+    assign io_out[33:24] = gfpga_pad_io_soc_out[123:113];
+    assign io_oeb[33:24] = gfpga_pad_io_soc_dir[123:113];
     
     // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
     assign gfpga_pad_io_soc_in[20:12] = io_in[23:15];
@@ -173,13 +174,17 @@ module user_project_wrapper #(
 
     // CLK -- Input
     // FPGA clock port can be driven by either wishbone clock or an GPIO
-    assign clk = io_in[36];
+    assign clk_sel = io_in[35];
+    assign io_out[35] = 1'b0;
+    assign io_oeb[35] = 1'b1;
+
+    assign clk = clk_sel ? wb_clk_i : io_in[36];
     assign io_out[36] = 1'b0;
     assign io_oeb[36] = 1'b1;
 
     // CCFF-TAIL - Output
-    assign io_out[35] = ccff_tail;
-    assign io_oeb[35] = 1'b0;
+    assign io_out[34] = ccff_tail;
+    assign io_oeb[34] = 1'b0;
 
     fpga_top fpga_top_uut(.prog_clk(prog_clk),
         .test_enable(test_enable),
