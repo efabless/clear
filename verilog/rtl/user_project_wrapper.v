@@ -83,20 +83,22 @@ module user_project_wrapper #(
 
         IOs Connections:
 
-        Caravel IO                  | FPGA                 |  Mode
-
-        io_in[0]                    | test_enable          | Input
-        io_in[1]                    | isol_n               | Input
-        io_in[2]                    | prog_reset           | Input
-        io_in[3]                    | reset                | Input
-        io_in[12]                   | ccff_head            | Input  
-        io_out[34]                  | ccff_tail            | Output
-        io_out[35]                  | clk_sel              | Output
-        io_in[36]                   | clk                  | Input
-        io_in[37]                   | prog_clk             | Input
-        io_in[11:4]-io_in[14:13]    | EMBEDDED_IO[44:36]   | Bidirectional
-        io_in[23:15]                | EMBEDDED_IO[20:12]   | Bidirectional
-        io_in[33:24]                | EMBEDDED_IO[123:113] | Bidirectional
+        Caravel IO                             | FPGA                 |  Mode
+        
+        io_in[0]                               | test_enable          | Input
+        io_in[1]                               | isol_n               | Input
+        io_in[4]                               | prog_reset           | Input
+        io_in[5]                               | reset                | Input
+        io_out[11]                             | sc_tail              | Output
+        io_in[12]                              | ccff_head            | Input  
+        io_in[26]                              | sc_head              | Input
+        io_out[34]                             | ccff_tail            | Output
+        io_out[35]                             | clk_sel              | Output
+        io_in[36]                              | clk                  | Input
+        io_in[37]                              | prog_clk             | Input
+        io_in[3:2]-io_in[10:6]-io_in[14:13]    | EMBEDDED_IO[44:36]   | Bidirectional
+        io_in[23:15]                           | EMBEDDED_IO[20:12]   | Bidirectional
+        io_in[25:24]-io_in[33:27]              | EMBEDDED_IO[121:113] | Bidirectional
 
     */
     // FPGA wires
@@ -111,20 +113,30 @@ module user_project_wrapper #(
     wire ccff_tail;
     wire prog_reset;
     wire reset;
+    wire sc_head;
+    wire sc_tail;
     
     // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
+    assign gfpga_pad_io_soc_in[37:36] = io_in[3:2];
+    assign io_out[3:2] = gfpga_pad_io_soc_out[37:36];
+    assign io_oeb[3:2] = gfpga_pad_io_soc_dir[37:36];
+
+    assign gfpga_pad_io_soc_in[42:38] = io_in[10:6];
+    assign io_out[10:6] = gfpga_pad_io_soc_out[42:38];
+    assign io_oeb[10:6] = gfpga_pad_io_soc_dir[42:38];
+
     assign gfpga_pad_io_soc_in[44:43] = io_in[14:13];
     assign io_out[14:13] = gfpga_pad_io_soc_out[44:43];
     assign io_oeb[14:13] = gfpga_pad_io_soc_dir[44:43];
 
-    assign gfpga_pad_io_soc_in[42:36] = io_in[11:4];
-    assign io_out[11:4] = gfpga_pad_io_soc_out[42:36];
-    assign io_oeb[11:4] = gfpga_pad_io_soc_dir[42:36];
-
     // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
-    assign gfpga_pad_io_soc_in[123:113] = io_in[33:24];
-    assign io_out[33:24] = gfpga_pad_io_soc_out[123:113];
-    assign io_oeb[33:24] = gfpga_pad_io_soc_dir[123:113];
+    assign gfpga_pad_io_soc_in[114:113] = io_in[25:24];
+    assign io_out[25:24] = gfpga_pad_io_soc_out[114:113];
+    assign io_oeb[25:24] = gfpga_pad_io_soc_dir[114:113];
+
+    assign gfpga_pad_io_soc_in[121:115] = io_in[33:27];
+    assign io_out[33:27] = gfpga_pad_io_soc_out[121:115];
+    assign io_oeb[33:27] = gfpga_pad_io_soc_dir[121:115];
     
     // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
     assign gfpga_pad_io_soc_in[20:12] = io_in[23:15];
@@ -136,14 +148,18 @@ module user_project_wrapper #(
     assign io_out[12] = 1'b0;
     assign io_oeb[12] = 1'b1;
 
-    // reset -- Input
-    prog_reset = io_in[2];
-    assign io_out[2] = 1'b0;
-    assign io_oeb[2] = 1'b1;
+    // SC_TAIL -- output
+    assign io_out[11] = sc_tail;
+    assign io_oeb[11] = 1'b0;
 
-    reset = io_in[3];
-    assign io_out[3] = 1'b0;
-    assign io_oeb[3] = 1'b1;
+    // reset -- Input
+    prog_reset = io_in[4];
+    assign io_out[4] = 1'b0;
+    assign io_oeb[4] = 1'b1;
+
+    reset = io_in[5];
+    assign io_out[5] = 1'b0;
+    assign io_oeb[5] = 1'b1;
 
     // isol_n -- Input
     assign isol_n = io_in[1];
@@ -186,6 +202,11 @@ module user_project_wrapper #(
     assign io_out[34] = ccff_tail;
     assign io_oeb[34] = 1'b0;
 
+    // SC-HEAD -- Input
+    assign sc_head = io_in[26];
+    assign io_out[26] = 1'b0;
+    assign io_oeb[26] = 1'b1;
+
     fpga_top fpga_top_uut(.prog_clk(prog_clk),
         .test_enable(test_enable),
         .clk(clk),
@@ -196,7 +217,9 @@ module user_project_wrapper #(
         .ccff_head(ccff_head),
         .ccff_tail(ccff_tail),
         .prog_reset(prog_reset),
-        .reset(reset)
+        .reset(reset),
+        .sc_head(sc_head),
+        .sc_tail(sc_tail)
     );
 
     // Wishbone 
