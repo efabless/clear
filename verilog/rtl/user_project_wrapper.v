@@ -158,7 +158,7 @@ module user_project_wrapper #(
     assign io_out[4] = 1'b0;
     assign io_oeb[4] = 1'b1;
 
-    assing reset = io_in[5];
+    assign reset = io_in[5];
     assign io_out[5] = 1'b0;
     assign io_oeb[5] = 1'b1;
 
