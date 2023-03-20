@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1679319064
+timestamp 1679322185
 << obsli1 >>
 rect 1104 2159 49864 54417
 << obsm1 >>
-rect 934 1980 49864 54528
+rect 934 1912 49864 54448
 << metal2 >>
 rect 3330 56200 3386 57000
 rect 3882 56200 3938 57000
@@ -623,7 +623,7 @@ rect 37944 2128 38264 54448
 rect 42944 2128 43264 54448
 rect 47944 2128 48264 54448
 << obsm4 >>
-rect 3371 2347 7864 53957
+rect 5395 2347 7864 53957
 rect 8344 2347 12864 53957
 rect 13344 2347 17864 53957
 rect 18344 2347 22864 53957
@@ -1169,8 +1169,8 @@ port 258 nsew signal input
 string FIXED_BBOX 0 0 51000 57000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 6792272
-string GDS_FILE /home/hosni/OpenFPGA/clear/openlane/right_tile/runs/23_03_20_06_27/results/signoff/right_tile.magic.gds
-string GDS_START 250542
+string GDS_END 6722378
+string GDS_FILE /home/hosni/OpenFPGA/clear/openlane/right_tile/runs/23_03_20_07_19/results/signoff/right_tile.magic.gds
+string GDS_START 238838
 << end >>
 
