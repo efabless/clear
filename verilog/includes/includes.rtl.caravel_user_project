@@ -1,6 +1,6 @@
 # Caravel user project includes
 
--v $(USER_PROJECT_VERILOG)/../FPGA88_SC_HD_Verilog/SRC/fpga_top.v
+-v $(USER_PROJECT_VERILOG)/../FPGA88_SC_HD_Verilog/SRC/fpga_core.v
 -v $(USER_PROJECT_VERILOG)/../FPGA88_SC_HD_Verilog/SRC/tile/bottom_left_tile.v
 -v $(USER_PROJECT_VERILOG)/../FPGA88_SC_HD_Verilog/SRC/tile/bottom_right_tile.v
 -v $(USER_PROJECT_VERILOG)/../FPGA88_SC_HD_Verilog/SRC/tile/bottom_tile.v
