@@ -115,6 +115,7 @@ module user_project_wrapper #(
     wire reset;
     wire sc_head;
     wire sc_tail;
+    wire clk_sel;
     
     // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
     assign gfpga_pad_io_soc_in[37:36] = io_in[3:2];
@@ -153,11 +154,11 @@ module user_project_wrapper #(
     assign io_oeb[11] = 1'b0;
 
     // reset -- Input
-    prog_reset = io_in[4];
+    assign prog_reset = io_in[4];
     assign io_out[4] = 1'b0;
     assign io_oeb[4] = 1'b1;
 
-    reset = io_in[5];
+    assing reset = io_in[5];
     assign io_out[5] = 1'b0;
     assign io_oeb[5] = 1'b1;
 
