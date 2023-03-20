@@ -14,50 +14,57 @@ OP_CLK = 36
 OP_CLK_SEL = 35 # clock seleceted if op would use OP_CLK or system clock
 
 class Clear: 
-    def __init__(self, bit_stream_file, caravelEnv,period_op = None, period_prog = 25) -> None:
+    def __init__(self, caravelEnv,period_op = None, period_prog = 25) -> None:
         """Class for clear programing and testing"""
-        self.bit_stream_f = bit_stream_file
         self.caravelEnv = caravelEnv 
         self.period_prog = period_prog
         self.period_op = period_op
-        self._read_bit_stream()
 
-    def _read_bit_stream(self):
-        self.bit_stream = ''
-        with open(self.bit_stream_f, "r") as f: 
+    def _read_bit_stream(self,bit_stream_file):
+        bit_stream = ''
+        with open(bit_stream_file, "r") as f: 
             line_num = 0
-            cocotb.log.info(f"[ProgClear] start reading read bit stream from {self.bit_stream_f}")
+            cocotb.log.info(f"[Clear] start reading read bit stream from {bit_stream_file}")
             for line in f: 
                 if line.startswith("//"):
                     if "Bitstream length" in line: 
                         bitstream_length = int(line.split(": ")[1])
-                        cocotb.log.debug(f"[ProgClear] bit stream length =  {bitstream_length}")
+                        cocotb.log.debug(f"[Clear] bit stream length =  {bitstream_length}")
                     elif "Bitstream width (LSB -> MSB): " in line: 
                         bitstream_width = int(line.split(": ")[1])
-                        cocotb.log.debug(f"[ProgClear] bit stream width =  {bitstream_width}")
+                        cocotb.log.debug(f"[Clear] bit stream width =  {bitstream_width}")
                 else: # bit stream 
                     # line should be sub set of 0 and 1 
                     if re.match('^[01]*$', line):
-                        self.bit_stream += line.strip()
+                        bit_stream += line.strip()
                     else: 
-                        cocotb.log.critical(f"[ProgClear] Error bit stream has unexpected value {line} in line {line_num} ")
+                        cocotb.log.critical(f"[Clear] Error bit stream has unexpected value {line} in line {line_num} ")
                 line_num +=1
-        cocotb.log.debug(f"[ProgClear] bit stream = {hex(int(self.bit_stream,2))}")
+        cocotb.log.debug(f"[Clear] bit stream = {hex(int(bit_stream,2))}")
         # check bit stream length with length from file
         expected_len = bitstream_length * bitstream_width
-        actual_len = len(self.bit_stream)
+        actual_len = len(bit_stream)
         if actual_len == expected_len: 
-            cocotb.log.info(f"[ProgClear] bit stream has correct width")
+            cocotb.log.info(f"[Clear] bit stream has correct width")
         else: 
-            cocotb.log.error(f"[ProgClear] Warning bit stream doesn't has the correct width expected = {expected_len} actual {actual_len}")
+            cocotb.log.error(f"[Clear] Warning bit stream doesn't has the correct width expected = {expected_len} actual {actual_len}")
+        return bit_stream
     
-    async def program_fpga(self):
+    async def program_fpga(self,bit_stream_file=None,stream_arr=None):
         """main function to be called"""
+        if bit_stream_file is None and stream_arr is None:
+            cocotb.log.critical(f"[Clear] Neither bit_stream_file nor stream_arr is provided ")
+        elif bit_stream_file is not None and stream_arr is not None:
+            cocotb.log.critical(f"[Clear] Only one argument can be passed as non-None bit_stream_file or stream_arr")
+        if bit_stream_file is not None: 
+            bit_stream = self._read_bit_stream(bit_stream_file)
+        else: 
+            bit_stream = stream_arr
         self._start_prog_clock()
         await self._reset_prog()
-        cocotb.log.info("[ProgClear] start writing the bit stream")
-        await self._write_prog_bits()
-        cocotb.log.info("[ProgClear] finish writing the bit stream")
+        cocotb.log.info("[Clear] start writing the bit stream")
+        await self._write_prog_bits(bit_stream)
+        cocotb.log.info("[Clear] finish writing the bit stream")
 
     def _start_prog_clock(self):
         # enable driving
@@ -97,9 +104,9 @@ class Clear:
         await cocotb.triggers.Timer(self.period_prog*3, units="ns")
         reset.value = 0
 
-    async def _write_prog_bits(self):
+    async def _write_prog_bits(self,bit_stream):
         # assert set and reset 
-        for bit in self.bit_stream:
+        for bit in bit_stream:
             self.ccff_head.value = int(bit)
             await ClockCycles(self.clk, 1)
         self.clock_prog_thread.kill()
@@ -113,16 +120,16 @@ class Clear:
         if self.period_op is None: 
 
             # connect period op with the caravel period 
-            await cocotb.start(connect_signals(self.clk_op, self.caravelEnv.clk))
+            await cocotb.start(self._connect_signals(self.clk_op, self.caravelEnv.clk))
         else: 
             clock = Clock(self.clk_op, self.period_op, "ns")
             self.clock_op_thread = cocotb.start_soon(clock.start())
-        cocotb.log.info(f"[ProgClear] set op clock")
+        cocotb.log.info(f"[Clear] set op clock")
 
 
-async def connect_signals(signal1, signal2):
-    """ like verilog assign"""
-    while True:
-        # continuously copy the value of signal2 to signal1
-        signal1.value = signal2.value
-        await cocotb.triggers.Timer(1, units="ns")
+    async def _connect_signals(self, signal1, signal2):
+        """ like verilog assign"""
+        while True:
+            # continuously copy the value of signal2 to signal1
+            signal1.value = signal2.value
+            await cocotb.triggers.Timer(1, units="ns")
