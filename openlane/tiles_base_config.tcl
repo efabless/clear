@@ -62,3 +62,4 @@ set ::env(GRT_ANT_MARGIN) 26
 
 # Signoff
 set ::env(RUN_KLAYOUT) 0
+set ::env(QUIT_ON_SYNTH_CHECKS) 1
