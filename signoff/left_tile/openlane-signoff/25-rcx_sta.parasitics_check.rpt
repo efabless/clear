@@ -97,12 +97,12 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 89.65
+worst slack 89.76
 
 ===========================================================================
  report_worst_slack -min (Hold)
 ============================================================================
-worst slack 0.22
+worst slack 0.25
 worst_slack_end
 clock_skew
 
@@ -114,10 +114,10 @@ No launch/capture paths found.
 
 Clock prog_clk
 Latency      CRPR       Skew
-sb_0__1_.mem_top_track_36.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+sb_0__1_.mem_right_track_18.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
    0.55
-sb_0__1_.mem_top_track_36.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
-   0.48     -0.03       0.05
+sb_0__1_.mem_right_track_18.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
+   0.48     -0.03       0.04
 
 clock_skew_end
 power_report
@@ -128,23 +128,23 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             6.42e-05   4.17e-06   1.76e-09   6.84e-05  39.0%
-Combinational          3.80e-05   6.88e-05   8.76e-09   1.07e-04  61.0%
+Sequential             6.43e-05   3.93e-06   1.76e-09   6.82e-05  39.7%
+Combinational          3.75e-05   6.59e-05   7.22e-09   1.03e-04  60.3%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  1.02e-04   7.29e-05   1.05e-08   1.75e-04 100.0%
-                          58.4%      41.6%       0.0%
+Total                  1.02e-04   6.99e-05   8.98e-09   1.72e-04 100.0%
+                          59.3%      40.7%       0.0%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 12363 u^2 19% utilization.
+Design area 11575 u^2 36% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_07_16/results/routing/mca/process_corner_nom/left_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_07_16/results/routing/mca/process_corner_nom/left_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_14_11/results/routing/mca/process_corner_nom/left_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_14_11/results/routing/mca/process_corner_nom/left_tile.lib...
 

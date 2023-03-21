@@ -1,14 +1,14 @@
 Design Name: bottom_tile
-Run Directory: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_06_54
+Run Directory: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_17_12
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_06_54/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_17_12/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_06_54/logs/signoff/31-bottom_tile.lef.lvs.log
+Source: /home/hosni/OpenFPGA/clear/openlane/bottom_tile/runs/23_03_20_17_12/logs/signoff/31-bottom_tile.lef.lvs.log
 Number of nets: 1014                       |Number of nets: 1014                       
 Design is LVS clean.
 ----------------------------------------

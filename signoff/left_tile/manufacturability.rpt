@@ -1,14 +1,14 @@
 Design Name: left_tile
-Run Directory: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_07_16
+Run Directory: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_14_11
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_07_16/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_14_11/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_07_16/logs/signoff/31-left_tile.lef.lvs.log
+Source: /home/hosni/OpenFPGA/clear/openlane/left_tile/runs/23_03_20_14_11/logs/signoff/31-left_tile.lef.lvs.log
 Number of nets: 1055                       |Number of nets: 1055                       
 Design is LVS clean.
 ----------------------------------------

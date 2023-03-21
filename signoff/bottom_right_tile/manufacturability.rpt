@@ -1,15 +1,15 @@
 Design Name: bottom_right_tile
-Run Directory: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_07_06
+Run Directory: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_17_14
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_07_06/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_17_14/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_07_06/logs/signoff/31-bottom_right_tile.lef.lvs.log
-Number of nets: 757                        |Number of nets: 757                        
+Source: /home/hosni/OpenFPGA/clear/openlane/bottom_right_tile/runs/23_03_20_17_14/logs/signoff/31-bottom_right_tile.lef.lvs.log
+Number of nets: 756                        |Number of nets: 756                        
 Design is LVS clean.
 ----------------------------------------
 

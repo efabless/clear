@@ -1,0 +1,45 @@
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: prog_clk (clock source 'prog_clk')
+Endpoint: ANTENNA_tile_1__1__prog_clk/DIODE (internal pin)
+Path Group: unconstrained
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.50    0.00 499999.97 v prog_clk (in)
+     2    0.07                           prog_clk (net)
+                  0.52    0.00 499999.97 v wire2/A (sky130_fd_sc_hd__buf_12)
+                  0.07    0.35 500000.34 v wire2/X (sky130_fd_sc_hd__buf_12)
+     2    0.13                           net439 (net)
+                  0.15    0.06 500000.38 v wire1/A (sky130_fd_sc_hd__buf_12)
+                  0.07    0.17 500000.56 v wire1/X (sky130_fd_sc_hd__buf_12)
+     2    0.13                           net438 (net)
+                  0.15    0.06 500000.62 v clkbuf_0_prog_clk/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.08    0.23 500000.84 v clkbuf_0_prog_clk/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.10                           clknet_0_prog_clk (net)
+                  0.09    0.00 500000.84 v clkbuf_1_0_0_prog_clk/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23 500001.09 v clkbuf_1_0_0_prog_clk/X (sky130_fd_sc_hd__clkbuf_8)
+     4    0.08                           clknet_1_0_0_prog_clk (net)
+                  0.11    0.06 500001.16 v clkbuf_2_0_0_prog_clk/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.06    0.23 500001.38 v clkbuf_2_0_0_prog_clk/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_0_0_prog_clk (net)
+                  0.07    0.00 500001.38 v clkbuf_2_0_1_prog_clk/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.09    0.23 500001.62 v clkbuf_2_0_1_prog_clk/X (sky130_fd_sc_hd__clkbuf_8)
+     4    0.08                           clknet_2_0_1_prog_clk (net)
+                  0.09    0.00 500001.62 v clkbuf_3_0__f_prog_clk/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.29    0.35 500001.97 v clkbuf_3_0__f_prog_clk/X (sky130_fd_sc_hd__clkbuf_16)
+    30    0.46                           clknet_3_0__leaf_prog_clk (net)
+                  0.33    0.12 500002.06 v ANTENNA_tile_1__1__prog_clk/DIODE (sky130_fd_sc_hd__diode_2)
+                               500002.06   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.

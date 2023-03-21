@@ -36,6 +36,7 @@ set ::env(FP_PIN_ORDER_CFG) $::env(DESIGN_DIR)/pin.cfg
 set ::env(FP_PDN_VOFFSET) 10
 set ::env(FP_PDN_VPITCH) 50
 set ::env(FP_PDN_VSPACING) 23.4
+set ::env(FP_PDN_AUTO_ADJUST) 0
 
 # Placement
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
