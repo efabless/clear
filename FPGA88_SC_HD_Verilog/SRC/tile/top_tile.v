@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module top_tile
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head_1,
     ccff_head_2,
     chanx_left_in,
@@ -61,6 +65,10 @@ module top_tile
     top_width_0_height_0_subtile_0__pin_O_7_
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head_1;
     input ccff_head_2;
     input [29:0]chanx_left_in;
@@ -223,7 +231,12 @@ assign reset = reset_bottom_in;
 assign test_enable = test_enable_bottom_in;
     cbx_1__8_ cbx_1__8_
     (
-        .ccff_head_0(ccff_tail_2),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0(ccff_tail_2),
         .chanx_left_in(chanx_left_in),
         .chanx_right_in(chanx_left_out_0),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in),
@@ -258,6 +271,10 @@ assign test_enable = test_enable_bottom_in;
     );
     cby_1__1_ cby_1__8_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head_1),
         .chany_bottom_in(chany_bottom_in),
         .chany_top_in(chany_bottom_out_0),
@@ -285,6 +302,10 @@ assign test_enable = test_enable_bottom_in;
     );
     grid_clb grid_clb_1__8_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_tail_1),
         .clk0(clk0),
         .prog_clk(prog_clk),
@@ -349,6 +370,10 @@ assign test_enable = test_enable_bottom_in;
     );
     sb_1__8_ sb_1__8_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_10_(right_width_0_height_0_subtile_0__pin_O_10_),
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_11_(right_width_0_height_0_subtile_0__pin_O_11_),
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_12_(right_width_0_height_0_subtile_0__pin_O_12_),

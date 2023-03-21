@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module cbx_1__0__old
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     chanx_left_in,
     chanx_right_in,
@@ -16,6 +20,10 @@ module cbx_1__0__old
     chanx_right_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input [0:29]chanx_left_in;
     input [0:29]chanx_right_in;
@@ -115,7 +123,12 @@ assign chanx_right_out[8] = chanx_left_in[8];
 assign chanx_right_out[9] = chanx_left_in[9];
     mux_tree_tapbuf_size12_mem mem_top_ipin_0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(mux_tree_tapbuf_size12_mem_0_ccff_tail),
@@ -123,7 +136,12 @@ assign chanx_right_out[9] = chanx_left_in[9];
     );
     mux_tree_tapbuf_size12_mem mem_top_ipin_1
     (
-        .ccff_head(mux_tree_tapbuf_size12_mem_0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(mux_tree_tapbuf_size12_mem_0_ccff_tail),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(mux_tree_tapbuf_size12_mem_1_ccff_tail),
@@ -131,7 +149,12 @@ assign chanx_right_out[9] = chanx_left_in[9];
     );
     mux_tree_tapbuf_size12_mem mem_top_ipin_2
     (
-        .ccff_head(mux_tree_tapbuf_size12_mem_1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(mux_tree_tapbuf_size12_mem_1_ccff_tail),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(mux_tree_tapbuf_size12_mem_2_ccff_tail),
@@ -139,7 +162,12 @@ assign chanx_right_out[9] = chanx_left_in[9];
     );
     mux_tree_tapbuf_size12_mem mem_top_ipin_3
     (
-        .ccff_head(mux_tree_tapbuf_size12_mem_2_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(mux_tree_tapbuf_size12_mem_2_ccff_tail),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(ccff_tail),
@@ -147,28 +175,48 @@ assign chanx_right_out[9] = chanx_left_in[9];
     );
     mux_tree_tapbuf_size12 mux_top_ipin_0
     (
-        .in({chanx_left_in[0], chanx_right_in[0], chanx_left_in[3], chanx_right_in[3], chanx_left_in[6], chanx_right_in[6], chanx_left_in[12], chanx_right_in[12], chanx_left_in[18], chanx_right_in[18], chanx_left_in[24], chanx_right_in[24]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({chanx_left_in[0], chanx_right_in[0], chanx_left_in[3], chanx_right_in[3], chanx_left_in[6], chanx_right_in[6], chanx_left_in[12], chanx_right_in[12], chanx_left_in[18], chanx_right_in[18], chanx_left_in[24], chanx_right_in[24]}),
         .sram(mux_tree_tapbuf_size12_0_sram),
         .sram_inv(mux_top_ipin_0_undriven_sram_inv),
         .out(bottom_grid_top_width_0_height_0_subtile_0__pin_outpad_0_)
     );
     mux_tree_tapbuf_size12 mux_top_ipin_1
     (
-        .in({chanx_left_in[1], chanx_right_in[1], chanx_left_in[4], chanx_right_in[4], chanx_left_in[7], chanx_right_in[7], chanx_left_in[13], chanx_right_in[13], chanx_left_in[19], chanx_right_in[19], chanx_left_in[25], chanx_right_in[25]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({chanx_left_in[1], chanx_right_in[1], chanx_left_in[4], chanx_right_in[4], chanx_left_in[7], chanx_right_in[7], chanx_left_in[13], chanx_right_in[13], chanx_left_in[19], chanx_right_in[19], chanx_left_in[25], chanx_right_in[25]}),
         .sram(mux_tree_tapbuf_size12_1_sram),
         .sram_inv(mux_top_ipin_1_undriven_sram_inv),
         .out(bottom_grid_top_width_0_height_0_subtile_1__pin_outpad_0_)
     );
     mux_tree_tapbuf_size12 mux_top_ipin_2
     (
-        .in({chanx_left_in[2], chanx_right_in[2], chanx_left_in[5], chanx_right_in[5], chanx_left_in[8], chanx_right_in[8], chanx_left_in[14], chanx_right_in[14], chanx_left_in[20], chanx_right_in[20], chanx_left_in[26], chanx_right_in[26]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({chanx_left_in[2], chanx_right_in[2], chanx_left_in[5], chanx_right_in[5], chanx_left_in[8], chanx_right_in[8], chanx_left_in[14], chanx_right_in[14], chanx_left_in[20], chanx_right_in[20], chanx_left_in[26], chanx_right_in[26]}),
         .sram(mux_tree_tapbuf_size12_2_sram),
         .sram_inv(mux_top_ipin_2_undriven_sram_inv),
         .out(bottom_grid_top_width_0_height_0_subtile_2__pin_outpad_0_)
     );
     mux_tree_tapbuf_size12 mux_top_ipin_3
     (
-        .in({chanx_left_in[0], chanx_right_in[0], chanx_left_in[3], chanx_right_in[3], chanx_left_in[9], chanx_right_in[9], chanx_left_in[15], chanx_right_in[15], chanx_left_in[21], chanx_right_in[21], chanx_left_in[27], chanx_right_in[27]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({chanx_left_in[0], chanx_right_in[0], chanx_left_in[3], chanx_right_in[3], chanx_left_in[9], chanx_right_in[9], chanx_left_in[15], chanx_right_in[15], chanx_left_in[21], chanx_right_in[21], chanx_left_in[27], chanx_right_in[27]}),
         .sram(mux_tree_tapbuf_size12_3_sram),
         .sram_inv(mux_top_ipin_3_undriven_sram_inv),
         .out(bottom_grid_top_width_0_height_0_subtile_3__pin_outpad_0_)

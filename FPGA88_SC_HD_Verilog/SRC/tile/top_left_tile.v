@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module top_left_tile
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     ccff_head_0,
     chanx_right_in,
@@ -36,6 +40,10 @@ module top_left_tile
     right_width_0_height_0_subtile_3__pin_inpad_0_
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input ccff_head_0;
     input [29:0]chanx_right_in;
@@ -108,6 +116,10 @@ module top_left_tile
 assign prog_reset = prog_reset_bottom_in;
     cby_0__1_ cby_0__8_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head_0(ccff_head_0),
         .chany_bottom_in(chany_bottom_in_0),
         .chany_top_in(chany_bottom_out),
@@ -127,6 +139,10 @@ assign prog_reset = prog_reset_bottom_in;
     );
     sb_0__8_ sb_0__8_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_(right_width_0_height_0_subtile_0__pin_inpad_0_),
         .bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_(right_width_0_height_0_subtile_1__pin_inpad_0_),
         .bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_(right_width_0_height_0_subtile_2__pin_inpad_0_),

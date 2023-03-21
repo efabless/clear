@@ -2,6 +2,11 @@
 //netlist name: FPGA88_SOFA_A
 module io_sky130_fd_sc_hd__dfrtp_1_mem
 (
+
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     prog_clk,
     prog_reset,
@@ -9,6 +14,10 @@ module io_sky130_fd_sc_hd__dfrtp_1_mem
     mem_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input prog_clk;
     input prog_reset;
@@ -24,7 +33,12 @@ module io_sky130_fd_sc_hd__dfrtp_1_mem
 assign ccff_tail = mem_out;
     sky130_fd_sc_hd__dfrtp_1 sky130_fd_sc_hd__dfrtp_1_0_
     (
-        .CLK(prog_clk),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.CLK(prog_clk),
         .D(ccff_head),
         .RESET_B(prog_reset),
         .Q(mem_out)

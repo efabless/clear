@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module cby_8__1_
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     ccff_head_0,
     chany_bottom_in,
@@ -37,7 +41,10 @@ module cby_8__1_
     left_width_0_height_0_subtile_2__pin_inpad_0_,
     left_width_0_height_0_subtile_3__pin_inpad_0_
 );
-
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input ccff_head_0;
     input [29:0]chany_bottom_in;
@@ -114,6 +121,11 @@ module cby_8__1_
 
     cby_8__1__old cby_8__8_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head_0),
         .chany_bottom_in(chany_bottom_in),
         .chany_top_in(chany_top_in),
@@ -144,7 +156,11 @@ module cby_8__1_
         .right_grid_left_width_0_height_0_subtile_3__pin_outpad_0_(right_grid_left_width_0_height_0_subtile_3__pin_outpad_0_)
     );
     grid_io_right_right grid_io_right_right_9__8_
-    (
+    (        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in),
         .isol_n(isol_n),

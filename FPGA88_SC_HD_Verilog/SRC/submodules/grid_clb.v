@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module grid_clb
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     clk0,
     prog_clk,
@@ -65,6 +69,10 @@ module grid_clb
     top_width_0_height_0_subtile_0__pin_O_7_
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input clk0;
     input prog_clk;
@@ -191,7 +199,12 @@ module grid_clb
 
     logical_tile_clb_mode_clb_ logical_tile_clb_mode_clb__0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .clb_I0({top_width_0_height_0_subtile_0__pin_I0_0_, top_width_0_height_0_subtile_0__pin_I0_1_}),
         .clb_I0i({top_width_0_height_0_subtile_0__pin_I0i_0_, top_width_0_height_0_subtile_0__pin_I0i_1_}),
         .clb_I1({top_width_0_height_0_subtile_0__pin_I1_0_, top_width_0_height_0_subtile_0__pin_I1_1_}),

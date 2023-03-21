@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module bottom_left_tile
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     chanx_right_in,
     chany_top_in,
@@ -22,6 +26,10 @@ module bottom_left_tile
     chany_top_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input [29:0]chanx_right_in;
     input [29:0]chany_top_in;
@@ -64,7 +72,12 @@ module bottom_left_tile
 assign prog_reset = prog_reset_top_in;
     sb_0__0_ sb_0__0_
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .chanx_right_in(chanx_right_in),
         .chany_top_in(chany_top_in),
         .prog_clk(prog_clk),

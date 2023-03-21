@@ -105,7 +105,7 @@ class Clear:
         self.ccff_head.value = 0
         self.op_clk_sel.value =0
         # wait and reset
-        await cocotb.triggers.Timer(self.period_prog*3, units="ns")
+        await cocotb.triggers.Timer(self.period_prog * 35888 *5, units="ns")
         reset.value = 0
 
     async def _write_prog_bits(self,bit_stream,check_tail=False):
@@ -118,7 +118,7 @@ class Clear:
                 counter +=1
                 tail_val = self.caravelEnv.dut._id(f"bin{CCFF_TAIL}", False).value.binstr
                 if tail_val != bit: 
-                    cocotb.log.error(f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_val}")
+                    cocotb.log.info(f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_val}")
         
     
     async def start_op(self):

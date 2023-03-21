@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module fpga_core
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     clk,
     gfpga_pad_io_soc_in,
@@ -17,6 +21,10 @@ module fpga_core
     sc_tail
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input clk;
     input [0:127]gfpga_pad_io_soc_in;
@@ -4661,6 +4669,11 @@ assign reset_ft[0] = reset;
 assign test_enable_ft[0] = test_enable;
     bottom_left_tile tile_1__1_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_1_ccff_tail),
         .chanx_right_in(cbx_1__0__0_chanx_left_out),
         .chany_top_in(cby_0__1__0_chany_bottom_out),
@@ -4682,6 +4695,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__2_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_2_ccff_tail),
         .ccff_head_0(sb_0__0__0_ccff_tail),
         .chanx_right_in(cbx_1__1__0_chanx_left_out),
@@ -4732,6 +4750,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__3_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_3_ccff_tail),
         .ccff_head_0(sb_0__1__0_ccff_tail),
         .chanx_right_in(cbx_1__1__1_chanx_left_out),
@@ -4782,6 +4805,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__4_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_4_ccff_tail),
         .ccff_head_0(sb_0__1__1_ccff_tail),
         .chanx_right_in(cbx_1__1__2_chanx_left_out),
@@ -4832,6 +4860,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__5_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_5_ccff_tail),
         .ccff_head_0(sb_0__1__2_ccff_tail),
         .chanx_right_in(cbx_1__1__3_chanx_left_out),
@@ -4882,6 +4915,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__6_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_6_ccff_tail),
         .ccff_head_0(sb_0__1__3_ccff_tail),
         .chanx_right_in(cbx_1__1__4_chanx_left_out),
@@ -4932,6 +4970,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__7_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_left_left_7_ccff_tail),
         .ccff_head_0(sb_0__1__4_ccff_tail),
         .chanx_right_in(cbx_1__1__5_chanx_left_out),
@@ -4982,6 +5025,11 @@ assign test_enable_ft[0] = test_enable;
     );
     left_tile tile_1__8_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(sb_0__8__0_ccff_tail),
         .ccff_head_0(sb_0__1__5_ccff_tail),
         .chanx_right_in(cbx_1__1__6_chanx_left_out),
@@ -5032,6 +5080,11 @@ assign test_enable_ft[0] = test_enable;
     );
     top_left_tile tile_1__9_
     (
+        
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_top_top_0_ccff_tail),
         .ccff_head_0(sb_0__1__6_ccff_tail),
         .chanx_right_in(cbx_1__8__0_chanx_left_out),
@@ -5067,6 +5120,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_2__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head),
         .ccff_head_1(grid_io_left_left_0_ccff_tail),
         .chanx_left_in(sb_0__0__0_chanx_right_out),
@@ -5104,7 +5162,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__2_
     (
-        .ccff_head_1(cbx_1__0__0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__0_ccff_tail),
         .ccff_head_2(grid_clb_9_ccff_tail),
         .chanx_left_in(sb_0__1__0_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__7_chanx_left_out),
@@ -5177,7 +5240,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__3_
     (
-        .ccff_head_1(cbx_1__1__0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__0_ccff_tail),
         .ccff_head_2(grid_clb_1_ccff_tail),
         .chanx_left_in(sb_0__1__1_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__8_chanx_left_out),
@@ -5250,7 +5318,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__4_
     (
-        .ccff_head_1(cbx_1__1__1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__1_ccff_tail),
         .ccff_head_2(grid_clb_11_ccff_tail),
         .chanx_left_in(sb_0__1__2_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__9_chanx_left_out),
@@ -5323,7 +5396,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__5_
     (
-        .ccff_head_1(cbx_1__1__2_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__2_ccff_tail),
         .ccff_head_2(grid_clb_3_ccff_tail),
         .chanx_left_in(sb_0__1__3_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__10_chanx_left_out),
@@ -5396,7 +5474,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__6_
     (
-        .ccff_head_1(cbx_1__1__3_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__3_ccff_tail),
         .ccff_head_2(grid_clb_13_ccff_tail),
         .chanx_left_in(sb_0__1__4_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__11_chanx_left_out),
@@ -5469,7 +5552,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__7_
     (
-        .ccff_head_1(cbx_1__1__4_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__4_ccff_tail),
         .ccff_head_2(grid_clb_5_ccff_tail),
         .chanx_left_in(sb_0__1__5_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__12_chanx_left_out),
@@ -5542,7 +5630,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_2__8_
     (
-        .ccff_head_1(cbx_1__1__5_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__5_ccff_tail),
         .ccff_head_2(grid_clb_15_ccff_tail),
         .chanx_left_in(sb_0__1__6_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__13_chanx_left_out),
@@ -5615,7 +5708,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_2__9_
     (
-        .ccff_head_1(cbx_1__1__6_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__6_ccff_tail),
         .ccff_head_2(grid_io_top_top_1_ccff_tail),
         .chanx_left_in(sb_0__8__0_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__1_chanx_left_out),
@@ -5675,6 +5773,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_3__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_7_ccff_tail),
         .ccff_head_1(grid_clb_0_ccff_tail),
         .chanx_left_in(sb_1__0__0_chanx_right_out),
@@ -5712,7 +5815,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__2_
     (
-        .ccff_head_1(cbx_1__0__1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__1_ccff_tail),
         .ccff_head_2(grid_clb_17_ccff_tail),
         .chanx_left_in(sb_1__1__0_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__14_chanx_left_out),
@@ -5785,7 +5893,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__3_
     (
-        .ccff_head_1(cbx_1__1__7_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__7_ccff_tail),
         .ccff_head_2(grid_clb_2_ccff_tail),
         .chanx_left_in(sb_1__1__1_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__15_chanx_left_out),
@@ -5858,7 +5971,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__4_
     (
-        .ccff_head_1(cbx_1__1__8_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__8_ccff_tail),
         .ccff_head_2(grid_clb_19_ccff_tail),
         .chanx_left_in(sb_1__1__2_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__16_chanx_left_out),
@@ -5931,7 +6049,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__5_
     (
-        .ccff_head_1(cbx_1__1__9_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__9_ccff_tail),
         .ccff_head_2(grid_clb_4_ccff_tail),
         .chanx_left_in(sb_1__1__3_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__17_chanx_left_out),
@@ -6004,7 +6127,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__6_
     (
-        .ccff_head_1(cbx_1__1__10_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__10_ccff_tail),
         .ccff_head_2(grid_clb_21_ccff_tail),
         .chanx_left_in(sb_1__1__4_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__18_chanx_left_out),
@@ -6077,7 +6205,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__7_
     (
-        .ccff_head_1(cbx_1__1__11_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__11_ccff_tail),
         .ccff_head_2(grid_clb_6_ccff_tail),
         .chanx_left_in(sb_1__1__5_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__19_chanx_left_out),
@@ -6150,7 +6283,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_3__8_
     (
-        .ccff_head_1(cbx_1__1__12_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__12_ccff_tail),
         .ccff_head_2(grid_clb_23_ccff_tail),
         .chanx_left_in(sb_1__1__6_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__20_chanx_left_out),
@@ -6223,7 +6361,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_3__9_
     (
-        .ccff_head_1(cbx_1__1__13_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__13_ccff_tail),
         .ccff_head_2(grid_io_top_top_2_ccff_tail),
         .chanx_left_in(sb_1__8__0_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__2_chanx_left_out),
@@ -6283,6 +6426,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_4__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_6_ccff_tail),
         .ccff_head_1(grid_clb_8_ccff_tail),
         .chanx_left_in(sb_1__0__1_chanx_right_out),
@@ -6320,7 +6468,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__2_
     (
-        .ccff_head_1(cbx_1__0__2_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__2_ccff_tail),
         .ccff_head_2(grid_clb_25_ccff_tail),
         .chanx_left_in(sb_1__1__7_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__21_chanx_left_out),
@@ -6393,7 +6546,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__3_
     (
-        .ccff_head_1(cbx_1__1__14_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__14_ccff_tail),
         .ccff_head_2(grid_clb_10_ccff_tail),
         .chanx_left_in(sb_1__1__8_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__22_chanx_left_out),
@@ -6466,7 +6624,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__4_
     (
-        .ccff_head_1(cbx_1__1__15_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__15_ccff_tail),
         .ccff_head_2(grid_clb_27_ccff_tail),
         .chanx_left_in(sb_1__1__9_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__23_chanx_left_out),
@@ -6539,7 +6702,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__5_
     (
-        .ccff_head_1(cbx_1__1__16_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__16_ccff_tail),
         .ccff_head_2(grid_clb_12_ccff_tail),
         .chanx_left_in(sb_1__1__10_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__24_chanx_left_out),
@@ -6612,7 +6780,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__6_
     (
-        .ccff_head_1(cbx_1__1__17_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__17_ccff_tail),
         .ccff_head_2(grid_clb_29_ccff_tail),
         .chanx_left_in(sb_1__1__11_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__25_chanx_left_out),
@@ -6685,7 +6858,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__7_
     (
-        .ccff_head_1(cbx_1__1__18_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__18_ccff_tail),
         .ccff_head_2(grid_clb_14_ccff_tail),
         .chanx_left_in(sb_1__1__12_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__26_chanx_left_out),
@@ -6758,7 +6936,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_4__8_
     (
-        .ccff_head_1(cbx_1__1__19_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__19_ccff_tail),
         .ccff_head_2(grid_clb_31_ccff_tail),
         .chanx_left_in(sb_1__1__13_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__27_chanx_left_out),
@@ -6831,7 +7014,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_4__9_
     (
-        .ccff_head_1(cbx_1__1__20_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__20_ccff_tail),
         .ccff_head_2(grid_io_top_top_3_ccff_tail),
         .chanx_left_in(sb_1__8__1_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__3_chanx_left_out),
@@ -6891,6 +7079,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_5__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_5_ccff_tail),
         .ccff_head_1(grid_clb_16_ccff_tail),
         .chanx_left_in(sb_1__0__2_chanx_right_out),
@@ -6928,7 +7121,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__2_
     (
-        .ccff_head_1(cbx_1__0__3_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__3_ccff_tail),
         .ccff_head_2(grid_clb_33_ccff_tail),
         .chanx_left_in(sb_1__1__14_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__28_chanx_left_out),
@@ -7001,7 +7199,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__3_
     (
-        .ccff_head_1(cbx_1__1__21_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__21_ccff_tail),
         .ccff_head_2(grid_clb_18_ccff_tail),
         .chanx_left_in(sb_1__1__15_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__29_chanx_left_out),
@@ -7074,7 +7277,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__4_
     (
-        .ccff_head_1(cbx_1__1__22_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__22_ccff_tail),
         .ccff_head_2(grid_clb_35_ccff_tail),
         .chanx_left_in(sb_1__1__16_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__30_chanx_left_out),
@@ -7147,7 +7355,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__5_
     (
-        .ccff_head_1(cbx_1__1__23_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__23_ccff_tail),
         .ccff_head_2(grid_clb_20_ccff_tail),
         .chanx_left_in(sb_1__1__17_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__31_chanx_left_out),
@@ -7220,7 +7433,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__6_
     (
-        .ccff_head_1(cbx_1__1__24_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__24_ccff_tail),
         .ccff_head_2(grid_clb_37_ccff_tail),
         .chanx_left_in(sb_1__1__18_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__32_chanx_left_out),
@@ -7293,7 +7511,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__7_
     (
-        .ccff_head_1(cbx_1__1__25_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__25_ccff_tail),
         .ccff_head_2(grid_clb_22_ccff_tail),
         .chanx_left_in(sb_1__1__19_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__33_chanx_left_out),
@@ -7366,7 +7589,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_5__8_
     (
-        .ccff_head_1(cbx_1__1__26_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__26_ccff_tail),
         .ccff_head_2(grid_clb_39_ccff_tail),
         .chanx_left_in(sb_1__1__20_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__34_chanx_left_out),
@@ -7439,7 +7667,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_5__9_
     (
-        .ccff_head_1(cbx_1__1__27_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__27_ccff_tail),
         .ccff_head_2(grid_io_top_top_4_ccff_tail),
         .chanx_left_in(sb_1__8__2_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__4_chanx_left_out),
@@ -7499,6 +7732,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_6__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_4_ccff_tail),
         .ccff_head_1(grid_clb_24_ccff_tail),
         .chanx_left_in(sb_1__0__3_chanx_right_out),
@@ -7536,7 +7774,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__2_
     (
-        .ccff_head_1(cbx_1__0__4_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__4_ccff_tail),
         .ccff_head_2(grid_clb_41_ccff_tail),
         .chanx_left_in(sb_1__1__21_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__35_chanx_left_out),
@@ -7609,7 +7852,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__3_
     (
-        .ccff_head_1(cbx_1__1__28_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__28_ccff_tail),
         .ccff_head_2(grid_clb_26_ccff_tail),
         .chanx_left_in(sb_1__1__22_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__36_chanx_left_out),
@@ -7682,7 +7930,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__4_
     (
-        .ccff_head_1(cbx_1__1__29_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__29_ccff_tail),
         .ccff_head_2(grid_clb_43_ccff_tail),
         .chanx_left_in(sb_1__1__23_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__37_chanx_left_out),
@@ -7755,7 +8008,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__5_
     (
-        .ccff_head_1(cbx_1__1__30_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__30_ccff_tail),
         .ccff_head_2(grid_clb_28_ccff_tail),
         .chanx_left_in(sb_1__1__24_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__38_chanx_left_out),
@@ -7828,7 +8086,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__6_
     (
-        .ccff_head_1(cbx_1__1__31_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__31_ccff_tail),
         .ccff_head_2(grid_clb_45_ccff_tail),
         .chanx_left_in(sb_1__1__25_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__39_chanx_left_out),
@@ -7901,7 +8164,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__7_
     (
-        .ccff_head_1(cbx_1__1__32_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__32_ccff_tail),
         .ccff_head_2(grid_clb_30_ccff_tail),
         .chanx_left_in(sb_1__1__26_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__40_chanx_left_out),
@@ -7974,7 +8242,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_6__8_
     (
-        .ccff_head_1(cbx_1__1__33_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__33_ccff_tail),
         .ccff_head_2(grid_clb_47_ccff_tail),
         .chanx_left_in(sb_1__1__27_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__41_chanx_left_out),
@@ -8047,7 +8320,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_6__9_
     (
-        .ccff_head_1(cbx_1__1__34_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__34_ccff_tail),
         .ccff_head_2(grid_io_top_top_5_ccff_tail),
         .chanx_left_in(sb_1__8__3_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__5_chanx_left_out),
@@ -8107,6 +8385,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_7__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_3_ccff_tail),
         .ccff_head_1(grid_clb_32_ccff_tail),
         .chanx_left_in(sb_1__0__4_chanx_right_out),
@@ -8144,7 +8427,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__2_
     (
-        .ccff_head_1(cbx_1__0__5_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__5_ccff_tail),
         .ccff_head_2(grid_clb_49_ccff_tail),
         .chanx_left_in(sb_1__1__28_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__42_chanx_left_out),
@@ -8217,7 +8505,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__3_
     (
-        .ccff_head_1(cbx_1__1__35_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__35_ccff_tail),
         .ccff_head_2(grid_clb_34_ccff_tail),
         .chanx_left_in(sb_1__1__29_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__43_chanx_left_out),
@@ -8290,7 +8583,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__4_
     (
-        .ccff_head_1(cbx_1__1__36_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__36_ccff_tail),
         .ccff_head_2(grid_clb_51_ccff_tail),
         .chanx_left_in(sb_1__1__30_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__44_chanx_left_out),
@@ -8363,7 +8661,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__5_
     (
-        .ccff_head_1(cbx_1__1__37_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__37_ccff_tail),
         .ccff_head_2(grid_clb_36_ccff_tail),
         .chanx_left_in(sb_1__1__31_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__45_chanx_left_out),
@@ -8436,7 +8739,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__6_
     (
-        .ccff_head_1(cbx_1__1__38_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__38_ccff_tail),
         .ccff_head_2(grid_clb_53_ccff_tail),
         .chanx_left_in(sb_1__1__32_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__46_chanx_left_out),
@@ -8509,7 +8817,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__7_
     (
-        .ccff_head_1(cbx_1__1__39_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__39_ccff_tail),
         .ccff_head_2(grid_clb_38_ccff_tail),
         .chanx_left_in(sb_1__1__33_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__47_chanx_left_out),
@@ -8582,7 +8895,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_7__8_
     (
-        .ccff_head_1(cbx_1__1__40_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__40_ccff_tail),
         .ccff_head_2(grid_clb_55_ccff_tail),
         .chanx_left_in(sb_1__1__34_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__48_chanx_left_out),
@@ -8655,7 +8973,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_7__9_
     (
-        .ccff_head_1(cbx_1__1__41_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__41_ccff_tail),
         .ccff_head_2(grid_io_top_top_6_ccff_tail),
         .chanx_left_in(sb_1__8__4_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__6_chanx_left_out),
@@ -8715,6 +9038,11 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_tile tile_8__1_
     (
+        
+         `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(grid_io_bottom_bottom_2_ccff_tail),
         .ccff_head_1(grid_clb_40_ccff_tail),
         .chanx_left_in(sb_1__0__5_chanx_right_out),
@@ -8752,7 +9080,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__2_
     (
-        .ccff_head_1(cbx_1__0__6_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__0__6_ccff_tail),
         .ccff_head_2(grid_clb_57_ccff_tail),
         .chanx_left_in(sb_1__1__35_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__49_chanx_left_out),
@@ -8825,7 +9158,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__3_
     (
-        .ccff_head_1(cbx_1__1__42_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__42_ccff_tail),
         .ccff_head_2(grid_clb_42_ccff_tail),
         .chanx_left_in(sb_1__1__36_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__50_chanx_left_out),
@@ -8898,7 +9236,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__4_
     (
-        .ccff_head_1(cbx_1__1__43_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__43_ccff_tail),
         .ccff_head_2(grid_clb_59_ccff_tail),
         .chanx_left_in(sb_1__1__37_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__51_chanx_left_out),
@@ -8971,7 +9314,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__5_
     (
-        .ccff_head_1(cbx_1__1__44_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__44_ccff_tail),
         .ccff_head_2(grid_clb_44_ccff_tail),
         .chanx_left_in(sb_1__1__38_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__52_chanx_left_out),
@@ -9044,7 +9392,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__6_
     (
-        .ccff_head_1(cbx_1__1__45_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__45_ccff_tail),
         .ccff_head_2(grid_clb_61_ccff_tail),
         .chanx_left_in(sb_1__1__39_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__53_chanx_left_out),
@@ -9117,7 +9470,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__7_
     (
-        .ccff_head_1(cbx_1__1__46_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__46_ccff_tail),
         .ccff_head_2(grid_clb_46_ccff_tail),
         .chanx_left_in(sb_1__1__40_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__54_chanx_left_out),
@@ -9190,7 +9548,12 @@ assign test_enable_ft[0] = test_enable;
     );
     tile tile_8__8_
     (
-        .ccff_head_1(cbx_1__1__47_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__47_ccff_tail),
         .ccff_head_2(grid_clb_63_ccff_tail),
         .chanx_left_in(sb_1__1__41_chanx_right_out),
         .chanx_right_in_0(cbx_1__1__55_chanx_left_out),
@@ -9263,7 +9626,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_tile tile_8__9_
     (
-        .ccff_head_1(cbx_1__1__48_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_1(cbx_1__1__48_ccff_tail),
         .ccff_head_2(grid_io_top_top_7_ccff_tail),
         .chanx_left_in(sb_1__8__5_chanx_right_out),
         .chanx_right_in_0(cbx_1__8__7_chanx_left_out),
@@ -9323,7 +9691,12 @@ assign test_enable_ft[0] = test_enable;
     );
     bottom_right_tile tile_9__1_
     (
-        .ccff_head(grid_io_bottom_bottom_1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(grid_io_bottom_bottom_1_ccff_tail),
         .ccff_head_1(grid_clb_48_ccff_tail),
         .chanx_left_in(sb_1__0__6_chanx_right_out),
         .chany_top_in(cby_8__1__0_chany_bottom_out),
@@ -9358,7 +9731,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__2_
     (
-        .ccff_head_0_0(cbx_1__0__7_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__0__7_ccff_tail),
         .ccff_head_1(grid_io_bottom_bottom_0_ccff_tail),
         .ccff_head_2(grid_clb_56_ccff_tail),
         .chanx_left_in(sb_1__1__42_chanx_right_out),
@@ -9434,7 +9812,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__3_
     (
-        .ccff_head_0_0(cbx_1__1__49_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__49_ccff_tail),
         .ccff_head_1(grid_io_right_right_7_ccff_tail),
         .ccff_head_2(grid_clb_50_ccff_tail),
         .chanx_left_in(sb_1__1__43_chanx_right_out),
@@ -9510,7 +9893,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__4_
     (
-        .ccff_head_0_0(cbx_1__1__50_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__50_ccff_tail),
         .ccff_head_1(grid_io_right_right_6_ccff_tail),
         .ccff_head_2(grid_clb_58_ccff_tail),
         .chanx_left_in(sb_1__1__44_chanx_right_out),
@@ -9586,7 +9974,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__5_
     (
-        .ccff_head_0_0(cbx_1__1__51_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__51_ccff_tail),
         .ccff_head_1(grid_io_right_right_5_ccff_tail),
         .ccff_head_2(grid_clb_52_ccff_tail),
         .chanx_left_in(sb_1__1__45_chanx_right_out),
@@ -9662,7 +10055,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__6_
     (
-        .ccff_head_0_0(cbx_1__1__52_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__52_ccff_tail),
         .ccff_head_1(grid_io_right_right_4_ccff_tail),
         .ccff_head_2(grid_clb_60_ccff_tail),
         .chanx_left_in(sb_1__1__46_chanx_right_out),
@@ -9738,7 +10136,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__7_
     (
-        .ccff_head_0_0(cbx_1__1__53_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__53_ccff_tail),
         .ccff_head_1(grid_io_right_right_3_ccff_tail),
         .ccff_head_2(grid_clb_54_ccff_tail),
         .chanx_left_in(sb_1__1__47_chanx_right_out),
@@ -9814,7 +10217,12 @@ assign test_enable_ft[0] = test_enable;
     );
     right_tile tile_9__8_
     (
-        .ccff_head_0_0(cbx_1__1__54_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__54_ccff_tail),
         .ccff_head_1(grid_io_right_right_2_ccff_tail),
         .ccff_head_2(grid_clb_62_ccff_tail),
         .chanx_left_in(sb_1__1__48_chanx_right_out),
@@ -9890,7 +10298,12 @@ assign test_enable_ft[0] = test_enable;
     );
     top_right_tile tile_9__9_
     (
-        .ccff_head_0_0(cbx_1__1__55_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head_0_0(cbx_1__1__55_ccff_tail),
         .ccff_head_1(grid_io_right_right_1_ccff_tail),
         .chanx_left_in(sb_1__8__6_chanx_right_out),
         .chany_bottom_in(sb_8__1__6_chany_top_out),
