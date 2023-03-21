@@ -7,8 +7,8 @@ No launch/capture paths found.
 
 Clock prog_clk
 Latency      CRPR       Skew
-sb_1__0_.mem_right_track_28.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
-   0.56
-sb_1__0_.mem_right_track_28.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.47     -0.03       0.06
+sb_1__0_.mem_left_track_5.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.54
+sb_1__0_.mem_left_track_5.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.46     -0.03       0.05
 
