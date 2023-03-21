@@ -107,9 +107,9 @@ No launch/capture paths found.
 
 Clock prog_clk
 Latency      CRPR       Skew
-sb_0__8_.mem_bottom_track_47.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
-   0.52
-sb_0__8_.mem_bottom_track_47.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+cby_0__8_.cby_0__1_.mem_right_ipin_3.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
+   0.53
+cby_0__8_.cby_0__1_.mem_right_ipin_3.sky130_fd_sc_hd__dfrtp_1_3_/CLK ^
    0.45     -0.03       0.04
 
 clock_skew_end
@@ -121,23 +121,23 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             5.13e-05   2.74e-06   1.41e-09   5.40e-05  40.7%
-Combinational          3.01e-05   4.85e-05   7.29e-09   7.87e-05  59.3%
+Sequential             5.13e-05   2.65e-06   1.41e-09   5.40e-05  41.2%
+Combinational          3.00e-05   4.70e-05   5.71e-09   7.70e-05  58.8%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  8.14e-05   5.13e-05   8.70e-09   1.33e-04 100.0%
-                          61.4%      38.6%       0.0%
+Total                  8.13e-05   4.97e-05   7.12e-09   1.31e-04 100.0%
+                          62.1%      37.9%       0.0%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 9286 u^2 15% utilization.
+Design area 8663 u^2 27% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/clear/openlane/top_left_tile/runs/23_03_20_06_14/results/routing/mca/process_corner_nom/top_left_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/clear/openlane/top_left_tile/runs/23_03_20_06_14/results/routing/mca/process_corner_nom/top_left_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/clear/openlane/top_left_tile/runs/23_03_20_14_45/results/routing/mca/process_corner_nom/top_left_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/clear/openlane/top_left_tile/runs/23_03_20_14_45/results/routing/mca/process_corner_nom/top_left_tile.lib...
 
