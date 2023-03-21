@@ -6,7 +6,7 @@ from cocotb.triggers import ClockCycles
 PROG_CLK = 37 
 PROG_RST = 4
 IO_ISOL_N = 1
-CCFF_HEAD = 26
+CCFF_HEAD = 12
 CCFF_TAIL = 34
 
 TEST_EN = 0
