@@ -21,8 +21,8 @@ set_propagated_clock [get_clocks prog_clk]
 set_propagated_clock [get_clocks clk0]
 
 # CLOCK UNCERTAINTY
-set_clock_uncertainty 0.3 [get_clocks prog_clk]
-set_clock_uncertainty 0.3 [get_clocks clk0]
+set_clock_uncertainty 0.25 [get_clocks prog_clk]
+set_clock_uncertainty 0.25 [get_clocks clk0]
 
 # INPUT TRANSITION
 set_input_transition 0.5 [all_inputs]

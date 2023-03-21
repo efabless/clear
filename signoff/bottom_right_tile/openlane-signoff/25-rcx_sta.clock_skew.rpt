@@ -1,0 +1,14 @@
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk0
+No launch/capture paths found.
+
+Clock prog_clk
+Latency      CRPR       Skew
+sb_8__0_.mem_top_track_34.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.84
+sb_8__0_.mem_top_track_34.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.74     -0.06       0.04
+

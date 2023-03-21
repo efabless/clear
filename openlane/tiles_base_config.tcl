@@ -19,6 +19,9 @@ set ::env(CLOCK_PERIOD) "200"
 set ::env(CLOCK_PORT) "prog_clk"
 set ::env(SYNTH_CLOCK_UNCERTAINTY) 0.1
 
+set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/../../FPGA88_SC_HD_Verilog/SRC/tile/$::env(DESIGN_NAME).v \
+                          $::env(DESIGN_DIR)/../../FPGA88_SC_HD_Verilog/SRC/submodules/*.v"
+
 # Synthesis
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 set ::env(SYNTH_BUFFERING) 0
@@ -37,22 +40,26 @@ set ::env(FP_PDN_VSPACING) 23.4
 # Placement
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 1
-set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.5
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.05
 set ::env(PL_ROUTABILITY_DRIVEN) 1
 set ::env(PL_TIME_DRIVEN) 0
-set ::env(PL_WIRELENGTH_COEF) 0.01
+set ::env(PL_WIRELENGTH_COEF) 0.008
+set ::env(DIODE_PADDING) 4
 
 # CTS
 set ::env(CLOCK_TREE_SYNTH) 1
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) 300
 
 # Routing
 set ::env(RT_MAX_LAYER) "met4"
 set ::env(GRT_ALLOW_CONGESTION) 1
+set ::env(GLB_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
-set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.3
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 300
 set ::env(DIODE_INSERTION_STRATEGY) 3
 set ::env(GRT_ANT_ITERS) 15
-set ::env(GRT_ANT_MARGIN) 15
+set ::env(GRT_ANT_MARGIN) 26
 
 # Signoff
 set ::env(RUN_KLAYOUT) 0
+set ::env(QUIT_ON_SYNTH_CHECKS) 1
