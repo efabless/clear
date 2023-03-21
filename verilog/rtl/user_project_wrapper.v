@@ -86,19 +86,19 @@ module user_project_wrapper #(
         Caravel IO                             | FPGA                 |  Mode
         
         io_in[1]                               | isol_n               | Input
-        io_in[9]                               | test_enable          | Input
-        io_in[10]                              | reset                | Input
-        io_out[12]                             | ccff_tail            | Input 
+        io_in[9]                               | reset                | Input
+        io_in[10]                              | test_enable          | Input
         io_in[14]                              | sc_tail              | Output
+        io_out[23]                             | ccff_tail            | Input
         io_out[22]                             | sc_head              | Input
         io_in[29]                              | prog_reset           | Input 
         io_in[34]                              | ccff_head            | Output
         io_out[35]                             | clk_sel              | Output
         io_in[36]                              | clk                  | Input
         io_in[37]                              | prog_clk             | Input
-        io_in[0]-[8:2]-[11]-[13]               | EMBEDDED_IO[45:36]   | Bidirectional
-        io_in[21:15]-[23]                      | EMBEDDED_IO[19:12]   | Bidirectional
-        io_in[28:24]-io_in[33:30]              | EMBEDDED_IO[121:113] | Bidirectional
+        io_in[0]-[8:2]-[13:11]                 | EMBEDDED_IO[46:36]   | Bidirectional
+        io_in[21:15]                           | EMBEDDED_IO[18:12]   | Bidirectional
+        io_in[28:24]-[33:30]                   | EMBEDDED_IO[127:119] | Bidirectional
 
     */
     // FPGA wires
@@ -118,39 +118,61 @@ module user_project_wrapper #(
     wire clk_sel;
     
     // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
-    assign gfpga_pad_io_soc_in[36] = io_in[0];
-    assign io_out[0] = gfpga_pad_io_soc_out[36];
-    assign io_oeb[0] = gfpga_pad_io_soc_dir[36];
+    assign gfpga_pad_io_soc_in[46] = io_in[0];
+    assign io_out[0] = gfpga_pad_io_soc_out[46];
+    assign io_oeb[0] = gfpga_pad_io_soc_dir[46];
 
-    assign gfpga_pad_io_soc_in[43:37] = io_in[8:2];
-    assign io_out[8:2] = gfpga_pad_io_soc_out[43:37];
-    assign io_oeb[8:2] = gfpga_pad_io_soc_dir[43:37];
+    generate 
+        genvar i;
+        for(i=0; i<=6; i=i+1) begin
+            assign gfpga_pad_io_soc_in[45-i] = io_in[2+i];
+            assign io_out[2+i] = gfpga_pad_io_soc_out[45-i];
+            assign io_oeb[2+i] = gfpga_pad_io_soc_dir[45-i];
+        end
+    endgenerate
 
-    assign gfpga_pad_io_soc_in[44] = io_in[11];
-    assign io_out[11] = gfpga_pad_io_soc_out[44];
-    assign io_oeb[11] = gfpga_pad_io_soc_dir[44];
+    assign gfpga_pad_io_soc_in[38] = io_in[11];
+    assign io_out[11] = gfpga_pad_io_soc_out[38];
+    assign io_oeb[11] = gfpga_pad_io_soc_dir[38];
 
-    assign gfpga_pad_io_soc_in[45] = io_in[13];
-    assign io_out[13] = gfpga_pad_io_soc_out[45];
-    assign io_oeb[13] = gfpga_pad_io_soc_dir[45];
+    assign gfpga_pad_io_soc_in[37] = io_in[12];
+    assign io_out[12] = gfpga_pad_io_soc_out[37];
+    assign io_oeb[12] = gfpga_pad_io_soc_dir[37];
+
+    assign gfpga_pad_io_soc_in[36] = io_in[13];
+    assign io_out[13] = gfpga_pad_io_soc_out[36];
+    assign io_oeb[13] = gfpga_pad_io_soc_dir[36];
+
+    // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
+    generate 
+        genvar i;
+        for(i=0; i<=6; i=i+1) begin
+            assign gfpga_pad_io_soc_in[19-i] = io_in[15+i];
+            assign io_out[15+i] = gfpga_pad_io_soc_out[19-i];
+            assign io_oeb[15+i] = gfpga_pad_io_soc_dir[19-i];
+        end
+    endgenerate
 
     // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
-    assign gfpga_pad_io_soc_in[117:113] = io_in[28:24];
-    assign io_out[28:24] = gfpga_pad_io_soc_out[117:113];
-    assign io_oeb[28:24] = gfpga_pad_io_soc_dir[117:113];
+    generate 
+        genvar i;
+        for(i=0; i<=4; i=i+1) begin
+            assign gfpga_pad_io_soc_in[127-i] = io_in[24+i];
+            assign io_out[24+i] = gfpga_pad_io_soc_out[127-i];
+            assign io_oeb[24+i] = gfpga_pad_io_soc_dir[127-i];
+        end
+    endgenerate
 
-    assign gfpga_pad_io_soc_in[121:118] = io_in[33:30];
-    assign io_out[33:30] = gfpga_pad_io_soc_out[121:118];
-    assign io_oeb[33:30] = gfpga_pad_io_soc_dir[121:118];
+    generate 
+        genvar i;
+        for(i=0; i<=3; i=i+1) begin
+            assign gfpga_pad_io_soc_in[122-i] = io_in[30+i];
+            assign io_out[30+i] = gfpga_pad_io_soc_out[122-i];
+            assign io_oeb[30+i] = gfpga_pad_io_soc_dir[122-i];
+        end
+    endgenerate
     
-    // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
-    assign gfpga_pad_io_soc_in[18:12] = io_in[21:15];
-    assign io_out[21:15] = gfpga_pad_io_soc_out[18:12];
-    assign io_oeb[21:15] = gfpga_pad_io_soc_dir[18:12];
-
-    assign gfpga_pad_io_soc_in[19] = io_in[23];
-    assign io_out[23] = gfpga_pad_io_soc_out[19];
-    assign io_oeb[23] = gfpga_pad_io_soc_dir[19];
+    
 
     // CCFF_HEAD - Input
     assign ccff_head = io_in[34];
@@ -166,9 +188,9 @@ module user_project_wrapper #(
     assign io_out[29] = 1'b0;
     assign io_oeb[29] = 1'b1;
 
-    assign reset = io_in[5];
-    assign io_out[5] = 1'b0;
-    assign io_oeb[5] = 1'b1;
+    assign reset = io_in[9];
+    assign io_out[9] = 1'b0;
+    assign io_oeb[9] = 1'b1;
 
     // isol_n -- Input
     assign isol_n = io_in[1];
@@ -176,17 +198,17 @@ module user_project_wrapper #(
     assign io_oeb[1] = 1'b1;
 
     // test_enable -- Input
-    assign test_enable = io_in[9];
-    assign io_out[9] = 1'b0;
-    assign io_oeb[9] = 1'b1;
+    assign test_enable = io_in[10];
+    assign io_out[10] = 1'b0;
+    assign io_oeb[10] = 1'b1;
 
-    // Connecting the Fabric IO 45 to 112 to the LA_out: 127 to 60
+    // Connecting the Fabric IO 47 to 118 to the LA_out: 127 to 56
     // MS: Disconnect the WBS bus dat_o lines
     generate 
         genvar i;
-        for(i=0; i<=67; i=i+1) begin
-            assign gfpga_pad_io_soc_in[45+i] = la_data_in[127-i];
-            assign la_data_out[127-i] = gfpga_pad_io_soc_out[45+i];
+        for(i=0; i<=71; i=i+1) begin
+            assign gfpga_pad_io_soc_in[47+i] = la_data_in[127-i];
+            assign la_data_out[127-i] = gfpga_pad_io_soc_out[47+i];
         end
     endgenerate
     
@@ -208,8 +230,8 @@ module user_project_wrapper #(
     assign io_oeb[36] = 1'b1;
 
     // CCFF-TAIL - Output
-    assign io_out[12] = ccff_tail;
-    assign io_oeb[12] = 1'b0;
+    assign io_out[23] = ccff_tail;
+    assign io_oeb[23] = 1'b0;
 
     // SC-HEAD -- Input
     assign sc_head = io_in[22];
