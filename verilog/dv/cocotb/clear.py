@@ -4,14 +4,18 @@ from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles
 
 PROG_CLK = 37 
-PROG_RST = 2 
+PROG_RST = 4
 IO_ISOL_N = 1
-CCFF_HEAD = 12
+CCFF_HEAD = 26
+CCFF_TAIL = 34
 
 TEST_EN = 0
-OP_RST = 3 
+OP_RST = 5
 OP_CLK = 36
 OP_CLK_SEL = 35 # clock seleceted if op would use OP_CLK or system clock
+
+SC_HEAD = 26 
+SC_TAIL = 11 
 
 class Clear: 
     def __init__(self, caravelEnv,period_op = None, period_prog = 25) -> None:
@@ -104,15 +108,22 @@ class Clear:
         await cocotb.triggers.Timer(self.period_prog*3, units="ns")
         reset.value = 0
 
-    async def _write_prog_bits(self,bit_stream):
+    async def _write_prog_bits(self,bit_stream,check_tail=False):
         # assert set and reset 
+        counter = 0
         for bit in bit_stream:
             self.ccff_head.value = int(bit)
             await ClockCycles(self.clk, 1)
-        self.clock_prog_thread.kill()
-        self.ccff_head.value =0
+            if check_tail: # used only when the passing the same array 2 times to see it got shifted right
+                counter +=1
+                tail_val = self.caravelEnv.dut._id(f"bin{CCFF_TAIL}", False).value.binstr
+                if tail_val != bit: 
+                    cocotb.log.error(f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_val}")
+        
     
     async def start_op(self):
+        self.clock_prog_thread.kill()
+        self.ccff_head.value =0
         await cocotb.triggers.Timer(3*self.period_prog, units="ns")
         self.op_reset.value = 0
 
