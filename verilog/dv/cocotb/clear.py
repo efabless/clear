@@ -4,18 +4,18 @@ from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles, FallingEdge
 
 PROG_CLK = 37 
-PROG_RST = 4
+PROG_RST = 29
 IO_ISOL_N = 1
-CCFF_HEAD = 12
-CCFF_TAIL = 34
+CCFF_HEAD = 34
+CCFF_TAIL = 23
 
-TEST_EN = 0
-OP_RST = 5
+TEST_EN = 10
+OP_RST = 9
 OP_CLK = 36
 OP_CLK_SEL = 35 # clock seleceted if op would use OP_CLK or system clock
 
 SC_HEAD = 26 
-SC_TAIL = 11 
+SC_TAIL = 14 
 
 class Clear: 
     def __init__(self, caravelEnv,period_op = None, period_prog = 25) -> None:
@@ -117,6 +117,7 @@ class Clear:
     async def _write_prog_bits(self,bit_stream,check_tail=False):
         # assert set and reset 
         counter = 0
+        tail_old = "0"
         for bit in bit_stream:
             await FallingEdge(self.clk)
             counter +=1
@@ -124,8 +125,9 @@ class Clear:
             cocotb.log.debug(f"[Clear] prog chain with {bit} bit number {counter}")
             if check_tail: # used only when the passing the same array 2 times to see it got shifted right
                 tail_val = self.caravelEnv.dut._id(f"bin{CCFF_TAIL}_monitor", False).value.binstr
-                if tail_val != bit: 
-                    cocotb.log.error(f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_val}")
+                if tail_old != bit: 
+                    cocotb.log.error(f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_old}")
+                tail_old = tail_val
         await FallingEdge(self.clk)
         
     
