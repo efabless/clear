@@ -145,7 +145,6 @@ module user_project_wrapper #(
 
     // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
     generate 
-        genvar i;
         for(i=0; i<=6; i=i+1) begin
             assign gfpga_pad_io_soc_in[19-i] = io_in[15+i];
             assign io_out[15+i] = gfpga_pad_io_soc_out[19-i];
@@ -155,7 +154,6 @@ module user_project_wrapper #(
 
     // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
     generate 
-        genvar i;
         for(i=0; i<=4; i=i+1) begin
             assign gfpga_pad_io_soc_in[127-i] = io_in[24+i];
             assign io_out[24+i] = gfpga_pad_io_soc_out[127-i];
@@ -164,7 +162,6 @@ module user_project_wrapper #(
     endgenerate
 
     generate 
-        genvar i;
         for(i=0; i<=3; i=i+1) begin
             assign gfpga_pad_io_soc_in[122-i] = io_in[30+i];
             assign io_out[30+i] = gfpga_pad_io_soc_out[122-i];
@@ -205,7 +202,6 @@ module user_project_wrapper #(
     // Connecting the Fabric IO 47 to 118 to the LA_out: 127 to 56
     // MS: Disconnect the WBS bus dat_o lines
     generate 
-        genvar i;
         for(i=0; i<=71; i=i+1) begin
             assign gfpga_pad_io_soc_in[47+i] = la_data_in[127-i];
             assign la_data_out[127-i] = gfpga_pad_io_soc_out[47+i];
