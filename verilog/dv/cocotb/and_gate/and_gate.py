@@ -9,7 +9,8 @@ from cocotb.triggers import ClockCycles
 async def and_gate(dut):
     caravelEnv = await test_configure(dut,timeout_cycles=57056)
     fpga_clear = Clear(caravelEnv)
-    bit_stream_path = f"{cocotb.plusargs['USER_PROJECT_ROOT']}/verilog/dv/cocotb/bit_streams/"
+    user_project_root = cocotb.plusargs['USER_PROJECT_ROOT'].replace('"',"")
+    bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_3.bit")
     """"
     IO Mapping 

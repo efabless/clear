@@ -12,7 +12,8 @@ async def chain_check_ones(dut):
     fpga_clear = Clear(caravelEnv)
     stream_length = 35888 +20
     stream_arr = [0 for _ in range(stream_length)]
-    bit_stream_path = f"{cocotb.plusargs['USER_PROJECT_ROOT']}/verilog/dv/cocotb/bit_streams/"
+    user_project_root = cocotb.plusargs['USER_PROJECT_ROOT'].replace('"',"")
+    bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_gate_2.bit")
     # await _write_prog_bits(bit_stream=fpga_clear.file_bit_stream,fpga_clear=fpga_clear)
     await _write_prog_bits(bit_stream=stream_arr,fpga_clear=fpga_clear)

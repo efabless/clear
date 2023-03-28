@@ -8,7 +8,8 @@ import random
 async def and_gate_direct(dut):
     caravelEnv = await test_configure(dut,timeout_cycles=36574)
     fpga_clear = Clear(caravelEnv)
-    bit_stream_path = f"{cocotb.plusargs['USER_PROJECT_ROOT']}/verilog/dv/cocotb/bit_streams/"
+    user_project_root = cocotb.plusargs['USER_PROJECT_ROOT'].replace('"',"")
+    bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_3.bit")
     await fpga_clear.start_op()
     a_input = caravelEnv.user_hdl.fpga_core_uut._id("gfpga_pad_io_soc_in[13]",False)

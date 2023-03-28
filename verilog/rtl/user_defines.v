@@ -15,9 +15,9 @@
 
 `default_nettype none
 
-`ifndef __USER_DEFINES_H_2
+`ifndef __USER_DEFINES_H
 // User GPIO initial configuration parameters
-`define __USER_DEFINES_H_2
+`define __USER_DEFINES_H
 
 
 // Authoritive source of these MODE defs is: caravel/verilog/rtl/user_defines.v
@@ -91,4 +91,4 @@
 `define USER_CONFIG_GPIO_36_INIT `GPIO_MODE_USER_STD_INPUT_NOPULL
 `define USER_CONFIG_GPIO_37_INIT `GPIO_MODE_USER_STD_INPUT_NOPULL
 
-`endif // __USER_DEFINES_H_2
+`endif // __USER_DEFINES_H
