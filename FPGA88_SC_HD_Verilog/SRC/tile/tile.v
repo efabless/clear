@@ -266,22 +266,22 @@ module tile
     wire top_width_0_height_0_subtile_0__pin_reg_in_0_;
 
 assign prog_reset = prog_reset_bottom_in;
-// assign prog_reset_top_in = prog_reset_left_in;
+assign prog_reset_top_in = prog_reset_left_in;
 assign prog_reset_right_out = prog_reset;
 assign prog_reset_top_out = prog_reset_right_out;
-// assign prog_reset_bottom_in = prog_reset_top_in;
+assign prog_reset_bottom_in = prog_reset_top_in;
 assign prog_reset_bottom_out = prog_reset_top_out;
 assign reset = reset_bottom_in;
 assign reset_top_out = reset_left_out;
 assign reset_left_out = reset;
-// assign reset_top_in = reset_right_in;
-// assign reset_bottom_in = reset_top_in;
+assign reset_top_in = reset_right_in;
+assign reset_bottom_in = reset_top_in;
 assign reset_bottom_out = reset_top_out;
 assign test_enable = test_enable_bottom_in;
 assign test_enable_top_out = test_enable_left_out;
-// assign test_enable_top_in = test_enable_right_in;
+assign test_enable_top_in = test_enable_right_in;
 assign test_enable_left_out = test_enable;
-// assign test_enable_bottom_in = test_enable_top_in;
+assign test_enable_bottom_in = test_enable_top_in;
 assign test_enable_bottom_out = test_enable_top_out;
     cbx_1__1_ cbx_1__1_
     (        
