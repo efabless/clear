@@ -3,3 +3,4 @@ Tests:
     - {name: and_gate_direct, sim: RTL}
     - {name: chain_check, sim: RTL}
     - {name: chain_check_ones, sim: RTL}
+    - {name: and_gate_la, sim: RTL}

@@ -2,6 +2,7 @@ from and_gate.and_gate import and_gate
 from and_gate_direct.and_gate_direct import and_gate_direct
 from chain_check.chain_check import chain_check
 from chain_check_ones.chain_check_ones import chain_check_ones
+from and_gate_la.and_gate_la import and_gate_la
 from hello_world_uart.hello_world_uart import hello_world_uart
 from counter_tests.counter_wb.counter_wb import counter_wb
 from counter_tests.counter_la.counter_la import counter_la
