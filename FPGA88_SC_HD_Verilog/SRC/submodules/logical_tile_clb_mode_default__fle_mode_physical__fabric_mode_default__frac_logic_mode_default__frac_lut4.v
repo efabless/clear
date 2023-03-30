@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     frac_lut4_in,
     prog_clk,
@@ -12,6 +16,10 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     frac_lut4_lut4_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input [0:3]frac_lut4_in;
     input prog_clk;
@@ -36,6 +44,11 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
 
     frac_lut4 frac_lut4_0_
     (
+            
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .in(frac_lut4_in),
         .mode(frac_lut4_0_mode),
         .mode_inv(frac_lut4_0__undriven_mode_inv),
@@ -46,7 +59,11 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
         .lut4_out(frac_lut4_lut4_out)
     );
     frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem
-    (
+    (     
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),

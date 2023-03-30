@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module grid_io_bottom_bottom
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     gfpga_pad_io_soc_in,
     isol_n,
@@ -20,6 +24,10 @@ module grid_io_bottom_bottom
     top_width_0_height_0_subtile_3__pin_inpad_0_
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input [0:3]gfpga_pad_io_soc_in;
     input isol_n;
@@ -59,7 +67,12 @@ module grid_io_bottom_bottom
 
     logical_tile_io_mode_io_ logical_tile_io_mode_io__0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in[0]),
         .io_outpad(top_width_0_height_0_subtile_0__pin_outpad_0_),
         .isol_n(isol_n),
@@ -72,7 +85,12 @@ module grid_io_bottom_bottom
     );
     logical_tile_io_mode_io_ logical_tile_io_mode_io__1
     (
-        .ccff_head(logical_tile_io_mode_io__0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_io_mode_io__0_ccff_tail),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in[1]),
         .io_outpad(top_width_0_height_0_subtile_1__pin_outpad_0_),
         .isol_n(isol_n),
@@ -85,7 +103,12 @@ module grid_io_bottom_bottom
     );
     logical_tile_io_mode_io_ logical_tile_io_mode_io__2
     (
-        .ccff_head(logical_tile_io_mode_io__1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_io_mode_io__1_ccff_tail),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in[2]),
         .io_outpad(top_width_0_height_0_subtile_2__pin_outpad_0_),
         .isol_n(isol_n),
@@ -98,7 +121,12 @@ module grid_io_bottom_bottom
     );
     logical_tile_io_mode_io_ logical_tile_io_mode_io__3
     (
-        .ccff_head(logical_tile_io_mode_io__2_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_io_mode_io__2_ccff_tail),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in[3]),
         .io_outpad(top_width_0_height_0_subtile_3__pin_outpad_0_),
         .isol_n(isol_n),

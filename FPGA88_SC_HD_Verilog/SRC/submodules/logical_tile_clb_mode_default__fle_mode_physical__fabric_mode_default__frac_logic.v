@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     frac_logic_cin,
     frac_logic_in,
@@ -12,6 +16,10 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     frac_logic_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input frac_logic_cin;
     input [0:3]frac_logic_in;
@@ -89,14 +97,24 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     );
     logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__carry_follower logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__carry_follower_0
     (
-        .carry_follower_a(direct_interc_5_out),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.carry_follower_a(direct_interc_5_out),
         .carry_follower_b(direct_interc_6_out),
         .carry_follower_cin(direct_interc_7_out),
         .carry_follower_cout(logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__carry_follower_0_carry_follower_cout)
     );
     logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4 logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .frac_lut4_in({direct_interc_2_out, direct_interc_3_out, mux_tree_size2_1_out, direct_interc_4_out}),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
@@ -107,7 +125,12 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     );
     mux_tree_size2_mem mem_frac_logic_out_0
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_ccff_tail),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(mux_tree_size2_mem_0_ccff_tail),
@@ -115,7 +138,12 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     );
     mux_tree_size2_mem mem_frac_lut4_0_in_2
     (
-        .ccff_head(mux_tree_size2_mem_0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(mux_tree_size2_mem_0_ccff_tail),
         .prog_clk(prog_clk),
         .prog_reset(prog_reset),
         .ccff_tail(ccff_tail),
@@ -123,14 +151,24 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
     );
     mux_tree_size2 mux_frac_logic_out_0
     (
-        .in({logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_frac_lut4_lut4_out, logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_frac_lut4_lut3_out[0]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_frac_lut4_lut4_out, logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0_frac_lut4_lut3_out[0]}),
         .sram(mux_tree_size2_0_sram),
         .sram_inv(mux_frac_logic_out_0_undriven_sram_inv),
         .out(frac_logic_out[0])
     );
     mux_tree_size2 mux_frac_lut4_0_in_2
     (
-        .in({frac_logic_cin, frac_logic_in[2]}),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in({frac_logic_cin, frac_logic_in[2]}),
         .sram(mux_tree_size2_1_sram),
         .sram_inv(mux_frac_lut4_0_in_2_undriven_sram_inv),
         .out(mux_tree_size2_1_out)
