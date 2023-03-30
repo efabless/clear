@@ -1,92 +1,81 @@
-set script_dir [file dirname [file normalize [info script]]]
+# SPDX-FileCopyrightText: 2020 Efabless Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 
-source $script_dir/fixed_wrapper_cfgs.tcl
+source $::env(DESIGN_DIR)/fixed_wrapper_cfgs.tcl
+source $::env(DESIGN_DIR)/default_wrapper_cfgs.tcl
 
 set ::env(DESIGN_NAME) user_project_wrapper
 
-set ::env(RUN_KLAYOUT) 0
+set ::env(CLOCK_PORT) "wb_clk_i"
 
-set ::env(SYNTH_READ_BLACKBOX_LIB) 1
-
-set ::env(CLOCK_TREE_SYNTH) 0
-## Internal Macros
-### Macro Placement
-set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
-
-set ::env(PDN_CFG) $script_dir/pdn.tcl
-set ::env(FP_PDN_CORE_RING) 1
-set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 2920 3520"
-set ::env(GLB_RT_OBS) "met4 143.97000 3304 147.07000 3314.49439,\
-						met4 143.97000 401 147.07000 404.52000"
-
-set ::unit 2.4
-set ::env(FP_IO_VEXTEND) [expr 2*$::unit]
-set ::env(FP_IO_HEXTEND) [expr 2*$::unit]
-set ::env(FP_IO_VLENGTH) $::unit
-set ::env(FP_IO_HLENGTH) $::unit
-
-set ::env(FP_IO_VTHICKNESS_MULT) 4
-set ::env(FP_IO_HTHICKNESS_MULT) 4
-
-set ::env(FP_PDN_VERTICAL_HALO) -11
-set ::env(FP_PDN_HORIZONTAL_HALO) 10
-
-set ::env(FP_PDN_CHECK_NODES) "0"
-
-set ::env(CLOCK_PORT) "w"
-set ::env(CLOCK_PERIOD) "10"
-set ::env(PL_BASIC_PLACEMENT) 1
-set ::env(PL_TARGET_DENSITY) 0.1
-
-set ::env(DIODE_INSERTION_STRATEGY) 4
-set ::env(MAGIC_GENERATE_LEF) 0
-
-set ::env(GLB_RT_ADJUSTMENT) 0.21
-
-set ::env(FP_PDN_VOFFSET) 5
-set ::env(FP_PDN_HOFFSET) $::env(FP_PDN_VOFFSET)
-
-# PDN Pitch
-set ::env(FP_PDN_VPITCH) 180
-set ::env(FP_PDN_HPITCH) $::env(FP_PDN_VPITCH)
-
-set ::env(CHECK_ASSIGN_STATEMENTS) 0
-
-# set ::env(VDD_NET) "vccd1"
-# set ::env(GND_NET) "vssd1"
-set ::env(FP_PDN_MACRO_HOOKS) "fpga_core_uut vccd1 vssd1 VPWR VGND"
-set ::env(STD_CELL_POWER_PINS) "VPB VPWR"
-set ::env(STD_CELL_GROUND_PINS) "VNB VGND"
-set ::env(FP_PDN_ENABLE_GLOBAL_CONNECTIONS) 1
-set ::env(FP_PDN_IRDROP) 0
-
-set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
-set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
-set ::env(SYNTH_USE_PG_PINS_DEFINES) "USE_POWER_PINS"
-set ::env(FP_DEF_TEMPLATE) $::env(CARAVEL_ROOT)/def/user_project_wrapper.def
-
-
-set ::env(QUIT_ON_MAGIC_DRC) 0
-# set ::env(QUIT_ON_LVS_ERROR) 0
-set ::env(CLOCK_TREE_SYNTH) 0
-set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 0
-set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
-set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
-
-# Need to fix a FastRoute bug for this to work, but it's good
-# for a sense of "isolation"
-set ::env(MAGIC_ZEROIZE_ORIGIN) 0
-set ::env(MAGIC_WRITE_FULL_LEF) 0
+set ::env(CLOCK_PERIOD) "25"
 
 set ::env(VERILOG_FILES) "\
-	$script_dir/../../verilog/rtl/user_project_wrapper.v"
+	$script_dir/../../verilog/rtl/user_project_wrapper.v \
+"
 
 set ::env(VERILOG_FILES_BLACKBOX) "\
-	$script_dir/../../FPGA88_SC_HD_Verilog/SRC/fpga_core.v"
-
+    $::env(DESIGN_DIR)/../../verilog/gl/fpga_core.v \
+"
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/fpga_core.lef"
-
+    $::env(DESIGN_DIR)/../../lef/fpga_core.lef \
+"
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/fpga_core.gds"
+    $::env(DESIGN_DIR)/../../gds/fpga_core.gds \
+"
+# Synthesis
+set ::env(SYNTH_READ_BLACKBOX_LIB) 1
+set ::env(SYNTH_BUFFERING) 0
+set ::env(SYNTH_MAX_TRAN) 0.75
+set ::env(SYNTH_MAX_FANOUT) 20
+set ::env(QUIT_ON_SYNTH_CHECKS) 0
+
+# Floorplan
+set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
+set ::env(PDN_CFG) [glob $::env(DESIGN_DIR)/pdn_cfg.tcl]
+set ::env(FP_PDN_CHECK_NODES) 0
+
+# Placement
+set ::env(PL_TARGET_DENSITY) 0.20
+set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
+set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) 0
+set ::env(PL_ROUTABILITY_DRIVEN) 1
+set ::env(PL_TIME_DRIVEN) 0
+set ::env(PL_WIRELENGTH_COEF) 0.01
+set ::env(PL_RESIZER_MAX_WIRE_LENGTH) 800
+
+# CTS
+set ::env(CLOCK_TREE_SYNTH) 1
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) 1000
+
+# Routing
+set ::env(ROUTING_CORES) 24
+set ::env(RT_MAX_LAYER) "met4"
+set ::env(GRT_ALLOW_CONGESTION) 1
+set ::env(GLB_RESIZER_DESIGN_OPTIMIZATIONS) 1
+set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 600
+
+set ::env(GRT_REPAIR_ANTENNAS) 1
+set ::env(RUN_HEURISTIC_DIODE_INSERTION) 1
+set ::env(HEURISTIC_ANTENNA_THRESHOLD) 90
+set ::env(DIODE_ON_PORTS) "both"
+set ::env(GRT_ANT_ITERS) 15
+set ::env(GRT_ANT_MARGIN) 20
+
+# Signoff
+set ::env(RUN_KLAYOUT) 0
+set ::env(STA_WRITE_LIB) 0
+set ::env(RUN_IRDROP_REPORT) 0
