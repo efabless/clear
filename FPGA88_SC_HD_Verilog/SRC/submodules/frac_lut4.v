@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module frac_lut4
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     in,
     mode,
     mode_inv,
@@ -12,6 +16,10 @@ module frac_lut4
     lut4_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input [0:3]in;
     input mode;
     input mode_inv;
@@ -41,7 +49,12 @@ module frac_lut4
 
     frac_lut4_mux frac_lut4_mux_0_
     (
-        .in(sram),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.in(sram),
         .sram({sky130_fd_sc_hd__buf_2_0_X, sky130_fd_sc_hd__buf_2_1_X, sky130_fd_sc_hd__buf_2_2_X, sky130_fd_sc_hd__buf_2_3_X}),
         .sram_inv({sky130_fd_sc_hd__inv_1_0_Y, sky130_fd_sc_hd__inv_1_1_Y, sky130_fd_sc_hd__inv_1_2_Y, sky130_fd_sc_hd__inv_1_3_Y}),
         .lut2_out(lut2_out),
@@ -50,47 +63,92 @@ module frac_lut4
     );
     sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_2_0_
     (
-        .A(in[0]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[0]),
         .X(sky130_fd_sc_hd__buf_2_0_X)
     );
     sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_2_1_
     (
-        .A(in[1]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[1]),
         .X(sky130_fd_sc_hd__buf_2_1_X)
     );
     sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_2_2_
     (
-        .A(in[2]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[2]),
         .X(sky130_fd_sc_hd__buf_2_2_X)
     );
     sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_2_3_
     (
-        .A(sky130_fd_sc_hd__or2_1_0_X),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(sky130_fd_sc_hd__or2_1_0_X),
         .X(sky130_fd_sc_hd__buf_2_3_X)
     );
     sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__inv_1_0_
     (
-        .A(in[0]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[0]),
         .Y(sky130_fd_sc_hd__inv_1_0_Y)
     );
     sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__inv_1_1_
     (
-        .A(in[1]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[1]),
         .Y(sky130_fd_sc_hd__inv_1_1_Y)
     );
     sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__inv_1_2_
     (
-        .A(in[2]),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(in[2]),
         .Y(sky130_fd_sc_hd__inv_1_2_Y)
     );
     sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__inv_1_3_
     (
-        .A(sky130_fd_sc_hd__or2_1_0_X),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(sky130_fd_sc_hd__or2_1_0_X),
         .Y(sky130_fd_sc_hd__inv_1_3_Y)
     );
     sky130_fd_sc_hd__or2_1 sky130_fd_sc_hd__or2_1_0_
     (
-        .A(mode),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A(mode),
         .B(in[3]),
         .X(sky130_fd_sc_hd__or2_1_0_X)
     );

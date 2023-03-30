@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ff_D,
     ff_DI,
     ff_clk,
@@ -10,6 +14,10 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff
     ff_Q
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ff_D;
     input ff_DI;
     input ff_clk;
@@ -26,7 +34,12 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff
 
     sky130_fd_sc_hd__sdfrtp_1 sky130_fd_sc_hd__sdfrtp_1_0_
     (
-        .CLK(ff_clk),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.CLK(ff_clk),
         .D(ff_D),
         .RESET_B(ff_reset),
         .SCD(ff_DI),

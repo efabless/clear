@@ -11,13 +11,23 @@
 `default_nettype none
 
 // ----- Verilog module for io -----
-module io(IO_ISOL_N,
+module io(
+          `ifdef USE_POWER_PINS
+          VPWR,
+          VGND, 
+          `endif
+          IO_ISOL_N,
           SOC_IN,
           SOC_OUT,
           SOC_DIR,
           FPGA_OUT,
           FPGA_DIR,
           FPGA_IN);
+  
+`ifdef USE_POWER_PINS
+input VPWR;
+input VGND;
+`endif     
 //----- GLOBAL PORTS -----
 input [0:0] IO_ISOL_N;
 //----- GPIN PORTS -----
@@ -44,20 +54,35 @@ output [0:0] FPGA_IN;
   wire SOC_DIR_N;
 
   //
-  sky130_fd_sc_hd__or2b_4 ISOL_EN_GATE (.B_N(IO_ISOL_N),
+  sky130_fd_sc_hd__or2b_4 ISOL_EN_GATE (                                  
+                                        `ifdef USE_POWER_PINS 
+                                        .VPWR(VPWR), 
+                                        .VGND(VGND),  
+                                        `endif 
+                                        .B_N(IO_ISOL_N),
                                         .A(FPGA_DIR),
                                         .X(SOC_DIR)
                                        );
 
   //
-  sky130_fd_sc_hd__inv_1 INV_SOC_DIR (.A(SOC_DIR), .Y(SOC_DIR_N));
-  sky130_fd_sc_hd__ebufn_4 IN_PROTECT_GATE (.TE_B(SOC_DIR_N),
+  sky130_fd_sc_hd__inv_1 INV_SOC_DIR (`ifdef USE_POWER_PINS .VPWR(VPWR), .VGND(VGND),`endif .A(SOC_DIR), .Y(SOC_DIR_N));
+  sky130_fd_sc_hd__ebufn_4 IN_PROTECT_GATE (
+                                            `ifdef USE_POWER_PINS 
+                                            .VPWR(VPWR), 
+                                            .VGND(VGND),  
+                                            `endif 
+                                            .TE_B(SOC_DIR_N),
                                             .A(SOC_IN),
                                             .Z(FPGA_IN)
                                             );
 
   //
-  sky130_fd_sc_hd__ebufn_4 OUT_PROTECT_GATE (.TE_B(SOC_DIR),
+  sky130_fd_sc_hd__ebufn_4 OUT_PROTECT_GATE (
+                                            `ifdef USE_POWER_PINS 
+                                             .VPWR(VPWR), 
+                                             .VGND(VGND),  
+                                             `endif 
+                                             .TE_B(SOC_DIR),
                                              .A(FPGA_OUT),
                                              .Z(SOC_OUT)
                                              );

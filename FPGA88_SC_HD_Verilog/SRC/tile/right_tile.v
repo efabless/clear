@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module right_tile
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head_0_0,
     ccff_head_1,
     ccff_head_2,
@@ -77,6 +81,10 @@ module right_tile
     top_width_0_height_0_subtile_0__pin_O_7_
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head_0_0;
     input ccff_head_1;
     input ccff_head_2;
@@ -267,24 +275,29 @@ module right_tile
     wire top_width_0_height_0_subtile_0__pin_reg_in_0_;
 
 assign prog_reset = prog_reset_bottom_in;
-// assign prog_reset_top_in = prog_reset_left_in;
+assign prog_reset_top_in = prog_reset_left_in;
 assign prog_reset_top_out = prog_reset;
-// assign prog_reset_bottom_in = prog_reset_top_in;
+assign prog_reset_bottom_in = prog_reset_top_in;
 assign prog_reset_bottom_out = prog_reset_top_out;
 assign reset = reset_bottom_in;
 assign reset_top_out = reset_left_out;
 assign reset_left_out = reset;
-// assign reset_top_in = reset_right_in;
-// assign reset_bottom_in = reset_top_in;
+assign reset_top_in = reset_right_in;
+assign reset_bottom_in = reset_top_in;
 assign reset_bottom_out = reset_top_out;
 assign test_enable = test_enable_bottom_in;
 assign test_enable_top_out = test_enable_left_out;
-// assign test_enable_top_in = test_enable_right_in;
+assign test_enable_top_in = test_enable_right_in;
 assign test_enable_left_out = test_enable;
-// assign test_enable_bottom_in = test_enable_top_in;
+assign test_enable_bottom_in = test_enable_top_in;
 assign test_enable_bottom_out = test_enable_top_out;
     cbx_1__1_ cbx_8__1_
     (
+            
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_tail_2),
         .chanx_left_in(chanx_left_in),
         .chanx_right_in(chanx_left_out_0),
@@ -312,6 +325,11 @@ assign test_enable_bottom_out = test_enable_top_out;
     );
     cby_8__1_ cby_8__1_
     (
+            
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head_1),
         .ccff_head_0(ccff_head_0_0),
         .chany_bottom_in(chany_bottom_in),
@@ -349,6 +367,11 @@ assign test_enable_bottom_out = test_enable_top_out;
     );
     grid_clb grid_clb_8__1_
     (
+            
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_tail_0_0),
         .clk0(clk0),
         .prog_clk(prog_clk),
@@ -413,6 +436,10 @@ assign test_enable_bottom_out = test_enable_top_out;
     );
     sb_8__1_ sb_8__1_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_10_(right_width_0_height_0_subtile_0__pin_O_10_),
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_11_(right_width_0_height_0_subtile_0__pin_O_11_),
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_12_(right_width_0_height_0_subtile_0__pin_O_12_),

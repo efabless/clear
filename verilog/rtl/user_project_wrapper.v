@@ -234,7 +234,12 @@ module user_project_wrapper #(
     assign io_out[22] = 1'b0;
     assign io_oeb[22] = 1'b1;
 
-    fpga_core fpga_core_uut(.prog_clk(prog_clk),
+    fpga_core fpga_core_uut(
+        `ifdef USE_POWER_PINS
+            .VPWR(vccd1),	
+            .VGND(vssd1),	
+        `endif
+        .prog_clk(prog_clk),
         .test_enable(test_enable),
         .clk(clk),
         .isol_n(isol_n),

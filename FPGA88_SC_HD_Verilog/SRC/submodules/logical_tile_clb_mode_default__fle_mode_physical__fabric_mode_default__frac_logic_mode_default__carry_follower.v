@@ -2,12 +2,20 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__carry_follower
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     carry_follower_a,
     carry_follower_b,
     carry_follower_cin,
     carry_follower_cout
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input carry_follower_a;
     input carry_follower_b;
     input carry_follower_cin;
@@ -20,7 +28,12 @@ module logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__fr
 
     sky130_fd_sc_hd__mux2_1 sky130_fd_sc_hd__mux2_1_wrapper_0_
     (
-        .A0(carry_follower_a),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.A0(carry_follower_a),
         .A1(carry_follower_b),
         .S(carry_follower_cin),
         .X(carry_follower_cout)

@@ -7,7 +7,7 @@ module const1
 
     output const1;
 
-    wire \<const1> ;
+    wire \<const1> = 1 ;
     wire const1;
 
 assign const1 = \<const1> ;

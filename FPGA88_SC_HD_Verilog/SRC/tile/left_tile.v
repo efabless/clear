@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module left_tile
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     ccff_head_0,
     chanx_right_in,
@@ -51,6 +55,10 @@ module left_tile
     test_enable_top_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input ccff_head_0;
     input [29:0]chanx_right_in;
@@ -151,21 +159,25 @@ module left_tile
     wire top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_;
 
 assign prog_reset = prog_reset_bottom_in;
-// assign prog_reset_top_in = prog_reset_left_in;
+assign prog_reset_top_in = prog_reset_left_in;
 assign prog_reset_right_out = prog_reset;
 assign prog_reset_top_out = prog_reset_right_out;
-// assign prog_reset_bottom_in = prog_reset_top_in;
+assign prog_reset_bottom_in = prog_reset_top_in;
 assign prog_reset_bottom_out = prog_reset_top_out;
 assign reset_top_out = reset_bottom_in;
-// assign reset_top_in = reset_right_in;
-// assign reset_bottom_in = reset_top_in;
+assign reset_top_in = reset_right_in;
+assign reset_bottom_in = reset_top_in;
 assign reset_bottom_out = reset_top_out;
 assign test_enable_top_out = test_enable_bottom_in;
-// assign test_enable_top_in = test_enable_right_in;
-// assign test_enable_bottom_in = test_enable_top_in;
+assign test_enable_top_in = test_enable_right_in;
+assign test_enable_bottom_in = test_enable_top_in;
 assign test_enable_bottom_out = test_enable_top_out;
     cby_0__1_ cby_0__1_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head_0(ccff_head_0),
         .chany_bottom_in(chany_bottom_in),
         .chany_top_in(chany_bottom_out_0),
@@ -185,6 +197,10 @@ assign test_enable_bottom_out = test_enable_top_out;
     );
     sb_0__1_ sb_0__1_
     (
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .bottom_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_(right_width_0_height_0_subtile_0__pin_inpad_0_),
         .bottom_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_(right_width_0_height_0_subtile_1__pin_inpad_0_),
         .bottom_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_(right_width_0_height_0_subtile_2__pin_inpad_0_),

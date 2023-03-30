@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_default__fle
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     fle_cin,
     fle_clk,
@@ -19,6 +23,10 @@ module logical_tile_clb_mode_default__fle
     fle_sc_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input fle_cin;
     input fle_clk;
@@ -136,7 +144,12 @@ module logical_tile_clb_mode_default__fle
     );
     logical_tile_clb_mode_default__fle_mode_physical__fabric logical_tile_clb_mode_default__fle_mode_physical__fabric_0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .fabric_cin(direct_interc_11_out),
         .fabric_clk(direct_interc_13_out),
         .fabric_in({direct_interc_5_out, direct_interc_6_out, direct_interc_7_out, direct_interc_8_out}),

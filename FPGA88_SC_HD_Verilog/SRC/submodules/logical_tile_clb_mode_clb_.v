@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_clb_mode_clb_
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     clb_I0,
     clb_I0i,
@@ -34,6 +38,10 @@ module logical_tile_clb_mode_clb_
     clb_sc_out
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input [0:1]clb_I0;
     input [0:1]clb_I0i;
@@ -664,7 +672,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_0
     (
-        .ccff_head(ccff_head),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(ccff_head),
         .fle_cin(direct_interc_25_out),
         .fle_clk(direct_interc_27_out),
         .fle_in({direct_interc_19_out, direct_interc_20_out, direct_interc_21_out, direct_interc_22_out}),
@@ -682,7 +695,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_1
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_0_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_0_ccff_tail),
         .fle_cin(direct_interc_34_out),
         .fle_clk(direct_interc_36_out),
         .fle_in({direct_interc_28_out, direct_interc_29_out, direct_interc_30_out, direct_interc_31_out}),
@@ -700,7 +718,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_2
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_1_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_1_ccff_tail),
         .fle_cin(direct_interc_43_out),
         .fle_clk(direct_interc_45_out),
         .fle_in({direct_interc_37_out, direct_interc_38_out, direct_interc_39_out, direct_interc_40_out}),
@@ -718,7 +741,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_3
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_2_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_2_ccff_tail),
         .fle_cin(direct_interc_52_out),
         .fle_clk(direct_interc_54_out),
         .fle_in({direct_interc_46_out, direct_interc_47_out, direct_interc_48_out, direct_interc_49_out}),
@@ -736,7 +764,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_4
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_3_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_3_ccff_tail),
         .fle_cin(direct_interc_61_out),
         .fle_clk(direct_interc_63_out),
         .fle_in({direct_interc_55_out, direct_interc_56_out, direct_interc_57_out, direct_interc_58_out}),
@@ -754,7 +787,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_5
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_4_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_4_ccff_tail),
         .fle_cin(direct_interc_70_out),
         .fle_clk(direct_interc_72_out),
         .fle_in({direct_interc_64_out, direct_interc_65_out, direct_interc_66_out, direct_interc_67_out}),
@@ -772,7 +810,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_6
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_5_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_5_ccff_tail),
         .fle_cin(direct_interc_79_out),
         .fle_clk(direct_interc_81_out),
         .fle_in({direct_interc_73_out, direct_interc_74_out, direct_interc_75_out, direct_interc_76_out}),
@@ -790,7 +833,12 @@ module logical_tile_clb_mode_clb_
     );
     logical_tile_clb_mode_default__fle logical_tile_clb_mode_default__fle_7
     (
-        .ccff_head(logical_tile_clb_mode_default__fle_6_ccff_tail),
+        
+ 	`ifdef USE_POWER_PINS 
+	.VPWR(VPWR), 
+	.VGND(VGND),  
+	`endif 
+	.ccff_head(logical_tile_clb_mode_default__fle_6_ccff_tail),
         .fle_cin(direct_interc_88_out),
         .fle_clk(direct_interc_90_out),
         .fle_in({direct_interc_82_out, direct_interc_83_out, direct_interc_84_out, direct_interc_85_out}),

@@ -2,6 +2,10 @@
 //netlist name: FPGA88_SOFA_A
 module logical_tile_io_mode_io_
 (
+    `ifdef USE_POWER_PINS
+    VPWR,
+    VGND, 
+    `endif
     ccff_head,
     gfpga_pad_io_soc_in,
     io_outpad,
@@ -14,6 +18,10 @@ module logical_tile_io_mode_io_
     io_inpad
 );
 
+    `ifdef USE_POWER_PINS
+    input VPWR;
+    input VGND;
+    `endif
     input ccff_head;
     input gfpga_pad_io_soc_in;
     input io_outpad;
@@ -50,6 +58,11 @@ module logical_tile_io_mode_io_
     );
     logical_tile_io_mode_physical__iopad logical_tile_io_mode_physical__iopad_0
     (
+
+        `ifdef USE_POWER_PINS 
+        .VPWR(VPWR), 
+        .VGND(VGND),  
+        `endif 
         .ccff_head(ccff_head),
         .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in),
         .iopad_outpad(direct_interc_1_out),
