@@ -10,13 +10,13 @@ module bottom_left_tile
     chanx_right_in,
     chany_top_in,
     prog_clk,
-    prog_reset_top_in,
-    reset_top_in,
+    prog_reset,
+    reset,
     right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_,
     right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_,
     right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_,
     right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_,
-    test_enable_top_in,
+    test_enable,
     top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_,
     top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_,
     top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_,
@@ -34,13 +34,13 @@ module bottom_left_tile
     input [29:0]chanx_right_in;
     input [29:0]chany_top_in;
     input prog_clk;
-    input prog_reset_top_in;
-    input reset_top_in;
+    input prog_reset;
+    input reset;
     input right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_;
     input right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_;
     input right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_;
     input right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_;
-    input test_enable_top_in;
+    input test_enable;
     input top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_;
     input top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_;
     input top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_;
@@ -57,19 +57,17 @@ module bottom_left_tile
     wire [29:0]chany_top_out;
     wire prog_clk;
     wire prog_reset;
-    wire prog_reset_top_in;
-    wire reset_top_in;
+    wire reset;
     wire right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_;
     wire right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_;
     wire right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_;
     wire right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_;
-    wire test_enable_top_in;
+    wire test_enable;
     wire top_left_grid_right_width_0_height_0_subtile_0__pin_inpad_0_;
     wire top_left_grid_right_width_0_height_0_subtile_1__pin_inpad_0_;
     wire top_left_grid_right_width_0_height_0_subtile_2__pin_inpad_0_;
     wire top_left_grid_right_width_0_height_0_subtile_3__pin_inpad_0_;
 
-assign prog_reset = prog_reset_top_in;
     sb_0__0_ sb_0__0_
     (
         
