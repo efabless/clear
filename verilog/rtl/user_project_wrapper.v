@@ -106,9 +106,17 @@ module user_project_wrapper #(
     wire test_enable;
     wire isol_n;
     wire clk;
+
+`ifdef PnR
+    wire [127:0] gfpga_pad_io_soc_in;
+    wire [127:0] gfpga_pad_io_soc_out;
+    wire [127:0] gfpga_pad_io_soc_dir;
+`else
     wire [0:127] gfpga_pad_io_soc_in;
     wire [0:127] gfpga_pad_io_soc_out;
     wire [0:127] gfpga_pad_io_soc_dir;
+`endif
+
     wire ccff_head;
     wire ccff_tail;
     wire prog_reset;

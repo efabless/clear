@@ -41,6 +41,7 @@ set ::env(SYNTH_BUFFERING) 0
 set ::env(SYNTH_MAX_TRAN) 0.75
 set ::env(SYNTH_MAX_FANOUT) 20
 set ::env(QUIT_ON_SYNTH_CHECKS) 0
+set ::env(SYNTH_DEFINES) "PnR"
 
 # Floorplan
 set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
