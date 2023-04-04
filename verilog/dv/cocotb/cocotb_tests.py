@@ -1,4 +1,5 @@
 from and_gate.and_gate import and_gate
+from and_gate_no_prog.and_gate_no_prog import and_gate_no_prog
 from and_gate_direct.and_gate_direct import and_gate_direct
 from chain_check.chain_check import chain_check
 from chain_check_ones.chain_check_ones import chain_check_ones

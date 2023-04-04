@@ -237,6 +237,15 @@ class Chain_ff:
 
         self.location.append(wire_found.instance)
         self.location_types.append(wire_found.port_module)
+        # out_of_ff = self.get_out_port_connection(
+        #     "Q", self.location[-1], self.location_types[-2]
+        # )
+        # if isinstance(out_of_ff.name, Identifier):
+        #     ff = ".".join(self.location[:-1]) +"."+ out_of_ff.name.name
+        # elif isinstance(out_of_ff.name, Pointer):
+        #     ff = ".".join(self.location[:-1]) + f".{out_of_ff.name.var}[{out_of_ff.name.ptr}]"
+        # else: 
+        #     raise TypeError(f"flip flop out port  has an expected type {type(out_of_ff)}") 
         ff = ".".join(self.location) + ".Q"
         print(ff)
 
