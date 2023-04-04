@@ -1,9 +1,9 @@
 Tests: 
     # - {name: and_gate, sim: RTL}
-    - {name: and_gate_no_prog, sim: RTL}
+    # - {name: and_gate_no_prog, sim: RTL}
     # - {name: and_gate_direct, sim: RTL}
     # - {name: chain_check, sim: RTL}
     # - {name: chain_check_ones, sim: RTL}
     # - {name: and_gate_la, sim: RTL}
     # - {name: and_gate, sim: GL}
-    # - {name: counter, sim: RTL}
+    - {name: counter, sim: RTL}

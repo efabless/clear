@@ -2,6 +2,7 @@
 
 void main(){
     mgmt_gpio_wr(0);
+    enable_hk_spi(0);
     mgmt_gpio_o_enable();
     configure_gpio(12,GPIO_MODE_USER_STD_INPUT_NOPULL); // clk
     configure_gpio(11,GPIO_MODE_USER_STD_INPUT_NOPULL); // rst

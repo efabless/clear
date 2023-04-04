@@ -151,6 +151,7 @@ class Chain_ff:
             ]  # assumed all files has only 1 module
         return self.modules_obj
 
+    # underdeveloping
     def get_wire_connection(self, wire, module):
         """return what the wire connected to in the module
         can't be an array"""
@@ -176,6 +177,7 @@ class Chain_ff:
                                                 )
         return None
 
+    # underdeveloping
     def get_port_connection(self, port_name, instance_name, module):
         """return what  wire connected to port of some instance
         can't be an array"""

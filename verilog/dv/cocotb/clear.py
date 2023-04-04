@@ -155,8 +155,10 @@ class Clear:
         await FallingEdge(self.clk)
 
     def _write_prog_bits_back_door(self, bit_stream):
-        with open("/home/rady/caravel/clear/clear/verilog/dv/cocotb/ff_paths.txt", 'r') as f:
-            ff_count = len(bit_stream) -1
+        user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
+        user_project_cocotb_path = f"{user_project_root}/verilog/dv/cocotb/"
+        with open(f"{user_project_cocotb_path}/ff_paths.txt", 'r') as f:
+            ff_count = len(bit_stream) - 1
             for line in f:
                 line = line.strip()
                 ff_hdl = self.caravelEnv.user_hdl.fpga_core_uut._id(line, False)
