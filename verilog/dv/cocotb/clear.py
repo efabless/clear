@@ -65,15 +65,15 @@ class Clear:
             )
         return self.file_bit_stream
 
-    async def program_fpga(self, bit_stream_file=None, stream_arr=None):
+    async def program_fpga(self, bit_stream_file=None, stream_arr=None, prog_backdoor=False):
         """main function to be called"""
         if bit_stream_file is None and stream_arr is None:
             cocotb.log.critical(
-                f"[Clear] Neither bit_stream_file nor stream_arr is provided "
+                "[Clear] Neither bit_stream_file nor stream_arr is provided "
             )
         elif bit_stream_file is not None and stream_arr is not None:
             cocotb.log.critical(
-                f"[Clear] Only one argument can be passed as non-None bit_stream_file or stream_arr"
+                "[Clear] Only one argument can be passed as non-None bit_stream_file or stream_arr"
             )
         if bit_stream_file is not None:
             bit_stream = self._read_bit_stream(bit_stream_file)
@@ -82,7 +82,10 @@ class Clear:
         await self._reset_prog()
         self._start_prog_clock()
         cocotb.log.info("[Clear] start writing the bit stream")
-        await self._write_prog_bits(bit_stream)
+        if not prog_backdoor:
+            await self._write_prog_bits(bit_stream)
+        else:
+            self._write_prog_bits_back_door(bit_stream)
         cocotb.log.info("[Clear] finish writing the bit stream")
 
     def _start_prog_clock(self):
@@ -150,6 +153,18 @@ class Clear:
                     )
                 tail_old = tail_val
         await FallingEdge(self.clk)
+
+    def _write_prog_bits_back_door(self, bit_stream):
+        user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
+        user_project_cocotb_path = f"{user_project_root}/verilog/dv/cocotb/"
+        with open(f"{user_project_cocotb_path}/ff_paths.txt", 'r') as f:
+            ff_count = len(bit_stream) - 1
+            for line in f:
+                line = line.strip()
+                ff_hdl = self.caravelEnv.user_hdl.fpga_core_uut._id(line, False)
+                cocotb.log.debug(f"[Clear] prog ff {ff_hdl._fullname} with {bit_stream[ff_count]} ff number {ff_count}")
+                ff_hdl.value = int(bit_stream[ff_count])
+                ff_count += -1
 
     async def start_op(self):
         self.clock_prog_thread.kill()
