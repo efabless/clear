@@ -1,0 +1,12 @@
+<!--
+	- I/O mapping
+-->
+
+<io_mapping>
+	<io name="gfpga_pad_io_soc_in[40:40]" net="a" dir="input"/>
+	<io name="gfpga_pad_io_soc_in[41:41]" net="b" dir="input"/>
+	<io name="gfpga_pad_io_soc_in[42:42]" net="clk" dir="input"/>
+	<io name="gfpga_pad_io_soc_in[45:45]" net="rst" dir="input"/>
+	<io name="gfpga_pad_io_soc_out[43:43]" net="c" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[44:44]" net="d" dir="output"/>
+</io_mapping>
