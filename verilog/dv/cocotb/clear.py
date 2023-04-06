@@ -1,7 +1,7 @@
 import cocotb
 import re
 from cocotb.clock import Clock
-from cocotb.triggers import ClockCycles, FallingEdge
+from cocotb.triggers import FallingEdge
 
 PROG_CLK = 37
 PROG_RST = 29
@@ -58,7 +58,7 @@ class Clear:
         expected_len = bitstream_length * bitstream_width
         actual_len = len(self.file_bit_stream)
         if actual_len == expected_len:
-            cocotb.log.info(f"[Clear] bit stream has correct width")
+            cocotb.log.info("[Clear] bit stream has correct width")
         else:
             cocotb.log.error(
                 f"[Clear] Warning bit stream doesn't has the correct width expected = {expected_len} actual {actual_len}"
@@ -112,7 +112,7 @@ class Clear:
         clock = self.caravelEnv.dut._id(f"bin{PROG_CLK}", False)
         self.op_reset = self.caravelEnv.dut._id(f"bin{OP_RST}", False)
         self.clk_op = self.caravelEnv.dut._id(f"bin{OP_CLK}", False)
-        io_isol_n = self.caravelEnv.dut._id(f"bin{IO_ISOL_N}", False)
+        self.io_isol_n = self.caravelEnv.dut._id(f"bin{IO_ISOL_N}", False)
         test_en = self.caravelEnv.dut._id(f"bin{TEST_EN}", False)
         self.ccff_head = self.caravelEnv.dut._id(f"bin{CCFF_HEAD}", False)
         self.op_clk_sel = self.caravelEnv.dut._id(f"bin{OP_CLK_SEL}", False)
@@ -120,7 +120,7 @@ class Clear:
         reset.value = 0
         clock.value = 0
         self.op_reset.value = 0
-        io_isol_n.value = 1
+        self.io_isol_n.value = 0
         test_en.value = 0
         self.clk_op.value = 0
         self.ccff_head.value = 0
@@ -168,6 +168,7 @@ class Clear:
 
     async def start_op(self):
         self.clock_prog_thread.kill()
+        self.io_isol_n.value = 1
         self.ccff_head.value = 0
         await cocotb.triggers.Timer(5 * self.period_prog, units="ns")
         self.op_reset.value = 1
@@ -180,7 +181,7 @@ class Clear:
         else:
             clock = Clock(self.clk_op, self.period_op, "ns")
             self.clock_op_thread = cocotb.start_soon(clock.start())
-        cocotb.log.info(f"[Clear] set op clock")
+        cocotb.log.info("[Clear] set op clock")
 
     async def _connect_signals(self, signal1, signal2):
         """like verilog assign"""
