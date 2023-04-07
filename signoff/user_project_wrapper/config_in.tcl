@@ -27,7 +27,7 @@ set ::env(VERILOG_FILES) "\
 "
 
 set ::env(VERILOG_FILES_BLACKBOX) "\
-    $::env(DESIGN_DIR)/../../FPGA88_SC_HD_Verilog/SRC/fpga_core.v \
+    $::env(DESIGN_DIR)/../../verilog/gl/fpga_core.v \
 "
 set ::env(EXTRA_LEFS) "\
     $::env(DESIGN_DIR)/../../lef/fpga_core.lef \
