@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1680199265
+timestamp 1680902652
 << obsli1 >>
 rect 1104 2159 49864 54417
 << obsm1 >>
-rect 658 1708 49864 56024
+rect 658 1912 49864 56024
 << metal2 >>
 rect 1858 56200 1914 57000
 rect 3330 56200 3386 57000
@@ -460,15 +460,14 @@ rect 37944 2128 38264 54448
 rect 42944 2128 43264 54448
 rect 47944 2128 48264 54448
 << obsm4 >>
-rect 3923 2347 7864 53957
+rect 3555 2347 7864 53957
 rect 8344 2347 12864 53957
 rect 13344 2347 17864 53957
 rect 18344 2347 22864 53957
 rect 23344 2347 27864 53957
 rect 28344 2347 32864 53957
 rect 33344 2347 37864 53957
-rect 38344 2347 42864 53957
-rect 43344 2347 47781 53957
+rect 38344 2347 41157 53957
 << labels >>
 rlabel metal4 s 7944 2128 8264 54448 6 VGND
 port 1 nsew ground bidirectional
@@ -862,8 +861,8 @@ port 186 nsew signal input
 string FIXED_BBOX 0 0 51000 57000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 7158478
-string GDS_FILE /home/hosni/OpenFPGA/clear_erc/clear/openlane/top_right_tile/runs/23_03_30_10_57/results/signoff/top_right_tile.magic.gds
-string GDS_START 252190
+string GDS_END 7359062
+string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_07_14_20/results/signoff/top_right_tile.magic.gds
+string GDS_START 265438
 << end >>
 

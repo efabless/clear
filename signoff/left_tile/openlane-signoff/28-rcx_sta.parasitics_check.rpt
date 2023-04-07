@@ -1,0 +1,146 @@
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 57 unannotated drivers.
+ reset
+ test_enable
+ cby_0__1_.cby_0__1_.mux_right_ipin_0.mux_l2_in_3__256/LO
+ cby_0__1_.cby_0__1_.mux_right_ipin_1.mux_l2_in_3__257/LO
+ cby_0__1_.cby_0__1_.mux_right_ipin_2.mux_l2_in_3__258/LO
+ cby_0__1_.cby_0__1_.mux_right_ipin_3.mux_l2_in_3__259/LO
+ left_tile_210/HI
+ sb_0__1_.mux_bottom_track_1.mux_l2_in_1__260/LO
+ sb_0__1_.mux_bottom_track_11.mux_l1_in_3__261/LO
+ sb_0__1_.mux_bottom_track_13.mux_l2_in_1__262/LO
+ sb_0__1_.mux_bottom_track_21.mux_l2_in_1__263/LO
+ sb_0__1_.mux_bottom_track_29.mux_l2_in_1__264/LO
+ sb_0__1_.mux_bottom_track_3.mux_l2_in_1__211/LO
+ sb_0__1_.mux_bottom_track_37.mux_l2_in_1__212/LO
+ sb_0__1_.mux_bottom_track_45.mux_l2_in_1__213/LO
+ sb_0__1_.mux_bottom_track_5.mux_l2_in_1__214/LO
+ sb_0__1_.mux_bottom_track_53.mux_l1_in_1__215/LO
+ sb_0__1_.mux_bottom_track_7.mux_l1_in_3__216/LO
+ sb_0__1_.mux_right_track_0.mux_l2_in_1__217/LO
+ sb_0__1_.mux_right_track_10.mux_l2_in_1__218/LO
+ sb_0__1_.mux_right_track_12.mux_l2_in_1__219/LO
+ sb_0__1_.mux_right_track_14.mux_l2_in_1__220/LO
+ sb_0__1_.mux_right_track_16.mux_l2_in_1__221/LO
+ sb_0__1_.mux_right_track_18.mux_l2_in_1__222/LO
+ sb_0__1_.mux_right_track_2.mux_l2_in_1__223/LO
+ sb_0__1_.mux_right_track_20.mux_l2_in_1__224/LO
+ sb_0__1_.mux_right_track_22.mux_l2_in_1__225/LO
+ sb_0__1_.mux_right_track_24.mux_l1_in_1__226/LO
+ sb_0__1_.mux_right_track_26.mux_l1_in_1__227/LO
+ sb_0__1_.mux_right_track_28.mux_l1_in_1__228/LO
+ sb_0__1_.mux_right_track_30.mux_l1_in_1__229/LO
+ sb_0__1_.mux_right_track_32.mux_l1_in_1__230/LO
+ sb_0__1_.mux_right_track_34.mux_l1_in_1__231/LO
+ sb_0__1_.mux_right_track_36.mux_l2_in_1__232/LO
+ sb_0__1_.mux_right_track_38.mux_l2_in_0__233/LO
+ sb_0__1_.mux_right_track_4.mux_l2_in_1__234/LO
+ sb_0__1_.mux_right_track_40.mux_l2_in_0__235/LO
+ sb_0__1_.mux_right_track_44.mux_l2_in_0__236/LO
+ sb_0__1_.mux_right_track_46.mux_l2_in_0__237/LO
+ sb_0__1_.mux_right_track_48.mux_l2_in_0__238/LO
+ sb_0__1_.mux_right_track_50.mux_l1_in_1__239/LO
+ sb_0__1_.mux_right_track_52.mux_l2_in_0__240/LO
+ sb_0__1_.mux_right_track_54.mux_l2_in_0__241/LO
+ sb_0__1_.mux_right_track_56.mux_l2_in_0__242/LO
+ sb_0__1_.mux_right_track_6.mux_l2_in_1__243/LO
+ sb_0__1_.mux_right_track_8.mux_l2_in_1__244/LO
+ sb_0__1_.mux_top_track_0.mux_l1_in_3__245/LO
+ sb_0__1_.mux_top_track_10.mux_l1_in_3__246/LO
+ sb_0__1_.mux_top_track_12.mux_l2_in_1__247/LO
+ sb_0__1_.mux_top_track_2.mux_l2_in_1__248/LO
+ sb_0__1_.mux_top_track_20.mux_l2_in_1__249/LO
+ sb_0__1_.mux_top_track_28.mux_l2_in_1__250/LO
+ sb_0__1_.mux_top_track_36.mux_l2_in_1__251/LO
+ sb_0__1_.mux_top_track_4.mux_l2_in_1__252/LO
+ sb_0__1_.mux_top_track_44.mux_l1_in_1__253/LO
+ sb_0__1_.mux_top_track_52.mux_l2_in_1__254/LO
+ sb_0__1_.mux_top_track_6.mux_l1_in_3__255/LO
+Found 0 partially unannotated drivers.
+parastic_annotation_check
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack 92.11
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack 0.01
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk0
+No launch/capture paths found.
+
+Clock prog_clk
+Latency      CRPR       Skew
+sb_0__1_.mem_top_track_6.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.58
+sb_0__1_.mem_top_track_6.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.51     -0.03       0.03
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             6.42e-05   4.08e-06   1.76e-09   6.83e-05  39.8%
+Combinational          3.70e-05   6.64e-05   7.08e-09   1.03e-04  60.2%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.01e-04   7.05e-05   8.84e-09   1.72e-04 100.0%
+                          59.0%      41.0%       0.0%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 13006 u^2 40% utilization.
+area_report_end
+Setting global connections for newly added cells...
+[WARNING] Did not save OpenROAD database!
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_07_14_18/results/routing/mca/process_corner_nom/left_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_07_14_18/results/routing/mca/process_corner_nom/left_tile.lib...
+

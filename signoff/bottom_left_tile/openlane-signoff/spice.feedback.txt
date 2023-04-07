@@ -12,7 +12,15 @@ box 8832 2703 8861 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8895 2703 8924 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10764 2703 10793 2737
+box 10396 2703 10425 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 10459 2703 10517 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 10551 2703 10609 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 10643 2703 10701 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 10735 2703 10793 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10827 2703 10885 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -72,6 +80,38 @@ box 18739 2703 18797 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18831 2703 18860 2737
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24380 2703 24409 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24409 2703 24443 2737
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 24443 2703 24501 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24535 2703 24593 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24627 2703 24685 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24719 2703 24777 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24811 2703 24869 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24903 2703 24961 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 24995 2703 25053 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25087 2703 25145 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25179 2703 25201 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25199 2703 25237 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25271 2703 25329 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25363 2703 25392 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25392 2703 25421 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 25455 2703 25484 2737
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 3247 3617 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3617 3247 3651 3281
@@ -104,6 +144,8 @@ box 6319 3791 6348 3825
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8188 3247 8217 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 8217 3247 8251 3281
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
 box 8251 3247 8309 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8343 3247 8401 3281
@@ -114,8 +156,6 @@ box 8435 3247 8493 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8527 3247 8585 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8585 3247 8619 3281
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
 box 8619 3247 8677 3281
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8711 3247 8740 3281
@@ -458,6 +498,22 @@ box 19136 5423 19165 5457
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 19199 5423 19228 5457
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20332 5423 20361 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20395 5423 20453 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20487 5423 20545 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20579 5423 20637 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20671 5423 20729 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20763 5423 20821 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20855 5423 20913 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20947 5423 21001 5457
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 21068 4879 21097 4913
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 21131 4879 21189 4913
@@ -466,41 +522,11 @@ box 21223 4879 21281 4913
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 21315 4879 21373 4913
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21407 4879 21465 4913
+box 21407 4879 21436 4913
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21465 4879 21499 4913
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 21499 4879 21557 4913
+box 20999 5423 21005 5457
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21591 4879 21620 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21620 4879 21649 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21683 4879 21712 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21804 4879 21833 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21867 4879 21925 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21959 4879 22017 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22051 4879 22080 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21712 4879 21741 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21775 4879 21804 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22080 4879 22109 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22143 4879 22201 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22235 4879 22293 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22327 4879 22385 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22419 4879 22477 4913
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 22511 4879 22540 4913
+box 21039 5423 21068 5457
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3680 5967 3709 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -542,31 +568,33 @@ box 8251 6511 8309 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8343 6511 8401 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8832 5967 8861 6001
+box 8924 5967 8953 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8895 5967 8924 6001
+box 8953 5967 8987 6001
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 8987 5967 9045 6001
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9079 5967 9137 6001
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9171 5967 9229 6001
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9263 5967 9321 6001
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9355 5967 9384 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8399 6511 8401 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8435 6511 8493 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8527 6511 8585 6545
+box 8527 6511 8556 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8585 6511 8619 6545
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 8619 6511 8677 6545
+box 10488 5967 10517 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8711 6511 8740 6545
+box 10551 5967 10609 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8740 6511 8769 6545
+box 10643 5967 10701 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8803 6511 8832 6545
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8832 6511 8861 6545
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8895 6511 8924 6545
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10764 5967 10793 6001
+box 10735 5967 10793 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10827 5967 10885 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -580,11 +608,11 @@ box 11161 5967 11195 6001
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
 box 11195 5967 11201 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11199 5967 11253 6001
+box 11199 5967 11224 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11287 5967 11316 6001
+box 11224 5967 11253 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11316 5967 11345 6001
+box 11287 5967 11345 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11379 5967 11408 6001
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -692,25 +720,19 @@ box 20395 6511 20453 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20487 6511 20545 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20579 6511 20637 6545
+box 20579 6511 20608 6545
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20884 6511 20913 6545
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20947 6511 21001 6545
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 20608 6511 20637 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20671 6511 20729 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20763 6511 20821 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20855 6511 20913 6545
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20947 6511 21001 6545
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21068 5967 21097 6001
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21131 5967 21189 6001
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21223 5967 21281 6001
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21315 5967 21373 6001
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 21407 5967 21436 6001
+box 20855 6511 20884 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20999 6511 21005 6545
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -942,6 +964,16 @@ box 19136 7599 19165 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 19199 7599 19228 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19228 7599 19257 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19291 7599 19349 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19383 7599 19441 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19475 7599 19533 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19567 7599 19601 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 19964 7055 19993 7089
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20027 7055 20085 7089
@@ -952,17 +984,19 @@ box 20211 7055 20269 7089
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 20303 7055 20332 7089
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20240 8143 20269 8177
+box 19872 7599 19901 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20303 8143 20332 8177
+box 19935 7599 19964 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19964 8143 19993 8177
+box 19599 7599 19625 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20027 8143 20085 8177
+box 19659 7599 19717 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20119 8143 20177 8177
+box 19751 7599 19780 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 20211 8143 20240 8177
+box 19780 7599 19809 7633
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 19843 7599 19872 7633
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 8687 3617 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1068,9 +1102,7 @@ box 8895 9775 8924 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10028 8687 10057 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10091 8687 10120 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10120 8687 10149 8721
+box 10091 8687 10149 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10183 8687 10241 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1096,9 +1128,19 @@ box 11655 8687 11713 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11747 8687 11805 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11839 8687 11897 8721
+box 11839 8687 11868 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11931 8687 11960 8721
+box 12052 8687 12081 8721
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12115 8687 12173 8721
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12207 8687 12236 8721
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11868 8687 11897 8721
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11931 8687 11989 8721
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12023 8687 12052 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11316 9775 11345 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1108,13 +1150,7 @@ box 11408 9775 11437 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11471 9775 11500 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13064 8687 13093 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13127 8687 13185 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13219 8687 13277 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13311 8687 13369 8721
+box 13340 8687 13369 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13403 8687 13461 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1126,11 +1162,11 @@ box 13679 8687 13737 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13737 8687 13771 8721
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 13771 8687 13800 8721
+box 13771 8687 13829 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13800 8687 13829 8721
+box 13863 8687 13892 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13863 8687 13921 8721
+box 13892 8687 13921 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13955 8687 13984 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1186,27 +1222,21 @@ box 16468 9231 16497 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 16531 9231 16560 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16652 9231 16681 9265
+box 16560 9775 16589 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16715 9231 16773 9265
+box 16623 9775 16652 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 16560 9231 16589 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 16623 9231 16652 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16807 9231 16865 9265
+box 17388 9775 17417 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16899 9231 16957 9265
+box 17451 9775 17509 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16991 9231 17049 9265
+box 17543 9775 17601 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17083 9231 17141 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17175 9231 17233 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17267 9231 17325 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17359 9231 17388 9265
+box 17635 9775 17664 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18032 9231 18061 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1214,27 +1244,17 @@ box 18095 9231 18153 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18187 9231 18201 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17664 9231 17693 9265
+box 17664 9775 17693 9801
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17727 9231 17785 9265
+box 17727 9775 17756 9801
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17756 9231 17785 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 17819 9231 17877 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 17911 9231 17969 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18003 9231 18032 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17388 9231 17417 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17417 9231 17451 9265
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 17451 9231 17480 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17480 9231 17509 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17543 9231 17601 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17635 9231 17664 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18492 8687 18521 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1244,33 +1264,7 @@ box 18647 8687 18705 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18739 8687 18797 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 18831 8687 18889 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 18889 8687 18923 8721
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 18923 8687 18981 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19015 8687 19044 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19044 8687 19073 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19107 8687 19136 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19136 8687 19165 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19199 8687 19228 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19228 8687 19257 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19291 8687 19349 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19383 8687 19412 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19412 8687 19441 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19475 8687 19533 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19567 8687 19601 8721
+box 18831 8687 18860 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18199 9231 18245 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1281,16 +1275,6 @@ feedback add "Illegal overlap between obsli1 and locali (types do not connect)" 
 box 18371 9231 18429 9265
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 18463 9231 18492 9265
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19599 8687 19625 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19659 8687 19717 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19751 8687 19809 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19843 8687 19901 8721
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 19935 8687 19964 8721
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 9799 3617 9809
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1484,9 +1468,7 @@ box 14967 10319 15025 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 15059 10319 15117 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15151 10319 15180 10353
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15180 10319 15209 10353
+box 15151 10319 15209 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 15209 10319 15243 10353
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
@@ -1494,31 +1476,111 @@ box 15243 10319 15301 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 15335 10319 15393 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14628 10863 14657 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14691 10863 14749 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14783 10863 14812 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14076 10863 14105 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14139 10863 14197 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14231 10863 14289 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14323 10863 14381 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14415 10863 14473 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14507 10863 14565 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 14599 10863 14628 10897
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13999 10863 14013 10897
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 14047 10863 14076 10897
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16100 10319 16129 10353
+box 16560 9799 16589 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16623 9799 16652 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15427 10319 15485 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15519 10319 15548 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15732 10319 15761 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15795 10319 15853 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15887 10319 15916 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16376 10319 16405 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16439 10319 16497 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16531 10319 16560 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15548 10319 15577 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15611 10319 15669 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15703 10319 15732 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15916 10319 15945 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 15979 10319 16037 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16071 10319 16129 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 16163 10319 16221 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 16255 10319 16284 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15427 10319 15485 10353
+box 16284 10319 16313 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15519 10319 15577 10353
+box 16313 10319 16347 10353
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 16347 10319 16376 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15611 10319 15669 10353
+box 16652 10319 16681 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15703 10319 15761 10353
+box 16715 10319 16773 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15795 10319 15853 10353
+box 16560 10319 16589 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15887 10319 15945 10353
+box 16623 10319 16652 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15979 10319 16037 10353
+box 17388 9799 17417 9809
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16071 10319 16100 10353
+box 17451 9799 17509 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17543 9799 17601 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17635 9799 17664 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17664 9799 17693 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17727 9799 17756 9809
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16836 10319 16865 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16899 10319 16957 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16991 10319 17020 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17020 10319 17049 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17083 10319 17141 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17175 10319 17204 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 16807 10319 16836 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17204 10319 17233 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17267 10319 17325 10353
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 17359 10319 17388 10353
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 11951 3617 11985
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1640,35 +1702,81 @@ box 11199 12495 11253 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11287 12495 11316 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11316 12495 11345 12529
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11379 12495 11408 12529
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11408 12495 11437 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 11471 12495 11500 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13340 11951 13369 11985
+box 11684 12495 11713 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13403 11951 13461 11985
+box 11747 12495 11805 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13495 11951 13553 11985
+box 11839 12495 11897 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13587 11951 13645 11985
+box 11931 12495 11989 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 13679 11951 13708 11985
+box 12023 12495 12081 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12604 12495 12633 12529
+box 12115 12495 12173 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12667 12495 12725 12529
+box 12207 12495 12265 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12265 12495 12299 12529
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 12299 12495 12357 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12391 12495 12420 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11316 12495 11345 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11379 12495 11408 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11500 12495 11529 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11563 12495 11621 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 11655 12495 11684 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12420 12495 12449 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12483 12495 12512 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12512 12495 12541 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12575 12495 12601 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12604 11407 12633 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12667 11407 12725 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12759 11407 12788 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12788 11407 12817 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12851 11407 12909 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12943 11407 13001 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 13035 11407 13093 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 13127 11407 13185 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 13219 11407 13277 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 13311 11407 13340 11441
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12696 12495 12725 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 12759 12495 12817 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12851 12495 12880 12529
+box 12851 12495 12909 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12880 12495 12909 12529
+box 12943 12495 12972 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12943 12495 13001 12529
+box 12599 12495 12633 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12667 12495 12696 12529
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 12972 12495 13001 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13035 12495 13093 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1677,40 +1785,6 @@ feedback add "Illegal overlap between obsli1 and locali (types do not connect)" 
 box 13219 12495 13277 12529
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 13311 12495 13340 12529
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14076 11407 14105 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14105 11407 14139 11441
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 14139 11407 14197 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14231 11407 14289 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14323 11407 14381 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14415 11407 14444 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14720 11407 14749 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14783 11407 14841 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14875 11407 14933 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14967 11407 15025 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15059 11407 15088 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15088 11407 15117 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 15151 11407 15180 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14444 11407 14473 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14507 11407 14565 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14599 11407 14657 11441
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 14691 11407 14720 11441
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 13039 3617 13073
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -1826,92 +1900,6 @@ box 10643 13039 10701 13073
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10735 13039 10764 13073
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11500 13039 11529 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11529 13039 11563 13073
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 11563 13039 11621 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11655 13039 11713 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11747 13039 11776 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11776 13039 11805 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11839 13039 11897 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 11931 13039 11989 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12023 13039 12081 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12115 13039 12173 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12207 13039 12265 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12299 13039 12357 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12391 13039 12449 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12483 13039 12541 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12575 13039 12601 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 12599 13039 12604 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16560 13039 16589 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16623 13039 16652 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16652 13039 16681 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16715 13039 16773 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16376 13583 16405 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16439 13583 16497 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16531 13583 16560 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16652 13583 16681 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16715 13583 16773 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16560 13583 16589 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16623 13583 16652 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16100 13583 16129 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16129 13583 16163 13617
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 16163 13583 16221 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16255 13583 16313 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16347 13583 16376 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16807 13039 16865 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16899 13039 16957 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16991 13039 17049 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17083 13039 17141 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17175 13039 17204 13073
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16807 13583 16865 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16899 13583 16957 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 16991 13583 17020 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17020 13583 17049 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17083 13583 17141 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 17175 13583 17204 13617
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3588 14127 3617 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 3617 14127 3651 14161
@@ -1984,55 +1972,51 @@ box 8832 14127 8861 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8895 14127 8924 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 8924 14671 8953 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 8953 14671 8987 14705
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 8987 14671 9045 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9079 14671 9137 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9171 14671 9229 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9263 14671 9292 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 9752 14671 9781 14705
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9660 14671 9689 14705
+box 9384 14671 9413 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9447 14671 9505 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9539 14671 9568 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9568 14671 9597 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9631 14671 9689 14705
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 9723 14671 9752 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9292 14671 9321 14705
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 9355 14671 9384 14705
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8399 15215 8401 15249
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 8435 15215 8493 15249
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8527 15215 8585 15249
+box 8527 15215 8556 15249
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8585 15215 8619 15249
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 8619 15215 8677 15249
+box 10304 14127 10333 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8711 15215 8740 15249
+box 10367 14127 10425 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8740 15215 8769 15249
+box 10459 14127 10488 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8803 15215 8832 15249
+box 10488 14127 10517 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8924 15215 8953 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8987 15215 9045 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9079 15215 9137 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9171 15215 9229 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9263 15215 9292 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8832 15215 8861 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8895 15215 8924 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9292 15215 9321 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9355 15215 9413 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9447 15215 9476 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9476 15215 9505 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9539 15215 9597 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 9631 15215 9660 15249
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10580 14127 10609 14161
+box 10551 14127 10609 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10643 14127 10672 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -2042,13 +2026,7 @@ box 10091 14127 10149 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10183 14127 10241 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10275 14127 10333 14161
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10367 14127 10425 14161
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10459 14127 10517 14161
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 10551 14127 10580 14161
+box 10275 14127 10304 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 10672 14127 10701 14161
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -2062,77 +2040,51 @@ box 9936 14671 9965 14705
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 9999 14671 10028 14705
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3680 16303 3709 16337
+box 3772 15759 3801 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3743 16303 3772 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3772 16303 3801 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3835 16303 3893 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3927 16303 3985 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4019 16303 4077 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4111 16303 4169 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3588 16303 3617 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3617 16303 3651 16337
+box 3801 15759 3835 15793
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 3651 16303 3680 16337
+box 3835 15759 3893 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4692 15759 4721 15793
+box 3927 15759 3985 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4755 15759 4813 15793
+box 4019 15759 4077 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4847 15759 4905 15793
+box 4111 15759 4140 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4905 15759 4939 15793
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 4939 15759 4997 15793
+box 4140 15759 4169 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5031 15759 5060 15793
+box 4232 15759 4261 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5060 15759 5089 15793
+box 4295 15759 4353 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5123 15759 5152 15793
+box 4387 15759 4416 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5152 15759 5181 15793
+box 4203 15759 4232 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5215 15759 5273 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5307 15759 5365 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5399 15759 5457 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5491 15759 5549 15793
+box 5520 15759 5549 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 5583 15759 5601 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4203 16303 4261 16337
+box 4692 16303 4721 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4295 16303 4353 16337
+box 4755 16303 4813 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4387 16303 4445 16337
+box 4847 16303 4905 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4479 16303 4508 16337
+box 4939 16303 4968 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4508 16303 4537 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 4571 16303 4629 16337
+box 4600 16303 4629 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 4663 16303 4692 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6072 15759 6101 15793
+box 4416 16303 4445 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6135 15759 6193 15793
+box 4445 16303 4479 16337
+feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
+box 4479 16303 4537 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6227 15759 6256 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6256 15759 6285 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6319 15759 6348 15793
+box 4571 16303 4600 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 5599 15759 5641 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -2146,7 +2098,21 @@ box 5951 15759 6009 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 6009 15759 6043 15793
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 6043 15759 6072 15793
+box 6043 15759 6101 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6135 15759 6193 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6227 15759 6256 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6256 15759 6285 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6319 15759 6348 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6808 16303 6837 16337
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6871 16303 6929 16337
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 6963 16303 6992 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 6348 16303 6377 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -2158,17 +2124,21 @@ box 6503 16303 6561 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 6595 16303 6653 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6687 16303 6716 16337
+box 6687 16303 6745 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6900 16303 6929 16337
+box 6779 16303 6808 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6963 16303 7001 16337
+box 6992 16303 7001 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6716 16303 6745 16337
+box 7912 15759 7941 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6779 16303 6837 16337
+box 7975 15759 8033 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6871 16303 6900 16337
+box 8067 15759 8096 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 8096 15759 8125 15793
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 8159 15759 8188 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 7452 15759 7481 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
@@ -2178,169 +2148,111 @@ box 7607 15759 7665 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 7699 15759 7757 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7791 15759 7849 15793
+box 7791 15759 7820 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7883 15759 7941 15793
+box 7820 15759 7849 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7975 15759 8033 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8067 15759 8125 15793
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 8159 15759 8188 15793
+box 7883 15759 7912 15793
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 6999 16303 7021 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 7055 16303 7113 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7147 16303 7205 16337
+box 7147 16303 7176 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7239 16303 7268 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7268 16303 7297 16337
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 7331 16303 7389 16337
+box 7360 16303 7389 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
 box 7423 16303 7452 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1380 17391 1401 17425
+box 7176 16303 7205 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2484 16847 2513 16881
+box 7239 16303 7297 16337
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2513 16847 2547 16881
+box 7331 16303 7360 16337
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 1380 17935 1401 17969
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 2484 17391 2513 17425
+feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
+box 2513 17391 2547 17425
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 2547 16847 2605 16881
+box 2547 17391 2605 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2639 16847 2697 16881
+box 2639 17391 2697 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2731 16847 2789 16881
+box 2731 17391 2789 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2116 17391 2145 17425
+box 1399 17935 1409 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2179 17391 2237 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2271 17391 2300 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2300 17391 2329 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2363 17391 2421 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2455 17391 2484 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1399 17391 1409 17425
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1409 17391 1443 17425
+box 1409 17935 1443 17969
 feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 1443 17391 1501 17425
+box 1443 17935 1501 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1535 17391 1593 17425
+box 1535 17935 1564 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1627 17391 1685 17425
+box 1840 17935 1869 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1719 17391 1777 17425
+box 1903 17935 1961 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1811 17391 1869 17425
+box 1995 17935 2053 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1903 17391 1961 17425
+box 2087 17935 2145 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 1995 17391 2053 17425
+box 2179 17935 2208 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2087 17391 2116 17425
+box 1564 17935 1593 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2823 16847 2881 16881
+box 1627 17935 1685 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 2915 16847 2973 16881
+box 1719 17935 1777 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3007 16847 3065 16881
+box 1811 17935 1840 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3099 16847 3157 16881
+box 2208 17935 2237 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3191 16847 3220 16881
+box 2271 17935 2329 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3496 16847 3525 16881
+box 2363 17935 2421 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3559 16847 3588 16881
+box 2455 17935 2484 17969
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3220 16847 3249 16881
+box 2823 17391 2881 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3283 16847 3312 16881
+box 2915 17391 2973 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3312 16847 3341 16881
+box 3007 17391 3065 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3375 16847 3433 16881
+box 3099 17391 3157 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 3467 16847 3496 16881
+box 3191 17391 3220 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5428 17935 5457 17969
+box 3496 17391 3525 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5491 17935 5549 17969
+box 3559 17391 3588 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5583 17935 5601 17969
+box 3220 17391 3249 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5336 17935 5365 17969
+box 3283 17391 3341 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5365 17935 5399 17969
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 5399 17935 5428 17969
+box 3375 17391 3433 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5599 17935 5641 17969
+box 3467 17391 3496 17425
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5675 17935 5733 17969
+box 5428 16847 5457 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5767 17935 5796 17969
+box 5491 16847 5549 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6072 17935 6101 17969
+box 5583 16847 5601 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6135 17935 6193 17969
+box 5599 16847 5641 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6227 17935 6256 17969
+box 5675 16847 5733 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6348 17935 6377 17969
+box 5767 16847 5825 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6411 17935 6440 17969
+box 5859 16847 5917 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6256 17935 6285 17969
+box 5951 16847 6009 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6319 17935 6348 17969
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5796 17935 5825 17969
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5859 17935 5917 17969
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 5951 17935 6009 17969
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 6043 17935 6072 17969
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 23920 23919 23949 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 23949 23919 23983 23953
-feedback add "Illegal overlap between obsli1c and locali (types do not connect)" medium
-box 23983 23919 24041 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24075 23919 24133 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24167 23919 24225 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24259 23919 24288 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24380 23919 24409 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24443 23919 24501 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24535 23919 24564 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24288 23919 24317 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24351 23919 24380 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24564 23919 24593 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24627 23919 24685 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24719 23919 24777 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24811 23919 24869 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24903 23919 24961 23953
-feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
-box 24995 23919 25024 23953
+box 6043 16847 6072 16881
 feedback add "Illegal overlap between obsli1 and locali (types do not connect)" medium
