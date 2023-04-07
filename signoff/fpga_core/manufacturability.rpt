@@ -1,17 +1,19 @@
 Design Name: fpga_core
-Run Directory: /home/hosni/OpenFPGA/clear/openlane/fpga_core/runs/23_03_20_17_16
+Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_07_14_31
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/fpga_core/runs/23_03_20_17_16/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_07_14_31/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/clear/openlane/fpga_core/runs/23_03_20_17_16/logs/signoff/31-fpga_core.lef.lvs.log
-Number of nets: 11971                      |Number of nets: 11971                      
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_07_14_31/logs/signoff/33-fpga_core.lef.lvs.log
+Number of nets: 11134                      |Number of nets: 11134                      
 Design is LVS clean.
 ----------------------------------------
 
 Antenna Summary:
-No antenna report found.
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_07_14_31/logs/signoff/35-antenna.log
+Pin violations: 1
+Net violations: 1
