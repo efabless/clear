@@ -157,7 +157,10 @@ class Clear:
     def _write_prog_bits_back_door(self, bit_stream):
         user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
         user_project_cocotb_path = f"{user_project_root}/verilog/dv/cocotb/"
-        with open(f"{user_project_cocotb_path}/ff_paths.txt", 'r') as f:
+        ff_paths_txt = f"{user_project_cocotb_path}/ff_paths.txt"
+        if "GL" in cocotb.plusargs: 
+            ff_paths_txt = f"{user_project_cocotb_path}/ff_paths_gl.txt"
+        with open(ff_paths_txt, 'r') as f:
             ff_count = len(bit_stream) - 1
             for line in f:
                 line = line.strip()
