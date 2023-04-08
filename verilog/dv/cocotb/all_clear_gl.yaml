@@ -1,0 +1,7 @@
+Tests: 
+    - {name: and_gate, sim: GL}
+    # - {name: and_gate_direct, sim: GL}
+    # - {name: chain_check, sim: GL}
+    # - {name: chain_check_ones, sim: GL}
+    # - {name: and_gate_la, sim: GL}
+    # - {name: counter, sim: GL}
