@@ -9,7 +9,7 @@ from cocotb.triggers import RisingEdge, FallingEdge
 @cocotb.test()
 @repot_test
 async def and2_latch(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=1000000)
+    caravelEnv = await test_configure(dut, timeout_cycles=90500)
     fpga_clear = Clear(caravelEnv)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"

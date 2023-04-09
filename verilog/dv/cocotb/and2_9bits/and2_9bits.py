@@ -7,7 +7,7 @@ from cocotb.triggers import ClockCycles
 @cocotb.test()
 @repot_test
 async def and2_9bits(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=8000000)
+    caravelEnv = await test_configure(dut, timeout_cycles=270021)
     fpga_clear = Clear(caravelEnv)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
