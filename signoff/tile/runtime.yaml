@@ -1,115 +1,121 @@
 - status: 0 - openlane design prep
-  runtime_s: 1.74
-  runtime_ts: 0h0m1s744ms
+  runtime_s: 1.78
+  runtime_ts: 0h0m1s780ms
 - status: 1 - synthesis - yosys
-  runtime_s: 4.11
-  runtime_ts: 0h0m4s110ms
+  runtime_s: 4.05
+  runtime_ts: 0h0m4s49ms
 - status: 2 - sta - openroad
-  runtime_s: 0.7
-  runtime_ts: 0h0m0s700ms
+  runtime_s: 0.72
+  runtime_ts: 0h0m0s720ms
 - status: 3 - floorplan initialization - openroad
-  runtime_s: 0.57
-  runtime_ts: 0h0m0s571ms
+  runtime_s: 0.59
+  runtime_ts: 0h0m0s595ms
 - status: 4 - io_place - openlane
   runtime_s: 0.37
-  runtime_ts: 0h0m0s372ms
+  runtime_ts: 0h0m0s370ms
 - status: 5 - tap/decap insertion - openroad
   runtime_s: 0.47
-  runtime_ts: 0h0m0s467ms
+  runtime_ts: 0h0m0s474ms
 - status: 6 - pdn generation - openroad
   runtime_s: 0.61
-  runtime_ts: 0h0m0s613ms
+  runtime_ts: 0h0m0s608ms
 - status: 7 - global placement - openroad
-  runtime_s: 1.35
-  runtime_ts: 0h0m1s346ms
+  runtime_s: 1.39
+  runtime_ts: 0h0m1s390ms
 - status: 8 - resizer design optimizations - openroad
-  runtime_s: 1.5
-  runtime_ts: 0h0m1s503ms
+  runtime_s: 1.52
+  runtime_ts: 0h0m1s518ms
 - status: 9 - detailed placement - openroad
   runtime_s: 0.59
-  runtime_ts: 0h0m0s591ms
+  runtime_ts: 0h0m0s592ms
 - status: 10 - cts - openroad
-  runtime_s: 29.33
-  runtime_ts: 0h0m29s329ms
+  runtime_s: 29.12
+  runtime_ts: 0h0m29s117ms
 - status: 11 - resizer timing optimizations - openroad
-  runtime_s: 1.28
-  runtime_ts: 0h0m1s284ms
-- status: 12 - global placement - openroad
-  runtime_s: 1.44
-  runtime_ts: 0h0m1s443ms
-- status: 13 - detailed placement - openroad
-  runtime_s: 0.59
-  runtime_ts: 0h0m0s590ms
-- status: 14 - cts - openroad
-  runtime_s: 29.66
-  runtime_ts: 0h0m29s658ms
-- status: 15 - resizer design optimizations - openroad
-  runtime_s: 3.13
-  runtime_ts: 0h0m3s134ms
+  runtime_s: 1.5
+  runtime_ts: 0h0m1s500ms
+- status: 12 - resizer design optimizations - openroad
+  runtime_s: 2.95
+  runtime_ts: 0h0m2s945ms
+- status: 14 - detailed placement - openroad
+  runtime_s: 0.61
+  runtime_ts: 0h0m0s610ms
+- status: 14 - io diode insertion - openlane
+  runtime_s: 0.71
+  runtime_ts: 0h0m0s709ms
 - status: 16 - detailed placement - openroad
-  runtime_s: 0.59
-  runtime_ts: 0h0m0s593ms
-- status: 18 - write verilog - openroad
-  runtime_s: 0.48
-  runtime_ts: 0h0m0s480ms
-- status: 18 - global routing - openroad
-  runtime_s: 0.58
-  runtime_ts: 0h0m0s585ms
-- status: 19 - fill insertion - openroad
-  runtime_s: 0.63
-  runtime_ts: 0h0m0s629ms
-- status: 20 - detailed_routing - openroad
-  runtime_s: 61.14
-  runtime_ts: 0h1m1s137ms
-- status: 21 - wire lengths - openlane
-  runtime_s: 0.39
-  runtime_ts: 0h0m0s390ms
-- status: 22 - antenna check - openroad
-  runtime_s: 0.8
-  runtime_ts: 0h0m0s802ms
-- status: 23 - parasitics extraction - openroad
-  runtime_s: 1.4
-  runtime_ts: 0h0m1s403ms
-- status: 24 - sta - openroad
-  runtime_s: 33.61
-  runtime_ts: 0h0m33s609ms
-- status: 25 - parasitics extraction - openroad
-  runtime_s: 1.41
-  runtime_ts: 0h0m1s411ms
-- status: 26 - sta - openroad
-  runtime_s: 33.95
-  runtime_ts: 0h0m33s954ms
-- status: 27 - parasitics extraction - openroad
-  runtime_s: 1.39
-  runtime_ts: 0h0m1s387ms
-- status: 28 - sta - openroad
-  runtime_s: 33.88
-  runtime_ts: 0h0m33s881ms
-- status: 29 - sta - openroad
-  runtime_s: 4.54
-  runtime_ts: 0h0m4s541ms
-- status: 30 - gdsii - magic
-  runtime_s: 5.7
-  runtime_ts: 0h0m5s697ms
-- status: 31 - spice extraction - magic
-  runtime_s: 11.83
-  runtime_ts: 0h0m11s827ms
-- status: 33 - write verilog - openroad
-  runtime_s: 0.65
-  runtime_ts: 0h0m0s649ms
-- status: 33 - write powered verilog - openlane
+  runtime_s: 0.66
+  runtime_ts: 0h0m0s656ms
+- status: 16 - heuristic diode insertion - openlane
   runtime_s: 0.77
-  runtime_ts: 0h0m0s766ms
+  runtime_ts: 0h0m0s774ms
+- status: 18 - write verilog - openroad
+  runtime_s: 0.51
+  runtime_ts: 0h0m0s510ms
+- status: 18 - global routing - openroad
+  runtime_s: 0.62
+  runtime_ts: 0h0m0s616ms
+- status: 19 - fill insertion - openroad
+  runtime_s: 0.68
+  runtime_ts: 0h0m0s676ms
+- status: 20 - detailed_routing - openroad
+  runtime_s: 69.43
+  runtime_ts: 0h1m9s429ms
+- status: 21 - wire lengths - openlane
+  runtime_s: 0.42
+  runtime_ts: 0h0m0s416ms
+- status: 22 - parasitics extraction - openroad
+  runtime_s: 1.6
+  runtime_ts: 0h0m1s601ms
+- status: 23 - sta - openroad
+  runtime_s: 40.02
+  runtime_ts: 0h0m40s21ms
+- status: 24 - parasitics extraction - openroad
+  runtime_s: 1.61
+  runtime_ts: 0h0m1s608ms
+- status: 25 - sta - openroad
+  runtime_s: 40.46
+  runtime_ts: 0h0m40s463ms
+- status: 26 - parasitics extraction - openroad
+  runtime_s: 1.6
+  runtime_ts: 0h0m1s597ms
+- status: 27 - sta - openroad
+  runtime_s: 39.91
+  runtime_ts: 0h0m39s912ms
+- status: 28 - sta - openroad
+  runtime_s: 5.2
+  runtime_ts: 0h0m5s195ms
+- status: 29 - ir drop report - openroad
+  runtime_s: 0.76
+  runtime_ts: 0h0m0s755ms
+- status: 30 - gdsii - magic
+  runtime_s: 6.35
+  runtime_ts: 0h0m6s349ms
+- status: 31 - spice extraction - magic
+  runtime_s: 13.26
+  runtime_ts: 0h0m13s260ms
+- status: 33 - write verilog - openroad
+  runtime_s: 0.69
+  runtime_ts: 0h0m0s694ms
+- status: 33 - write powered verilog - openlane
+  runtime_s: 0.81
+  runtime_ts: 0h0m0s811ms
 - status: 34 - lvs - netgen
-  runtime_s: 0.38
-  runtime_ts: 0h0m0s384ms
+  runtime_s: 0.46
+  runtime_ts: 0h0m0s464ms
 - status: 35 - drc - magic
-  runtime_s: 20.75
-  runtime_ts: 0h0m20s748ms
+  runtime_s: 22.15
+  runtime_ts: 0h0m22s149ms
+- status: 36 - antenna check - openroad
+  runtime_s: 0.9
+  runtime_ts: 0h0m0s897ms
+- status: 37 - erc - circuit validity checker
+  runtime_s: 0.23
+  runtime_ts: 0h0m0s228ms
 ---
 - status: routed
-  runtime_s: 145.0
-  runtime_ts: 0h2m25s0ms
+  runtime_s: 124.0
+  runtime_ts: 0h2m4s0ms
 - status: flow completed
-  runtime_s: 298.0
-  runtime_ts: 0h4m58s0ms
+  runtime_s: 302.0
+  runtime_ts: 0h5m2s0ms

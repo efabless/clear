@@ -58,7 +58,6 @@ MACRO bottom_tile
   PIN ccff_head
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 47.930 0.000 48.210 4.000 ;
@@ -67,7 +66,6 @@ MACRO bottom_tile
   PIN ccff_head_1
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 246.190 131.000 246.470 135.000 ;
@@ -76,7 +74,6 @@ MACRO bottom_tile
   PIN ccff_tail
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 206.630 0.000 206.910 4.000 ;
@@ -85,7 +82,6 @@ MACRO bottom_tile
   PIN ccff_tail_0
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 7.910 131.000 8.190 135.000 ;
@@ -94,7 +90,6 @@ MACRO bottom_tile
   PIN chanx_left_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 7.520 4.000 8.120 ;
@@ -103,7 +98,6 @@ MACRO bottom_tile
   PIN chanx_left_in[10]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 27.920 4.000 28.520 ;
@@ -112,7 +106,6 @@ MACRO bottom_tile
   PIN chanx_left_in[11]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 29.960 4.000 30.560 ;
@@ -121,7 +114,6 @@ MACRO bottom_tile
   PIN chanx_left_in[12]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 32.000 4.000 32.600 ;
@@ -130,7 +122,6 @@ MACRO bottom_tile
   PIN chanx_left_in[13]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 34.040 4.000 34.640 ;
@@ -139,7 +130,6 @@ MACRO bottom_tile
   PIN chanx_left_in[14]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 36.080 4.000 36.680 ;
@@ -148,7 +138,6 @@ MACRO bottom_tile
   PIN chanx_left_in[15]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 38.120 4.000 38.720 ;
@@ -157,7 +146,6 @@ MACRO bottom_tile
   PIN chanx_left_in[16]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 40.160 4.000 40.760 ;
@@ -166,7 +154,6 @@ MACRO bottom_tile
   PIN chanx_left_in[17]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 42.200 4.000 42.800 ;
@@ -175,7 +162,6 @@ MACRO bottom_tile
   PIN chanx_left_in[18]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 44.240 4.000 44.840 ;
@@ -184,7 +170,6 @@ MACRO bottom_tile
   PIN chanx_left_in[19]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 46.280 4.000 46.880 ;
@@ -193,7 +178,6 @@ MACRO bottom_tile
   PIN chanx_left_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 9.560 4.000 10.160 ;
@@ -202,7 +186,6 @@ MACRO bottom_tile
   PIN chanx_left_in[20]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 48.320 4.000 48.920 ;
@@ -211,7 +194,6 @@ MACRO bottom_tile
   PIN chanx_left_in[21]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 50.360 4.000 50.960 ;
@@ -220,7 +202,6 @@ MACRO bottom_tile
   PIN chanx_left_in[22]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 52.400 4.000 53.000 ;
@@ -229,7 +210,6 @@ MACRO bottom_tile
   PIN chanx_left_in[23]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 54.440 4.000 55.040 ;
@@ -238,7 +218,6 @@ MACRO bottom_tile
   PIN chanx_left_in[24]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 56.480 4.000 57.080 ;
@@ -247,7 +226,6 @@ MACRO bottom_tile
   PIN chanx_left_in[25]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 58.520 4.000 59.120 ;
@@ -256,7 +234,6 @@ MACRO bottom_tile
   PIN chanx_left_in[26]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 60.560 4.000 61.160 ;
@@ -265,7 +242,6 @@ MACRO bottom_tile
   PIN chanx_left_in[27]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 62.600 4.000 63.200 ;
@@ -274,7 +250,6 @@ MACRO bottom_tile
   PIN chanx_left_in[28]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 64.640 4.000 65.240 ;
@@ -283,7 +258,6 @@ MACRO bottom_tile
   PIN chanx_left_in[29]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 66.680 4.000 67.280 ;
@@ -292,7 +266,6 @@ MACRO bottom_tile
   PIN chanx_left_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 11.600 4.000 12.200 ;
@@ -301,7 +274,6 @@ MACRO bottom_tile
   PIN chanx_left_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 13.640 4.000 14.240 ;
@@ -310,7 +282,6 @@ MACRO bottom_tile
   PIN chanx_left_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 15.680 4.000 16.280 ;
@@ -319,7 +290,6 @@ MACRO bottom_tile
   PIN chanx_left_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 17.720 4.000 18.320 ;
@@ -328,7 +298,6 @@ MACRO bottom_tile
   PIN chanx_left_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 19.760 4.000 20.360 ;
@@ -337,7 +306,6 @@ MACRO bottom_tile
   PIN chanx_left_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 21.800 4.000 22.400 ;
@@ -346,7 +314,6 @@ MACRO bottom_tile
   PIN chanx_left_in[8]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 23.840 4.000 24.440 ;
@@ -355,7 +322,6 @@ MACRO bottom_tile
   PIN chanx_left_in[9]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 0.000 25.880 4.000 26.480 ;
@@ -364,7 +330,6 @@ MACRO bottom_tile
   PIN chanx_left_out[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 68.720 4.000 69.320 ;
@@ -373,7 +338,6 @@ MACRO bottom_tile
   PIN chanx_left_out[10]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 89.120 4.000 89.720 ;
@@ -382,7 +346,6 @@ MACRO bottom_tile
   PIN chanx_left_out[11]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 91.160 4.000 91.760 ;
@@ -391,7 +354,6 @@ MACRO bottom_tile
   PIN chanx_left_out[12]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 93.200 4.000 93.800 ;
@@ -400,7 +362,6 @@ MACRO bottom_tile
   PIN chanx_left_out[13]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 95.240 4.000 95.840 ;
@@ -409,7 +370,6 @@ MACRO bottom_tile
   PIN chanx_left_out[14]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 97.280 4.000 97.880 ;
@@ -418,7 +378,6 @@ MACRO bottom_tile
   PIN chanx_left_out[15]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 99.320 4.000 99.920 ;
@@ -427,7 +386,6 @@ MACRO bottom_tile
   PIN chanx_left_out[16]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 101.360 4.000 101.960 ;
@@ -436,7 +394,6 @@ MACRO bottom_tile
   PIN chanx_left_out[17]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 103.400 4.000 104.000 ;
@@ -445,7 +402,6 @@ MACRO bottom_tile
   PIN chanx_left_out[18]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 105.440 4.000 106.040 ;
@@ -454,7 +410,6 @@ MACRO bottom_tile
   PIN chanx_left_out[19]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 107.480 4.000 108.080 ;
@@ -463,7 +418,6 @@ MACRO bottom_tile
   PIN chanx_left_out[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 70.760 4.000 71.360 ;
@@ -472,7 +426,6 @@ MACRO bottom_tile
   PIN chanx_left_out[20]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 109.520 4.000 110.120 ;
@@ -481,7 +434,6 @@ MACRO bottom_tile
   PIN chanx_left_out[21]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 111.560 4.000 112.160 ;
@@ -490,7 +442,6 @@ MACRO bottom_tile
   PIN chanx_left_out[22]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 113.600 4.000 114.200 ;
@@ -499,7 +450,6 @@ MACRO bottom_tile
   PIN chanx_left_out[23]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 115.640 4.000 116.240 ;
@@ -508,7 +458,6 @@ MACRO bottom_tile
   PIN chanx_left_out[24]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 117.680 4.000 118.280 ;
@@ -517,7 +466,6 @@ MACRO bottom_tile
   PIN chanx_left_out[25]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 119.720 4.000 120.320 ;
@@ -526,7 +474,6 @@ MACRO bottom_tile
   PIN chanx_left_out[26]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 121.760 4.000 122.360 ;
@@ -535,7 +482,6 @@ MACRO bottom_tile
   PIN chanx_left_out[27]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 123.800 4.000 124.400 ;
@@ -544,7 +490,6 @@ MACRO bottom_tile
   PIN chanx_left_out[28]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 125.840 4.000 126.440 ;
@@ -553,7 +498,6 @@ MACRO bottom_tile
   PIN chanx_left_out[29]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 127.880 4.000 128.480 ;
@@ -562,7 +506,6 @@ MACRO bottom_tile
   PIN chanx_left_out[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 72.800 4.000 73.400 ;
@@ -571,7 +514,6 @@ MACRO bottom_tile
   PIN chanx_left_out[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 74.840 4.000 75.440 ;
@@ -580,7 +522,6 @@ MACRO bottom_tile
   PIN chanx_left_out[4]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 76.880 4.000 77.480 ;
@@ -589,7 +530,6 @@ MACRO bottom_tile
   PIN chanx_left_out[5]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 78.920 4.000 79.520 ;
@@ -598,7 +538,6 @@ MACRO bottom_tile
   PIN chanx_left_out[6]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 80.960 4.000 81.560 ;
@@ -607,7 +546,6 @@ MACRO bottom_tile
   PIN chanx_left_out[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 83.000 4.000 83.600 ;
@@ -616,7 +554,6 @@ MACRO bottom_tile
   PIN chanx_left_out[8]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 85.040 4.000 85.640 ;
@@ -625,7 +562,6 @@ MACRO bottom_tile
   PIN chanx_left_out[9]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 0.000 87.080 4.000 87.680 ;
@@ -634,7 +570,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 68.040 255.000 68.640 ;
@@ -643,7 +578,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[10]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 88.440 255.000 89.040 ;
@@ -652,7 +586,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[11]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 90.480 255.000 91.080 ;
@@ -661,7 +594,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[12]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 92.520 255.000 93.120 ;
@@ -670,7 +602,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[13]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 94.560 255.000 95.160 ;
@@ -679,7 +610,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[14]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 96.600 255.000 97.200 ;
@@ -688,7 +618,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[15]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 98.640 255.000 99.240 ;
@@ -697,7 +626,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[16]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 100.680 255.000 101.280 ;
@@ -706,7 +634,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[17]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 102.720 255.000 103.320 ;
@@ -715,7 +642,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[18]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 104.760 255.000 105.360 ;
@@ -724,7 +650,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[19]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 106.800 255.000 107.400 ;
@@ -733,7 +658,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 70.080 255.000 70.680 ;
@@ -742,7 +666,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[20]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 108.840 255.000 109.440 ;
@@ -751,7 +674,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[21]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 110.880 255.000 111.480 ;
@@ -760,7 +682,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[22]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 112.920 255.000 113.520 ;
@@ -769,7 +690,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[23]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 114.960 255.000 115.560 ;
@@ -778,7 +698,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[24]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 117.000 255.000 117.600 ;
@@ -787,7 +706,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[25]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 119.040 255.000 119.640 ;
@@ -796,7 +714,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[26]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 121.080 255.000 121.680 ;
@@ -805,7 +722,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[27]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 123.120 255.000 123.720 ;
@@ -814,7 +730,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[28]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 125.160 255.000 125.760 ;
@@ -823,7 +738,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[29]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 127.200 255.000 127.800 ;
@@ -832,7 +746,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 72.120 255.000 72.720 ;
@@ -841,7 +754,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 74.160 255.000 74.760 ;
@@ -850,7 +762,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 76.200 255.000 76.800 ;
@@ -859,7 +770,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 78.240 255.000 78.840 ;
@@ -868,7 +778,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 80.280 255.000 80.880 ;
@@ -877,7 +786,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 82.320 255.000 82.920 ;
@@ -886,7 +794,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[8]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 84.360 255.000 84.960 ;
@@ -895,7 +802,6 @@ MACRO bottom_tile
   PIN chanx_right_in_0[9]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met3 ;
         RECT 251.000 86.400 255.000 87.000 ;
@@ -904,7 +810,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 6.840 255.000 7.440 ;
@@ -913,7 +818,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[10]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 27.240 255.000 27.840 ;
@@ -922,7 +826,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[11]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 29.280 255.000 29.880 ;
@@ -931,7 +834,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[12]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 31.320 255.000 31.920 ;
@@ -940,7 +842,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[13]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 33.360 255.000 33.960 ;
@@ -949,7 +850,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[14]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 35.400 255.000 36.000 ;
@@ -958,7 +858,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[15]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 37.440 255.000 38.040 ;
@@ -967,7 +866,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[16]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 39.480 255.000 40.080 ;
@@ -976,7 +874,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[17]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 41.520 255.000 42.120 ;
@@ -985,7 +882,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[18]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 43.560 255.000 44.160 ;
@@ -994,7 +890,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[19]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 45.600 255.000 46.200 ;
@@ -1003,7 +898,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 8.880 255.000 9.480 ;
@@ -1012,7 +906,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[20]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 47.640 255.000 48.240 ;
@@ -1021,7 +914,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[21]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 49.680 255.000 50.280 ;
@@ -1030,7 +922,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[22]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 51.720 255.000 52.320 ;
@@ -1039,7 +930,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[23]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 53.760 255.000 54.360 ;
@@ -1048,7 +938,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[24]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 55.800 255.000 56.400 ;
@@ -1057,7 +946,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[25]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 57.840 255.000 58.440 ;
@@ -1066,7 +954,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[26]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 59.880 255.000 60.480 ;
@@ -1075,7 +962,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[27]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 61.920 255.000 62.520 ;
@@ -1084,7 +970,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[28]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 63.960 255.000 64.560 ;
@@ -1093,7 +978,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[29]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 66.000 255.000 66.600 ;
@@ -1102,7 +986,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 10.920 255.000 11.520 ;
@@ -1111,7 +994,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 12.960 255.000 13.560 ;
@@ -1120,7 +1002,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[4]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 15.000 255.000 15.600 ;
@@ -1129,7 +1010,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[5]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 17.040 255.000 17.640 ;
@@ -1138,7 +1018,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[6]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 19.080 255.000 19.680 ;
@@ -1147,7 +1026,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 21.120 255.000 21.720 ;
@@ -1156,7 +1034,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[8]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 23.160 255.000 23.760 ;
@@ -1165,7 +1042,6 @@ MACRO bottom_tile
   PIN chanx_right_out_0[9]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met3 ;
         RECT 251.000 25.200 255.000 25.800 ;
@@ -1174,7 +1050,6 @@ MACRO bottom_tile
   PIN chany_top_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 107.730 131.000 108.010 135.000 ;
@@ -1183,7 +1058,6 @@ MACRO bottom_tile
   PIN chany_top_in[10]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 139.930 131.000 140.210 135.000 ;
@@ -1192,7 +1066,6 @@ MACRO bottom_tile
   PIN chany_top_in[11]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 143.150 131.000 143.430 135.000 ;
@@ -1201,7 +1074,6 @@ MACRO bottom_tile
   PIN chany_top_in[12]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 146.370 131.000 146.650 135.000 ;
@@ -1210,7 +1082,6 @@ MACRO bottom_tile
   PIN chany_top_in[13]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 149.590 131.000 149.870 135.000 ;
@@ -1219,7 +1090,6 @@ MACRO bottom_tile
   PIN chany_top_in[14]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 152.810 131.000 153.090 135.000 ;
@@ -1228,7 +1098,6 @@ MACRO bottom_tile
   PIN chany_top_in[15]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 156.030 131.000 156.310 135.000 ;
@@ -1237,7 +1106,6 @@ MACRO bottom_tile
   PIN chany_top_in[16]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 159.250 131.000 159.530 135.000 ;
@@ -1246,7 +1114,6 @@ MACRO bottom_tile
   PIN chany_top_in[17]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 162.470 131.000 162.750 135.000 ;
@@ -1255,7 +1122,6 @@ MACRO bottom_tile
   PIN chany_top_in[18]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 165.690 131.000 165.970 135.000 ;
@@ -1264,7 +1130,6 @@ MACRO bottom_tile
   PIN chany_top_in[19]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 168.910 131.000 169.190 135.000 ;
@@ -1273,7 +1138,6 @@ MACRO bottom_tile
   PIN chany_top_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 110.950 131.000 111.230 135.000 ;
@@ -1282,7 +1146,6 @@ MACRO bottom_tile
   PIN chany_top_in[20]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 172.130 131.000 172.410 135.000 ;
@@ -1291,7 +1154,6 @@ MACRO bottom_tile
   PIN chany_top_in[21]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 175.350 131.000 175.630 135.000 ;
@@ -1300,7 +1162,6 @@ MACRO bottom_tile
   PIN chany_top_in[22]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 178.570 131.000 178.850 135.000 ;
@@ -1309,7 +1170,6 @@ MACRO bottom_tile
   PIN chany_top_in[23]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 181.790 131.000 182.070 135.000 ;
@@ -1318,7 +1178,6 @@ MACRO bottom_tile
   PIN chany_top_in[24]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 185.010 131.000 185.290 135.000 ;
@@ -1327,7 +1186,6 @@ MACRO bottom_tile
   PIN chany_top_in[25]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 188.230 131.000 188.510 135.000 ;
@@ -1336,7 +1194,6 @@ MACRO bottom_tile
   PIN chany_top_in[26]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 191.450 131.000 191.730 135.000 ;
@@ -1345,7 +1202,6 @@ MACRO bottom_tile
   PIN chany_top_in[27]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 194.670 131.000 194.950 135.000 ;
@@ -1354,7 +1210,6 @@ MACRO bottom_tile
   PIN chany_top_in[28]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 197.890 131.000 198.170 135.000 ;
@@ -1363,7 +1218,6 @@ MACRO bottom_tile
   PIN chany_top_in[29]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 201.110 131.000 201.390 135.000 ;
@@ -1372,7 +1226,6 @@ MACRO bottom_tile
   PIN chany_top_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 114.170 131.000 114.450 135.000 ;
@@ -1381,7 +1234,6 @@ MACRO bottom_tile
   PIN chany_top_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 117.390 131.000 117.670 135.000 ;
@@ -1390,7 +1242,6 @@ MACRO bottom_tile
   PIN chany_top_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 120.610 131.000 120.890 135.000 ;
@@ -1399,7 +1250,6 @@ MACRO bottom_tile
   PIN chany_top_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 123.830 131.000 124.110 135.000 ;
@@ -1408,7 +1258,6 @@ MACRO bottom_tile
   PIN chany_top_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 127.050 131.000 127.330 135.000 ;
@@ -1417,7 +1266,6 @@ MACRO bottom_tile
   PIN chany_top_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 130.270 131.000 130.550 135.000 ;
@@ -1426,7 +1274,6 @@ MACRO bottom_tile
   PIN chany_top_in[8]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 133.490 131.000 133.770 135.000 ;
@@ -1435,7 +1282,6 @@ MACRO bottom_tile
   PIN chany_top_in[9]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 136.710 131.000 136.990 135.000 ;
@@ -1444,7 +1290,6 @@ MACRO bottom_tile
   PIN chany_top_out[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 11.130 131.000 11.410 135.000 ;
@@ -1453,7 +1298,6 @@ MACRO bottom_tile
   PIN chany_top_out[10]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 43.330 131.000 43.610 135.000 ;
@@ -1462,7 +1306,6 @@ MACRO bottom_tile
   PIN chany_top_out[11]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 46.550 131.000 46.830 135.000 ;
@@ -1471,7 +1314,6 @@ MACRO bottom_tile
   PIN chany_top_out[12]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 49.770 131.000 50.050 135.000 ;
@@ -1480,7 +1322,6 @@ MACRO bottom_tile
   PIN chany_top_out[13]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 52.990 131.000 53.270 135.000 ;
@@ -1489,7 +1330,6 @@ MACRO bottom_tile
   PIN chany_top_out[14]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 56.210 131.000 56.490 135.000 ;
@@ -1498,7 +1338,6 @@ MACRO bottom_tile
   PIN chany_top_out[15]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 59.430 131.000 59.710 135.000 ;
@@ -1507,7 +1346,6 @@ MACRO bottom_tile
   PIN chany_top_out[16]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 62.650 131.000 62.930 135.000 ;
@@ -1516,7 +1354,6 @@ MACRO bottom_tile
   PIN chany_top_out[17]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 65.870 131.000 66.150 135.000 ;
@@ -1525,7 +1362,6 @@ MACRO bottom_tile
   PIN chany_top_out[18]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 69.090 131.000 69.370 135.000 ;
@@ -1534,7 +1370,6 @@ MACRO bottom_tile
   PIN chany_top_out[19]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 72.310 131.000 72.590 135.000 ;
@@ -1543,7 +1378,6 @@ MACRO bottom_tile
   PIN chany_top_out[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 14.350 131.000 14.630 135.000 ;
@@ -1552,7 +1386,6 @@ MACRO bottom_tile
   PIN chany_top_out[20]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 75.530 131.000 75.810 135.000 ;
@@ -1561,7 +1394,6 @@ MACRO bottom_tile
   PIN chany_top_out[21]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 78.750 131.000 79.030 135.000 ;
@@ -1570,7 +1402,6 @@ MACRO bottom_tile
   PIN chany_top_out[22]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 81.970 131.000 82.250 135.000 ;
@@ -1579,7 +1410,6 @@ MACRO bottom_tile
   PIN chany_top_out[23]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 85.190 131.000 85.470 135.000 ;
@@ -1588,7 +1418,6 @@ MACRO bottom_tile
   PIN chany_top_out[24]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 88.410 131.000 88.690 135.000 ;
@@ -1597,7 +1426,6 @@ MACRO bottom_tile
   PIN chany_top_out[25]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 91.630 131.000 91.910 135.000 ;
@@ -1606,7 +1434,6 @@ MACRO bottom_tile
   PIN chany_top_out[26]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 94.850 131.000 95.130 135.000 ;
@@ -1615,7 +1442,6 @@ MACRO bottom_tile
   PIN chany_top_out[27]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 98.070 131.000 98.350 135.000 ;
@@ -1624,7 +1450,6 @@ MACRO bottom_tile
   PIN chany_top_out[28]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 101.290 131.000 101.570 135.000 ;
@@ -1633,7 +1458,6 @@ MACRO bottom_tile
   PIN chany_top_out[29]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 104.510 131.000 104.790 135.000 ;
@@ -1642,7 +1466,6 @@ MACRO bottom_tile
   PIN chany_top_out[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 17.570 131.000 17.850 135.000 ;
@@ -1651,7 +1474,6 @@ MACRO bottom_tile
   PIN chany_top_out[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 20.790 131.000 21.070 135.000 ;
@@ -1660,7 +1482,6 @@ MACRO bottom_tile
   PIN chany_top_out[4]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 24.010 131.000 24.290 135.000 ;
@@ -1669,7 +1490,6 @@ MACRO bottom_tile
   PIN chany_top_out[5]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 27.230 131.000 27.510 135.000 ;
@@ -1678,7 +1498,6 @@ MACRO bottom_tile
   PIN chany_top_out[6]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 30.450 131.000 30.730 135.000 ;
@@ -1687,7 +1506,6 @@ MACRO bottom_tile
   PIN chany_top_out[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 33.670 131.000 33.950 135.000 ;
@@ -1696,7 +1514,6 @@ MACRO bottom_tile
   PIN chany_top_out[8]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 36.890 131.000 37.170 135.000 ;
@@ -1705,7 +1522,6 @@ MACRO bottom_tile
   PIN chany_top_out[9]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 40.110 131.000 40.390 135.000 ;
@@ -1714,7 +1530,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_dir[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 58.510 0.000 58.790 4.000 ;
@@ -1723,7 +1538,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_dir[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 69.090 0.000 69.370 4.000 ;
@@ -1732,7 +1546,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_dir[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 79.670 0.000 79.950 4.000 ;
@@ -1741,7 +1554,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_dir[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 90.250 0.000 90.530 4.000 ;
@@ -1750,7 +1562,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 143.150 0.000 143.430 4.000 ;
@@ -1759,7 +1570,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 153.730 0.000 154.010 4.000 ;
@@ -1768,7 +1578,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 164.310 0.000 164.590 4.000 ;
@@ -1777,7 +1586,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 174.890 0.000 175.170 4.000 ;
@@ -1786,7 +1594,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_out[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 100.830 0.000 101.110 4.000 ;
@@ -1795,7 +1602,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_out[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 111.410 0.000 111.690 4.000 ;
@@ -1804,7 +1610,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_out[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 121.990 0.000 122.270 4.000 ;
@@ -1813,7 +1618,6 @@ MACRO bottom_tile
   PIN gfpga_pad_io_soc_out[3]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 132.570 0.000 132.850 4.000 ;
@@ -1822,7 +1626,6 @@ MACRO bottom_tile
   PIN isol_n
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 185.470 0.000 185.750 4.000 ;
@@ -1831,7 +1634,6 @@ MACRO bottom_tile
   PIN prog_clk
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 196.050 0.000 196.330 4.000 ;
@@ -1840,7 +1642,6 @@ MACRO bottom_tile
   PIN prog_reset
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 210.770 131.000 211.050 135.000 ;
@@ -1849,7 +1650,6 @@ MACRO bottom_tile
   PIN reset
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 213.990 131.000 214.270 135.000 ;
@@ -1858,7 +1658,6 @@ MACRO bottom_tile
   PIN right_bottom_grid_top_width_0_height_0_subtile_0__pin_inpad_0_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 217.210 0.000 217.490 4.000 ;
@@ -1867,7 +1666,6 @@ MACRO bottom_tile
   PIN right_bottom_grid_top_width_0_height_0_subtile_1__pin_inpad_0_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 227.790 0.000 228.070 4.000 ;
@@ -1876,7 +1674,6 @@ MACRO bottom_tile
   PIN right_bottom_grid_top_width_0_height_0_subtile_2__pin_inpad_0_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 238.370 0.000 238.650 4.000 ;
@@ -1885,7 +1682,6 @@ MACRO bottom_tile
   PIN right_bottom_grid_top_width_0_height_0_subtile_3__pin_inpad_0_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 248.950 0.000 249.230 4.000 ;
@@ -1894,7 +1690,6 @@ MACRO bottom_tile
   PIN test_enable
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 217.210 131.000 217.490 135.000 ;
@@ -1903,7 +1698,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_10_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 226.870 131.000 227.150 135.000 ;
@@ -1912,7 +1706,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_11_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 230.090 131.000 230.370 135.000 ;
@@ -1921,7 +1714,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_12_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 233.310 131.000 233.590 135.000 ;
@@ -1930,7 +1722,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_13_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 236.530 131.000 236.810 135.000 ;
@@ -1939,7 +1730,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_14_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 239.750 131.000 240.030 135.000 ;
@@ -1948,7 +1738,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_15_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 242.970 131.000 243.250 135.000 ;
@@ -1957,7 +1746,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 220.430 131.000 220.710 135.000 ;
@@ -1966,7 +1754,6 @@ MACRO bottom_tile
   PIN top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.110000 ;
     PORT
       LAYER met2 ;
         RECT 223.650 131.000 223.930 135.000 ;
@@ -1975,7 +1762,6 @@ MACRO bottom_tile
   PIN top_width_0_height_0_subtile_0__pin_inpad_0_
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 5.610 0.000 5.890 4.000 ;
@@ -1984,7 +1770,6 @@ MACRO bottom_tile
   PIN top_width_0_height_0_subtile_1__pin_inpad_0_
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 16.190 0.000 16.470 4.000 ;
@@ -1993,7 +1778,6 @@ MACRO bottom_tile
   PIN top_width_0_height_0_subtile_2__pin_inpad_0_
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 26.770 0.000 27.050 4.000 ;
@@ -2002,7 +1786,6 @@ MACRO bottom_tile
   PIN top_width_0_height_0_subtile_3__pin_inpad_0_
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.275600 ;
     PORT
       LAYER met2 ;
         RECT 37.350 0.000 37.630 4.000 ;
@@ -2012,83 +1795,84 @@ MACRO bottom_tile
       LAYER li1 ;
         RECT 5.520 10.795 249.320 122.485 ;
       LAYER met1 ;
-        RECT 5.520 10.640 249.320 131.880 ;
+        RECT 4.670 10.640 249.320 126.440 ;
       LAYER met2 ;
-        RECT 5.610 130.720 7.630 131.910 ;
-        RECT 8.470 130.720 10.850 131.910 ;
-        RECT 11.690 130.720 14.070 131.910 ;
-        RECT 14.910 130.720 17.290 131.910 ;
-        RECT 18.130 130.720 20.510 131.910 ;
-        RECT 21.350 130.720 23.730 131.910 ;
-        RECT 24.570 130.720 26.950 131.910 ;
-        RECT 27.790 130.720 30.170 131.910 ;
-        RECT 31.010 130.720 33.390 131.910 ;
-        RECT 34.230 130.720 36.610 131.910 ;
-        RECT 37.450 130.720 39.830 131.910 ;
-        RECT 40.670 130.720 43.050 131.910 ;
-        RECT 43.890 130.720 46.270 131.910 ;
-        RECT 47.110 130.720 49.490 131.910 ;
-        RECT 50.330 130.720 52.710 131.910 ;
-        RECT 53.550 130.720 55.930 131.910 ;
-        RECT 56.770 130.720 59.150 131.910 ;
-        RECT 59.990 130.720 62.370 131.910 ;
-        RECT 63.210 130.720 65.590 131.910 ;
-        RECT 66.430 130.720 68.810 131.910 ;
-        RECT 69.650 130.720 72.030 131.910 ;
-        RECT 72.870 130.720 75.250 131.910 ;
-        RECT 76.090 130.720 78.470 131.910 ;
-        RECT 79.310 130.720 81.690 131.910 ;
-        RECT 82.530 130.720 84.910 131.910 ;
-        RECT 85.750 130.720 88.130 131.910 ;
-        RECT 88.970 130.720 91.350 131.910 ;
-        RECT 92.190 130.720 94.570 131.910 ;
-        RECT 95.410 130.720 97.790 131.910 ;
-        RECT 98.630 130.720 101.010 131.910 ;
-        RECT 101.850 130.720 104.230 131.910 ;
-        RECT 105.070 130.720 107.450 131.910 ;
-        RECT 108.290 130.720 110.670 131.910 ;
-        RECT 111.510 130.720 113.890 131.910 ;
-        RECT 114.730 130.720 117.110 131.910 ;
-        RECT 117.950 130.720 120.330 131.910 ;
-        RECT 121.170 130.720 123.550 131.910 ;
-        RECT 124.390 130.720 126.770 131.910 ;
-        RECT 127.610 130.720 129.990 131.910 ;
-        RECT 130.830 130.720 133.210 131.910 ;
-        RECT 134.050 130.720 136.430 131.910 ;
-        RECT 137.270 130.720 139.650 131.910 ;
-        RECT 140.490 130.720 142.870 131.910 ;
-        RECT 143.710 130.720 146.090 131.910 ;
-        RECT 146.930 130.720 149.310 131.910 ;
-        RECT 150.150 130.720 152.530 131.910 ;
-        RECT 153.370 130.720 155.750 131.910 ;
-        RECT 156.590 130.720 158.970 131.910 ;
-        RECT 159.810 130.720 162.190 131.910 ;
-        RECT 163.030 130.720 165.410 131.910 ;
-        RECT 166.250 130.720 168.630 131.910 ;
-        RECT 169.470 130.720 171.850 131.910 ;
-        RECT 172.690 130.720 175.070 131.910 ;
-        RECT 175.910 130.720 178.290 131.910 ;
-        RECT 179.130 130.720 181.510 131.910 ;
-        RECT 182.350 130.720 184.730 131.910 ;
-        RECT 185.570 130.720 187.950 131.910 ;
-        RECT 188.790 130.720 191.170 131.910 ;
-        RECT 192.010 130.720 194.390 131.910 ;
-        RECT 195.230 130.720 197.610 131.910 ;
-        RECT 198.450 130.720 200.830 131.910 ;
-        RECT 201.670 130.720 210.490 131.910 ;
-        RECT 211.330 130.720 213.710 131.910 ;
-        RECT 214.550 130.720 216.930 131.910 ;
-        RECT 217.770 130.720 220.150 131.910 ;
-        RECT 220.990 130.720 223.370 131.910 ;
-        RECT 224.210 130.720 226.590 131.910 ;
-        RECT 227.430 130.720 229.810 131.910 ;
-        RECT 230.650 130.720 233.030 131.910 ;
-        RECT 233.870 130.720 236.250 131.910 ;
-        RECT 237.090 130.720 239.470 131.910 ;
-        RECT 240.310 130.720 242.690 131.910 ;
-        RECT 243.530 130.720 245.910 131.910 ;
-        RECT 246.750 130.720 249.220 131.910 ;
-        RECT 5.610 4.280 249.220 130.720 ;
+        RECT 4.690 130.720 7.630 131.650 ;
+        RECT 8.470 130.720 10.850 131.650 ;
+        RECT 11.690 130.720 14.070 131.650 ;
+        RECT 14.910 130.720 17.290 131.650 ;
+        RECT 18.130 130.720 20.510 131.650 ;
+        RECT 21.350 130.720 23.730 131.650 ;
+        RECT 24.570 130.720 26.950 131.650 ;
+        RECT 27.790 130.720 30.170 131.650 ;
+        RECT 31.010 130.720 33.390 131.650 ;
+        RECT 34.230 130.720 36.610 131.650 ;
+        RECT 37.450 130.720 39.830 131.650 ;
+        RECT 40.670 130.720 43.050 131.650 ;
+        RECT 43.890 130.720 46.270 131.650 ;
+        RECT 47.110 130.720 49.490 131.650 ;
+        RECT 50.330 130.720 52.710 131.650 ;
+        RECT 53.550 130.720 55.930 131.650 ;
+        RECT 56.770 130.720 59.150 131.650 ;
+        RECT 59.990 130.720 62.370 131.650 ;
+        RECT 63.210 130.720 65.590 131.650 ;
+        RECT 66.430 130.720 68.810 131.650 ;
+        RECT 69.650 130.720 72.030 131.650 ;
+        RECT 72.870 130.720 75.250 131.650 ;
+        RECT 76.090 130.720 78.470 131.650 ;
+        RECT 79.310 130.720 81.690 131.650 ;
+        RECT 82.530 130.720 84.910 131.650 ;
+        RECT 85.750 130.720 88.130 131.650 ;
+        RECT 88.970 130.720 91.350 131.650 ;
+        RECT 92.190 130.720 94.570 131.650 ;
+        RECT 95.410 130.720 97.790 131.650 ;
+        RECT 98.630 130.720 101.010 131.650 ;
+        RECT 101.850 130.720 104.230 131.650 ;
+        RECT 105.070 130.720 107.450 131.650 ;
+        RECT 108.290 130.720 110.670 131.650 ;
+        RECT 111.510 130.720 113.890 131.650 ;
+        RECT 114.730 130.720 117.110 131.650 ;
+        RECT 117.950 130.720 120.330 131.650 ;
+        RECT 121.170 130.720 123.550 131.650 ;
+        RECT 124.390 130.720 126.770 131.650 ;
+        RECT 127.610 130.720 129.990 131.650 ;
+        RECT 130.830 130.720 133.210 131.650 ;
+        RECT 134.050 130.720 136.430 131.650 ;
+        RECT 137.270 130.720 139.650 131.650 ;
+        RECT 140.490 130.720 142.870 131.650 ;
+        RECT 143.710 130.720 146.090 131.650 ;
+        RECT 146.930 130.720 149.310 131.650 ;
+        RECT 150.150 130.720 152.530 131.650 ;
+        RECT 153.370 130.720 155.750 131.650 ;
+        RECT 156.590 130.720 158.970 131.650 ;
+        RECT 159.810 130.720 162.190 131.650 ;
+        RECT 163.030 130.720 165.410 131.650 ;
+        RECT 166.250 130.720 168.630 131.650 ;
+        RECT 169.470 130.720 171.850 131.650 ;
+        RECT 172.690 130.720 175.070 131.650 ;
+        RECT 175.910 130.720 178.290 131.650 ;
+        RECT 179.130 130.720 181.510 131.650 ;
+        RECT 182.350 130.720 184.730 131.650 ;
+        RECT 185.570 130.720 187.950 131.650 ;
+        RECT 188.790 130.720 191.170 131.650 ;
+        RECT 192.010 130.720 194.390 131.650 ;
+        RECT 195.230 130.720 197.610 131.650 ;
+        RECT 198.450 130.720 200.830 131.650 ;
+        RECT 201.670 130.720 210.490 131.650 ;
+        RECT 211.330 130.720 213.710 131.650 ;
+        RECT 214.550 130.720 216.930 131.650 ;
+        RECT 217.770 130.720 220.150 131.650 ;
+        RECT 220.990 130.720 223.370 131.650 ;
+        RECT 224.210 130.720 226.590 131.650 ;
+        RECT 227.430 130.720 229.810 131.650 ;
+        RECT 230.650 130.720 233.030 131.650 ;
+        RECT 233.870 130.720 236.250 131.650 ;
+        RECT 237.090 130.720 239.470 131.650 ;
+        RECT 240.310 130.720 242.690 131.650 ;
+        RECT 243.530 130.720 245.910 131.650 ;
+        RECT 246.750 130.720 249.220 131.650 ;
+        RECT 4.690 4.280 249.220 130.720 ;
+        RECT 4.690 3.670 5.330 4.280 ;
         RECT 6.170 3.670 15.910 4.280 ;
         RECT 16.750 3.670 26.490 4.280 ;
         RECT 27.330 3.670 37.070 4.280 ;
@@ -2353,12 +2137,9 @@ MACRO bottom_tile
         RECT 4.400 7.120 250.600 7.840 ;
         RECT 4.000 6.975 250.600 7.120 ;
       LAYER met4 ;
-        RECT 70.215 45.055 89.320 120.185 ;
-        RECT 91.720 45.055 114.320 120.185 ;
-        RECT 116.720 45.055 139.320 120.185 ;
-        RECT 141.720 45.055 164.320 120.185 ;
-        RECT 166.720 45.055 189.320 120.185 ;
-        RECT 191.720 45.055 192.905 120.185 ;
+        RECT 71.135 62.055 89.320 114.745 ;
+        RECT 91.720 62.055 114.320 114.745 ;
+        RECT 116.720 62.055 126.665 114.745 ;
   END
 END bottom_tile
 END LIBRARY
