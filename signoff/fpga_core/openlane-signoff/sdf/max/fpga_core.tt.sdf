@@ -1,7 +1,7 @@
 (DELAYFILE
  (SDFVERSION "3.0")
  (DESIGN "fpga_core")
- (DATE "Fri Apr  7 21:34:42 2023")
+ (DATE "Sun Apr  9 12:04:17 2023")
  (VENDOR "Parallax")
  (PROGRAM "STA")
  (VERSION "2.4.0")
@@ -12077,7 +12077,7 @@
     (INTERCONNECT wire437.X tile_1__3_.prog_reset (0.110:0.110:0.110) (0.102:0.102:0.102))
     (INTERCONNECT wire437.X tile_1__2_.prog_reset (0.121:0.121:0.121) (0.112:0.112:0.112))
     (INTERCONNECT wire437.X tile_1__1_.prog_reset (0.121:0.121:0.121) (0.112:0.112:0.112))
-    (INTERCONNECT wire437.X wire430.A (0.121:0.121:0.121) (0.112:0.112:0.112))
+    (INTERCONNECT wire437.X wire430.A (0.121:0.121:0.121) (0.111:0.111:0.111))
     (INTERCONNECT wire437.X wire432.A (0.110:0.110:0.110) (0.102:0.102:0.102))
     (INTERCONNECT wire437.X wire434.A (0.084:0.084:0.084) (0.078:0.078:0.078))
     (INTERCONNECT wire437.X wire436.A (0.039:0.039:0.039) (0.036:0.036:0.036))
@@ -12154,7 +12154,7 @@
     (INTERCONNECT wire444.X ANTENNA_tile_6__6__prog_reset.DIODE (0.064:0.064:0.064) (0.061:0.061:0.061))
     (INTERCONNECT wire445.X tile_2__6_.prog_reset (0.045:0.045:0.045) (0.043:0.043:0.043))
     (INTERCONNECT wire445.X tile_3__6_.prog_reset (0.092:0.092:0.092) (0.087:0.087:0.087))
-    (INTERCONNECT wire445.X tile_4__6_.prog_reset (0.131:0.131:0.131) (0.124:0.124:0.124))
+    (INTERCONNECT wire445.X tile_4__6_.prog_reset (0.131:0.131:0.131) (0.123:0.123:0.123))
     (INTERCONNECT wire445.X tile_5__6_.prog_reset (0.151:0.151:0.151) (0.142:0.142:0.142))
     (INTERCONNECT wire445.X wire444.A (0.151:0.151:0.151) (0.142:0.142:0.142))
     (INTERCONNECT wire445.X ANTENNA_wire444_A.DIODE (0.151:0.151:0.151) (0.142:0.142:0.142))
@@ -16737,7 +16737,7 @@
   (INSTANCE wire444)
   (DELAY
    (ABSOLUTE
-    (IOPATH A X (0.276:0.276:0.276) (0.298:0.298:0.298))
+    (IOPATH A X (0.276:0.276:0.276) (0.297:0.297:0.297))
    )
   )
  )
@@ -17295,7 +17295,7 @@
   (INSTANCE wire5)
   (DELAY
    (ABSOLUTE
-    (IOPATH A X (0.263:0.263:0.263) (0.189:0.189:0.189))
+    (IOPATH A X (0.264:0.264:0.264) (0.189:0.189:0.189))
    )
   )
  )
