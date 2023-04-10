@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1680906442
+timestamp 1681045042
 << obsli1 >>
 rect 1104 2159 582820 701777
 << obsm1 >>
@@ -3980,8 +3980,8 @@ port 645 nsew signal input
 string FIXED_BBOX 0 0 584000 704000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 167048836
-string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_07_15_16/results/signoff/user_project_wrapper.magic.gds
-string GDS_START 78537264
+string GDS_END 167356698
+string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_09_05_46/results/signoff/user_project_wrapper.magic.gds
+string GDS_START 78908742
 << end >>
 
