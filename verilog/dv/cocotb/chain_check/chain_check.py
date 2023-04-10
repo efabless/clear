@@ -17,4 +17,4 @@ async def chain_check(dut):
         bit_stream=fpga_clear.file_bit_stream, check_tail=True
     )
 
-    await cocotb.triggers.ClockCycles(caravelEnv.clk, 1000)
+    await cocotb.triggers.ClockCycles(caravelEnv.clk, 100)
