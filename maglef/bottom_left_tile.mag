@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1680903110
+timestamp 1681041684
 << obsli1 >>
 rect 1104 2159 25852 24497
 << obsm1 >>
-rect 1104 2128 26298 26444
+rect 1104 2128 26666 26444
 << metal2 >>
 rect 1674 26200 1730 27000
 rect 2042 26200 2098 27000
@@ -73,7 +73,7 @@ rect 25226 26200 25282 27000
 rect 6734 0 6790 800
 rect 20166 0 20222 800
 << obsm2 >>
-rect 1122 26144 1618 26489
+rect 1398 26144 1618 26489
 rect 1786 26144 1986 26489
 rect 2154 26144 2354 26489
 rect 2522 26144 2722 26489
@@ -136,11 +136,11 @@ rect 23130 26144 23330 26489
 rect 23498 26144 24434 26489
 rect 24602 26144 24802 26489
 rect 24970 26144 25170 26489
-rect 25338 26144 26292 26489
-rect 1122 856 26292 26144
-rect 1122 303 6678 856
+rect 25338 26144 26660 26489
+rect 1398 856 26660 26144
+rect 1398 303 6678 856
 rect 6846 303 20110 856
-rect 20278 303 26292 856
+rect 20278 303 26660 856
 << metal3 >>
 rect 26200 26392 27000 26512
 rect 0 25848 800 25968
@@ -354,12 +354,12 @@ rect 12944 2128 13264 24528
 rect 17944 2128 18264 24528
 rect 22944 2128 23264 24528
 << obsm4 >>
-rect 6499 24608 24597 26077
-rect 6499 5611 7864 24608
-rect 8344 5611 12864 24608
-rect 13344 5611 17864 24608
-rect 18344 5611 22864 24608
-rect 23344 5611 24597 24608
+rect 4843 24608 23493 25941
+rect 4843 6291 7864 24608
+rect 8344 6291 12864 24608
+rect 13344 6291 17864 24608
+rect 18344 6291 22864 24608
+rect 23344 6291 23493 24608
 << labels >>
 rlabel metal4 s 7944 2128 8264 24528 6 VGND
 port 1 nsew ground bidirectional
@@ -643,8 +643,8 @@ port 136 nsew signal input
 string FIXED_BBOX 0 0 27000 27000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 1488400
-string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_left_tile/runs/23_04_07_14_30/results/signoff/bottom_left_tile.magic.gds
-string GDS_START 125138
+string GDS_END 1475190
+string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_left_tile/runs/23_04_09_05_00/results/signoff/bottom_left_tile.magic.gds
+string GDS_START 118106
 << end >>
 

@@ -90,7 +90,7 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 92.20
+worst slack 92.24
 
 ===========================================================================
  report_worst_slack -min (Hold)
@@ -110,7 +110,7 @@ Latency      CRPR       Skew
 cby_0__8_.cby_0__1_.mem_right_ipin_3.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
    0.55
 cby_0__8_.cby_0__1_.mem_right_ipin_3.sky130_fd_sc_hd__dfrtp_1_3_/CLK ^
-   0.47     -0.03       0.04
+   0.47     -0.03       0.05
 
 clock_skew_end
 power_report
@@ -121,23 +121,23 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             5.13e-05   2.71e-06   1.41e-09   5.40e-05  40.5%
-Combinational          3.02e-05   4.91e-05   5.51e-09   7.93e-05  59.5%
+Sequential             5.13e-05   2.61e-06   1.41e-09   5.39e-05  40.7%
+Combinational          3.03e-05   4.84e-05   5.55e-09   7.87e-05  59.3%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  8.15e-05   5.18e-05   6.92e-09   1.33e-04 100.0%
-                          61.1%      38.9%       0.0%
+Total                  8.16e-05   5.10e-05   6.97e-09   1.33e-04 100.0%
+                          61.5%      38.5%       0.0%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 9799 u^2 30% utilization.
+Design area 9851 u^2 30% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_left_tile/runs/23_04_07_14_24/results/routing/mca/process_corner_nom/top_left_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_left_tile/runs/23_04_07_14_24/results/routing/mca/process_corner_nom/top_left_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_left_tile/runs/23_04_09_04_54/results/routing/mca/process_corner_nom/top_left_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_left_tile/runs/23_04_09_04_54/results/routing/mca/process_corner_nom/top_left_tile.lib...
 

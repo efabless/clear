@@ -1614,11 +1614,60 @@ module tile (VGND,
  wire net426;
  wire net427;
  wire net428;
+ wire net429;
  wire net43;
+ wire net430;
+ wire net431;
+ wire net432;
+ wire net433;
+ wire net434;
+ wire net435;
+ wire net436;
+ wire net437;
+ wire net438;
+ wire net439;
  wire net44;
+ wire net440;
+ wire net441;
+ wire net442;
+ wire net443;
+ wire net444;
+ wire net445;
+ wire net446;
+ wire net447;
+ wire net448;
+ wire net449;
  wire net45;
+ wire net450;
+ wire net451;
+ wire net452;
+ wire net453;
+ wire net454;
+ wire net455;
+ wire net456;
+ wire net457;
+ wire net458;
+ wire net459;
  wire net46;
+ wire net460;
+ wire net461;
+ wire net462;
+ wire net463;
+ wire net464;
+ wire net465;
+ wire net466;
+ wire net467;
+ wire net468;
+ wire net469;
  wire net47;
+ wire net470;
+ wire net471;
+ wire net472;
+ wire net473;
+ wire net474;
+ wire net475;
+ wire net476;
+ wire net477;
  wire net48;
  wire net49;
  wire net5;
@@ -2311,7 +2360,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(net75),
+ sky130_fd_sc_hd__diode_2 ANTENNA_4 (.DIODE(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[8] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_5 (.DIODE(\sb_1__1_.mux_top_track_10.sky130_fd_sc_hd__mux2_1_7_X ),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5666,12 +5720,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5681,7 +5735,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5691,7 +5745,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5901,7 +5955,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5911,7 +5965,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -5921,12 +5975,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6161,7 +6215,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6171,7 +6225,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6181,12 +6235,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6356,12 +6410,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6371,12 +6425,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6546,7 +6600,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6556,7 +6610,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6566,12 +6620,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6731,12 +6785,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6746,12 +6800,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6906,12 +6960,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -6921,12 +6975,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7131,12 +7185,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7146,12 +7200,12 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net422),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__RESET_B  (.DIODE(net424),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net134),
+ sky130_fd_sc_hd__diode_2 \ANTENNA_grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0__SCE  (.DIODE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7301,22 +7355,37 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold10_A (.DIODE(sc_in),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold12_A (.DIODE(reset),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold12_A (.DIODE(top_width_0_height_0_subtile_0__pin_reg_in_0_),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold15_A (.DIODE(top_width_0_height_0_subtile_0__pin_reg_in_0_),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold13_A (.DIODE(test_enable),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold18_A (.DIODE(test_enable),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold15_A (.DIODE(ccff_head_1),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold20_A (.DIODE(top_width_0_height_0_subtile_0__pin_cin_0_),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold23_A (.DIODE(chany_bottom_in[0]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold29_A (.DIODE(chanx_left_in[1]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold35_A (.DIODE(chany_bottom_in[4]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7326,12 +7395,42 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold6_A (.DIODE(ccff_head_2),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold40_A (.DIODE(chany_bottom_in[10]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_hold8_A (.DIODE(reset),
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold43_A (.DIODE(chany_bottom_in[16]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold45_A (.DIODE(chanx_left_in[12]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold46_A (.DIODE(chanx_left_in[13]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold48_A (.DIODE(chany_bottom_in[12]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold60_A (.DIODE(ccff_head_1),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold62_A (.DIODE(ccff_head_2),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 ANTENNA_hold64_A (.DIODE(sc_in),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7461,16 +7560,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input123_A (.DIODE(net414),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input124_A (.DIODE(net421),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input125_A (.DIODE(right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_0_),
     .VGND(VGND),
     .VNB(VGND),
@@ -7557,16 +7646,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input142_A (.DIODE(top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input143_A (.DIODE(top_width_0_height_0_subtile_0__pin_cin_0_),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input14_A (.DIODE(chanx_left_in[1]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7826,22 +7905,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input63_A (.DIODE(chany_bottom_in[0]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input64_A (.DIODE(chany_bottom_in[10]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input65_A (.DIODE(chany_bottom_in[11]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input66_A (.DIODE(chany_bottom_in[12]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7857,16 +7921,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input69_A (.DIODE(chany_bottom_in[15]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input6_A (.DIODE(chanx_left_in[12]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input70_A (.DIODE(chany_bottom_in[16]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -7916,11 +7970,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input7_A (.DIODE(chanx_left_in[13]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input80_A (.DIODE(chany_bottom_in[25]),
     .VGND(VGND),
     .VNB(VGND),
@@ -7952,11 +8001,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 ANTENNA_input86_A (.DIODE(chany_bottom_in[3]),
-    .VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__diode_2 ANTENNA_input87_A (.DIODE(chany_bottom_in[4]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -11396,6 +11440,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_0.mux_l1_in_0__A1  (.DIODE(net141),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_0.mux_l1_in_0__S  (.DIODE(\sb_1__1_.mem_top_track_0.mem_out[0] ),
     .VGND(VGND),
     .VNB(VGND),
@@ -11562,6 +11611,11 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_10.mux_l2_in_3__S  (.DIODE(\sb_1__1_.mem_top_track_10.mem_out[1] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_12.mux_l1_in_0__A1  (.DIODE(net141),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12046,6 +12100,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_6.mux_l1_in_0__A1  (.DIODE(net141),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__diode_2 \ANTENNA_sb_1__1_.mux_top_track_6.mux_l1_in_0__S  (.DIODE(\sb_1__1_.mem_top_track_6.mem_out[0] ),
     .VGND(VGND),
     .VNB(VGND),
@@ -12136,11 +12195,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_10 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_100 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_102 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12152,19 +12207,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_124 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_0_124 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_130 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_136 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_138 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_143 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_0_141 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12200,7 +12251,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_22 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_0_21 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12240,7 +12291,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_0_3 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_3 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12252,19 +12303,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_0_327 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_0_327 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_335 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_0_333 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_0_337 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_34 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12281,6 +12328,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_0_383 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_3 FILLER_0_39 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12308,10 +12359,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_44 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_0_446 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12320,11 +12367,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_471 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_46 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_475 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_0_471 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12332,15 +12379,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_488 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_0_482 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_495 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_0_489 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_503 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_496 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12356,27 +12403,27 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_63 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_59 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_0_71 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_0_67 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_75 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_0_79 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_82 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_0_85 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_0_89 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_0_9 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_0_92 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_0_95 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12420,15 +12467,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_10_197 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_10_197 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_10_209 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_10_205 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_10_221 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_10_211 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_10_223 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12456,6 +12507,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_10_29 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_10_297 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12469,10 +12524,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_10_309 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_10_31 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12500,6 +12551,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_10_37 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_10_389 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12508,11 +12563,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_10_415 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_10_41 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_10_419 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_10_415 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12572,23 +12627,23 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_11_11 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_11_111 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_11_113 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_11_113 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_11_125 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_11_119 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_11_131 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_11_15 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_11_128 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12612,23 +12667,23 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_11_207 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_11_207 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_11_215 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_11_21 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_11_223 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_11_212 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_11_222 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_11_225 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_11_23 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12637,6 +12692,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_11_247 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_11_25 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12672,11 +12731,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_11_333 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_11_334 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_11_343 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_11_339 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12760,10 +12819,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_11_9 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_11_99 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12776,7 +12831,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_12_11 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_12_11 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12804,10 +12859,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_12_15 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_12_154 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -12829,6 +12880,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_12_205 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_12_21 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12856,7 +12911,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_12_29 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_12_29 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12892,7 +12947,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_12_335 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_12_337 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_12_35 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12900,15 +12959,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_12_369 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_12_371 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_12_377 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_12_381 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_12_383 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_12_39 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -12961,6 +13020,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_12_521 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_12_525 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13024,7 +13087,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_13_17 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_13_17 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13056,6 +13119,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_13_26 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_13_262 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -13069,10 +13136,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_13_281 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_13_29 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13092,11 +13155,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_13_327 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_13_32 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_13_33 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_13_327 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13124,11 +13187,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_13_398 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_13_399 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_13_402 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_13_403 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13264,6 +13327,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_14_29 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_14_292 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -13288,11 +13355,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_14_33 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_14_343 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_14_343 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_14_35 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13308,27 +13375,27 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_14_365 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_14_369 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_14_372 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_14_377 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_14_376 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_14_385 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_14_381 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_14_39 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_14_389 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_14_393 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_14_395 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_14_399 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13348,11 +13415,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_14_45 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_14_467 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_14_467 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_14_47 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13368,11 +13435,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_14_521 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_14_525 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_14_521 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13540,27 +13603,23 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_15_393 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_15_393 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_15_396 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_15_399 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_15_40 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_15_407 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_15_408 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_15_419 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_15_416 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_15_420 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_15_42 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13592,11 +13651,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_15_52 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_15_525 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_15_525 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_15_54 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13648,15 +13707,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_16_156 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_16_156 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_16_168 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_16_164 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_16_176 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_16_175 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13760,11 +13819,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_16_370 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_16_371 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_16_378 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_16_375 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13852,10 +13911,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_11 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_17_110 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -13884,6 +13939,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_17_17 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_17_191 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -13893,10 +13952,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_3 FILLER_17_203 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_21 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13932,6 +13987,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_17_27 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_17_278 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -13940,15 +13999,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_29 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_17_3 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_17_300 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_3 FILLER_17_31 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13957,10 +14012,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_17_326 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_17_33 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13976,11 +14027,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_17_361 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_17_361 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_17_373 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_17_370 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_17_378 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -13988,15 +14043,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_17_395 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_17_393 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_400 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_17_398 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_407 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_17_402 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_17_408 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14024,11 +14083,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_17_481 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_17_485 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_17_482 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14049,6 +14104,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_17_59 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_17_7 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14180,7 +14239,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_18_376 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_18_376 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_18_384 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14204,7 +14267,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_18_430 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_18_432 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14292,6 +14355,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_19_13 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_19_132 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -14308,15 +14375,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_19_17 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_8 FILLER_19_181 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_19_189 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_19_19 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14372,6 +14439,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_19_3 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_19_305 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -14420,15 +14491,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_19_422 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_19_420 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_19_423 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_19_434 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_19_440 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14484,11 +14555,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_19_7 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_19_79 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_19_79 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_1_10 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14504,15 +14575,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_128 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_13 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_1_132 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_1_130 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14532,10 +14595,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_1_17 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_1_177 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -14545,6 +14604,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_1_205 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_1_22 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14560,11 +14623,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_24 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_1_258 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_258 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_1_26 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14572,19 +14635,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_1_281 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_1_281 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_286 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_1_289 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_1_290 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_1_3 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_1_3 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14604,11 +14663,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_34 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_1_355 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_1_355 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_1_36 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14676,14 +14735,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_1_57 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_1_60 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_1_63 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -14696,7 +14747,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_20_11 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_20_11 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14717,6 +14768,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_20_149 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_20_15 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -14820,7 +14875,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_20_415 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_20_419 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15032,11 +15087,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_21_428 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_21_428 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_21_440 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_21_432 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_21_439 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15048,11 +15107,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_21_454 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_21_459 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_21_461 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_21_463 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15104,15 +15163,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_22_11 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_22_116 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_22_121 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_22_13 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15124,15 +15183,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_22_141 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_22_141 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_22_153 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_22_145 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_22_157 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_22_154 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15141,6 +15200,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_22_183 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_22_19 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15160,6 +15223,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_22_23 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_22_236 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -15168,15 +15235,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_22_25 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_22_253 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_22_264 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_22_27 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15312,10 +15379,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_22_9 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_22_93 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -15352,10 +15415,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_23_15 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_23_153 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -15372,6 +15431,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_23_17 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_23_175 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -15380,11 +15443,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_23_189 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_23_189 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_23_197 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_23_196 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15496,15 +15559,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_23_449 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_23_449 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_23_457 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_23_455 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_23_462 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_23_460 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15556,11 +15619,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_24_143 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_24_143 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_24_151 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_24_146 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15572,11 +15635,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_24_185 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_24_185 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_24_191 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_24_194 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15760,10 +15823,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_25_11 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_25_111 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -15776,11 +15835,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_25_144 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_25_148 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_25_144 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15788,15 +15843,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_25_152 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_25_156 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_25_161 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_25_165 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_25_164 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15856,7 +15907,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_25_3 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_25_3 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -15996,7 +16047,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_25_95 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_25_95 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16036,15 +16087,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_26_215 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_26_220 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_26_221 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_26_233 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_26_227 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16280,11 +16327,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_27_229 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_27_23 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_27_23 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_27_231 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16336,7 +16383,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_27_36 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_27_36 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16372,6 +16419,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_27_44 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_3 FILLER_27_445 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -16384,19 +16435,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_27_464 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_27_464 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_27_476 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_27_472 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_27_48 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_27_484 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_27_482 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16409,6 +16456,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_27_525 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_27_54 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16652,7 +16703,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_29_104 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_29_101 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_29_110 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16680,11 +16735,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_29_202 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_29_202 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_29_208 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_29_206 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16816,31 +16871,27 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_29_57 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_29_57 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_29_61 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_29_67 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_29_68 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_29_77 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_29_80 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_29_92 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_2_11 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_29_89 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_2_114 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_2_13 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16849,10 +16900,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_2_145 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_2_15 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16908,6 +16955,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_2_29 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_2_298 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -16924,19 +16975,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_2_31 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_2_331 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_2_355 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_2_34 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_2_36 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_2_355 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -16996,11 +17043,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_2_87 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_2_89 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_2_93 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_2_92 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17024,7 +17071,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_30_144 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_30_146 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17144,10 +17191,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_30_369 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_30_373 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -17252,15 +17295,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_31_142 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_31_142 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_31_146 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_31_158 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_31_154 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17368,19 +17407,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_31_361 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_31_361 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_31_367 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_31_366 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_31_374 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_31_378 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_31_376 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17644,11 +17679,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_32_369 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_32_365 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_32_381 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_32_374 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_32_382 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17852,7 +17891,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_33_361 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_33_361 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_3 FILLER_33_364 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -17996,15 +18039,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_34_180 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_34_180 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_34_185 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_34_193 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_34_190 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -18264,19 +18303,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_35_295 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_35_295 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_35_303 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_35_299 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_35_307 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_35_302 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_35_313 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_35_312 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -18284,11 +18323,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_35_320 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_35_322 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_35_332 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_35_334 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -18424,23 +18463,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_36_165 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_36_168 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_36_173 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_36_186 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_36_186 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_36_194 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_36_192 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -18668,19 +18699,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_37_169 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_37_169 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_37_173 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_37_174 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_37_176 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_37_187 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_37_187 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -18688,11 +18715,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_37_193 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_37_191 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_37_196 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_37_196 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19268,7 +19295,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_39_505 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_39_507 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19304,15 +19331,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_3_11 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_3_110 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_3_113 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_3_13 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19336,7 +19363,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_3_17 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_3_19 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19349,6 +19376,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_3_205 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_3_22 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19368,10 +19399,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_3_26 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_8 FILLER_3_260 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -19384,11 +19411,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_3_281 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_3_281 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_3_286 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_3_286 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_3_290 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19400,7 +19431,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_3_32 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_3_30 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19480,11 +19511,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_3_67 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_3_67 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_3_73 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_3_75 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19680,7 +19711,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_40_522 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_40_522 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_40_526 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19908,15 +19943,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_41_480 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_41_480 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_41_492 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_41_488 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_41_496 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_41_494 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -19924,7 +19959,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_41_505 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_41_507 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -20148,15 +20183,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_42_509 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_42_509 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_42_517 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_42_519 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_42_525 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_42_524 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -20364,11 +20399,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_43_505 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_43_505 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_43_513 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_43_511 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -20812,7 +20847,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_45_524 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_45_525 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -20948,7 +20983,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_46_311 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_46_313 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21156,7 +21191,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_47_292 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_47_292 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21164,7 +21199,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_47_301 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_47_304 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21260,19 +21295,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_47_495 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_47_495 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_47_503 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_47_501 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_47_507 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_47_505 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_47_515 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_47_513 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21388,11 +21423,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_48_293 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_48_293 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_48_297 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_48_3 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_48_301 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21408,10 +21451,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_48_34 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_48_357 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -21424,15 +21463,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_48_38 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_48_382 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_6 FILLER_48_386 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_48_39 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21445,6 +21484,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_48_423 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_48_43 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21620,7 +21663,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_49_35 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_49_35 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21652,6 +21695,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_49_42 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_ef_sc_hd__decap_12 FILLER_49_420 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -21668,11 +21715,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_49_461 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_49_46 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_49_47 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_49_461 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21704,7 +21751,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_49_55 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_49_54 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21732,7 +21779,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_4_11 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_4_11 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21756,6 +21803,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_4_15 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_4_151 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -21765,6 +21816,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_4_176 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_4_18 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21784,10 +21839,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_4_21 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_4_210 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -21804,11 +21855,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_4_260 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_4_26 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_4_27 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_4_260 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21820,7 +21871,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_4_297 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_4_297 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21828,11 +21879,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_4_301 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_4_307 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_4_305 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -21916,7 +21963,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_4_91 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_4_93 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -22304,7 +22351,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_51_365 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_51_365 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -22552,15 +22599,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_52_399 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_52_403 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_52_399 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_52_41 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_52_411 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24224,7 +24271,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_5_11 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_5_11 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_5_110 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24316,19 +24367,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_5_281 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_5_281 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_5_289 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_5_286 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_5_293 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_3 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24364,7 +24411,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_5_43 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_5_43 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24380,19 +24427,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_5_467 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_5_460 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_474 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_5_47 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_48 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_5_473 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_480 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_5_479 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24416,15 +24463,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_68 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_5_68 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_5_72 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_5_80 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_5_78 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24540,15 +24583,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_60_315 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_60_309 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_60_320 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_60_319 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_60_324 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_60_325 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24768,7 +24811,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_61_310 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_61_314 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -24996,7 +25039,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_62_290 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_62_290 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -25004,7 +25047,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_62_302 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_62_300 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -25473,6 +25516,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_64_401 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_64_407 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26480,11 +26527,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_69_236 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_69_246 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_69_236 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26672,7 +26715,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_6_16 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_6_16 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26692,23 +26735,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_6_197 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_6_197 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_6_20 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_6_207 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_6_203 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_6_209 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_6_218 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_6_216 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26768,6 +26803,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_6_31 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_6_320 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -26776,7 +26815,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_6_33 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_6_34 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26848,19 +26887,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_6_69 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_6_69 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_6_73 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_6_79 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_6_81 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_6_83 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_6_85 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_6_87 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26928,7 +26967,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_70_271 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_70_273 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -26940,7 +26979,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_70_29 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_70_29 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27004,11 +27043,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_70_398 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_70_39 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_70_40 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_70_398 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27021,6 +27060,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_70_421 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_70_43 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27132,19 +27175,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_71_217 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_71_217 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_71_223 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_71_221 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_71_225 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_71_227 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_71_233 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_71_235 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27208,7 +27251,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_71_375 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_71_375 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27352,19 +27395,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_72_224 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_72_224 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_72_230 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_72_228 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_72_236 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_72_239 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_72_237 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27372,7 +27411,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_72_253 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_72_255 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27396,7 +27435,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_72_29 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_72_29 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27417,10 +27456,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_3 FILLER_72_328 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_72_34 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27445,6 +27480,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_72_389 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_8 FILLER_72_40 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27476,15 +27515,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_72_46 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_72_474 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_72_477 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_72_48 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27588,15 +27627,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_73_27 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_8 FILLER_73_270 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_73_278 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_73_28 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27664,7 +27703,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_73_40 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_73_40 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27673,10 +27712,6 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_73_418 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_73_44 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -27700,6 +27735,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_73_47 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_73_492 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -27712,6 +27751,10 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_73_51 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_73_516 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -27721,6 +27764,10 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_73_525 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_73_55 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -28504,7 +28551,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_77_393 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_77_393 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_77_397 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -28512,7 +28563,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_77_414 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_77_412 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -28940,7 +28991,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_79_441 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_79_443 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -29048,23 +29099,31 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_7_216 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_7_216 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_7_220 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_7_223 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_7_225 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_7_225 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_7_234 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_7_229 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_7_246 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_7_233 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_8 FILLER_7_245 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_7_253 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -29104,11 +29163,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_7_312 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_7_315 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_7_314 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -29148,10 +29203,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_7_40 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_7_405 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -29160,11 +29211,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_7_433 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_7_42 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_7_44 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_7_433 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -29864,11 +29915,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_82_511 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_82_511 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_82_517 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_82_515 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30076,10 +30127,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_83_505 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_83_513 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -30256,7 +30303,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_84_415 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_84_417 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30300,7 +30347,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_84_515 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_84_515 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_84_525 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30336,11 +30387,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_85_131 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_85_138 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_85_136 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30348,11 +30395,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_85_142 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_85_143 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_85_154 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_85_150 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30500,15 +30547,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_85_499 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_85_499 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_1 FILLER_85_503 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_85_505 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30556,11 +30599,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_86_146 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_86_146 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_86_158 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_86_152 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_86_160 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30672,11 +30719,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_86_438 (.VGND(VGND),
+ sky130_ef_sc_hd__decap_12 FILLER_86_440 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_86_450 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_86_452 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30692,19 +30739,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_86_488 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_86_488 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_86_493 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_86_492 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_86_497 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_86_500 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_86_498 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30740,19 +30783,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_87_145 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_87_145 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_87_149 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_87_149 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_87_154 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_87_162 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_87_153 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -30876,7 +30915,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_87_438 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_87_438 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_87_442 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31064,15 +31107,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_88_460 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_88_460 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_88_464 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_88_464 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_88_468 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_88_474 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31084,11 +31127,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_88_492 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_88_492 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_88_498 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_88_497 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_88_501 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31148,7 +31195,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_89_164 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_89_164 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31280,19 +31327,19 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_89_444 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_89_444 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_89_449 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_89_449 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_89_454 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_89_452 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_89_464 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_89_462 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31392,15 +31439,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_8_219 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_8_219 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_8_223 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_8_229 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_8_226 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31420,7 +31463,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_8_292 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_8_29 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_6 FILLER_8_292 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_8_298 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31428,15 +31479,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_8_300 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_8_301 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_8_307 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_8_31 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_8_306 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31452,10 +31499,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_8_36 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_8_362 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -31464,15 +31507,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
+ sky130_fd_sc_hd__decap_4 FILLER_8_37 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_8_379 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
  sky130_fd_sc_hd__fill_2 FILLER_8_392 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_8_40 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31684,19 +31727,23 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_90_432 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_90_432 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_90_444 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_90_437 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_90_450 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_90_447 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_90_460 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_90_460 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_90_464 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31788,11 +31835,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_91_256 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_91_254 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_91_264 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_91_260 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -31912,11 +31959,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_91_510 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_91_514 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_91_517 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32008,11 +32051,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_92_263 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_92_267 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_92_265 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32052,7 +32091,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_92_349 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_6 FILLER_92_349 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32064,11 +32103,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_ef_sc_hd__decap_12 FILLER_92_387 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_92_387 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_6 FILLER_92_399 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_8 FILLER_92_395 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_92_403 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32076,11 +32119,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_92_415 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_92_419 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_92_415 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32184,19 +32223,23 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_93_252 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_93_252 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_93_260 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_93_256 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_93_268 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_93_267 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_93_272 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_93_275 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_1 FILLER_93_279 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32240,7 +32283,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_93_387 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_93_390 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32280,7 +32323,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_93_517 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_93_511 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32436,11 +32479,15 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_94_349 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_94_349 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_94_363 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_94_354 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_94_362 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32452,7 +32499,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_94_373 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_94_373 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32704,7 +32751,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_3 FILLER_95_377 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_95_377 (.VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR));
+ sky130_fd_sc_hd__fill_2 FILLER_95_380 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32720,11 +32771,11 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_95_415 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_1 FILLER_95_409 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_95_419 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_95_418 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32760,11 +32811,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_95_493 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_95_502 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_95_501 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32772,11 +32819,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_95_511 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
- sky130_fd_sc_hd__fill_2 FILLER_95_519 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_4 FILLER_95_517 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32928,10 +32971,6 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_4 FILLER_9_352 (.VGND(VGND),
-    .VNB(VGND),
-    .VPB(VPWR),
-    .VPWR(VPWR));
  sky130_fd_sc_hd__decap_4 FILLER_9_364 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -32976,7 +33015,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__decap_8 FILLER_9_47 (.VGND(VGND),
+ sky130_fd_sc_hd__fill_2 FILLER_9_47 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -32996,7 +33035,7 @@ module tile (VGND,
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
- sky130_fd_sc_hd__fill_1 FILLER_9_55 (.VGND(VGND),
+ sky130_fd_sc_hd__decap_3 FILLER_9_53 (.VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR));
@@ -36982,7 +37021,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cbx_1__1_.mux_top_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cbx_1__1_.mux_top_ipin_1.sky130_fd_sc_hd__buf_4_0_  (.A(\cbx_1__1_.mux_top_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cbx_1__1_.mux_top_ipin_1.sky130_fd_sc_hd__buf_4_0_  (.A(net460),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -37363,14 +37402,14 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_7_X ));
  sky130_fd_sc_hd__mux2_1 \cbx_1__1_.mux_top_ipin_13.mux_l3_in_1_  (.A0(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_6_X ),
-    .A1(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_5_X ),
+    .A1(net443),
     .S(\cbx_1__1_.mem_top_ipin_13.mem_out[2] ),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_8_X ));
- sky130_fd_sc_hd__mux2_1 \cbx_1__1_.mux_top_ipin_13.mux_l4_in_0_  (.A0(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_8_X ),
+ sky130_fd_sc_hd__mux2_1 \cbx_1__1_.mux_top_ipin_13.mux_l4_in_0_  (.A0(net444),
     .A1(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_7_X ),
     .S(\cbx_1__1_.mem_top_ipin_13.ccff_tail ),
     .VGND(VGND),
@@ -37378,7 +37417,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__buf_4_0_  (.A(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__buf_4_0_  (.A(net445),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -38375,7 +38414,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\cbx_1__1_.bottom_grid_top_width_0_height_0_subtile_0__pin_I2_1_ ));
  sky130_fd_sc_hd__dfrtp_4 \cby_1__1_.mem_right_ipin_0.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_60_prog_clk),
-    .D(net418),
+    .D(net420),
     .RESET_B(net415),
     .VGND(VGND),
     .VNB(VGND),
@@ -38727,7 +38766,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\cby_1__1_.mem_right_ipin_4.ccff_tail ));
  sky130_fd_sc_hd__dfrtp_2 \cby_1__1_.mem_right_ipin_5.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_54_prog_clk),
-    .D(net427),
+    .D(net462),
     .RESET_B(net286),
     .VGND(VGND),
     .VNB(VGND),
@@ -39063,14 +39102,14 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_7_X ));
  sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_1.mux_l3_in_1_  (.A0(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_6_X ),
-    .A1(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_5_X ),
+    .A1(net449),
     .S(\cby_1__1_.mem_right_ipin_1.mem_out[2] ),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_8_X ));
- sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_1.mux_l4_in_0_  (.A0(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_8_X ),
+ sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_1.mux_l4_in_0_  (.A0(net450),
     .A1(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_7_X ),
     .S(\cby_1__1_.mem_right_ipin_1.ccff_tail ),
     .VGND(VGND),
@@ -39078,7 +39117,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__buf_4_0_  (.A(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__buf_4_0_  (.A(net451),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -39450,7 +39489,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .HI(net302));
- sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_13.mux_l3_in_0_  (.A0(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_4_X ),
+ sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_13.mux_l3_in_0_  (.A0(net454),
     .A1(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_3_X ),
     .S(\cby_1__1_.mem_right_ipin_13.mem_out[2] ),
     .VGND(VGND),
@@ -39474,7 +39513,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__buf_4_0_  (.A(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__buf_4_0_  (.A(net455),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -40053,14 +40092,14 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_7_X ));
  sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_5.mux_l3_in_1_  (.A0(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_6_X ),
-    .A1(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_5_X ),
+    .A1(net437),
     .S(\cby_1__1_.mem_right_ipin_5.mem_out[2] ),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_8_X ));
- sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_5.mux_l4_in_0_  (.A0(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_8_X ),
+ sky130_fd_sc_hd__mux2_1 \cby_1__1_.mux_right_ipin_5.mux_l4_in_0_  (.A0(net438),
     .A1(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_7_X ),
     .S(\cby_1__1_.mem_right_ipin_5.ccff_tail ),
     .VGND(VGND),
@@ -40068,7 +40107,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__buf_4_0_  (.A(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__buf_4_0_  (.A(net439),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -40266,7 +40305,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\cby_1__1_.mux_right_ipin_7.sky130_fd_sc_hd__mux2_1_9_X ));
- sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_7.sky130_fd_sc_hd__buf_4_0_  (.A(\cby_1__1_.mux_right_ipin_7.sky130_fd_sc_hd__mux2_1_9_X ),
+ sky130_fd_sc_hd__clkbuf_1 \cby_1__1_.mux_right_ipin_7.sky130_fd_sc_hd__buf_4_0_  (.A(net457),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -40916,9 +40955,9 @@ module tile (VGND,
     .X(clknet_leaf_9_prog_clk));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
-    .SCD(net424),
-    .SCE(net134),
+    .RESET_B(net424),
+    .SCD(net427),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -40926,9 +40965,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -41451,7 +41490,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .HI(net316));
- sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l1_in_0_  (.A0(net144),
+ sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l1_in_0_  (.A0(net429),
     .A1(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.out ),
     .S(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_0_D_0.mem_out[0] ),
     .VGND(VGND),
@@ -41460,7 +41499,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.sky130_fd_sc_hd__mux2_1_0_X ));
  sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0_  (.A0(net317),
-    .A1(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.sky130_fd_sc_hd__mux2_1_0_X ),
+    .A1(net430),
     .S(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_0_D_0.ccff_tail ),
     .VGND(VGND),
     .VNB(VGND),
@@ -41495,9 +41534,9 @@ module tile (VGND,
     .HI(net318));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_32_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -41505,9 +41544,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -41659,7 +41698,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.lut3_out[0] ));
- sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+ sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(net435),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -41779,7 +41818,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.ccff_tail ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_1_  (.CLK(clknet_leaf_18_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[0] ),
+    .D(net467),
     .RESET_B(net287),
     .VGND(VGND),
     .VNB(VGND),
@@ -41912,7 +41951,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.sky130_fd_sc_hd__mux2_1_0_X ));
  sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0_  (.A0(net320),
-    .A1(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.sky130_fd_sc_hd__mux2_1_0_X ),
+    .A1(net434),
     .S(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.ccff_tail ),
     .VGND(VGND),
     .VNB(VGND),
@@ -42074,9 +42113,9 @@ module tile (VGND,
     .HI(net324));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_41_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -42084,9 +42123,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -42430,7 +42469,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[9] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_logic_out_0.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_11_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.ccff_tail ),
+    .D(net472),
     .RESET_B(net288),
     .VGND(VGND),
     .VNB(VGND),
@@ -42560,7 +42599,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.sky130_fd_sc_hd__dfrtp_1_1_  (.CLK(clknet_leaf_3_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ),
+    .D(net471),
     .RESET_B(net286),
     .VGND(VGND),
     .VNB(VGND),
@@ -42653,9 +42692,9 @@ module tile (VGND,
     .HI(net330));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_1__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_50_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -42663,9 +42702,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -42783,7 +42822,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_12_X ));
- sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.mux_l3_in_1_  (.A0(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_11_X ),
+ sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.mux_l3_in_1_  (.A0(net446),
     .A1(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_10_X ),
     .S(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.sky130_fd_sc_hd__buf_2_2_X ),
     .VGND(VGND),
@@ -42817,7 +42856,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.lut3_out[0] ));
- sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+ sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(net447),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -42953,7 +42992,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[2] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_3_  (.CLK(clknet_leaf_61_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[2] ),
+    .D(net463),
     .RESET_B(net415),
     .VGND(VGND),
     .VNB(VGND),
@@ -43139,7 +43178,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.sky130_fd_sc_hd__dfrtp_1_1_  (.CLK(clknet_leaf_0_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ),
+    .D(net466),
     .RESET_B(net415),
     .VGND(VGND),
     .VNB(VGND),
@@ -43232,9 +43271,9 @@ module tile (VGND,
     .HI(net336));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_59_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -43242,9 +43281,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -43396,7 +43435,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.lut3_out[0] ));
- sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+ sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(net452),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -43811,9 +43850,9 @@ module tile (VGND,
     .HI(net342));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_68_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -43821,9 +43860,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -43941,7 +43980,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_12_X ));
- sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.mux_l3_in_1_  (.A0(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_11_X ),
+ sky130_fd_sc_hd__mux2_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.mux_l3_in_1_  (.A0(net440),
     .A1(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_10_X ),
     .S(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.sky130_fd_sc_hd__buf_2_2_X ),
     .VGND(VGND),
@@ -43975,7 +44014,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.lut3_out[0] ));
- sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+ sky130_fd_sc_hd__clkbuf_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__buf_2_3_  (.A(net441),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -44249,7 +44288,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.mem_out[0] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.sky130_fd_sc_hd__dfrtp_1_1_  (.CLK(clknet_leaf_48_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.mem_out[0] ),
+    .D(net468),
     .RESET_B(net415),
     .VGND(VGND),
     .VNB(VGND),
@@ -44390,9 +44429,9 @@ module tile (VGND,
     .HI(net348));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_77_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -44400,9 +44439,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -44969,9 +45008,9 @@ module tile (VGND,
     .HI(net354));
  sky130_fd_sc_hd__sdfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.direct_interc_86_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -44979,9 +45018,9 @@ module tile (VGND,
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ));
  sky130_fd_sc_hd__sdfrtp_2 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_  (.CLK(clknet_1_0__leaf_clk0),
     .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.ff_D ),
-    .RESET_B(net422),
+    .RESET_B(net424),
     .SCD(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.direct_interc_11_.in ),
-    .SCE(net134),
+    .SCE(net432),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45309,7 +45348,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[7] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_8_  (.CLK(clknet_leaf_39_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[7] ),
+    .D(net469),
     .RESET_B(net289),
     .VGND(VGND),
     .VNB(VGND),
@@ -45325,7 +45364,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[9] ));
  sky130_fd_sc_hd__dfrtp_1 \grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_logic_out_0.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_42_prog_clk),
-    .D(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.ccff_tail ),
+    .D(net464),
     .RESET_B(net289),
     .VGND(VGND),
     .VNB(VGND),
@@ -45552,91 +45591,385 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net414));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold10 (.A(sc_in),
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold10 (.A(net425),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net423));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold11 (.A(net133),
+ sky130_fd_sc_hd__buf_12 hold11 (.A(net124),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net424));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold12 (.A(top_width_0_height_0_subtile_0__pin_reg_in_0_),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold12 (.A(reset),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net425));
- sky130_fd_sc_hd__dlymetal6s2s_1 hold13 (.A(test_enable),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold13 (.A(net477),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net426));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold14 (.A(\cby_1__1_.mem_right_ipin_4.ccff_tail ),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold14 (.A(net133),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net427));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold15 (.A(ccff_head_1),
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold15 (.A(top_width_0_height_0_subtile_0__pin_reg_in_0_),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net428));
- sky130_fd_sc_hd__clkbuf_16 hold2 (.A(net123),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold16 (.A(net144),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net429));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold17 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.sky130_fd_sc_hd__mux2_1_0_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net430));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold18 (.A(test_enable),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net431));
+ sky130_fd_sc_hd__buf_12 hold19 (.A(net134),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net432));
+ sky130_fd_sc_hd__clkbuf_16 hold2 (.A(net418),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net415));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold20 (.A(top_width_0_height_0_subtile_0__pin_cin_0_),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net433));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold21 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.sky130_fd_sc_hd__mux2_1_0_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net434));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold22 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net435));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold23 (.A(chany_bottom_in[0]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net436));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold24 (.A(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_5_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net437));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold25 (.A(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_8_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net438));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold26 (.A(\cby_1__1_.mux_right_ipin_5.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net439));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold27 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_11_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net440));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold28 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net441));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold29 (.A(chanx_left_in[1]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net442));
  sky130_fd_sc_hd__clkdlybuf4s50_1 hold3 (.A(prog_reset),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net416));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold4 (.A(net428),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold30 (.A(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_5_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net443));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold31 (.A(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_8_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net444));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold32 (.A(\cbx_1__1_.mux_top_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net445));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold33 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_11_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net446));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold34 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net447));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold35 (.A(chany_bottom_in[4]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net448));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold36 (.A(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_5_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net449));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold37 (.A(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_8_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net450));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold38 (.A(\cby_1__1_.mux_right_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net451));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold39 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.sky130_fd_sc_hd__mux2_1_13_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net452));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold4 (.A(net414),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net417));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold5 (.A(net1),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold40 (.A(chany_bottom_in[10]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net453));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold41 (.A(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_4_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net454));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold42 (.A(\cby_1__1_.mux_right_ipin_13.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net455));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold43 (.A(chany_bottom_in[16]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net456));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold44 (.A(\cby_1__1_.mux_right_ipin_7.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net457));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold45 (.A(chanx_left_in[12]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net458));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold46 (.A(chanx_left_in[13]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net459));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold47 (.A(\cbx_1__1_.mux_top_ipin_1.sky130_fd_sc_hd__mux2_1_9_X ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net460));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold48 (.A(chany_bottom_in[12]),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net461));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold49 (.A(\cby_1__1_.mem_right_ipin_4.ccff_tail ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net462));
+ sky130_fd_sc_hd__clkbuf_1 hold5 (.A(net123),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net418));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold6 (.A(ccff_head_2),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold50 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[2] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net463));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold51 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.ccff_tail ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net464));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold52 (.A(\sb_1__1_.mem_left_track_37.ccff_tail ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net465));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold53 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net466));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold54 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[0] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net467));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold55 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_fabric_out_0.mem_out[0] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net468));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold56 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_0_.frac_lut4_mux_0_.in[7] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net469));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold57 (.A(\sb_1__1_.mem_bottom_track_37.ccff_tail ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net470));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold58 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.mem_out[0] ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net471));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold59 (.A(\grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.ccff_tail ),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net472));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold6 (.A(net473),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net419));
- sky130_fd_sc_hd__clkdlybuf4s25_1 hold7 (.A(net2),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold60 (.A(ccff_head_1),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net473));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold61 (.A(net419),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net474));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold62 (.A(ccff_head_2),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net475));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold63 (.A(net421),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net476));
+ sky130_fd_sc_hd__clkdlybuf4s50_1 hold64 (.A(sc_in),
+    .VGND(VGND),
+    .VNB(VGND),
+    .VPB(VPWR),
+    .VPWR(VPWR),
+    .X(net477));
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold7 (.A(net1),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net420));
- sky130_fd_sc_hd__dlymetal6s2s_1 hold8 (.A(reset),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold8 (.A(net475),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net421));
- sky130_fd_sc_hd__clkbuf_16 hold9 (.A(net124),
+ sky130_fd_sc_hd__clkdlybuf4s25_1 hold9 (.A(net2),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net422));
- sky130_fd_sc_hd__clkbuf_1 input1 (.A(net417),
+ sky130_fd_sc_hd__clkbuf_1 input1 (.A(net474),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45702,7 +46035,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net108));
- sky130_fd_sc_hd__dlymetal6s2s_1 input109 (.A(chany_top_in_0[24]),
+ sky130_fd_sc_hd__clkbuf_1 input109 (.A(chany_top_in_0[24]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45798,13 +46131,13 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net122));
- sky130_fd_sc_hd__clkbuf_1 input123 (.A(net414),
+ sky130_fd_sc_hd__clkbuf_1 input123 (.A(net417),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net123));
- sky130_fd_sc_hd__buf_6 input124 (.A(net421),
+ sky130_fd_sc_hd__buf_6 input124 (.A(net423),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45864,13 +46197,13 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net132));
- sky130_fd_sc_hd__clkbuf_1 input133 (.A(net423),
+ sky130_fd_sc_hd__clkbuf_1 input133 (.A(net426),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net133));
- sky130_fd_sc_hd__buf_12 input134 (.A(net426),
+ sky130_fd_sc_hd__buf_6 input134 (.A(net431),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45906,7 +46239,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net139));
- sky130_fd_sc_hd__buf_4 input14 (.A(chanx_left_in[1]),
+ sky130_fd_sc_hd__buf_4 input14 (.A(net442),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45918,7 +46251,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net140));
- sky130_fd_sc_hd__clkbuf_1 input141 (.A(top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_),
+ sky130_fd_sc_hd__dlymetal6s2s_1 input141 (.A(top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45930,13 +46263,13 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net142));
- sky130_fd_sc_hd__clkbuf_1 input143 (.A(top_width_0_height_0_subtile_0__pin_cin_0_),
+ sky130_fd_sc_hd__clkbuf_1 input143 (.A(net433),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net143));
- sky130_fd_sc_hd__clkbuf_1 input144 (.A(net425),
+ sky130_fd_sc_hd__clkbuf_1 input144 (.A(net428),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -45972,7 +46305,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net19));
- sky130_fd_sc_hd__clkbuf_1 input2 (.A(net419),
+ sky130_fd_sc_hd__clkbuf_1 input2 (.A(net476),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46104,7 +46437,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net39));
- sky130_fd_sc_hd__buf_4 input4 (.A(chanx_left_in[10]),
+ sky130_fd_sc_hd__clkbuf_4 input4 (.A(chanx_left_in[10]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46212,7 +46545,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net55));
- sky130_fd_sc_hd__clkbuf_4 input56 (.A(chanx_right_in_0[3]),
+ sky130_fd_sc_hd__buf_2 input56 (.A(chanx_right_in_0[3]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46236,7 +46569,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net59));
- sky130_fd_sc_hd__buf_2 input6 (.A(chanx_left_in[12]),
+ sky130_fd_sc_hd__buf_2 input6 (.A(net458),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46260,13 +46593,13 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net62));
- sky130_fd_sc_hd__buf_2 input63 (.A(chany_bottom_in[0]),
+ sky130_fd_sc_hd__buf_2 input63 (.A(net436),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net63));
- sky130_fd_sc_hd__buf_4 input64 (.A(chany_bottom_in[10]),
+ sky130_fd_sc_hd__buf_4 input64 (.A(net453),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46278,7 +46611,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net65));
- sky130_fd_sc_hd__buf_2 input66 (.A(chany_bottom_in[12]),
+ sky130_fd_sc_hd__buf_2 input66 (.A(net461),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46302,13 +46635,13 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net69));
- sky130_fd_sc_hd__buf_4 input7 (.A(chanx_left_in[13]),
+ sky130_fd_sc_hd__buf_4 input7 (.A(net459),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net7));
- sky130_fd_sc_hd__buf_2 input70 (.A(chany_bottom_in[16]),
+ sky130_fd_sc_hd__buf_2 input70 (.A(net456),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46416,7 +46749,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net86));
- sky130_fd_sc_hd__buf_2 input87 (.A(chany_bottom_in[4]),
+ sky130_fd_sc_hd__buf_2 input87 (.A(net448),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -46446,7 +46779,7 @@ module tile (VGND,
     .VPB(VPWR),
     .VPWR(VPWR),
     .X(net90));
- sky130_fd_sc_hd__buf_2 input91 (.A(chany_bottom_in[8]),
+ sky130_fd_sc_hd__clkbuf_4 input91 (.A(chany_bottom_in[8]),
     .VGND(VGND),
     .VNB(VGND),
     .VPB(VPWR),
@@ -47587,7 +47920,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\sb_1__1_.mem_bottom_track_37.ccff_tail ));
  sky130_fd_sc_hd__dfrtp_2 \sb_1__1_.mem_bottom_track_45.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_35_prog_clk),
-    .D(\sb_1__1_.mem_bottom_track_37.ccff_tail ),
+    .D(net470),
     .RESET_B(net288),
     .VGND(VGND),
     .VNB(VGND),
@@ -47915,7 +48248,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\sb_1__1_.mem_left_track_37.ccff_tail ));
  sky130_fd_sc_hd__dfrtp_2 \sb_1__1_.mem_left_track_45.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_19_prog_clk),
-    .D(\sb_1__1_.mem_left_track_37.ccff_tail ),
+    .D(net465),
     .RESET_B(net287),
     .VGND(VGND),
     .VNB(VGND),
@@ -48355,7 +48688,7 @@ module tile (VGND,
     .VPWR(VPWR),
     .Q(\sb_1__1_.mem_right_track_10.ccff_head ));
  sky130_fd_sc_hd__dfrtp_4 \sb_1__1_.mem_top_track_0.sky130_fd_sc_hd__dfrtp_1_0_  (.CLK(clknet_leaf_28_prog_clk),
-    .D(net420),
+    .D(net422),
     .RESET_B(net289),
     .VGND(VGND),
     .VNB(VGND),

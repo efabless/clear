@@ -180,12 +180,12 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 10.69
+worst slack 10.00
 
 ===========================================================================
  report_worst_slack -min (Hold)
 ============================================================================
-worst slack 0.02
+worst slack -0.23
 worst_slack_end
 clock_skew
 
@@ -194,17 +194,17 @@ clock_skew
 ============================================================================
 Clock clk0
 Latency      CRPR       Skew
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_8_/CLK ^
-   0.82
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
-   0.39      0.00       0.43
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_9_/CLK ^
+   0.25
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
+   0.40      0.00      -0.15
 
 Clock prog_clk
 Latency      CRPR       Skew
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
-   0.79
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.68     -0.03       0.08
+sb_8__8_.mem_left_track_43.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.82
+sb_8__8_.mem_left_track_43.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.71     -0.03       0.08
 
 clock_skew_end
 power_report
@@ -215,23 +215,23 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             2.29e-04   1.22e-05   6.26e-09   2.41e-04  41.6%
-Combinational          1.72e-04   1.67e-04   1.44e-08   3.39e-04  58.4%
+Sequential             2.29e-04   1.22e-05   6.26e-09   2.41e-04  41.4%
+Combinational          1.73e-04   1.68e-04   1.47e-08   3.41e-04  58.6%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  4.00e-04   1.79e-04   2.07e-08   5.80e-04 100.0%
-                          69.1%      30.9%       0.0%
+Total                  4.02e-04   1.81e-04   2.09e-08   5.83e-04 100.0%
+                          69.0%      31.0%       0.0%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 35084 u^2 55% utilization.
+Design area 35543 u^2 56% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_07_14_20/results/routing/mca/process_corner_nom/top_right_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_07_14_20/results/routing/mca/process_corner_nom/top_right_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_09_04_50/results/routing/mca/process_corner_nom/top_right_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_09_04_50/results/routing/mca/process_corner_nom/top_right_tile.lib...
 

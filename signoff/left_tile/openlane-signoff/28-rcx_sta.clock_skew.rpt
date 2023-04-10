@@ -10,5 +10,5 @@ Latency      CRPR       Skew
 sb_0__1_.mem_top_track_6.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
    0.58
 sb_0__1_.mem_top_track_6.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.51     -0.03       0.03
+   0.51     -0.03       0.04
 
