@@ -7,3 +7,4 @@ Tests:
     - {name: counter, sim: RTL}
     - {name: and2_9bits, sim: RTL}
     - {name: and2_latch, sim: RTL}
+    - {name: sc_chain_check, sim: RTL}

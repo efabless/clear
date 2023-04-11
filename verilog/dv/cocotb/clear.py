@@ -14,7 +14,7 @@ OP_RST = 9
 OP_CLK = 36
 OP_CLK_SEL = 35  # clock seleceted if op would use OP_CLK or system clock
 
-SC_HEAD = 26
+SC_HEAD = 22
 SC_TAIL = 14
 
 
@@ -170,7 +170,10 @@ class Clear:
                 ff_count += -1
 
     async def start_op(self):
-        self.clock_prog_thread.kill()
+        try:
+            self.clock_prog_thread.kill()
+        except AttributeError:
+            pass
         self.io_isol_n.value = 1
         self.ccff_head.value = 0
         await cocotb.triggers.ClockCycles(self.caravelEnv.clk, 3)

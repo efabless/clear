@@ -8,3 +8,4 @@ Tests:
     - {name: counter, sim: GL_SDF}
     - {name: and2_9bits, sim: GL_SDF}
     - {name: and2_latch, sim: GL_SDF}
+    - {name: sc_chain_check, sim: GL_SDF}

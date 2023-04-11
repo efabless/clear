@@ -9,3 +9,4 @@ from hello_world_uart.hello_world_uart import hello_world_uart
 from counter.counter import counter
 from and2_9bits.and2_9bits import and2_9bits
 from and2_latch.and2_latch import and2_latch
+from sc_chain_check.sc_chain_check import sc_chain_check
