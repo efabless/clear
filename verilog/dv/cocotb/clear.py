@@ -173,17 +173,16 @@ class Clear:
         self.clock_prog_thread.kill()
         self.io_isol_n.value = 1
         self.ccff_head.value = 0
-        await cocotb.triggers.Timer(5 * self.period_prog, units="ns")
+        await cocotb.triggers.ClockCycles(self.caravelEnv.clk, 3)
         self.op_reset.value = 1
-        await cocotb.triggers.Timer(5 * self.period_prog, units="ns")
+        await cocotb.triggers.ClockCycles(self.caravelEnv.clk, 3)
 
         # setup op clock
         if self.period_op is None:
             # connect period op with the caravel period
-            await cocotb.start(self._connect_signals(self.clk_op, self.caravelEnv.clk))
-        else:
-            clock = Clock(self.clk_op, self.period_op, "ns")
-            self.clock_op_thread = cocotb.start_soon(clock.start())
+            self.period_op = await self.get_clock_period(self.caravelEnv.clk)
+        clock = Clock(self.clk_op, self.period_op, "ns")
+        self.clock_op_thread = cocotb.start_soon(clock.start())
         cocotb.log.info("[Clear] set op clock")
 
     async def _connect_signals(self, signal1, signal2):
@@ -191,4 +190,19 @@ class Clear:
         while True:
             # continuously copy the value of signal2 to signal1
             signal1.value = signal2.value
-            await cocotb.triggers.Timer(1, units="ns")
+            await cocotb.triggers.Timer(1, units="ps")
+
+    async def get_clock_period(self, clk):
+        clock_period = None
+        for i in range(11):
+            await cocotb.triggers.ClockCycles(clk, 1)
+            if clock_period is None:
+                start_time = cocotb.utils.get_sim_time()
+                clock_period = 0
+            else:
+                end_time = cocotb.utils.get_sim_time()
+                clock_period = (end_time - start_time) / 10 / 1000  # Calculate the average clock period over 10 cycles
+            await cocotb.triggers.Timer(0)  # Delay for one delta cycle to ensure correct timing
+        cocotb.log.debug(f"[Clear] clock period for {clk} is {clock_period}")
+        return clock_period
+
