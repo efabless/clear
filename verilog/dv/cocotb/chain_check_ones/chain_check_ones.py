@@ -8,8 +8,8 @@ from clear import CCFF_TAIL
 @cocotb.test()
 @repot_test
 async def chain_check_ones(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=73589)
-    fpga_clear = Clear(caravelEnv)
+    caravelEnv = await test_configure(dut, timeout_cycles=290166)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     stream_length = 35888 + 20
     stream_arr = [0 for _ in range(stream_length)]
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
@@ -18,7 +18,7 @@ async def chain_check_ones(dut):
     # await _write_prog_bits(bit_stream=fpga_clear.file_bit_stream,fpga_clear=fpga_clear)
     await _write_prog_bits(bit_stream=stream_arr, fpga_clear=fpga_clear)
 
-    await ClockCycles(caravelEnv.clk, 1000)
+    await ClockCycles(caravelEnv.clk, 10)
 
 
 async def _write_prog_bits(bit_stream, fpga_clear):

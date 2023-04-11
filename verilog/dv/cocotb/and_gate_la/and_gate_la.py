@@ -7,8 +7,8 @@ from cocotb.triggers import ClockCycles
 @cocotb.test()
 @repot_test
 async def and_gate_la(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=224532)
-    fpga_clear = Clear(caravelEnv)
+    caravelEnv = await test_configure(dut, timeout_cycles=224593)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_la.bit")
@@ -37,7 +37,7 @@ async def and_gate_la(dut):
                     else:
                         cocotb.log.error(f"[TEST] seeing illegal value {gpios_5_8} ")
             old_val = gpios_5_8
-        await ClockCycles(caravelEnv.clk, 20)
+        await ClockCycles(fpga_clear.clk_op, 20)
     if fails_number == 0:
         cocotb.log.info(f"[TEST] Pass all checkers")
     else:

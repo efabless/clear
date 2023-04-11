@@ -7,8 +7,8 @@ from cocotb.triggers import ClockCycles
 @cocotb.test()
 @repot_test
 async def and_gate(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=57056)
-    fpga_clear = Clear(caravelEnv)
+    caravelEnv = await test_configure(dut, timeout_cycles=145692)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_3.bit")
@@ -29,7 +29,7 @@ async def and_gate(dut):
         b = random.randint(0, 1)
         caravelEnv.drive_gpio_in(a_gpio, a)
         caravelEnv.drive_gpio_in(b_gpio, b)
-        await ClockCycles(caravelEnv.clk, 3)
+        await ClockCycles(fpga_clear.clk_op, 3)
         c = a & b
         if caravelEnv.monitor_gpio(c_gpio).integer != c:
             cocotb.log.error(

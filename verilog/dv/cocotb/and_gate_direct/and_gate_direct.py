@@ -7,8 +7,8 @@ import random
 @cocotb.test()
 @repot_test
 async def and_gate_direct(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=36574)
-    fpga_clear = Clear(caravelEnv)
+    caravelEnv = await test_configure(dut, timeout_cycles=146096)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and_3.bit")
@@ -22,7 +22,7 @@ async def and_gate_direct(dut):
         b = random.randint(0, 1)
         a_input.value = a
         b_input.value = b
-        await ClockCycles(caravelEnv.clk, 5)
+        await ClockCycles(fpga_clear.clk_op, 5)
         c = a & b
         if c_output.value.integer != c:
             cocotb.log.error(

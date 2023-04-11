@@ -1,10 +1,10 @@
 Tests: 
     - {name: chain_check_sdf, sim: GL_SDF}
-    # - {name: and_gate, sim: GL_SDF}
-    # - {name: and_gate_direct, sim: GL_SDF}
-    # - {name: chain_check, sim: GL_SDF}
-    # - {name: chain_check_ones, sim: GL_SDF}
-    # - {name: and_gate_la, sim: GL_SDF}
-    # - {name: counter, sim: GL_SDF}
-    # - {name: and2_9bits, sim: GL_SDF}
-    # - {name: and2_latch, sim: GL_SDF}
+    - {name: and_gate, sim: GL_SDF}
+    - {name: and_gate_direct, sim: GL_SDF}
+    - {name: chain_check, sim: GL_SDF}
+    - {name: chain_check_ones, sim: GL_SDF}
+    - {name: and_gate_la, sim: GL_SDF}
+    - {name: counter, sim: GL_SDF}
+    - {name: and2_9bits, sim: GL_SDF}
+    - {name: and2_latch, sim: GL_SDF}

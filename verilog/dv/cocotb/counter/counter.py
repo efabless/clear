@@ -8,7 +8,7 @@ from cocotb.clock import Clock
 @repot_test
 async def counter(dut):
     caravelEnv = await test_configure(dut, timeout_cycles=125642)
-    fpga_clear = Clear(caravelEnv)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(

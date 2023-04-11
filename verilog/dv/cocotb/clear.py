@@ -19,7 +19,7 @@ SC_TAIL = 14
 
 
 class Clear:
-    def __init__(self, caravelEnv, period_op=None, period_prog=25) -> None:
+    def __init__(self, caravelEnv, period_op=None, period_prog=100) -> None:
         """Class for clear programing and testing"""
         self.caravelEnv = caravelEnv
         self.period_prog = period_prog

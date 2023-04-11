@@ -10,7 +10,7 @@ from cocotb.clock import Clock
 @cocotb.test()
 @repot_test
 async def and2_latch(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=90500)
+    caravelEnv = await test_configure(dut, timeout_cycles=145328)
     period_op = 100
     fpga_clear = Clear(caravelEnv, period_op=period_op)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
@@ -74,7 +74,7 @@ async def and2_latch(dut):
                 f"[TEST] incorrect value of c {caravelEnv.monitor_gpio(c_gpio)} when a = {a} and b = {b} expected {c}"
             )
         else:
-            cocotb.log.info(f"[TEST] correct value of c {c} when a = {a} and b = {b}")
+            cocotb.log.debug(f"[TEST] correct value of c {c} when a = {a} and b = {b}")
         
         
         if caravelEnv.monitor_gpio(d_gpio).integer != old_d:
@@ -82,7 +82,7 @@ async def and2_latch(dut):
                 f"[TEST] incorrect value of d {caravelEnv.monitor_gpio(d_gpio)} when c = {c}  expected {old_d}"
             )
         else:
-            cocotb.log.info(f"[TEST] correct value of d {old_d} when c = {c}")
+            cocotb.log.debug(f"[TEST] correct value of d {old_d} when c = {c}")
         
 
         caravelEnv.drive_gpio_in(a_gpio, a_1)
@@ -97,7 +97,7 @@ async def and2_latch(dut):
                 f"[TEST] incorrect value of c  {caravelEnv.monitor_gpio(c_gpio)} at posedge clk when a = {a_1} and b = {b_1} expected {c}"
             )
         else:
-            cocotb.log.info(f"[TEST] correct value of c at posedge clk {c} when a = {a_1} and b = {b_1}")
+            cocotb.log.debug(f"[TEST] correct value of c at posedge clk {c} when a = {a_1} and b = {b_1}")
         
 
         if caravelEnv.monitor_gpio(d_gpio).integer != old_d:
@@ -105,5 +105,5 @@ async def and2_latch(dut):
                 f"[TEST] incorrect value of d {caravelEnv.monitor_gpio(d_gpio)} at posedge clk  when c = {c}  expected {d}"
             )
         else:
-            cocotb.log.info(f"[TEST] correct value of d at posedge clk {old_d} when c = {c}")
+            cocotb.log.debug(f"[TEST] correct value of d at posedge clk {old_d} when c = {c}")
         

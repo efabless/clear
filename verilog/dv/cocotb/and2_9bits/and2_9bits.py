@@ -7,8 +7,8 @@ from cocotb.triggers import ClockCycles
 @cocotb.test()
 @repot_test
 async def and2_9bits(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=270021)
-    fpga_clear = Clear(caravelEnv)
+    caravelEnv = await test_configure(dut, timeout_cycles=270108)
+    fpga_clear = Clear(caravelEnv, period_op=100)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(bit_stream_file=f"{bit_stream_path}/and2_9bits.bit")
@@ -117,7 +117,7 @@ async def and2_9bits(dut):
         caravelEnv.drive_gpio_in(b_7_gpio, b_7)
         caravelEnv.drive_gpio_in(b_8_gpio, b_8)
 
-        await ClockCycles(caravelEnv.clk, 3)
+        await ClockCycles(fpga_clear.clk_op, 3)
 
         c_0 = a_0 & b_0
         c_1 = a_1 & b_1
@@ -131,55 +131,55 @@ async def and2_9bits(dut):
 
         
         if caravelEnv.monitor_gpio(c_0_gpio).integer == c_0:
-            cocotb.log.info(f"[TEST] correct value of C[0] {c_0} when a[0] = {a_0} and b[0] = {b_0}")
+            cocotb.log.debug(f"[TEST] correct value of C[0] {c_0} when a[0] = {a_0} and b[0] = {b_0}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[0] {caravelEnv.monitor_gpio(c_0_gpio)} when a[0] = {a_0} and b[0] = {b_0} expected {c_0}")
             break
 
         if caravelEnv.monitor_gpio(c_1_gpio).integer == c_1:
-            cocotb.log.info(f"[TEST] correct value of C[1] {c_1} when a[1] = {a_1} and b[1] = {b_1}")
+            cocotb.log.debug(f"[TEST] correct value of C[1] {c_1} when a[1] = {a_1} and b[1] = {b_1}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[1] {caravelEnv.monitor_gpio(c_1_gpio)} when a[1] = {a_1} and b[0] = {b_1} expected {c_1}")
             break
         
         if caravelEnv.monitor_gpio(c_2_gpio).integer == c_2:
-            cocotb.log.info(f"[TEST] correct value of C[2] {c_2} when a[2] = {a_2} and b[2] = {b_2}")
+            cocotb.log.debug(f"[TEST] correct value of C[2] {c_2} when a[2] = {a_2} and b[2] = {b_2}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[2] {caravelEnv.monitor_gpio(c_2_gpio)} when a[2] = {a_2} and b[0] = {b_2} expected {c_2}")
             break
 
         if caravelEnv.monitor_gpio(c_3_gpio).integer == c_3:
-            cocotb.log.info(f"[TEST] correct value of C[3] {c_3} when a[3] = {a_3} and b[3] = {b_3}")
+            cocotb.log.debug(f"[TEST] correct value of C[3] {c_3} when a[3] = {a_3} and b[3] = {b_3}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[3] {caravelEnv.monitor_gpio(c_3_gpio)} when a[3] = {a_3} and b[0] = {b_3} expected {c_3}")
             break
         
         if caravelEnv.monitor_gpio(c_4_gpio).integer == c_4:
-            cocotb.log.info(f"[TEST] correct value of C[4] {c_4} when a[4] = {a_4} and b[4] = {b_4}")
+            cocotb.log.debug(f"[TEST] correct value of C[4] {c_4} when a[4] = {a_4} and b[4] = {b_4}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[4] {caravelEnv.monitor_gpio(c_4_gpio)} when a[4] = {a_4} and b[0] = {b_4} expected {c_4}")
             break
         
         if caravelEnv.monitor_gpio(c_5_gpio).integer == c_5:
-            cocotb.log.info(f"[TEST] correct value of C[5] {c_5} when a[5] = {a_5} and b[5] = {b_5}")
+            cocotb.log.debug(f"[TEST] correct value of C[5] {c_5} when a[5] = {a_5} and b[5] = {b_5}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[5] {caravelEnv.monitor_gpio(c_5_gpio)} when a[5] = {a_5} and b[0] = {b_5} expected {c_5}")
             break
         
         if caravelEnv.monitor_gpio(c_6_gpio).integer == c_6:
-            cocotb.log.info(f"[TEST] correct value of C[6] {c_6} when a[6] = {a_6} and b[6] = {b_6}")
+            cocotb.log.debug(f"[TEST] correct value of C[6] {c_6} when a[6] = {a_6} and b[6] = {b_6}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[6] {caravelEnv.monitor_gpio(c_6_gpio)} when a[6] = {a_6} and b[0] = {b_6} expected {c_6}")
             break
         
         if caravelEnv.monitor_gpio(c_7_gpio).integer == c_7:
-            cocotb.log.info(f"[TEST] correct value of C[7] {c_7} when a[7] = {a_7} and b[7] = {b_7}")
+            cocotb.log.debug(f"[TEST] correct value of C[7] {c_7} when a[7] = {a_7} and b[7] = {b_7}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[7] {caravelEnv.monitor_gpio(c_7_gpio)} when a[7] = {a_7} and b[0] = {b_7} expected {c_7}")
             break
         
         if caravelEnv.monitor_gpio(c_8_gpio).integer == c_8:
-            cocotb.log.info(f"[TEST] correct value of C[8] {c_8} when a[8] = {a_8} and b[8] = {b_8}")
+            cocotb.log.debug(f"[TEST] correct value of C[8] {c_8} when a[8] = {a_8} and b[8] = {b_8}")
         else:
             cocotb.log.error(f"[TEST] incorrect value of C[8] {caravelEnv.monitor_gpio(c_8_gpio)} when a[8] = {a_8} and b[0] = {b_8} expected {c_8}")
             break
