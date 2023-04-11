@@ -2,7 +2,7 @@ from cocotb_includes import *
 from clear import Clear
 import random
 from cocotb.triggers import ClockCycles, RisingEdge, FallingEdge, Timer
-from clear import CCFF_TAIL
+from clear import CCFF_TAIL, CCFF_HEAD
 
 
 @cocotb.test()
@@ -31,7 +31,7 @@ async def _write_prog_bits(bit_stream, fpga_clear):
     with open(file, "w") as f:
         for bit in bit_stream:
             counter += 1
-            fpga_clear.ccff_head.value = int(bit)
+            fpga_clear.caravelEnv.drive_gpio_in(CCFF_HEAD, int(bit))
             tail_val = fpga_clear.caravelEnv.monitor_gpio(CCFF_TAIL).binstr
             f.write(f"{tail_val}\n")
             if tail_val == "1":

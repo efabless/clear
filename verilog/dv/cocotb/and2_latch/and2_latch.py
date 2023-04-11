@@ -35,8 +35,8 @@ async def and2_latch(dut):
     rst_gpio = 2
     c_gpio = 4
     d_gpio = 3
-    caravelEnv.dut._id(f"bin{clk_gpio}_en", False).value = 1
-    clk = caravelEnv.dut._id(f"bin{clk_gpio}", False)
+    caravelEnv.dut._id(f"gpio{clk_gpio}_en", False).value = 1
+    clk = caravelEnv.dut._id(f"gpio{clk_gpio}", False)
     clock = Clock(clk, period_op, "ns")
     await ClockCycles(fpga_clear.clk_op, 1)
     cocotb.start_soon(clock.start())

@@ -7,8 +7,9 @@ from cocotb.clock import Clock
 @cocotb.test()
 @repot_test
 async def counter(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=125642)
-    fpga_clear = Clear(caravelEnv, period_op=100)
+    caravelEnv = await test_configure(dut, timeout_cycles=138059)
+    period_op = 100
+    fpga_clear = Clear(caravelEnv, period_op=period_op)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(
@@ -35,24 +36,21 @@ async def counter(dut):
     reset_gpio = 11
     q_gpio = (0, 2, 3, 4, 5, 6, 7, 8)
     # enable clk and reset writing
-    caravelEnv.dut._id(f"bin{clk_gpio}_en", False).value = 1
-    caravelEnv.dut._id(f"bin{reset_gpio}_en", False).value = 1
-    clock = caravelEnv.dut._id(f"bin{clk_gpio}", False)
-    reset = caravelEnv.dut._id(f"bin{reset_gpio}", False)
+    caravelEnv.dut._id(f"gpio{clk_gpio}_en", False).value = 1
+    clk = caravelEnv.dut._id(f"gpio{clk_gpio}", False)
+    caravelEnv.drive_gpio_in(reset_gpio, 0)
 
-    reset.value = 0
-
-    clock_obj = Clock(clock, 25, "ns")
+    clock_obj = Clock(clk, period_op, "ns")
     cocotb.start_soon(clock_obj.start())
-    await ClockCycles(clock, 4)
-    reset.value = 1
+    await ClockCycles(clk, 4)
+    caravelEnv.drive_gpio_in(reset_gpio, 1)
 
     counter = 0
     for i in range(0xFFF):
         if counter == 0x100:  # rollover after 8 bits
             counter = 0
         counter_rec = caravelEnv.monitor_discontinuous_gpios(q_gpio)
-        await ClockCycles(clock, 1)
+        await ClockCycles(clk, 1)
         if counter != int(counter_rec, 2):
             cocotb.log.info(
                 f"[TEST] received incorrect count value expected = {counter} recieved = {int(counter_rec, 2)}"

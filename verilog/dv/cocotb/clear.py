@@ -80,7 +80,6 @@ class Clear:
         else:
             bit_stream = stream_arr
         await self._reset_prog()
-        self._start_prog_clock()
         cocotb.log.info("[Clear] start writing the bit stream")
         if not prog_backdoor:
             await self._write_prog_bits(bit_stream)
@@ -90,47 +89,28 @@ class Clear:
 
     def _start_prog_clock(self):
         # enable driving
-        self.caravelEnv.dut._id(f"bin{PROG_CLK}_en", False).value = 1
+        self.caravelEnv.dut._id(f"gpio{PROG_CLK}_en", False).value = 1
         # start clock
-        self.clk = self.caravelEnv.dut._id(f"bin{PROG_CLK}", False)
+        self.clk = self.caravelEnv.dut._id(f"gpio{PROG_CLK}", False)
         clock = Clock(self.clk, self.period_prog, "ns")
         self.clock_prog_thread = cocotb.start_soon(clock.start())
 
     async def _reset_prog(self):
         # reset and initialize all the values
-        # enable driving
-        self.caravelEnv.dut._id(f"bin{PROG_RST}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{PROG_CLK}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{OP_RST}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{IO_ISOL_N}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{TEST_EN}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{OP_CLK}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{CCFF_HEAD}_en", False).value = 1
-        self.caravelEnv.dut._id(f"bin{OP_CLK_SEL}_en", False).value = 1
-        # get signal
-        reset = self.caravelEnv.dut._id(f"bin{PROG_RST}", False)
-        clock = self.caravelEnv.dut._id(f"bin{PROG_CLK}", False)
-        self.op_reset = self.caravelEnv.dut._id(f"bin{OP_RST}", False)
-        self.clk_op = self.caravelEnv.dut._id(f"bin{OP_CLK}", False)
-        self.io_isol_n = self.caravelEnv.dut._id(f"bin{IO_ISOL_N}", False)
-        test_en = self.caravelEnv.dut._id(f"bin{TEST_EN}", False)
-        self.ccff_head = self.caravelEnv.dut._id(f"bin{CCFF_HEAD}", False)
-        self.op_clk_sel = self.caravelEnv.dut._id(f"bin{OP_CLK_SEL}", False)
         # set init value
-        reset.value = 0
-        clock.value = 0
-        self.op_reset.value = 0
-        self.io_isol_n.value = 0
-        test_en.value = 0
-        self.clk_op.value = 0
-        self.ccff_head.value = 0
-        self.op_clk_sel.value = 0
+        self.caravelEnv.drive_gpio_in(PROG_RST, 0)
+        self.caravelEnv.drive_gpio_in(PROG_CLK, 0)
+        self.caravelEnv.drive_gpio_in(OP_RST, 0)
+        self.caravelEnv.drive_gpio_in(IO_ISOL_N, 0)
+        self.caravelEnv.drive_gpio_in(TEST_EN, 0)
+        self.caravelEnv.drive_gpio_in(OP_CLK, 0)
+        self.caravelEnv.drive_gpio_in(CCFF_HEAD, 0)
+        self.caravelEnv.drive_gpio_in(OP_CLK_SEL, 0)
+        self._start_prog_clock()
         # wait and reset
-        await cocotb.triggers.Timer(self.period_prog * 5, units="ns")
-        # await ClockCycles(self.clk, 5)
-        reset.value = 1
-        await cocotb.triggers.Timer(self.period_prog * 5, units="ns")
-        # await ClockCycles(self.clk, 5)
+        await cocotb.triggers.ClockCycles(self.clk, 5)
+        self.caravelEnv.drive_gpio_in(PROG_RST, 1)
+        await cocotb.triggers.ClockCycles(self.clk, 5)
 
     async def _write_prog_bits(self, bit_stream, check_tail=False):
         # assert set and reset
@@ -139,14 +119,12 @@ class Clear:
         for bit in bit_stream:
             await FallingEdge(self.clk)
             counter += 1
-            self.ccff_head.value = int(bit)
+            self.caravelEnv.drive_gpio_in(CCFF_HEAD, int(bit))
             cocotb.log.debug(f"[Clear] prog chain with {bit} bit number {counter}")
             if (
                 check_tail
             ):  # used only when the passing the same array 2 times to see it got shifted right
-                tail_val = self.caravelEnv.dut._id(
-                    f"bin{CCFF_TAIL}_monitor", False
-                ).value.binstr
+                tail_val = self.caravelEnv.monitor_gpio(CCFF_TAIL).binstr
                 if tail_old != bit:
                     cocotb.log.error(
                         f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_old}"
@@ -174,16 +152,18 @@ class Clear:
             self.clock_prog_thread.kill()
         except AttributeError:
             pass
-        self.io_isol_n.value = 1
-        self.ccff_head.value = 0
+        self.caravelEnv.drive_gpio_in(IO_ISOL_N, 1)
+        self.caravelEnv.drive_gpio_in(CCFF_HEAD, 0)
         await cocotb.triggers.ClockCycles(self.caravelEnv.clk, 3)
-        self.op_reset.value = 1
+        self.caravelEnv.drive_gpio_in(OP_RST, 1)
         await cocotb.triggers.ClockCycles(self.caravelEnv.clk, 3)
 
         # setup op clock
         if self.period_op is None:
             # connect period op with the caravel period
             self.period_op = await self.get_clock_period(self.caravelEnv.clk)
+        self.caravelEnv.dut._id(f"gpio{OP_CLK}_en", False).value = 1
+        self.clk_op = self.caravelEnv.dut._id(f"gpio{OP_CLK}", False)
         clock = Clock(self.clk_op, self.period_op, "ns")
         self.clock_op_thread = cocotb.start_soon(clock.start())
         cocotb.log.info("[Clear] set op clock")
