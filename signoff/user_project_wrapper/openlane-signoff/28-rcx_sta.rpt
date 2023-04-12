@@ -11,11 +11,11 @@ Fanout     Cap    Slew   Delay    Time   Description
 -----------------------------------------------------------------------------
                   0.11    0.09   12.59 v wb_clk_i (in)
      4    0.05                           wb_clk_i (net)
-                  0.11    0.00   12.59 v _029_/A1 (sky130_fd_sc_hd__mux2_1)
-                  0.26    0.54   13.13 v _029_/X (sky130_fd_sc_hd__mux2_1)
+                  0.12    0.00   12.59 v _029_/A1 (sky130_fd_sc_hd__mux2_1)
+                  0.27    0.55   13.14 v _029_/X (sky130_fd_sc_hd__mux2_1)
      2    0.05                           clk (net)
-                  0.26    0.01   13.14 v ANTENNA_fpga_core_uut_clk/DIODE (sky130_fd_sc_hd__diode_2)
-                                 13.14   data arrival time
+                  0.27    0.01   13.15 v ANTENNA_fpga_core_uut_clk/DIODE (sky130_fd_sc_hd__diode_2)
+                                 13.15   data arrival time
 -----------------------------------------------------------------------------
 (Path is unconstrained)
 
