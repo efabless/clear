@@ -771,18 +771,14 @@ max fanout
 
 Pin                                   Limit Fanout  Slack
 ---------------------------------------------------------
-wire385/X                                20     44    -24 (VIOLATED)
 wire485/X                                20     44    -24 (VIOLATED)
 wire486/X                                20     44    -24 (VIOLATED)
 wire487/X                                20     44    -24 (VIOLATED)
-wire281/X                                20     35    -15 (VIOLATED)
-wire386/X                                20     35    -15 (VIOLATED)
-wire278/X                                20     29     -9 (VIOLATED)
 
 
 ===========================================================================
 max slew violation count 0
-max fanout violation count 7
+max fanout violation count 3
 max cap violation count 0
 ============================================================================
 check_slew_end
@@ -830,21 +826,21 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          5.50e-05   1.17e-04   1.74e-07   1.72e-04 100.0%
+Combinational          5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  5.50e-05   1.17e-04   1.74e-07   1.72e-04 100.0%
-                          32.0%      67.8%       0.1%
+Total                  5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
+                          32.2%      67.7%       0.1%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 6789978 u^2 67% utilization.
+Design area 6789398 u^2 67% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_12_06_43/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_16_16_38/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
 
