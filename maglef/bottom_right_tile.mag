@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1681041586
+timestamp 1681685503
 << obsli1 >>
 rect 1104 2159 49864 24497
 << obsm1 >>
-rect 934 2128 49864 25900
+rect 474 2128 49864 25628
 << metal2 >>
 rect 2226 26200 2282 27000
 rect 2870 26200 2926 27000
@@ -100,7 +100,7 @@ rect 44086 0 44142 800
 rect 46754 0 46810 800
 rect 49422 0 49478 800
 << obsm2 >>
-rect 940 26144 2170 26330
+rect 480 26144 2170 26330
 rect 2338 26144 2814 26330
 rect 2982 26144 3458 26330
 rect 3626 26144 4102 26330
@@ -174,8 +174,8 @@ rect 46774 26144 47250 26330
 rect 47418 26144 47894 26330
 rect 48062 26144 48538 26330
 rect 48706 26144 49476 26330
-rect 940 856 49476 26144
-rect 940 734 1342 856
+rect 480 856 49476 26144
+rect 480 734 1342 856
 rect 1510 734 4010 856
 rect 4178 734 6678 856
 rect 6846 734 9346 856
@@ -398,12 +398,13 @@ rect 37944 2128 38264 24528
 rect 42944 2128 43264 24528
 rect 47944 2128 48264 24528
 << obsm4 >>
-rect 2267 24608 22757 24989
-rect 2267 7787 2864 24608
-rect 3344 7787 7864 24608
-rect 8344 7787 12864 24608
-rect 13344 7787 17864 24608
-rect 18344 7787 22757 24608
+rect 3739 24608 32693 24989
+rect 3739 7243 7864 24608
+rect 8344 7243 12864 24608
+rect 13344 7243 17864 24608
+rect 18344 7243 22864 24608
+rect 23344 7243 27864 24608
+rect 28344 7243 32693 24608
 << labels >>
 rlabel metal4 s 7944 2128 8264 24528 6 VGND
 port 1 nsew ground bidirectional
@@ -743,8 +744,8 @@ port 159 nsew signal output
 string FIXED_BBOX 0 0 51000 27000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2448086
-string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_right_tile/runs/23_04_09_04_58/results/signoff/bottom_right_tile.magic.gds
-string GDS_START 183102
+string GDS_END 2442954
+string GDS_FILE /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_right_tile/runs/23_04_16_15_50/results/signoff/bottom_right_tile.magic.gds
+string GDS_START 172420
 << end >>
 

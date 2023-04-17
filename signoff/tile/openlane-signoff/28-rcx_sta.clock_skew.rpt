@@ -12,7 +12,7 @@ grid_clb_1__1_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1
 Clock prog_clk
 Latency      CRPR       Skew
 cby_1__1_.mem_right_ipin_12.sky130_fd_sc_hd__dfrtp_1_3_/CLK ^
-   0.81
+   0.82
 cby_1__1_.mem_right_ipin_13.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
    0.68     -0.03       0.10
 

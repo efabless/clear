@@ -180,12 +180,12 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 10.00
+worst slack 5.88
 
 ===========================================================================
  report_worst_slack -min (Hold)
 ============================================================================
-worst slack -0.23
+worst slack 0.23
 worst_slack_end
 clock_skew
 
@@ -194,17 +194,17 @@ clock_skew
 ============================================================================
 Clock clk0
 Latency      CRPR       Skew
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_9_/CLK ^
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
    0.25
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
-   0.40      0.00      -0.15
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
+   0.40      0.00      -0.16
 
 Clock prog_clk
 Latency      CRPR       Skew
-sb_8__8_.mem_left_track_43.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
-   0.82
-sb_8__8_.mem_left_track_43.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.71     -0.03       0.08
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.79
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.68     -0.03       0.08
 
 clock_skew_end
 power_report
@@ -215,12 +215,12 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             2.29e-04   1.22e-05   6.26e-09   2.41e-04  41.4%
-Combinational          1.73e-04   1.68e-04   1.47e-08   3.41e-04  58.6%
+Sequential             2.29e-04   1.22e-05   6.27e-09   2.41e-04  41.2%
+Combinational          1.75e-04   1.69e-04   1.49e-08   3.45e-04  58.8%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  4.02e-04   1.81e-04   2.09e-08   5.83e-04 100.0%
+Total                  4.04e-04   1.82e-04   2.12e-08   5.86e-04 100.0%
                           69.0%      31.0%       0.0%
 power_report_end
 area_report
@@ -228,10 +228,10 @@ area_report
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 35543 u^2 56% utilization.
+Design area 36073 u^2 57% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_09_04_50/results/routing/mca/process_corner_nom/top_right_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_09_04_50/results/routing/mca/process_corner_nom/top_right_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_16_15_42/results/routing/mca/process_corner_nom/top_right_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_right_tile/runs/23_04_16_15_42/results/routing/mca/process_corner_nom/top_right_tile.lib...
 

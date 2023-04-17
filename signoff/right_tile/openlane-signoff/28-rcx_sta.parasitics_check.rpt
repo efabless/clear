@@ -169,12 +169,12 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 9.98
+worst slack 3.57
 
 ===========================================================================
  report_worst_slack -min (Hold)
 ============================================================================
-worst slack -0.12
+worst slack 0.23
 worst_slack_end
 clock_skew
 
@@ -204,12 +204,12 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             2.28e-04   1.37e-05   6.22e-09   2.42e-04  40.2%
-Combinational          1.78e-04   1.82e-04   1.52e-08   3.59e-04  59.8%
+Sequential             2.28e-04   1.38e-05   6.22e-09   2.42e-04  39.8%
+Combinational          1.82e-04   1.83e-04   1.57e-08   3.66e-04  60.2%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  4.06e-04   1.95e-04   2.14e-08   6.01e-04 100.0%
+Total                  4.10e-04   1.97e-04   2.19e-08   6.07e-04 100.0%
                           67.5%      32.5%       0.0%
 power_report_end
 area_report
@@ -217,10 +217,10 @@ area_report
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 37164 u^2 58% utilization.
+Design area 38209 u^2 60% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/right_tile/runs/23_04_09_04_44/results/routing/mca/process_corner_nom/right_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/right_tile/runs/23_04_09_04_44/results/routing/mca/process_corner_nom/right_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/right_tile/runs/23_04_16_15_35/results/routing/mca/process_corner_nom/right_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/right_tile/runs/23_04_16_15_35/results/routing/mca/process_corner_nom/right_tile.lib...
 
