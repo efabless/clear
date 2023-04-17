@@ -88,12 +88,12 @@ module user_project_wrapper #(
         io_in[1]                               | isol_n               | Input
         io_in[9]                               | reset                | Input
         io_in[10]                              | test_enable          | Input
-        io_in[14]                              | sc_tail              | Output
-        io_out[23]                             | ccff_tail            | Input
-        io_out[22]                             | sc_head              | Input
+        io_out[14]                             | sc_tail              | Output
+        io_out[23]                             | ccff_tail            | Output
+        io_in[22]                              | sc_head              | Input
         io_in[29]                              | prog_reset           | Input 
-        io_in[34]                              | ccff_head            | Output
-        io_out[35]                             | clk_sel              | Output
+        io_in[34]                              | ccff_head            | Input
+        io_in[35]                              | clk_sel              | Input
         io_in[36]                              | clk                  | Input
         io_in[37]                              | prog_clk             | Input
         io_in[0]-[8:2]-[13:11]                 | EMBEDDED_IO[46:36]   | Bidirectional
