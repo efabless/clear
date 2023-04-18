@@ -1,5 +1,5 @@
 # caravel
-caravel
+# caravel
 runs
 mgmt_core_wrapper
 
@@ -19,7 +19,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
