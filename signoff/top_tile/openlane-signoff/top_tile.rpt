@@ -1,17 +1,17 @@
-CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/reports/signoff/top_tile.rpt
-CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/reports/signoff/top_tile.rpt.error.gz
-CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/reports/signoff/top_tile.rpt.debug.gz
+CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/reports/signoff/top_tile.rpt
+CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/reports/signoff/top_tile.rpt.error.gz
+CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/reports/signoff/top_tile.rpt.debug.gz
 CVC: Circuit Validation Check  Version 1.1.4
-CVC: Start: Fri Apr  7 21:14:22 2023
+CVC: Start: Sun Apr 16 22:35:44 2023
 
 Using the following parameters for CVC (Circuit Validation Check) from /home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/cvcrc
 CVC_TOP = 'top_tile'
-CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/tmp/signoff/top_tile.cdl'
+CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/tmp/signoff/top_tile.cdl'
 CVC_MODE = 'top_tile'
 CVC_MODEL_FILE = '/home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/models'
-CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/tmp/signoff/top_tile.power'
+CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/tmp/signoff/top_tile.power'
 CVC_FUSE_FILE = ''
-CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/reports/signoff/top_tile.rpt'
+CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/reports/signoff/top_tile.rpt'
 CVC_REPORT_TITLE = 'CVC $CVC_TOP'
 CVC_CIRCUIT_ERROR_LIMIT = '100'
 CVC_SEARCH_LIMIT = '100'
@@ -45,7 +45,7 @@ End of parameters
 
 CVC: Reading device model settings...
 CVC: Reading power settings...
-CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_07_14_09/tmp/signoff/top_tile.cdl
-Cdl fixed data size 806858
-Usage CDL: Time: 0  Memory: 13492  I/O: 8  Swap: 0
+CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/tmp/signoff/top_tile.cdl
+Cdl fixed data size 807754
+Usage CDL: Time: 0  Memory: 13732  I/O: 8  Swap: 0
 CVC: Counting and linking...

@@ -32,19 +32,19 @@ set_clock_transition 0.5 [get_clocks prog_clk]
 set_clock_transition 0.5 [get_clocks clk0]
 
 ## INPUT DELAY
-set_input_delay -0.2 -clock [get_clocks prog_clk] [all_inputs]
-set_input_delay -0.2 -clock [get_clocks clk0] [all_inputs]
+set_input_delay -1.0 -clock [get_clocks prog_clk] [all_inputs]
+set_input_delay -1.5 -clock [get_clocks clk0] [all_inputs]
 set_input_delay 0.0 -clock [get_clocks prog_clk] [get_ports prog_clk]
 set_input_delay 0.0 -clock [get_clocks clk0] [get_ports clk0]
 
 ## OUTPUT DELAY
-set_output_delay 3.0 -clock [get_clocks prog_clk] [all_outputs]
-set_output_delay 3.0 -clock [get_clocks clk0] [all_outputs]
+set_output_delay 1.0 -clock [get_clocks prog_clk] [all_outputs]
+set_output_delay 1.0 -clock [get_clocks clk0] [all_outputs]
 
 # OUTPUT CAP
 set cap_load 0.12
 set_load $cap_load [all_outputs]
 
 # DERATES
-set_timing_derate -early 0.95
-set_timing_derate -late 1.05
+set_timing_derate -early 0.92
+set_timing_derate -late 1.08

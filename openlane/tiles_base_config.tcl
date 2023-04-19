@@ -47,6 +47,7 @@ set ::env(PL_TIME_DRIVEN) 0
 set ::env(PL_WIRELENGTH_COEF) 0.008
 set ::env(DIODE_PADDING) 0
 # set ::env(PL_RESIZER_BUFFER_INPUT_PORTS) 0
+set ::env(DPL_CELL_PADDING) 4
 
 # CTS
 set ::env(CLOCK_TREE_SYNTH) 1

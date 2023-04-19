@@ -1,17 +1,17 @@
-CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/reports/signoff/tile.rpt
-CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/reports/signoff/tile.rpt.error.gz
-CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/reports/signoff/tile.rpt.debug.gz
+CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/reports/signoff/tile.rpt
+CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/reports/signoff/tile.rpt.error.gz
+CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/reports/signoff/tile.rpt.debug.gz
 CVC: Circuit Validation Check  Version 1.1.4
-CVC: Start: Fri Apr  7 21:09:50 2023
+CVC: Start: Sun Apr 16 22:31:01 2023
 
 Using the following parameters for CVC (Circuit Validation Check) from /home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/cvcrc
 CVC_TOP = 'tile'
-CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/tmp/signoff/tile.cdl'
+CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/tmp/signoff/tile.cdl'
 CVC_MODE = 'tile'
 CVC_MODEL_FILE = '/home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/models'
-CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/tmp/signoff/tile.power'
+CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/tmp/signoff/tile.power'
 CVC_FUSE_FILE = ''
-CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/reports/signoff/tile.rpt'
+CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/reports/signoff/tile.rpt'
 CVC_REPORT_TITLE = 'CVC $CVC_TOP'
 CVC_CIRCUIT_ERROR_LIMIT = '100'
 CVC_SEARCH_LIMIT = '100'
@@ -45,7 +45,7 @@ End of parameters
 
 CVC: Reading device model settings...
 CVC: Reading power settings...
-CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_07_14_04/tmp/signoff/tile.cdl
-Cdl fixed data size 792020
-Usage CDL: Time: 0  Memory: 13684  I/O: 8  Swap: 0
+CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/tmp/signoff/tile.cdl
+Cdl fixed data size 794613
+Usage CDL: Time: 0  Memory: 13956  I/O: 8  Swap: 0
 CVC: Counting and linking...

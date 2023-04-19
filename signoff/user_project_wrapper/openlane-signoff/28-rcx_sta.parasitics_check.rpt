@@ -421,8 +421,6 @@ Found 559 unannotated drivers.
  fpga_core_uut/gfpga_pad_io_soc_out[7]
  fpga_core_uut/gfpga_pad_io_soc_out[8]
  fpga_core_uut/gfpga_pad_io_soc_out[9]
- fpga_core_uut_637/HI
- fpga_core_uut_638/HI
  fpga_core_uut_639/HI
  fpga_core_uut_640/HI
  fpga_core_uut_641/HI
@@ -446,12 +444,12 @@ Found 559 unannotated drivers.
  fpga_core_uut_659/HI
  fpga_core_uut_660/HI
  fpga_core_uut_661/HI
- fpga_core_uut_740/HI
- fpga_core_uut_741/HI
+ fpga_core_uut_662/HI
+ fpga_core_uut_663/HI
  fpga_core_uut_742/HI
  fpga_core_uut_743/HI
- user_project_wrapper_662/HI
- user_project_wrapper_663/HI
+ fpga_core_uut_744/HI
+ fpga_core_uut_745/HI
  user_project_wrapper_664/HI
  user_project_wrapper_665/HI
  user_project_wrapper_666/HI
@@ -528,8 +526,8 @@ Found 559 unannotated drivers.
  user_project_wrapper_737/HI
  user_project_wrapper_738/HI
  user_project_wrapper_739/HI
- user_project_wrapper_744/LO
- user_project_wrapper_745/LO
+ user_project_wrapper_740/HI
+ user_project_wrapper_741/HI
  user_project_wrapper_746/LO
  user_project_wrapper_747/LO
  user_project_wrapper_748/LO
@@ -562,6 +560,8 @@ Found 559 unannotated drivers.
  user_project_wrapper_775/LO
  user_project_wrapper_776/LO
  user_project_wrapper_777/LO
+ user_project_wrapper_778/LO
+ user_project_wrapper_779/LO
 Found 99 partially unannotated drivers.
  input10/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[15]/DIODE
@@ -585,6 +585,8 @@ Found 99 partially unannotated drivers.
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[71]/DIODE
  input41/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[70]/DIODE
+ input42/X
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[69]/DIODE
  input5/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[36]/DIODE
  input9/X
@@ -611,106 +613,104 @@ Found 99 partially unannotated drivers.
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[93]/DIODE
  wire257/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[94]/DIODE
- wire259/X
+ wire260/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[95]/DIODE
- wire262/X
+ wire263/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[96]/DIODE
- wire265/X
+ wire266/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[97]/DIODE
- wire268/X
+ wire269/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[98]/DIODE
- wire271/X
+ wire272/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[99]/DIODE
- wire274/X
+ wire275/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[100]/DIODE
- wire277/X
+ wire278/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[101]/DIODE
- wire280/X
+ wire281/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[102]/DIODE
- wire283/X
+ wire284/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[103]/DIODE
- wire286/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[17]/DIODE
  wire287/X
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[17]/DIODE
+ wire288/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[104]/DIODE
- wire290/X
+ wire291/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[105]/DIODE
- wire294/X
+ wire295/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[106]/DIODE
- wire298/X
+ wire299/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[107]/DIODE
- wire302/X
+ wire303/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[108]/DIODE
- wire306/X
+ wire307/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[109]/DIODE
- wire310/X
+ wire311/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[110]/DIODE
- wire314/X
+ wire315/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[111]/DIODE
- wire318/X
+ wire319/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[112]/DIODE
- wire322/X
+ wire323/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[113]/DIODE
- wire326/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[18]/DIODE
  wire327/X
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[18]/DIODE
+ wire328/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[114]/DIODE
- wire331/X
+ wire332/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[115]/DIODE
- wire335/X
+ wire336/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[116]/DIODE
- wire340/X
+ wire341/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[117]/DIODE
- wire345/X
+ wire346/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[118]/DIODE
- wire350/X
+ wire351/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[47]/DIODE
- wire353/X
+ wire354/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[48]/DIODE
- wire356/X
+ wire357/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[49]/DIODE
- wire359/X
+ wire360/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[50]/DIODE
- wire361/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[51]/DIODE
  wire363/X
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[51]/DIODE
+ wire365/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[19]/DIODE
- wire364/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[52]/DIODE
  wire366/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[53]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[52]/DIODE
  wire368/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[54]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[53]/DIODE
  wire370/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[55]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[54]/DIODE
  wire372/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[56]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[55]/DIODE
  wire374/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[57]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[56]/DIODE
  wire376/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[58]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[57]/DIODE
  wire378/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[59]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[58]/DIODE
  wire379/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[60]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[59]/DIODE
  wire380/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[61]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[60]/DIODE
  wire381/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[62]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[61]/DIODE
  wire382/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[63]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[62]/DIODE
  wire383/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[64]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[63]/DIODE
  wire384/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[65]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[64]/DIODE
  wire385/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[66]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[65]/DIODE
  wire386/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[67]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[66]/DIODE
  wire387/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[68]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[67]/DIODE
  wire388/X
-  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[69]/DIODE
+  ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[68]/DIODE
  wire389/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[73]/DIODE
  wire390/X
@@ -767,10 +767,18 @@ check_slew
 ===========================================================================
  report_check_types -max_slew -max_cap -max_fanout -violators
 ============================================================================
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+wire485/X                                20     44    -24 (VIOLATED)
+wire486/X                                20     44    -24 (VIOLATED)
+wire487/X                                20     44    -24 (VIOLATED)
+
 
 ===========================================================================
 max slew violation count 0
-max fanout violation count 0
+max fanout violation count 3
 max cap violation count 0
 ============================================================================
 check_slew_end
@@ -818,11 +826,11 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          5.50e-05   1.16e-04   1.75e-07   1.71e-04 100.0%
+Combinational          5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  5.50e-05   1.16e-04   1.75e-07   1.71e-04 100.0%
+Total                  5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
                           32.2%      67.7%       0.1%
 power_report_end
 area_report
@@ -830,9 +838,9 @@ area_report
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 6789020 u^2 67% utilization.
+Design area 6789398 u^2 67% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_07_15_16/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_16_16_38/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
 

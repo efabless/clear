@@ -80,3 +80,6 @@ set ::env(GRT_ANT_MARGIN) 20
 set ::env(RUN_KLAYOUT) 0
 set ::env(STA_WRITE_LIB) 0
 set ::env(RUN_IRDROP_REPORT) 0
+
+##
+set ::env(MAGIC_DEF_LABELS) 0

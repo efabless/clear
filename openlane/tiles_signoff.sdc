@@ -32,8 +32,8 @@ set_clock_transition 0.5 [get_clocks prog_clk]
 set_clock_transition 0.5 [get_clocks clk0]
 
 ## INPUT DELAY
-set_input_delay 0.0 -clock [get_clocks prog_clk] [all_inputs]
-set_input_delay 0.0 -clock [get_clocks clk0] [all_inputs]
+set_input_delay -0.5 -clock [get_clocks prog_clk] [all_inputs]
+set_input_delay -0.5 -clock [get_clocks clk0] [all_inputs]
 set_input_delay 0.0 -clock [get_clocks prog_clk] [get_ports prog_clk]
 set_input_delay 0.0 -clock [get_clocks clk0] [get_ports clk0]
 
