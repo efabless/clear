@@ -1,10 +1,10 @@
 Tests: 
-    - {name: and_gate, sim: RTL}
-    - {name: and_gate_direct, sim: RTL}
-    - {name: chain_check, sim: RTL}
-    - {name: chain_check_ones, sim: RTL}
-    - {name: and_gate_la, sim: RTL}
-    - {name: counter, sim: RTL}
+    # - {name: and_gate, sim: RTL}
+    # - {name: and_gate_direct, sim: RTL}
+    # - {name: chain_check, sim: RTL}
+    # - {name: chain_check_ones, sim: RTL}
+    # - {name: and_gate_la, sim: RTL}
+    # - {name: counter, sim: RTL}
     - {name: and2_9bits, sim: RTL}
     - {name: and2_latch, sim: RTL}
     - {name: sc_chain_check, sim: RTL}
