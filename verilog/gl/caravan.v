@@ -3944,12 +3944,12 @@ module caravan(vddio, vddio_2, vssio, vssio_2, vdda, vssa, vccd, vssd, vdda1, vd
     .vssd1(vssd1_core),
     .zero()
   );
-  gpio_defaults_block_0402 gpio_defaults_block_0 (
+  gpio_defaults_block_1803 gpio_defaults_block_0 (
     .VGND(vssd_core),
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[12] , \gpio_defaults[11] , \gpio_defaults[10] , \gpio_defaults[9] , \gpio_defaults[8] , \gpio_defaults[7] , \gpio_defaults[6] , \gpio_defaults[5] , \gpio_defaults[4] , \gpio_defaults[3] , \gpio_defaults[2] , \gpio_defaults[1] , \gpio_defaults[0]  })
   );
-  gpio_defaults_block_0402 gpio_defaults_block_1 (
+  gpio_defaults_block_1803 gpio_defaults_block_1 (
     .VGND(vssd_core),
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[25] , \gpio_defaults[24] , \gpio_defaults[23] , \gpio_defaults[22] , \gpio_defaults[21] , \gpio_defaults[20] , \gpio_defaults[19] , \gpio_defaults[18] , \gpio_defaults[17] , \gpio_defaults[16] , \gpio_defaults[15] , \gpio_defaults[14] , \gpio_defaults[13]  })
@@ -3974,7 +3974,7 @@ module caravan(vddio, vddio_2, vssio, vssio_2, vdda, vssa, vccd, vssd, vdda1, vd
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[181] , \gpio_defaults[180] , \gpio_defaults[179] , \gpio_defaults[178] , \gpio_defaults[177] , \gpio_defaults[176] , \gpio_defaults[175] , \gpio_defaults[174] , \gpio_defaults[173] , \gpio_defaults[172] , \gpio_defaults[171] , \gpio_defaults[170] , \gpio_defaults[169]  })
   );
-  gpio_defaults_block_0402 gpio_defaults_block_2 (
+  gpio_defaults_block_0403 gpio_defaults_block_2 (
     .VGND(vssd_core),
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[38] , \gpio_defaults[37] , \gpio_defaults[36] , \gpio_defaults[35] , \gpio_defaults[34] , \gpio_defaults[33] , \gpio_defaults[32] , \gpio_defaults[31] , \gpio_defaults[30] , \gpio_defaults[29] , \gpio_defaults[28] , \gpio_defaults[27] , \gpio_defaults[26]  })
@@ -4049,7 +4049,7 @@ module caravan(vddio, vddio_2, vssio, vssio_2, vdda, vssa, vccd, vssd, vdda1, vd
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[350] , \gpio_defaults[349] , \gpio_defaults[348] , \gpio_defaults[347] , \gpio_defaults[346] , \gpio_defaults[345] , \gpio_defaults[344] , \gpio_defaults[343] , \gpio_defaults[342] , \gpio_defaults[341] , \gpio_defaults[340] , \gpio_defaults[339] , \gpio_defaults[338]  })
   );
-  gpio_defaults_block_0402 gpio_defaults_block_4 (
+  gpio_defaults_block_0403 gpio_defaults_block_4 (
     .VGND(vssd_core),
     .VPWR(vccd_core),
     .gpio_defaults({ \gpio_defaults[64] , \gpio_defaults[63] , \gpio_defaults[62] , \gpio_defaults[61] , \gpio_defaults[60] , \gpio_defaults[59] , \gpio_defaults[58] , \gpio_defaults[57] , \gpio_defaults[56] , \gpio_defaults[55] , \gpio_defaults[54] , \gpio_defaults[53] , \gpio_defaults[52]  })
