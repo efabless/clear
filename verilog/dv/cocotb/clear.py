@@ -125,6 +125,8 @@ class Clear:
                 check_tail
             ):  # used only when the passing the same array 2 times to see it got shifted right
                 tail_val = self.caravelEnv.monitor_gpio(CCFF_TAIL).binstr
+                if counter == 1:
+                    tail_old = bit
                 if tail_old != bit:
                     cocotb.log.error(
                         f"[Clear] mismatch in bit {counter} expected = {bit} recieve = {tail_old}"
