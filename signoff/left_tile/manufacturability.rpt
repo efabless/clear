@@ -1,19 +1,19 @@
 Design Name: left_tile
-Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_16_15_40
+Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_16_15_40/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_16_15_40/logs/signoff/34-left_tile.lef.lvs.log
-Number of nets: 1103                       |Number of nets: 1103                       
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/logs/signoff/34-left_tile.lef.lvs.log
+Number of nets: 1140                       |Number of nets: 1140                       
 Design is LVS clean.
 ----------------------------------------
 
 Antenna Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_16_15_40/logs/signoff/36-antenna.log
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/logs/signoff/36-antenna.log
 Pin violations: 0
 Net violations: 0
