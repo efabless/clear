@@ -36,7 +36,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 66.920 172.045 70.120 195.340 ;
+        RECT 66.920 174.765 70.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -72,43 +72,43 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 -3.720 127.120 61.355 ;
+        RECT 123.920 -3.720 127.120 45.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 172.045 127.120 204.595 ;
+        RECT 123.920 174.765 127.120 200.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 468.285 127.120 519.595 ;
+        RECT 123.920 475.085 127.120 515.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 783.285 127.120 834.595 ;
+        RECT 123.920 790.085 127.120 830.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 1098.285 127.120 1149.595 ;
+        RECT 123.920 1105.085 127.120 1145.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 1413.285 127.120 1464.595 ;
+        RECT 123.920 1420.085 127.120 1460.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 1728.285 127.120 1779.595 ;
+        RECT 123.920 1735.085 127.120 1775.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 2043.285 127.120 2094.595 ;
+        RECT 123.920 2050.085 127.120 2090.515 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 2358.285 127.120 2406.875 ;
+        RECT 123.920 2365.085 127.120 2401.435 ;
     END
     PORT
       LAYER met4 ;
-        RECT 123.920 2604.605 127.120 2718.280 ;
+        RECT 123.920 2556.325 127.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -116,7 +116,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 237.920 -3.720 241.120 197.115 ;
+        RECT 237.920 -3.720 241.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 237.920 173.405 241.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -144,19 +148,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 237.920 2365.765 241.120 2402.115 ;
+        RECT 237.920 2365.765 241.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 237.920 2678.045 241.120 2718.280 ;
+        RECT 237.920 2672.605 241.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 294.920 -3.720 298.120 53.195 ;
+        RECT 294.920 -3.720 298.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 294.920 161.165 298.120 197.115 ;
+        RECT 294.920 173.405 298.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -184,19 +188,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 294.920 2365.765 298.120 2402.115 ;
+        RECT 294.920 2365.765 298.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 294.920 2678.045 298.120 2718.280 ;
+        RECT 294.920 2672.605 298.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 351.920 -3.720 355.120 53.195 ;
+        RECT 351.920 -3.720 355.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 351.920 161.165 355.120 197.115 ;
+        RECT 351.920 173.405 355.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -224,11 +228,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 351.920 2365.765 355.120 2402.115 ;
+        RECT 351.920 2365.765 355.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 351.920 2678.045 355.120 2718.280 ;
+        RECT 351.920 2672.605 355.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -236,7 +240,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 408.920 162.940 412.120 195.340 ;
+        RECT 408.920 173.405 412.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -276,7 +280,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 522.920 -3.720 526.120 197.115 ;
+        RECT 522.920 -3.720 526.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 522.920 173.405 526.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -304,19 +312,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 522.920 2365.765 526.120 2402.115 ;
+        RECT 522.920 2365.765 526.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 522.920 2678.045 526.120 2718.280 ;
+        RECT 522.920 2672.605 526.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 579.920 -3.720 583.120 53.195 ;
+        RECT 579.920 -3.720 583.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 579.920 161.165 583.120 197.115 ;
+        RECT 579.920 173.405 583.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -344,19 +352,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 579.920 2365.765 583.120 2402.115 ;
+        RECT 579.920 2365.765 583.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 579.920 2678.045 583.120 2718.280 ;
+        RECT 579.920 2672.605 583.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 636.920 -3.720 640.120 53.195 ;
+        RECT 636.920 -3.720 640.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 636.920 161.165 640.120 197.115 ;
+        RECT 636.920 173.405 640.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -384,11 +392,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 636.920 2365.765 640.120 2402.115 ;
+        RECT 636.920 2365.765 640.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 636.920 2678.045 640.120 2718.280 ;
+        RECT 636.920 2672.605 640.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -396,7 +404,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 693.920 162.940 697.120 195.340 ;
+        RECT 693.920 173.405 697.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -436,7 +444,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 807.920 -3.720 811.120 197.115 ;
+        RECT 807.920 -3.720 811.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 807.920 173.405 811.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -464,19 +476,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 807.920 2365.765 811.120 2402.115 ;
+        RECT 807.920 2365.765 811.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 807.920 2678.045 811.120 2718.280 ;
+        RECT 807.920 2672.605 811.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 864.920 -3.720 868.120 53.195 ;
+        RECT 864.920 -3.720 868.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 864.920 161.165 868.120 197.115 ;
+        RECT 864.920 173.405 868.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -504,19 +516,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 864.920 2365.765 868.120 2402.115 ;
+        RECT 864.920 2365.765 868.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 864.920 2678.045 868.120 2718.280 ;
+        RECT 864.920 2672.605 868.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 921.920 -3.720 925.120 53.195 ;
+        RECT 921.920 -3.720 925.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 921.920 161.165 925.120 197.115 ;
+        RECT 921.920 173.405 925.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -544,11 +556,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 921.920 2365.765 925.120 2402.115 ;
+        RECT 921.920 2365.765 925.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 921.920 2678.045 925.120 2718.280 ;
+        RECT 921.920 2672.605 925.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -556,7 +568,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 978.920 162.940 982.120 195.340 ;
+        RECT 978.920 173.405 982.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -596,7 +608,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1092.920 -3.720 1096.120 197.115 ;
+        RECT 1092.920 -3.720 1096.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1092.920 173.405 1096.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -624,19 +640,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1092.920 2365.765 1096.120 2402.115 ;
+        RECT 1092.920 2365.765 1096.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1092.920 2678.045 1096.120 2718.280 ;
+        RECT 1092.920 2672.605 1096.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1149.920 -3.720 1153.120 53.195 ;
+        RECT 1149.920 -3.720 1153.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1149.920 161.165 1153.120 197.115 ;
+        RECT 1149.920 173.405 1153.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -664,19 +680,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1149.920 2365.765 1153.120 2402.115 ;
+        RECT 1149.920 2365.765 1153.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1149.920 2678.045 1153.120 2718.280 ;
+        RECT 1149.920 2672.605 1153.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1206.920 -3.720 1210.120 53.195 ;
+        RECT 1206.920 -3.720 1210.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1206.920 161.165 1210.120 197.115 ;
+        RECT 1206.920 173.405 1210.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -704,11 +720,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1206.920 2365.765 1210.120 2402.115 ;
+        RECT 1206.920 2365.765 1210.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1206.920 2678.045 1210.120 2718.280 ;
+        RECT 1206.920 2672.605 1210.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -716,7 +732,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1263.920 162.940 1267.120 195.340 ;
+        RECT 1263.920 173.405 1267.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -756,7 +772,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1377.920 -3.720 1381.120 197.115 ;
+        RECT 1377.920 -3.720 1381.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1377.920 173.405 1381.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -784,19 +804,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1377.920 2365.765 1381.120 2402.115 ;
+        RECT 1377.920 2365.765 1381.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1377.920 2678.045 1381.120 2718.280 ;
+        RECT 1377.920 2672.605 1381.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1434.920 -3.720 1438.120 53.195 ;
+        RECT 1434.920 -3.720 1438.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1434.920 161.165 1438.120 197.115 ;
+        RECT 1434.920 173.405 1438.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -824,19 +844,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1434.920 2365.765 1438.120 2402.115 ;
+        RECT 1434.920 2365.765 1438.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1434.920 2678.045 1438.120 2718.280 ;
+        RECT 1434.920 2672.605 1438.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1491.920 -3.720 1495.120 53.195 ;
+        RECT 1491.920 -3.720 1495.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1491.920 161.165 1495.120 197.115 ;
+        RECT 1491.920 173.405 1495.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -864,11 +884,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1491.920 2365.765 1495.120 2402.115 ;
+        RECT 1491.920 2365.765 1495.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1491.920 2678.045 1495.120 2718.280 ;
+        RECT 1491.920 2672.605 1495.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -876,7 +896,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1548.920 162.940 1552.120 195.340 ;
+        RECT 1548.920 173.405 1552.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -916,7 +936,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1662.920 -3.720 1666.120 197.115 ;
+        RECT 1662.920 -3.720 1666.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1662.920 173.405 1666.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -944,19 +968,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1662.920 2365.765 1666.120 2402.115 ;
+        RECT 1662.920 2365.765 1666.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1662.920 2678.045 1666.120 2718.280 ;
+        RECT 1662.920 2672.605 1666.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1719.920 -3.720 1723.120 53.195 ;
+        RECT 1719.920 -3.720 1723.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1719.920 161.165 1723.120 197.115 ;
+        RECT 1719.920 173.405 1723.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -984,19 +1008,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1719.920 2365.765 1723.120 2402.115 ;
+        RECT 1719.920 2365.765 1723.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1719.920 2678.045 1723.120 2718.280 ;
+        RECT 1719.920 2672.605 1723.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1776.920 -3.720 1780.120 53.195 ;
+        RECT 1776.920 -3.720 1780.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1776.920 161.165 1780.120 197.115 ;
+        RECT 1776.920 173.405 1780.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1024,11 +1048,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1776.920 2365.765 1780.120 2402.115 ;
+        RECT 1776.920 2365.765 1780.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1776.920 2678.045 1780.120 2718.280 ;
+        RECT 1776.920 2672.605 1780.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -1036,7 +1060,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1833.920 162.940 1837.120 195.340 ;
+        RECT 1833.920 173.405 1837.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -1076,7 +1100,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1947.920 -3.720 1951.120 197.115 ;
+        RECT 1947.920 -3.720 1951.120 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1947.920 173.405 1951.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1104,19 +1132,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1947.920 2365.765 1951.120 2402.115 ;
+        RECT 1947.920 2365.765 1951.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1947.920 2678.045 1951.120 2718.280 ;
+        RECT 1947.920 2672.605 1951.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2004.920 -3.720 2008.120 53.195 ;
+        RECT 2004.920 -3.720 2008.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2004.920 161.165 2008.120 197.115 ;
+        RECT 2004.920 173.405 2008.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1144,19 +1172,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2004.920 2365.765 2008.120 2402.115 ;
+        RECT 2004.920 2365.765 2008.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2004.920 2678.045 2008.120 2718.280 ;
+        RECT 2004.920 2672.605 2008.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2061.920 -3.720 2065.120 53.195 ;
+        RECT 2061.920 -3.720 2065.120 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2061.920 161.165 2065.120 197.115 ;
+        RECT 2061.920 173.405 2065.120 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1184,11 +1212,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2061.920 2365.765 2065.120 2402.115 ;
+        RECT 2061.920 2365.765 2065.120 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2061.920 2678.045 2065.120 2718.280 ;
+        RECT 2061.920 2672.605 2065.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -1196,7 +1224,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2118.920 162.940 2122.120 195.340 ;
+        RECT 2118.920 173.405 2122.120 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -1236,123 +1264,123 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 -3.720 2236.120 55.915 ;
+        RECT 2232.920 -3.720 2236.120 47.755 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 165.245 2236.120 204.595 ;
+        RECT 2232.920 172.045 2236.120 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 468.285 2236.120 519.595 ;
+        RECT 2232.920 475.085 2236.120 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 783.285 2236.120 834.595 ;
+        RECT 2232.920 790.085 2236.120 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 1098.285 2236.120 1149.595 ;
+        RECT 2232.920 1105.085 2236.120 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 1413.285 2236.120 1464.595 ;
+        RECT 2232.920 1420.085 2236.120 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 1728.285 2236.120 1779.595 ;
+        RECT 2232.920 1735.085 2236.120 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 2043.285 2236.120 2094.595 ;
+        RECT 2232.920 2050.085 2236.120 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 2358.285 2236.120 2406.875 ;
+        RECT 2232.920 2365.085 2236.120 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2232.920 2677.365 2236.120 2718.280 ;
+        RECT 2232.920 2656.285 2236.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 -3.720 2293.120 55.915 ;
+        RECT 2289.920 -3.720 2293.120 47.755 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 165.245 2293.120 204.595 ;
+        RECT 2289.920 172.045 2293.120 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 468.285 2293.120 519.595 ;
+        RECT 2289.920 475.085 2293.120 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 783.285 2293.120 834.595 ;
+        RECT 2289.920 790.085 2293.120 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 1098.285 2293.120 1149.595 ;
+        RECT 2289.920 1105.085 2293.120 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 1413.285 2293.120 1464.595 ;
+        RECT 2289.920 1420.085 2293.120 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 1728.285 2293.120 1779.595 ;
+        RECT 2289.920 1735.085 2293.120 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 2043.285 2293.120 2094.595 ;
+        RECT 2289.920 2050.085 2293.120 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 2358.285 2293.120 2406.875 ;
+        RECT 2289.920 2365.085 2293.120 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2289.920 2677.365 2293.120 2718.280 ;
+        RECT 2289.920 2656.285 2293.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 -3.720 2350.120 55.915 ;
+        RECT 2346.920 -3.720 2350.120 47.755 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 165.245 2350.120 204.595 ;
+        RECT 2346.920 172.045 2350.120 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 468.285 2350.120 519.595 ;
+        RECT 2346.920 475.085 2350.120 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 783.285 2350.120 834.595 ;
+        RECT 2346.920 790.085 2350.120 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 1098.285 2350.120 1149.595 ;
+        RECT 2346.920 1105.085 2350.120 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 1413.285 2350.120 1464.595 ;
+        RECT 2346.920 1420.085 2350.120 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 1728.285 2350.120 1779.595 ;
+        RECT 2346.920 1735.085 2350.120 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 2043.285 2350.120 2094.595 ;
+        RECT 2346.920 2050.085 2350.120 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 2358.285 2350.120 2406.875 ;
+        RECT 2346.920 2365.085 2350.120 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2346.920 2677.365 2350.120 2718.280 ;
+        RECT 2346.920 2656.285 2350.120 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -1360,31 +1388,31 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 162.940 2407.120 195.340 ;
+        RECT 2403.920 162.940 2407.120 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 477.540 2407.120 510.340 ;
+        RECT 2403.920 477.540 2407.120 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 792.540 2407.120 825.340 ;
+        RECT 2403.920 792.540 2407.120 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 1107.540 2407.120 1140.340 ;
+        RECT 2403.920 1107.540 2407.120 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 1422.540 2407.120 1455.340 ;
+        RECT 2403.920 1422.540 2407.120 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 1737.540 2407.120 1770.340 ;
+        RECT 2403.920 1737.540 2407.120 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2403.920 2052.540 2407.120 2085.340 ;
+        RECT 2403.920 2052.540 2407.120 2083.715 ;
     END
     PORT
       LAYER met4 ;
@@ -1628,39 +1656,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 62.120 -3.720 65.320 61.355 ;
+        RECT 62.120 -3.720 65.320 45.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 62.120 172.045 65.320 204.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 468.285 65.320 519.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 783.285 65.320 834.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 1098.285 65.320 1149.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 1413.285 65.320 1464.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 1728.285 65.320 1779.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 2043.285 65.320 2094.595 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 62.120 2358.285 65.320 2718.280 ;
+        RECT 62.120 174.765 65.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -1668,7 +1668,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 119.120 172.045 122.320 195.340 ;
+        RECT 119.120 174.765 122.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -1712,7 +1712,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 233.120 162.940 236.320 195.340 ;
+        RECT 233.120 173.405 236.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -1748,11 +1748,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 290.120 -3.720 293.320 53.195 ;
+        RECT 290.120 -3.720 293.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 290.120 161.165 293.320 197.115 ;
+        RECT 290.120 173.405 293.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1780,19 +1780,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 290.120 2365.765 293.320 2402.115 ;
+        RECT 290.120 2365.765 293.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 290.120 2678.045 293.320 2718.280 ;
+        RECT 290.120 2672.605 293.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 347.120 -3.720 350.320 53.195 ;
+        RECT 347.120 -3.720 350.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 347.120 161.165 350.320 197.115 ;
+        RECT 347.120 173.405 350.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1820,15 +1820,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 347.120 2365.765 350.320 2402.115 ;
+        RECT 347.120 2365.765 350.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 347.120 2678.045 350.320 2718.280 ;
+        RECT 347.120 2672.605 350.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 404.120 -3.720 407.320 197.115 ;
+        RECT 404.120 -3.720 407.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 404.120 173.405 407.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1856,11 +1860,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 404.120 2365.765 407.320 2402.115 ;
+        RECT 404.120 2365.765 407.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 404.120 2678.045 407.320 2718.280 ;
+        RECT 404.120 2672.605 407.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -1872,7 +1876,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 518.120 162.940 521.320 195.340 ;
+        RECT 518.120 173.405 521.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -1908,11 +1912,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 575.120 -3.720 578.320 53.195 ;
+        RECT 575.120 -3.720 578.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 575.120 161.165 578.320 197.115 ;
+        RECT 575.120 173.405 578.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1940,19 +1944,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 575.120 2365.765 578.320 2402.115 ;
+        RECT 575.120 2365.765 578.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 575.120 2678.045 578.320 2718.280 ;
+        RECT 575.120 2672.605 578.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 632.120 -3.720 635.320 53.195 ;
+        RECT 632.120 -3.720 635.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 632.120 161.165 635.320 197.115 ;
+        RECT 632.120 173.405 635.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -1980,15 +1984,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 632.120 2365.765 635.320 2402.115 ;
+        RECT 632.120 2365.765 635.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 632.120 2678.045 635.320 2718.280 ;
+        RECT 632.120 2672.605 635.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 689.120 -3.720 692.320 197.115 ;
+        RECT 689.120 -3.720 692.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 689.120 173.405 692.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2016,11 +2024,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 689.120 2365.765 692.320 2402.115 ;
+        RECT 689.120 2365.765 692.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 689.120 2678.045 692.320 2718.280 ;
+        RECT 689.120 2672.605 692.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2032,7 +2040,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 803.120 162.940 806.320 195.340 ;
+        RECT 803.120 173.405 806.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -2068,11 +2076,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 860.120 -3.720 863.320 53.195 ;
+        RECT 860.120 -3.720 863.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 860.120 161.165 863.320 197.115 ;
+        RECT 860.120 173.405 863.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2100,19 +2108,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 860.120 2365.765 863.320 2402.115 ;
+        RECT 860.120 2365.765 863.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 860.120 2678.045 863.320 2718.280 ;
+        RECT 860.120 2672.605 863.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 917.120 -3.720 920.320 53.195 ;
+        RECT 917.120 -3.720 920.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 917.120 161.165 920.320 197.115 ;
+        RECT 917.120 173.405 920.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2140,15 +2148,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 917.120 2365.765 920.320 2402.115 ;
+        RECT 917.120 2365.765 920.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 917.120 2678.045 920.320 2718.280 ;
+        RECT 917.120 2672.605 920.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 974.120 -3.720 977.320 197.115 ;
+        RECT 974.120 -3.720 977.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 974.120 173.405 977.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2176,11 +2188,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 974.120 2365.765 977.320 2402.115 ;
+        RECT 974.120 2365.765 977.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 974.120 2678.045 977.320 2718.280 ;
+        RECT 974.120 2672.605 977.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2192,7 +2204,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1088.120 162.940 1091.320 195.340 ;
+        RECT 1088.120 173.405 1091.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -2228,11 +2240,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1145.120 -3.720 1148.320 53.195 ;
+        RECT 1145.120 -3.720 1148.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1145.120 161.165 1148.320 197.115 ;
+        RECT 1145.120 173.405 1148.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2260,19 +2272,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1145.120 2365.765 1148.320 2402.115 ;
+        RECT 1145.120 2365.765 1148.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1145.120 2678.045 1148.320 2718.280 ;
+        RECT 1145.120 2672.605 1148.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1202.120 -3.720 1205.320 53.195 ;
+        RECT 1202.120 -3.720 1205.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1202.120 161.165 1205.320 197.115 ;
+        RECT 1202.120 173.405 1205.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2300,15 +2312,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1202.120 2365.765 1205.320 2402.115 ;
+        RECT 1202.120 2365.765 1205.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1202.120 2678.045 1205.320 2718.280 ;
+        RECT 1202.120 2672.605 1205.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1259.120 -3.720 1262.320 197.115 ;
+        RECT 1259.120 -3.720 1262.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1259.120 173.405 1262.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2336,11 +2352,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1259.120 2365.765 1262.320 2402.115 ;
+        RECT 1259.120 2365.765 1262.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1259.120 2678.045 1262.320 2718.280 ;
+        RECT 1259.120 2672.605 1262.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2352,7 +2368,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1373.120 162.940 1376.320 195.340 ;
+        RECT 1373.120 173.405 1376.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -2388,11 +2404,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1430.120 -3.720 1433.320 53.195 ;
+        RECT 1430.120 -3.720 1433.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1430.120 161.165 1433.320 197.115 ;
+        RECT 1430.120 173.405 1433.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2420,19 +2436,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1430.120 2365.765 1433.320 2402.115 ;
+        RECT 1430.120 2365.765 1433.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1430.120 2678.045 1433.320 2718.280 ;
+        RECT 1430.120 2672.605 1433.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1487.120 -3.720 1490.320 53.195 ;
+        RECT 1487.120 -3.720 1490.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1487.120 161.165 1490.320 197.115 ;
+        RECT 1487.120 173.405 1490.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2460,15 +2476,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1487.120 2365.765 1490.320 2402.115 ;
+        RECT 1487.120 2365.765 1490.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1487.120 2678.045 1490.320 2718.280 ;
+        RECT 1487.120 2672.605 1490.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1544.120 -3.720 1547.320 197.115 ;
+        RECT 1544.120 -3.720 1547.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1544.120 173.405 1547.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2496,11 +2516,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1544.120 2365.765 1547.320 2402.115 ;
+        RECT 1544.120 2365.765 1547.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1544.120 2678.045 1547.320 2718.280 ;
+        RECT 1544.120 2672.605 1547.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2512,7 +2532,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1658.120 162.940 1661.320 195.340 ;
+        RECT 1658.120 173.405 1661.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -2548,11 +2568,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1715.120 -3.720 1718.320 53.195 ;
+        RECT 1715.120 -3.720 1718.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1715.120 161.165 1718.320 197.115 ;
+        RECT 1715.120 173.405 1718.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2580,19 +2600,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1715.120 2365.765 1718.320 2402.115 ;
+        RECT 1715.120 2365.765 1718.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1715.120 2678.045 1718.320 2718.280 ;
+        RECT 1715.120 2672.605 1718.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1772.120 -3.720 1775.320 53.195 ;
+        RECT 1772.120 -3.720 1775.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1772.120 161.165 1775.320 197.115 ;
+        RECT 1772.120 173.405 1775.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2620,15 +2640,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1772.120 2365.765 1775.320 2402.115 ;
+        RECT 1772.120 2365.765 1775.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1772.120 2678.045 1775.320 2718.280 ;
+        RECT 1772.120 2672.605 1775.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1829.120 -3.720 1832.320 197.115 ;
+        RECT 1829.120 -3.720 1832.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 1829.120 173.405 1832.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2656,11 +2680,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1829.120 2365.765 1832.320 2402.115 ;
+        RECT 1829.120 2365.765 1832.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 1829.120 2678.045 1832.320 2718.280 ;
+        RECT 1829.120 2672.605 1832.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2672,7 +2696,7 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 1943.120 162.940 1946.320 195.340 ;
+        RECT 1943.120 173.405 1946.320 195.340 ;
     END
     PORT
       LAYER met4 ;
@@ -2708,11 +2732,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2000.120 -3.720 2003.320 53.195 ;
+        RECT 2000.120 -3.720 2003.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2000.120 161.165 2003.320 197.115 ;
+        RECT 2000.120 173.405 2003.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2740,19 +2764,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2000.120 2365.765 2003.320 2402.115 ;
+        RECT 2000.120 2365.765 2003.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2000.120 2678.045 2003.320 2718.280 ;
+        RECT 2000.120 2672.605 2003.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2057.120 -3.720 2060.320 53.195 ;
+        RECT 2057.120 -3.720 2060.320 45.035 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2057.120 161.165 2060.320 197.115 ;
+        RECT 2057.120 173.405 2060.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2780,15 +2804,19 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2057.120 2365.765 2060.320 2402.115 ;
+        RECT 2057.120 2365.765 2060.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2057.120 2678.045 2060.320 2718.280 ;
+        RECT 2057.120 2672.605 2060.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2114.120 -3.720 2117.320 197.115 ;
+        RECT 2114.120 -3.720 2117.320 45.035 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 2114.120 173.405 2117.320 197.115 ;
     END
     PORT
       LAYER met4 ;
@@ -2816,11 +2844,11 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2114.120 2365.765 2117.320 2402.115 ;
+        RECT 2114.120 2365.765 2117.320 2402.795 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2114.120 2678.045 2117.320 2718.280 ;
+        RECT 2114.120 2672.605 2117.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -2832,31 +2860,31 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 165.245 2231.320 195.340 ;
+        RECT 2228.120 172.045 2231.320 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 477.540 2231.320 510.340 ;
+        RECT 2228.120 477.540 2231.320 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 792.540 2231.320 825.340 ;
+        RECT 2228.120 792.540 2231.320 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 1107.540 2231.320 1140.340 ;
+        RECT 2228.120 1107.540 2231.320 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 1422.540 2231.320 1455.340 ;
+        RECT 2228.120 1422.540 2231.320 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 1737.540 2231.320 1770.340 ;
+        RECT 2228.120 1737.540 2231.320 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2228.120 2052.540 2231.320 2085.340 ;
+        RECT 2228.120 2052.540 2231.320 2083.715 ;
     END
     PORT
       LAYER met4 ;
@@ -2868,119 +2896,119 @@ MACRO fpga_core
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 -3.720 2288.320 55.915 ;
+        RECT 2285.120 -3.720 2288.320 47.755 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 165.245 2288.320 204.595 ;
+        RECT 2285.120 172.045 2288.320 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 468.285 2288.320 519.595 ;
+        RECT 2285.120 475.085 2288.320 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 783.285 2288.320 834.595 ;
+        RECT 2285.120 790.085 2288.320 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 1098.285 2288.320 1149.595 ;
+        RECT 2285.120 1105.085 2288.320 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 1413.285 2288.320 1464.595 ;
+        RECT 2285.120 1420.085 2288.320 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 1728.285 2288.320 1779.595 ;
+        RECT 2285.120 1735.085 2288.320 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 2043.285 2288.320 2094.595 ;
+        RECT 2285.120 2050.085 2288.320 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 2358.285 2288.320 2406.875 ;
+        RECT 2285.120 2365.085 2288.320 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2285.120 2677.365 2288.320 2718.280 ;
+        RECT 2285.120 2656.285 2288.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 -3.720 2345.320 55.915 ;
+        RECT 2342.120 -3.720 2345.320 47.755 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 165.245 2345.320 204.595 ;
+        RECT 2342.120 172.045 2345.320 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 468.285 2345.320 519.595 ;
+        RECT 2342.120 475.085 2345.320 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 783.285 2345.320 834.595 ;
+        RECT 2342.120 790.085 2345.320 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 1098.285 2345.320 1149.595 ;
+        RECT 2342.120 1105.085 2345.320 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 1413.285 2345.320 1464.595 ;
+        RECT 2342.120 1420.085 2345.320 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 1728.285 2345.320 1779.595 ;
+        RECT 2342.120 1735.085 2345.320 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 2043.285 2345.320 2094.595 ;
+        RECT 2342.120 2050.085 2345.320 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 2358.285 2345.320 2406.875 ;
+        RECT 2342.120 2365.085 2345.320 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2342.120 2677.365 2345.320 2718.280 ;
+        RECT 2342.120 2656.285 2345.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 -3.720 2402.320 204.595 ;
+        RECT 2399.120 -3.720 2402.320 193.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 468.285 2402.320 519.595 ;
+        RECT 2399.120 475.085 2402.320 508.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 783.285 2402.320 834.595 ;
+        RECT 2399.120 790.085 2402.320 823.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 1098.285 2402.320 1149.595 ;
+        RECT 2399.120 1105.085 2402.320 1138.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 1413.285 2402.320 1464.595 ;
+        RECT 2399.120 1420.085 2402.320 1453.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 1728.285 2402.320 1779.595 ;
+        RECT 2399.120 1735.085 2402.320 1768.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 2043.285 2402.320 2094.595 ;
+        RECT 2399.120 2050.085 2402.320 2083.715 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 2358.285 2402.320 2406.875 ;
+        RECT 2399.120 2365.085 2402.320 2402.115 ;
     END
     PORT
       LAYER met4 ;
-        RECT 2399.120 2677.365 2402.320 2718.280 ;
+        RECT 2399.120 2656.285 2402.320 2718.280 ;
     END
     PORT
       LAYER met4 ;
@@ -6351,9 +6379,9 @@ MACRO fpga_core
       LAYER li1 ;
         RECT 1.840 10.795 2472.960 2703.765 ;
       LAYER met1 ;
-        RECT 1.840 6.840 2472.960 2703.920 ;
+        RECT 1.840 8.880 2472.960 2704.320 ;
       LAYER met2 ;
-        RECT 2.860 2710.720 33.390 2711.570 ;
+        RECT 3.310 2710.720 33.390 2711.570 ;
         RECT 34.230 2710.720 55.470 2711.570 ;
         RECT 56.310 2710.720 77.550 2711.570 ;
         RECT 78.390 2710.720 99.630 2711.570 ;
@@ -6463,9 +6491,9 @@ MACRO fpga_core
         RECT 2374.710 2710.720 2395.950 2711.570 ;
         RECT 2396.790 2710.720 2418.030 2711.570 ;
         RECT 2418.870 2710.720 2440.110 2711.570 ;
-        RECT 2440.950 2710.720 2472.860 2711.570 ;
-        RECT 2.860 4.280 2472.860 2710.720 ;
-        RECT 2.860 3.670 19.590 4.280 ;
+        RECT 2440.950 2710.720 2471.020 2711.570 ;
+        RECT 3.310 4.280 2471.020 2710.720 ;
+        RECT 3.310 3.670 19.590 4.280 ;
         RECT 20.430 3.670 48.570 4.280 ;
         RECT 49.410 3.670 77.550 4.280 ;
         RECT 78.390 3.670 106.530 4.280 ;
@@ -6550,7 +6578,7 @@ MACRO fpga_core
         RECT 2367.810 3.670 2395.950 4.280 ;
         RECT 2396.790 3.670 2424.930 4.280 ;
         RECT 2425.770 3.670 2453.910 4.280 ;
-        RECT 2454.750 3.670 2472.860 4.280 ;
+        RECT 2454.750 3.670 2471.020 4.280 ;
       LAYER met3 ;
         RECT 3.285 2690.440 2471.000 2703.845 ;
         RECT 4.400 2689.040 2471.000 2690.440 ;
@@ -6948,87 +6976,87 @@ MACRO fpga_core
         RECT 4.400 23.440 2471.000 24.840 ;
         RECT 3.285 10.715 2471.000 23.440 ;
       LAYER met4 ;
-        RECT 41.335 2357.885 61.720 2672.240 ;
-        RECT 65.720 2604.205 123.520 2672.240 ;
-        RECT 127.520 2604.205 175.720 2672.240 ;
-        RECT 65.720 2407.275 175.720 2604.205 ;
-        RECT 65.720 2400.740 123.520 2407.275 ;
+        RECT 41.335 174.365 61.720 2672.240 ;
+        RECT 65.720 2555.925 123.520 2672.240 ;
+        RECT 127.520 2555.925 175.720 2672.240 ;
+        RECT 65.720 2401.835 175.720 2555.925 ;
+        RECT 65.720 2400.740 123.520 2401.835 ;
         RECT 65.720 2367.140 66.520 2400.740 ;
         RECT 70.520 2367.140 118.720 2400.740 ;
         RECT 122.720 2367.140 123.520 2400.740 ;
-        RECT 65.720 2357.885 123.520 2367.140 ;
-        RECT 127.520 2357.885 175.720 2407.275 ;
-        RECT 41.335 2094.995 175.720 2357.885 ;
-        RECT 41.335 2042.885 61.720 2094.995 ;
-        RECT 65.720 2085.740 123.520 2094.995 ;
+        RECT 65.720 2364.685 123.520 2367.140 ;
+        RECT 127.520 2364.685 175.720 2401.835 ;
+        RECT 65.720 2090.915 175.720 2364.685 ;
+        RECT 65.720 2085.740 123.520 2090.915 ;
         RECT 65.720 2052.140 66.520 2085.740 ;
         RECT 70.520 2052.140 118.720 2085.740 ;
         RECT 122.720 2052.140 123.520 2085.740 ;
-        RECT 65.720 2042.885 123.520 2052.140 ;
-        RECT 127.520 2042.885 175.720 2094.995 ;
-        RECT 41.335 1779.995 175.720 2042.885 ;
-        RECT 41.335 1727.885 61.720 1779.995 ;
-        RECT 65.720 1770.740 123.520 1779.995 ;
+        RECT 65.720 2049.685 123.520 2052.140 ;
+        RECT 127.520 2049.685 175.720 2090.915 ;
+        RECT 65.720 1775.915 175.720 2049.685 ;
+        RECT 65.720 1770.740 123.520 1775.915 ;
         RECT 65.720 1737.140 66.520 1770.740 ;
         RECT 70.520 1737.140 118.720 1770.740 ;
         RECT 122.720 1737.140 123.520 1770.740 ;
-        RECT 65.720 1727.885 123.520 1737.140 ;
-        RECT 127.520 1727.885 175.720 1779.995 ;
-        RECT 41.335 1464.995 175.720 1727.885 ;
-        RECT 41.335 1412.885 61.720 1464.995 ;
-        RECT 65.720 1455.740 123.520 1464.995 ;
+        RECT 65.720 1734.685 123.520 1737.140 ;
+        RECT 127.520 1734.685 175.720 1775.915 ;
+        RECT 65.720 1460.915 175.720 1734.685 ;
+        RECT 65.720 1455.740 123.520 1460.915 ;
         RECT 65.720 1422.140 66.520 1455.740 ;
         RECT 70.520 1422.140 118.720 1455.740 ;
         RECT 122.720 1422.140 123.520 1455.740 ;
-        RECT 65.720 1412.885 123.520 1422.140 ;
-        RECT 127.520 1412.885 175.720 1464.995 ;
-        RECT 41.335 1149.995 175.720 1412.885 ;
-        RECT 41.335 1097.885 61.720 1149.995 ;
-        RECT 65.720 1140.740 123.520 1149.995 ;
+        RECT 65.720 1419.685 123.520 1422.140 ;
+        RECT 127.520 1419.685 175.720 1460.915 ;
+        RECT 65.720 1145.915 175.720 1419.685 ;
+        RECT 65.720 1140.740 123.520 1145.915 ;
         RECT 65.720 1107.140 66.520 1140.740 ;
         RECT 70.520 1107.140 118.720 1140.740 ;
         RECT 122.720 1107.140 123.520 1140.740 ;
-        RECT 65.720 1097.885 123.520 1107.140 ;
-        RECT 127.520 1097.885 175.720 1149.995 ;
-        RECT 41.335 834.995 175.720 1097.885 ;
-        RECT 41.335 782.885 61.720 834.995 ;
-        RECT 65.720 825.740 123.520 834.995 ;
+        RECT 65.720 1104.685 123.520 1107.140 ;
+        RECT 127.520 1104.685 175.720 1145.915 ;
+        RECT 65.720 830.915 175.720 1104.685 ;
+        RECT 65.720 825.740 123.520 830.915 ;
         RECT 65.720 792.140 66.520 825.740 ;
         RECT 70.520 792.140 118.720 825.740 ;
         RECT 122.720 792.140 123.520 825.740 ;
-        RECT 65.720 782.885 123.520 792.140 ;
-        RECT 127.520 782.885 175.720 834.995 ;
-        RECT 41.335 519.995 175.720 782.885 ;
-        RECT 41.335 467.885 61.720 519.995 ;
-        RECT 65.720 510.740 123.520 519.995 ;
+        RECT 65.720 789.685 123.520 792.140 ;
+        RECT 127.520 789.685 175.720 830.915 ;
+        RECT 65.720 515.915 175.720 789.685 ;
+        RECT 65.720 510.740 123.520 515.915 ;
         RECT 65.720 477.140 66.520 510.740 ;
         RECT 70.520 477.140 118.720 510.740 ;
         RECT 122.720 477.140 123.520 510.740 ;
-        RECT 65.720 467.885 123.520 477.140 ;
-        RECT 127.520 467.885 175.720 519.995 ;
-        RECT 41.335 204.995 175.720 467.885 ;
-        RECT 41.335 171.645 61.720 204.995 ;
-        RECT 65.720 195.740 123.520 204.995 ;
-        RECT 65.720 171.645 66.520 195.740 ;
-        RECT 70.520 171.645 118.720 195.740 ;
-        RECT 122.720 171.645 123.520 195.740 ;
-        RECT 127.520 171.645 175.720 204.995 ;
-        RECT 41.335 61.755 175.720 171.645 ;
-        RECT 41.335 40.640 61.720 61.755 ;
-        RECT 65.720 40.640 123.520 61.755 ;
-        RECT 127.520 40.640 175.720 61.755 ;
+        RECT 65.720 474.685 123.520 477.140 ;
+        RECT 127.520 474.685 175.720 515.915 ;
+        RECT 65.720 200.915 175.720 474.685 ;
+        RECT 65.720 195.740 123.520 200.915 ;
+        RECT 65.720 174.365 66.520 195.740 ;
+        RECT 70.520 174.365 118.720 195.740 ;
+        RECT 122.720 174.365 123.520 195.740 ;
+        RECT 127.520 174.365 175.720 200.915 ;
+        RECT 41.335 46.115 175.720 174.365 ;
+        RECT 41.335 40.640 61.720 46.115 ;
+        RECT 65.720 40.640 123.520 46.115 ;
+        RECT 127.520 40.640 175.720 46.115 ;
         RECT 179.720 40.640 180.520 2672.240 ;
-        RECT 184.520 2402.515 460.720 2672.240 ;
-        RECT 184.520 2400.740 237.520 2402.515 ;
+        RECT 184.520 2672.205 237.520 2672.240 ;
+        RECT 241.520 2672.205 289.720 2672.240 ;
+        RECT 293.720 2672.205 294.520 2672.240 ;
+        RECT 298.520 2672.205 346.720 2672.240 ;
+        RECT 350.720 2672.205 351.520 2672.240 ;
+        RECT 355.520 2672.205 403.720 2672.240 ;
+        RECT 407.720 2672.205 460.720 2672.240 ;
+        RECT 184.520 2403.195 460.720 2672.205 ;
+        RECT 184.520 2400.740 237.520 2403.195 ;
         RECT 184.520 2367.140 232.720 2400.740 ;
         RECT 236.720 2367.140 237.520 2400.740 ;
         RECT 184.520 2365.365 237.520 2367.140 ;
-        RECT 241.520 2365.365 289.720 2402.515 ;
-        RECT 293.720 2365.365 294.520 2402.515 ;
-        RECT 298.520 2365.365 346.720 2402.515 ;
-        RECT 350.720 2365.365 351.520 2402.515 ;
-        RECT 355.520 2365.365 403.720 2402.515 ;
-        RECT 407.720 2400.740 460.720 2402.515 ;
+        RECT 241.520 2365.365 289.720 2403.195 ;
+        RECT 293.720 2365.365 294.520 2403.195 ;
+        RECT 298.520 2365.365 346.720 2403.195 ;
+        RECT 350.720 2365.365 351.520 2403.195 ;
+        RECT 355.520 2365.365 403.720 2403.195 ;
+        RECT 407.720 2400.740 460.720 2403.195 ;
         RECT 407.720 2367.140 408.520 2400.740 ;
         RECT 412.520 2367.140 460.720 2400.740 ;
         RECT 407.720 2365.365 460.720 2367.140 ;
@@ -7118,36 +7146,43 @@ MACRO fpga_core
         RECT 407.720 475.365 460.720 477.140 ;
         RECT 184.520 197.515 460.720 475.365 ;
         RECT 184.520 195.740 237.520 197.515 ;
-        RECT 184.520 162.540 232.720 195.740 ;
-        RECT 236.720 162.540 237.520 195.740 ;
-        RECT 184.520 40.640 237.520 162.540 ;
-        RECT 241.520 160.765 289.720 197.515 ;
-        RECT 293.720 160.765 294.520 197.515 ;
-        RECT 298.520 160.765 346.720 197.515 ;
-        RECT 350.720 160.765 351.520 197.515 ;
-        RECT 355.520 160.765 403.720 197.515 ;
-        RECT 241.520 53.595 403.720 160.765 ;
-        RECT 241.520 40.640 289.720 53.595 ;
-        RECT 293.720 40.640 294.520 53.595 ;
-        RECT 298.520 40.640 346.720 53.595 ;
-        RECT 350.720 40.640 351.520 53.595 ;
-        RECT 355.520 40.640 403.720 53.595 ;
+        RECT 184.520 173.005 232.720 195.740 ;
+        RECT 236.720 173.005 237.520 195.740 ;
+        RECT 241.520 173.005 289.720 197.515 ;
+        RECT 293.720 173.005 294.520 197.515 ;
+        RECT 298.520 173.005 346.720 197.515 ;
+        RECT 350.720 173.005 351.520 197.515 ;
+        RECT 355.520 173.005 403.720 197.515 ;
         RECT 407.720 195.740 460.720 197.515 ;
-        RECT 407.720 162.540 408.520 195.740 ;
-        RECT 412.520 162.540 460.720 195.740 ;
-        RECT 407.720 40.640 460.720 162.540 ;
+        RECT 407.720 173.005 408.520 195.740 ;
+        RECT 412.520 173.005 460.720 195.740 ;
+        RECT 184.520 45.435 460.720 173.005 ;
+        RECT 184.520 40.640 237.520 45.435 ;
+        RECT 241.520 40.640 289.720 45.435 ;
+        RECT 293.720 40.640 294.520 45.435 ;
+        RECT 298.520 40.640 346.720 45.435 ;
+        RECT 350.720 40.640 351.520 45.435 ;
+        RECT 355.520 40.640 403.720 45.435 ;
+        RECT 407.720 40.640 460.720 45.435 ;
         RECT 464.720 40.640 465.520 2672.240 ;
-        RECT 469.520 2402.515 745.720 2672.240 ;
-        RECT 469.520 2400.740 522.520 2402.515 ;
+        RECT 469.520 2672.205 522.520 2672.240 ;
+        RECT 526.520 2672.205 574.720 2672.240 ;
+        RECT 578.720 2672.205 579.520 2672.240 ;
+        RECT 583.520 2672.205 631.720 2672.240 ;
+        RECT 635.720 2672.205 636.520 2672.240 ;
+        RECT 640.520 2672.205 688.720 2672.240 ;
+        RECT 692.720 2672.205 745.720 2672.240 ;
+        RECT 469.520 2403.195 745.720 2672.205 ;
+        RECT 469.520 2400.740 522.520 2403.195 ;
         RECT 469.520 2367.140 517.720 2400.740 ;
         RECT 521.720 2367.140 522.520 2400.740 ;
         RECT 469.520 2365.365 522.520 2367.140 ;
-        RECT 526.520 2365.365 574.720 2402.515 ;
-        RECT 578.720 2365.365 579.520 2402.515 ;
-        RECT 583.520 2365.365 631.720 2402.515 ;
-        RECT 635.720 2365.365 636.520 2402.515 ;
-        RECT 640.520 2365.365 688.720 2402.515 ;
-        RECT 692.720 2400.740 745.720 2402.515 ;
+        RECT 526.520 2365.365 574.720 2403.195 ;
+        RECT 578.720 2365.365 579.520 2403.195 ;
+        RECT 583.520 2365.365 631.720 2403.195 ;
+        RECT 635.720 2365.365 636.520 2403.195 ;
+        RECT 640.520 2365.365 688.720 2403.195 ;
+        RECT 692.720 2400.740 745.720 2403.195 ;
         RECT 692.720 2367.140 693.520 2400.740 ;
         RECT 697.520 2367.140 745.720 2400.740 ;
         RECT 692.720 2365.365 745.720 2367.140 ;
@@ -7237,36 +7272,43 @@ MACRO fpga_core
         RECT 692.720 475.365 745.720 477.140 ;
         RECT 469.520 197.515 745.720 475.365 ;
         RECT 469.520 195.740 522.520 197.515 ;
-        RECT 469.520 162.540 517.720 195.740 ;
-        RECT 521.720 162.540 522.520 195.740 ;
-        RECT 469.520 40.640 522.520 162.540 ;
-        RECT 526.520 160.765 574.720 197.515 ;
-        RECT 578.720 160.765 579.520 197.515 ;
-        RECT 583.520 160.765 631.720 197.515 ;
-        RECT 635.720 160.765 636.520 197.515 ;
-        RECT 640.520 160.765 688.720 197.515 ;
-        RECT 526.520 53.595 688.720 160.765 ;
-        RECT 526.520 40.640 574.720 53.595 ;
-        RECT 578.720 40.640 579.520 53.595 ;
-        RECT 583.520 40.640 631.720 53.595 ;
-        RECT 635.720 40.640 636.520 53.595 ;
-        RECT 640.520 40.640 688.720 53.595 ;
+        RECT 469.520 173.005 517.720 195.740 ;
+        RECT 521.720 173.005 522.520 195.740 ;
+        RECT 526.520 173.005 574.720 197.515 ;
+        RECT 578.720 173.005 579.520 197.515 ;
+        RECT 583.520 173.005 631.720 197.515 ;
+        RECT 635.720 173.005 636.520 197.515 ;
+        RECT 640.520 173.005 688.720 197.515 ;
         RECT 692.720 195.740 745.720 197.515 ;
-        RECT 692.720 162.540 693.520 195.740 ;
-        RECT 697.520 162.540 745.720 195.740 ;
-        RECT 692.720 40.640 745.720 162.540 ;
+        RECT 692.720 173.005 693.520 195.740 ;
+        RECT 697.520 173.005 745.720 195.740 ;
+        RECT 469.520 45.435 745.720 173.005 ;
+        RECT 469.520 40.640 522.520 45.435 ;
+        RECT 526.520 40.640 574.720 45.435 ;
+        RECT 578.720 40.640 579.520 45.435 ;
+        RECT 583.520 40.640 631.720 45.435 ;
+        RECT 635.720 40.640 636.520 45.435 ;
+        RECT 640.520 40.640 688.720 45.435 ;
+        RECT 692.720 40.640 745.720 45.435 ;
         RECT 749.720 40.640 750.520 2672.240 ;
-        RECT 754.520 2402.515 1030.720 2672.240 ;
-        RECT 754.520 2400.740 807.520 2402.515 ;
+        RECT 754.520 2672.205 807.520 2672.240 ;
+        RECT 811.520 2672.205 859.720 2672.240 ;
+        RECT 863.720 2672.205 864.520 2672.240 ;
+        RECT 868.520 2672.205 916.720 2672.240 ;
+        RECT 920.720 2672.205 921.520 2672.240 ;
+        RECT 925.520 2672.205 973.720 2672.240 ;
+        RECT 977.720 2672.205 1030.720 2672.240 ;
+        RECT 754.520 2403.195 1030.720 2672.205 ;
+        RECT 754.520 2400.740 807.520 2403.195 ;
         RECT 754.520 2367.140 802.720 2400.740 ;
         RECT 806.720 2367.140 807.520 2400.740 ;
         RECT 754.520 2365.365 807.520 2367.140 ;
-        RECT 811.520 2365.365 859.720 2402.515 ;
-        RECT 863.720 2365.365 864.520 2402.515 ;
-        RECT 868.520 2365.365 916.720 2402.515 ;
-        RECT 920.720 2365.365 921.520 2402.515 ;
-        RECT 925.520 2365.365 973.720 2402.515 ;
-        RECT 977.720 2400.740 1030.720 2402.515 ;
+        RECT 811.520 2365.365 859.720 2403.195 ;
+        RECT 863.720 2365.365 864.520 2403.195 ;
+        RECT 868.520 2365.365 916.720 2403.195 ;
+        RECT 920.720 2365.365 921.520 2403.195 ;
+        RECT 925.520 2365.365 973.720 2403.195 ;
+        RECT 977.720 2400.740 1030.720 2403.195 ;
         RECT 977.720 2367.140 978.520 2400.740 ;
         RECT 982.520 2367.140 1030.720 2400.740 ;
         RECT 977.720 2365.365 1030.720 2367.140 ;
@@ -7356,36 +7398,43 @@ MACRO fpga_core
         RECT 977.720 475.365 1030.720 477.140 ;
         RECT 754.520 197.515 1030.720 475.365 ;
         RECT 754.520 195.740 807.520 197.515 ;
-        RECT 754.520 162.540 802.720 195.740 ;
-        RECT 806.720 162.540 807.520 195.740 ;
-        RECT 754.520 40.640 807.520 162.540 ;
-        RECT 811.520 160.765 859.720 197.515 ;
-        RECT 863.720 160.765 864.520 197.515 ;
-        RECT 868.520 160.765 916.720 197.515 ;
-        RECT 920.720 160.765 921.520 197.515 ;
-        RECT 925.520 160.765 973.720 197.515 ;
-        RECT 811.520 53.595 973.720 160.765 ;
-        RECT 811.520 40.640 859.720 53.595 ;
-        RECT 863.720 40.640 864.520 53.595 ;
-        RECT 868.520 40.640 916.720 53.595 ;
-        RECT 920.720 40.640 921.520 53.595 ;
-        RECT 925.520 40.640 973.720 53.595 ;
+        RECT 754.520 173.005 802.720 195.740 ;
+        RECT 806.720 173.005 807.520 195.740 ;
+        RECT 811.520 173.005 859.720 197.515 ;
+        RECT 863.720 173.005 864.520 197.515 ;
+        RECT 868.520 173.005 916.720 197.515 ;
+        RECT 920.720 173.005 921.520 197.515 ;
+        RECT 925.520 173.005 973.720 197.515 ;
         RECT 977.720 195.740 1030.720 197.515 ;
-        RECT 977.720 162.540 978.520 195.740 ;
-        RECT 982.520 162.540 1030.720 195.740 ;
-        RECT 977.720 40.640 1030.720 162.540 ;
+        RECT 977.720 173.005 978.520 195.740 ;
+        RECT 982.520 173.005 1030.720 195.740 ;
+        RECT 754.520 45.435 1030.720 173.005 ;
+        RECT 754.520 40.640 807.520 45.435 ;
+        RECT 811.520 40.640 859.720 45.435 ;
+        RECT 863.720 40.640 864.520 45.435 ;
+        RECT 868.520 40.640 916.720 45.435 ;
+        RECT 920.720 40.640 921.520 45.435 ;
+        RECT 925.520 40.640 973.720 45.435 ;
+        RECT 977.720 40.640 1030.720 45.435 ;
         RECT 1034.720 40.640 1035.520 2672.240 ;
-        RECT 1039.520 2402.515 1315.720 2672.240 ;
-        RECT 1039.520 2400.740 1092.520 2402.515 ;
+        RECT 1039.520 2672.205 1092.520 2672.240 ;
+        RECT 1096.520 2672.205 1144.720 2672.240 ;
+        RECT 1148.720 2672.205 1149.520 2672.240 ;
+        RECT 1153.520 2672.205 1201.720 2672.240 ;
+        RECT 1205.720 2672.205 1206.520 2672.240 ;
+        RECT 1210.520 2672.205 1258.720 2672.240 ;
+        RECT 1262.720 2672.205 1315.720 2672.240 ;
+        RECT 1039.520 2403.195 1315.720 2672.205 ;
+        RECT 1039.520 2400.740 1092.520 2403.195 ;
         RECT 1039.520 2367.140 1087.720 2400.740 ;
         RECT 1091.720 2367.140 1092.520 2400.740 ;
         RECT 1039.520 2365.365 1092.520 2367.140 ;
-        RECT 1096.520 2365.365 1144.720 2402.515 ;
-        RECT 1148.720 2365.365 1149.520 2402.515 ;
-        RECT 1153.520 2365.365 1201.720 2402.515 ;
-        RECT 1205.720 2365.365 1206.520 2402.515 ;
-        RECT 1210.520 2365.365 1258.720 2402.515 ;
-        RECT 1262.720 2400.740 1315.720 2402.515 ;
+        RECT 1096.520 2365.365 1144.720 2403.195 ;
+        RECT 1148.720 2365.365 1149.520 2403.195 ;
+        RECT 1153.520 2365.365 1201.720 2403.195 ;
+        RECT 1205.720 2365.365 1206.520 2403.195 ;
+        RECT 1210.520 2365.365 1258.720 2403.195 ;
+        RECT 1262.720 2400.740 1315.720 2403.195 ;
         RECT 1262.720 2367.140 1263.520 2400.740 ;
         RECT 1267.520 2367.140 1315.720 2400.740 ;
         RECT 1262.720 2365.365 1315.720 2367.140 ;
@@ -7475,36 +7524,43 @@ MACRO fpga_core
         RECT 1262.720 475.365 1315.720 477.140 ;
         RECT 1039.520 197.515 1315.720 475.365 ;
         RECT 1039.520 195.740 1092.520 197.515 ;
-        RECT 1039.520 162.540 1087.720 195.740 ;
-        RECT 1091.720 162.540 1092.520 195.740 ;
-        RECT 1039.520 40.640 1092.520 162.540 ;
-        RECT 1096.520 160.765 1144.720 197.515 ;
-        RECT 1148.720 160.765 1149.520 197.515 ;
-        RECT 1153.520 160.765 1201.720 197.515 ;
-        RECT 1205.720 160.765 1206.520 197.515 ;
-        RECT 1210.520 160.765 1258.720 197.515 ;
-        RECT 1096.520 53.595 1258.720 160.765 ;
-        RECT 1096.520 40.640 1144.720 53.595 ;
-        RECT 1148.720 40.640 1149.520 53.595 ;
-        RECT 1153.520 40.640 1201.720 53.595 ;
-        RECT 1205.720 40.640 1206.520 53.595 ;
-        RECT 1210.520 40.640 1258.720 53.595 ;
+        RECT 1039.520 173.005 1087.720 195.740 ;
+        RECT 1091.720 173.005 1092.520 195.740 ;
+        RECT 1096.520 173.005 1144.720 197.515 ;
+        RECT 1148.720 173.005 1149.520 197.515 ;
+        RECT 1153.520 173.005 1201.720 197.515 ;
+        RECT 1205.720 173.005 1206.520 197.515 ;
+        RECT 1210.520 173.005 1258.720 197.515 ;
         RECT 1262.720 195.740 1315.720 197.515 ;
-        RECT 1262.720 162.540 1263.520 195.740 ;
-        RECT 1267.520 162.540 1315.720 195.740 ;
-        RECT 1262.720 40.640 1315.720 162.540 ;
+        RECT 1262.720 173.005 1263.520 195.740 ;
+        RECT 1267.520 173.005 1315.720 195.740 ;
+        RECT 1039.520 45.435 1315.720 173.005 ;
+        RECT 1039.520 40.640 1092.520 45.435 ;
+        RECT 1096.520 40.640 1144.720 45.435 ;
+        RECT 1148.720 40.640 1149.520 45.435 ;
+        RECT 1153.520 40.640 1201.720 45.435 ;
+        RECT 1205.720 40.640 1206.520 45.435 ;
+        RECT 1210.520 40.640 1258.720 45.435 ;
+        RECT 1262.720 40.640 1315.720 45.435 ;
         RECT 1319.720 40.640 1320.520 2672.240 ;
-        RECT 1324.520 2402.515 1600.720 2672.240 ;
-        RECT 1324.520 2400.740 1377.520 2402.515 ;
+        RECT 1324.520 2672.205 1377.520 2672.240 ;
+        RECT 1381.520 2672.205 1429.720 2672.240 ;
+        RECT 1433.720 2672.205 1434.520 2672.240 ;
+        RECT 1438.520 2672.205 1486.720 2672.240 ;
+        RECT 1490.720 2672.205 1491.520 2672.240 ;
+        RECT 1495.520 2672.205 1543.720 2672.240 ;
+        RECT 1547.720 2672.205 1600.720 2672.240 ;
+        RECT 1324.520 2403.195 1600.720 2672.205 ;
+        RECT 1324.520 2400.740 1377.520 2403.195 ;
         RECT 1324.520 2367.140 1372.720 2400.740 ;
         RECT 1376.720 2367.140 1377.520 2400.740 ;
         RECT 1324.520 2365.365 1377.520 2367.140 ;
-        RECT 1381.520 2365.365 1429.720 2402.515 ;
-        RECT 1433.720 2365.365 1434.520 2402.515 ;
-        RECT 1438.520 2365.365 1486.720 2402.515 ;
-        RECT 1490.720 2365.365 1491.520 2402.515 ;
-        RECT 1495.520 2365.365 1543.720 2402.515 ;
-        RECT 1547.720 2400.740 1600.720 2402.515 ;
+        RECT 1381.520 2365.365 1429.720 2403.195 ;
+        RECT 1433.720 2365.365 1434.520 2403.195 ;
+        RECT 1438.520 2365.365 1486.720 2403.195 ;
+        RECT 1490.720 2365.365 1491.520 2403.195 ;
+        RECT 1495.520 2365.365 1543.720 2403.195 ;
+        RECT 1547.720 2400.740 1600.720 2403.195 ;
         RECT 1547.720 2367.140 1548.520 2400.740 ;
         RECT 1552.520 2367.140 1600.720 2400.740 ;
         RECT 1547.720 2365.365 1600.720 2367.140 ;
@@ -7594,36 +7650,43 @@ MACRO fpga_core
         RECT 1547.720 475.365 1600.720 477.140 ;
         RECT 1324.520 197.515 1600.720 475.365 ;
         RECT 1324.520 195.740 1377.520 197.515 ;
-        RECT 1324.520 162.540 1372.720 195.740 ;
-        RECT 1376.720 162.540 1377.520 195.740 ;
-        RECT 1324.520 40.640 1377.520 162.540 ;
-        RECT 1381.520 160.765 1429.720 197.515 ;
-        RECT 1433.720 160.765 1434.520 197.515 ;
-        RECT 1438.520 160.765 1486.720 197.515 ;
-        RECT 1490.720 160.765 1491.520 197.515 ;
-        RECT 1495.520 160.765 1543.720 197.515 ;
-        RECT 1381.520 53.595 1543.720 160.765 ;
-        RECT 1381.520 40.640 1429.720 53.595 ;
-        RECT 1433.720 40.640 1434.520 53.595 ;
-        RECT 1438.520 40.640 1486.720 53.595 ;
-        RECT 1490.720 40.640 1491.520 53.595 ;
-        RECT 1495.520 40.640 1543.720 53.595 ;
+        RECT 1324.520 173.005 1372.720 195.740 ;
+        RECT 1376.720 173.005 1377.520 195.740 ;
+        RECT 1381.520 173.005 1429.720 197.515 ;
+        RECT 1433.720 173.005 1434.520 197.515 ;
+        RECT 1438.520 173.005 1486.720 197.515 ;
+        RECT 1490.720 173.005 1491.520 197.515 ;
+        RECT 1495.520 173.005 1543.720 197.515 ;
         RECT 1547.720 195.740 1600.720 197.515 ;
-        RECT 1547.720 162.540 1548.520 195.740 ;
-        RECT 1552.520 162.540 1600.720 195.740 ;
-        RECT 1547.720 40.640 1600.720 162.540 ;
+        RECT 1547.720 173.005 1548.520 195.740 ;
+        RECT 1552.520 173.005 1600.720 195.740 ;
+        RECT 1324.520 45.435 1600.720 173.005 ;
+        RECT 1324.520 40.640 1377.520 45.435 ;
+        RECT 1381.520 40.640 1429.720 45.435 ;
+        RECT 1433.720 40.640 1434.520 45.435 ;
+        RECT 1438.520 40.640 1486.720 45.435 ;
+        RECT 1490.720 40.640 1491.520 45.435 ;
+        RECT 1495.520 40.640 1543.720 45.435 ;
+        RECT 1547.720 40.640 1600.720 45.435 ;
         RECT 1604.720 40.640 1605.520 2672.240 ;
-        RECT 1609.520 2402.515 1885.720 2672.240 ;
-        RECT 1609.520 2400.740 1662.520 2402.515 ;
+        RECT 1609.520 2672.205 1662.520 2672.240 ;
+        RECT 1666.520 2672.205 1714.720 2672.240 ;
+        RECT 1718.720 2672.205 1719.520 2672.240 ;
+        RECT 1723.520 2672.205 1771.720 2672.240 ;
+        RECT 1775.720 2672.205 1776.520 2672.240 ;
+        RECT 1780.520 2672.205 1828.720 2672.240 ;
+        RECT 1832.720 2672.205 1885.720 2672.240 ;
+        RECT 1609.520 2403.195 1885.720 2672.205 ;
+        RECT 1609.520 2400.740 1662.520 2403.195 ;
         RECT 1609.520 2367.140 1657.720 2400.740 ;
         RECT 1661.720 2367.140 1662.520 2400.740 ;
         RECT 1609.520 2365.365 1662.520 2367.140 ;
-        RECT 1666.520 2365.365 1714.720 2402.515 ;
-        RECT 1718.720 2365.365 1719.520 2402.515 ;
-        RECT 1723.520 2365.365 1771.720 2402.515 ;
-        RECT 1775.720 2365.365 1776.520 2402.515 ;
-        RECT 1780.520 2365.365 1828.720 2402.515 ;
-        RECT 1832.720 2400.740 1885.720 2402.515 ;
+        RECT 1666.520 2365.365 1714.720 2403.195 ;
+        RECT 1718.720 2365.365 1719.520 2403.195 ;
+        RECT 1723.520 2365.365 1771.720 2403.195 ;
+        RECT 1775.720 2365.365 1776.520 2403.195 ;
+        RECT 1780.520 2365.365 1828.720 2403.195 ;
+        RECT 1832.720 2400.740 1885.720 2403.195 ;
         RECT 1832.720 2367.140 1833.520 2400.740 ;
         RECT 1837.520 2367.140 1885.720 2400.740 ;
         RECT 1832.720 2365.365 1885.720 2367.140 ;
@@ -7713,36 +7776,43 @@ MACRO fpga_core
         RECT 1832.720 475.365 1885.720 477.140 ;
         RECT 1609.520 197.515 1885.720 475.365 ;
         RECT 1609.520 195.740 1662.520 197.515 ;
-        RECT 1609.520 162.540 1657.720 195.740 ;
-        RECT 1661.720 162.540 1662.520 195.740 ;
-        RECT 1609.520 40.640 1662.520 162.540 ;
-        RECT 1666.520 160.765 1714.720 197.515 ;
-        RECT 1718.720 160.765 1719.520 197.515 ;
-        RECT 1723.520 160.765 1771.720 197.515 ;
-        RECT 1775.720 160.765 1776.520 197.515 ;
-        RECT 1780.520 160.765 1828.720 197.515 ;
-        RECT 1666.520 53.595 1828.720 160.765 ;
-        RECT 1666.520 40.640 1714.720 53.595 ;
-        RECT 1718.720 40.640 1719.520 53.595 ;
-        RECT 1723.520 40.640 1771.720 53.595 ;
-        RECT 1775.720 40.640 1776.520 53.595 ;
-        RECT 1780.520 40.640 1828.720 53.595 ;
+        RECT 1609.520 173.005 1657.720 195.740 ;
+        RECT 1661.720 173.005 1662.520 195.740 ;
+        RECT 1666.520 173.005 1714.720 197.515 ;
+        RECT 1718.720 173.005 1719.520 197.515 ;
+        RECT 1723.520 173.005 1771.720 197.515 ;
+        RECT 1775.720 173.005 1776.520 197.515 ;
+        RECT 1780.520 173.005 1828.720 197.515 ;
         RECT 1832.720 195.740 1885.720 197.515 ;
-        RECT 1832.720 162.540 1833.520 195.740 ;
-        RECT 1837.520 162.540 1885.720 195.740 ;
-        RECT 1832.720 40.640 1885.720 162.540 ;
+        RECT 1832.720 173.005 1833.520 195.740 ;
+        RECT 1837.520 173.005 1885.720 195.740 ;
+        RECT 1609.520 45.435 1885.720 173.005 ;
+        RECT 1609.520 40.640 1662.520 45.435 ;
+        RECT 1666.520 40.640 1714.720 45.435 ;
+        RECT 1718.720 40.640 1719.520 45.435 ;
+        RECT 1723.520 40.640 1771.720 45.435 ;
+        RECT 1775.720 40.640 1776.520 45.435 ;
+        RECT 1780.520 40.640 1828.720 45.435 ;
+        RECT 1832.720 40.640 1885.720 45.435 ;
         RECT 1889.720 40.640 1890.520 2672.240 ;
-        RECT 1894.520 2402.515 2170.720 2672.240 ;
-        RECT 1894.520 2400.740 1947.520 2402.515 ;
+        RECT 1894.520 2672.205 1947.520 2672.240 ;
+        RECT 1951.520 2672.205 1999.720 2672.240 ;
+        RECT 2003.720 2672.205 2004.520 2672.240 ;
+        RECT 2008.520 2672.205 2056.720 2672.240 ;
+        RECT 2060.720 2672.205 2061.520 2672.240 ;
+        RECT 2065.520 2672.205 2113.720 2672.240 ;
+        RECT 2117.720 2672.205 2170.720 2672.240 ;
+        RECT 1894.520 2403.195 2170.720 2672.205 ;
+        RECT 1894.520 2400.740 1947.520 2403.195 ;
         RECT 1894.520 2367.140 1942.720 2400.740 ;
         RECT 1946.720 2367.140 1947.520 2400.740 ;
         RECT 1894.520 2365.365 1947.520 2367.140 ;
-        RECT 1951.520 2365.365 1999.720 2402.515 ;
-        RECT 2003.720 2365.365 2004.520 2402.515 ;
-        RECT 2008.520 2365.365 2056.720 2402.515 ;
-        RECT 2060.720 2365.365 2061.520 2402.515 ;
-        RECT 2065.520 2365.365 2113.720 2402.515 ;
-        RECT 2117.720 2400.740 2170.720 2402.515 ;
+        RECT 1951.520 2365.365 1999.720 2403.195 ;
+        RECT 2003.720 2365.365 2004.520 2403.195 ;
+        RECT 2008.520 2365.365 2056.720 2403.195 ;
+        RECT 2060.720 2365.365 2061.520 2403.195 ;
+        RECT 2065.520 2365.365 2113.720 2403.195 ;
+        RECT 2117.720 2400.740 2170.720 2403.195 ;
         RECT 2117.720 2367.140 2118.520 2400.740 ;
         RECT 2122.520 2367.140 2170.720 2400.740 ;
         RECT 2117.720 2365.365 2170.720 2367.140 ;
@@ -7832,142 +7902,135 @@ MACRO fpga_core
         RECT 2117.720 475.365 2170.720 477.140 ;
         RECT 1894.520 197.515 2170.720 475.365 ;
         RECT 1894.520 195.740 1947.520 197.515 ;
-        RECT 1894.520 162.540 1942.720 195.740 ;
-        RECT 1946.720 162.540 1947.520 195.740 ;
-        RECT 1894.520 40.640 1947.520 162.540 ;
-        RECT 1951.520 160.765 1999.720 197.515 ;
-        RECT 2003.720 160.765 2004.520 197.515 ;
-        RECT 2008.520 160.765 2056.720 197.515 ;
-        RECT 2060.720 160.765 2061.520 197.515 ;
-        RECT 2065.520 160.765 2113.720 197.515 ;
-        RECT 1951.520 53.595 2113.720 160.765 ;
-        RECT 1951.520 40.640 1999.720 53.595 ;
-        RECT 2003.720 40.640 2004.520 53.595 ;
-        RECT 2008.520 40.640 2056.720 53.595 ;
-        RECT 2060.720 40.640 2061.520 53.595 ;
-        RECT 2065.520 40.640 2113.720 53.595 ;
+        RECT 1894.520 173.005 1942.720 195.740 ;
+        RECT 1946.720 173.005 1947.520 195.740 ;
+        RECT 1951.520 173.005 1999.720 197.515 ;
+        RECT 2003.720 173.005 2004.520 197.515 ;
+        RECT 2008.520 173.005 2056.720 197.515 ;
+        RECT 2060.720 173.005 2061.520 197.515 ;
+        RECT 2065.520 173.005 2113.720 197.515 ;
         RECT 2117.720 195.740 2170.720 197.515 ;
-        RECT 2117.720 162.540 2118.520 195.740 ;
-        RECT 2122.520 162.540 2170.720 195.740 ;
-        RECT 2117.720 40.640 2170.720 162.540 ;
+        RECT 2117.720 173.005 2118.520 195.740 ;
+        RECT 2122.520 173.005 2170.720 195.740 ;
+        RECT 1894.520 45.435 2170.720 173.005 ;
+        RECT 1894.520 40.640 1947.520 45.435 ;
+        RECT 1951.520 40.640 1999.720 45.435 ;
+        RECT 2003.720 40.640 2004.520 45.435 ;
+        RECT 2008.520 40.640 2056.720 45.435 ;
+        RECT 2060.720 40.640 2061.520 45.435 ;
+        RECT 2065.520 40.640 2113.720 45.435 ;
+        RECT 2117.720 40.640 2170.720 45.435 ;
         RECT 2174.720 40.640 2175.520 2672.240 ;
-        RECT 2179.520 2407.275 2431.320 2672.240 ;
-        RECT 2179.520 2400.740 2232.520 2407.275 ;
+        RECT 2179.520 2655.885 2232.520 2672.240 ;
+        RECT 2236.520 2655.885 2284.720 2672.240 ;
+        RECT 2288.720 2655.885 2289.520 2672.240 ;
+        RECT 2293.520 2655.885 2341.720 2672.240 ;
+        RECT 2345.720 2655.885 2346.520 2672.240 ;
+        RECT 2350.520 2655.885 2398.720 2672.240 ;
+        RECT 2402.720 2655.885 2431.320 2672.240 ;
+        RECT 2179.520 2402.515 2431.320 2655.885 ;
+        RECT 2179.520 2400.740 2232.520 2402.515 ;
         RECT 2179.520 2367.140 2227.720 2400.740 ;
         RECT 2231.720 2367.140 2232.520 2400.740 ;
-        RECT 2179.520 2357.885 2232.520 2367.140 ;
-        RECT 2236.520 2357.885 2284.720 2407.275 ;
-        RECT 2288.720 2357.885 2289.520 2407.275 ;
-        RECT 2293.520 2357.885 2341.720 2407.275 ;
-        RECT 2345.720 2357.885 2346.520 2407.275 ;
-        RECT 2350.520 2357.885 2398.720 2407.275 ;
-        RECT 2402.720 2400.740 2431.320 2407.275 ;
+        RECT 2179.520 2364.685 2232.520 2367.140 ;
+        RECT 2236.520 2364.685 2284.720 2402.515 ;
+        RECT 2288.720 2364.685 2289.520 2402.515 ;
+        RECT 2293.520 2364.685 2341.720 2402.515 ;
+        RECT 2345.720 2364.685 2346.520 2402.515 ;
+        RECT 2350.520 2364.685 2398.720 2402.515 ;
+        RECT 2402.720 2400.740 2431.320 2402.515 ;
         RECT 2402.720 2367.140 2403.520 2400.740 ;
         RECT 2407.520 2367.140 2431.320 2400.740 ;
-        RECT 2402.720 2357.885 2431.320 2367.140 ;
-        RECT 2179.520 2094.995 2431.320 2357.885 ;
-        RECT 2179.520 2085.740 2232.520 2094.995 ;
-        RECT 2179.520 2052.140 2227.720 2085.740 ;
-        RECT 2231.720 2052.140 2232.520 2085.740 ;
-        RECT 2179.520 2042.885 2232.520 2052.140 ;
-        RECT 2236.520 2042.885 2284.720 2094.995 ;
-        RECT 2288.720 2042.885 2289.520 2094.995 ;
-        RECT 2293.520 2042.885 2341.720 2094.995 ;
-        RECT 2345.720 2042.885 2346.520 2094.995 ;
-        RECT 2350.520 2042.885 2398.720 2094.995 ;
-        RECT 2402.720 2085.740 2431.320 2094.995 ;
-        RECT 2402.720 2052.140 2403.520 2085.740 ;
-        RECT 2407.520 2052.140 2431.320 2085.740 ;
-        RECT 2402.720 2042.885 2431.320 2052.140 ;
-        RECT 2179.520 1779.995 2431.320 2042.885 ;
-        RECT 2179.520 1770.740 2232.520 1779.995 ;
-        RECT 2179.520 1737.140 2227.720 1770.740 ;
-        RECT 2231.720 1737.140 2232.520 1770.740 ;
-        RECT 2179.520 1727.885 2232.520 1737.140 ;
-        RECT 2236.520 1727.885 2284.720 1779.995 ;
-        RECT 2288.720 1727.885 2289.520 1779.995 ;
-        RECT 2293.520 1727.885 2341.720 1779.995 ;
-        RECT 2345.720 1727.885 2346.520 1779.995 ;
-        RECT 2350.520 1727.885 2398.720 1779.995 ;
-        RECT 2402.720 1770.740 2431.320 1779.995 ;
-        RECT 2402.720 1737.140 2403.520 1770.740 ;
-        RECT 2407.520 1737.140 2431.320 1770.740 ;
-        RECT 2402.720 1727.885 2431.320 1737.140 ;
-        RECT 2179.520 1464.995 2431.320 1727.885 ;
-        RECT 2179.520 1455.740 2232.520 1464.995 ;
-        RECT 2179.520 1422.140 2227.720 1455.740 ;
-        RECT 2231.720 1422.140 2232.520 1455.740 ;
-        RECT 2179.520 1412.885 2232.520 1422.140 ;
-        RECT 2236.520 1412.885 2284.720 1464.995 ;
-        RECT 2288.720 1412.885 2289.520 1464.995 ;
-        RECT 2293.520 1412.885 2341.720 1464.995 ;
-        RECT 2345.720 1412.885 2346.520 1464.995 ;
-        RECT 2350.520 1412.885 2398.720 1464.995 ;
-        RECT 2402.720 1455.740 2431.320 1464.995 ;
-        RECT 2402.720 1422.140 2403.520 1455.740 ;
-        RECT 2407.520 1422.140 2431.320 1455.740 ;
-        RECT 2402.720 1412.885 2431.320 1422.140 ;
-        RECT 2179.520 1149.995 2431.320 1412.885 ;
-        RECT 2179.520 1140.740 2232.520 1149.995 ;
-        RECT 2179.520 1107.140 2227.720 1140.740 ;
-        RECT 2231.720 1107.140 2232.520 1140.740 ;
-        RECT 2179.520 1097.885 2232.520 1107.140 ;
-        RECT 2236.520 1097.885 2284.720 1149.995 ;
-        RECT 2288.720 1097.885 2289.520 1149.995 ;
-        RECT 2293.520 1097.885 2341.720 1149.995 ;
-        RECT 2345.720 1097.885 2346.520 1149.995 ;
-        RECT 2350.520 1097.885 2398.720 1149.995 ;
-        RECT 2402.720 1140.740 2431.320 1149.995 ;
-        RECT 2402.720 1107.140 2403.520 1140.740 ;
-        RECT 2407.520 1107.140 2431.320 1140.740 ;
-        RECT 2402.720 1097.885 2431.320 1107.140 ;
-        RECT 2179.520 834.995 2431.320 1097.885 ;
-        RECT 2179.520 825.740 2232.520 834.995 ;
-        RECT 2179.520 792.140 2227.720 825.740 ;
-        RECT 2231.720 792.140 2232.520 825.740 ;
-        RECT 2179.520 782.885 2232.520 792.140 ;
-        RECT 2236.520 782.885 2284.720 834.995 ;
-        RECT 2288.720 782.885 2289.520 834.995 ;
-        RECT 2293.520 782.885 2341.720 834.995 ;
-        RECT 2345.720 782.885 2346.520 834.995 ;
-        RECT 2350.520 782.885 2398.720 834.995 ;
-        RECT 2402.720 825.740 2431.320 834.995 ;
-        RECT 2402.720 792.140 2403.520 825.740 ;
-        RECT 2407.520 792.140 2431.320 825.740 ;
-        RECT 2402.720 782.885 2431.320 792.140 ;
-        RECT 2179.520 519.995 2431.320 782.885 ;
-        RECT 2179.520 510.740 2232.520 519.995 ;
-        RECT 2179.520 477.140 2227.720 510.740 ;
-        RECT 2231.720 477.140 2232.520 510.740 ;
-        RECT 2179.520 467.885 2232.520 477.140 ;
-        RECT 2236.520 467.885 2284.720 519.995 ;
-        RECT 2288.720 467.885 2289.520 519.995 ;
-        RECT 2293.520 467.885 2341.720 519.995 ;
-        RECT 2345.720 467.885 2346.520 519.995 ;
-        RECT 2350.520 467.885 2398.720 519.995 ;
-        RECT 2402.720 510.740 2431.320 519.995 ;
-        RECT 2402.720 477.140 2403.520 510.740 ;
-        RECT 2407.520 477.140 2431.320 510.740 ;
-        RECT 2402.720 467.885 2431.320 477.140 ;
-        RECT 2179.520 204.995 2431.320 467.885 ;
-        RECT 2179.520 195.740 2232.520 204.995 ;
-        RECT 2179.520 164.845 2227.720 195.740 ;
-        RECT 2231.720 164.845 2232.520 195.740 ;
-        RECT 2236.520 164.845 2284.720 204.995 ;
-        RECT 2288.720 164.845 2289.520 204.995 ;
-        RECT 2293.520 164.845 2341.720 204.995 ;
-        RECT 2345.720 164.845 2346.520 204.995 ;
-        RECT 2350.520 164.845 2398.720 204.995 ;
-        RECT 2179.520 56.315 2398.720 164.845 ;
-        RECT 2179.520 40.640 2232.520 56.315 ;
-        RECT 2236.520 40.640 2284.720 56.315 ;
-        RECT 2288.720 40.640 2289.520 56.315 ;
-        RECT 2293.520 40.640 2341.720 56.315 ;
-        RECT 2345.720 40.640 2346.520 56.315 ;
-        RECT 2350.520 40.640 2398.720 56.315 ;
-        RECT 2402.720 195.740 2431.320 204.995 ;
-        RECT 2402.720 162.540 2403.520 195.740 ;
-        RECT 2407.520 162.540 2431.320 195.740 ;
+        RECT 2402.720 2364.685 2431.320 2367.140 ;
+        RECT 2179.520 2084.115 2431.320 2364.685 ;
+        RECT 2179.520 2052.140 2227.720 2084.115 ;
+        RECT 2231.720 2052.140 2232.520 2084.115 ;
+        RECT 2179.520 2049.685 2232.520 2052.140 ;
+        RECT 2236.520 2049.685 2284.720 2084.115 ;
+        RECT 2288.720 2049.685 2289.520 2084.115 ;
+        RECT 2293.520 2049.685 2341.720 2084.115 ;
+        RECT 2345.720 2049.685 2346.520 2084.115 ;
+        RECT 2350.520 2049.685 2398.720 2084.115 ;
+        RECT 2402.720 2052.140 2403.520 2084.115 ;
+        RECT 2407.520 2052.140 2431.320 2084.115 ;
+        RECT 2402.720 2049.685 2431.320 2052.140 ;
+        RECT 2179.520 1769.115 2431.320 2049.685 ;
+        RECT 2179.520 1737.140 2227.720 1769.115 ;
+        RECT 2231.720 1737.140 2232.520 1769.115 ;
+        RECT 2179.520 1734.685 2232.520 1737.140 ;
+        RECT 2236.520 1734.685 2284.720 1769.115 ;
+        RECT 2288.720 1734.685 2289.520 1769.115 ;
+        RECT 2293.520 1734.685 2341.720 1769.115 ;
+        RECT 2345.720 1734.685 2346.520 1769.115 ;
+        RECT 2350.520 1734.685 2398.720 1769.115 ;
+        RECT 2402.720 1737.140 2403.520 1769.115 ;
+        RECT 2407.520 1737.140 2431.320 1769.115 ;
+        RECT 2402.720 1734.685 2431.320 1737.140 ;
+        RECT 2179.520 1454.115 2431.320 1734.685 ;
+        RECT 2179.520 1422.140 2227.720 1454.115 ;
+        RECT 2231.720 1422.140 2232.520 1454.115 ;
+        RECT 2179.520 1419.685 2232.520 1422.140 ;
+        RECT 2236.520 1419.685 2284.720 1454.115 ;
+        RECT 2288.720 1419.685 2289.520 1454.115 ;
+        RECT 2293.520 1419.685 2341.720 1454.115 ;
+        RECT 2345.720 1419.685 2346.520 1454.115 ;
+        RECT 2350.520 1419.685 2398.720 1454.115 ;
+        RECT 2402.720 1422.140 2403.520 1454.115 ;
+        RECT 2407.520 1422.140 2431.320 1454.115 ;
+        RECT 2402.720 1419.685 2431.320 1422.140 ;
+        RECT 2179.520 1139.115 2431.320 1419.685 ;
+        RECT 2179.520 1107.140 2227.720 1139.115 ;
+        RECT 2231.720 1107.140 2232.520 1139.115 ;
+        RECT 2179.520 1104.685 2232.520 1107.140 ;
+        RECT 2236.520 1104.685 2284.720 1139.115 ;
+        RECT 2288.720 1104.685 2289.520 1139.115 ;
+        RECT 2293.520 1104.685 2341.720 1139.115 ;
+        RECT 2345.720 1104.685 2346.520 1139.115 ;
+        RECT 2350.520 1104.685 2398.720 1139.115 ;
+        RECT 2402.720 1107.140 2403.520 1139.115 ;
+        RECT 2407.520 1107.140 2431.320 1139.115 ;
+        RECT 2402.720 1104.685 2431.320 1107.140 ;
+        RECT 2179.520 824.115 2431.320 1104.685 ;
+        RECT 2179.520 792.140 2227.720 824.115 ;
+        RECT 2231.720 792.140 2232.520 824.115 ;
+        RECT 2179.520 789.685 2232.520 792.140 ;
+        RECT 2236.520 789.685 2284.720 824.115 ;
+        RECT 2288.720 789.685 2289.520 824.115 ;
+        RECT 2293.520 789.685 2341.720 824.115 ;
+        RECT 2345.720 789.685 2346.520 824.115 ;
+        RECT 2350.520 789.685 2398.720 824.115 ;
+        RECT 2402.720 792.140 2403.520 824.115 ;
+        RECT 2407.520 792.140 2431.320 824.115 ;
+        RECT 2402.720 789.685 2431.320 792.140 ;
+        RECT 2179.520 509.115 2431.320 789.685 ;
+        RECT 2179.520 477.140 2227.720 509.115 ;
+        RECT 2231.720 477.140 2232.520 509.115 ;
+        RECT 2179.520 474.685 2232.520 477.140 ;
+        RECT 2236.520 474.685 2284.720 509.115 ;
+        RECT 2288.720 474.685 2289.520 509.115 ;
+        RECT 2293.520 474.685 2341.720 509.115 ;
+        RECT 2345.720 474.685 2346.520 509.115 ;
+        RECT 2350.520 474.685 2398.720 509.115 ;
+        RECT 2402.720 477.140 2403.520 509.115 ;
+        RECT 2407.520 477.140 2431.320 509.115 ;
+        RECT 2402.720 474.685 2431.320 477.140 ;
+        RECT 2179.520 194.115 2431.320 474.685 ;
+        RECT 2179.520 171.645 2227.720 194.115 ;
+        RECT 2231.720 171.645 2232.520 194.115 ;
+        RECT 2236.520 171.645 2284.720 194.115 ;
+        RECT 2288.720 171.645 2289.520 194.115 ;
+        RECT 2293.520 171.645 2341.720 194.115 ;
+        RECT 2345.720 171.645 2346.520 194.115 ;
+        RECT 2350.520 171.645 2398.720 194.115 ;
+        RECT 2179.520 48.155 2398.720 171.645 ;
+        RECT 2179.520 40.640 2232.520 48.155 ;
+        RECT 2236.520 40.640 2284.720 48.155 ;
+        RECT 2288.720 40.640 2289.520 48.155 ;
+        RECT 2293.520 40.640 2341.720 48.155 ;
+        RECT 2345.720 40.640 2346.520 48.155 ;
+        RECT 2350.520 40.640 2398.720 48.155 ;
+        RECT 2402.720 162.540 2403.520 194.115 ;
+        RECT 2407.520 162.540 2431.320 194.115 ;
         RECT 2402.720 40.640 2431.320 162.540 ;
   END
 END fpga_core

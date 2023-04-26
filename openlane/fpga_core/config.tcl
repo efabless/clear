@@ -146,3 +146,6 @@ set ::env(RUN_KLAYOUT) 0
 set ::env(STA_WRITE_LIB) 0
 set ::env(RUN_IRDROP_REPORT) 0
 set ::env(QUIT_ON_SYNTH_CHECKS) 0
+
+## To prevent Z buffering
+set ::env(RSZ_DONT_TOUCH_RX) "gfpga_pad_io_soc_out"
