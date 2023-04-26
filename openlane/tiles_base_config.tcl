@@ -61,11 +61,14 @@ set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 300
 set ::env(GRT_REPAIR_ANTENNAS) 1
 set ::env(RUN_HEURISTIC_DIODE_INSERTION) 1
-set ::env(HEURISTIC_ANTENNA_THRESHOLD) 80
+set ::env(HEURISTIC_ANTENNA_THRESHOLD) 90
 set ::env(DIODE_ON_PORTS) "both"
 set ::env(GRT_ANT_ITERS) 15
-set ::env(GRT_ANT_MARGIN) 20
+set ::env(GRT_ANT_MARGIN) 22
 
 # Signoff
 set ::env(RUN_KLAYOUT) 0
-set ::env(QUIT_ON_SYNTH_CHECKS) 0
+set ::env(QUIT_ON_SYNTH_CHECKS) 1
+
+# To prevent Z buffering
+set ::env(RSZ_DONT_TOUCH_RX) "_subtile_.*__pin_inpad_0_"

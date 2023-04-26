@@ -3,138 +3,138 @@
 report_parasitic_annotation -report_unannotated
 ============================================================================
 Found 132 unannotated drivers.
- cbx_1__8_.cbx_1__8_.mux_bottom_ipin_0.mux_l2_in_3__363/LO
- cbx_1__8_.cbx_1__8_.mux_bottom_ipin_1.mux_l2_in_3__364/LO
- cbx_1__8_.cbx_1__8_.mux_bottom_ipin_2.mux_l2_in_3__365/LO
- cbx_1__8_.cbx_1__8_.mux_bottom_ipin_3.mux_l2_in_3__366/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_0.mux_l2_in_3__367/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_1.mux_l2_in_3__368/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_10.mux_l2_in_3__369/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_11.mux_l2_in_3__370/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_12.mux_l2_in_3__371/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_13.mux_l2_in_3__240/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_14.mux_l2_in_3__241/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_15.mux_l2_in_3__242/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_2.mux_l2_in_3__243/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_3.mux_l2_in_3__244/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_4.mux_l2_in_3__245/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_5.mux_l2_in_3__246/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_6.mux_l2_in_3__247/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_7.mux_l2_in_3__248/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_8.mux_l2_in_3__249/LO
- cbx_1__8_.cbx_1__8_.mux_top_ipin_9.mux_l2_in_3__250/LO
- cby_1__8_.mux_right_ipin_0.mux_l2_in_3__251/LO
- cby_1__8_.mux_right_ipin_1.mux_l2_in_3__252/LO
- cby_1__8_.mux_right_ipin_10.mux_l2_in_3__253/LO
- cby_1__8_.mux_right_ipin_11.mux_l2_in_3__254/LO
- cby_1__8_.mux_right_ipin_12.mux_l2_in_3__255/LO
- cby_1__8_.mux_right_ipin_13.mux_l2_in_3__256/LO
- cby_1__8_.mux_right_ipin_14.mux_l2_in_3__257/LO
- cby_1__8_.mux_right_ipin_15.mux_l2_in_3__258/LO
- cby_1__8_.mux_right_ipin_2.mux_l2_in_3__259/LO
- cby_1__8_.mux_right_ipin_3.mux_l2_in_3__260/LO
- cby_1__8_.mux_right_ipin_4.mux_l2_in_3__261/LO
- cby_1__8_.mux_right_ipin_5.mux_l2_in_3__262/LO
- cby_1__8_.mux_right_ipin_6.mux_l2_in_3__263/LO
- cby_1__8_.mux_right_ipin_7.mux_l2_in_3__264/LO
- cby_1__8_.mux_right_ipin_8.mux_l2_in_3__265/LO
- cby_1__8_.mux_right_ipin_9.mux_l2_in_3__266/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__267/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__268/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__269/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__270/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__271/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__272/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__273/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__274/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__275/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__276/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__277/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__278/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__279/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__280/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__281/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__282/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__283/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__284/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__285/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__286/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__287/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__288/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__289/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__290/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__291/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__292/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__293/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__294/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__295/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__296/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__297/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__298/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__299/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__300/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__301/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__302/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__303/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__304/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__305/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__306/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__307/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__308/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__309/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__310/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__311/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__312/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__313/LO
- grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__314/LO
- sb_1__8_.mux_bottom_track_1.mux_l2_in_1__315/LO
- sb_1__8_.mux_bottom_track_11.mux_l2_in_1__316/LO
- sb_1__8_.mux_bottom_track_13.mux_l2_in_1__317/LO
- sb_1__8_.mux_bottom_track_15.mux_l2_in_1__318/LO
- sb_1__8_.mux_bottom_track_17.mux_l2_in_1__319/LO
- sb_1__8_.mux_bottom_track_19.mux_l2_in_1__320/LO
- sb_1__8_.mux_bottom_track_21.mux_l1_in_1__321/LO
- sb_1__8_.mux_bottom_track_23.mux_l1_in_1__322/LO
- sb_1__8_.mux_bottom_track_25.mux_l1_in_1__323/LO
- sb_1__8_.mux_bottom_track_27.mux_l1_in_1__324/LO
- sb_1__8_.mux_bottom_track_29.mux_l2_in_0__325/LO
- sb_1__8_.mux_bottom_track_3.mux_l2_in_1__326/LO
- sb_1__8_.mux_bottom_track_31.mux_l2_in_0__327/LO
- sb_1__8_.mux_bottom_track_33.mux_l2_in_0__328/LO
- sb_1__8_.mux_bottom_track_35.mux_l2_in_0__329/LO
- sb_1__8_.mux_bottom_track_37.mux_l2_in_1__330/LO
- sb_1__8_.mux_bottom_track_39.mux_l2_in_0__331/LO
- sb_1__8_.mux_bottom_track_41.mux_l2_in_0__332/LO
- sb_1__8_.mux_bottom_track_43.mux_l2_in_0__333/LO
- sb_1__8_.mux_bottom_track_45.mux_l2_in_0__334/LO
- sb_1__8_.mux_bottom_track_47.mux_l2_in_0__335/LO
- sb_1__8_.mux_bottom_track_49.mux_l2_in_0__336/LO
- sb_1__8_.mux_bottom_track_5.mux_l2_in_1__337/LO
- sb_1__8_.mux_bottom_track_51.mux_l2_in_0__338/LO
- sb_1__8_.mux_bottom_track_7.mux_l2_in_1__339/LO
- sb_1__8_.mux_bottom_track_9.mux_l2_in_1__340/LO
- sb_1__8_.mux_left_track_1.mux_l2_in_3__341/LO
- sb_1__8_.mux_left_track_11.mux_l2_in_3__342/LO
- sb_1__8_.mux_left_track_13.mux_l1_in_3__343/LO
- sb_1__8_.mux_left_track_21.mux_l1_in_3__344/LO
- sb_1__8_.mux_left_track_29.mux_l1_in_3__345/LO
- sb_1__8_.mux_left_track_3.mux_l2_in_3__346/LO
- sb_1__8_.mux_left_track_37.mux_l2_in_1__347/LO
- sb_1__8_.mux_left_track_45.mux_l2_in_1__348/LO
- sb_1__8_.mux_left_track_5.mux_l2_in_3__349/LO
- sb_1__8_.mux_left_track_53.mux_l2_in_1__350/LO
- sb_1__8_.mux_left_track_7.mux_l2_in_3__351/LO
- sb_1__8_.mux_right_track_0.mux_l2_in_3__352/LO
- sb_1__8_.mux_right_track_10.mux_l2_in_3__353/LO
- sb_1__8_.mux_right_track_12.mux_l1_in_3__354/LO
- sb_1__8_.mux_right_track_2.mux_l2_in_3__355/LO
- sb_1__8_.mux_right_track_20.mux_l1_in_3__356/LO
- sb_1__8_.mux_right_track_28.mux_l1_in_3__357/LO
- sb_1__8_.mux_right_track_36.mux_l2_in_1__358/LO
- sb_1__8_.mux_right_track_4.mux_l2_in_3__359/LO
- sb_1__8_.mux_right_track_44.mux_l2_in_1__360/LO
- sb_1__8_.mux_right_track_52.mux_l2_in_1__361/LO
- sb_1__8_.mux_right_track_6.mux_l2_in_3__362/LO
+ cbx_1__8_.cbx_1__8_.mux_bottom_ipin_0.mux_l2_in_3__354/LO
+ cbx_1__8_.cbx_1__8_.mux_bottom_ipin_1.mux_l2_in_3__355/LO
+ cbx_1__8_.cbx_1__8_.mux_bottom_ipin_2.mux_l2_in_3__356/LO
+ cbx_1__8_.cbx_1__8_.mux_bottom_ipin_3.mux_l2_in_3__357/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_0.mux_l2_in_3__358/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_1.mux_l2_in_3__359/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_10.mux_l2_in_3__360/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_11.mux_l2_in_3__361/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_12.mux_l2_in_3__362/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_13.mux_l2_in_3__231/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_14.mux_l2_in_3__232/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_15.mux_l2_in_3__233/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_2.mux_l2_in_3__234/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_3.mux_l2_in_3__235/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_4.mux_l2_in_3__236/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_5.mux_l2_in_3__237/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_6.mux_l2_in_3__238/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_7.mux_l2_in_3__239/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_8.mux_l2_in_3__240/LO
+ cbx_1__8_.cbx_1__8_.mux_top_ipin_9.mux_l2_in_3__241/LO
+ cby_1__8_.mux_right_ipin_0.mux_l2_in_3__242/LO
+ cby_1__8_.mux_right_ipin_1.mux_l2_in_3__243/LO
+ cby_1__8_.mux_right_ipin_10.mux_l2_in_3__244/LO
+ cby_1__8_.mux_right_ipin_11.mux_l2_in_3__245/LO
+ cby_1__8_.mux_right_ipin_12.mux_l2_in_3__246/LO
+ cby_1__8_.mux_right_ipin_13.mux_l2_in_3__247/LO
+ cby_1__8_.mux_right_ipin_14.mux_l2_in_3__248/LO
+ cby_1__8_.mux_right_ipin_15.mux_l2_in_3__249/LO
+ cby_1__8_.mux_right_ipin_2.mux_l2_in_3__250/LO
+ cby_1__8_.mux_right_ipin_3.mux_l2_in_3__251/LO
+ cby_1__8_.mux_right_ipin_4.mux_l2_in_3__252/LO
+ cby_1__8_.mux_right_ipin_5.mux_l2_in_3__253/LO
+ cby_1__8_.mux_right_ipin_6.mux_l2_in_3__254/LO
+ cby_1__8_.mux_right_ipin_7.mux_l2_in_3__255/LO
+ cby_1__8_.mux_right_ipin_8.mux_l2_in_3__256/LO
+ cby_1__8_.mux_right_ipin_9.mux_l2_in_3__257/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__258/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__259/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__260/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__261/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__262/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__263/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__264/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__265/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__266/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__267/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__268/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__269/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__270/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__271/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__272/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__273/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__274/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_2.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__275/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__276/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__277/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__278/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__279/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__280/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__281/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__282/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__283/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__284/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__285/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__286/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_4.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__287/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__288/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__289/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__290/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__291/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__292/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_5.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__293/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__294/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__295/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__296/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__297/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__298/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_6.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__299/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_logic_out_0.mux_l2_in_0__300/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mux_frac_lut4_0_in_2.mux_l2_in_0__301/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_0.mux_l2_in_0__302/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_fabric_out_1.mux_l2_in_0__303/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_0_D_0.mux_l2_in_0__304/LO
+ grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mux_ff_1_D_0.mux_l2_in_0__305/LO
+ sb_1__8_.mux_bottom_track_1.mux_l2_in_1__306/LO
+ sb_1__8_.mux_bottom_track_11.mux_l2_in_1__307/LO
+ sb_1__8_.mux_bottom_track_13.mux_l2_in_1__308/LO
+ sb_1__8_.mux_bottom_track_15.mux_l2_in_1__309/LO
+ sb_1__8_.mux_bottom_track_17.mux_l2_in_1__310/LO
+ sb_1__8_.mux_bottom_track_19.mux_l2_in_1__311/LO
+ sb_1__8_.mux_bottom_track_21.mux_l1_in_1__312/LO
+ sb_1__8_.mux_bottom_track_23.mux_l1_in_1__313/LO
+ sb_1__8_.mux_bottom_track_25.mux_l1_in_1__314/LO
+ sb_1__8_.mux_bottom_track_27.mux_l1_in_1__315/LO
+ sb_1__8_.mux_bottom_track_29.mux_l2_in_0__316/LO
+ sb_1__8_.mux_bottom_track_3.mux_l2_in_1__317/LO
+ sb_1__8_.mux_bottom_track_31.mux_l2_in_0__318/LO
+ sb_1__8_.mux_bottom_track_33.mux_l2_in_0__319/LO
+ sb_1__8_.mux_bottom_track_35.mux_l2_in_0__320/LO
+ sb_1__8_.mux_bottom_track_37.mux_l2_in_1__321/LO
+ sb_1__8_.mux_bottom_track_39.mux_l2_in_0__322/LO
+ sb_1__8_.mux_bottom_track_41.mux_l2_in_0__323/LO
+ sb_1__8_.mux_bottom_track_43.mux_l2_in_0__324/LO
+ sb_1__8_.mux_bottom_track_45.mux_l2_in_0__325/LO
+ sb_1__8_.mux_bottom_track_47.mux_l2_in_0__326/LO
+ sb_1__8_.mux_bottom_track_49.mux_l2_in_0__327/LO
+ sb_1__8_.mux_bottom_track_5.mux_l2_in_1__328/LO
+ sb_1__8_.mux_bottom_track_51.mux_l2_in_0__329/LO
+ sb_1__8_.mux_bottom_track_7.mux_l2_in_1__330/LO
+ sb_1__8_.mux_bottom_track_9.mux_l2_in_1__331/LO
+ sb_1__8_.mux_left_track_1.mux_l2_in_3__332/LO
+ sb_1__8_.mux_left_track_11.mux_l2_in_3__333/LO
+ sb_1__8_.mux_left_track_13.mux_l1_in_3__334/LO
+ sb_1__8_.mux_left_track_21.mux_l1_in_3__335/LO
+ sb_1__8_.mux_left_track_29.mux_l1_in_3__336/LO
+ sb_1__8_.mux_left_track_3.mux_l2_in_3__337/LO
+ sb_1__8_.mux_left_track_37.mux_l2_in_1__338/LO
+ sb_1__8_.mux_left_track_45.mux_l2_in_1__339/LO
+ sb_1__8_.mux_left_track_5.mux_l2_in_3__340/LO
+ sb_1__8_.mux_left_track_53.mux_l2_in_1__341/LO
+ sb_1__8_.mux_left_track_7.mux_l2_in_3__342/LO
+ sb_1__8_.mux_right_track_0.mux_l2_in_3__343/LO
+ sb_1__8_.mux_right_track_10.mux_l2_in_3__344/LO
+ sb_1__8_.mux_right_track_12.mux_l1_in_3__345/LO
+ sb_1__8_.mux_right_track_2.mux_l2_in_3__346/LO
+ sb_1__8_.mux_right_track_20.mux_l1_in_3__347/LO
+ sb_1__8_.mux_right_track_28.mux_l1_in_3__348/LO
+ sb_1__8_.mux_right_track_36.mux_l2_in_1__349/LO
+ sb_1__8_.mux_right_track_4.mux_l2_in_3__350/LO
+ sb_1__8_.mux_right_track_44.mux_l2_in_1__351/LO
+ sb_1__8_.mux_right_track_52.mux_l2_in_1__352/LO
+ sb_1__8_.mux_right_track_6.mux_l2_in_3__353/LO
 Found 0 partially unannotated drivers.
 parastic_annotation_check
 check_slew
@@ -168,12 +168,12 @@ worst_slack
 ===========================================================================
  report_worst_slack -max (Setup)
 ============================================================================
-worst slack 3.46
+worst slack 1.61
 
 ===========================================================================
  report_worst_slack -min (Hold)
 ============================================================================
-worst slack 0.01
+worst slack 0.31
 worst_slack_end
 clock_skew
 
@@ -182,17 +182,17 @@ clock_skew
 ============================================================================
 Clock clk0
 Latency      CRPR       Skew
-sb_1__8_.mem_left_track_1.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
+sb_1__8_.mem_left_track_45.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
    0.25
 grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
-   0.41      0.00      -0.16
+   0.41      0.00      -0.15
 
 Clock prog_clk
 Latency      CRPR       Skew
-sb_1__8_.mem_left_track_1.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.80
-sb_1__8_.mem_left_track_1.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
-   0.68     -0.03       0.08
+sb_1__8_.mem_left_track_29.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
+   0.81
+sb_1__8_.mem_left_track_37.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.69     -0.03       0.09
 
 clock_skew_end
 power_report
@@ -203,23 +203,23 @@ power_report
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
-Sequential             2.27e-04   1.36e-05   6.19e-09   2.40e-04  39.8%
-Combinational          1.80e-04   1.83e-04   1.54e-08   3.63e-04  60.2%
+Sequential             2.27e-04   1.45e-05   6.19e-09   2.41e-04  38.5%
+Combinational          1.93e-04   1.93e-04   1.77e-08   3.85e-04  61.5%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  4.07e-04   1.97e-04   2.16e-08   6.03e-04 100.0%
-                          67.4%      32.6%       0.0%
+Total                  4.19e-04   2.07e-04   2.38e-08   6.27e-04 100.0%
+                          66.9%      33.1%       0.0%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 37855 u^2 59% utilization.
+Design area 42384 u^2 67% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/results/routing/mca/process_corner_nom/top_tile.sdf...
-Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_16_15_31/results/routing/mca/process_corner_nom/top_tile.lib...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_26_03_43/results/routing/mca/process_corner_nom/top_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/top_tile/runs/23_04_26_03_43/results/routing/mca/process_corner_nom/top_tile.lib...
 

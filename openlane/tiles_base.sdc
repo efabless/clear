@@ -20,9 +20,15 @@ create_clock [get_ports clk0]  -name clk0 -period 100
 set_propagated_clock [get_clocks prog_clk]
 set_propagated_clock [get_clocks clk0]
 
+set_clock_groups \
+   -name clock_group \
+   -logically_exclusive \
+   -group [get_clocks {clk0}] \
+   -group [get_clocks {prog_clk}] \
+   
 # CLOCK UNCERTAINTY
-set_clock_uncertainty 0.25 [get_clocks prog_clk]
-set_clock_uncertainty 0.25 [get_clocks clk0]
+set_clock_uncertainty 0.35 [get_clocks prog_clk]
+set_clock_uncertainty 0.35 [get_clocks clk0]
 
 # INPUT TRANSITION
 set_input_transition 0.5 [all_inputs]
@@ -38,11 +44,11 @@ set_input_delay 0.0 -clock [get_clocks prog_clk] [get_ports prog_clk]
 set_input_delay 0.0 -clock [get_clocks clk0] [get_ports clk0]
 
 ## OUTPUT DELAY
-set_output_delay 1.0 -clock [get_clocks prog_clk] [all_outputs]
-set_output_delay 1.0 -clock [get_clocks clk0] [all_outputs]
+set_output_delay 3.0 -clock [get_clocks prog_clk] [all_outputs]
+set_output_delay 3.0 -clock [get_clocks clk0] [all_outputs]
 
 # OUTPUT CAP
-set cap_load 0.12
+set cap_load 0.220
 set_load $cap_load [all_outputs]
 
 # DERATES

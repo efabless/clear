@@ -4,15 +4,15 @@
 ============================================================================
 Clock clk0
 Latency      CRPR       Skew
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.mem_ff_1_D_0.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_3.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_logic_out_0.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
    0.25
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
-   0.40      0.00      -0.16
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_7.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_1.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
+   0.40      0.00      -0.15
 
 Clock prog_clk
 Latency      CRPR       Skew
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
-   0.79
-grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.mem_frac_lut4_0_in_2.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
-   0.68     -0.03       0.08
+cby_8__8_.cby_8__8_.mem_right_ipin_15.sky130_fd_sc_hd__dfrtp_1_3_/CLK ^
+   0.81
+grid_clb_8__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__frac_logic_mode_default__frac_lut4_0.frac_lut4_sky130_fd_sc_hd__dfrtp_1_mem.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.68     -0.03       0.09
 

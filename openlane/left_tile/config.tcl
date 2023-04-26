@@ -18,3 +18,5 @@ set ::env(DIE_AREA) "0 0 135 285"
 set ::env(PL_TARGET_DENSITY) 0.42
 
 source $::env(DESIGN_DIR)/../tiles_base_config.tcl
+
+set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/$::env(DESIGN_NAME).v"

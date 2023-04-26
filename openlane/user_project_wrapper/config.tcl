@@ -83,3 +83,6 @@ set ::env(RUN_IRDROP_REPORT) 0
 
 ##
 set ::env(MAGIC_DEF_LABELS) 0
+
+## To prevent Z buffering
+set ::env(RSZ_DONT_TOUCH_RX) "gfpga_pad_io_soc_out|io_out|la_data_out"

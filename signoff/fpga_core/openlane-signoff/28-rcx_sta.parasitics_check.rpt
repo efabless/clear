@@ -5,38 +5,38 @@ report_parasitic_annotation -report_unannotated
 Found 34 unannotated drivers.
  tile_2__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_2__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_2__9__477/HI
- tile_2__9__478/HI
+ tile_2__9__349/HI
+ tile_2__9__350/HI
  tile_3__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_3__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_3__9__479/HI
- tile_3__9__480/HI
+ tile_3__9__351/HI
+ tile_3__9__352/HI
  tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_4__9__481/HI
- tile_4__9__482/HI
+ tile_4__9__353/HI
+ tile_4__9__354/HI
  tile_5__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_5__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_5__9__483/HI
- tile_5__9__484/HI
+ tile_5__9__355/HI
+ tile_5__9__356/HI
  tile_6__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_6__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_6__9__469/HI
- tile_6__9__485/HI
+ tile_6__9__341/HI
+ tile_6__9__357/HI
  tile_7__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_7__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_7__9__470/HI
- tile_7__9__471/HI
+ tile_7__9__342/HI
+ tile_7__9__343/HI
  tile_8__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_8__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
- tile_8__9__472/HI
- tile_8__9__473/HI
+ tile_8__9__344/HI
+ tile_8__9__345/HI
  tile_9__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
  tile_9__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
  tile_9__2_/sc_out
- tile_9__8__474/HI
- tile_9__9__475/HI
- tile_9__9__476/HI
+ tile_9__8__346/HI
+ tile_9__9__347/HI
+ tile_9__9__348/HI
 Found 107 partially unannotated drivers.
  input100/X
   ANTENNA_tile_7__1__gfpga_pad_io_soc_in[2]/DIODE
@@ -312,21 +312,21 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          8.54e-09   2.85e-08   1.26e-07   1.63e-07 100.0%
+Combinational          8.54e-09   2.85e-08   1.25e-07   1.62e-07 100.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  8.54e-09   2.85e-08   1.26e-07   1.63e-07 100.0%
-                           5.3%      17.5%      77.2%
+Total                  8.54e-09   2.85e-08   1.25e-07   1.62e-07 100.0%
+                           5.3%      17.6%      77.1%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 5285958 u^2 79% utilization.
+Design area 5283143 u^2 79% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_16_15_53/results/routing/mca/process_corner_nom/fpga_core.sdf...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_04_16/results/routing/mca/process_corner_nom/fpga_core.sdf...
 

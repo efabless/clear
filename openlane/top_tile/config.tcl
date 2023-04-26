@@ -15,6 +15,9 @@
 
 set ::env(DESIGN_NAME) top_tile
 set ::env(DIE_AREA) "0 0 255 285"
-set ::env(PL_TARGET_DENSITY) 0.44
+set ::env(PL_TARGET_DENSITY) 0.43
 
 source $::env(DESIGN_DIR)/../tiles_base_config.tcl
+
+set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/$::env(DESIGN_NAME).v"
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.15

@@ -291,6 +291,71 @@ Found 559 unannotated drivers.
  wbs_sel_i[3]
  wbs_stb_i
  wbs_we_i
+ _089_/HI
+ _090_/HI
+ _091_/HI
+ _092_/HI
+ _093_/HI
+ _094_/HI
+ _095_/HI
+ _096_/HI
+ _097_/HI
+ _098_/HI
+ _099_/HI
+ _100_/HI
+ _101_/HI
+ _102_/HI
+ _103_/HI
+ _104_/HI
+ _105_/HI
+ _106_/HI
+ _107_/HI
+ _108_/HI
+ _109_/HI
+ _110_/HI
+ _111_/HI
+ _112_/HI
+ _113_/HI
+ _114_/HI
+ _115_/HI
+ _116_/HI
+ _117_/HI
+ _118_/HI
+ _119_/HI
+ _120_/HI
+ _121_/HI
+ _122_/HI
+ _123_/HI
+ _124_/HI
+ _125_/HI
+ _126_/HI
+ _127_/HI
+ _128_/HI
+ _129_/HI
+ _130_/HI
+ _131_/HI
+ _132_/HI
+ _133_/HI
+ _134_/HI
+ _135_/HI
+ _136_/HI
+ _137_/HI
+ _138_/HI
+ _139_/HI
+ _140_/HI
+ _141_/HI
+ _142_/HI
+ _143_/HI
+ _144_/HI
+ _145_/HI
+ _146_/HI
+ _147_/HI
+ _148_/HI
+ _149_/HI
+ _150_/HI
+ _151_/HI
+ _152_/HI
+ _153_/HI
  fpga_core_uut/gfpga_pad_io_soc_dir[0]
  fpga_core_uut/gfpga_pad_io_soc_dir[100]
  fpga_core_uut/gfpga_pad_io_soc_dir[101]
@@ -421,147 +486,82 @@ Found 559 unannotated drivers.
  fpga_core_uut/gfpga_pad_io_soc_out[7]
  fpga_core_uut/gfpga_pad_io_soc_out[8]
  fpga_core_uut/gfpga_pad_io_soc_out[9]
- fpga_core_uut_639/HI
- fpga_core_uut_640/HI
- fpga_core_uut_641/HI
- fpga_core_uut_642/HI
- fpga_core_uut_643/HI
- fpga_core_uut_644/HI
- fpga_core_uut_645/HI
- fpga_core_uut_646/HI
- fpga_core_uut_647/HI
- fpga_core_uut_648/HI
- fpga_core_uut_649/HI
- fpga_core_uut_650/HI
- fpga_core_uut_651/HI
- fpga_core_uut_652/HI
- fpga_core_uut_653/HI
- fpga_core_uut_654/HI
- fpga_core_uut_655/HI
- fpga_core_uut_656/HI
- fpga_core_uut_657/HI
- fpga_core_uut_658/HI
- fpga_core_uut_659/HI
- fpga_core_uut_660/HI
- fpga_core_uut_661/HI
- fpga_core_uut_662/HI
- fpga_core_uut_663/HI
- fpga_core_uut_742/HI
- fpga_core_uut_743/HI
- fpga_core_uut_744/HI
- fpga_core_uut_745/HI
- user_project_wrapper_664/HI
- user_project_wrapper_665/HI
- user_project_wrapper_666/HI
- user_project_wrapper_667/HI
- user_project_wrapper_668/HI
- user_project_wrapper_669/HI
- user_project_wrapper_670/HI
- user_project_wrapper_671/HI
- user_project_wrapper_672/HI
- user_project_wrapper_673/HI
- user_project_wrapper_674/HI
- user_project_wrapper_675/HI
- user_project_wrapper_676/HI
- user_project_wrapper_677/HI
- user_project_wrapper_678/HI
- user_project_wrapper_679/HI
- user_project_wrapper_680/HI
- user_project_wrapper_681/HI
- user_project_wrapper_682/HI
- user_project_wrapper_683/HI
- user_project_wrapper_684/HI
- user_project_wrapper_685/HI
- user_project_wrapper_686/HI
- user_project_wrapper_687/HI
- user_project_wrapper_688/HI
- user_project_wrapper_689/HI
- user_project_wrapper_690/HI
- user_project_wrapper_691/HI
- user_project_wrapper_692/HI
- user_project_wrapper_693/HI
- user_project_wrapper_694/HI
- user_project_wrapper_695/HI
- user_project_wrapper_696/HI
- user_project_wrapper_697/HI
- user_project_wrapper_698/HI
- user_project_wrapper_699/HI
- user_project_wrapper_700/HI
- user_project_wrapper_701/HI
- user_project_wrapper_702/HI
- user_project_wrapper_703/HI
- user_project_wrapper_704/HI
- user_project_wrapper_705/HI
- user_project_wrapper_706/HI
- user_project_wrapper_707/HI
- user_project_wrapper_708/HI
- user_project_wrapper_709/HI
- user_project_wrapper_710/HI
- user_project_wrapper_711/HI
- user_project_wrapper_712/HI
- user_project_wrapper_713/HI
- user_project_wrapper_714/HI
- user_project_wrapper_715/HI
- user_project_wrapper_716/HI
- user_project_wrapper_717/HI
- user_project_wrapper_718/HI
- user_project_wrapper_719/HI
- user_project_wrapper_720/HI
- user_project_wrapper_721/HI
- user_project_wrapper_722/HI
- user_project_wrapper_723/HI
- user_project_wrapper_724/HI
- user_project_wrapper_725/HI
- user_project_wrapper_726/HI
- user_project_wrapper_727/HI
- user_project_wrapper_728/HI
- user_project_wrapper_729/HI
- user_project_wrapper_730/HI
- user_project_wrapper_731/HI
- user_project_wrapper_732/HI
- user_project_wrapper_733/HI
- user_project_wrapper_734/HI
- user_project_wrapper_735/HI
- user_project_wrapper_736/HI
- user_project_wrapper_737/HI
- user_project_wrapper_738/HI
- user_project_wrapper_739/HI
- user_project_wrapper_740/HI
- user_project_wrapper_741/HI
- user_project_wrapper_746/LO
- user_project_wrapper_747/LO
- user_project_wrapper_748/LO
- user_project_wrapper_749/LO
- user_project_wrapper_750/LO
- user_project_wrapper_751/LO
- user_project_wrapper_752/LO
- user_project_wrapper_753/LO
- user_project_wrapper_754/LO
- user_project_wrapper_755/LO
- user_project_wrapper_756/LO
- user_project_wrapper_757/LO
- user_project_wrapper_758/LO
- user_project_wrapper_759/LO
- user_project_wrapper_760/LO
- user_project_wrapper_761/LO
- user_project_wrapper_762/LO
- user_project_wrapper_763/LO
- user_project_wrapper_764/LO
- user_project_wrapper_765/LO
- user_project_wrapper_766/LO
- user_project_wrapper_767/LO
- user_project_wrapper_768/LO
- user_project_wrapper_769/LO
- user_project_wrapper_770/LO
- user_project_wrapper_771/LO
- user_project_wrapper_772/LO
- user_project_wrapper_773/LO
- user_project_wrapper_774/LO
- user_project_wrapper_775/LO
- user_project_wrapper_776/LO
- user_project_wrapper_777/LO
- user_project_wrapper_778/LO
- user_project_wrapper_779/LO
+ fpga_core_uut_350/HI
+ fpga_core_uut_351/HI
+ fpga_core_uut_352/HI
+ fpga_core_uut_353/HI
+ fpga_core_uut_354/HI
+ fpga_core_uut_355/HI
+ fpga_core_uut_356/HI
+ fpga_core_uut_357/HI
+ fpga_core_uut_358/HI
+ fpga_core_uut_359/HI
+ fpga_core_uut_360/HI
+ fpga_core_uut_361/HI
+ fpga_core_uut_362/HI
+ fpga_core_uut_363/HI
+ fpga_core_uut_364/HI
+ fpga_core_uut_365/HI
+ fpga_core_uut_366/HI
+ fpga_core_uut_367/HI
+ fpga_core_uut_368/HI
+ fpga_core_uut_369/HI
+ fpga_core_uut_370/HI
+ fpga_core_uut_371/HI
+ fpga_core_uut_372/HI
+ fpga_core_uut_373/HI
+ fpga_core_uut_374/HI
+ fpga_core_uut_388/HI
+ fpga_core_uut_389/HI
+ fpga_core_uut_390/HI
+ fpga_core_uut_391/HI
+ user_project_wrapper_375/HI
+ user_project_wrapper_376/HI
+ user_project_wrapper_377/HI
+ user_project_wrapper_378/HI
+ user_project_wrapper_379/HI
+ user_project_wrapper_380/HI
+ user_project_wrapper_381/HI
+ user_project_wrapper_382/HI
+ user_project_wrapper_383/HI
+ user_project_wrapper_384/HI
+ user_project_wrapper_385/HI
+ user_project_wrapper_386/HI
+ user_project_wrapper_387/HI
+ user_project_wrapper_392/LO
+ user_project_wrapper_393/LO
+ user_project_wrapper_394/LO
+ user_project_wrapper_395/LO
+ user_project_wrapper_396/LO
+ user_project_wrapper_397/LO
+ user_project_wrapper_398/LO
+ user_project_wrapper_399/LO
+ user_project_wrapper_400/LO
+ user_project_wrapper_401/LO
+ user_project_wrapper_402/LO
+ user_project_wrapper_403/LO
+ user_project_wrapper_404/LO
+ user_project_wrapper_405/LO
+ user_project_wrapper_406/LO
+ user_project_wrapper_407/LO
+ user_project_wrapper_408/LO
+ user_project_wrapper_409/LO
+ user_project_wrapper_410/LO
+ user_project_wrapper_411/LO
+ user_project_wrapper_412/LO
+ user_project_wrapper_413/LO
+ user_project_wrapper_414/LO
+ user_project_wrapper_415/LO
+ user_project_wrapper_416/LO
+ user_project_wrapper_417/LO
+ user_project_wrapper_418/LO
+ user_project_wrapper_419/LO
+ user_project_wrapper_420/LO
+ user_project_wrapper_421/LO
+ user_project_wrapper_422/LO
+ user_project_wrapper_423/LO
+ user_project_wrapper_424/LO
+ user_project_wrapper_425/LO
 Found 99 partially unannotated drivers.
  input10/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[15]/DIODE
@@ -591,175 +591,175 @@ Found 99 partially unannotated drivers.
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[36]/DIODE
  input9/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[16]/DIODE
- wire237/X
+ wire136/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[84]/DIODE
- wire239/X
+ wire138/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[85]/DIODE
- wire241/X
+ wire140/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[86]/DIODE
- wire243/X
+ wire142/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[87]/DIODE
- wire245/X
+ wire144/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[88]/DIODE
- wire247/X
+ wire146/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[89]/DIODE
- wire249/X
+ wire148/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[90]/DIODE
- wire251/X
+ wire150/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[91]/DIODE
- wire253/X
+ wire152/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[92]/DIODE
- wire255/X
+ wire154/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[93]/DIODE
- wire257/X
+ wire156/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[94]/DIODE
- wire260/X
+ wire159/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[95]/DIODE
- wire263/X
+ wire162/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[96]/DIODE
- wire266/X
+ wire165/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[97]/DIODE
- wire269/X
+ wire168/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[98]/DIODE
- wire272/X
+ wire171/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[99]/DIODE
- wire275/X
+ wire174/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[100]/DIODE
- wire278/X
+ wire177/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[101]/DIODE
- wire281/X
+ wire180/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[102]/DIODE
- wire284/X
+ wire183/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[103]/DIODE
- wire287/X
+ wire186/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[17]/DIODE
- wire288/X
+ wire187/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[104]/DIODE
- wire291/X
+ wire190/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[105]/DIODE
- wire295/X
+ wire194/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[106]/DIODE
- wire299/X
+ wire198/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[107]/DIODE
- wire303/X
+ wire202/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[108]/DIODE
- wire307/X
+ wire206/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[109]/DIODE
- wire311/X
+ wire210/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[110]/DIODE
- wire315/X
+ wire214/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[111]/DIODE
- wire319/X
+ wire218/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[112]/DIODE
- wire323/X
+ wire222/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[113]/DIODE
- wire327/X
+ wire226/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[18]/DIODE
- wire328/X
+ wire227/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[114]/DIODE
- wire332/X
+ wire231/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[115]/DIODE
- wire336/X
+ wire235/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[116]/DIODE
- wire341/X
+ wire240/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[117]/DIODE
- wire346/X
+ wire245/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[118]/DIODE
- wire351/X
+ wire250/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[47]/DIODE
- wire354/X
+ wire253/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[48]/DIODE
- wire357/X
+ wire256/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[49]/DIODE
- wire360/X
+ wire259/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[50]/DIODE
- wire363/X
+ wire262/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[51]/DIODE
- wire365/X
+ wire264/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[19]/DIODE
- wire366/X
+ wire265/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[52]/DIODE
- wire368/X
+ wire267/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[53]/DIODE
- wire370/X
+ wire269/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[54]/DIODE
- wire372/X
+ wire271/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[55]/DIODE
- wire374/X
+ wire273/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[56]/DIODE
- wire376/X
+ wire275/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[57]/DIODE
- wire378/X
+ wire277/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[58]/DIODE
- wire379/X
+ wire278/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[59]/DIODE
- wire380/X
+ wire279/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[60]/DIODE
- wire381/X
+ wire280/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[61]/DIODE
- wire382/X
+ wire281/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[62]/DIODE
- wire383/X
+ wire282/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[63]/DIODE
- wire384/X
+ wire283/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[64]/DIODE
- wire385/X
+ wire284/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[65]/DIODE
- wire386/X
+ wire285/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[66]/DIODE
- wire387/X
+ wire286/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[67]/DIODE
- wire388/X
+ wire287/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[68]/DIODE
- wire389/X
+ wire288/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[73]/DIODE
- wire390/X
+ wire289/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[74]/DIODE
- wire391/X
+ wire290/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[39]/DIODE
- wire392/X
+ wire291/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[40]/DIODE
- wire394/X
+ wire293/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[41]/DIODE
- wire396/X
+ wire295/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[42]/DIODE
- wire398/X
+ wire297/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[43]/DIODE
- wire400/X
+ wire299/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[44]/DIODE
- wire402/X
+ wire301/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[38]/DIODE
- wire403/X
+ wire302/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[119]/DIODE
- wire405/X
+ wire304/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[120]/DIODE
- wire407/X
+ wire306/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[121]/DIODE
- wire408/X
+ wire307/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[122]/DIODE
- wire409/X
+ wire308/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[45]/DIODE
- wire412/X
+ wire311/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[123]/DIODE
- wire413/X
+ wire312/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[75]/DIODE
- wire414/X
+ wire313/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[76]/DIODE
- wire415/X
+ wire314/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[77]/DIODE
- wire416/X
+ wire315/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[78]/DIODE
- wire417/X
+ wire316/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[79]/DIODE
- wire418/X
+ wire317/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[80]/DIODE
- wire419/X
+ wire318/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[81]/DIODE
- wire420/X
+ wire319/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[82]/DIODE
- wire421/X
+ wire320/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[83]/DIODE
- wire422/X
+ wire321/X
   ANTENNA_fpga_core_uut_gfpga_pad_io_soc_in[46]/DIODE
 parastic_annotation_check
 check_slew
@@ -767,18 +767,10 @@ check_slew
 ===========================================================================
  report_check_types -max_slew -max_cap -max_fanout -violators
 ============================================================================
-max fanout
-
-Pin                                   Limit Fanout  Slack
----------------------------------------------------------
-wire485/X                                20     44    -24 (VIOLATED)
-wire486/X                                20     44    -24 (VIOLATED)
-wire487/X                                20     44    -24 (VIOLATED)
-
 
 ===========================================================================
 max slew violation count 0
-max fanout violation count 3
+max fanout violation count 0
 max cap violation count 0
 ============================================================================
 check_slew_end
@@ -826,21 +818,21 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
+Combinational          5.50e-05   1.15e-04   1.72e-07   1.70e-04 100.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  5.50e-05   1.15e-04   1.74e-07   1.70e-04 100.0%
-                          32.2%      67.7%       0.1%
+Total                  5.50e-05   1.15e-04   1.72e-07   1.70e-04 100.0%
+                          32.4%      67.5%       0.1%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 6789398 u^2 67% utilization.
+Design area 6784722 u^2 67% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_16_16_38/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_26_05_13/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
 
