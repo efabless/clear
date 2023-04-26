@@ -20,6 +20,12 @@ create_clock [get_ports clk0]  -name clk0 -period 100
 set_propagated_clock [get_clocks prog_clk]
 set_propagated_clock [get_clocks clk0]
 
+set_clock_groups \
+   -name clock_group \
+   -logically_exclusive \
+   -group [get_clocks {clk0}] \
+   -group [get_clocks {prog_clk}] \
+
 # CLOCK UNCERTAINTY
 set_clock_uncertainty 0.1 [get_clocks prog_clk]
 set_clock_uncertainty 0.1 [get_clocks clk0]
