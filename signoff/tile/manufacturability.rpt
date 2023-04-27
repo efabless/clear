@@ -1,19 +1,19 @@
 Design Name: tile
-Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25
+Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_26_17_49
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/reports/signoff/drc.rpt
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_26_17_49/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/logs/signoff/34-tile.lef.lvs.log
-Number of nets: 2770                       |Number of nets: 2770                       
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_26_17_49/logs/signoff/34-tile.lef.lvs.log
+Number of nets: 3200                       |Number of nets: 3200                       
 Design is LVS clean.
 ----------------------------------------
 
 Antenna Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_16_15_25/logs/signoff/36-antenna.log
-Pin violations: 0
-Net violations: 0
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/tile/runs/23_04_26_17_49/logs/signoff/36-antenna.log
+Pin violations: 1
+Net violations: 1
