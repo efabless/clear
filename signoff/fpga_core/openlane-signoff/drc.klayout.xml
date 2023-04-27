@@ -1,10 +1,543 @@
 <?xml version="1.0" ?>
 <report-database>
-    <categories/>
+    <categories>
+        <category>
+            <name>Metal2_spacing_lt_0dot14um_met2dot2</name>
+        </category>
+    </categories>
     <cells>
         <cell>
             <name>fpga_core</name>
         </cell>
     </cells>
-    <items/>
+    <items>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,195.500;2107.770,195.525)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,195.015;2107.910,195.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,195.015;2107.910,195.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,195.200;2107.910,195.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,195.480;2107.910,195.500)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,195.480;2107.770,195.525)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,195.200;2107.770,195.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,195.155;2107.770,195.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,510.340;2107.770,510.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,510.015;2107.910,510.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,510.015;2107.910,510.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,510.200;2107.910,510.340)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,510.200;2107.770,510.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,510.155;2107.770,510.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,825.015;2107.910,825.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,825.200;2107.770,825.320)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,825.180;2107.770,825.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,825.015;2107.910,825.180)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,825.200;2107.770,825.320)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,825.155;2107.770,825.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1140.525;2107.910,1140.665)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1140.015;2107.910,1140.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1140.015;2107.910,1140.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1140.200;2107.910,1140.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1140.480;2107.910,1140.665)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1140.480;2107.770,1140.525)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1140.200;2107.770,1140.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1140.155;2107.770,1140.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1455.525;2107.910,1455.540)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1455.015;2107.910,1455.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1455.015;2107.910,1455.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1455.200;2107.910,1455.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1455.480;2107.910,1455.540)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1455.480;2107.770,1455.525)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1455.200;2107.770,1455.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1455.155;2107.770,1455.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1770.380;2107.770,1770.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1770.015;2107.910,1770.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1770.015;2107.910,1770.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,1770.200;2107.910,1770.380)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1770.200;2107.770,1770.480)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,1770.155;2107.770,1770.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,2085.220;2107.770,2085.360)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,2085.015;2107.910,2085.155)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,2085.015;2107.910,2085.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.880,2085.200;2107.910,2085.220)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,2085.200;2107.770,2085.360)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+        <item>
+            <category>Metal2_spacing_lt_0dot14um_met2dot2</category>
+            <cell>fpga_core</cell>
+            <visited>false</visited>
+            <multiplicity>1</multiplicity>
+            <values>
+                <value>box: (2107.740,2085.155;2107.770,2085.200)</value>
+                <value>text: 'On layer met2'</value>
+                <value>text: 'Between N/A N/A'</value>
+            </values>
+        </item>
+    </items>
 </report-database>
