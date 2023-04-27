@@ -1,17 +1,17 @@
-CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/reports/signoff/left_tile.rpt
-CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/reports/signoff/left_tile.rpt.error.gz
-CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/reports/signoff/left_tile.rpt.debug.gz
+CVC: Log output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/reports/signoff/left_tile.rpt
+CVC: Error output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/reports/signoff/left_tile.rpt.error.gz
+CVC: Debug output to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/reports/signoff/left_tile.rpt.debug.gz
 CVC: Circuit Validation Check  Version 1.1.4
-CVC: Start: Wed Apr 26 10:55:33 2023
+CVC: Start: Thu Apr 27 01:03:06 2023
 
 Using the following parameters for CVC (Circuit Validation Check) from /home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/cvcrc
 CVC_TOP = 'left_tile'
-CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/tmp/signoff/left_tile.cdl'
+CVC_NETLIST = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/tmp/signoff/left_tile.cdl'
 CVC_MODE = 'left_tile'
 CVC_MODEL_FILE = '/home/hosni/OpenFPGA/pdk/sky130A/libs.tech/openlane/cvc/models'
-CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/tmp/signoff/left_tile.power'
+CVC_POWER_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/tmp/signoff/left_tile.power'
 CVC_FUSE_FILE = ''
-CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/reports/signoff/left_tile.rpt'
+CVC_REPORT_FILE = '/home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/reports/signoff/left_tile.rpt'
 CVC_REPORT_TITLE = 'CVC $CVC_TOP'
 CVC_CIRCUIT_ERROR_LIMIT = '100'
 CVC_SEARCH_LIMIT = '100'
@@ -45,7 +45,7 @@ End of parameters
 
 CVC: Reading device model settings...
 CVC: Reading power settings...
-CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_03_53/tmp/signoff/left_tile.cdl
-Cdl fixed data size 157273
-Usage CDL: Time: 0  Memory: 10988  I/O: 8  Swap: 0
+CVC: Parsing netlist /home/hosni/OpenFPGA/erc-fixes/clear/openlane/left_tile/runs/23_04_26_18_01/tmp/signoff/left_tile.cdl
+Cdl fixed data size 150875
+Usage CDL: Time: 0  Memory: 12708  I/O: 8  Swap: 0
 CVC: Counting and linking...

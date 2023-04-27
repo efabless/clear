@@ -20,3 +20,5 @@ set ::env(PL_TARGET_DENSITY) 0.50
 source $::env(DESIGN_DIR)/../tiles_base_config.tcl
 
 set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/$::env(DESIGN_NAME).v"
+
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.05

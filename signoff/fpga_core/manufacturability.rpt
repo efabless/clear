@@ -1,19 +1,18 @@
 Design Name: fpga_core
-Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_04_16
+Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_18_11
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_04_16/reports/signoff/drc.rpt
-Total Magic DRC violations is 0
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_18_11/reports/signoff/drc.rpt
+Violation Message "Metal2 spacing < 0.14um (met2.2) "found 48 Times.
+Total Magic DRC violations is 48
 ----------------------------------------
 
 LVS Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_04_16/logs/signoff/33-fpga_core.lef.lvs.log
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_18_11/logs/signoff/33-fpga_core.lef.lvs.log
 Number of nets: 11006                      |Number of nets: 11006                      
 Design is LVS clean.
 ----------------------------------------
 
 Antenna Summary:
-Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_26_04_16/logs/signoff/35-antenna.log
-Pin violations: 1
-Net violations: 1
+No antenna report found.
