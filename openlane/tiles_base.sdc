@@ -38,14 +38,12 @@ set_clock_transition 0.5 [get_clocks prog_clk]
 set_clock_transition 0.5 [get_clocks clk0]
 
 ## INPUT DELAY
-set_input_delay -1.0 -clock [get_clocks prog_clk] [all_inputs]
-set_input_delay -1.5 -clock [get_clocks clk0] [all_inputs]
-set_input_delay 0.0 -clock [get_clocks prog_clk] [get_ports prog_clk]
-set_input_delay 0.0 -clock [get_clocks clk0] [get_ports clk0]
+set_input_delay -2.0 -clock [get_clocks clk0] [all_inputs]
+set_input_delay -3.5 -clock [get_clocks prog_clk] [get_ports {ccff_hea*}]
 
 ## OUTPUT DELAY
-set_output_delay 3.0 -clock [get_clocks prog_clk] [all_outputs]
 set_output_delay 3.0 -clock [get_clocks clk0] [all_outputs]
+set_output_delay 3.0 -clock [get_clocks prog_clk] [get_ports {ccff_tai*}]
 
 # OUTPUT CAP
 set cap_load 0.220
@@ -54,3 +52,13 @@ set_load $cap_load [all_outputs]
 # DERATES
 set_timing_derate -early 0.92
 set_timing_derate -late 1.08
+
+# Max tran
+set_max_transition 0.6 [current_design]
+
+# Max fanout
+set_max_fanout 14 [current_design]
+
+# set_false_path -from [get_ports {reset}]
+# set_false_path -from [get_ports {prog_reset}]
+# set_false_path -from [get_ports {test_enable}]
