@@ -7,13 +7,13 @@ from cocotb.clock import Clock
 @cocotb.test()
 @repot_test
 async def counter(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=138059)
+    caravelEnv = await test_configure(dut, timeout_cycles=161643)
     period_op = 100
     fpga_clear = Clear(caravelEnv, period_op=period_op)
     user_project_root = cocotb.plusargs["USER_PROJECT_ROOT"].replace('"', "")
     bit_stream_path = f"{user_project_root}/verilog/dv/cocotb/bit_streams/"
     await fpga_clear.program_fpga(
-        bit_stream_file=f"{bit_stream_path}/counter.bit", prog_backdoor=True
+        bit_stream_file=f"{bit_stream_path}/counter.bit", prog_backdoor=False if "GL_SDF" in cocotb.plusargs else True
     )
     """"
     IO Mapping
