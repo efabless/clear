@@ -818,21 +818,21 @@ Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
 Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
-Combinational          5.50e-05   1.15e-04   1.72e-07   1.70e-04 100.0%
+Combinational          5.50e-05   1.16e-04   1.72e-07   1.71e-04 100.0%
 Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
 ----------------------------------------------------------------
-Total                  5.50e-05   1.15e-04   1.72e-07   1.70e-04 100.0%
-                          32.4%      67.5%       0.1%
+Total                  5.50e-05   1.16e-04   1.72e-07   1.71e-04 100.0%
+                          32.2%      67.7%       0.1%
 power_report_end
 area_report
 
 ===========================================================================
  report_design_area
 ============================================================================
-Design area 6784722 u^2 67% utilization.
+Design area 6784715 u^2 67% utilization.
 area_report_end
 Setting global connections for newly added cells...
 [WARNING] Did not save OpenROAD database!
-Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_26_19_01/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_28_18_40/results/routing/mca/process_corner_nom/user_project_wrapper.sdf...
 
