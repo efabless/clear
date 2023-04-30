@@ -1,0 +1,19 @@
+Design Name: user_project_wrapper
+Run Directory: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_28_18_40
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_28_18_40/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_28_18_40/logs/signoff/33-user_project_wrapper.lef.lvs.log
+Number of nets: 1003                       |Number of nets: 1003                       
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /home/hosni/OpenFPGA/erc-fixes/clear/openlane/user_project_wrapper/runs/23_04_28_18_40/logs/signoff/35-antenna.log
+Pin violations: 0
+Net violations: 0

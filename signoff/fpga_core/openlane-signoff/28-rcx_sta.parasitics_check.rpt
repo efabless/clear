@@ -1,0 +1,332 @@
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 34 unannotated drivers.
+ tile_2__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_2__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_2__9__349/HI
+ tile_2__9__350/HI
+ tile_3__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_3__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_3__9__351/HI
+ tile_3__9__352/HI
+ tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_4__9__353/HI
+ tile_4__9__354/HI
+ tile_5__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_5__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_5__9__355/HI
+ tile_5__9__356/HI
+ tile_6__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_6__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_6__9__341/HI
+ tile_6__9__357/HI
+ tile_7__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_7__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_7__9__342/HI
+ tile_7__9__343/HI
+ tile_8__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_8__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_8__9__344/HI
+ tile_8__9__345/HI
+ tile_9__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_
+ tile_9__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_
+ tile_9__2_/sc_out
+ tile_9__8__346/HI
+ tile_9__9__347/HI
+ tile_9__9__348/HI
+Found 107 partially unannotated drivers.
+ input100/X
+  ANTENNA_tile_7__1__gfpga_pad_io_soc_in[2]/DIODE
+ input101/X
+  ANTENNA_tile_7__1__gfpga_pad_io_soc_in[1]/DIODE
+ input102/X
+  ANTENNA_tile_7__1__gfpga_pad_io_soc_in[0]/DIODE
+ input103/X
+  ANTENNA_tile_6__1__gfpga_pad_io_soc_in[3]/DIODE
+ input104/X
+  ANTENNA_tile_6__1__gfpga_pad_io_soc_in[2]/DIODE
+ input105/X
+  ANTENNA_tile_6__1__gfpga_pad_io_soc_in[1]/DIODE
+ input108/X
+  ANTENNA_tile_5__1__gfpga_pad_io_soc_in[3]/DIODE
+ input109/X
+  ANTENNA_tile_5__1__gfpga_pad_io_soc_in[2]/DIODE
+ input11/X
+  ANTENNA_tile_1__5__gfpga_pad_io_soc_in[3]/DIODE
+ input112/X
+  ANTENNA_tile_4__1__gfpga_pad_io_soc_in[3]/DIODE
+ input115/X
+  ANTENNA_tile_4__1__gfpga_pad_io_soc_in[0]/DIODE
+ input118/X
+  ANTENNA_tile_4__9__gfpga_pad_io_soc_in[3]/DIODE
+ input119/X
+  ANTENNA_tile_3__1__gfpga_pad_io_soc_in[1]/DIODE
+ input12/X
+  ANTENNA_tile_1__5__gfpga_pad_io_soc_in[2]/DIODE
+ input120/X
+  ANTENNA_tile_3__1__gfpga_pad_io_soc_in[0]/DIODE
+ input122/X
+  ANTENNA_tile_2__1__gfpga_pad_io_soc_in[2]/DIODE
+ input123/X
+  ANTENNA_tile_2__1__gfpga_pad_io_soc_in[1]/DIODE
+ input124/X
+  ANTENNA_tile_2__1__gfpga_pad_io_soc_in[0]/DIODE
+ input125/X
+  ANTENNA_tile_1__2__gfpga_pad_io_soc_in[3]/DIODE
+ input126/X
+  ANTENNA_tile_1__2__gfpga_pad_io_soc_in[2]/DIODE
+ input127/X
+  ANTENNA_tile_1__2__gfpga_pad_io_soc_in[1]/DIODE
+ input129/X
+  ANTENNA_tile_4__9__gfpga_pad_io_soc_in[2]/DIODE
+ input13/X
+  ANTENNA_tile_4__9__gfpga_pad_io_soc_in[1]/DIODE
+ input14/X
+  ANTENNA_tile_1__5__gfpga_pad_io_soc_in[1]/DIODE
+ input16/X
+  ANTENNA_tile_1__6__gfpga_pad_io_soc_in[3]/DIODE
+ input17/X
+  ANTENNA_tile_1__6__gfpga_pad_io_soc_in[2]/DIODE
+ input2/X
+  ANTENNA_tile_2__9__gfpga_pad_io_soc_in[3]/DIODE
+ input20/X
+  ANTENNA_tile_1__7__gfpga_pad_io_soc_in[3]/DIODE
+ input21/X
+  ANTENNA_tile_1__7__gfpga_pad_io_soc_in[2]/DIODE
+ input24/X
+  ANTENNA_tile_4__9__gfpga_pad_io_soc_in[0]/DIODE
+ input25/X
+  ANTENNA_tile_1__8__gfpga_pad_io_soc_in[3]/DIODE
+ input26/X
+  ANTENNA_tile_1__8__gfpga_pad_io_soc_in[2]/DIODE
+ input29/X
+  ANTENNA_tile_1__9__gfpga_pad_io_soc_in[3]/DIODE
+ input3/X
+  ANTENNA_tile_1__3__gfpga_pad_io_soc_in[3]/DIODE
+ input30/X
+  ANTENNA_tile_1__9__gfpga_pad_io_soc_in[2]/DIODE
+ input31/X
+  ANTENNA_tile_1__9__gfpga_pad_io_soc_in[1]/DIODE
+ input32/X
+  ANTENNA_tile_1__9__gfpga_pad_io_soc_in[0]/DIODE
+ input33/X
+  ANTENNA_tile_5__9__gfpga_pad_io_soc_in[3]/DIODE
+ input34/X
+  ANTENNA_tile_5__9__gfpga_pad_io_soc_in[2]/DIODE
+ input35/X
+  ANTENNA_tile_5__9__gfpga_pad_io_soc_in[1]/DIODE
+ input36/X
+  ANTENNA_tile_5__9__gfpga_pad_io_soc_in[0]/DIODE
+ input37/X
+  ANTENNA_tile_6__9__gfpga_pad_io_soc_in[3]/DIODE
+ input38/X
+  ANTENNA_tile_6__9__gfpga_pad_io_soc_in[2]/DIODE
+ input39/X
+  ANTENNA_tile_6__9__gfpga_pad_io_soc_in[1]/DIODE
+ input4/X
+  ANTENNA_tile_1__3__gfpga_pad_io_soc_in[2]/DIODE
+ input40/X
+  ANTENNA_tile_6__9__gfpga_pad_io_soc_in[0]/DIODE
+ input41/X
+  ANTENNA_tile_2__9__gfpga_pad_io_soc_in[2]/DIODE
+ input42/X
+  ANTENNA_tile_7__9__gfpga_pad_io_soc_in[3]/DIODE
+ input43/X
+  ANTENNA_tile_7__9__gfpga_pad_io_soc_in[2]/DIODE
+ input44/X
+  ANTENNA_tile_7__9__gfpga_pad_io_soc_in[1]/DIODE
+ input45/X
+  ANTENNA_tile_7__9__gfpga_pad_io_soc_in[0]/DIODE
+ input46/X
+  ANTENNA_tile_8__9__gfpga_pad_io_soc_in[3]/DIODE
+ input47/X
+  ANTENNA_tile_8__9__gfpga_pad_io_soc_in[2]/DIODE
+ input48/X
+  ANTENNA_tile_8__9__gfpga_pad_io_soc_in[1]/DIODE
+ input49/X
+  ANTENNA_tile_8__9__gfpga_pad_io_soc_in[0]/DIODE
+ input5/X
+  ANTENNA_tile_1__3__gfpga_pad_io_soc_in[1]/DIODE
+ input50/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in[3]/DIODE
+ input51/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in[2]/DIODE
+ input52/X
+  ANTENNA_tile_2__9__gfpga_pad_io_soc_in[1]/DIODE
+ input53/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in[1]/DIODE
+ input54/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in[0]/DIODE
+ input55/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in_0[3]/DIODE
+ input56/X
+  ANTENNA_tile_9__9__gfpga_pad_io_soc_in_0[2]/DIODE
+ input59/X
+  ANTENNA_tile_9__8__gfpga_pad_io_soc_in[3]/DIODE
+ input60/X
+  ANTENNA_tile_9__8__gfpga_pad_io_soc_in[2]/DIODE
+ input61/X
+  ANTENNA_tile_9__8__gfpga_pad_io_soc_in[1]/DIODE
+ input62/X
+  ANTENNA_tile_9__8__gfpga_pad_io_soc_in[0]/DIODE
+ input63/X
+  ANTENNA_tile_2__9__gfpga_pad_io_soc_in[0]/DIODE
+ input64/X
+  ANTENNA_tile_9__7__gfpga_pad_io_soc_in[3]/DIODE
+ input65/X
+  ANTENNA_tile_9__7__gfpga_pad_io_soc_in[2]/DIODE
+ input66/X
+  ANTENNA_tile_9__7__gfpga_pad_io_soc_in[1]/DIODE
+ input67/X
+  ANTENNA_tile_9__7__gfpga_pad_io_soc_in[0]/DIODE
+ input68/X
+  ANTENNA_tile_9__6__gfpga_pad_io_soc_in[3]/DIODE
+ input69/X
+  ANTENNA_tile_9__6__gfpga_pad_io_soc_in[2]/DIODE
+ input7/X
+  ANTENNA_tile_1__4__gfpga_pad_io_soc_in[3]/DIODE
+ input70/X
+  ANTENNA_tile_9__6__gfpga_pad_io_soc_in[1]/DIODE
+ input71/X
+  ANTENNA_tile_9__6__gfpga_pad_io_soc_in[0]/DIODE
+ input72/X
+  ANTENNA_tile_9__5__gfpga_pad_io_soc_in[3]/DIODE
+ input73/X
+  ANTENNA_tile_9__5__gfpga_pad_io_soc_in[2]/DIODE
+ input74/X
+  ANTENNA_tile_3__9__gfpga_pad_io_soc_in[3]/DIODE
+ input75/X
+  ANTENNA_tile_9__5__gfpga_pad_io_soc_in[1]/DIODE
+ input76/X
+  ANTENNA_tile_9__5__gfpga_pad_io_soc_in[0]/DIODE
+ input77/X
+  ANTENNA_tile_9__4__gfpga_pad_io_soc_in[3]/DIODE
+ input78/X
+  ANTENNA_tile_9__4__gfpga_pad_io_soc_in[2]/DIODE
+ input79/X
+  ANTENNA_tile_9__4__gfpga_pad_io_soc_in[1]/DIODE
+ input8/X
+  ANTENNA_tile_1__4__gfpga_pad_io_soc_in[2]/DIODE
+ input80/X
+  ANTENNA_tile_9__4__gfpga_pad_io_soc_in[0]/DIODE
+ input81/X
+  ANTENNA_tile_9__3__gfpga_pad_io_soc_in[3]/DIODE
+ input82/X
+  ANTENNA_tile_9__3__gfpga_pad_io_soc_in[2]/DIODE
+ input83/X
+  ANTENNA_tile_9__3__gfpga_pad_io_soc_in[1]/DIODE
+ input84/X
+  ANTENNA_tile_9__3__gfpga_pad_io_soc_in[0]/DIODE
+ input85/X
+  ANTENNA_tile_3__9__gfpga_pad_io_soc_in[2]/DIODE
+ input86/X
+  ANTENNA_tile_9__2__gfpga_pad_io_soc_in[3]/DIODE
+ input87/X
+  ANTENNA_tile_9__2__gfpga_pad_io_soc_in[2]/DIODE
+ input88/X
+  ANTENNA_tile_9__2__gfpga_pad_io_soc_in[1]/DIODE
+ input89/X
+  ANTENNA_tile_9__2__gfpga_pad_io_soc_in[0]/DIODE
+ input9/X
+  ANTENNA_tile_1__4__gfpga_pad_io_soc_in[1]/DIODE
+ input90/X
+  ANTENNA_tile_9__1__gfpga_pad_io_soc_in[3]/DIODE
+ input91/X
+  ANTENNA_tile_9__1__gfpga_pad_io_soc_in[2]/DIODE
+ input92/X
+  ANTENNA_tile_9__1__gfpga_pad_io_soc_in[1]/DIODE
+ input93/X
+  ANTENNA_tile_9__1__gfpga_pad_io_soc_in[0]/DIODE
+ input94/X
+  ANTENNA_tile_8__1__gfpga_pad_io_soc_in[3]/DIODE
+ input95/X
+  ANTENNA_tile_8__1__gfpga_pad_io_soc_in[2]/DIODE
+ input96/X
+  ANTENNA_tile_3__9__gfpga_pad_io_soc_in[1]/DIODE
+ input97/X
+  ANTENNA_tile_8__1__gfpga_pad_io_soc_in[1]/DIODE
+ input98/X
+  ANTENNA_tile_8__1__gfpga_pad_io_soc_in[0]/DIODE
+ input99/X
+  ANTENNA_tile_7__1__gfpga_pad_io_soc_in[3]/DIODE
+parastic_annotation_check
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack INF
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack INF
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk
+No launch/capture paths found.
+
+Clock prog_clk
+No launch/capture paths found.
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          8.54e-09   2.83e-08   1.25e-07   1.62e-07 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  8.54e-09   2.83e-08   1.25e-07   1.62e-07 100.0%
+                           5.3%      17.5%      77.2%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 5283143 u^2 79% utilization.
+area_report_end
+Setting global connections for newly added cells...
+[WARNING] Did not save OpenROAD database!
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/fpga_core/runs/23_04_28_17_50/results/routing/mca/process_corner_nom/fpga_core.sdf...
+

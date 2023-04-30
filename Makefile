@@ -15,19 +15,26 @@
 # SPDX-License-Identifier: Apache-2.0
 MAKEFLAGS+=--warn-undefined-variables
 
-CARAVEL_ROOT?=$(PWD)/caravel
+export CARAVEL_ROOT?=$(PWD)/caravel
 PRECHECK_ROOT?=${HOME}/mpw_precheck
-MCW_ROOT?=$(PWD)/mgmt_core_wrapper
+export MCW_ROOT?=$(PWD)/mgmt_core_wrapper
 SIM?=RTL
 
-export SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
-export OPEN_PDKS_COMMIT=41c0908b47130d5675ff8484255b43f66463a7d6
-export OPENLANE_TAG?=2022.06.24_01.37.58
-
 # Install lite version of caravel, (1): caravel-lite, (0): caravel
-CARAVEL_LITE?=0
+CARAVEL_LITE?=1
 
-MPW_TAG ?= main 
+# PDK switch varient
+export PDK?=sky130A
+#export PDK?=gf180mcuC
+export PDKPATH?=$(PDK_ROOT)/$(PDK)
+
+
+
+ifeq ($(PDK),sky130A)
+	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
+	export OPEN_PDKS_COMMIT?=e6f9c8876da77220403014b116761b0b2d79aab4
+	export OPENLANE_TAG?=2023.02.23
+	MPW_TAG ?= mpw-9c
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -37,6 +44,38 @@ else
 	CARAVEL_NAME := caravel
 	CARAVEL_REPO := https://github.com/efabless/caravel
 	CARAVEL_TAG := $(MPW_TAG)
+endif
+
+endif
+
+ifeq ($(PDK),sky130B)
+	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
+	export OPEN_PDKS_COMMIT?=e6f9c8876da77220403014b116761b0b2d79aab4
+	export OPENLANE_TAG?=2023.02.23
+	MPW_TAG ?= mpw-9c
+
+ifeq ($(CARAVEL_LITE),1)
+	CARAVEL_NAME := caravel-lite
+	CARAVEL_REPO := https://github.com/efabless/caravel-lite
+	CARAVEL_TAG := $(MPW_TAG)
+else
+	CARAVEL_NAME := caravel
+	CARAVEL_REPO := https://github.com/efabless/caravel
+	CARAVEL_TAG := $(MPW_TAG)
+endif
+
+endif
+
+ifeq ($(PDK),gf180mcuC)
+
+	MPW_TAG ?= gfmpw-0b
+	CARAVEL_NAME := caravel
+	CARAVEL_REPO := https://github.com/efabless/caravel-gf180mcu
+	CARAVEL_TAG := $(MPW_TAG)
+	#OPENLANE_TAG=ddfeab57e3e8769ea3d40dda12be0460e09bb6d9
+	export OPEN_PDKS_COMMIT?=e6f9c8876da77220403014b116761b0b2d79aab4
+	export OPENLANE_TAG?=2023.02.23
+
 endif
 
 # Include Caravel Makefile Targets
@@ -59,13 +98,13 @@ simenv:
 	docker pull efabless/dv:latest
 
 .PHONY: setup
-setup: install check-env install_mcw openlane pdk-with-volare
+setup: install check-env install_mcw openlane pdk-with-volare setup-timing-scripts
 
 # Openlane
 blocks=$(shell cd openlane && find * -maxdepth 0 -type d)
 .PHONY: $(blocks)
 $(blocks): % :
-	export CARAVEL_ROOT=$(CARAVEL_ROOT) && cd openlane && $(MAKE) $*
+	$(MAKE) -C openlane $*
 
 dv_patterns=$(shell cd verilog/dv && find * -maxdepth 0 -type d)
 dv-targets-rtl=$(dv_patterns:%=verify-%-rtl)
@@ -78,13 +117,15 @@ dv_base_dependencies=simenv
 docker_run_verify=\
 	docker run -v ${TARGET_PATH}:${TARGET_PATH} -v ${PDK_ROOT}:${PDK_ROOT} \
 		-v ${CARAVEL_ROOT}:${CARAVEL_ROOT} \
+		-v ${MCW_ROOT}:${MCW_ROOT} \
 		-e TARGET_PATH=${TARGET_PATH} -e PDK_ROOT=${PDK_ROOT} \
 		-e CARAVEL_ROOT=${CARAVEL_ROOT} \
 		-e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 \
-		-e GCC_PREFIX=riscv32-unknown-linux-gnu \
 		-e DESIGNS=$(TARGET_PATH) \
+		-e USER_PROJECT_VERILOG=$(TARGET_PATH)/verilog \
 		-e PDK=$(PDK) \
 		-e CORE_VERILOG_PATH=$(TARGET_PATH)/mgmt_core_wrapper/verilog \
+		-e CARAVEL_VERILOG_PATH=$(TARGET_PATH)/caravel/verilog \
 		-e MCW_ROOT=$(MCW_ROOT) \
 		-u $$(id -u $$USER):$$(id -g $$USER) efabless/dv:latest \
 		sh -c $(verify_command)
@@ -136,6 +177,11 @@ what:
 # Install Openlane
 .PHONY: openlane
 openlane:
+	@if [ "$$(realpath $${OPENLANE_ROOT})" = "$$(realpath $$(pwd)/openlane)" ]; then\
+		echo "OPENLANE_ROOT is set to '$$(pwd)/openlane' which contains openlane config files"; \
+		echo "Please set it to a different directory"; \
+		exit 1; \
+	fi
 	cd openlane && $(MAKE) openlane
 
 #### Not sure if the targets following are of any use
@@ -175,8 +221,15 @@ precheck:
 run-precheck: check-pdk check-precheck
 	$(eval INPUT_DIRECTORY := $(shell pwd))
 	cd $(PRECHECK_ROOT) && \
-	docker run -v $(PRECHECK_ROOT):$(PRECHECK_ROOT) -v $(INPUT_DIRECTORY):$(INPUT_DIRECTORY) -v $(PDK_ROOT):$(PDK_ROOT) -e INPUT_DIRECTORY=$(INPUT_DIRECTORY) -e PDK_ROOT=$(PDK_ROOT) \
-	-u $(shell id -u $(USER)):$(shell id -g $(USER)) efabless/mpw_precheck:latest bash -c "cd $(PRECHECK_ROOT) ; python3 mpw_precheck.py --input_directory $(INPUT_DIRECTORY) --pdk_root $(PDK_ROOT)"
+	docker run -v $(PRECHECK_ROOT):$(PRECHECK_ROOT) \
+	-v $(INPUT_DIRECTORY):$(INPUT_DIRECTORY) \
+	-v $(PDK_ROOT):$(PDK_ROOT) \
+	-e INPUT_DIRECTORY=$(INPUT_DIRECTORY) \
+	-e PDK_PATH=$(PDK_ROOT)/$(PDK) \
+	-e PDK_ROOT=$(PDK_ROOT) \
+	-e PDKPATH=$(PDKPATH) \
+	-u $(shell id -u $(USER)):$(shell id -g $(USER)) \
+	efabless/mpw_precheck:latest bash -c "cd $(PRECHECK_ROOT) ; python3 mpw_precheck.py --input_directory $(INPUT_DIRECTORY) --pdk_path $(PDK_ROOT)/$(PDK)"
 
 
 
@@ -209,4 +262,84 @@ help:
 	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 
-include timing.mk
+export CUP_ROOT=$(shell pwd)
+export TIMING_ROOT?=$(shell pwd)/dependencies/timing-scripts
+export PROJECT_ROOT=$(CUP_ROOT)
+timing-scripts-repo=https://github.com/efabless/timing-scripts.git
+
+$(TIMING_ROOT):
+	@mkdir -p $(CUP_ROOT)/dependencies
+	@git clone $(timing-scripts-repo) $(TIMING_ROOT)
+
+.PHONY: setup-timing-scripts
+setup-timing-scripts: $(TIMING_ROOT)
+	@( cd $(TIMING_ROOT) && git pull )
+	@#( cd $(TIMING_ROOT) && git fetch && git checkout $(MPW_TAG); )
+
+./verilog/gl/user_project_wrapper.v:
+	$(error you don't have $@)
+
+./env/spef-mapping.tcl: 
+	@echo "run the following:"
+	@echo "make extract-parasitics"
+	@echo "make create-spef-mapping"
+	exit 1
+
+.PHONY: create-spef-mapping
+create-spef-mapping: ./verilog/gl/user_project_wrapper.v
+	docker run \
+		--rm \
+		-u $$(id -u $$USER):$$(id -g $$USER) \
+		-v $(PDK_ROOT):$(PDK_ROOT) \
+		-v $(CUP_ROOT):$(CUP_ROOT) \
+		-v $(CARAVEL_ROOT):$(CARAVEL_ROOT) \
+		-v $(MCW_ROOT):$(MCW_ROOT) \
+		-v $(TIMING_ROOT):$(TIMING_ROOT) \
+		-w $(shell pwd) \
+		efabless/timing-scripts:latest \
+		python3 $(TIMING_ROOT)/scripts/generate_spef_mapping.py \
+			-i ./verilog/gl/user_project_wrapper.v \
+			-o ./env/spef-mapping.tcl \
+			--pdk-path $(PDK_ROOT)/$(PDK) \
+			--macro-parent chip_core/mprj \
+			--project-root "$(CUP_ROOT)"
+
+
+.PHONY: extract-parasitics
+extract-parasitics: ./verilog/gl/user_project_wrapper.v
+	docker run \
+		--rm \
+		-u $$(id -u $$USER):$$(id -g $$USER) \
+		-v $(PDK_ROOT):$(PDK_ROOT) \
+		-v $(CUP_ROOT):$(CUP_ROOT) \
+		-v $(CARAVEL_ROOT):$(CARAVEL_ROOT) \
+		-v $(MCW_ROOT):$(MCW_ROOT) \
+		-v $(TIMING_ROOT):$(TIMING_ROOT) \
+		-w $(shell pwd) \
+		efabless/timing-scripts:latest \
+		python3 $(TIMING_ROOT)/scripts/get_macros.py \
+			-i ./verilog/gl/user_project_wrapper.v \
+			-o ./tmp-macros-list \
+			--project-root "$(CUP_ROOT)" \
+			--pdk-path $(PDK_ROOT)/$(PDK)
+	@cat ./tmp-macros-list | cut -d " " -f2 \
+		| xargs -I % bash -c "$(MAKE) -C $(TIMING_ROOT) \
+			-f $(TIMING_ROOT)/timing.mk rcx-% || echo 'Cannot extract %. Probably no def for this macro'"
+	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk rcx-user_project_wrapper
+	@cat ./tmp-macros-list
+	@rm ./tmp-macros-list
+	
+.PHONY: caravel-sta
+caravel-sta: ./env/spef-mapping.tcl
+	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk caravel-timing-typ -j3
+	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk caravel-timing-fast -j3
+	@$(MAKE) -C $(TIMING_ROOT) -f $(TIMING_ROOT)/timing.mk caravel-timing-slow -j3
+	@echo =============================================Summary=============================================
+	@find $(PROJECT_ROOT)/signoff/caravel/openlane-signoff/timing/*/ -name "summary.log" | head -n1 \
+		| xargs head -n5 | tail -n1
+	@find $(PROJECT_ROOT)/signoff/caravel/openlane-signoff/timing/*/ -name "summary.log" \
+		| xargs -I {} bash -c "head -n7 {} | tail -n1"
+	@echo =================================================================================================
+	@echo "You can find results for all corners in $(CUP_ROOT)/signoff/caravel/openlane-signoff/timing/"
+	@echo "Check summary.log of a specific corner to point to reports with reg2reg violations" 
+	@echo "Cap and slew violations are inside summary.log file itself"

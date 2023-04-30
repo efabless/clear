@@ -1,0 +1,127 @@
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 38 unannotated drivers.
+ reset
+ test_enable
+ sb_0__0_.mux_right_track_0.mux_l1_in_1__157/LO
+ sb_0__0_.mux_right_track_10.mux_l2_in_0__158/LO
+ sb_0__0_.mux_right_track_12.mux_l2_in_0__159/LO
+ sb_0__0_.mux_right_track_14.mux_l2_in_0__160/LO
+ sb_0__0_.mux_right_track_16.mux_l2_in_0__161/LO
+ sb_0__0_.mux_right_track_18.mux_l2_in_0__162/LO
+ sb_0__0_.mux_right_track_2.mux_l2_in_0__163/LO
+ sb_0__0_.mux_right_track_28.mux_l2_in_0__164/LO
+ sb_0__0_.mux_right_track_30.mux_l2_in_0__165/LO
+ sb_0__0_.mux_right_track_32.mux_l2_in_0__130/LO
+ sb_0__0_.mux_right_track_34.mux_l2_in_0__131/LO
+ sb_0__0_.mux_right_track_4.mux_l2_in_0__132/LO
+ sb_0__0_.mux_right_track_44.mux_l2_in_0__133/LO
+ sb_0__0_.mux_right_track_46.mux_l2_in_0__134/LO
+ sb_0__0_.mux_right_track_48.mux_l2_in_0__135/LO
+ sb_0__0_.mux_right_track_50.mux_l2_in_0__136/LO
+ sb_0__0_.mux_right_track_6.mux_l1_in_1__137/LO
+ sb_0__0_.mux_right_track_8.mux_l2_in_0__138/LO
+ sb_0__0_.mux_top_track_0.mux_l1_in_1__139/LO
+ sb_0__0_.mux_top_track_10.mux_l2_in_0__140/LO
+ sb_0__0_.mux_top_track_12.mux_l2_in_0__141/LO
+ sb_0__0_.mux_top_track_14.mux_l2_in_0__142/LO
+ sb_0__0_.mux_top_track_16.mux_l2_in_0__143/LO
+ sb_0__0_.mux_top_track_18.mux_l2_in_0__144/LO
+ sb_0__0_.mux_top_track_2.mux_l2_in_0__145/LO
+ sb_0__0_.mux_top_track_28.mux_l2_in_0__146/LO
+ sb_0__0_.mux_top_track_30.mux_l2_in_0__147/LO
+ sb_0__0_.mux_top_track_32.mux_l2_in_0__148/LO
+ sb_0__0_.mux_top_track_34.mux_l2_in_0__149/LO
+ sb_0__0_.mux_top_track_4.mux_l2_in_0__150/LO
+ sb_0__0_.mux_top_track_44.mux_l2_in_0__151/LO
+ sb_0__0_.mux_top_track_46.mux_l2_in_0__152/LO
+ sb_0__0_.mux_top_track_48.mux_l2_in_0__153/LO
+ sb_0__0_.mux_top_track_50.mux_l2_in_0__154/LO
+ sb_0__0_.mux_top_track_6.mux_l1_in_1__155/LO
+ sb_0__0_.mux_top_track_8.mux_l2_in_0__156/LO
+Found 0 partially unannotated drivers.
+parastic_annotation_check
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack 116.48
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack 0.82
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk0
+No launch/capture paths found.
+
+Clock prog_clk
+Latency      CRPR       Skew
+sb_0__0_.mem_right_track_32.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.49
+sb_0__0_.mem_right_track_32.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.43     -0.03       0.03
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.51e-05   2.20e-06   8.31e-10   2.73e-05  33.0%
+Combinational          2.61e-05   2.93e-05   4.64e-09   5.54e-05  67.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  5.12e-05   3.15e-05   5.47e-09   8.27e-05 100.0%
+                          61.9%      38.1%       0.0%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 8346 u^2 60% utilization.
+area_report_end
+Setting global connections for newly added cells...
+[WARNING] Did not save OpenROAD database!
+Writing SDF to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_left_tile/runs/23_04_26_18_09/results/routing/mca/process_corner_nom/bottom_left_tile.sdf...
+Writing timing model to /home/hosni/OpenFPGA/erc-fixes/clear/openlane/bottom_left_tile/runs/23_04_26_18_09/results/routing/mca/process_corner_nom/bottom_left_tile.lib...
+

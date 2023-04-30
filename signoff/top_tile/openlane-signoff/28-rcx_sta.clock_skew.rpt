@@ -1,0 +1,18 @@
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk0
+Latency      CRPR       Skew
+cbx_1__8_.cbx_1__8_.mem_top_ipin_5.sky130_fd_sc_hd__dfrtp_1_0_/CLK ^
+   0.26
+grid_clb_1__8_.logical_tile_clb_mode_clb__0.logical_tile_clb_mode_default__fle_1.logical_tile_clb_mode_default__fle_mode_physical__fabric_0.logical_tile_clb_mode_default__fle_mode_physical__fabric_mode_default__ff_0.sky130_fd_sc_hd__sdfrtp_1_0_/CLK ^
+   0.40      0.00      -0.14
+
+Clock prog_clk
+Latency      CRPR       Skew
+cbx_1__8_.cbx_1__8_.mem_bottom_ipin_2.sky130_fd_sc_hd__dfrtp_1_1_/CLK ^
+   0.82
+cbx_1__8_.cbx_1__8_.mem_bottom_ipin_2.sky130_fd_sc_hd__dfrtp_1_2_/CLK ^
+   0.69     -0.03       0.10
+

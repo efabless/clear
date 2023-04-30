@@ -81,117 +81,138 @@ module user_project_wrapper #(
 
     /*
 
-        FPGA Top-IOs
-            gfpga_pad_EMBEDDED_IO_HD_SOC*[0-8]
-
-        FPGA Bottom-IOs
-            gfpga_pad_EMBEDDED_IO_HD_SOC*[16-87]
-
-        FPGA Right-IOs
-            gfpga_pad_EMBEDDED_IO_HD_SOC*[8-15]
-
-        FPGA Left-IOs
-            gfpga_pad_EMBEDDED_IO_HD_SOC*[88-95]
-
         IOs Connections:
 
-        Caravel IO   | FPGA            |  Mode
+        Caravel IO                             | FPGA                 |  Mode
         
-        io_in[0]     | test_en         | Input
-        io_in[1]     | IO_ISOL_N       | Input
-        io_out[7:2]  | EMBED-IO[10:15] | Bi-directional
-        io_out[11]   | sc_tail         | Output
-        io_in[12]    | ccff_head       | Input  
-        io_in[13:14] | EMBED-IO[8:9]*  | Bi-directional
-        io_in[17:23] | EMBED-IO[1:8]*  | Bi-directional
-        io_in[24]    | EMBED-IO[0]*    | Bi-directional
-        io_in[25]    | wb_la_switch    | Input              <== Free
-        io_in[26]    | sc_head         | Input
-        io_in[27:34] | EMBED-IO[88-95]*| Bi-directional 
-        io_out[35]   | ccff_tail       | Output
-        io_in[36]    | clk             | Input
-        io_in[37]    | prog_clk        | Input
+        io_in[1]                               | isol_n               | Input
+        io_in[9]                               | reset                | Input
+        io_in[10]                              | test_enable          | Input
+        io_out[14]                             | sc_tail              | Output
+        io_out[23]                             | ccff_tail            | Output
+        io_in[22]                              | sc_head              | Input
+        io_in[29]                              | prog_reset           | Input 
+        io_in[34]                              | ccff_head            | Input
+        io_in[35]                              | clk_sel              | Input
+        io_in[36]                              | clk                  | Input
+        io_in[37]                              | prog_clk             | Input
+        io_in[0]-[8:2]-[13:11]                 | EMBEDDED_IO[46:36]   | Bidirectional
+        io_in[21:15]                           | EMBEDDED_IO[18:12]   | Bidirectional
+        io_in[28:24]-[33:30]                   | EMBEDDED_IO[127:119] | Bidirectional
 
     */
     // FPGA wires
     wire prog_clk;
-    wire Test_en;
-    wire io_isol_n;
+    wire test_enable;
+    wire isol_n;
     wire clk;
-    wire [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_IN;
-    wire [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_OUT;
-    wire [95:0] gfpga_pad_EMBEDDED_IO_HD_SOC_DIR;
+
+`ifdef PnR
+    wire [127:0] gfpga_pad_io_soc_in;
+    wire [127:0] gfpga_pad_io_soc_out;
+    wire [127:0] gfpga_pad_io_soc_dir;
+`else
+    wire [0:127] gfpga_pad_io_soc_in;
+    wire [0:127] gfpga_pad_io_soc_out;
+    wire [0:127] gfpga_pad_io_soc_dir;
+`endif
+
     wire ccff_head;
     wire ccff_tail;
+    wire prog_reset;
+    wire reset;
     wire sc_head;
     wire sc_tail;
-
-    // Switch between wishbone and logic analyzer
-    wire wb_la_switch;
-    wire wb_la_switch_b;
-
-    // Inverted switch signal to drive tri-state buffers
-    // Use drive strength 8 as we will have 33 output pins which is driven by
-    // the buffers
-    sky130_fd_sc_hd__inv_8 WB_LA_SWITCH_INV (.A(wb_la_switch), .Y(wb_la_switch_b));
-
+    wire clk_sel;
     
-    // Wire-bond TOP side I/O of FPGA to LEFT-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[0] = io_in[24];
-    assign io_out[24] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[0];
-    assign io_oeb[24] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[0];
+    // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
+    assign gfpga_pad_io_soc_in[46] = io_in[0];
+    assign io_out[0] = gfpga_pad_io_soc_out[46];
+    assign io_oeb[0] = gfpga_pad_io_soc_dir[46];
+
+    generate 
+        genvar i;
+        for(i=0; i<=6; i=i+1) begin
+            assign gfpga_pad_io_soc_in[45-i] = io_in[2+i];
+            assign io_out[2+i] = gfpga_pad_io_soc_out[45-i];
+            assign io_oeb[2+i] = gfpga_pad_io_soc_dir[45-i];
+        end
+    endgenerate
+
+    assign gfpga_pad_io_soc_in[38] = io_in[11];
+    assign io_out[11] = gfpga_pad_io_soc_out[38];
+    assign io_oeb[11] = gfpga_pad_io_soc_dir[38];
+
+    assign gfpga_pad_io_soc_in[37] = io_in[12];
+    assign io_out[12] = gfpga_pad_io_soc_out[37];
+    assign io_oeb[12] = gfpga_pad_io_soc_dir[37];
+
+    assign gfpga_pad_io_soc_in[36] = io_in[13];
+    assign io_out[13] = gfpga_pad_io_soc_out[36];
+    assign io_oeb[13] = gfpga_pad_io_soc_dir[36];
 
     // Wire-bond TOP side I/O of FPGA to TOP-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[8:1] = io_in[23:16];
-    assign io_out[23:16] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[8:1];
-    assign io_oeb[23:16] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[8:1];
+    generate 
+        for(i=0; i<=6; i=i+1) begin
+            assign gfpga_pad_io_soc_in[19-i] = io_in[15+i];
+            assign io_out[15+i] = gfpga_pad_io_soc_out[19-i];
+            assign io_oeb[15+i] = gfpga_pad_io_soc_dir[19-i];
+        end
+    endgenerate
 
-    // Wire-bond TOP side I/O of FPGA to RIGHT-side of Caravel interface
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[9] = io_in[14];
-    assign io_out[14] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[9];
-    assign io_oeb[14] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[9];
+    // Wire-bond LEFT side I/O of FPGA to LEFT-side of Caravel interface
+    generate 
+        for(i=0; i<=4; i=i+1) begin
+            assign gfpga_pad_io_soc_in[127-i] = io_in[24+i];
+            assign io_out[24+i] = gfpga_pad_io_soc_out[127-i];
+            assign io_oeb[24+i] = gfpga_pad_io_soc_dir[127-i];
+        end
+    endgenerate
+
+    generate 
+        for(i=0; i<=3; i=i+1) begin
+            assign gfpga_pad_io_soc_in[122-i] = io_in[30+i];
+            assign io_out[30+i] = gfpga_pad_io_soc_out[122-i];
+            assign io_oeb[30+i] = gfpga_pad_io_soc_dir[122-i];
+        end
+    endgenerate
+    
+    
 
     // CCFF_HEAD - Input
-    // Wire-bond RIGHT side I/O of FPGA to RIGHT-side of Caravel interface
-    assign ccff_head = io_in[12];
-    assign io_out[12] = 1'b0;
-    assign io_oeb[12] = 1'b1;
+    assign ccff_head = io_in[34];
+    assign io_out[34] = 1'b0;
+    assign io_oeb[34] = 1'b1;
 
     // SC_TAIL -- output
-    assign io_out[11] = sc_tail;
-    assign io_oeb[11] = 1'b0;
+    assign io_out[14] = sc_tail;
+    assign io_oeb[14] = 1'b0;
 
-    // Embedded-IOs -- Bidirectional
-    // assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[15:10] = io_in[7:2];
-    // disconnect io_in[3]
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[10] = io_in[2];
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[11] = io_in[30];
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[91] = io_in[3];
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[15:12] = io_in[7:4];
-    assign io_out[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:10];
-    // assign io_out[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[10];
-    // assign io_out[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15:12];
-    assign io_oeb[7:2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:10];
-    // assign io_oeb[2] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[10];
-    // assign io_oeb[7:4] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15:12];
+    // reset -- Input
+    assign prog_reset = io_in[29];
+    assign io_out[29] = 1'b0;
+    assign io_oeb[29] = 1'b1;
 
-    // IO_ISOL_N -- Input
-    assign io_isol_n = io_in[1];
+    assign reset = io_in[9];
+    assign io_out[9] = 1'b0;
+    assign io_oeb[9] = 1'b1;
+
+    // isol_n -- Input
+    assign isol_n = io_in[1];
     assign io_out[1] = 1'b0;
     assign io_oeb[1] = 1'b1;
 
-    // Test_en -- Input
-    assign Test_en = io_in[0];
-    assign io_out[0] = 1'b0;
-    assign io_oeb[0] = 1'b1;
+    // test_enable -- Input
+    assign test_enable = io_in[10];
+    assign io_out[10] = 1'b0;
+    assign io_oeb[10] = 1'b1;
 
-    // Connecting the Fabric IO 16 to 56 to the LA_out: 127 to 87
+    // Connecting the Fabric IO 47 to 118 to the LA_out: 127 to 56
     // MS: Disconnect the WBS bus dat_o lines
     generate 
-        genvar i;
         for(i=0; i<=71; i=i+1) begin
-            assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[16+i] = la_data_in[127-i];
-            assign la_data_out[127-i] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[16+i];
+            assign gfpga_pad_io_soc_in[47+i] = la_data_in[127-i];
+            assign la_data_out[127-i] = gfpga_pad_io_soc_out[47+i];
         end
     endgenerate
     
@@ -204,46 +225,39 @@ module user_project_wrapper #(
 
     // CLK -- Input
     // FPGA clock port can be driven by either wishbone clock or an GPIO
-    assign clk = io_in[36];
+    assign clk_sel = io_in[35];
+    assign io_out[35] = 1'b0;
+    assign io_oeb[35] = 1'b1;
+
+    assign clk = clk_sel ? wb_clk_i : io_in[36];
     assign io_out[36] = 1'b0;
     assign io_oeb[36] = 1'b1;
 
     // CCFF-TAIL - Output
-    assign io_out[35] = ccff_tail;
-    assign io_oeb[35] = 1'b0;
-
-    // SOC-IN - Bidirectional
-    // assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[95:88] = io_in[34:27];
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[90:88] = io_in[29:27];
-    assign gfpga_pad_EMBEDDED_IO_HD_SOC_IN[95:92] = io_in[34:31];
-    assign io_out[34:27] = gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[95:88];
-    assign io_oeb[34:27] = gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[95:88];
+    assign io_out[23] = ccff_tail;
+    assign io_oeb[23] = 1'b0;
 
     // SC-HEAD -- Input
-    assign sc_head = io_in[26];
-    assign io_out[26] = 1'b0;
-    assign io_oeb[26] = 1'b1;
+    assign sc_head = io_in[22];
+    assign io_out[22] = 1'b0;
+    assign io_oeb[22] = 1'b1;
 
-    // -- Input
-    // I/O[25] is reserved for a switch between wishbone interface
-    // and logic analyzer
-    // MS: Disconnect the WBS from the fabric as it is not fully connected and not functional
-    // MS IO[25] is free    
-    assign wb_la_switch = 1'b0; //io_in[25];
-    //assign io_out[25] = 1'b0;
-    //assign io_oeb[25] = 1'b1;
-
-    // TODO: Connect spypad from FPGA to logic analyzer ports
-
-    fpga_core fpga_core_uut(.prog_clk(prog_clk),
-        .Test_en(Test_en),
+    fpga_core fpga_core_uut(
+        `ifdef USE_POWER_PINS
+            .VPWR(vccd1),	
+            .VGND(vssd1),	
+        `endif
+        .prog_clk(prog_clk),
+        .test_enable(test_enable),
         .clk(clk),
-        .IO_ISOL_N(io_isol_n),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_IN(gfpga_pad_EMBEDDED_IO_HD_SOC_IN),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_OUT(gfpga_pad_EMBEDDED_IO_HD_SOC_OUT),
-        .gfpga_pad_EMBEDDED_IO_HD_SOC_DIR(gfpga_pad_EMBEDDED_IO_HD_SOC_DIR),
+        .isol_n(isol_n),
+        .gfpga_pad_io_soc_in(gfpga_pad_io_soc_in),
+        .gfpga_pad_io_soc_out(gfpga_pad_io_soc_out),
+        .gfpga_pad_io_soc_dir(gfpga_pad_io_soc_dir),
         .ccff_head(ccff_head),
         .ccff_tail(ccff_tail),
+        .prog_reset(prog_reset),
+        .reset(reset),
         .sc_head(sc_head),
         .sc_tail(sc_tail)
     );
