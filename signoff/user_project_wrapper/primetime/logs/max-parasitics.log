@@ -1,0 +1,322 @@
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net204:36 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/net275:16 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_reg_out_0_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[6] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/chanx_right_out_0[8] 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Warning: Coupling capacitor (fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ fpga_core_uut/tile_4__2_/right_width_0_height_0_subtile_0__pin_O_15_ 0) on net fpga_core_uut/tile_4__2_/bottom_width_0_height_0_subtile_0__pin_cout_0_ is discarded because the value cannot be <= 0 (PARA-040)
+Note - message 'PARA-040' default limit (100) exceeded.  Remainder will be suppressed.
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/tile/openlane-signoff/spef/tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:06 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         3074
+        Annotated capacitances           :      1087653
+        Annotated resistances            :       937027
+        Annotated coupling capacitances  :      1884050
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/right_tile/openlane-signoff/spef/right_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:07 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         2892
+        Annotated capacitances           :       137151
+        Annotated resistances            :       116907
+        Annotated coupling capacitances  :       205436
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/bottom_tile/openlane-signoff/spef/bottom_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:07 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         1351
+        Annotated capacitances           :        60305
+        Annotated resistances            :        50848
+        Annotated coupling capacitances  :       111286
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/left_tile/openlane-signoff/spef/left_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:07 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         1113
+        Annotated capacitances           :        46354
+        Annotated resistances            :        38563
+        Annotated coupling capacitances  :        54369
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/top_tile/openlane-signoff/spef/top_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:08 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         2962
+        Annotated capacitances           :       139195
+        Annotated resistances            :       118461
+        Annotated coupling capacitances  :       212660
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/bottom_left_tile/openlane-signoff/spef/bottom_left_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:08 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :          707
+        Annotated capacitances           :         4252
+        Annotated resistances            :         3545
+        Annotated coupling capacitances  :         8346
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/fpga_core/openlane-signoff/spef/fpga_core.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:08 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :        10970
+        Annotated capacitances           :        28371
+        Annotated resistances            :        17401
+        Annotated coupling capacitances  :         7864
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/bottom_right_tile/openlane-signoff/spef/bottom_right_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:08 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         1030
+        Annotated capacitances           :         7065
+        Annotated resistances            :         6035
+        Annotated coupling capacitances  :        14017
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/top_left_tile/openlane-signoff/spef/top_left_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:08 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         1079
+        Annotated capacitances           :         6475
+        Annotated resistances            :         5396
+        Annotated coupling capacitances  :        10240
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/top_right_tile/openlane-signoff/spef/top_right_tile.max.spef
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:09 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :         2827
+        Annotated capacitances           :        18575
+        Annotated resistances            :        15748
+        Annotated coupling capacitances  :        26450
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+Warning: Detected semantically incorrect SPEF in coupling section. (PARA-098)
+
+****************************************
+Report : read_parasitics /home/passant/clear/signoff/user_project_wrapper/openlane-signoff/spef/user_project_wrapper.max.spef
+	-pin_cap_included
+	-keep_capacitive_coupling
+Design : user_project_wrapper
+Version: T-2022.03-SP3
+Date   : Fri Apr 28 20:41:09 2023
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :          730
+        Annotated capacitances           :         4267
+        Annotated resistances            :         3537
+        Annotated coupling capacitances  :         1053
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
