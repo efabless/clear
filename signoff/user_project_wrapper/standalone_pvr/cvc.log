@@ -1,0 +1,614 @@
+CVC: Log output to /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/cvc.log
+CVC: Error output to /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/cvc.error.gz
+CVC: Debug output to /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/cvc.debug.gz
+CVC: Circuit Validation Check  Version 1.1.4
+CVC: Start: Sat Apr 29 11:01:02 2023
+
+Using the following parameters for CVC (Circuit Validation Check) from /home/marwan/mpw_precheck/checks/lvs_check//cvc/cvcrc.sky130A
+CVC_TOP = 'user_project_wrapper'
+CVC_NETLIST = '/home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/ext/user_project_wrapper.cdl.gz'
+CVC_MODE = 'user_project_wrapper'
+CVC_MODEL_FILE = '/home/marwan/mpw_precheck/checks/lvs_check//cvc/cvc.sky130A.models'
+CVC_POWER_FILE = '/home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/user_project_wrapper.power'
+CVC_FUSE_FILE = ''
+CVC_REPORT_FILE = '/home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/cvc.log'
+CVC_REPORT_TITLE = 'CVC user_project_wrapper'
+CVC_CIRCUIT_ERROR_LIMIT = '100'
+CVC_SEARCH_LIMIT = '100'
+CVC_LEAK_LIMIT = '0.0002'
+CVC_SOI = 'false'
+CVC_SCRC = 'false'
+CVC_VTH_GATES = 'false'
+CVC_MIN_VTH_GATES = 'false'
+CVC_IGNORE_VTH_FLOATING = 'false'
+CVC_IGNORE_NO_LEAK_FLOATING = 'false'
+CVC_LEAK_OVERVOLTAGE = 'true'
+CVC_LOGIC_DIODES = 'false'
+CVC_ANALOG_GATES = 'true'
+CVC_BACKUP_RESULTS = 'false'
+CVC_MOS_DIODE_ERROR_THRESHOLD = '0'
+CVC_SHORT_ERROR_THRESHOLD = '0'
+CVC_BIAS_ERROR_THRESHOLD = '0'
+CVC_FORWARD_ERROR_THRESHOLD = '0'
+CVC_FLOATING_ERROR_THRESHOLD = '0'
+CVC_GATE_ERROR_THRESHOLD = '0'
+CVC_LEAK?_ERROR_THRESHOLD = '0'
+CVC_EXPECTED_ERROR_THRESHOLD = '0'
+CVC_OVERVOLTAGE_ERROR_THRESHOLD = '0'
+CVC_PARALLEL_CIRCUIT_PORT_LIMIT = '0'
+CVC_CELL_ERROR_LIMIT_FILE = ''
+CVC_CELL_CHECKSUM_FILE = ''
+CVC_LARGE_CIRCUIT_SIZE = '10000000'
+CVC_NET_CHECK_FILE = ''
+CVC_MODEL_CHECK_FILE = ''
+End of parameters
+
+CVC: Reading device model settings...
+CVC: Reading power settings...
+CVC: Parsing netlist /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/ext/user_project_wrapper.cdl.gz
+Cdl fixed data size 10039534
+Usage CDL: Time: 1  Memory: 243816  I/O: 5112  Swap: 0
+CVC: Counting and linking...
+CVC: Assigning IDs ...
+Usage DB: Time: 1  Memory: 397972  I/O: 5168  Swap: 0
+CVC: 1211137(1211137) instances, 1282576(1282576) nets, 3531452(3531452) devices.
+CVC: Setting models ...
+Setting model tolerances...
+CVC: Shorting switches...
+	Shorted 0 short
+	Shorted 0 sky130_fd_pr__res_generic_l1
+	Shorted 0 sky130_fd_pr__res_generic_m1
+	Shorted 0 sky130_fd_pr__res_generic_m2
+	Shorted 0 sky130_fd_pr__res_generic_m3
+	Shorted 0 sky130_fd_pr__res_generic_m4
+	Shorted 0 sky130_fd_pr__res_generic_m5
+Setting instance power...
+
+ModelList> filename /home/marwan/mpw_precheck/checks/lvs_check//cvc/cvc.sky130A.models
+ Model> sky130_fd_pr__cap_mim_m3_1         0 C->capacitor  Parameters>
+ Model> sky130_fd_pr__cap_mim_m3_2         0 C->capacitor  Parameters>
+ Model> sky130_fd_pr__cap_var         0 C->capacitor  Parameters>
+ Model> sky130_fd_pr__cap_var_lvt         0 C->capacitor  Parameters>
+ Model> condiode           0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pd2nw_05v5         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pd2nw_05v5_lvt         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pd2nw_11v0         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pw2nd_05v5    118474 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pw2nd_05v5_nvt         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__diode_pw2nd_11v0         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__model__parasitic__diode_ps2dn         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__model__parasitic__diode_ps2nw         0 D->diode      Parameters> Diodes> 1-2
+ Model> sky130_fd_pr__model__parasitic__diode_pw2dn         0 D->diode      Parameters> Diodes> 1-2
+ Model> nfet_01v8          0 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> pfet_01v8_hvt         0 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_bs_flash__special_sonosfet_star         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__esd_nfet_g5v0d10v5         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__nfet_01v8   1697371 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__nfet_01v8_lvt         0 M->nmos       Parameters> Vth=0.1 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__nfet_03v3_nvt         0 M->nmos       Parameters> Vth=0.2 Vds=3.3 Vgs=3.3 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__nfet_05v0_nvt         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__nfet_g5v0d10v5         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__pfet_01v8         0 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_pr__pfet_01v8_hvt   1697371 M->pmos       Parameters> Vth=-0.3 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_pr__pfet_01v8_lvt         0 M->pmos       Parameters> Vth=-0.1 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_pr__pfet_g5v0d10v5         0 M->pmos       Parameters> Vth=-0.2 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_pr__special_nfet_latch         0 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> sky130_fd_pr__special_pfet_pass         0 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> sky130_fd_pr__pnp_05v5         0 Q->bipolar    Parameters>
+ Model> short              0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__reram_reram_cell         0 R->resistor   Parameters> R=10
+ Model> sky130_fd_pr__res_generic_l1         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_m1         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_m2         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_m3         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_m4         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_m5         0 R->switch_on  Parameters>
+ Model> sky130_fd_pr__res_generic_nd         0 R->resistor   Parameters> R=l/w*120
+ Model> sky130_fd_pr__res_generic_nd__hv         0 R->resistor   Parameters> R=l/w*114
+ Model> sky130_fd_pr__res_generic_pd__hv         0 R->resistor   Parameters> R=l/w*191
+ Model> sky130_fd_pr__res_generic_po     18236 R->resistor   Parameters> R=l/w*48
+ Model> sky130_fd_pr__res_high_po         0 R->resistor   Parameters> R=l/w*2000
+ Model> sky130_fd_pr__res_xhigh_po         0 R->resistor   Parameters> R=l/w*2000
+ModelList> end
+
+Power List> filename /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/user_project_wrapper.power
+vccd* power 1.8
+ ->vccd1 power 1.8 -> 1.8 power
+ ->vccd2 power 1.8 -> 1.8 power
+vdda* power 3.3
+ ->vdda1 power 3.3 -> 3.3 power
+ ->vdda2 power 3.3 -> 3.3 power
+vssa* power 0.0
+ ->vssa1 power 0.0 -> 0.0 power
+ ->vssa2 power 0.0 -> 0.0 power
+vssd* power 0.0
+ ->vssd1 power 0.0 -> 0.0 power
+ ->vssd2 power 0.0 -> 0.0 power
+ user_clock2 input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ wb_clk_i input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ wb_rst_i input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ wbs_cyc_i input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ wbs_stb_i input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ wbs_we_i input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+io_in[*] input min@0.0 max@1.8
+ ->io_in[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[10] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[11] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[12] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[13] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[14] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[15] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[16] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[17] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[18] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[19] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[20] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[21] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[22] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[23] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[24] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[25] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[26] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[27] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[28] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[29] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[30] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[31] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[32] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[33] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[34] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[35] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[36] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[37] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[4] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[5] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[6] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[7] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[8] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->io_in[9] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+la_data_in[*] input min@0.0 max@1.8
+ ->la_data_in[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[100] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[101] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[102] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[103] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[104] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[105] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[106] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[107] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[108] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[109] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[10] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[110] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[111] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[112] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[113] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[114] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[115] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[116] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[117] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[118] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[119] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[11] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[120] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[121] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[122] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[123] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[124] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[125] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[126] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[127] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[12] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[13] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[14] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[15] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[16] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[17] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[18] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[19] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[20] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[21] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[22] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[23] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[24] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[25] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[26] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[27] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[28] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[29] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[30] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[31] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[32] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[33] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[34] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[35] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[36] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[37] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[38] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[39] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[40] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[41] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[42] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[43] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[44] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[45] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[46] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[47] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[48] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[49] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[4] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[50] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[51] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[52] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[53] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[54] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[55] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[56] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[57] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[58] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[59] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[5] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[60] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[61] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[62] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[63] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[64] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[65] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[66] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[67] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[68] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[69] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[6] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[70] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[71] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[72] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[73] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[74] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[75] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[76] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[77] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[78] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[79] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[7] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[80] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[81] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[82] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[83] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[84] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[85] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[86] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[87] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[88] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[89] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[8] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[90] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[91] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[92] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[93] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[94] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[95] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[96] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[97] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[98] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[99] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_data_in[9] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+la_oenb[*] input min@0.0 max@1.8
+ ->la_oenb[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[100] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[101] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[102] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[103] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[104] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[105] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[106] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[107] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[108] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[109] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[10] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[110] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[111] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[112] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[113] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[114] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[115] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[116] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[117] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[118] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[119] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[11] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[120] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[121] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[122] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[123] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[124] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[125] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[126] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[127] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[12] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[13] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[14] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[15] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[16] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[17] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[18] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[19] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[20] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[21] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[22] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[23] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[24] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[25] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[26] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[27] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[28] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[29] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[30] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[31] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[32] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[33] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[34] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[35] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[36] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[37] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[38] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[39] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[40] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[41] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[42] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[43] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[44] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[45] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[46] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[47] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[48] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[49] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[4] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[50] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[51] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[52] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[53] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[54] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[55] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[56] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[57] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[58] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[59] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[5] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[60] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[61] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[62] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[63] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[64] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[65] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[66] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[67] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[68] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[69] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[6] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[70] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[71] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[72] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[73] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[74] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[75] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[76] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[77] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[78] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[79] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[7] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[80] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[81] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[82] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[83] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[84] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[85] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[86] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[87] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[88] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[89] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[8] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[90] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[91] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[92] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[93] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[94] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[95] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[96] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[97] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[98] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[99] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->la_oenb[9] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+wbs_adr_i[*] input min@0.0 max@1.8
+ ->wbs_adr_i[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[10] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[11] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[12] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[13] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[14] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[15] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[16] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[17] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[18] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[19] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[20] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[21] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[22] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[23] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[24] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[25] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[26] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[27] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[28] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[29] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[30] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[31] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[4] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[5] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[6] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[7] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[8] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_adr_i[9] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+wbs_dat_i[*] input min@0.0 max@1.8
+ ->wbs_dat_i[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[10] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[11] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[12] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[13] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[14] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[15] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[16] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[17] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[18] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[19] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[20] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[21] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[22] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[23] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[24] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[25] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[26] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[27] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[28] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[29] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[30] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[31] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[4] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[5] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[6] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[7] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[8] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_dat_i[9] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+wbs_sel_i[*] input min@0.0 max@1.8
+ ->wbs_sel_i[0] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_sel_i[1] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_sel_i[2] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+ ->wbs_sel_i[3] input min@0.0 max@1.8 -> min@0.0 max@1.8 input
+> expected values
+> macros
+Power List> end
+
+CVC: Linking devices...
+Usage EQUIV: Time: 1  Memory: 730704  I/O: 5264  Swap: 0
+Power nets 382
+Hash dump:parameter->resistance map
+Contains 103 buckets, 203 elements
+Element count 0, 25
+Element count 1, 21
+Element count 2, 19
+Element count 3, 10
+Element count 4, 26
+Element count 5, 2
+Unused hash: 0.24, average depth 3.22
+Hash dump:text->circuit map
+Contains 37 buckets, 49 elements
+Element count 0, 12
+Element count 1, 9
+Element count 2, 9
+Element count 3, 6
+Element count 4, 1
+Unused hash: 0.32, average depth 2.35
+Hash dump:string->text map
+Contains 444487 buckets, 478389 elements
+Element count 0, 151481
+Element count 1, 163048
+Element count 2, 87820
+Element count 3, 31559
+Element count 4, 8352
+Element count 5, 1827
+Element count 6, 334
+Element count 7, 54
+Element count 8, 9
+Element count 9, 3
+Unused hash: 0.34, average depth 2.08
+CVC: Shorting non conducting resistors...
+CVC: Calculating resistor voltages...
+Usage RES: Time: 2  Memory: 730704  I/O: 5264  Swap: 0
+Power nets 382
+CVC: Calculating min/max voltages...
+Processing trivial nets found 522994 trivial nets
+CVC: Ignoring invalid calculations...
+CVC:   Removed 0 calculations
+Copying master nets
+CVC: Ignoring non-conducting devices...
+CVC:   Ignored 0 devices
+Usage MIN/MAX1: Time: 3  Memory: 765344  I/O: 5264  Swap: 0
+Power nets 444249
+! Checking forward bias diode errors: 
+
+! Checking nmos source/drain vs bias errors: 
+
+! Checking nmos gate vs source errors: 
+
+! Checking pmos source/drain vs bias errors: 
+
+! Checking pmos gate vs source errors: 
+
+Usage ERROR: Time: 4  Memory: 765344  I/O: 5264  Swap: 0
+CVC: Propagating Simulation voltages 1...
+Usage SIM1: Time: 4  Memory: 790424  I/O: 5264  Swap: 0
+Power nets 444249
+CVC: Propagating Simulation voltages 3...
+Usage SIM2: Time: 4  Memory: 801776  I/O: 5264  Swap: 0
+Power nets 444249
+Added 0 latch voltages
+CVC: Calculating min/max voltages...
+Processing trivial nets found 522569 trivial nets
+CVC: Ignoring invalid calculations...
+CVC:   Removed 0 calculations
+Copying master nets
+CVC: Ignoring non-conducting devices...
+CVC:   Ignored 0 devices
+Usage MIN/MAX2: Time: 6  Memory: 836624  I/O: 5272  Swap: 0
+Power nets 887814
+! Checking overvoltage errors
+
+! Checking nmos possible leak errors: 
+
+! Checking pmos possible leak errors: 
+
+! Checking mos floating input errors:
+
+! Checking expected values:
+
+CVC: Error Counts
+CVC: Fuse Problems:         0
+CVC: Min Voltage Conflicts: 0
+CVC: Max Voltage Conflicts: 0
+CVC: Leaks:                 0
+CVC: LDD drain->source:     0
+CVC: HI-Z Inputs:           1268
+CVC: Forward Bias Diodes:   0
+CVC: NMOS Source vs Bulk:   0
+CVC: NMOS Gate vs Source:   0
+CVC: NMOS Possible Leaks:   0
+CVC: PMOS Source vs Bulk:   0
+CVC: PMOS Gate vs Source:   0
+CVC: PMOS Possible Leaks:   0
+CVC: Overvoltage-VBG:       0
+CVC: Overvoltage-VBS:       0
+CVC: Overvoltage-VDS:       0
+CVC: Overvoltage-VGS:       0
+CVC: Model errors:          0
+CVC: Unexpected voltage :   0
+CVC: Total:                 1268
+Usage Total: Time: 7  Memory: 837148  I/O: 5312  Swap: 0
+Virtual net update/access 8011026/313968731
+CVC: Log output to /home/marwan/clear/lvs/user_project_wrapper/2023-04-29-10-34-22/cvc.log
+CVC: End: Sat Apr 29 11:01:10 2023
+
+Runtime: 0:00:08 (hh:mm:ss)
