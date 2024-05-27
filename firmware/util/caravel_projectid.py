@@ -131,117 +131,117 @@ if int.from_bytes(mfg, byteorder='big') != 0x0456:
 
 k = ''
 
-while (k != 'q'):
-
-    print("\n-----------------------------------\n")
-    print("Select option:")
-    print("  (1) read CARAVEL registers ")
-    print("  (2) read CARAVEL project ID ")
-    print("  (3) reset CARAVEL")
-    print("  (4) reset Flash")
-    print("  (5) read Flash JEDEC codes")
-    print("  (6) start flash erase")
-    print("  (7) check flash status")
-    print("  (8) engage DLL")
-    print("  (9) read DLL trim")
-    print(" (10) disengage DLL")
-    print(" (11) DCO mode")
-    print(" (12) full trim")
-    print(" (13) zero trim")
-    print(" (14) set register value")
-    print("  (q) quit")
-
-    print("\n")
-
-    k = input()
-
-    if k == '1':
-        for reg in [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12]:
-            data = slave.exchange([CARAVEL_REG_READ, reg], 1)
-            print("reg {} = {}".format(hex(reg), binascii.hexlify(data)))
-
-    elif k == '2':
-            data = slave.exchange([CARAVEL_STREAM_READ, 0x04], 4)
-            print("Project ID = {:08x}".format(int('{:032b}'.format(int.from_bytes(data, byteorder='big'))[::-1], 2)))
-
-    elif k == '3':
-        # reset CARAVEL
-        print("Resetting CARAVEL...")
-        slave.write([CARAVEL_REG_WRITE, 0x0b, 0x01])
-        slave.write([CARAVEL_REG_WRITE, 0x0b, 0x00])
-
-    elif k == '4':
-        # reset Flash
-        print("Resetting Flash...")
-        slave.write([CARAVEL_PASSTHRU, CMD_RESET_CHIP])
-
-    elif k == '5':
-        slave.write([CARAVEL_REG_WRITE, 0x0b, 0x01])
-        jedec = slave.exchange([CARAVEL_PASSTHRU, CMD_JEDEC_DATA], 3)
-        print("JEDEC = {}".format(binascii.hexlify(jedec)))
-
-    elif k == '6':
-        # erase Flash
-        print("Starting Flash erase...")
-        slave.write([CARAVEL_PASSTHRU, CMD_WRITE_ENABLE])
-        slave.write([CARAVEL_PASSTHRU, CMD_ERASE_CHIP])
-
-    elif k == '7':
-        if is_busy(slave):
-            print("Flash is busy.")
-        else:
-            print("Flash is NOT busy.")
-        print("status reg_1 = {}".format(hex(get_status(slave))))
-        status = slave.exchange([CARAVEL_PASSTHRU, 0x35], 1)
-        print("status reg_2 = {}".format(hex(int.from_bytes(status, byteorder='big'))))
-
-    elif k == '8':
-        print("engaging DLL...")
-        slave.write([CARAVEL_REG_WRITE, 0x08, 0x01])
-        slave.write([CARAVEL_REG_WRITE, 0x09, 0x00])
-
-    elif k == '9':
-        pll_trim = slave.exchange([CARAVEL_STREAM_READ, 0x0d], 4)
-        print("pll_trim = {}\n".format(binascii.hexlify(pll_trim)))
-
-    elif k == '10':
-        print("disengaging DLL...")
-        slave.write([CARAVEL_REG_WRITE, 0x09, 0x01])
-        slave.write([CARAVEL_REG_WRITE, 0x08, 0x00])
-
-    elif k == '11':
-        print("Clock DCO mode...")
-        slave.write([CARAVEL_REG_WRITE, 0x08, 0x03])
-        slave.write([CARAVEL_REG_WRITE, 0x09, 0x00])
-
-    elif k == '12':
-        print("DCO mode full trim...")
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0d, 0xff])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0e, 0xff])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0f, 0xff])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x10, 0xff])
-
-    elif k == '13':
-        print("DCO mode zero trim...")
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0d, 0x00])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0e, 0x00])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0f, 0x00])
-        pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x10, 0x00])
-
-    elif k == '14':
-        print("Register?")
-        r = input()
-        reg = int(r, 0)
-        print("Value?")
-        v = input()
-        val = int(v, 0)
-        pll_trim = slave.exchange([CARAVEL_STREAM_WRITE, reg, val], 0)
-
-    elif k == 'q':
-        print("Exiting...")
-
-    else:
-        print('Selection not recognized.\n')
+# while (k != 'q'):
+#
+#     print("\n-----------------------------------\n")
+#     print("Select option:")
+#     print("  (1) read CARAVEL registers ")
+#     print("  (2) read CARAVEL project ID ")
+#     print("  (3) reset CARAVEL")
+#     print("  (4) reset Flash")
+#     print("  (5) read Flash JEDEC codes")
+#     print("  (6) start flash erase")
+#     print("  (7) check flash status")
+#     print("  (8) engage DLL")
+#     print("  (9) read DLL trim")
+#     print(" (10) disengage DLL")
+#     print(" (11) DCO mode")
+#     print(" (12) full trim")
+#     print(" (13) zero trim")
+#     print(" (14) set register value")
+#     print("  (q) quit")
+#
+#     print("\n")
+#
+#     k = input()
+#
+#     if k == '1':
+#         for reg in [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12]:
+#             data = slave.exchange([CARAVEL_REG_READ, reg], 1)
+#             print("reg {} = {}".format(hex(reg), binascii.hexlify(data)))
+#
+#     elif k == '2':
+#             data = slave.exchange([CARAVEL_STREAM_READ, 0x04], 4)
+#             print("Project ID = {:08x}".format(int('{0:32b}'.format(int.from_bytes(data, byteorder='big'))[::-1], 2)))
+#
+#     elif k == '3':
+#         # reset CARAVEL
+#         print("Resetting CARAVEL...")
+#         slave.write([CARAVEL_REG_WRITE, 0x0b, 0x01])
+#         slave.write([CARAVEL_REG_WRITE, 0x0b, 0x00])
+#
+#     elif k == '4':
+#         # reset Flash
+#         print("Resetting Flash...")
+#         slave.write([CARAVEL_PASSTHRU, CMD_RESET_CHIP])
+#
+#     elif k == '5':
+#         slave.write([CARAVEL_REG_WRITE, 0x0b, 0x01])
+#         jedec = slave.exchange([CARAVEL_PASSTHRU, CMD_JEDEC_DATA], 3)
+#         print("JEDEC = {}".format(binascii.hexlify(jedec)))
+#
+#     elif k == '6':
+#         # erase Flash
+#         print("Starting Flash erase...")
+#         slave.write([CARAVEL_PASSTHRU, CMD_WRITE_ENABLE])
+#         slave.write([CARAVEL_PASSTHRU, CMD_ERASE_CHIP])
+#
+#     elif k == '7':
+#         if is_busy(slave):
+#             print("Flash is busy.")
+#         else:
+#             print("Flash is NOT busy.")
+#         print("status reg_1 = {}".format(hex(get_status(slave))))
+#         status = slave.exchange([CARAVEL_PASSTHRU, 0x35], 1)
+#         print("status reg_2 = {}".format(hex(int.from_bytes(status, byteorder='big'))))
+#
+#     elif k == '8':
+#         print("engaging DLL...")
+#         slave.write([CARAVEL_REG_WRITE, 0x08, 0x01])
+#         slave.write([CARAVEL_REG_WRITE, 0x09, 0x00])
+#
+#     elif k == '9':
+#         pll_trim = slave.exchange([CARAVEL_STREAM_READ, 0x0d], 4)
+#         print("pll_trim = {}\n".format(binascii.hexlify(pll_trim)))
+#
+#     elif k == '10':
+#         print("disengaging DLL...")
+#         slave.write([CARAVEL_REG_WRITE, 0x09, 0x01])
+#         slave.write([CARAVEL_REG_WRITE, 0x08, 0x00])
+#
+#     elif k == '11':
+#         print("Clock DCO mode...")
+#         slave.write([CARAVEL_REG_WRITE, 0x08, 0x03])
+#         slave.write([CARAVEL_REG_WRITE, 0x09, 0x00])
+#
+#     elif k == '12':
+#         print("DCO mode full trim...")
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0d, 0xff])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0e, 0xff])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0f, 0xff])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x10, 0xff])
+#
+#     elif k == '13':
+#         print("DCO mode zero trim...")
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0d, 0x00])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0e, 0x00])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x0f, 0x00])
+#         pll_trim = slave.exchange([CARAVEL_REG_WRITE, 0x10, 0x00])
+#
+#     elif k == '14':
+#         print("Register?")
+#         r = input()
+#         reg = int(r, 0)
+#         print("Value?")
+#         v = input()
+#         val = int(v, 0)
+#         pll_trim = slave.exchange([CARAVEL_STREAM_WRITE, reg, val], 0)
+#
+#     elif k == 'q':
+#         print("Exiting...")
+#
+#     else:
+#         print('Selection not recognized.\n')
 
 spi.terminate()
 

@@ -45,6 +45,8 @@ gpio = GpioAsyncController()
 gpio.configure(gooddevs[0], direction=0x00, frequency=1e3, initial=0x0)
 port = gpio.get_gpio()
 
+# port.set_direction(0b110100000000, 0b110100000000)  # (mask, dir)
+
 # Could put stuff here. . .
 
 input()

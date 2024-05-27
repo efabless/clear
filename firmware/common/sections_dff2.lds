@@ -14,7 +14,7 @@ MEMORY {
 	dff2 : ORIGIN = 0x00000400, LENGTH = 0x00000200
 	flash : ORIGIN = 0x10000000, LENGTH = 0x01000000
 	mprj : ORIGIN = 0x30000000, LENGTH = 0x00100000
-	hk : ORIGIN = 0x26000000, LENGTH = 0x00300000
+	hk : ORIGIN = 0x26000000, LENGTH = 0x00100000
 	csr : ORIGIN = 0xf0000000, LENGTH = 0x00010000
 }
 
@@ -54,7 +54,7 @@ SECTIONS
 		*(.sdata .sdata.* .gnu.linkonce.s.*)
 		. = ALIGN(8);
 		_edata = .;
-	} > dff AT > flash
+	} > dff2 AT > flash
 
 	.bss :
 	{
@@ -69,10 +69,10 @@ SECTIONS
 		. = ALIGN(8);
 		_ebss = .;
 		_end = .;
-	} > dff
+	} > dff2
 }
 
-PROVIDE(_fstack = ORIGIN(dff) + LENGTH(dff));
+PROVIDE(_fstack = ORIGIN(dff2) + LENGTH(dff2));
 
 PROVIDE(_fdata_rom = LOADADDR(.data));
 PROVIDE(_edata_rom = LOADADDR(.data) + SIZEOF(.data));

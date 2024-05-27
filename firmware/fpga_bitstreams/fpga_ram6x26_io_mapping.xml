@@ -1,0 +1,25 @@
+<!--
+	- I/O mapping
+-->
+
+<io_mapping>
+	<io name="gfpga_pad_io_soc_in[106:106]" net="clk" dir="input"/>
+	<io name="gfpga_pad_io_soc_in[40:40]" net="we" dir="input"/>					<!--  Blizzard IO: 7  -->
+	<io name="gfpga_pad_io_soc_in[37:37]" net="wdata_0_" dir="input"/>				<!--  Blizzard IO: 12 -->
+	<io name="gfpga_pad_io_soc_in[36:36]" net="wdata_1_" dir="input"/>				<!--  Blizzard IO: 13 -->
+	<io name="gfpga_pad_io_soc_in[19:19]" net="wdata_2_" dir="input"/>				<!--  Blizzard IO: 15 -->
+	<io name="gfpga_pad_io_soc_in[18:18]" net="wdata_3_" dir="input"/>				<!--  Blizzard IO: 16 -->
+	<io name="gfpga_pad_io_soc_in[17:17]" net="wdata_4_" dir="input"/>				<!--  Blizzard IO: 17 -->
+	<io name="gfpga_pad_io_soc_in[16:16]" net="wdata_5_" dir="input"/>				<!--  Blizzard IO: 18 -->
+	<io name="gfpga_pad_io_soc_in[127:127]" net="addr_0_" dir="input"/>				<!--  Blizzard IO: 24 -->
+	<io name="gfpga_pad_io_soc_in[125:125]" net="addr_1_" dir="input"/>				<!--  Blizzard IO: 26 -->
+	<io name="gfpga_pad_io_soc_in[123:123]" net="addr_2_" dir="input"/>				<!--  Blizzard IO: 28 -->
+	<io name="gfpga_pad_io_soc_in[122:122]" net="addr_3_" dir="input"/>				<!--  Blizzard IO: 30 -->
+	<io name="gfpga_pad_io_soc_in[121:121]" net="addr_4_" dir="input"/>				<!--  Blizzard IO: 31 -->
+	<io name="gfpga_pad_io_soc_out[46:46]" net="rdata_0_" dir="output"/>			<!--  Blizzard IO: 0  -->
+	<io name="gfpga_pad_io_soc_out[45:45]" net="rdata_1_" dir="output"/>			<!--  Blizzard IO: 2  -->
+	<io name="gfpga_pad_io_soc_out[44:44]" net="rdata_2_" dir="output"/>			<!--  Blizzard IO: 3  -->
+	<io name="gfpga_pad_io_soc_out[43:43]" net="rdata_3_" dir="output"/>			<!--  Blizzard IO: 4  -->
+	<io name="gfpga_pad_io_soc_out[42:42]" net="rdata_4_" dir="output"/>			<!--  Blizzard IO: 5  -->
+	<io name="gfpga_pad_io_soc_out[41:41]" net="rdata_5_" dir="output"/>			<!--  Blizzard IO: 6  -->
+</io_mapping>
