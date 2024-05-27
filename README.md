@@ -95,7 +95,7 @@ RiscV is connected to FPGA IOs through logic analyzers, and that can be used to 
 | gfpga_pad_io_soc_in[117] | la_data_out[57]  |
 | gfpga_pad_io_soc_in[118] | la_data_out[56]  |
 
-**For a simple example to show how RiscV can communicate with the FPGA through Logic Analyzers can be found [here](./verilog/dv/and_gate_LA/and_gate_LA.c)**
+**For a simple example to show how RiscV can communicate with the FPGA through Logic Analyzers can be found [here](./firmware/and_gate_LA/and_gate_LA.c)**
 
 Steps for using OpenFPGA to generate bitstream for SOFA FPGA fabric 
 --------------------------------------------------------------------
@@ -204,7 +204,7 @@ Here the bitstream is converted to a C header file and added as part of the firm
 | FPGA prog IO | Shorted IO   | Function    |
 |--------------|--------------|-------------|
 | GPIO[1]      | GPIO[17]     | io_isol_n   |
-| GPIO[11]     | GPIO[18]     | op_rst      |
+| GPIO[9]      | GPIO[18]     | op_rst      |
 | GPIO[29]     | GPIO[19]     | prog_rst    |
 | GPIO[34]     | GPIO[20]     | ccff_head   |
 | GPIO[35]     | GPIO[21]     | clk_sel     |
@@ -242,7 +242,7 @@ configure_gpio(14, GPIO_MODE_MGMT_STD_OUTPUT); // connected to clk_sel
 process_bit_stream(and_3_size, and_3);
 ```
 
-**An example test for this method can be found [here](./verilog/dv/and_gate_firmware/and_gate_firmware.c)**
+**An example test for this method can be found [here](./firmware/and_gate_firmware/and_gate_firmware.c)**
 
 Additional Cool Stuff
 ---------------------
