@@ -222,7 +222,7 @@ make generate_header
 2. Include your header file in the C code for example:
 
 ```
-#include "../fpga_bitstreams/and_3.h"
+#include <and_3.h>
 ```
 
 3. Configure the shorted IOs in your C code as follows:
