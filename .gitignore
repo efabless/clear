@@ -2,6 +2,13 @@
 # caravel
 runs
 mgmt_core_wrapper
+*.raw
+*.vcd
+*.vvp
+*.out
+*.hexe
+*.lst
+*.elf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

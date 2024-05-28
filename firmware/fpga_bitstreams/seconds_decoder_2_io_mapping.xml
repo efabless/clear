@@ -1,0 +1,15 @@
+<!--
+	- I/O mapping
+-->
+
+<io_mapping>
+	<io name="gfpga_pad_io_soc_in[117:117]" net="clk" dir="input"/>
+	<io name="gfpga_pad_io_soc_out[127:127]" net="decoder_out_0_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[44:44]" net="decoder_out_1_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[43:43]" net="decoder_out_2_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[42:42]" net="decoder_out_3_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[41:41]" net="decoder_out_4_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[40:40]" net="decoder_out_5_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[125:125]" net="decoder_out_6_" dir="output"/>
+	<io name="gfpga_pad_io_soc_out[123:123]" net="decoder_out_7_" dir="output"/>
+</io_mapping>

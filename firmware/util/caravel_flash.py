@@ -133,7 +133,9 @@ slave = spi.get_port(cs=0)
 
 gpio = spi.get_gpio()
 # gpio.set_direction(0x0100, 0x0100)  # (mask, dir)
-gpio.set_direction(0b110100000000, 0b110100000000)  # (mask, dir)
+# gpio.set_direction(0b110100000000, 0b110100000000)  # (mask, dir)
+gpio.set_direction(0b1111111100000000, 0b0010111100000000)  # (mask, dir)
+gpio.write(0b0000001100000000)
 # gpio.write(0b000100000000)
 led = Led(gpio)
 
