@@ -27,12 +27,15 @@ $(TESTNAME).hex: $(TESTNAME).elf
 client: client.c
 	gcc client.c -o client
 
-flash: $(TESTNAME).hex
+flash3: $(TESTNAME).hex
 	python3 ../util/caravel_hkflash.py $(TESTNAME).hex
 	python3 ../util/caravel_hkstop.py
 
 flash2: $(TESTNAME).hex
 	python3 ../util/caravel_flash.py $(TESTNAME).hex
+
+flash: $(TESTNAME).hex
+	python3 ../util/ftdi_flash.py $(TESTNAME).hex
 
 generate_header:
 	python3 ../fpga_bitstreams/generate_header.py
