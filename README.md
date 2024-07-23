@@ -244,6 +244,21 @@ process_bit_stream(and_3_size, and_3);
 
 **An example test for this method can be found [here](./firmware/and_gate_firmware/and_gate_firmware.c)**
 
+#### To flash the test:
+
+1. Go to the the test directory for example
+```
+cd firmware/and_gate_firmware
+```
+
+2. Run the make file
+```
+make flash
+```
+
+> [!NOTE]  
+> To flash correctly, you need to run `firmware/util/ftdi_flash.py`
+
 Additional Cool Stuff
 ---------------------
 
