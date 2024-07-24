@@ -39,46 +39,46 @@ I/O Mapping and Configuration
 ------------------------------
 Below is a detailed mapping of the I/O connections between Caravel and the user project, indicating the functionality and corresponding pins for each connection.
 
-| IOs        | Clear                     |
-|------------|---------------------------|
-| mprj_io[0] | FPGA IO[46]               |
-| mprj_io[1] | HK SDO - FPGA isol_n      |
-| mprj_io[2] | HK SDI - FPGA IO[45]      |
-| mprj_io[3] | HK CSB - FPGA IO[44]      |
-| mprj_io[4] | HK SCK - FPGA IO[43]      |
-| mprj_io[5] | UART RX - FPGA IO[42]     |
-| mprj_io[6] | UART TX - FPGA IO[41]     |
-| mprj_io[7] | irq - FPGA IO[40]         |
-| mprj_io[8] | FPGA IO[39]               |
-| mprj_io[9] | FPGA reset                |
-| mprj_io[10]| FPGA test_enable          |
-| mprj_io[11]| FPGA IO[38]               |
-| mprj_io[12]| FPGA IO[37]               |
-| mprj_io[13]| FPGA IO[36]               |
-| mprj_io[14]| FPGA sc_tail              |
-| mprj_io[15]| FPGA IO[19]               |
-| mprj_io[16]| FPGA IO[18]               |
-| mprj_io[17]| FPGA IO[17]               |
-| mprj_io[18]| FPGA IO[16]               |
-| mprj_io[19]| FPGA IO[15]               |
-| mprj_io[20]| FPGA IO[14]               |
-| mprj_io[21]| FPGA IO[13]               |
-| mprj_io[22]| FPGA sc_head              |
-| mprj_io[23]| FPGA ccff_tail            |
-| mprj_io[24]| FPGA IO[127]              |
-| mprj_io[25]| FPGA IO[126]              |
-| mprj_io[26]| FPGA IO[125]              |
-| mprj_io[27]| FPGA IO[124]              |
-| mprj_io[28]| FPGA IO[123]              |
-| mprj_io[29]| FPGA prog_reset           |
-| mprj_io[30]| FPGA IO[122]              |
-| mprj_io[31]| FPGA IO[121]              |
-| mprj_io[32]| FPGA IO[120]              |
-| mprj_io[33]| FPGA IO[119]              |
-| mprj_io[34]| FPGA ccff_head            |
-| mprj_io[35]| FPGA clk_sel              |
-| mprj_io[36]| FPGA clk                  |
-| mprj_io[37]| FPGA prog_clk             |
+| IOs         | Clear                 |
+| ----------- | --------------------- |
+| mprj_io[0]  | FPGA IO[46]           |
+| mprj_io[1]  | HK SDO - FPGA isol_n  |
+| mprj_io[2]  | HK SDI - FPGA IO[45]  |
+| mprj_io[3]  | HK CSB - FPGA IO[44]  |
+| mprj_io[4]  | HK SCK - FPGA IO[43]  |
+| mprj_io[5]  | UART RX - FPGA IO[42] |
+| mprj_io[6]  | UART TX - FPGA IO[41] |
+| mprj_io[7]  | irq - FPGA IO[40]     |
+| mprj_io[8]  | FPGA IO[39]           |
+| mprj_io[9]  | FPGA reset            |
+| mprj_io[10] | FPGA test_enable      |
+| mprj_io[11] | FPGA IO[38]           |
+| mprj_io[12] | FPGA IO[37]           |
+| mprj_io[13] | FPGA IO[36]           |
+| mprj_io[14] | FPGA sc_tail          |
+| mprj_io[15] | FPGA IO[19]           |
+| mprj_io[16] | FPGA IO[18]           |
+| mprj_io[17] | FPGA IO[17]           |
+| mprj_io[18] | FPGA IO[16]           |
+| mprj_io[19] | FPGA IO[15]           |
+| mprj_io[20] | FPGA IO[14]           |
+| mprj_io[21] | FPGA IO[13]           |
+| mprj_io[22] | FPGA sc_head          |
+| mprj_io[23] | FPGA ccff_tail        |
+| mprj_io[24] | FPGA IO[127]          |
+| mprj_io[25] | FPGA IO[126]          |
+| mprj_io[26] | FPGA IO[125]          |
+| mprj_io[27] | FPGA IO[124]          |
+| mprj_io[28] | FPGA IO[123]          |
+| mprj_io[29] | FPGA prog_reset       |
+| mprj_io[30] | FPGA IO[122]          |
+| mprj_io[31] | FPGA IO[121]          |
+| mprj_io[32] | FPGA IO[120]          |
+| mprj_io[33] | FPGA IO[119]          |
+| mprj_io[34] | FPGA ccff_head        |
+| mprj_io[35] | FPGA clk_sel          |
+| mprj_io[36] | FPGA clk              |
+| mprj_io[37] | FPGA prog_clk         |
 
 ## RiscV and FPGA communication
 
@@ -87,7 +87,7 @@ RiscV is connected to FPGA IOs through logic analyzers, and that can be used to 
 ### FPGA IO mapping to Logic Analyzers
 
 | FPGA IOs                 | Logic Analyzers  |
-|--------------------------|------------------|
+| ------------------------ | ---------------- |
 | gfpga_pad_io_soc_in[47]  | la_data_out[127] |
 | gfpga_pad_io_soc_in[48]  | la_data_out[126] |
 | gfpga_pad_io_soc_in[49]  | la_data_out[125] |
@@ -155,18 +155,18 @@ python3 openfpga_flow/scripts/run_fpga_task.py SOFA_tasks
 
 ## VPR and Yosys results for different designs   
 
-|   Design        | # CLBs  | CLB Util |# I/O Blocks | # FFs | # LUT |
-| --------------- | ----------- |-------- |--------- |-------|----------|
-| [fpga_ram8x20](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ram8x20.v)    | 41          |64%| 23        | 168 | 316 |
-| [fpga_ram8x16](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ram8x16.v)    | 33          | 51.5%|22        | 136 | 252 |
-| [fpga_mac_6x6](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_mac_6x6.v)    | 14          | 21.9%|26        | 13 | 108 |
-| [fpga_LFSR](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_LFSR.v)       | 8           | 12.5%|25        | 48 | 60 |
-| [fpga_seq_mul](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_seq_mul.v)    | 8           |12.5%| 34        | 28 | 65 |
-| [fpga_mac](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_mac.v)        | 7           | 11%| 18        | 9 | 47 |
-| [seconds_decoder](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/seconds_decoder.v) | 7           |11%| 9         | 35 | 50 |
-| [fpga_ring16](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ring16.v)     | 7           |11%| 17        | 40 | 52 |
-| [fpga_pwm8](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_pwm8.v)       | 3           |4.7%| 18        | 9 | 22 |
-| [ALU_4bits](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/ALU_4bits.v)       | 2           |3.13%| 14        | 0 | 12 |
+| Design                                                                                                                                            | # CLBs | CLB Util | # I/O Blocks | # FFs | # LUT |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------- | ------------ | ----- | ----- |
+| [fpga_ram8x20](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ram8x20.v)       | 41     | 64%      | 23           | 168   | 316   |
+| [fpga_ram8x16](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ram8x16.v)       | 33     | 51.5%    | 22           | 136   | 252   |
+| [fpga_mac_6x6](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_mac_6x6.v)       | 14     | 21.9%    | 26           | 13    | 108   |
+| [fpga_LFSR](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_LFSR.v)             | 8      | 12.5%    | 25           | 48    | 60    |
+| [fpga_seq_mul](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_seq_mul.v)       | 8      | 12.5%    | 34           | 28    | 65    |
+| [fpga_mac](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_mac.v)               | 7      | 11%      | 18           | 9     | 47    |
+| [seconds_decoder](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/seconds_decoder.v) | 7      | 11%      | 9            | 35    | 50    |
+| [fpga_ring16](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_ring16.v)         | 7      | 11%      | 17           | 40    | 52    |
+| [fpga_pwm8](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/fpga_pwm8.v)             | 3      | 4.7%     | 18           | 9     | 22    |
+| [ALU_4bits](https://github.com/efabless/OpenFPGA_bitstream_generation/blob/SOFA/openfpga_flow/benchmarks/micro_benchmark/ALU_4bits.v)             | 2      | 3.13%    | 14           | 0     | 12    |
 
 
 Using the FPGA
@@ -201,14 +201,14 @@ Here the bitstream is converted to a C header file and added as part of the firm
 
 ### Hardware setup
 
-| FPGA prog IO | Shorted IO   | Function    |
-|--------------|--------------|-------------|
-| GPIO[1]      | GPIO[17]     | io_isol_n   |
-| GPIO[9]      | GPIO[18]     | op_rst      |
-| GPIO[29]     | GPIO[19]     | prog_rst    |
-| GPIO[34]     | GPIO[20]     | ccff_head   |
-| GPIO[35]     | GPIO[21]     | clk_sel     |
-| GPIO[37]     | GPIO[24]     | prog_clk    |
+| FPGA prog IO | Shorted IO | Function  |
+| ------------ | ---------- | --------- |
+| GPIO[1]      | GPIO[17]   | io_isol_n |
+| GPIO[9]      | GPIO[18]   | op_rst    |
+| GPIO[29]     | GPIO[19]   | prog_rst  |
+| GPIO[34]     | GPIO[20]   | ccff_head |
+| GPIO[35]     | GPIO[21]   | clk_sel   |
+| GPIO[37]     | GPIO[24]   | prog_clk  |
 
 ### Firmware
 In order to use this method you need to do a couple of extra steps:
@@ -242,13 +242,13 @@ configure_gpio(14, GPIO_MODE_MGMT_STD_OUTPUT); // connected to clk_sel
 process_bit_stream(and_3_size, and_3);
 ```
 
-**An example test for this method can be found [here](./firmware/and_gate_firmware/and_gate_firmware.c)**
+**An example test for this method can be found [here](./firmware/and_gate/and_gate.c)**
 
 #### To flash the test:
 
 1. Go to the the test directory for example
 ```
-cd firmware/and_gate_firmware
+cd firmware/and_gate
 ```
 
 2. Run the make file
